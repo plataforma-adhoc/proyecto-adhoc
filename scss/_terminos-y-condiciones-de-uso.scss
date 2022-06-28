@@ -1,0 +1,23 @@
+
+.titulo__terminos{
+    font-size: $tamaño__fuente__titulo;
+    color:white;
+    text-align: center;
+    margin-top: 150px;
+  
+}
+.contenedor__terminos{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    line-height: 30px;
+}
+.subtitulos__terminos{
+    font-weight: 900;
+    font-size: $tamaño__fuente__subtitulo;
+    color: gray;
+
+}
+.parrafo__terminos{
+    color:$color__gris;
+}

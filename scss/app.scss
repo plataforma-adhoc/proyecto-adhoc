@@ -1,0 +1,13 @@
+@import 'index';
+@import 'variables';
+@import 'reset';
+@import 'terminos-y-condiciones-de-uso';
+@import 'quienes-somos';
+@import 'usuario.scss';
+
+
+body{
+    font-family: 'Harabara', sans-serif;
+    background:$color__fondo;
+}
+

@@ -1,0 +1,117 @@
+.formulario__registro {
+    width: 50%;
+    margin: 100px auto;
+    background:$color__formularios;
+    border-radius: 7px;
+
+
+  }
+       
+
+
+.capturarDatos{
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+  box-sizing: border-box;
+  background:#fff;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  color: black;
+  transition: .3s ease all;
+}
+
+.capturarDatos:focus{
+  border: 3px solid $color__verde;
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163,163,163,0.3);
+}
+
+.capturar__datos__sintomas{
+  width: 100%;
+  height: 60px;
+  min-width: 100%;
+  min-height: 60px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+  
+  
+
+ 
+  
+  
+  .boton_registro:hover {
+    opacity: 0.8;
+  }
+  
+ 
+
+  /* Add padding to containers */
+  .contenedor__formulario{
+    padding: 16px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+
+    
+}
+
+.block{
+    grid-column: 1 / 3;
+}
+.boton__registro{
+display: inline-block;
+width: 100%;
+border-radius: 7px;
+border: none;
+padding: 15px;
+background:$color__verde;
+cursor: pointer;
+
+}
+
+.enlace_recuperar_contraseña{
+  text-decoration: none;
+}
+
+ .contenedor_enlace_sesion{
+     width: 100%;
+     padding: 5px;
+
+    }
+
+
+    
+    .enlace___login{
+        text-decoration: 0;
+        color: white;
+    }
+
+    .enlace___login:hover{
+        border-bottom: solid 2px white;
+    }
+
+
+    .terminos{
+        line-height: 20px;
+        font-size: 13px;
+       }
+       
+       
+       .enlace__terminos{
+         text-decoration: none;
+         color: white;
+        &:hover{
+          color:$color__verde;
+        }
+       }
+       
+  
+ 
+
+
+
