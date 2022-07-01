@@ -9,7 +9,7 @@
                 campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará 
                 de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede 
                 cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente
-                esta página para asegurarse que está de acuerdo con dichos cambios.
+                esta página para asegurarse que está de acuerdo con dichos cambios .
                 ACCENT le notificará sobre la expedición de nuevas políticas para brindar servicios específicos, así como las 
                 actualizaciones de las mismas, en el momento en que ello ocurriera. En el caso en que el Usuario Solicitante no esté de 
                 acuerdo con los términos y condiciones siguientes o sus actualizaciones, deberá abstenerse de utilizar esta Plataforma y 
@@ -20,7 +20,7 @@
                         <br><br>
                     <h2 class="subtitulos__terminos">INFORMACION QUE ES RECOGIDA</h2>
                     <P class="parrafo__terminos">
-                        Nuestro plataforma podrá recoger información personal por ejemplo: Nombre,  
+                        Nuestra plataforma podrá recoger información personal por ejemplo: Nombre,  
                         información de contacto como  su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida información 
                         específica para procesar algún pedido o realizar una entrega o facturación
                     </P>
@@ -55,10 +55,10 @@
                       puede marcar o desmarcar la opción de recibir información por correo electrónico.  
                       En caso de que haya marcado la opción de recibir nuestro boletín o publicidad usted puede cancelarla en cualquier momento.
 
-                                Esta compañía no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento,
-                            salvo que sea requerido por un juez con un orden judicial.
+                    Esta compañía no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento,
+                    salvo que sea requerido por un juez con un orden judicial.
 
-                            ACCENT Se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.
+                    ACCENT Se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.
                     </P>
                     <br>
              <h2 class="subtitulos__terminos"> 1. DECLARACIONES DE LOS USUARIOS SOLICITANTES</h2>
@@ -76,6 +76,16 @@
                 La utilización de la Plataforma es a título personal, por tal razón no podrá ser utilizada por  un tercero,
                 diferente al Usuario Solicitante que acepta los presentes términos y condiciones. ACCENT se reseva el derecho de dar de baja a cualquier
                 usuario y / o que infrinja las normas. 
+
+              </p>
+
+              <h2 class="subtitulos__terminos"> 2.MODIFICACION Y CANCELACION DE SERVICIOS </h2>
+               <p class="parrafo__terminos">
+               1.3. Accent cambia y mejora constantemente sus servicios para brindar una mejor experiencia y calidad a sus usuarios. La empresa puede agregar, modificar o eliminar funciones, características, requisitos, promociones y servicios si lo considera necesario.
+
+
+
+              
 
               </p>
               

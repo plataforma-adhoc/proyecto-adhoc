@@ -8,7 +8,6 @@
         </div>
         <div class="footer">
           <p class="titulo__footer">Conectate con Accent</p>
-           <a href="./ayuda-y-soporte" class="enlaces__footer">Ayuda y soporte</a>
            <a href="./quienes-somos" class="enlaces__footer">Quienes somos</a>
            <a href="./terminos-y-condiciones-de-uso" class="enlaces__footer">Terminos y condiciones</a>
            <a href="./politicas-de-privacidad" class="enlaces__footer">Politicas de privacidad</a>

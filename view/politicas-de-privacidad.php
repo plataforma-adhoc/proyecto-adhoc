@@ -1,83 +1,111 @@
-<?php  include'layout/nabvar.php'; ?> 
-      <h1 class="titulo__terminos">POLITICA DE PRIVACIDA</h1>
-      <div class=" container contenedor__terminos">
-      <h2 class="subtitulos__terminos">AVISO PARA LOS USUARIOS SOLICITANTES:</h2>
-            <P class="parrafo__terminos">
-                La presente Política de Privacidad establece los términos en que ACCENT 
-                usa y protege la información que es proporcionada por sus usuarios al momento de utilizar nuestra plataforma. 
-                Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los 
-                campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará 
-                de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede 
-                cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente
-                esta página para asegurarse que está de acuerdo con dichos cambios.
-                ACCENT le notificará sobre la expedición de nuevas políticas para brindar servicios específicos, así como las 
-                actualizaciones de las mismas, en el momento en que ello ocurriera. En el caso en que el Usuario Solicitante no esté de 
-                acuerdo con los términos y condiciones siguientes o sus actualizaciones, deberá abstenerse de utilizar esta Plataforma y 
-                sus actualizaciones, toda vez que la utilización de la Plataforma, implica la manifestación 
-                de conformidad del Usuario Solicitante con la 
-                totalidad de los términos y condiciones vigentes al momento de su uso.
-                    </P>
-                        <br><br>
-                    <h2 class="subtitulos__terminos">INFORMACION QUE ES RECOGIDA</h2>
-                    <P class="parrafo__terminos">
-                        Nuestro plataforma podrá recoger información personal por ejemplo: Nombre,  
-                        información de contacto como  su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida información 
-                        específica para procesar algún pedido o realizar una entrega o facturación
-                    </P>
-               <br>
-               <h2 class="subtitulos__terminos">USO DE LA INFORMACION RECOGIDA</h2>
-                        <p class="parrafo__terminos">
-                        Nuestra plataforma emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios, 
-                        de pedidos en caso que aplique, y mejorar nuestros productos y servicios.  
-                        Es posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con ofertas especiales, 
-                        nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún beneficio, 
-                        estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en cualquier momento.
+<?php  include'layout/nabvar.php'; ?>
+<h1 class="titulo__terminos">POLITICA DE PRIVACIDA</h1>
+<div class=" container contenedor__terminos">
+    <P class="parrafo__terminos">
+        Accent pretende ofrecer la mejor experiencia de compra y servicio a cada uno de sus usuarios.
+        Por ello nos esforzamos encarecidamente en proteger su privacidad presentando este documento donde detallamos
+        nuestros procedimientos y
+        políticas respecto a la información y datos personales. Datos que son recopilados a través del sitio web y/o
+        plataformas virtuales de Accent.
+        Los usuarios que acceden a nuestros servicios a través de la plataforma aceptan estar sujetos a las
+        disposiciones de nuestra Política de Privacidad. Acepta que se recopile su información personal a través de
+        nuestras encuestas, formularios electrónicos, entre otros, bien sea otorgados y/o requeridos de forma virtual
+        por la plataforma.
+        La empresa garantiza que la información personal brindada cuenta con la seguridad necesaria y no será entregada
+        a terceros. Solo se requerirán o validarán datos en casos de incumplimiento de alguna orden judicial o
+        requerimientos legales.
+        La suscripción a boletines de correos electrónicos es voluntaria y se le dará la opción de seleccionarla al
+        momento de crear su cuenta y en cualquier momento usted podrá darse de baja.
+        Es necesario acotar que la presente política forma parte de nuestros Términos y Condiciones que podrán encontrar
+        en <a href="./terminos-y-condiciones-de-uso" class="enlace__a__terminos"> Terminos y condiciones de uso</a>.
+        Asimismo, la empresa se reserva los derechos de modificar la Política de Privacidad sin previo aviso.
+    </P>
+    <br><br>
+    <h2 class="subtitulos__terminos">¿ QUE INFORMACION RECOPILAMOS ? </h2>
+    <P class="parrafo__terminos">
+        1 . Nuestra plataforma podrá recoger información personal por ejemplo: Nombre,
+        información de contacto como su dirección de correo electrónica e información demográfica. Así mismo cuando sea
+        necesario podrá ser requerida información
+        específica para procesar algún pedido o realizar una entrega o facturación.
+    </P>
+    <P class="parrafo__terminos">
+        2 . Información sobre las páginas de la empresa a la que accedes, en este caso serían los datos sobre tu
+        dispositivo: sistema operativo o tipo de navegador.
+    </P>
 
-                        ACCENT está altamente comprometido para cumplir con el compromiso de mantener su información segura. 
-                        Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso 
-                        no autorizado.
-                        </p>
-                   <br><br>
-                <h2 class="subtitulos__terminos">ENLACE A TERCEROS</h2>
-                        <P class="parrafo__terminos">
-                        Si en esta plataforma pudiera contener enlaces a otros sitios que pudieran ser de su interés. 
-                        Una vez que usted de clic en estos enlaces y abandone nuestra plataforma, ya no tenemos control sobre 
-                        al sitio al que es redirigido y por lo tanto no somos responsables de los términos o privacidad ni de la 
-                        protección de sus datos en esos otros sitios terceros. Dichos sitios están sujetos a sus propias políticas
-                        de privacidad por lo cual es 
-                        recomendable que los consulte para confirmar que usted está de acuerdo con estas.
-                        </P>
-                    <br><br>
-                    <h2 class="subtitulos__terminos">CONTROL SOBRE SU INFORMACION</h2>
-                    <P class="parrafo__terminos">
-                      En cualquier momento usted puede restringir la recopilación o el uso de la información personal que es proporcionada a nuestro sitio web.  
-                      Cada vez que se le solicite rellenar un formulario, como el de alta de usuario, 
-                      puede marcar o desmarcar la opción de recibir información por correo electrónico.  
-                      En caso de que haya marcado la opción de recibir nuestro boletín o publicidad usted puede cancelarla en cualquier momento.
+    <P class="parrafo__terminos">
+        3 . Recolectaremos tus datos de usuario en cuanto al contenido compartido dentro de nuestra plataforma, las
+        páginas de Accent a las que se accede, los datos de cursos (comportamiento, uso del producto, comentarios),
+        datos de pago y datos sobre las compras.
+    </P>
+    <p class="parrafo__terminos">
+        Es importante destacar que nuestra tecnología nos permite identificar datos como la ubicación geográfica del
+        usuario (país y ciudad) e historial de navegación por nuestro sitio web y aplicación.
+        Esto en caso de reportar un problema y tengamos la necesidad de ver cuáles páginas ha usado el usuario e
+        identificar mejor su caso.
 
-                                Esta compañía no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento,
-                            salvo que sea requerido por un juez con un orden judicial.
 
-                            ACCENT Se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.
-                    </P>
-                    <br>
-             <h2 class="subtitulos__terminos"> 1. DECLARACIONES DE LOS USUARIOS SOLICITANTES</h2>
-          
-             <p class="parrafo__terminos">
-                1.1.   El Usuario Solicitante afirma que tiene por lo menos 18 años de edad, o de ser menor, que posee consentimiento de su/s padre/s, tutor/es o representante/s, y es plenamente capaz y competente, de acuerdo a lo establecido por el Código Civil colombiano, 
-                para obligarse a cumplir los presentes términos y condiciones.  
-              </p>
-              <p class="parrafo__terminos">
-               1.2.
-               Al descargar y/o usar la Plataforma el Usuario Solicitante manifiesta y garantiza que.
-               Tiene el derecho, autoridad y capacidad para cumplir con todos los presentes términos y condiciones; 
-               Está en la posibilidad de pagar por los Servicios brindado por los Usuarios Prestadores; 
-               La información que proporcione a ACCENT será veraz y precisa; y 
-                La utilización de la Plataforma es a título personal, por tal razón no podrá ser utilizada por  un tercero,
-                diferente al Usuario Solicitante que acepta los presentes términos y condiciones. ACCENT se reseva el derecho de dar de baja a cualquier
-                usuario y / o que infrinja las normas. 
+        Por motivos de seguridad no almacenamos los datos confidenciales como el titular de una tarjeta, entiéndase los
+        números de tarjeta de crédito o datos de autenticación de la misma; datos de los usuarios y sus cuentas en otros
+        servicios, salvo se encuentren directamente vinculados a Accent.
+        Al realizar un pago a través de alguna de nuestras pasarelas de pago usted aceptará la política de privacidad
+        correspondiente a dicha pasarela. Accent no tiene acceso a ninguno de los datos que el usuario comparta con la
+        entidad bancaria por la que decida realizar el pago.
 
-              </p>
-              
-    </div>
+
+        El usuario tiene la opción de añadir información a su perfil, nos referimos a incluir una foto de perfil, una
+        breve descripción, país y ciudad donde vive o proviene y fecha de nacimiento.
+    </p>
+    <br>
+    <h2 class="subtitulos__terminos">DIVULGACION DE LA INFORMACION</h2>
+    <p class="parrafo__terminos">
+        1. Proporcionar información que el usuario facilite.
+        <br>
+        2. Notificar al usuario sobre cambios en la plataforma.
+        <br>
+        3.Permitir al usuario participar en actividades interactivas de la plataforma.
+        <br>
+        4. Brindar soporte al usuario.
+        5. Validar la veracidad de la información brindada.
+        <br>
+        6. Atender las consultas y solicitudes del usuario.
+        <br>
+        7.Gestionar las preferencias del usuario referente a su cuenta.
+        <br>
+        8.Realizar estudios estadísticos para potenciar el funcionamiento de los servicios prestados por Accent y lograr
+        <br>
+        mejorar la experiencia de usuario, así como tendencias, tráfico y realizar seguimiento de compras.
+        <br>
+        9 .Garantizar el cumplimiento de los protocolos de seguridad y otros aspectos relacionados a los servicios
+        brindados por Accent.
+        <br>
+
+        10. Facilitar el funcionamiento técnico de los servicios, lo cual incluye solución de problemas, seguridad de
+        los
+        servicios, prevención de fraude y uso indebido del contenido de la empresa.
+        <br>
+
+        Accent no divulga con ningún tercero tu información, pues su uso está restringido únicamente a nuestro servicio.
+        Asimismo, debemos acotar que los datos recopilados serán recopilados para las siguientes situaciones:
+        <br><br>
+
+        Administración del sistema: Podemos usar los datos personales del usuario para la administración de nuestros
+        sistemas, el diagnóstico de problemas con los servidores, supervisión del rendimiento, tráfico en nuestro sitio
+        web y aplicación y obtener información demográfica.
+        <br><br>
+        Administración del sistema: La información personal del usuario será usada para enviar a su correo nuestros
+        anuncios, ofertas y publicidad sobre los productos ofrecidos por la plataforma. El usuario expresará su total
+        consentimiento de recibir este tipo de contenido, ya que al registrarse puede activar en el "check box" la
+        opción "Acepto recibir material publicitario y/o comercial de Accent". Si luego el usuario quiere desistir de
+        este servicio puede oprimir la opción "Darse de baja".
+        <br><br>
+        Encuestas: A través del correo electrónico el usuario o cualquier otro medio disponible el usuario recibirá
+        encuestas sobre nuestros servicios y/o cualquier otro tema de interés con el fin de mejorar nuestros servicios.
+        <br><br>
+        Facturación: Usaremos los datos personales del usuario con el fin de crear un registro y un historial de las
+        compras realizadas a la empresa.
+        <br><br>
+        Accent responde a cualquier duda que se tenga sobre la Política de Privacidad. 
+    </p>
+</div>
 <?php include'layout/footer.php'; ?>

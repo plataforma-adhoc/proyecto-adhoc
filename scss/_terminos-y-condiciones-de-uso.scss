@@ -21,3 +21,12 @@
 .parrafo__terminos{
     color:$color__gris;
 }
+.enlace__a__terminos{
+   text-decoration: 0;
+   color: $color__verde;
+
+   
+}
+.enlace__a__terminos:hover{
+    border-bottom: 2px solid $color__verde;
+}

@@ -1157,6 +1157,15 @@ template {
   color: gray;
 }
 
+.enlace__a__terminos {
+  text-decoration: 0;
+  color: #10ac84;
+}
+
+.enlace__a__terminos:hover {
+  border-bottom: 2px solid #10ac84;
+}
+
 .contendor_conoce_a_accent {
   width: 100%;
   height: 750px;
@@ -1170,7 +1179,7 @@ template {
 .parrafo__conocenos {
   line-height: 30px;
   font-weight: 500;
-  color: #10ac84;
+  color: gray;
 }
 
 .contenedor_valores_corporativos {
@@ -1178,12 +1187,16 @@ template {
   width: 40%;
 }
 
+.subtitulos__conocenos {
+  color: white;
+}
+
 .parrafo__valores {
   color: #10ac84;
 }
 
 .formulario__registro {
-  width: 50%;
+  width: 37%;
   margin: 100px auto;
   background: #112240;
   border-radius: 7px;
@@ -1209,7 +1222,7 @@ template {
 }
 
 .capturar__datos__sintomas {
-  width: 100%;
+  max-width: 100%;
   height: 60px;
   min-width: 100%;
   min-height: 60px;
@@ -1248,8 +1261,10 @@ template {
   text-decoration: none;
 }
 
-.contenedor_enlace_sesion {
-  width: 100%;
+.contenedor__enlace__sesion {
+  display: flex;
+  justify-content: space-around;
+  max-width: 100%;
   padding: 5px;
 }
 
@@ -1275,6 +1290,90 @@ template {
   color: #10ac84;
 }
 
+.subtitulos {
+  text-align: center;
+  font-size: 32px;
+  color: white;
+  line-height: 40px;
+}
+
+.parrafo__contacto {
+  text-align: center;
+  color: gray;
+}
+
+.cards__contacto {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.formas__de__contacto {
+  margin: 90px 0 0 0;
+  width: 20%;
+  height: 100px;
+  border-radius: 7px;
+  border: solid 1px gray;
+  text-decoration: 0;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 30%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
 body {
   font-family: "Harabara", sans-serif;
   background: #0A192F;

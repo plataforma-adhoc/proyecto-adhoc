@@ -1,11 +1,11 @@
 <?php  include'layout/nabvar.php' ?>
-        <div class="contenido_main">
-           <h1 class="titulo_motivo"> Quienes somos</h1>
+        <div class="">
+           <h2 class="subtitulos"> Quienes somos</h2>
             <div class="contenedor_parrafo_quienes_somos">
 
             <br><br>
-           <p class="parrafo__conocenos">Somos una plataforma que conecta a pacientes que buscan ahorrar tiempo y evitarse el trafico de la ciudad ala hora de asistir a una consulta medica
-             con medicos particulares, te mostramos miles de profesionales en un solo lugar que hacen parte de nuestra plataforma.
+           <p class="parrafo__conocenos">Somos una plataforma de solicitud de conductores elegidos que conecta usuario con conductores elegidos ,
+             donde los usuarios pueden elegir el conductor que se ajuste a su necesidad.
 
              Nuestro compromiso es brindarte seguridad ala hora de elegir nuestra plataforma
              tanto con los datos que nos proporcionas como en la calidad del servicio.
@@ -14,11 +14,11 @@
          
            <hr>
            <br><br>
-           <h2 class="subtitulos_conocenos">NUESTRA MISION</h2>
+           <h2 class="subtitulos__conocenos">NUESTRA MISION</h2>
            <br>
            <p class="parrafo__conocenos">
             
-              Ayudarte a encontrar el mejor profesional de acuerdo a tu necesidad en tiempo record,
+              Ayudarte a encontrar el mejor profesional de acuerdo a tu necesidad en tiempo record ,
                todo en unos simples paso ahorrandote el mayor tiempo posible. 
               
               Asegurar que todas nuestras actividades sean beneficiosas para nuestra comunidad, el medio ambiente nuestros
@@ -26,17 +26,17 @@
            </p>
                <br>
                <hr>
-           <h2 class="subtitulos_conocenos">NUESTRA VISION</h2>
+           <h2 class="subtitulos__conocenos">NUESTRA VISION</h2>
            <br>
            <p class="parrafo__conocenos">
          
-             Ser una exelente opcion para tener encuenta ala hora de decidir consultar tu salud con un especialista,
-              donde nuestros usuarios se sientan seguros  y tranquilos con sus diagnosticos por parte del medico.
-            Formar una red de socios exitosos y crear una lealtad mutua,
-           creemos que las cosas simples son las mas impactates.</p>
+             Ser una exelente opcion para tener encuenta ala hora de decidir solicitar un conductor elegido ,
+              donde nuestros usuarios se sientan seguros  y tranquilos con el conductor que decidan elegir.
+              Formar una red de socios exitosos y crear una lealtad mutua , 
+               creemos que las cosas simples son las mas impactates.</p>
              <hr>
-               <div class="contenedor_valores_corporativos">
-                 <h2 class="subtitulos_conocenos">NUESTROS VALORES CORPORATIVOS</h2>
+               <div class="contenedor__valores__corporativos">
+                 <h2 class="subtitulos__conocenos">NUESTROS VALORES CORPORATIVOS</h2>
                  <br>
                  <p class="parrafo__valores">1. Trasparencia y cultura abierta</p>
                  <hr>
@@ -48,7 +48,6 @@
                   <hr>
                </div>
           </div> 
-        <hr class="linea__footer">
         </div>
 
 <?php  include'layout/footer.php' ?>
