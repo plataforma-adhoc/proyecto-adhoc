@@ -1,0 +1,31 @@
+.contenedor__datos__perfil{
+    margin-top: -600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.info__perfil{
+    width: 100%;
+}
+
+.foto__de__perfil{
+    width: 40%;
+    height:300px;
+    border-radius: 25px;
+}
+
+.enlace__de__redes__sociales{
+    display: inline-block;
+    text-decoration: 0;
+    font-size: 20px;
+    color: white;
+    margin: 10px 30px 0 30px;
+}
+
+.datos__del__perfil__de__usuario{
+    border-radius: 7px;
+    background:$color__menu__dashboard;
+    width: 40%;
+}

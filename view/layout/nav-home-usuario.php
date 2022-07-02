@@ -19,18 +19,24 @@
 
 
                 <div class="containers">
+                   <a href="./perfil-usaurio" class="enlace__perfil__usuario"><i class="fas fa-user-astronaut avatar__defecto"></i></a> 
                     <label class="btn btn-open" for="nav" id="abrir-menu"><i class="fab fa-creative-commons-nd"></i></label>
                     <input type="checkbox" id="nav" class="nav-opener" />
+                    <div>
+                    </div>
                </div>
         </nav>
     </header>
     <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" id="cerrar-menu">&times;</a>
+        <a href="javascript:void(0)" class="closebtn" id="cerrar-menu"><i class="fas fa-times"></i></a>
         <div class="overlay-content">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+         <div class="contenedor__enalces__menu__home"><a href="./perfil-usuario" class="enlaces__menu__home"><i class="fas fa-user-astronaut usuario__menu"></i></a></div>
+           <div class="contenedor__enalces__menu__home"><a href="./dashboard-usuario" class="enlaces__menu__home"> <i class="fas fa-home"></i> Home</a></div> 
+           <div class="contenedor__enalces__menu__home"><a href="#" class="enlaces__menu__home"><i class="fas fa-history"></i> Historial</a></div> 
+           <div class="contenedor__enalces__menu__home"><a href="#" class="enlaces__menu__home"><i class="fas fa-cogs"></i> Configuracion</a></div> 
+            <div class="contenedor__enalces__menu__home"><a href="#" class="enlaces__menu__home"><i class="fas fa-mail-bulk"></i> Ayudanos a mejorar</a></div>
+           <div class="contenedor__enalces__menu__home"><a href="#" class="enlaces__menu__home"><i class="far fa-star"></i> Reseñas</a></div> 
+            <div class="contenedor__enalces__menu__home"><a href="#" class="enlaces__menu__home"><i class="fas fa-power-off"></i> Desconectarse</a></div>
         </div>
 
     </div>

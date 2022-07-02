@@ -1322,6 +1322,21 @@ template {
   font-size: 20px;
 }
 
+.contenedor__enalces__menu__home {
+  width: 100%;
+  margin: 0 0 0 10px;
+}
+
+.enlace__perfil__usuario {
+  text-decoration: 0;
+  color: white;
+}
+
+.avatar__defecto {
+  font-size: 28px;
+  margin: 0 10px 0 0;
+}
+
 .overlay {
   height: 100%;
   width: 0;
@@ -1329,38 +1344,77 @@ template {
   z-index: 1;
   left: 0;
   top: 0;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.9);
+  background: #112240;
   overflow-x: hidden;
   transition: 0.5s;
 }
 
 .overlay-content {
   position: relative;
-  top: 25%;
-  width: 30%;
-  text-align: center;
+  top: 13%;
+  width: 100%;
   margin-top: 30px;
 }
 
-.overlay a {
+.fa-home, .fa-cogs, .fa-history, .fa-mail-bulk, .fa-star, .fa-power-off, .usuario__menu {
+  background: #0A192F;
+  border-radius: 100px;
+  padding: 10px;
+}
+
+.enlaces__menu__home {
   padding: 8px;
   text-decoration: none;
-  font-size: 36px;
-  color: #818181;
+  font-size: 20px;
+  color: white;
   display: block;
   transition: 0.3s;
 }
 
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
+.contenedor__enalces__menu__home:hover, .econtenedor__enalces__menu__home:focus {
+  color: gray;
+  border-radius: 7px;
+  background: #0A192F;
+  width: 80%;
 }
 
-.overlay .closebtn {
+.closebtn {
   position: absolute;
   top: 20px;
   right: 45px;
-  font-size: 60px;
+  font-size: 30px;
+  color: gray;
+}
+
+.contenedor__dashboard {
+  margin-top: -600px;
+}
+
+.titulo__dashboard {
+  font-size: 20px;
+  color: white;
+}
+
+.datos__perfiles {
+  display: flex;
+}
+
+.card__perfiles__dashboard {
+  width: 45%;
+  text-decoration: 0;
+  color: white;
+  line-height: 5px;
+}
+
+.imagen__cards__perfiles {
+  width: 45%;
+  border-radius: 25px;
+}
+
+.card__datos__conductor {
+  position: relative;
+  top: -100px;
+  left: 20px;
 }
 
 @media screen and (max-height: 450px) {
@@ -1374,6 +1428,38 @@ template {
     right: 35px;
   }
 }
+.contenedor__datos__perfil {
+  margin-top: -600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.info__perfil {
+  width: 100%;
+}
+
+.foto__de__perfil {
+  width: 40%;
+  height: 300px;
+  border-radius: 25px;
+}
+
+.enlace__de__redes__sociales {
+  display: inline-block;
+  text-decoration: 0;
+  font-size: 20px;
+  color: white;
+  margin: 10px 30px 0 30px;
+}
+
+.datos__del__perfil__de__usuario {
+  border-radius: 7px;
+  background: #112240;
+  width: 40%;
+}
+
 body {
   font-family: "Harabara", sans-serif;
   background: #0A192F;

@@ -1,12 +1,24 @@
+.contenedor__enalces__menu__home{
+  width: 100%;
+  margin:0 0 0 10px;
+}
+
+.enlace__perfil__usuario{
+  text-decoration: 0;
+  color: white;
+}
+.avatar__defecto{
+ font-size: 28px;
+ margin: 0 10px 0 0;
+}
 .overlay {
     height: 100%;
     width: 0;
     position: fixed; 
     z-index: 1; 
     left: 0;
-    top: 0;
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0, 0.9); 
+    top:0;
+    background:$color__menu__dashboard;
     overflow-x: hidden; 
     transition: 0.5s; 
   
@@ -14,34 +26,72 @@
 
   .overlay-content {
     position: relative;
-    top: 25%; 
-    width: 30%; 
-    text-align: center; 
+    top: 13%; 
+    width: 100%; 
     margin-top: 30px; 
   }
-
-  .overlay a {
+.fa-home,.fa-cogs,.fa-history,.fa-mail-bulk,.fa-star,.fa-power-off,.usuario__menu{
+  background:$color__fondo;
+  border-radius: 100px;
+  padding: 10px;
+}
+  .enlaces__menu__home{
     padding: 8px;
     text-decoration: none;
-    font-size: 36px;
-    color: #818181;
+    font-size: 20px;
+    color:white;
     display: block; 
     transition: 0.3s; 
   }
   
 
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+  .contenedor__enalces__menu__home:hover, .econtenedor__enalces__menu__home:focus {
+    color:$color__gris;
+    border-radius: 7px;
+    background:$color__fondo;
+    width: 80%;
   }
   
 
-  .overlay .closebtn {
+   .closebtn {
     position: absolute;
     top: 20px;
     right: 45px;
-    font-size: 60px;
+    font-size: 30px;
+    color:$color__gris;
   }
   
+
+  .contenedor__dashboard{
+    margin-top: -600px;
+  }
+
+  .titulo__dashboard{
+    font-size: 20px;
+    color: white;
+  }
+
+.datos__perfiles{
+  display: flex;
+}
+
+  .card__perfiles__dashboard{
+  width: 45%;
+  text-decoration: 0;
+  color: white;
+  line-height: 5px;
+  }
+
+  .imagen__cards__perfiles{
+    width: 45%;
+    border-radius: 25px;
+  }
+
+  .card__datos__conductor{
+    position: relative;
+    top: -100px;
+    left: 20px;
+  }
 
   @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
