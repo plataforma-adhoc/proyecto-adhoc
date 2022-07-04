@@ -3,14 +3,33 @@
   margin:0 0 0 10px;
 }
 
+.enlaces__varios{
+display: flex;
+align-items: center;
+}
+
 .enlace__perfil__usuario{
   text-decoration: 0;
   color: white;
 }
-.avatar__defecto{
- font-size: 28px;
+
+.avatar__perfil{
+width: 30px;
+height: 30px;
+border-radius: 50px;
+border: solid 2px $color__verde;
  margin: 0 10px 0 0;
 }
+
+.item__nombre{
+width: 80%;
+float: right;
+height: 30px;
+text-align: left;
+margin-top: 6px;
+margin-right: 5px;
+}
+
 .overlay {
     height: 100%;
     width: 0;
@@ -49,7 +68,7 @@
     color:$color__gris;
     border-radius: 7px;
     background:$color__fondo;
-    width: 80%;
+    width: 90%;
   }
   
 

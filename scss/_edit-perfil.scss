@@ -1,0 +1,78 @@
+
+.editarPerfil{
+    margin-top: -600px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background:$color__menu__dashboard;
+    border-radius: 7px
+}
+.avatar{
+    width: 150px;
+    height: 150px;
+    border-radius:100%;
+    margin: 0 auto 0 auto;
+    background: #000;
+}
+.imagen__avatar{
+  width: 150px;
+  height: 150px;
+  border-radius:100%;
+}
+.cambiar__avatar{
+    color:$color__gris;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    min-height: 15px;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    width: 50px;
+    margin: -70px 30%;
+}
+.inputFoto{
+ cursor: pointer;
+ font-size: 20px;
+ margin: 0;
+ opacity: 0;
+ outline: 0 none;
+ padding: 0;
+ position: absolute;
+ top: -1000px;
+}
+
+.parrafo__edit__perfil{
+ text-align: center;
+ color: $color__gris;
+}
+
+.textos__label{
+    color: white;
+}
+.linea__editar__perfil{
+   border-bottom: 1px;
+    width: 100%;
+    color: white;
+    grid-column: 1 / 3;  
+}
+.actualizar{
+    padding: 4px;
+}
+.text__area__mensaje{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100px;
+    min-height: 100px;
+    border-radius: 4px;
+}
+.contenedor__capturara__datos{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 4px;
+}
+.block{
+    grid-column: 1 / 3;  
+}
+

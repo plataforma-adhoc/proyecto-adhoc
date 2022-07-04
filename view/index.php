@@ -15,7 +15,7 @@
                 <p class="copy__section">Ofrecemos la solucion perfecta para tu movilidad</p>
 
                 <article class="container-cards">
-                    <div class="card">
+                    <div class="card" data-aos="zoom-in">
                         <img src="img/imagen__2.webp" class="card__img">
                         <div class="cards__text">
                             <p class="card__list">Disfruta del momento sin preocupaciones</p>
@@ -24,7 +24,7 @@
                             <!-- <a href="#" class="card__button"></a> -->
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-aos="zoom-in">
                         <img src="img/imagen__1.webp" class="card__img">
                         <div class="cards__text">
                             <p class="card__list">Tu eliges la forma de pago</p>
@@ -33,7 +33,7 @@
                             <!-- <a href="#" class="card__button">Comienza tu proyecto</a> -->
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card"  data-aos="zoom-in">
                         <img src="img/imagen__3.webp" class="card__img">
                         <div class="cards__text">
                             <p class="card__list">Seguridad ante todo</p>
@@ -45,7 +45,7 @@
                 </article>
             </div>
         </section>
-        <section class="projects container">
+        <section class="projects container" data-aos="zoom-in">
             <h2 class="subtitle">Solicitud en tiempo real<span class="point">.</span></h2>
             <p class="copy__section">Observa si el conductor esta disponible y contrata su servicios </p>
             <article class="container-bg">
@@ -83,7 +83,7 @@
                 </div>
             </article>
         </section>
-        <section class="testimony">
+        <section class="testimony" data-aos="zoom-in">
             <div class="container">
                 <h2 class="subtitle">Notificaciones en tiempo real<span class="point">.</span></h2>
                 <p class="copy__section">recibe una notificacion en tiempo real cuando tengas un nuevo servicio</p>

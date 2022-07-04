@@ -1,0 +1,51 @@
+.contenedor__servicios{
+    margin-top: -700px;
+}
+
+.titulo__servicios{
+    text-align: center;
+    color: white;
+}
+
+.parrafo__servicios{
+    text-align: center;
+    color: white;
+}
+
+.contenedor__cards__servicios{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cards__servicios{
+    width: 25%;
+    border-radius: 7px;
+    background:$color__menu__dashboard;
+}
+
+.botones{
+display:flex;
+justify-content: space-between;
+margin: 0 20px 0 20px;
+}
+
+.botones a{
+text-decoration: 0;
+background: #000;
+width: 100px;
+color: white;
+padding: 10px;
+text-align: center;
+border-radius: 50px;
+
+}
+
+.puntuacion__servicios{
+ margin:20px 0 0 0;
+ text-align: center;
+}
+
+.fa-star{
+    color:orangered;
+}

@@ -7,10 +7,14 @@
 @import 'contacto';
 @import 'dashboard-usuario';
 @import 'perfil';
-
+@import 'configuracion';
+@import 'edit-perfil';
+@import 'ayudanos-a-mejorar';
+@import 'servicios';
 
 body{
     font-family: 'Harabara', sans-serif;
     background:$color__fondo;
+    user-select: none;
 }
 

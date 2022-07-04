@@ -1,0 +1,49 @@
+.titulo__configuracion{
+    color: white;
+}
+
+.contenedor__configuracion{
+    height: auto;
+    margin-top: -600px;
+}
+.item__configuracion{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card__configuracion{
+    width: 35%;
+    border-radius: 7px;
+    height: 200px;
+    text-decoration: 0;
+   
+
+}
+.titulo__item__configuracion{
+    text-align: center;
+    color:black;
+    font-size: 25px;
+}
+
+.cambiar__contraseña{
+    background-image: url(../img/cambiar__contrasena.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color:$color__verde;
+    background-position: center;
+}
+
+.eliminar__cuenta{
+ background:$color__danger;
+ background-image: url(../img/eliminar__cuenta.svg);
+ background-repeat: no-repeat;
+ background-size: contain;
+ background-position: center;
+}
+.parrafo__item__configuracion{
+    color: black;
+    text-align: center;
+
+   
+}

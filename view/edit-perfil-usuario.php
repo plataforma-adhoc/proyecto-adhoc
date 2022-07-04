@@ -1,6 +1,17 @@
-<?php include'layout/nabvar.php' ?>
-
-<form class="formulario__registro" method="post" action="/usuario-registro">
+<?php include'layout/nav-home-usuario.php'  ?>
+<form action="" class="formulario editarPerfil" enctype="multipart/form-data">
+    <br><br>
+    <div class="avatar">
+        <img src="./img/avatar__defecto.svg" class="imagen__avatar">
+        <br>
+        <br>
+        <div class="cambiar__avatar" id="nuevoAvatar">
+            <input type="file" id="nuevaImagen" name="avatar" class="inputFoto">
+            <!-- Subir imagen -->
+            <i class="fas fa-camera"></i>
+        </div>
+    </div>
+    <p class="parrafo__edit__perfil">incluya una foto</p>
     <div class="contenedor__formulario">
         <div class="grupo__inputs">
             <div class="contenedor__inputs" id="grupo__nombre">
@@ -60,17 +71,17 @@
 
             </div>
         </div>
+        <hr class="linea__editar__perfil">
+        <p class="block">
+            <label for="" class="textos__label">Sobre mi</label>
+            <textarea name="message" rows="3" class="text__area__mensaje" placeholder="Una breve descrpicion de mi perfil"></textarea>
+        </p>
         <div class="block">
-            <input type="submit" value="CREAR MI CUENTA" class="boton__registro" name="enviar">
-        </div>
-
-        <p class="terminos block">Al registrarte aceptas nuestros <a class="enlace__terminos" href="./terminos-y-condiciones-de-uso">Terminos y
-                condiciones</a> y
-            <a class="enlace__terminos" href="./politicas-de-privacidad">politicas de privacidad</a> </p>
-        <div class="contenedor_enlace_sesion">
-            <a href="./login-usuario" class="enlace___login">Ya tienes una cuenta <strong>Inicia sesion</strong>
-            </a>
+            <input type="submit" value="ACTUALIZAR  MI CUENTA" class="boton__registro" name="enviar">
         </div>
     </div>
+    </div>
 </form>
-<?php include'layout/footer.php' ?>
+<br><br>
+
+<?php include'layout/footer-home.php'  ?>
