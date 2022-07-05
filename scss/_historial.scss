@@ -1,0 +1,39 @@
+.titulo__historial{
+ color: white;
+ position:absolute;
+ top: 200px;
+ text-align: center;
+ left: 50%;
+ 
+}
+.parrafo__historial{
+    color:$color__gris;
+    position:absolute;
+    top: 250px; 
+    width: 500px;  
+    left: 40%;
+}
+.contenedor__datos__historial{
+    margin-top: -400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background:$color__menu__dashboard;
+    border-radius: 7px;
+}
+
+.texto{
+    color:$color__gris;
+    font-size: 19px;
+}
+
+.item__datos__servicio{
+    color:$color__gris;
+}
+
+.datos__de__historial{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}

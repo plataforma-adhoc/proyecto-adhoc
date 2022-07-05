@@ -1,0 +1,55 @@
+.contenedor__cards__dashboard{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+   flex-wrap: wrap;
+}
+
+.cards__dashboard{
+    width: 17%;
+    height: 120px;
+    border-top:solid 6px $color__verde;
+    border-radius: 7px;
+    background:$color__menu__dashboard;
+    text-decoration: 0;
+}
+
+.item__titulo__cards{
+    text-align: center;
+    font-size: 18px;
+    color:$color__gris;
+}
+
+.item__total{
+text-align: center;
+color: white;
+}
+
+.item__disponible{
+display: block;
+text-align: center;
+font-size: 12px;
+color: white;
+margin: -20px  0 0 0;
+}
+
+.nuevo__servicio{
+text-decoration: 0;
+color: $color__gris;
+
+}
+
+.nueva__notificacion{
+    display: block; 
+    height: 30px; 
+    width: 30px;  
+     border-radius: 30px; 
+     background-color:$color__verde; 
+     color:black; 
+     text-align: center;
+    line-height: 30px;
+    font-weight: bolder;
+    margin: auto;
+    
+}

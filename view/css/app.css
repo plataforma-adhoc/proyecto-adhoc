@@ -337,11 +337,11 @@
 
 .card__button {
   display: block;
-  background: linear-gradient(180deg, #F7CE90 0%, #F4BD76 100%);
+  background: #C0392B;
   border-radius: 6px;
   text-decoration: none;
   width: 100%;
-  color: var(--black1);
+  color: white;
   font-weight: 700;
   text-align: center;
   padding: 12px 0;
@@ -1368,7 +1368,7 @@ template {
   margin-top: 30px;
 }
 
-.fa-home, .fa-cogs, .fa-history, .fa-mail-bulk, .fa-star, .fa-power-off, .usuario__menu {
+.fa-home, .fa-cogs, .fa-history, .fa-mail-bulk, .fa-comments, .fa-power-off, .usuario__menu {
   background: #0A192F;
   border-radius: 100px;
   padding: 10px;
@@ -1787,6 +1787,101 @@ template {
 
 .fa-star {
   color: orangered;
+}
+
+.contenedor__cards__dashboard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cards__dashboard {
+  width: 17%;
+  height: 120px;
+  border-top: solid 6px #008A55;
+  border-radius: 7px;
+  background: #112240;
+  text-decoration: 0;
+}
+
+.item__titulo__cards {
+  text-align: center;
+  font-size: 18px;
+  color: gray;
+}
+
+.item__total {
+  text-align: center;
+  color: white;
+}
+
+.item__disponible {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  margin: -20px 0 0 0;
+}
+
+.nuevo__servicio {
+  text-decoration: 0;
+  color: gray;
+}
+
+.nueva__notificacion {
+  display: block;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background-color: #008A55;
+  color: black;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bolder;
+  margin: auto;
+}
+
+.titulo__historial {
+  color: white;
+  position: absolute;
+  top: 200px;
+  text-align: center;
+  left: 50%;
+}
+
+.parrafo__historial {
+  color: gray;
+  position: absolute;
+  top: 250px;
+  width: 500px;
+  left: 40%;
+}
+
+.contenedor__datos__historial {
+  margin-top: -400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #112240;
+  border-radius: 7px;
+}
+
+.texto {
+  color: gray;
+  font-size: 19px;
+}
+
+.item__datos__servicio {
+  color: gray;
+}
+
+.datos__de__historial {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 body {

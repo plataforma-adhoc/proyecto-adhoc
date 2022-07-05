@@ -362,11 +362,11 @@
 
 .card__button{
     display: block;
-    background: linear-gradient(180deg, #F7CE90 0%, #F4BD76 100%);
+    background:$color__accent;
     border-radius: 6px;
     text-decoration: none;
     width: 100%;
-    color: var(--black1);
+    color: white;
     font-weight: 700;
     text-align: center;
     padding: 12px 0;

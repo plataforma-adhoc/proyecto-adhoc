@@ -54,7 +54,7 @@
                         <h3 class="card__title">Comodidad <span class="point">.</span></h3>
                         <p class="card__date">Comodidad</p>
                         <p class="card__copy">Pide tu conductor elegido desde tu casa u oficina o donde te encuentres sin importar la hora que sea</p>
-                        <a href="#" class="card__button">Comienza tu proyecto</a>
+                        <a href="./usuario" class="card__button">Quiero ser usuario</a>
                     </div>
                 </div>
                 <div class="background">
