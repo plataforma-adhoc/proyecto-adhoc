@@ -1,3 +1,5 @@
+
+
 .contenedor__enalces__menu__home{
   width: 100%;
   margin:0 0 0 10px;
@@ -49,6 +51,7 @@ margin-right: 5px;
     width: 100%; 
     margin-top: 30px; 
   }
+
 .fa-home,.fa-cogs,.fa-history,.fa-mail-bulk,.fa-comments,.fa-power-off,.usuario__menu{
   background:$color__fondo;
   border-radius: 100px;
@@ -85,9 +88,14 @@ margin-right: 5px;
     margin-top: -600px;
   }
 
+  .vista__nombre__usuario{
+    color:$color__gris;
+    font-size:25px;
+  }
+
   .titulo__dashboard{
-    font-size: 20px;
-    color: white;
+    font-size: 18px;
+    color:$color__gris;
   }
 
 .datos__perfiles{

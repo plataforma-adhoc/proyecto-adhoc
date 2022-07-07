@@ -1,0 +1,30 @@
+.contendor__datos__servicio{
+    margin-top: -400px;
+}
+
+.contenedor__servicio{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:$color__menu__dashboard;
+    border-radius: 7px;
+    height: auto;
+}
+
+.titulo__datos__servicio{
+    color: white;
+    position:absolute;
+    top: 200px;
+    text-align: center;
+    left: 50%;
+}
+
+.parrafo__servicio{
+    color:$color__gris;
+    position:absolute;
+    top: 250px; 
+    width: 500px;  
+    left: 40%;
+
+}

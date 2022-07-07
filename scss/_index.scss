@@ -91,9 +91,10 @@
       margin: 0 0 0 20px;
     }
 
-    .nav-link a{
+.nav-link a{
      text-decoration: 0;
-     color: white;
+     color:$color__gris;
+     font-size: 20px;
     }
     
 .nav-link a:hover{
@@ -104,6 +105,7 @@
     background-color: rgba(0, 0, 0, 0.15);
     border-radius: 7px;
     margin:  0 0 0 5px;
+    width: 95%;
   }
   
   .nav-link:focus, .nav-link:active {
@@ -129,10 +131,7 @@
     transition: all 400ms ease-out;
   }
   
-  
-  
  
-  
   .nav-title {
     color: var(--nav-text-color);
     font-weight: bold;

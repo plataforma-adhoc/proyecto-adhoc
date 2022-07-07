@@ -88,7 +88,8 @@
 
 .nav-link a {
   text-decoration: 0;
-  color: white;
+  color: gray;
+  font-size: 20px;
 }
 
 .nav-link a:hover {
@@ -99,6 +100,7 @@
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 7px;
   margin: 0 0 0 5px;
+  width: 95%;
 }
 
 .nav-link:focus, .nav-link:active {
@@ -1402,9 +1404,14 @@ template {
   margin-top: -600px;
 }
 
+.vista__nombre__usuario {
+  color: gray;
+  font-size: 25px;
+}
+
 .titulo__dashboard {
-  font-size: 20px;
-  color: white;
+  font-size: 18px;
+  color: gray;
 }
 
 .datos__perfiles {
@@ -1882,6 +1889,36 @@ template {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.contendor__datos__servicio {
+  margin-top: -400px;
+}
+
+.contenedor__servicio {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #112240;
+  border-radius: 7px;
+  height: auto;
+}
+
+.titulo__datos__servicio {
+  color: white;
+  position: absolute;
+  top: 200px;
+  text-align: center;
+  left: 50%;
+}
+
+.parrafo__servicio {
+  color: gray;
+  position: absolute;
+  top: 250px;
+  width: 500px;
+  left: 40%;
 }
 
 body {
