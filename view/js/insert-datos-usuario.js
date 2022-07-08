@@ -54,3 +54,41 @@ export function  insert__login__usuario(){
     })
   }  
 }
+
+export function password__usuario(){
+  let contrasena = document.getElementById('formulario-contraseña');
+  
+  if(contrasena){
+   contrasena.addEventListener('submit',function(evento){
+
+    let datos = new FormData( document.getElementById('formulario-contraseña'))
+    evento.preventDefault();
+     fetch('contrasena-usuario',{
+      method:'POST',
+      body:datos
+     }).then(respuesta => respuesta.json())
+     .then(data=>{
+      console.log(data)
+      if(data == 'ok'){
+        Swal.fire({
+          icon: 'success',
+          title: `Hemos enviado un correo con una contraseña temporal`,
+          footer: 'Esta informacion es importante',
+         
+        })
+      }else{
+        Swal.fire({
+            icon: 'error',
+            title: `${data}`,
+            footer: 'Esta informacion es importante',
+           
+          })
+
+      }
+
+          
+        
+     })
+   })
+  }
+}
