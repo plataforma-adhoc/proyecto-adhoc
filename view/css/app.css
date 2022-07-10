@@ -66,6 +66,13 @@
   justify-content: space-between;
 }
 
+.fa-user-astronaut, .fa-sign-in-alt, .fa-house-user {
+  font-size: 22px;
+  background: #0A192F;
+  border-radius: 50px;
+  padding: 7px;
+}
+
 .nav-links {
   background-color: #112240;
   padding: 0;
@@ -90,10 +97,7 @@
   text-decoration: 0;
   color: gray;
   font-size: 20px;
-}
-
-.nav-link a:hover {
-  color: #C0392B;
+  margin: 0 0 0 5px;
 }
 
 .nav-link:hover {
@@ -1919,6 +1923,37 @@ template {
   top: 250px;
   width: 500px;
   left: 40%;
+}
+
+.contenedor__actualizacion {
+  margin-top: 200px;
+}
+
+.actualizacion {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.titulo__actualizacion {
+  text-align: center;
+  color: gray;
+}
+
+.contenedor__enlace__iniciar__sesion {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.enlace__iniciar__sesion {
+  display: inline-block;
+  text-decoration: 0;
+  color: gray;
+}
+
+.enlace__iniciar__sesion:hover {
+  border-bottom: 2px solid #C0392B;
 }
 
 body {

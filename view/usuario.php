@@ -48,7 +48,7 @@
         </div>
         <div class="grupo__inputs block" id="grupo__password">
             <div class="contenedor__inputs">
-                <input type="password" placeholder="Crea una contraseña" name="contrasena" id="c"
+                <input type="password" placeholder="Crea una contraseña" name="contrasena" id=""
                     class="capturarDatos">
 
             </div>

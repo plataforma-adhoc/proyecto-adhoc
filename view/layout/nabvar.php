@@ -36,19 +36,25 @@
             </div>
             <ul class="nav-links">
               <li class="nav-link">
-                <a href="./">Home</a>
+              <i class="fas fa-house-user"></i>
+                <a href="./">Inicio</a>
               </li>
               <li class="nav-link">
-                <a href="./usuario">Crear un registro como usuario</a>
+              
+              <i class="fas fa-user-astronaut"></i>
+                  <a href="./usuario">Crear un registro de usuario</a>
               </li>
               <li class="nav-link">
-                <a href="./conductor">Crear un registro como conductor</a>
-
-              </li>
-              <li class="nav-link">
+              <i class="fas fa-sign-in-alt"></i>
                 <a href="./login-usuario">Loguearme como usuario</a>
               </li>
               <li class="nav-link">
+              <i class="fas fa-user-astronaut"></i>
+                <a href="./conductor">Crear un registro de conductor</a>
+
+              </li>
+              <li class="nav-link">
+              <i class="fas fa-sign-in-alt"></i>
                 <a href="./login-conductor">Loguearme como conductor</a>
               </li>
             </ul>

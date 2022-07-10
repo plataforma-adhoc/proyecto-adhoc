@@ -1,10 +1,10 @@
 <?php include'layout/nabvar.php'?>
 
-<form class="formulario__registro">
+<form class="formulario__registro" id="formulario-login-conductor">
     <div class="contenedor__formulario">
         <div class="grupo__inputs block">
             <div class="contenedor__inputs" id="grupo__nombre">
-                <input type="text" placeholder="Tu E-mail" name="nombre" id="nombreUsuario"
+                <input type="email" placeholder="Tu E-mail" name="email" 
                     class="capturarDatos" autofocus autocomplete="">
 
             </div>
@@ -12,7 +12,7 @@
 
         <div class="grupo__inputs block" id="grupo__email">
             <div class="contenedor__inputs">
-                <input type="password" placeholder="Tu contraseña" name="email" id="emailUsuario" class="capturarDatos">
+                <input type="password" placeholder="Tu contraseña" name="contrasena"  class="capturarDatos">
             </div>
         </div>
        

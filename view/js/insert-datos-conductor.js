@@ -1,17 +1,17 @@
-export function insert__datos__usuario(){
-    let formulario__registro = document.getElementById('formulario-registro-usuario');
+export function insert__datos__conductor(){
+    let formulario__registro = document.getElementById('formulario-registro-conductor');
     if(formulario__registro){
      formulario__registro.addEventListener('submit',function(evento){
         evento.preventDefault();
         
-        let data = new FormData(document.getElementById('formulario-registro-usuario'))
-        fetch('insert-datos-usuario',{
+        let data = new FormData(document.getElementById('formulario-registro-conductor'))
+        fetch('insert-datos-conductor',{
             method:'POST',
             body:data
         }).then(respuesta => respuesta.json())
         .then(datos =>{
            if(datos == 'true'){
-            window.location.href = './dashboard-usuario';
+            window.location.href = './dashboard-conductor';
 
            }else{
             Swal.fire({
@@ -27,21 +27,21 @@ export function insert__datos__usuario(){
 }
 
 
-export function  insert__login__usuario(){
-  let login__usuario = document.getElementById('formulario-login');
+export function  insert__login__conductor(){
+  let login__usuario = document.getElementById('formulario-login-conductor');
   if(login__usuario){
     login__usuario.addEventListener('submit',function(evento){
         evento.preventDefault();
         
-        let datos = new FormData(document.getElementById('formulario-login'));
-        fetch('insert-login-usuario',{
+        let datos = new FormData(document.getElementById('formulario-login-conductor'));
+        fetch('insert-login-conductor',{
             method:'POST',
             body:datos
 
         }).then(respuesta => respuesta.json())
         .then(data =>{
             if(data ==  'true'){
-                window.location.href = './dashboard-usuario';
+                window.location.href = './dashboard-conductor';
             }else{
                 Swal.fire({
                     icon: 'error',
@@ -55,15 +55,15 @@ export function  insert__login__usuario(){
   }  
 }
 
-export function password__usuario(){
-  let contrasena = document.getElementById('formulario-contraseña');
+export function password__conductor(){
+  let contrasena = document.getElementById('formulario-contrasena');
   
   if(contrasena){
    contrasena.addEventListener('submit',function(evento){
 
-    let datos = new FormData( document.getElementById('formulario-contraseña'))
+    let datos = new FormData( document.getElementById('formulario-contrasena'))
     evento.preventDefault();
-     fetch('insert-contrasena-usuario',{
+     fetch('insert-contrasena-conductor',{
       method:'POST',
       body:datos
      }).then(respuesta => respuesta.json())

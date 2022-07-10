@@ -1,13 +1,12 @@
-<?php
-function login__usuario(){
+<?php  
+function login__usuaruio(){
     include'conexion/conexion-db-accent.php';
     $email = mysqli_real_escape_string($conexion__db__accent,$_POST['email'] ? $_POST['email']: '');
-    $estado = 'disponible';
     $contrasena = mysqli_real_escape_string($conexion__db__accent,$_POST['contrasena'] ? $_POST['contrasena']: '');
     if($email ==="" || $contrasena ===""){
       echo json_encode('No podemos procesar tu solicidtud por falta de datos');
     }else{
-        $consulta__login = "SELECT *  FROM usuarios   WHERE email = '$email' LIMIT 1";
+        $consulta__login = "SELECT *  FROM conductores   WHERE email = '$email' LIMIT 1";
         $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__login);
 
         if(mysqli_num_rows($ejecutar__consulta) > 0){
@@ -19,10 +18,8 @@ function login__usuario(){
             }else{
 
                 session_start();
-                $_SESSION['id_usuario'] = $email;  
+                $_SESSION['id_conductor'] = $email;  
                 echo json_encode('true');
-
-                $actalizar__estado = mysqli_query($conexion__db__accent,"UPDATE usuarios SET status = '$estado' WHERE imail = '$email' ");
             }
         
         }else{
@@ -36,6 +33,11 @@ function login__usuario(){
 
 
    
-login__usuario();
+login__usuaruio();
+
+
+
+
+
 
 ?>

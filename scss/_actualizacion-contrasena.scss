@@ -1,0 +1,27 @@
+.contenedor__actualizacion{
+    margin-top: 200px;
+}
+
+.actualizacion{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.titulo__actualizacion{
+    text-align: center;
+    color: $color__gris;
+
+}
+.contenedor__enlace__iniciar__sesion{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+.enlace__iniciar__sesion{
+    display: inline-block;
+    text-decoration: 0;
+    color:$color__gris;
+}
+.enlace__iniciar__sesion:hover{
+    border-bottom: 2px solid $color__accent;
+}

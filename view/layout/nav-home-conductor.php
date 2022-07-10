@@ -1,3 +1,13 @@
+<?php    
+session_start();
+if(!isset($_SESSION['id_conductor'])){
+  header("Location: ./login-conductor");
+  die();
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -38,7 +48,7 @@
            <div class="contenedor__enalces__menu__home"><a href="./configuracion-conductor" class="enlaces__menu__home"><i class="fas fa-cogs"></i> Configuracion</a></div> 
             <div class="contenedor__enalces__menu__home"><a href="./ayudanos-a-mejorar" class="enlaces__menu__home"><i class="fas fa-mail-bulk"></i> Ayudanos a mejorar</a></div>
            <div class="contenedor__enalces__menu__home"><a href="./perfil-conductor" class="enlaces__menu__home"><i class="fas fa-comments"></i> Reseñas</a></div> 
-            <div class="contenedor__enalces__menu__home"><a href="./desconectarse" class="enlaces__menu__home"><i class="fas fa-power-off"></i> Desconectarse</a></div>
+            <div class="contenedor__enalces__menu__home"><a href="./desconectar-conductor" class="enlaces__menu__home"><i class="fas fa-power-off"></i> Desconectarse</a></div>
         </div>
 
     </div>
