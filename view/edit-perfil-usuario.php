@@ -1,21 +1,30 @@
-<?php include'layout/nav-home-usuario.php'  ?>
-<form action="" class="formulario editarPerfil" enctype="multipart/form-data">
+<?php include'layout/nav-home-usuario.php';
+include'conexion/conexion-db-accent.php';
+
+$consulta__datos = "SELECT *  FROM usuarios   WHERE email = '{$_SESSION['id_usuario']}'";
+$resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
+  $datos__resultado = mysqli_fetch_array($resultado__consulta); 
+?>
+<form action="insert-edit-perfil-usuario" class="formulario editarPerfil" enctype="multipart/form-data" method="POST">
     <br><br>
     <div class="avatar">
-        <img src="./img/avatar__defecto.svg" class="imagen__avatar">
+        <img src="upload/<?php  echo $datos__resultado['avatar'] ?>" class="imagen__avatar">
         <br>
         <br>
         <div class="cambiar__avatar" id="nuevoAvatar">
-            <input type="file" id="nuevaImagen" name="avatar" class="inputFoto">
-            <!-- Subir imagen -->
-            <i class="fas fa-camera"></i>
+            <div class="custom-input-file col-md-6 col-sm-6 col-xs-6">
+                <input type="file" id="fichero-tarifas" class="input-file" name="avatar">
+                Subir una foto...
+            </div>
+
         </div>
     </div>
-    <p class="parrafo__edit__perfil">incluya una foto</p>
+    <br><br><br>
     <div class="contenedor__formulario">
         <div class="grupo__inputs">
             <div class="contenedor__inputs" id="grupo__nombre">
-                <input type="text" placeholder="Nombre y apellidos" name="nombre" id="nombreUsuario"
+            <label for="" class="label">Nombre</label>
+                <input type="text"  name="nombre"value="<?php   echo $datos__resultado['nombre_usuario'] ?>"
                     class="capturarDatos" autofocus autocomplete="">
 
             </div>
@@ -23,59 +32,71 @@
 
         <div class="grupo__inputs" id="grupo__email">
             <div class="contenedor__inputs">
-                <input type="email" placeholder="E-mail" name="email" id="emailUsuario" class="capturarDatos">
+            <label for="" class="label">Primer apellido</label>
+                <input type="text" name="primerApellido"  class="capturarDatos" value="<?php   echo $datos__resultado['primer_apellido'] ?>">
 
 
             </div>
         </div>
         <div class="grupo__inputs" id="grupo__telefono">
+        <label for="" class="label">Segundo apellido</label>
             <div class="contenedor__inputs">
-                <input type="tel" placeholder="Telefono" name="telefono" id="telefonoUsuario" class="capturarDatos">
+                <input type="text" name="segundoApellido"  class="capturarDatos"value="<?php   echo $datos__resultado['segundo_apellido'] ?>">
 
             </div>
         </div>
 
         <div class="grupo__inputs" id="grupo__documento">
+        <label for="" class="label">E-mail</label>
             <div class="contenedor__inputs">
-                <input type="text" placeholder="Documento" name="documento" id="documentoUsuario" class="capturarDatos">
+                <input type="email"  name="email"  class="capturarDatos"value="<?php   echo $datos__resultado['email'] ?>">
 
             </div>
         </div>
 
         <div class="grupo__inputs" id="grupo__password">
             <div class="contenedor__inputs">
-                <input type="password" placeholder="Crea una password" name="contrasena" id="contrasenaUsuario"
-                    class="capturarDatos">
-
-            </div>
-        </div>
-
-        <div class="grupo__inputs" id="grupo__password">
-            <div class="contenedor__inputs">
-                <input type="password" placeholder="Crea una password" name="contrasena" id="contrasenaUsuario"
+            <label for="" class="label">Documento</label>
+                <input type="text"name="documento" value="<?php   echo $datos__resultado['numero_documento'] ?>"
                     class="capturarDatos">
 
             </div>
         </div>
         <div class="grupo__inputs" id="grupo__password">
             <div class="contenedor__inputs">
-                <input type="password" placeholder="Crea una password" name="contrasena" id="contrasenaUsuario"
-                    class="capturarDatos">
-
-            </div>
-        </div>
-        <div class="grupo__inputs" id="grupo__password">
-            <div class="contenedor__inputs">
-                <input type="password" placeholder="Crea una password" name="contrasena" id="contrasenaUsuario"
+            <label for="" class="label">Telefono</label>
+                <input type="text" name="telefono" value="<?php   echo $datos__resultado['numero_telefono'] ?>"
                     class="capturarDatos">
 
             </div>
         </div>
         <hr class="linea__editar__perfil">
-        <p class="block">
-            <label for="" class="textos__label">Sobre mi</label>
-            <textarea name="message" rows="3" class="text__area__mensaje" placeholder="Una breve descrpicion de mi perfil"></textarea>
-        </p>
+        <div class="grupo__inputs" id="grupo__password">
+            <div class="contenedor__inputs">
+            <label for="" class="label">Facebook</label>
+                <input type="text"  name="facebook" value="<?php   echo $datos__resultado['facebook'] ?>"
+                    class="capturarDatos">
+
+            </div>
+        </div>
+        <div class="grupo__inputs" id="grupo__password">
+            <div class="contenedor__inputs">
+            <label for="" class="label">Instagram</label>
+                <input type="text"  name="instagram" value="<?php   echo $datos__resultado['instagram'] ?>"
+                    class="capturarDatos">
+
+            </div>
+        </div>
+        <div class="grupo__inputs block" id="grupo__password">
+            <div class="contenedor__inputs">
+            <label for="" class="label">Twiiter</label>
+                <input type="text"  name="twitter" value="<?php   echo $datos__resultado['twitter'] ?>"
+                    class="capturarDatos">
+
+            </div>
+        </div>
+       
+
         <div class="block">
             <input type="submit" value="ACTUALIZAR  MI CUENTA" class="boton__registro" name="enviar">
         </div>

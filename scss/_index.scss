@@ -173,12 +173,19 @@
   
   .image-1 {
     background-image:
+    url(../img/imagen__menu.jpg),
       linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)),
-      url(https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
   }
   
- 
-  
+ .texto__nav__images{
+    font-size: 35px;
+    margin: 20% auto 0 auto;
+    width: 700px;
+ }
+
+  .precio__hora{
+  color: $color__accent;
+  }
   
   @media (min-width: 768px) {
     .nav {

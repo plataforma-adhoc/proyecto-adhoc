@@ -44,10 +44,28 @@ background:$color__verde;
     width: 40%;
 }
 
+.datos__basicos{
+color: $color__gris;
+line-height: 10px;
+font-size: 18px;
+}
+
+.quien__soy{
+line-height: 20px;
+width: 300px;
+height: auto;
+font-size: 16px;
+}
+
+.fecha__registro{
+    font-size: 12px;
+}
+
 .contenedor__opinion{
     background:$color__menu__dashboard;
     border-radius: 7px;
    margin-top: 100px;
+   
 }
 
 .titulo__opinion{

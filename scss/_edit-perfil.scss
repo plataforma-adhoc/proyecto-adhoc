@@ -19,34 +19,35 @@
   height: 150px;
   border-radius:100%;
 }
-.cambiar__avatar{
-    color:$color__gris;
+
+.custom-input-file {
+    background-color: #941B80;
+    color: #fff;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
-    text-align: center;
+    margin-left: -80px;
     min-height: 15px;
     overflow: hidden;
     padding: 10px;
     position: relative;
-    width: 50px;
-    margin: -70px 30%;
-}
-.inputFoto{
- cursor: pointer;
- font-size: 20px;
- margin: 0;
- opacity: 0;
- outline: 0 none;
- padding: 0;
- position: absolute;
- top: -1000px;
-}
+    text-align: center;
+    width: 300px;
+  }
+  
+  .custom-input-file .input-file {
+   border: 10000px solid transparent;
+   cursor: pointer;
+   font-size: 10000px;
+   margin: 0;
+   opacity: 0;
+   outline: 0 none;
+   padding: 0;
+   position: absolute;
+//    right: -200px;
+   top: -1000px;
+  }
 
-.parrafo__edit__perfil{
- text-align: center;
- color: $color__gris;
-}
 
 .textos__label{
     color: white;
@@ -74,5 +75,9 @@
 }
 .block{
     grid-column: 1 / 3;  
+}
+
+.label{
+ color:white;
 }
 

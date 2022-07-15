@@ -50,7 +50,7 @@
               </li>
               <li class="nav-link">
               <i class="fas fa-user-astronaut"></i>
-                <a href="./conductor">Crear un registro de conductor</a>
+                <a href="./conductor">Recibir solicitudes</a>
 
               </li>
               <li class="nav-link">
@@ -59,7 +59,10 @@
               </li>
             </ul>
             <div class="nav-images">
-              <div class="nav-image image-1"></div>
+              <div class="nav-image image-1">
+                <h2 class="texto__nav__images">Solicita tu conductor elegido desde <span class="precio__hora">$ 25.000 COP</span>  hora y haz que tus mejores momentos  sean inolvidables</h2>
+               
+              </div>
             </div>
           </div>
         </div>

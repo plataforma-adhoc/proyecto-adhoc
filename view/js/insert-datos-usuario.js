@@ -92,3 +92,46 @@ export function password__usuario(){
    })
   }
 }
+
+export  function actualizar__contrasena__usuario(){
+  let cambiar__contrasena = document.getElementById('formulario-actaulizar-contrasena-usuario');
+  if(cambiar__contrasena){
+   cambiar__contrasena.addEventListener('submit',function(evento){
+    evento.preventDefault();
+
+   let data = new FormData( document.getElementById('formulario-actaulizar-contrasena-usuario'));
+    fetch('insert-nueva-contrasena-usuario',{
+      method:'POST',
+      body:data
+    }).then(respuesta => respuesta.json())
+    .then(datos =>{
+      if(datos === 'ok'){
+        Swal.fire({
+          background:'#202F36',
+          icon: 'success',
+          title: `Tu contraseña se actualizo con exito`,
+          toast:true,
+          position:'bottom-end',
+          confirmButtonText:'De acuerdo',
+         
+         
+        })
+
+      }else{
+        Swal.fire({
+          background:'#202F36',
+          icon: 'error',
+          title: `${datos}`,
+          confirmButtonText:'De acuerdo',
+          footer: 'Esta informacion es importante',
+         
+        })
+
+      }
+      
+    })
+    
+     
+   })
+  }
+  }

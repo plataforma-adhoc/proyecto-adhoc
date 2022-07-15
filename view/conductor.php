@@ -47,21 +47,21 @@
 
         <div class="grupo__inputs" id="">
             <div class="contenedor__inputs">
-                <input type="text" placeholder="Numero licencia" name="licencia" id=""
+                <input type="text" placeholder="Numero licencia" name="licencia" 
                     class="capturarDatos">
 
             </div>
         </div>
         <div class="grupo__inputs" id="">
             <div class="contenedor__inputs">
-                <input type="text" placeholder="Categoria licencia" name="categoria" id=""
+                <input type="text" placeholder="Categoria licencia" name="categoria" 
                     class="capturarDatos">
 
             </div>
         </div>
         <div class="grupo__inputs block" id="grupo__password">
             <div class="contenedor__inputs">
-                <input type="password" placeholder="Crea una password" name="contrasena" id=""
+                <input type="password" placeholder="Crea una contraseña" name="contrasena" 
                     class="capturarDatos">
 
             </div>

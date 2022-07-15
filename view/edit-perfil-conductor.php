@@ -1,92 +1,122 @@
 <?php include'layout/nav-home-conductor.php';
 include'conexion/conexion-db-accent.php';
 
-$consulta__datos = "SELECT * FROM  conductores WHERE email = '{$_SESSION['id_conductor']}'";
-$ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
-if(mysqli_num_rows($ejecutar__consulta) > 0 ){
-  $fila__datos = mysqli_fetch_array($ejecutar__consulta);
-}
-
-
+$consulta__datos__conductor = "SELECT *  FROM conductores   WHERE email = '{$_SESSION['id_conductor']}'";
+$resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__conductor);
+  $datos__resultado = mysqli_fetch_array($resultado__consulta); 
 
  ?>
 
-<form action="" class="formulario editarPerfil" enctype="multipart/form-data">
+<form class="formulario editarPerfil"  action="insert-edit-perfil-conductor" method="POST" enctype="multipart/form-data">
     <br><br>
     <div class="avatar">
-        <img src="<?php echo $fila__datos['avatar'] ?>" class="imagen__avatar">
+        <img src="upload/<?php echo $datos__resultado['avatar'] ?>" class="imagen__avatar">
         <br>
         <br>
-        <div class="cambiar__avatar" id="nuevoAvatar">
-            <input type="file" id="nuevaImagen" name="avatar" class="inputFoto">
-            <!-- Subir imagen -->
-            <i class="fas fa-camera"></i>
-        </div>
-    </div>
-    <p class="parrafo__edit__perfil">incluya una foto</p>
+<div class="custom-input-file col-md-6 col-sm-6 col-xs-6">
+<input type="file" id="fichero-tarifas" class="input-file" value="" name="avatar">
+Subir una foto...
+</div>
+</div>
+<br><br><br> 
     <div class="contenedor__formulario">
         <div class="grupo__inputs">
             <div class="contenedor__inputs" id="grupo__nombre">
-                <input type="text" placeholder="Nombre y apellidos" name="nombre" 
-                    class="capturarDatos" autofocus autocomplete="" value="<?php  echo $fila__datos['nombre_conductor'] ?>">
+                <label for="" class="label">Nombre</label>
+                <input type="text"  name="nombre" 
+                    class="capturarDatos" autofocus autocomplete="" value="<?php  echo $datos__resultado['nombre_conductor'] ?>">
 
             </div>
         </div>
 
         <div class="grupo__inputs" id="grupo__email">
             <div class="contenedor__inputs">
-                <input type="text"  name="primerApellido"  class="capturarDatos"value="<?php  echo $fila__datos['primer_apellido'] ?>" >
+            <label for="" class="label">Primer apellido</label>
+                <input type="text"  name="primerApellido"  class="capturarDatos"value="<?php  echo $datos__resultado['primer_apellido'] ?>" >
             </div>
         </div>
 
             <div class="grupo__inputs" id="grupo__email">
             <div class="contenedor__inputs">
-                <input type="text"  name="segundoApellido" class="capturarDatos"value="<?php  echo $fila__datos['segundo_apellido'] ?>">
+            <label for="" class="label">Segundo apellido</label>
+                <input type="text"  name="segundoApellido" class="capturarDatos"value="<?php  echo $datos__resultado['segundo_apellido'] ?>">
             </div>
         </div>
 
         <div class="grupo__inputs" id="grupo__telefono">
             <div class="contenedor__inputs">
-                <input type="email" placeholder="Telefono" name="email"  class="capturarDatos" value="<?php  echo $fila__datos['email'] ?>">
+            <label for="" class="label">E-mail</label>
+                <input type="email"  name="email"  class="capturarDatos" value="<?php  echo $datos__resultado['email'] ?>">
 
             </div>
         </div>
 
         <div class="grupo__inputs" id="grupo__documento">
             <div class="contenedor__inputs">
-                <input type="text"  name="documento"  class="capturarDatos"value="<?php  echo $fila__datos['numero_documento'] ?>">
+            <label for="" class="label">Documento</label>
+                <input type="text"  name="documento"  class="capturarDatos"value="<?php  echo $datos__resultado['numero_documento'] ?>">
 
             </div>
         </div>
 
         <div class="grupo__inputs" id="grupo__password">
             <div class="contenedor__inputs">
+            <label for="" class="label">Telefono</label>
                 <input type="text"  name="telefono" 
-                    class="capturarDatos" value="<?php  echo $fila__datos['numero_telefono'] ?>">
+                    class="capturarDatos" value="<?php  echo $datos__resultado['numero_telefono'] ?>">
 
             </div>
         </div>
 
         <div class="grupo__inputs" id="grupo__password">
             <div class="contenedor__inputs">
+            <label for="" class="label">Licencia</label>
                 <input type="text"  name="licencia" 
-                    class="capturarDatos" value="<?php  echo $fila__datos['numero_licencia'] ?>">
+                    class="capturarDatos" value="<?php  echo $datos__resultado['numero_licencia'] ?>">
 
             </div>
         </div>
 
         <div class="grupo__inputs" id="grupo__password">
             <div class="contenedor__inputs">
+            <label for="" class="label">categoria</label>
                 <input type="text"  name="categoria" 
-                    class="capturarDatos"value="<?php  echo $fila__datos['categoria_licencia'] ?>">
+                    class="capturarDatos"value="<?php  echo $datos__resultado['categoria_licencia'] ?>">
 
             </div>
         </div>
+
         
-        <hr class="linea__editar__perfil">
+        <hr class="linea__editar__perfil">  
+        <div class="grupo__inputs" id="grupo__password">
+            <div class="contenedor__inputs">
+            <label for="" class="label">Facebook</label>
+                <input type="text" name="facebook"
+                    class="capturarDatos"value="<?php  echo $datos__resultado['facebook'] ?> ">
+
+            </div>
+        </div>
+
+        <div class="grupo__inputs" id="grupo__password">
+            <div class="contenedor__inputs">
+            <label for="" class="label">Instagram</label>
+                <input type="text"  
+                    class="capturarDatos"value="<?php  echo $datos__resultado['instagram'] ?> " name="instagram">
+
+            </div>
+        </div>
+
+        <div class="grupo__inputs block" id="grupo__password">
+            <div class="contenedor__inputs">
+            <label for="" class="label">Twiiter</label>
+                <input type="text"   
+                    class="capturarDatos" value="<?php  echo $datos__resultado['twitter'] ?> "  name="twitter">
+
+            </div>
+        </div>
         <p class="block">
-            <label for="" class="textos__label">Sobre mi</label>
-            <textarea name="message" rows="3" class="text__area__mensaje" placeholder="Una breve descrpicion de mi perfil"></textarea>
+        <label for="" class="label">Acerca de mi</label>
+            <textarea name="descripcion" rows="3" class="text__area__mensaje" placeholder="Una breve descrpicion de mi perfil"><?php  echo $datos__resultado['quien_soy'] ?></textarea>
         </p>
         <div class="block">
             <input type="submit" value="ACTUALIZAR  MI CUENTA" class="boton__registro" name="enviar">
@@ -95,4 +125,4 @@ if(mysqli_num_rows($ejecutar__consulta) > 0 ){
     </div>
 </form>
 <br><br>
-<?php  include'layout/footer-home.php' ?>
+<?php  include'layout/footer-home.php';?>

@@ -1,10 +1,16 @@
-<?php    
+<?php  
+include'conexion/conexion-db-accent.php';  
 session_start();
 if(!isset($_SESSION['id_usuario'])){
   header("Location: ./login-usuario");
   die();
 }
+$consulta__datos__conductor = "SELECT *  FROM usuarios   WHERE email = '{$_SESSION['id_usuario']}' LIMIT 1";
+$resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__conductor);
+if(mysqli_num_rows($resultado__consulta) > 0){
+$datos__resultado = mysqli_fetch_array($resultado__consulta); 
 
+ }
 ?>
 
 
@@ -32,7 +38,7 @@ if(!isset($_SESSION['id_usuario'])){
 
 
                 <div class="enlaces__varios">
-                   <a href="./perfil-usuario" class="enlace__perfil__usuario"><img src="./img/avatar__defecto.svg " alt="" class="avatar__perfil"></a> 
+                   <a href="./perfil-usuario" class="enlace__perfil__usuario"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"></a> 
                     <label class="btn btn-open" for="nav" id="abrir-menu"><i class="fab fa-creative-commons-nd btn__abrir__menu"></i></label> 
                     <div>
                     </div>
@@ -42,10 +48,10 @@ if(!isset($_SESSION['id_usuario'])){
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" id="cerrar-menu"><i class="fas fa-times"></i></a>
         <div class="overlay-content">
-         <div class="contenedor__enalces__menu__home"><a href="./perfil-usuario" class="enlaces__menu__home"><img src="./img/avatar__defecto.svg " alt="" class="avatar__perfil"><div class="item__nombre">Juan fbhdfsdfs</div></a></div>
+         <div class="contenedor__enalces__menu__home"><a href="./perfil-usuario" class="enlaces__menu__home"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"><div class="item__nombre"><?php echo $datos__resultado['nombre_usuario'] ?></div></a></div>
            <div class="contenedor__enalces__menu__home"><a href="./dashboard-usuario" class="enlaces__menu__home"> <i class="fas fa-home"></i> Home</a></div> 
            <div class="contenedor__enalces__menu__home"><a href="./historial-usuario" class="enlaces__menu__home"><i class="fas fa-history"></i> Historial</a></div> 
-           <div class="contenedor__enalces__menu__home"><a href="./configuracion-usuario" class="enlaces__menu__home"><i class="fas fa-cogs"></i> Configuracion</a></div> 
+           <div class="contenedor__enalces__menu__home"><a href="./configuracion-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlaces__menu__home"><i class="fas fa-cogs"></i> Configuracion</a></div> 
             <div class="contenedor__enalces__menu__home"><a href="./ayudanos-a-mejorar" class="enlaces__menu__home"><i class="fas fa-mail-bulk"></i> Ayudanos a mejorar</a></div>
            <div class="contenedor__enalces__menu__home"><a href="./perfil-usuario" class="enlaces__menu__home"><i class="fas fa-comments"></i> Reseñas</a></div> 
             <div class="contenedor__enalces__menu__home"><a href="./desconectar-usuario" class="enlaces__menu__home"><i class="fas fa-power-off"></i> Desconectarse</a></div>
