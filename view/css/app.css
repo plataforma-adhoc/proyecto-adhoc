@@ -1433,21 +1433,31 @@ template {
 }
 
 .card__perfiles__dashboard {
-  width: 45%;
+  width: 20%;
   text-decoration: 0;
-  color: white;
+  color: gray;
   line-height: 5px;
 }
 
 .imagen__cards__perfiles {
-  width: 45%;
+  width: 100%;
+  height: auto;
   border-radius: 25px;
 }
 
 .card__datos__conductor {
   position: relative;
-  top: -100px;
+  top: -120px;
   left: 20px;
+}
+
+.card__datos__conductor h2 {
+  font-size: 35px;
+}
+
+.fa-circle {
+  color: #008A55;
+  font-size: 12px;
 }
 
 @media screen and (max-height: 450px) {
@@ -1843,13 +1853,15 @@ template {
 .contenedor__cards__servicios {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .cards__servicios {
-  width: 25%;
+  width: 20%;
   border-radius: 7px;
   background: #112240;
+  margin: 50px 10px 0 10px;
 }
 
 .botones {
@@ -1866,6 +1878,7 @@ template {
   padding: 10px;
   text-align: center;
   border-radius: 50px;
+  margin: 0 10px 0 10px;
 }
 
 .puntuacion__servicios {
@@ -1875,6 +1888,16 @@ template {
 
 .fa-star {
   color: orangered;
+}
+
+.titulo__producto {
+  text-align: center;
+  color: gray;
+}
+
+.precio_producto {
+  text-align: center;
+  color: gray;
 }
 
 .contenedor__cards__dashboard {
@@ -2031,6 +2054,79 @@ template {
 
 .enlace__iniciar__sesion:hover {
   border-bottom: 2px solid #C0392B;
+}
+
+.contenedor__detalles {
+  margin-top: -600px;
+}
+
+.titulo__detalles, .parrafo__detalles {
+  text-align: center;
+  color: gray;
+}
+
+.contenido__detalles {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.detalles {
+  width: 30%;
+  background: #112240;
+  margin: 50px 0 0 0;
+  text-align: center;
+  border-radius: 7px;
+}
+
+.enlace__compra {
+  display: inline-block;
+  text-decoration: 0;
+  width: 90%;
+  margin: auto;
+  background: #C0392B;
+  border-radius: 50px;
+  color: black;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  border: none;
+  cursor: pointer;
+}
+
+.enlace__compra:hover {
+  background: #000;
+  color: #C0392B;
+  transition: all 0.5s;
+}
+
+.precio__antes {
+  color: #b71540;
+}
+
+.precio__descuento {
+  color: #008A55;
+}
+
+.parrafo__info {
+  font-size: 15px;
+  color: gray;
+}
+
+.titulo__descripcion {
+  text-align: left;
+  color: gray;
+}
+
+.descripcion {
+  width: 80%;
+  margin: auto;
+}
+
+.parrafo__mas__informacion {
+  line-height: 50px;
 }
 
 body {

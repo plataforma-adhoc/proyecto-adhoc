@@ -3,6 +3,7 @@ function login__usuaruio(){
     include'conexion/conexion-db-accent.php';
     $email = mysqli_real_escape_string($conexion__db__accent,$_POST['email'] ? $_POST['email']: '');
     $contrasena = mysqli_real_escape_string($conexion__db__accent,$_POST['contrasena'] ? $_POST['contrasena']: '');
+   
     if($email ==="" || $contrasena ===""){
       echo json_encode('No podemos procesar tu solicidtud por falta de datos');
     }else{
@@ -16,6 +17,10 @@ function login__usuaruio(){
             if(!$verficar__contraseña){
                 echo json_encode('la contraseña es incorrecta');
             }else{
+                $estado = "disponible";
+
+                $actualizacion__estado = "UPDATE conductores SET status = '$estado' WHERE email = '$email'LIMIT 1";
+                $ejecutar__solicitud = mysqli_query($conexion__db__accent,$actualizacion__estado);
 
                 session_start();
                 $_SESSION['id_conductor'] = $email;  

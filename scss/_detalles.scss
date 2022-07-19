@@ -1,0 +1,72 @@
+.contenedor__detalles{
+    margin-top: -600px;
+}
+.titulo__detalles,.parrafo__detalles{
+  text-align: center;
+  color: $color__gris;
+}
+
+.contenido__detalles{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.detalles{
+    width: 30%;
+    background:$color__menu__dashboard;
+    margin: 50px 0 0 0;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.enlace__compra{
+    display: inline-block;
+    text-decoration: 0;
+    width: 90%;
+    margin: auto;
+    background:$color__accent;
+    border-radius: 50px;
+    color:black;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    border: none;
+    cursor: pointer;
+    
+
+}
+
+.enlace__compra:hover{
+background: #000;
+color: $color__accent;
+transition: all 0.5s;
+}
+
+.precio__antes{
+    color: $color__danger;
+}
+
+.precio__descuento{
+    color: $color__verde;
+}
+
+.parrafo__info{
+    font-size: 15px;
+    color: $color__gris;
+}
+.titulo__descripcion{
+text-align: left;
+color: $color__gris;
+}
+
+.descripcion{
+    width: 80%;
+    margin: auto;
+}
+
+.parrafo__mas__informacion{
+    line-height: 50px;
+}
+

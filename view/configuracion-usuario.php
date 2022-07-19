@@ -21,7 +21,7 @@ if($id =! $id || $id ===""){
             </div>
 
         </a>
-        <a href="" class="card__configuracion eliminar__cuenta animate__animated animate__bounceInDown">
+        <a href="./eliminar-cuenta-usuario?id=<?php echo $datos__resultado['id_usuario'] ?>" class="card__configuracion eliminar__cuenta animate__animated animate__bounceInDown">
             <div>
                 <h3 class="titulo__item__configuracion">Eliminar mi cuenta</h3>
                 <p class="parrafo__item__configuracion">se eliminaran todos tu datos de nuestro sistema</p>

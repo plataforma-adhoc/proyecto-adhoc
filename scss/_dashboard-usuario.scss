@@ -103,23 +103,33 @@ margin-right: 5px;
 }
 
   .card__perfiles__dashboard{
-  width: 45%;
+  width: 20%;
   text-decoration: 0;
-  color: white;
+  color:$color__gris;
   line-height: 5px;
+ 
   }
 
   .imagen__cards__perfiles{
-    width: 45%;
+    width:100%;
+    height:auto;
     border-radius: 25px;
   }
 
   .card__datos__conductor{
     position: relative;
-    top: -100px;
+    top: -120px;
     left: 20px;
   }
 
+  .card__datos__conductor h2{
+    font-size: 35px;
+  }
+ 
+  .fa-circle{
+    color:$color__verde;
+    font-size: 12px;
+  }
   @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
     .overlay .closebtn {
