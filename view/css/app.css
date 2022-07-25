@@ -2082,6 +2082,10 @@ template {
   border-radius: 7px;
 }
 
+.text__descripcion {
+  color: wheat;
+}
+
 .enlace__compra {
   display: inline-block;
   text-decoration: 0;
@@ -2089,11 +2093,12 @@ template {
   margin: auto;
   background: #C0392B;
   border-radius: 50px;
-  color: black;
+  color: white;
   padding: 10px;
   margin: 0 0 10px 0;
   border: none;
   cursor: pointer;
+  font-size: 19px;
 }
 
 .enlace__compra:hover {
@@ -2127,6 +2132,167 @@ template {
 
 .parrafo__mas__informacion {
   line-height: 50px;
+  color: gray;
+}
+
+.contenedor__compra {
+  margin-top: -600px;
+}
+
+.titulo__compra {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+}
+
+.contenido__compra {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detalles__compra {
+  width: 19%;
+  height: 100px;
+  text-align: center;
+  background: #212F37;
+  border-radius: 7px;
+}
+
+.enlace__proceder__pago {
+  display: inline-block;
+  text-decoration: 0;
+  width: 300px;
+  padding: 13px;
+  color: white;
+  background: #008A55;
+  text-align: center;
+}
+
+.enlace__proceder__pago:hover {
+  background: #0A192F;
+  border: solid 2px #008A55;
+}
+
+.texto__compra {
+  color: white;
+}
+
+.nombre__producto {
+  font-size: 15px;
+}
+
+.boton__eliminar__servicio {
+  text-decoration: 0;
+  color: yellow;
+  font-size: 25px;
+}
+
+.contenedor__saldo {
+  width: 100%;
+  text-align: right;
+}
+
+.total__servicio {
+  color: white;
+}
+
+.modal-servicios {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #212F37;
+  margin: 15% auto;
+  padding: 20px;
+  width: 30%;
+}
+
+.contenedor__enlaces__modal {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.enlaces__modal {
+  text-decoration: 0;
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.cancelar {
+  background: #008A55;
+}
+
+.eliminar {
+  background: #b71540;
+}
+
+.pago {
+  width: 45%;
+}
+
+.contenedor__detalles__de__pago {
+  width: 40%;
+  margin: -200px auto 0 auto;
+}
+
+.titulo__pago {
+  text-align: center;
+  color: white;
+}
+
+.contenedor__compra__completada {
+  margin-top: -600px;
+}
+
+.titulo__finalizar__compra {
+  text-align: center;
+  color: gray;
+}
+
+.formulario__completar__compra {
+  background: #212F37;
+}
+
+.span__finalizar__compra {
+  color: #008A55;
+}
+
+.parrafo__finalizar__compra {
+  color: white;
+  width: 500px;
+  margin: auto;
+}
+
+.fa-stopwatch-20 {
+  color: gray;
+  font-size: 35px;
+}
+
+.parrafo__hora, .label__finalizar__compra {
+  color: gray;
+}
+
+.formulario__completar__compra {
+  width: 60%;
+  margin: auto;
 }
 
 body {

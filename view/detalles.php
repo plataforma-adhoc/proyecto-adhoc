@@ -1,4 +1,4 @@
-<?php  include'layout/nav-home-conductor.php';
+<?php  include'layout/nav-home-usuario.php';
     include'config/config.php';
 
     $id__servicio = isset($_GET['ids']) ? $_GET['ids'] :'';
@@ -52,14 +52,18 @@
         <?php } ?>
         </div>
         <div class="detalles">
+            <h2 class="text__descripcion">Descripcion</h2>
             <div class="descripcion">
                 <h5><?php  echo $descripcion__producto;?> </h5>
 
             </div>
           <div>
             <!-- <a href="" class="enlace__compra">Comprar <i class="fas fa-paper-plane"></i></a> -->
-            <button type="button" class="enlace__compra" onclick="agregarProducto(<?php echo $id__servicio ?>,'<?php echo $token__temporal ?>')">Comprar <i class="fas fa-paper-plane"></i></button>
-          </div>
+            <button type="button" class="enlace__compra" onclick="agregarProducto(<?php echo $id__servicio ?>,'<?php echo $token__temporal ?>')">Solicitar este servicio <i class="fas fa-paper-plane"></i></button>
+          <a href="./compra"class="enlace__compra" >Ver detalles</a>
+          <p id="agregar"></p>
+          
+        </div>
         </div>
 
     </div>
@@ -73,16 +77,23 @@
        form__data.append('id',id);
        form__data.append('token',token);
 
-       fetch(url,
-       method:'POST',{
+       fetch(url,{
+       method:'POST',
         body:form__data,
-        mode:'cors'
+        
        }).then(respuesta => respuesta.json())
        .then(data=>{
         if(data.ok){
-   
+        
+        console.log(data.numero)
+        let elemento = document.getElementById('agregar').innerHTML = `
+        <a href="./compra"class="enlace__compra" >Se agrego este servicio a tu lista</a>
+        
+        `
         }
        })
     }
+
+
 </script>
 <?php  include'layout/footer-home.php' ?>

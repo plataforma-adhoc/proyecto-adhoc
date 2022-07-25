@@ -21,7 +21,9 @@
     text-align: center;
     border-radius: 7px;
 }
-
+.text__descripcion{
+    color: wheat;
+}
 .enlace__compra{
     display: inline-block;
     text-decoration: 0;
@@ -29,11 +31,12 @@
     margin: auto;
     background:$color__accent;
     border-radius: 50px;
-    color:black;
+    color:white;
     padding: 10px;
     margin: 0 0 10px 0;
     border: none;
     cursor: pointer;
+    font-size:19px;
     
 
 }
@@ -68,5 +71,6 @@ color: $color__gris;
 
 .parrafo__mas__informacion{
     line-height: 50px;
+    color: $color__gris;
 }
 

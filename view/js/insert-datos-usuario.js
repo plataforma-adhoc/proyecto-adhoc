@@ -135,3 +135,39 @@ export  function actualizar__contrasena__usuario(){
    })
   }
   }
+
+
+  export function formulario__completar__proceso(){
+     let formulario__fin__de__compra = document.getElementById('formulario-fin-de-compra');
+     if(formulario__fin__de__compra){
+     formulario__fin__de__compra.addEventListener('submit',function(event){
+       event.preventDefault();
+       let data = new FormData(document.getElementById('formulario-fin-de-compra'))
+       fetch('insert-datos-fin-compra',{
+        method:'POST',
+        body:data
+       }).then(respuesta => respuesta.json())
+       .then(datos =>{
+        if(datos === 'true'){
+          Swal.fire({
+            background:'#202F36',
+            icon: 'success',
+            title: `Tu proceso se ha completado con exito`
+          
+          })
+          window.location.href='dashboard-usuario'
+
+        }else{
+          Swal.fire({
+            background:'#202F36',
+            icon: 'error',
+            title: `${datos}`,
+            confirmButtonText:'De acuerdo',
+            footer: 'Esta informacion es importante',
+           
+          })
+        }
+       })
+     })
+     } 
+  }

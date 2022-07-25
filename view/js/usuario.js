@@ -3,10 +3,11 @@ export function abrir__menu(){
     if(abrir__menu){
   abrir__menu.addEventListener('click',function(){
       document.getElementById("myNav").style.width = "19%";
+      
     })
     }
       }
-      
+    
    export function cerrar__menu() {
     let cerrar__menu = document.getElementById('cerrar-menu');
     if(cerrar__menu){
