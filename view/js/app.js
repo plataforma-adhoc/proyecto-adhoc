@@ -28,9 +28,32 @@ actualizar__contrasena();
 import { modal__servicios} from './modal.js';
 modal__servicios();
 
+
+
+import {comentarios__usuario,mostrar__comentario} from './comentarios.js';
+comentarios__usuario();
+mostrar__comentario();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var modal = document.getElementById("myModal");
-
-
 var btn = document.getElementById("card-cambiar-contrasena");
 
 

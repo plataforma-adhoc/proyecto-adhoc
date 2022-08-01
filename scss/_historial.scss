@@ -24,16 +24,41 @@
 }
 
 .texto{
-    color:$color__gris;
-    font-size: 19px;
+    color:white;
+    font-size: 22px;
 }
 
 .item__datos__servicio{
     color:$color__gris;
+    font-size: 15px;
+}
+
+.item__datos__servicio span{
+color:$color__verde;
+font-size: 19px;
 }
 
 .datos__de__historial{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.enlace__eliminar__historial{
+    margin: 20px 0 0 0;
+    text-decoration: 0;
+    display: inline-block;
+    color:white;
+    padding: 12px;
+    width: 250px;
+    text-align: center;
+    border-radius: 7px;
+    background:$color__danger;
+    font-size: 20px;
+
+}
+
+.enlace__eliminar__historial:hover{
+opacity: 0.5;
+color: white;
 }

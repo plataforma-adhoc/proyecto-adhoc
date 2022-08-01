@@ -23,7 +23,7 @@ function login__usuaruio(){
                 $ejecutar__solicitud = mysqli_query($conexion__db__accent,$actualizacion__estado);
 
                 session_start();
-                $_SESSION['id_conductor'] = $email;  
+                $_SESSION['id_conductor'] = $resultado__consulta__login['id_conductor'];  
                 echo json_encode('true');
             }
         

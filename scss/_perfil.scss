@@ -22,21 +22,55 @@
 .enlace__de__redes__sociales{
     display: inline-block;
     text-decoration: 0;
-    font-size: 20px;
-    color: white;
+    font-size: 25px;
     margin: 10px 30px 0 30px;
+    color: red;
+}
+
+.fa-facebook{
+color: #4267B2;
+}
+
+.fa-facebook:hover{
+color: #4267B2;
+
+}
+
+.fa-instagram{
+    color: #E1306C;
+}
+
+.fa-instagram:hover{
+    color: #E1306C;
+}
+
+
+.fa-twitter{
+    color: #1DA1F2;
+}
+
+.fa-twitter:hover{
+    color: #1DA1F2;
+
 }
 
 .enlace__editar__perfil{
 margin: 20px 0 0 0;
 text-decoration: 0;
 display: inline-block;
-color:black;
-padding: 10px;
-width: 200px;
+color:white;
+padding: 12px;
+width: 250px;
 text-align: center;
 border-radius: 7px;
 background:$color__verde;
+font-size: 20px;
+}
+
+.enlace__editar__perfil:hover{
+    background:black;
+    color: white;
+    transition: ease-in-out 0.5s;
 }
 
 .datos__del__perfil__de__usuario{
@@ -64,7 +98,8 @@ font-size: 16px;
 .contenedor__opinion{
     background:$color__menu__dashboard;
     border-radius: 7px;
-   margin-top: 100px;
+    margin-top: 100px;
+    height: auto;
    
 }
 
@@ -74,13 +109,19 @@ color: white;
 font-size: 30px;
 }
 
-.opinion__1{
+.opinion{
     width: 50%;
     height: auto;
     border-radius: 10px;
     background:$color__fondo;
-    margin: 20px 0 0 20px;
+    margin: -30px 0 0 20px;
 }
+
+.opinion__2{
+width: 85%;
+margin-left: 54%;  
+}
+
 .avatar__opinion__1{
     width: 30px;
     height: 30px;
@@ -90,13 +131,14 @@ font-size: 30px;
 .item__opinion{
    display: flex;
   align-items: center;
-  margin: 10px 0 0 10px;
+  margin: 50px 0 0 10px;
   color: $color__gris;
 
 }
 
 .nombre__item__opinion{
     margin-left: 10px;
+    margin-top: 15px;
 }
 
 .parrafo__item__opinion{
@@ -122,17 +164,15 @@ font-size: 30px;
 }
 
 .formulario__respuesta{
-    width: 70%;
-    margin:20px 0 0 20px;
+    width: 100%;
+    margin: 30px 40px 0 40px;
 }
 
 
-
 .respuesta{
-width: 70%;
-padding: 10px;
+width: 90%;
+padding: 15px;
 border: 0;
-margin: 20px 0  0 0;
 outline: 0;
 background:$color__fondo;
 border-radius: 7px;
@@ -143,7 +183,7 @@ color: white;
     display: inline-block;
     background:$color__fondo;
     border: 0;
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
     color: white;
     border-radius: 50px;

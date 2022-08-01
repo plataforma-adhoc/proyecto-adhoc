@@ -2,9 +2,10 @@
        include'config/config.php'; 
 
 $servicios = isset($_SESSION['carrito']['servicios']) ? $_SESSION['carrito']['servicios'] : null;
+$id_conductor =  isset($_GET['idc']) ? $_GET['idc'] : '';
 
-if($servicios != null){
-    $lista__carrito = array();
+$lista__carrito = array();
+if($servicios != null || $id_conductor !=""){
     foreach ($servicios as $clave => $cantidad) {
         $consulta__productos = "SELECT id_producto,nombre_producto,	valor_producto,descuento, $cantidad AS cantidad FROM productos    WHERE id_producto = '$clave' AND  activo = 1";
         $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__productos);
@@ -23,7 +24,8 @@ if($servicios != null){
     <h2 class="titulo__compra">detalles de tus servicios </h2>
     <?php   
 if($lista__carrito == null){
- echo '<h3>No hay nada que mostar</h3>';
+
+      echo ' <tr><td colspan="5"><h3 class="titulo__compra">No has selecionado ningun servicio de conductor elegido</h3></td> </tr>  ';
 }else{
     $total = 0;
     foreach($lista__carrito as $servicio){
@@ -34,80 +36,94 @@ if($lista__carrito == null){
         $precio__descuento  =  $precio__producto - (($precio__producto * $descuento__producto) / 100) ;
         $subtotal = $cantidad * $precio__descuento;
         $total += $subtotal; ?>
-<div class="contenido__compra">
-    <div class="detalles__compra">
-      <h3 class="texto__compra">Nombre servicio</h3>
-      <p class="texto__compra"><?php  echo $nombre__producto ?></p>
-    </div>
-    <div class="detalles__compra">
-    <h3 class="texto__compra">Precio</h3>
-    <p class="texto__compra"><?php  echo number_format($precio__producto,2,'.','.') ?></p>   
-    </div>
-    <div class="detalles__compra">
-    <h3 class="texto__compra">Cantidad</h3>
-    <p class="texto__compra"><?php  echo $cantidad ?></p>
-    </div>
-    <div class="detalles__compra">
-    <h3 class="texto__compra">Subtotal</h3>
-    <p  class="texto__compra"id="subtotal_<?php  echo $id ?>" name="subtotal[]"><?php echo  number_format($subtotal,2,'.','.') ?></p> 
-    </div>
-    <div class="detalles__compra"> 
-        <p class="texto__compra">Acciones</p> 
-        <a href="#" class="boton__eliminar__servicio" id="btn-modal-servicios" data-bs-id="<?php echo $id  ?>"><i class="fas fa-trash-alt"></i></a>
-    </div>
+        <div class="table-responsive ">
+      <table class="table table-borderless">
+      <thead class="table-dark tabla">
+    <tr>
+      <th scope="col" class="texto__compra">Nombre servicio</th>
+      <th scope="col"  class="texto__compra">Precio</th>
+      <th scope="col"class="texto__compra">Cantidad</th>
+      <th scope="col"class="texto__compra">Subtotal</th>
+      <th scope="col"class="texto__compra">Acciones</th>
 
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" class="texto__compra"><?php  echo $nombre__producto ?></th>
+      <td class="texto__compra"><?php  echo number_format($precio__producto,2,'.','.') ?></td>
+      <td class="texto__compra"><?php  echo $cantidad ?></td>
+      <td class="texto__compra"><?php echo  number_format($subtotal,2,'.','.') ?></td> 
+      <td>
+      <a href="#" class="boton__eliminar__servicio" data-bs-id="<?php echo $id  ?>" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-trash-alt"></i></a>
+      </td>
+    </tr>  
+  </tbody>
+</table>
 </div>
+
 <br>
 <?php  } ?>
 <?php  } ?>
 <?php   if($lista__carrito != null){  ?>
 <div class="contenedor__saldo">
  <h2 id="total" class="total__servicio"> Total a pagar  $ <?php  echo  number_format($total,2,'.','.') ?></h2>
- <a href="./pago" class="enlace__proceder__pago">Proceder a pagar</a>
+ <a href="./procesar-pago?idc=<?php  echo $id_conductor  ?>" class="enlace__proceder__pago">Proceder a pagar</a>
 </div>
 <?php } ?>
 
 </div>
 
-<div id="modal-servicios" class="modal-servicios">
-  <div class="modal-content">
-    <p> Estas seguro de eliminar este servicio ?</p>
-    <div class="contenedor__enlaces__modal">
-        <a href="./compra" class="enlaces__modal cancelar">Cancelar</a>
-        <!-- <a href="" class="enlaces__modal eliminar" id="btn-eliminar" onclick="eliminar()">eliminar</a> -->
-        <button class="enlaces__modal eliminar" id="btn-eliminar" onclick="eliminar()">Eliminar</button>
 
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Eliminar producto</h5>
+      </div>
+      <div class="modal-body">
+        <p class="modal-title">Estas seguro de eliminar este producto ?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success no__eliminar" data-bs-dismiss="modal">No estoy seguro de eliminar</button>
+        <button type="button" class="btn btn-danger eliminar" id="boton-eliminar" onClick="elimina()"> Proceder a eliminar</button>
+      </div>
     </div>
   </div>
- </div> 
+</div>
 
 <script>
- var modal = document.getElementById("modal-servicios");
-var btn = document.getElementById("btn-modal-servicios");
-btn.addEventListener('click',function(event){
+ var modal = document.getElementById("exampleModal");
+modal.addEventListener('show.bs.modal',function(event){
 let button = event.relatedTarget;
 let id = button.getAttribute('data-bs-id');
-let boton__eliminar = modal.querySelector('.contenedor__enlaces__modal #btn-eliminar')
+let boton__eliminar = modal.querySelector('.modal-footer #boton-eliminar')
 boton__eliminar.value = id;
 
 
 })
 
-var span = document.getElementsByClassName("close")[0];
 
-if(btn){
-    btn.onclick = function() {
-      modal.style.display = "block";
+function elimina(){
+  let boton__eliminar =  document.getElementById('boton-eliminar');
+  let id = boton__eliminar.value;
+  let form__data = new FormData();
+  form__data.append('action','eliminar')
+  form__data.append('id',id)
+  fetch('eliminar-producto',{
+    method:'POST',
+    body:form__data,
+    mode:'cors'
+  }).then(respuesta => respuesta.json())
+  .then(data =>{
+    if(data.ok ){
+     location.reload();
     }
+  })
+} 
 
-}
 
-if(span){
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-
-}
 </script>
 
 <?php  include'layout/footer-home.php';  ?>
+

@@ -1,7 +1,8 @@
 <?php include'layout/nav-home-conductor.php';
 include'conexion/conexion-db-accent.php';
 
-$consulta__datos__conductor = "SELECT *  FROM conductores   WHERE email = '{$_SESSION['id_conductor']}'";
+
+$consulta__datos__conductor = "SELECT *  FROM conductores   WHERE id_conductor = '{$_SESSION['id_conductor']}'";
 $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__conductor);
   $datos__resultado = mysqli_fetch_array($resultado__consulta); 
 
@@ -91,8 +92,8 @@ Subir una foto...
         <div class="grupo__inputs" id="grupo__password">
             <div class="contenedor__inputs">
             <label for="" class="label">Facebook</label>
-                <input type="text" name="facebook"
-                    class="capturarDatos"value="<?php  echo $datos__resultado['facebook'] ?> ">
+                <input type="text"  name="facebook" value="<?php   echo $datos__resultado['facebook'] ?>"
+                    class="capturarDatos">
 
             </div>
         </div>
@@ -100,8 +101,8 @@ Subir una foto...
         <div class="grupo__inputs" id="grupo__password">
             <div class="contenedor__inputs">
             <label for="" class="label">Instagram</label>
-                <input type="text"  
-                    class="capturarDatos"value="<?php  echo $datos__resultado['instagram'] ?> " name="instagram">
+                <input type="text" name="instagram"  value="<?php echo $datos__resultado['instagram']?>" 
+                    class="capturarDatos">
 
             </div>
         </div>
@@ -109,8 +110,8 @@ Subir una foto...
         <div class="grupo__inputs block" id="grupo__password">
             <div class="contenedor__inputs">
             <label for="" class="label">Twiiter</label>
-                <input type="text"   
-                    class="capturarDatos" value="<?php  echo $datos__resultado['twitter'] ?> "  name="twitter">
+                <input type="text"  name="twitter" value="<?php  echo $datos__resultado['twitter']?>"   
+                    class="capturarDatos">
 
             </div>
         </div>

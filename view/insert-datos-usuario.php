@@ -20,6 +20,7 @@ $consulta__usuario__registrado = "SELECT *  FROM usuarios   WHERE email = '$emai
 $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__usuario__registrado);
 
 if(mysqli_num_rows($resultado__consulta) > 0){
+  $fila = mysqli_fetch_array($resultado__consulta);
   echo json_encode('Es impsoble registar un nuevo usuario con ese email');
   
 }else{
@@ -29,8 +30,16 @@ if(mysqli_num_rows($resultado__consulta) > 0){
   $resultado = mysqli_query($conexion__db__accent,$insertar__datos);
   if($resultado){
     session_start();
-    $_SESSION['id_usuario'] = $email;  
-      echo json_encode('true');
+
+$consulta__usuario = "SELECT *  FROM usuarios   WHERE email = '$email' LIMIT 1";
+$resultado= mysqli_query($conexion__db__accent,$consulta__usuario);
+
+if(mysqli_num_rows($resultado) > 0){
+  $fila__datos = mysqli_fetch_array($resultado);
+  $_SESSION['id_usuario'] = $fila__datos['id_usuario'];  
+  echo json_encode('true');
+}
+
   }else{
     echo json_encode('no');
   }

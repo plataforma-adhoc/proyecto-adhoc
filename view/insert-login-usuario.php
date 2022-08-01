@@ -19,7 +19,7 @@ function login__usuario(){
             }else{
 
                 session_start();
-                $_SESSION['id_usuario'] = $email;  
+                $_SESSION['id_usuario'] = $resultado__consulta__login['id_usuario'];  
                 echo json_encode('true');
 
                 $actalizar__estado = mysqli_query($conexion__db__accent,"UPDATE usuarios SET status = '$estado' WHERE imail = '$email' ");

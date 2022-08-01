@@ -14,6 +14,10 @@ if(is_array($datos)){
     $email  = $datos['detalles']['payer']['email_address'];
     $id__cliente = $datos['detalles']['payer']['payer_id'];
     $monto = $datos['detalles']['purchase_units'][0]['amount']['value'];
+    $id__usuario = $datos['identificadores']['idu'];
+    $id__conductor = $datos['identificadores']['idc'];
+   
+    
 
     $insertar__datos = "INSERT INTO compra(id_transaccion, fecha_de_compra,status,email_cliente,id_cliente,total_compra)
     VALUES('$id__transaccion','$nueva__fecha','$status','$email','$id__cliente','$monto')";
@@ -34,8 +38,8 @@ if(is_array($datos)){
         $cantidad = $cantidad;
         $precio__descuento  =  $precio__producto - (($precio__producto * $descuento__producto) / 100) ;
 
-        $sql__insert = "INSERT INTO detalles__de__la__compra(id_compra,id_servicio,nombre_servicio,precio_compra,cantidad_compra)
-        VALUES('$id','$clave','$nombre__servicio',' $precio__descuento','$cantidad')";
+        $sql__insert = "INSERT INTO detalles__de__la__compra(id_compra,id_servicio,id_usuario,id_conductor,nombre_servicio,precio_compra,cantidad_compra)
+        VALUES('$id','$id__usuario','$id__conductor','$clave','$nombre__servicio',' $precio__descuento','$cantidad')";
 
         $ejecutar__consulta = mysqli_query($conexion__db__accent,$sql__insert);
      if($ejecutar__consulta){

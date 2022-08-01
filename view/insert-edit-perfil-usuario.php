@@ -3,9 +3,9 @@ function insert__datos__edit__perfil__usuario(){
 include'layout/nav-home-usuario.php';
 include'conexion/conexion-db-accent.php';
    
-$consulta__datos = "SELECT * FROM  usuarios WHERE email = '{$_SESSION['id_usuario']}' LIMIT 1";
+$consulta__datos = "SELECT * FROM  usuarios WHERE id_usuario = '{$_SESSION['id_usuario']}' LIMIT 1";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
-$resultado__datos__conductor = mysqli_fetch_array($ejecutar__consulta);
+$resultado__datos = mysqli_fetch_array($ejecutar__consulta);
 
 
         $nombre_usuario = $_POST['nombre'] ? $_POST['nombre']: '';
@@ -29,11 +29,11 @@ $resultado__datos__conductor = mysqli_fetch_array($ejecutar__consulta);
          copy($ruta__foto,$destino);
 
         }else{
-            $nombre__archivo =  $resultado__datos__conductor['avatar'];
+            $nombre__archivo =  $resultado__datos['avatar'];
         }
 
             $actualizar__datos  = "UPDATE  usuarios SET 	nombre_usuario ='$nombre_usuario',primer_apellido = '$primer__apellido',segundo_apellido ='$segundo__apellido',
-            email ='$email', numero_documento = '$documento',numero_telefono = '$telefono', avatar = '$nombre__archivo',facebook ='$facebook',	instagram = '$instagram',twitter='$twitter' WHERE email = '{$_SESSION['id_usuario']}' LIMIT 1";
+            email ='$email', numero_documento = '$documento',numero_telefono = '$telefono', avatar = '$nombre__archivo',facebook ='$facebook',	instagram = '$instagram',twitter='$twitter' WHERE id_usuario = '{$_SESSION['id_usuario']}' LIMIT 1";
             $ejecutar__consulta = mysqli_query($conexion__db__accent,$actualizar__datos);
 
             if($ejecutar__consulta){

@@ -1,6 +1,6 @@
 <?php include'layout/nav-home-usuario.php';
 
-$id = isset($_GET['id']) ? $_GET['id'] : '';
+$id = isset($_GET['idc']) ? $_GET['idc'] : '';
 if($id ==="" || $id !=$id){
 header("Location:./dashboard-usuario");
 }
@@ -14,14 +14,23 @@ $resultado = mysqli_fetch_array($ejecutar__consulta);
     <div class="info__perfil">
         <img src="upload/<?php  echo $resultado['avatar']  ?>" alt="" class="foto__de__perfil">
         <div>
-            <a href="" class="enlace__de__redes__sociales"><i class="fab fa-facebook"></i></a>
-            <a href="" class="enlace__de__redes__sociales"><i class="fab fa-instagram"></i></a>
-            <a href="" class="enlace__de__redes__sociales"><i class="fab fa-twitter"></i></a>
+        <?php  if($resultado['facebook'] !=NULL ){ ?>
+            <a href="<?php echo $resultado['facebook'] ?>" class="enlace__de__redes__sociales" target="_blank"><i class="fab fa-facebook"></i></a>
+             <?php } ?>  
+              
+             <?php  if($resultado['instagram'] !=NULL ){ ?>
+                <a href="<?php echo $resultado['instagram'] ?>" class="enlace__de__redes__sociales"target="_blank"><i class="fab fa-instagram"></i></a>
+             <?php } ?> 
+
+             <?php  if($resultado['twitter'] !=NULL ){ ?>
+                <a href="<?php echo $resultado['twitter'] ?>" class="enlace__de__redes__sociales"target="_blank"><i class="fab fa-twitter"></i></a>
+             <?php } ?>
 
         </div>
 
-        <a href="./servicios?id=<?php  echo $resultado['id_conductor']  ?>" class="enlace__editar__perfil">Quiero este conductor </a>
-        <p class="datos__basicos">Estos conductores sus antecedentes han sido verificados</p>
+        <a href="./servicios?idc=<?php  echo $resultado['id_conductor']  ?>" class="enlace__editar__perfil">Quiero este conductor </a>
+        <br><br>
+        <p class="datos__basicos">Este conductor sus antecedentes han sido verificados</p>
     </div>
     <div class="info__perfil">
         <div class="datos__del__perfil__de__usuario">
@@ -56,7 +65,7 @@ $resultado = mysqli_fetch_array($ejecutar__consulta);
                 <p class="datos__basicos quien__soy"><?php  echo $resultado['quien_soy']  ?></p>
             </div>
             <div>
-                <p class="datos__basicos fecha__registro">El conductor se registro en <?php echo $datos__resultado['fecha_de_registro'] ?></p>
+                <p class="datos__basicos fecha__registro">Miembro desde <?php echo $datos__resultado['fecha_de_registro'] ?></p>
             </div>
         </div>
     </div>

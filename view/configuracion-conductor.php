@@ -27,7 +27,7 @@ if($id =! $id || $id ===""){
 
         </a>
     </div>
-    <div id="myModal" class="modal  animate__animated animate__bounceInDown">
+    <div id="myModal" class="modal__contrasena  animate__animated animate__bounceInDown">
         <div class="modal-content">
             <span class="close">&times;</span>
           <p class="parrafo__modal">Escribe la contraseña que deseas acontinuacion</p>

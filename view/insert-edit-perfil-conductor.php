@@ -2,8 +2,10 @@
 function insert__datos__edit__perfil__conductor(){
 include'layout/nav-home-conductor.php';
 include'conexion/conexion-db-accent.php';
+
+
    
-$consulta__datos = "SELECT * FROM  conductores WHERE email = '{$_SESSION['id_conductor']}'";
+$consulta__datos = "SELECT * FROM  conductores WHERE id_conductor = '{$_SESSION['id_conductor']}'";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
 $resultado__datos__conductor = mysqli_fetch_array($ejecutar__consulta);
 
@@ -36,11 +38,11 @@ $resultado__datos__conductor = mysqli_fetch_array($ejecutar__consulta);
 
             $actualizar__datos  = "UPDATE  conductores SET 	nombre_conductor ='$nombre_conductor',primer_apellido = '$primer__apellido',segundo_apellido ='$segundo__apellido',
             email ='$email', numero_documento	 = '$documento',numero_telefono = '$telefono',numero_licencia = '$licencia',categoria_licencia ='$categoria',
-            avatar = '$nombre__archivo',	facebook ='$facebook',	instagram = '$instagram',twitter='$twitter',	quien_soy = '$descripcion'WHERE email = '{$_SESSION['id_conductor']}'";
+            avatar = '$nombre__archivo',facebook ='$facebook',instagram = '$instagram',twitter='$twitter', quien_soy = '$descripcion'WHERE id_conductor = '{$_SESSION['id_conductor']}'";
             $ejecutar__consulta = mysqli_query($conexion__db__accent,$actualizar__datos);
 
             if($ejecutar__consulta){
-                header("Location: ./edit-perfil-conductor");
+                header("Location: ./edit-perfil-conductor?id=". $resultado__datos__conductor['id_conductor']);
                 echo json_encode('true');
              
             }

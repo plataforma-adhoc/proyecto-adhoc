@@ -1,7 +1,9 @@
 <?php include'layout/nav-home-usuario.php';
 include'conexion/conexion-db-accent.php';
 
-$consulta__datos = "SELECT *  FROM usuarios   WHERE email = '{$_SESSION['id_usuario']}'";
+
+
+$consulta__datos = "SELECT *  FROM usuarios   WHERE id_usuario = '{$_SESSION['id_usuario']}'";
 $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
   $datos__resultado = mysqli_fetch_array($resultado__consulta); 
 ?>

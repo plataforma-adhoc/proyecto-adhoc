@@ -3,8 +3,9 @@
 
     $id__servicio = isset($_GET['ids']) ? $_GET['ids'] :'';
     $token =  isset($_GET['token']) ? $_GET['token'] : '';
+    $id_conductor =  isset($_GET['idc']) ? $_GET['idc'] : '';
 
-    if($id__servicio ==="" || $token === ""){
+    if($id__servicio ==="" || $token === "" || $id_conductor ===""){
      header("Location: ./dashboard-usuario");
      exit;
     }else{
@@ -58,9 +59,8 @@
 
             </div>
           <div>
-            <!-- <a href="" class="enlace__compra">Comprar <i class="fas fa-paper-plane"></i></a> -->
-            <button type="button" class="enlace__compra" onclick="agregarProducto(<?php echo $id__servicio ?>,'<?php echo $token__temporal ?>')">Solicitar este servicio <i class="fas fa-paper-plane"></i></button>
-          <a href="./compra"class="enlace__compra" >Ver detalles</a>
+            <button type="button" class="enlace__compra" onclick="agregarProducto(<?php echo $id__servicio ?>,'<?php echo $token__temporal ?>','<?php echo $id_conductor ?>')">Solicitar este servicio <i class="fas fa-paper-plane"></i></button>
+          <a href="./compra"class="enlace__compra" >Ver detalles de compra</a>
           <p id="agregar"></p>
           
         </div>
@@ -85,9 +85,8 @@
        .then(data=>{
         if(data.ok){
         
-        console.log(data.numero)
         let elemento = document.getElementById('agregar').innerHTML = `
-        <a href="./compra"class="enlace__compra" >Se agrego este servicio a tu lista</a>
+        <a href="./compra?idc=<?php  echo $id_conductor  ?>"class="enlace__compra" >Se agrego este servicio a tu lista</a>
         
         `
         }

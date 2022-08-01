@@ -36,8 +36,14 @@ if(mysqli_num_rows($resultado__consulta) > 0){
   $resultado = mysqli_query($conexion__db__accent,$insertar__datos);
   if($resultado){
     session_start();
-    $_SESSION['id_conductor'] = $email;  
-      echo json_encode('true');
+
+$consulta__conductor = "SELECT *  FROM  conductores   WHERE email = '$email' LIMIT 1";
+$resultado = mysqli_query($conexion__db__accent,$consulta__conductor);
+if(mysqli_num_rows($resultado) > 0){
+  $fila__datos = mysqli_fetch_array($resultado);
+  $_SESSION['id_conductor'] = $fila__datos['id_conductor'];
+    echo json_encode('true');
+}
   }else{
     echo json_encode('no existe');
   }

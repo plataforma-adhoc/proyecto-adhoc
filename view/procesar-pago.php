@@ -2,8 +2,9 @@
        include'config/config.php'; 
 
 $servicios = isset($_SESSION['carrito']['servicios']) ? $_SESSION['carrito']['servicios'] : null;
+$id_conductor =  isset($_GET['idc']) ? $_GET['idc'] : '';
 
-if($servicios != null){
+if($servicios != null || $id_conductor !=""){
     $lista__carrito = array();
     foreach ($servicios as $clave => $cantidad) {
         $consulta__productos = "SELECT id_producto,nombre_producto,	valor_producto,descuento, $cantidad AS cantidad FROM productos    WHERE id_producto = '$clave' AND  activo = 1";
@@ -24,7 +25,8 @@ if($servicios != null){
     <h2 class="titulo__compra">detalles de tus servicios </h2>
     <?php   
 if($lista__carrito == null){
- echo '<h3>No hay nada que mostar</h3>';
+  echo ' <tr><td colspan="5"><h3 class="titulo__compra">No has selecionado ningun servicio de conductor elegido</h3></td> </tr>  ';
+
 }else{
     $total = 0;
     foreach($lista__carrito as $servicio){
@@ -35,17 +37,25 @@ if($lista__carrito == null){
         $precio__descuento  =  $precio__producto - (($precio__producto * $descuento__producto) / 100) ;
         $subtotal = $cantidad * $precio__descuento;
         $total += $subtotal; ?>
-<div class="contenido__compra">
-    <div class="detalles__compra pago">
-      <h3 class="texto__compra">Nombre servicio</h3>
-      <p class="texto__compra"><?php  echo $nombre__producto ?></p>
-    </div>
+<div class="table-responsive ">
+      <table class="table table-borderless">
+      <thead class="table-dark tabla">
+    <tr>
+      <th scope="col" class="texto__compra">Nombre servicio</th>
+      <th scope="col"class="texto__compra">Subtotal</th>
+    
 
-    <div class="detalles__compra pago">
-    <h3 class="texto__compra">Subtotal</h3>
-    <p  class="texto__compra"id="subtotal_<?php  echo $id ?>" name="subtotal[]"><?php echo  number_format($subtotal,2,'.','.') ?></p> 
-    </div>
-
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" class="texto__compra"><?php  echo $nombre__producto ?></th>
+      <td class="texto__compra"><?php echo  number_format($subtotal,2,'.','.') ?></td> 
+      <td>
+      </td>
+    </tr>  
+  </tbody>
+</table>
 </div>
 <br>
 <?php  } ?>
@@ -92,7 +102,12 @@ paypal.Buttons({
               'content-type':'application/json'
         },
         body:JSON.stringify({
-            detalles:detalles
+            detalles:detalles,
+            identificadores:{
+              idc:<?php   echo $id_conductor ?>,
+              idu:<?php  echo $datos__resultado['id_usuario'] ?>
+            }
+          
         })
 
         }).then(respuesta => respuesta.json())
