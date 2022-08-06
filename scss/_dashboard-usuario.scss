@@ -14,7 +14,8 @@ align-items: center;
 
 .enlace__perfil__usuario{
   text-decoration: 0;
-  color: white;
+  margin: -10px 10px  0 0;
+
 }
 
 .avatar__perfil{
@@ -22,7 +23,7 @@ width: 30px;
 height: 30px;
 border-radius: 50px;
 border: solid 2px $color__verde;
- margin: 0 10px 0 0;
+
 }
 
 .item__nombre{

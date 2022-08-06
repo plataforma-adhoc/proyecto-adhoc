@@ -37,14 +37,14 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                 <div class="logo">
                     <a href="./dashboard-conductor"><img src="./img/logo__accent.png" alt="" class="logo__accent"></a>
                 </div>
-                <?php  $consulta__comentarios = "SELECT * FROM notificaciones__conductor WHERE id_conductor = '{$_SESSION['id_conductor']}' AND leido = '0' OR leido = '1' ORDER BY id_notificacion DESC LIMIT 5";
+                <?php  $consulta__comentarios = "SELECT * FROM notificaciones__conductor WHERE id_conductor = '{$_SESSION['id_conductor']}' AND leido = '0'  ORDER BY id_notificacion DESC LIMIT 5";
                 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
                  $total__notificaciones = mysqli_num_rows($ejecutar__consulta) ?>
 
                 <div class="enlaces__varios">
                     <a href="./perfil-conductor?id=<?php echo $datos__resultado['id_conductor'] ?>"
                         class="enlace__perfil__usuario"><img src="upload/<?php echo $datos__resultado['avatar'] ?>"alt="" class="avatar__perfil"></a>
-                         <a href="#" class="enlace__notificaciones" id="myBtn"><i class="far fa-bell"></i>
+                         <a href="#" class="enlace__notificaciones" id="abrir-modal"><i class="far fa-bell"></i>
                        <?php  if($total__notificaciones > 0){ ?><span class="numero__notificaciones"> <?php   echo $total__notificaciones ?></span> <?php } ?>
                     </a> 
                      
@@ -80,12 +80,11 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
 
     </div>
 
-    <div id="myModal" class="modal">
-        <div class="modal-content">
+    <div id="myModalNotificaciones" class="modal__notificaciones">
+        <div class="" id="modal__content__notificaciones">
             <h3 class="titulo__notificaciones">Notificaciones</h3>
 
-            <?php while($fila__recorrido = mysqli_fetch_array($ejecutar__consulta)){
-        
+        <?php while($fila__recorrido = mysqli_fetch_array($ejecutar__consulta)){
         $consulta__datos__usuario = "SELECT * FROM usuarios WHERE id_usuario = '{$fila__recorrido['id_usuario']}' ";
         $ejecutar__consulta__usuario = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
         $fila__datos = mysqli_fetch_array($ejecutar__consulta__usuario);
@@ -101,9 +100,9 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                             <?php echo date("d-m-Y",strtotime($fila__recorrido['fecha_notificacion'])) ?></p>
                     </div>
                 </div>
-            </a>
-
+            </a>  
             <?php } ?>
+       
 
             <br>
             <a href="./notificaciones" class="enlace__mas__notificaciones"><i class="fas fa-plus"></i> ver mas
@@ -111,21 +110,4 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
         </div>
     </div>
 
-    <script>
-        var modal = document.getElementById("myModal");
-
-        var btn = document.getElementById("myBtn");
-
-
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-
-
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+   

@@ -1,4 +1,10 @@
-<?php  include'layout/nav-home-usuario.php' ?>
+<?php  include'layout/nav-home-usuario.php';
+
+$id__conductor = isset($_GET['idc']) ?  $_GET['idc']: '';
+$id__usuario = isset($_GET['idu']) ?  $_GET['idu']: '';
+
+
+?>
 
 <div class="container contenedor__compra__completada">
     <h2 class="titulo__finalizar__compra">Finalizando la compra</h2>
@@ -14,6 +20,8 @@
 
                 </div>
             </div>
+            <input type="hidden" name="idConductor" class="capturarDatos" value="<?php   echo $id__conductor ?>">
+            <input type="hidden" name="idUsuario"  class="capturarDatos"value="<?php   echo $id__usuario ?>">
             
             <div class="grupo__inputs" id="grupo__email">
                 <label for="" class="label__finalizar__compra">A que horas te recogemos ? </label>
@@ -29,6 +37,7 @@
                     <input type="date" name="dia" id="" class="capturarDatos">
                 </div>
             </div> 
+   
            
         <div class="block">
             <input type="submit" value="FINZALIZAR PROCESO" class="boton__registro" name="enviar">

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap');
+
+
 @import 'index';
 @import 'variables';
 @import 'reset';
@@ -19,9 +22,12 @@
 @import 'compra';
 @import 'procesar-pago';
 @import 'compra-completada';
+@import 'notificaiones';
+@import 'mis-solicitudes';
+
 
 body{
-    font-family: 'Harabara', sans-serif;
+    font-family: 'Baloo Bhaina 2', cursive;
     background:$color__fondo;
     user-select: none;
 }

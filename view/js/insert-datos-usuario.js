@@ -155,7 +155,7 @@ export  function actualizar__contrasena__usuario(){
             title: `Tu proceso se ha completado con exito`
           
           })
-          window.location.href='dashboard-usuario'
+          window.location.href='./dashboard-usuario'
 
         }else{
           Swal.fire({
@@ -171,3 +171,25 @@ export  function actualizar__contrasena__usuario(){
      })
      } 
   }
+
+  export function modal__cambio__contrasena__usuario(){
+    var modal = document.getElementById("myModalCambioContrasena");
+    var btn = document.getElementById("card-cambiar-contrasena");
+    
+    
+    var span = document.getElementsByClassName("close")[0];
+    
+    if(btn){
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+    
+    }
+    
+    if(span){
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+    
+    }
+     }

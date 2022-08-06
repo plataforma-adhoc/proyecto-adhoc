@@ -47,12 +47,12 @@ $resultado = mysqli_fetch_array($ejecutar__consulta);
             </div>
         </a>
 
-        <!-- <a href="#" class="cards__dashboard nuevo__servicio animate__animated  animate__bounceInDown" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <a href="./mis-solicitudes?idc=<?php echo $datos__resultado['id_conductor'] ?>" class="cards__dashboard nuevo__servicio animate__animated  animate__bounceInDown">
         <div>
-                <p class="item__titulo__cards"><i class="fas fa-plus"></i> Nuevo servicio</p>
-                <span class="nueva__notificacion">1</span>
+                <p class="item__titulo__cards"><i class="fas fa-plus"></i> Total solicitudes</p>
+               <span class="nueva__notificacion" id="numero-solicitudes"></span>
                 </div>
-            </a> -->
+            </a>
 
     </div>
 

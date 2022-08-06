@@ -1,0 +1,86 @@
+.contenedor__mis__solicitudes{
+    margin-top: -600px;
+    
+}
+
+.subtitulo__solicitudes{
+    text-align: center;
+    color: white;
+}
+
+.texto__solicitud{
+margin: auto;
+ width: 50%;
+ color: $color__gris;
+ text-align: justify;
+}
+
+
+.datos__de__solicitud{
+    width: 100%;
+    height:500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:$color__menu__dashboard;
+   border-top-right-radius: 10px;
+}
+
+.enlaces__servicios{
+    text-decoration: 0;
+    border: 0;
+    display: block;
+    padding: 14px;
+    background: #000;
+    margin: 10px 0 0 0;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    text-align: center;
+    text-decoration: 0;
+
+}
+.iniciar{
+    background:#0652DD;
+}
+.cancelar{
+    background:$color__danger;
+}
+
+.terminar{
+    background: $color__verde;
+}
+
+
+.enlaces__servicios:hover{
+background:$color__fondo;
+transition: all 0.5s;
+color: white;
+  
+}
+
+.modal-content{
+    background: $color__dark;
+}
+
+.parrafo__estado{
+ background:#0652DD;
+ width: 80%; 
+ color: white;
+ font-weight: bold;  
+ padding: 7px;
+ border-radius: 7px;
+text-transform: uppercase;
+opacity: 0.5;
+}
+
+.rechazado{
+    background:$color__danger;
+    opacity: 0.5;
+}
+.culminado{
+    background:$color__verde;
+    opacity: 0.5;
+}
+

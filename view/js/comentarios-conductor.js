@@ -1,11 +1,11 @@
-export function comentarios__usuario(){
-    let form__comentario__usuario = document.getElementById('form-comentario-usuario');
-    if(form__comentario__usuario){
-      form__comentario__usuario.addEventListener('submit',function(evento){
+export function comentarios__conductor(){
+    let form__comentario = document.getElementById('formulario-comentario-conductor');
+    if(form__comentario){
+      form__comentario.addEventListener('submit',function(evento){
         evento.preventDefault();
-           let form__data = new FormData(document.getElementById('form-comentario-usuario'))
+           let form__data = new FormData(document.getElementById('formulario-comentario-conductor'))
 
-           fetch('insert-comentarios',{
+           fetch('insert-comentarios-conductor',{
              method:'POST',
              body:form__data
            }).then(respuesta => respuesta.json())
@@ -20,7 +20,7 @@ export function comentarios__usuario(){
 
 
 
-export function mostrar__comentario(){
+export function mostrar__comentario__conductor(){
   let xhr  =  new XMLHttpRequest()
   xhr.open("POST","obtener-comentario",true) 
   xhr.onload = () =>{
@@ -45,9 +45,6 @@ if(form__comentario__usuario){
 }
 
     setInterval(function(){
-      mostrar__comentario();
+      mostrar__comentario__conductor();
     
     },1000)
-
-
-   

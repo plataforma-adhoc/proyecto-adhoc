@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background:$color__menu__dashboard;
     border-radius: 7px;
 }
@@ -75,7 +75,7 @@ font-size: 20px;
 
 .datos__del__perfil__de__usuario{
     border-radius: 7px;
-    width: 40%;
+    width: 100%;
 }
 
 .datos__basicos{
@@ -95,12 +95,18 @@ font-size: 16px;
     font-size: 12px;
 }
 
-.contenedor__opinion{
+
+
+.contenedor__opinion,.contenedor__formulario__datos__de_pago{
     background:$color__menu__dashboard;
     border-radius: 7px;
-    margin-top: 100px;
+    margin-top: 50px;
     height: auto;
    
+}
+
+.contenedor__formulario__datos__de_pago{
+  height: 400px;
 }
 
 .titulo__opinion{
@@ -187,4 +193,26 @@ color: white;
     cursor: pointer;
     color: white;
     border-radius: 50px;
+}
+
+// datos de metodo de pago del conductor
+
+.parrafo__metodo__pago{
+    text-align: center;
+    color: $color__gris;
+}
+
+.metodo__de__pago{
+    width: 80%;
+    margin: -20px auto 0 auto;
+}
+.seleccionar{
+    border: 0;
+    height: 50px;
+    margin: 5px  0 0 0;
+    border-radius: 5px;
+}
+
+.seleccionar:focus{
+ border: solid 3px $color__verde;
 }

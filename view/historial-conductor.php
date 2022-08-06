@@ -8,13 +8,13 @@ if($id__conductor ===""){
 ?>
 <h2 class="titulo__historial">Historial</h2>
 <p class="parrafo__historial">En tu historial puedes revisar a detalles tu solicitudes, en esta seccion te mostramos todos los detalles de tu pedido</p>
-<div class="container contenedor__datos__historial">  
 <?php  
 
 $consulta__datos__servicio = "SELECT *  FROM detalles__de__la__compra WHERE id_conductor = '{$_SESSION['id_conductor']}'";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos__servicio);
-while($resultado = mysqli_fetch_array($ejecutar__consulta)){; 
-
+while($resultado = mysqli_fetch_array($ejecutar__consulta)){?>
+    <div class="container contenedor__datos__historial">  
+<?php
 $consulta__datos__servicio = "SELECT *  FROM usuarios WHERE id_usuario = '{$resultado['id_usuario']}'";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos__servicio);
 $resultado__datos__usuario = mysqli_fetch_array($ejecutar__consulta);
@@ -49,8 +49,9 @@ $resultado__datos__usuario = mysqli_fetch_array($ejecutar__consulta);
             <div>
                 <p class="item__datos__servicio"><span>Fecha de registro :</span>  <?php  echo date("d-m-Y", strtotime($resultado__datos__usuario['fecha_de_registro']))?></p>
             </div>
-            <a href="#" class="enlace__eliminar__historial" data-bs-id="<?php echo $resultado['id']  ?>" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar <i class="fas fa-trash-alt"></i></a>
-
+            <a href="./eliminar-historial-conductor?id=<?php echo $resultado['id'] ?>" class="enlace__eliminar__historial">Eliminar <i class="fas fa-trash-alt"></i></a>
+          <br><br>
+            <p class="parrafo__info"><i class="fas fa-info-circle"></i> si eliminas este historial no sera posible recuperarlo</p>
         </div>
 
         <div class="datos__del__perfil__de__usuario">
@@ -70,56 +71,7 @@ $resultado__datos__usuario = mysqli_fetch_array($ejecutar__consulta);
         </div>
     </div>
 
+</div>
     <?php   } ?>
-</div>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"> Eliminar historial</h5>
-      </div>
-      <div class="modal-body">
-        <p class="modal-title" >Estas seguro de eliminar este historial ?</p>
-        <p class="modal-title" >Ten en cuenta que se perdera toda informacion</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success no__eliminar" data-bs-dismiss="modal">No estoy seguro de eliminar</button>
-        <button type="button" class="btn btn-danger eliminar" id="boton-eliminar" onClick="elimina()"> Proceder a eliminar</button>
-      </div>
-    </div>
-  </div>
-</div>
 <br><br>
-<script>
- var modal = document.getElementById("exampleModal");
-modal.addEventListener('show.bs.modal',function(event){
-let button = event.relatedTarget;
-let id = button.getAttribute('data-bs-id');
-let boton__eliminar = modal.querySelector('.modal-footer #boton-eliminar')
-boton__eliminar.value = id;
-
-
-})
-
-
-function elimina(){
-  let boton__eliminar =  document.getElementById('boton-eliminar');
-  let id = boton__eliminar.value;
-  let form__data = new FormData();
-  form__data.append('action','eliminar')
-  form__data.append('id',id)
-  fetch('eliminar-historial-conductor',{
-    method:'POST',
-    body:form__data,
-
-  }).then(respuesta => respuesta.json())
-  .then(data =>{
-    if(data == 'true' ){
-     location.reload();
-    }
-  })
-} 
-
-
-</script>
 <?php  include'layout/footer-home.php' ?>

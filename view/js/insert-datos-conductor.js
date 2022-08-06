@@ -164,7 +164,103 @@ export  function actualizar__contrasena(){
   }
   }
 
+
+
+  export function metodo__de__pago(){
+    let metodo__de__pago = document.getElementById('formulario-metodo-pago');
+  if(metodo__de__pago ){
+   metodo__de__pago.addEventListener('submit',function(evento){
+    evento.preventDefault();
+
+   let data = new FormData( document.getElementById('formulario-metodo-pago'));
+   console.log(data);
+    fetch('insert-metodo-pago',{
+      method:'POST',
+      body:data
+    }).then(respuesta => respuesta.json())
+    .then(datos =>{
+     if(datos == 'ok'){
+      console.log(datos);
+      Swal.fire({
+        background:'#202F36',
+        icon: 'success',
+        title: `Tu metodo de pago se configuro`,
+        toast:true,
+        position:'bottom-end',
+        confirmButtonText:'De acuerdo',
+       
+       
+      })
+     }else{
+      Swal.fire({
+        background:'#202F36',
+        icon: 'error',
+        title: `${datos}`,
+        confirmButtonText:'De acuerdo',
+        footer: 'Esta informacion es importante',
+       
+      })
+     }
+      
+    })
+    
+     
+   })
+  }
+  }
  
   
 
+ export function modal__cambio__contrasena__conductor(){
+var modal = document.getElementById("myModalCambioContrasena");
+var btn = document.getElementById("card-cambiar-contrasena");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+if(btn){
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+}
+
+if(span){
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+}
+ }
+
+ export function modal__Notificaciones(){
+  var modal = document.getElementById("myModalNotificaciones");
+  var span = document.getElementsByClassName("close")[0];
+
+  var btn = document.getElementById("abrir-modal");
+
+  if(btn){
+   btn.addEventListener('click',function(){
+    modal.style.display = "block";
+   })
+  }
+
  
+  if(span){
+    span.addEventListener('click',function(){
+      modal.style.display = "none";
+    })
+  
+  }
+
+
+  window.onclick = function (event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+   }
+
+
+
+
