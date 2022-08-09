@@ -5,7 +5,7 @@ export function comentarios__conductor(){
         evento.preventDefault();
            let form__data = new FormData(document.getElementById('formulario-comentario-conductor'))
 
-           fetch('insert-comentarios-conductor',{
+           fetch('insert-comentarios',{
              method:'POST',
              body:form__data
            }).then(respuesta => respuesta.json())
@@ -22,18 +22,18 @@ export function comentarios__conductor(){
 
 export function mostrar__comentario__conductor(){
   let xhr  =  new XMLHttpRequest()
-  xhr.open("POST","obtener-comentario",true) 
+  xhr.open("POST","obtener-comentarios-conductor",true) 
   xhr.onload = () =>{
     if(xhr.readyState === XMLHttpRequest.DONE){
     if(xhr.status === 200){
      let data = xhr.response
-     let comentario__2 = document.getElementById('comentario-2');
-     comentario__2.innerHTML = data;
+     let comentarios = document.getElementById('comentario-conductor');
+     comentarios.innerHTML = data;
      
     }
   }
 } 
-let form__comentario__usuario = document.getElementById('form-comentario-usuario')
+let form__comentario__usuario = document.getElementById('formulario-comentario-conductor')
 if(form__comentario__usuario){
   let form__data = new FormData(form__comentario__usuario)
      xhr.send(form__data);
@@ -44,7 +44,15 @@ if(form__comentario__usuario){
   
 }
 
+
+
+
     setInterval(function(){
       mostrar__comentario__conductor();
-    
     },1000)
+
+
+
+
+    
+       

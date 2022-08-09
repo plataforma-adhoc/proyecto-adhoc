@@ -53,9 +53,10 @@
         <?php } ?>
         </div>
         <div class="detalles">
+            <br>
             <h2 class="text__descripcion">Descripcion</h2>
             <div class="descripcion">
-                <h5><?php  echo $descripcion__producto;?> </h5>
+                <h5 class="item__descripcion"><?php  echo $descripcion__producto;?> </h5>
 
             </div>
           <div>
@@ -65,7 +66,6 @@
           
         </div>
         </div>
-
     </div>
 </div>
 

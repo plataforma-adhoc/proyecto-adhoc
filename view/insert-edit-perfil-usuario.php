@@ -4,8 +4,8 @@ include'layout/nav-home-usuario.php';
 include'conexion/conexion-db-accent.php';
    
 $consulta__datos = "SELECT * FROM  usuarios WHERE id_usuario = '{$_SESSION['id_usuario']}' LIMIT 1";
-$ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
-$resultado__datos = mysqli_fetch_array($ejecutar__consulta);
+$ejecutar__consulta__usuario = mysqli_query($conexion__db__accent,$consulta__datos);
+$resultado__datos = mysqli_fetch_array($ejecutar__consulta__usuario);
 
 
         $nombre_usuario = $_POST['nombre'] ? $_POST['nombre']: '';
@@ -37,7 +37,7 @@ $resultado__datos = mysqli_fetch_array($ejecutar__consulta);
             $ejecutar__consulta = mysqli_query($conexion__db__accent,$actualizar__datos);
 
             if($ejecutar__consulta){
-                header("Location: ./edit-perfil-usuario");
+                header("Location: ./edit-perfil-usuario?id={$resultado__datos['id_usuario']}");
                 echo json_encode('true');
              
             }

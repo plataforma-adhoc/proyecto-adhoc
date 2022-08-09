@@ -106,10 +106,14 @@ margin-right: 5px;
     color:$color__gris;
   }
 
-.datos__perfiles{
+.datos__perfiles__conductor{
+  margin-top: 80px;
+  width: 100%;
   display: flex;
+  height: auto;
   justify-content: space-between;
   align-items: center;
+ 
 }
 
   .card__perfiles__dashboard{
@@ -117,14 +121,7 @@ margin-right: 5px;
   color: white;
  }
 
-  .card__perfiles__dashboard:hover{
-    color: $color__gris;
-  }
-
-  .imagen__cards__perfiles{
-    width:100%;
-    border-radius: 25px;
-  }
+ 
 
   
  
@@ -134,30 +131,36 @@ margin-right: 5px;
   }
 
 
-  .chip {
-    display: inline-block;
-    padding: 0 25px;
-    width: 350px;
-    height: 50px;
-    font-size: 16px;
-    line-height: 50px;
-    border-radius: 25px;
-   background:$color__menu__dashboard;
-  }
-  
-  .chip img {
-    float: left;
-    margin: 0 10px 0 -25px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-  }
-
 .datos__del__conductor{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+ color:  white;
+text-align: center;
+
 }
+
+
+
+
+.card__del__conductor{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 20%;
+  background:$color__menu__dashboard;
+  border-radius: 7px;
+}
+
+.imagen__del__conductor{
+  width: 100%;
+  height: auto;
+  margin-top: -30px;
+  border-radius: 7px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+
   @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
     .overlay .closebtn {
@@ -167,4 +170,4 @@ margin-right: 5px;
     }
   }
 
- 
+  

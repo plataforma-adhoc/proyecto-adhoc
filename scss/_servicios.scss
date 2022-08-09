@@ -5,6 +5,7 @@
 .titulo__servicios{
     text-align: center;
     color: white;
+
 }
 
 .parrafo__servicios__info{
@@ -17,7 +18,7 @@
 .parrafo__servicios{
     text-align: center;
     color:$color__gris;
-    line-height: 150px;
+    
 }
 
 .contenedor__cards__servicios{
@@ -28,11 +29,12 @@
 }
 
 .cards__servicios{
-    width: 24%;
+    width: 26%;
     height: auto;
     border-radius: 7px;
     background:$color__menu__dashboard;
     margin: 50px 10px 0  10px;
+    border-top: 6px solid $color__verde;
 }
 
 .botones{
@@ -76,10 +78,10 @@ margin: 0 10px 0 10px;
 }
 
 .titulo__producto{
-    width: 200px;
     color: $color__gris;
     font-size: 22px;
-    margin:  20px auto 0 auto;
+   text-align: center;
+    margin: 30px 20px 0 20px;
 }
 
 .precio_producto{

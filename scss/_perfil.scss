@@ -8,9 +8,16 @@
     border-radius: 7px;
 }
 
+
 .info__perfil{
     width: 100%;
     margin: -70px 0 0 30px;
+}
+
+.biografia__detallada{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .foto__de__perfil{
@@ -105,6 +112,24 @@ font-size: 16px;
    
 }
 
+.contenedor__opinion::-webkit-scrollbar{
+    width: 10px;
+   
+}
+
+.contenedor__opinion::-webkit-scrollbar-thumb{
+    background:$color__dark;
+    border-radius: 7px;
+}
+
+.contenedor__opinion{
+    overflow-y: scroll;
+    height: 550px;
+    
+}
+
+
+
 .contenedor__formulario__datos__de_pago{
   height: 400px;
 }
@@ -118,15 +143,36 @@ font-size: 30px;
 .opinion{
     width: 50%;
     height: auto;
-    border-radius: 10px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
     background:$color__fondo;
-    margin: -30px 0 0 20px;
+    margin: -30px 0 0 100px;
 }
 
 .opinion__2{
-width: 85%;
-margin-left: 54%;  
+width: 50%;
+margin-left: 40%;  
+background:$color__fondo;
+margin-top: -30px;
+border-top-right-radius:25px;
+border-top-left-radius: 25px;
+border-bottom-left-radius:25px;
 }
+
+.parrafo__info__opinion{
+    color: white;
+    width: 80%;
+    margin: 0 0 0 100px;
+    font-size: 18px;
+}
+
+
+.parrafo__info__opinion span{
+color: yellow;
+
+}
+
 
 .avatar__opinion__1{
     width: 30px;
@@ -145,6 +191,7 @@ margin-left: 54%;
 .nombre__item__opinion{
     margin-left: 10px;
     margin-top: 15px;
+    
 }
 
 .parrafo__item__opinion{
@@ -152,6 +199,7 @@ margin-left: 54%;
     margin-top: -15px;
     width: 80%;
     height: auto;
+   
 
 }
 
@@ -159,8 +207,8 @@ margin-left: 54%;
     width: 80%;
     margin: 10px 0 0 10px;
     word-wrap: break-word;
-    color: white;
-    font-size: 15px;
+    color:$color__gris;
+    font-size: 19px;
 }
 
 .fecha__publicacion{
@@ -170,19 +218,23 @@ margin-left: 54%;
 }
 
 .formulario__respuesta{
-    width: 100%;
-    margin: 30px 40px 0 40px;
+    width: 90%;
+    margin: 30px 100px 0 100px;
+    
+   
 }
 
 
 .respuesta{
-width: 90%;
+width: 75%;
 padding: 15px;
 border: 0;
 outline: 0;
 background:$color__fondo;
 border-radius: 7px;
 color: white;
+margin:0 0 0 120px;
+
 }
 
 .boton__respuesta{
@@ -193,6 +245,7 @@ color: white;
     cursor: pointer;
     color: white;
     border-radius: 50px;
+    
 }
 
 // datos de metodo de pago del conductor

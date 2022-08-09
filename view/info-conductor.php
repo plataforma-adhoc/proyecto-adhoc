@@ -61,11 +61,13 @@ $resultado = mysqli_fetch_array($ejecutar__consulta);
             <div>
                 <p class="datos__basicos"><?php  echo $resultado['status']  ?></p>
             </div>
+            <?php if($resultado['quien_soy'] != NULL) {  ?>
             <div>
                 <p class="datos__basicos quien__soy"><?php  echo $resultado['quien_soy']  ?></p>
             </div>
+            <?php } ?>
             <div>
-                <p class="datos__basicos fecha__registro">Miembro desde <?php echo $datos__resultado['fecha_de_registro'] ?></p>
+                <p class="datos__basicos fecha__registro">Miembro desde <?php echo date("d-m-y",strtotime($datos__resultado['fecha_de_registro'])) ?></p>
             </div>
         </div>
     </div>
@@ -73,38 +75,26 @@ $resultado = mysqli_fetch_array($ejecutar__consulta);
 
 <div class="container contenedor__opinion">
     <p class="titulo__opinion">Que poninan otros usuarios de este conductor</p>
-    <div class="opinion__1">
-        <div class="item__opinion">
-            <img src="./img/first-person.jpg" alt="" class="avatar__opinion__1">
-            <div class="nombre__item__opinion">
-                <p>Nombre</p>
-            </div>
-        </div>
-        <div class="parrafo__item__opinion">
-            <p class="parrafo">
-                hdfjhsdjhfkshdfhskdfhkshfkfgjhgjfjfgjhffghfghfhfghfghfghfghfghfghfghfghfghfghfghfgjhgjhgjhgjhgjhgghgfghfghfghfghfhfghfghjhgggjhgjhgjhgjhgjhgjhgjh
-            </p>
-            <p class="fecha__publicacion">02-26-2022</p>
-        </div>
+    <?php      
+$consulta__comentarios = "SELECT * FROM comentarios WHERE id_conductor = '$id'";
+$ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
+while($fila = mysqli_fetch_array($ejecutar__consulta)){ ?>
+<div class="opinion">
+ <div class="opinion__1" >
+     <div class="item__opinion">
+         <img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt="" class="avatar__opinion__1">
+         <div class="nombre__item__opinion"><p><?php echo $datos__resultado['nombre_usuario'] ?></p></div>
+     </div>
+         <div class="parrafo__item__opinion">
+             <p class="parrafo"><?php echo $fila['comentario'] ?></p>
+             <p class="fecha__publicacion"><?php echo $fila['fecha_comentario'] ?></p>
+     </div>
+     </div>
+ 
+ </div>
 
-    </div>
-
-    <div class="opinion__1">
-        <div class="item__opinion">
-            <img src="./img/first-person.jpg" alt="" class="avatar__opinion__1">
-            <div class="nombre__item__opinion">
-                <p>Nombre</p>
-            </div>
-        </div>
-        <div class="parrafo__item__opinion">
-            <p class="parrafo">
-                hdfjhsdjhfkshdfhskdfhkshfkfgjhgjfjfgjhffghfghfhfghfghfghfghfghfghfghfghfghfghfghfgjhgjhgjhgjhgjhgghgfghfghfghfghfhfghfghjhgggjhgjhgjhgjhgjhgjhgjh
-            </p>
-            <p class="fecha__publicacion">02-26-2022</p>
-        </div>
-
-    </div>
-</div>
+ <?php } ?>
+  
 <br><br>
 
 <?php include'layout/footer-home.php'  ?>

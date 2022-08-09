@@ -74,7 +74,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                     class="enlaces__menu__home"><i class="fas fa-cogs"></i> Configuracion</a></div>
             <div class="contenedor__enalces__menu__home"><a href="./perfil-conductor" class="enlaces__menu__home"><i
                         class="fas fa-comments"></i> Reseñas</a></div>
-            <div class="contenedor__enalces__menu__home"><a href="./desconectar-conductor"
+            <div class="contenedor__enalces__menu__home"><a href="./desconectar-conductor?id=<?php  echo $datos__resultado['id_conductor'] ?>"
                     class="enlaces__menu__home"><i class="fas fa-power-off"></i> Desconectarse</a></div>
         </div>
 
@@ -82,6 +82,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
 
     <div id="myModalNotificaciones" class="modal__notificaciones">
         <div class="" id="modal__content__notificaciones">
+            <span class="close">x</span>
             <h3 class="titulo__notificaciones">Notificaciones</h3>
 
         <?php while($fila__recorrido = mysqli_fetch_array($ejecutar__consulta)){
@@ -89,7 +90,6 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
         $ejecutar__consulta__usuario = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
         $fila__datos = mysqli_fetch_array($ejecutar__consulta__usuario);
         ?>
-            <span class="close"></span>
             <a href="./notificaciones?id=<?php  echo $fila__recorrido['id_notificacion'] ?>"
                 class="enlaces__ver__notificacion">
                 <div class="contenido__notificacion">

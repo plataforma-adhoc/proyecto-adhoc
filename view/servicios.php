@@ -24,6 +24,7 @@
       al punto de encuentro, luego de transcurrido este 
       tiempo el conductor iniciara el servicio
     </p>
+    <br>
     <p class="parrafo__servicios">Elige uno de nuestros planes de servicios para continuar </p>
     <div class="contenedor__cards__servicios">
         <?php  while($fila = mysqli_fetch_array($ejecutar__consulta__productos)){  ?>
@@ -44,7 +45,6 @@
             </div>
             <br>
          </div>
-
      <?php } ?>
     </div>
 

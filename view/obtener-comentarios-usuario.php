@@ -17,18 +17,18 @@ $salida = "";
 
 if($ejecutar__consulta){
  while($recorrido = mysqli_fetch_array($ejecutar__consulta)){
-        $salida .= '<div class="opinion">
-        <div class="item__opinion">
-            <img src="upload/'. $datos__resultado['avatar'] .'" alt="" class="avatar__opinion__1">
-            <div class="nombre__item__opinion">
-                <p>'.  $datos__resultado['nombre_usuario']  .'</p>
-            </div>
-        </div>
-        <div class="parrafo__item__opinion">
-            <p class="parrafo">'. $recorrido['comentario'] .'</p>
-            <p class="fecha__publicacion">'. $recorrido['fecha_comentario'] .'</p>
-        </div>
-      </div>';
+ $salida .= '<div class="opinion__2">
+ <div class="item__opinion">
+     <img src="upload/'. $datos__resultado['avatar'] .'" alt="" class="avatar__opinion__1">
+     <div class="nombre__item__opinion">
+         <p>'.  $datos__resultado['nombre_usuario']  .'</p>
+     </div>
+ </div>
+ <div class="parrafo__item__opinion">
+     <p class="parrafo">'. $recorrido['comentario'] .'</p>
+     <p class="fecha__publicacion">'. $recorrido['fecha_comentario'] .'</p>
+ </div>
+</div>';
 
  } 
  }

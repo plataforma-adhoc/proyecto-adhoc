@@ -20,6 +20,7 @@
     margin: 50px 0 0 0;
     text-align: center;
     border-radius: 7px;
+    border-top:6px solid $color__verde;
 }
 .text__descripcion{
     color: wheat;
@@ -70,7 +71,8 @@ color: $color__gris;
 }
 
 .parrafo__mas__informacion{
-    line-height: 50px;
-    color: $color__gris;
+    color:white;
+    margin-top: -10px;
 }
+
 

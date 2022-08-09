@@ -53,7 +53,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
         <a href="javascript:void(0)" class="closebtn" id="cerrar-menu"><i class="fas fa-times"></i></a>
         <div class="overlay-content">
          <div class="contenedor__enalces__menu__home"><a href="./perfil-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlaces__menu__home"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"><div class="item__nombre"><?php echo $datos__resultado['nombre_usuario'] ?></div></a></div>
-           <div class="contenedor__enalces__menu__home"><a href="./dashboard-usuario" class="enlaces__menu__home"> <i class="fas fa-home"></i> Home</a></div> 
+           <div class="contenedor__enalces__menu__home"><a href="./dashboard-usuario" class="enlaces__menu__home"> <i class="fas fa-home"></i> Home</a></div>  
            <div class="contenedor__enalces__menu__home"><a href="./historial-usuario" class="enlaces__menu__home"><i class="fas fa-history"></i> Historial</a></div> 
            <div class="contenedor__enalces__menu__home"><a href="./configuracion-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlaces__menu__home"><i class="fas fa-cogs"></i> Configuracion</a></div> 
             <div class="contenedor__enalces__menu__home"><a href="./ayudanos-a-mejorar" class="enlaces__menu__home"><i class="fas fa-mail-bulk"></i> Ayudanos a mejorar</a></div>

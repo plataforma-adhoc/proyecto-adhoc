@@ -5,7 +5,7 @@ export function comentarios__usuario(){
         evento.preventDefault();
            let form__data = new FormData(document.getElementById('form-comentario-usuario'))
 
-           fetch('insert-comentarios-usuario',{
+           fetch('insert-comentarios',{
              method:'POST',
              body:form__data
            }).then(respuesta => respuesta.json())
@@ -27,8 +27,8 @@ export function mostrar__comentario(){
     if(xhr.readyState === XMLHttpRequest.DONE){
     if(xhr.status === 200){
      let data = xhr.response
-     let comentario__2 = document.getElementById('comentario-2');
-     comentario__2.innerHTML = data;
+     let comentario__usuario = document.getElementById('comentario-usuario');
+     comentario__usuario.innerHTML = data;
      
     }
   }

@@ -208,6 +208,15 @@
     height: auto;
 }
 
+.container::-webkit-scrollbar{
+    width: 10px;
+}
+
+.container::-webkit-scrollbar-thumb{
+    background:$color__dark;
+    border-radius: 7px;
+}
+
 .container--modifier{
     width: 60%;
 }
