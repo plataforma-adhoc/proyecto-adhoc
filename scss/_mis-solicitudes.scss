@@ -32,7 +32,7 @@ margin: auto;
     display: block;
     padding: 14px;
     background: #000;
-    margin: 10px 0 0 0;
+    margin: -10px 0 0 0;
     border-radius: 10px;
     color: white;
     font-weight: bold;
@@ -58,6 +58,10 @@ background:$color__fondo;
 transition: all 0.5s;
 color: white;
   
+}
+
+.deshabilitado{
+    opacity: 0.5;
 }
 
 .modal-content{

@@ -18,37 +18,39 @@ $estatus = 'disponible';
 if($nombre__conductor ==="" || $primer__apellido ==="" || $segundo__apellido ==="" || $documento ==="" || $numero__telefono ==="" || $numero__licencia ==="" 
  || $categoria__licencia ==="" || $contraseña ==="" ){
   echo json_encode('No podemos procesar tu solicidtud por falta de datos');
-}
-
-
-$consulta__conductor__registrado = "SELECT *  FROM  conductores   WHERE email = '$email' LIMIT 1";
-$resultado__consulta = mysqli_query($conexion__db__accent,$consulta__conductor__registrado);
-
-if(mysqli_num_rows($resultado__consulta) > 0){
-  echo json_encode('Es impsoble registar un nuevo conductor con ese email');
-  
-
 }else{
-  $insertar__datos = "INSERT INTO conductores (nombre_conductor, primer_apellido, segundo_apellido, email, numero_documento, numero_telefono, numero_licencia,
-  categoria_licencia, contrasena,status) 
-  
-  VALUES ('$nombre__conductor', '$primer__apellido', '$segundo__apellido', '$email', '$documento', '$numero__telefono','$numero__licencia','$categoria__licencia' ,'$contraseña','$estatus')";
-  $resultado = mysqli_query($conexion__db__accent,$insertar__datos);
-  if($resultado){
-    session_start();
 
-$consulta__conductor = "SELECT *  FROM  conductores   WHERE email = '$email' LIMIT 1";
-$resultado = mysqli_query($conexion__db__accent,$consulta__conductor);
-if(mysqli_num_rows($resultado) > 0){
-  $fila__datos = mysqli_fetch_array($resultado);
-  $_SESSION['id_conductor'] = $fila__datos['id_conductor'];
-    echo json_encode('true');
-}
+  $consulta__conductor__registrado = "SELECT *  FROM  conductores   WHERE email = '$email' LIMIT 1";
+  $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__conductor__registrado);
+  
+  if(mysqli_num_rows($resultado__consulta) > 0){
+    echo json_encode('Es impsoble registar un nuevo conductor con ese email');
+    
+  
   }else{
-    echo json_encode('no existe');
+    $insertar__datos = "INSERT INTO conductores (nombre_conductor, primer_apellido, segundo_apellido, email, numero_documento, numero_telefono, numero_licencia,
+    categoria_licencia, contrasena,status) 
+    
+    VALUES ('$nombre__conductor', '$primer__apellido', '$segundo__apellido', '$email', '$documento', '$numero__telefono','$numero__licencia','$categoria__licencia' ,'$contraseña','$estatus')";
+    $resultado = mysqli_query($conexion__db__accent,$insertar__datos);
+    if($resultado){
+      session_start();
+  
+  $consulta__conductor = "SELECT *  FROM  conductores   WHERE email = '$email' LIMIT 1";
+  $resultado = mysqli_query($conexion__db__accent,$consulta__conductor);
+  if(mysqli_num_rows($resultado) > 0){
+    $fila__datos = mysqli_fetch_array($resultado);
+    $_SESSION['id_conductor'] = $fila__datos['id_conductor'];
+      echo json_encode('true');
+  }
+    }else{
+      echo json_encode('no existe');
+    }
+  
   }
 
-}
+}  
+
 
 
   

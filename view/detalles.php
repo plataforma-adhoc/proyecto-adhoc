@@ -56,8 +56,8 @@
             <br>
             <h2 class="text__descripcion">Descripcion</h2>
             <div class="descripcion">
-                <h5 class="item__descripcion"><?php  echo $descripcion__producto;?> </h5>
-
+               <h5 class="item__descripcion"><?php  echo $descripcion__producto;?> </h5>
+               
             </div>
           <div>
             <button type="button" class="enlace__compra" onclick="agregarProducto(<?php echo $id__servicio ?>,'<?php echo $token__temporal ?>','<?php echo $id_conductor ?>')">Solicitar este servicio <i class="fas fa-paper-plane"></i></button>

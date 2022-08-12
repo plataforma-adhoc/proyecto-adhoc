@@ -90,23 +90,22 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
         $ejecutar__consulta__usuario = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
         $fila__datos = mysqli_fetch_array($ejecutar__consulta__usuario);
         ?>
-            <a href="./notificaciones?id=<?php  echo $fila__recorrido['id_notificacion'] ?>"
-                class="enlaces__ver__notificacion">
                 <div class="contenido__notificacion">
+                <a href="./notificaciones?id=<?php  echo $fila__recorrido['id_notificacion'] ?>"class="enlaces__ver__notificacion">
                     <img src="upload/<?php echo $fila__datos['avatar'] ?>" alt="" class="avatar__perfil">
-                    <div> <?php echo $fila__datos['nombre_usuario'] ?> ha hecho un comentario <i
+                    <div class="datos"> <?php echo $fila__datos['nombre_usuario'] ?> ha hecho un comentario <i
                             class="fas fa-comment-alt"></i> <br>
                         <p class="fecha__notificacion"> El dia
                             <?php echo date("d-m-Y",strtotime($fila__recorrido['fecha_notificacion'])) ?></p>
                     </div>
-                </div>
-            </a>  
+                </a>  
+            </div>
             <?php } ?>
-       
-
             <br>
+            <?php   if(mysqli_num_rows($ejecutar__consulta) > 6){ ?>
             <a href="./notificaciones" class="enlace__mas__notificaciones"><i class="fas fa-plus"></i> ver mas
                 notificaciones</a>
+                <?php } ?>
         </div>
     </div>
 

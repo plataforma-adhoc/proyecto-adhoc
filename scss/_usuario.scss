@@ -1,12 +1,18 @@
+.subtitulo__registro{
+  text-align: center;
+  color: white;
+  font-size:$tamaño__fuente__subtitulo;
+  margin-top: 100px;
+}
+
 .formulario__registro {
     width: 37%;
     margin: 100px auto;
     background:$color__formularios;
     border-radius: 7px;
-
-
   }
  
+
 .capturarDatos{
    width: 100%;
    padding: 12px 20px;
@@ -76,7 +82,7 @@ cursor: pointer;
      justify-content: space-around;
      max-width: 100%;
      padding: 5px;
-
+    color: white;
     }
 
 
@@ -93,19 +99,96 @@ cursor: pointer;
     .terminos{
         line-height: 20px;
         font-size: 13px;
+        color: white;
        }
        
        
        .enlace__terminos{
          text-decoration: none;
          color: white;
-        &:hover{
+        }
+        .enlace__terminos:hover{
           color:$color__verde;
         }
-       }
        
   
- 
+       .content-input input,
+       .content-select select{
+         appearance: none;
+         -webkit-appearance: none;
+         -moz-appearance: none;
+       }
+        
+       .content-input input{
+         visibility: hidden;
+         position: absolute;
+         right: 0;
+         
+       }
+       .content-input{
+        position: relative;
+        margin-bottom: 30px;
+        padding:10px 0 5px 60px;
+        display: block;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+       
+  
+      .content-input input + i{
+             background: #f0f0f0;
+             border:2px solid rgba(0,0,0,0.2);
+             position: absolute; 
+             left: 0;
+             top: 0;
+      }
+       
+  
+      .content-input input[type=checkbox ] + i{
+        width: 52px;
+        height: 25px;
+        border-radius: 15px;
+      }
 
+      .content-input input[type=checkbox] + i:before{
+        content: ''; 
+        width: 26px;
+        height: 26px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1;
+        left: 0px;
+        top: 0px;
+        -webkit-box-shadow: 3px 0 3px 0 rgba(0,0,0,0.2);
+        box-shadow: 3px 0 3px 0 rgba(0,0,0,0.2);
+      }
+
+      .content-input input[type=checkbox]:checked + i:before{
+        left: 22px;
+        -webkit-box-shadow: -3px 0 3px 0 rgba(0,0,0,0.2);
+        box-shadow: 3px 0 -3px 0 rgba(0,0,0,0.2);
+      }
+       
+      .content-input input[type=checkbox]:checked + i{
+       background: #2AC176;
+      }
+
+      .content-input input[type=checkbox] + i:after{
+        content: 'ON';
+        position: absolute;
+        font-size: 10px;
+        color: rgba(255,255,255,0.6);
+        top: 8px;
+        left: 4px;
+        opacity: 0;
+        transition: all 0.25s ease 0.25s;
+      }
+       
+     
+      .content-input input[type=checkbox]:checked + i:after{
+       opacity: 1;
+      }
 
 

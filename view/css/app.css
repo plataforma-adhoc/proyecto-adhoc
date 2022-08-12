@@ -1170,7 +1170,7 @@ template {
 
 .subtitulos__terminos {
   font-weight: 900;
-  font-size: 42;
+  font-size: 30px;
   color: gray;
 }
 
@@ -1214,6 +1214,13 @@ template {
 
 .parrafo__valores {
   color: #008A55;
+}
+
+.subtitulo__registro {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  margin-top: 100px;
 }
 
 .formulario__registro {
@@ -1286,6 +1293,7 @@ template {
   justify-content: space-around;
   max-width: 100%;
   padding: 5px;
+  color: white;
 }
 
 .enlace___login {
@@ -1300,14 +1308,92 @@ template {
 .terminos {
   line-height: 20px;
   font-size: 13px;
+  color: white;
 }
 
 .enlace__terminos {
   text-decoration: none;
   color: white;
 }
+
 .enlace__terminos:hover {
   color: #008A55;
+}
+
+.content-input input,
+.content-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.content-input input {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+}
+
+.content-input {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 10px 0 5px 60px;
+  display: block;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.content-input input + i {
+  background: #f0f0f0;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.content-input input[type=checkbox] + i {
+  width: 52px;
+  height: 25px;
+  border-radius: 15px;
+}
+
+.content-input input[type=checkbox] + i:before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  -webkit-box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content-input input[type=checkbox]:checked + i:before {
+  left: 22px;
+  -webkit-box-shadow: -3px 0 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 0 -3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content-input input[type=checkbox]:checked + i {
+  background: #2AC176;
+}
+
+.content-input input[type=checkbox] + i:after {
+  content: "ON";
+  position: absolute;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  top: 8px;
+  left: 4px;
+  opacity: 0;
+  transition: all 0.25s ease 0.25s;
+}
+
+.content-input input[type=checkbox]:checked + i:after {
+  opacity: 1;
 }
 
 .subtitulos {
@@ -1722,6 +1808,10 @@ template {
   border-radius: 50px;
 }
 
+.contenedor__formulario__datos__de_pago {
+  height: auto;
+}
+
 .parrafo__metodo__pago {
   text-align: center;
   color: gray;
@@ -1741,6 +1831,20 @@ template {
 
 .seleccionar:focus {
   border: solid 3px #008A55;
+}
+
+.item__info__pagos {
+  width: 97%;
+  background: #C0392B;
+  margin: 50px auto 0 auto;
+  padding: 5px;
+  color: white;
+  font-size: 20px;
+  border-radius: 7px;
+}
+
+.item__info__pagos p {
+  margin: 10px 0 0 0;
 }
 
 .titulo__configuracion {
@@ -1779,6 +1883,7 @@ template {
   text-align: center;
   color: black;
   font-size: 25px;
+  margin: 50px 0 0 0;
 }
 
 .cambiar__contraseña {
@@ -1799,7 +1904,9 @@ template {
 
 .parrafo__item__configuracion {
   color: black;
+  font-size: 20px;
   text-align: center;
+  font-weight: bold;
 }
 
 .modal__contrasena {
@@ -2027,15 +2134,6 @@ template {
   margin: 0 10px 0 10px;
 }
 
-.puntuacion__servicios {
-  margin: 20px 0 0 0;
-  text-align: center;
-}
-
-.fa-star {
-  color: orangered;
-}
-
 .titulo__producto {
   color: gray;
   font-size: 22px;
@@ -2075,7 +2173,15 @@ template {
   flex-wrap: wrap;
 }
 
+.titulo__dashboard {
+  text-align: center;
+  color: white;
+  line-height: 200px;
+  font-size: 30px;
+}
+
 .cards__dashboard {
+  margin: 50px 0 0 0;
   width: 18%;
   height: 120px;
   border-top: solid 6px #008A55;
@@ -2105,7 +2211,7 @@ template {
   text-align: center;
   font-size: 12px;
   color: white;
-  margin: -20px 0 0 0;
+  line-height: 1px;
 }
 
 .nuevo__servicio {
@@ -2169,7 +2275,7 @@ template {
   background-color: #212F37;
   padding: 20px;
   width: 100%;
-  height: 700px;
+  height: auto;
   border-radius: 10px;
 }
 
@@ -2189,23 +2295,22 @@ template {
 }
 
 .enlaces__ver__notificacion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   text-decoration: 0;
   color: white;
-  margin: 5px 0 0 0;
-  padding: 10px;
 }
 
 .enlaces__ver__notificacion:hover {
-  width: 95%;
   background: #112240;
   border-radius: 7px;
   color: white;
-  padding: 10px;
 }
 
-.contenido__notificacion {
-  display: flex;
-  align-items: center;
+.datos {
+  margin: 15px 0 0 0;
 }
 
 .fecha__notificacion {
@@ -2436,7 +2541,6 @@ template {
 
 .parrafo__mas__informacion {
   color: white;
-  margin-top: -10px;
 }
 
 .contenedor__compra {
@@ -2553,7 +2657,7 @@ template {
 }
 
 .contenedor__notificaiones {
-  width: 60%;
+  width: 50%;
   margin-top: -600px;
   background: #212F37;
   border-radius: 10px;
@@ -2561,16 +2665,20 @@ template {
 
 .contenido__notificacion {
   width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   margin: auto;
   padding: 10px;
 }
 
+.datos__de__notificacion {
+  margin: 15px 0 0 -100px;
+}
+
 .enlace__notificacion__individual {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
   text-decoration: 0;
-  line-height: 80px;
 }
 
 .nombre__comentario {
@@ -2646,7 +2754,7 @@ template {
   display: block;
   padding: 14px;
   background: #000;
-  margin: 10px 0 0 0;
+  margin: -10px 0 0 0;
   border-radius: 10px;
   color: white;
   font-weight: bold;
@@ -2673,6 +2781,10 @@ template {
   color: white;
 }
 
+.deshabilitado {
+  opacity: 0.5;
+}
+
 .modal-content {
   background: #212F37;
 }
@@ -2696,6 +2808,79 @@ template {
 .culminado {
   background: #008A55;
   opacity: 0.5;
+}
+
+.contenedor__como__funciona {
+  height: auto;
+}
+
+.parrafo__como__funciona {
+  width: 60%;
+  margin: auto;
+  color: white;
+  font-size: 20px;
+}
+
+.subtitulo__como__funciona {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+.texto__como__funciona {
+  color: white;
+  font-size: 20px;
+}
+
+.contenido__como__funciona {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.como__funciona {
+  background: #112240;
+  width: 20%;
+  height: 230px;
+  border-radius: 100%;
+  padding: 20px;
+  position: relative;
+  border: solid 4px #008A55;
+}
+
+.conductores {
+  margin: 200px 0 0 0;
+}
+
+.como__funciona span {
+  display: inline-block;
+  position: absolute;
+  top: 95%;
+  left: 45%;
+  background: #008A55;
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  font-weight: bold;
+}
+
+.parrafo__item__funciona {
+  text-align: center;
+  color: #C0392B;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.item__parrafo {
+  text-align: center;
+  color: gray;
 }
 
 body {

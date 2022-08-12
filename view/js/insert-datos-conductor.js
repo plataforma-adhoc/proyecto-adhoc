@@ -73,6 +73,7 @@ export function password__conductor(){
       console.log(data)
       if(data == 'ok'){
         Swal.fire({
+          background:'#202F36',
           icon: 'success',
           title: `Hemos enviado un correo con una contraseña temporal`,
           footer: 'Esta informacion es importante',
@@ -213,10 +214,8 @@ export  function actualizar__contrasena(){
 
  export function modal__cambio__contrasena__conductor(){
 var modal = document.getElementById("myModalCambioContrasena");
-var btn = document.getElementById("card-cambiar-contrasena");
-
-
-var span = document.getElementsByClassName("close")[0];
+var btn = document.getElementById("card-cambiar-contrasena")
+var span = document.getElementById('cerrar-modal');
 
 if(btn){
   btn.onclick = function() {

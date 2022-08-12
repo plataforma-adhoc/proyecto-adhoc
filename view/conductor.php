@@ -1,4 +1,5 @@
 <?php  include'layout/nabvar.php' ?>
+<h2 class="subtitulo__registro">Crea una cuenta gratis</h2>
 <form class="formulario__registro" id="formulario-registro-conductor">
     <div class="contenedor__formulario">
         <div class="grupo__inputs">
@@ -61,11 +62,16 @@
         </div>
         <div class="grupo__inputs block" id="grupo__password">
             <div class="contenedor__inputs">
-                <input type="password" placeholder="Crea una contraseña" name="contrasena" 
+                <input type="password" placeholder="Crea una contraseña" name="contrasena" id="contrasena"
                     class="capturarDatos">
+                    <label class="content-input">
+	         <input type="checkbox" name="Vehiculo" onclick="mostrar()" >Quiero ver mi contraseña
+	        <i></i>
+          </label>
 
             </div>
         </div>
+        
         <div class="block">
             <input type="submit" value="CREAR MI CUENTA" class="boton__registro" name="enviar">
         </div>
@@ -74,9 +80,23 @@
                 condiciones</a> y
             <a class="enlace__terminos" href="./politicas-de-privacidad">politicas de privacidad</a> </p>
         <div class="contenedor_enlace_sesion">
-            <a href="./login-conductor" class="enlace___login">Ya tienes una cuenta </a>
+              
+            <a href="./login-conductor" class="enlace___login">Ya tienes una cuenta <strong>Inicia sesion</strong></a>
         </div>
     </div>
 </form>
+<script>
+ 
+    function mostrar(){
+    
+        
+        let tipo = document.getElementById('contrasena')
+        if(tipo.type == 'password'){
+           tipo.type = 'text';
+        }else{
+            tipo.type = 'password'; 
+        }
+}
 
+</script>
 <?php  include'layout/footer.php' ?>

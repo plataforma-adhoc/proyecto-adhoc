@@ -35,35 +35,35 @@ $resultado = mysqli_fetch_array($ejecutar__consulta);
     <div class="info__perfil">
         <div class="datos__del__perfil__de__usuario">
             <div>
-                <p class="datos__basicos"><?php  echo $resultado['nombre_conductor']  ?></p>
+                <p class="datos__basicos"><strong>Nombre : </strong><?php  echo $resultado['nombre_conductor']  ?></p>
             </div>
             <div>
-                <p class="datos__basicos"><?php  echo $resultado['primer_apellido']  ?></p>
+                <p class="datos__basicos"><strong>Primer apellido : </strong><?php  echo $resultado['primer_apellido']  ?></p>
             </div>
             <div>
-                <p class="datos__basicos"><?php  echo $resultado['segundo_apellido']  ?></p>
+                <p class="datos__basicos"><strong>Segundo apellido : </strong><?php  echo $resultado['segundo_apellido']  ?></p>
             </div>
             <div>
-                <p class="datos__basicos"><?php  echo $resultado['email']  ?></p>
+                <p class="datos__basicos"><strong>Email : </strong><?php  echo $resultado['email']  ?></p>
             </div>
             <div>
-                <p class="datos__basicos"><?php  echo $resultado['numero_documento']  ?></p>
+                <p class="datos__basicos"><strong>Documento : </strong><?php  echo $resultado['numero_documento']  ?></p>
             </div>
             <div>
-                <p class="datos__basicos"><?php  echo $resultado['numero_telefono']  ?></p>
+                <p class="datos__basicos"><strong>Telefono : </strong><?php  echo $resultado['numero_telefono']  ?></p>
             </div>
             <div>
-                <p  class="datos__basicos"><?php  echo $resultado['numero_licencia']  ?></p>
+                <p  class="datos__basicos"> <strong>Licencia : </strong><?php  echo $resultado['numero_licencia']  ?></p>
             </div>
             <div>
-                <p class="datos__basicos"><?php  echo $resultado['categoria_licencia']  ?></p>
+                <p class="datos__basicos"> <strong>Categoria : </strong><?php  echo $resultado['categoria_licencia']  ?></p>
             </div>
             <div>
-                <p class="datos__basicos"><?php  echo $resultado['status']  ?></p>
+                <p class="datos__basicos"><strong>Estado : </strong><?php  echo $resultado['status']  ?></p>
             </div>
             <?php if($resultado['quien_soy'] != NULL) {  ?>
             <div>
-                <p class="datos__basicos quien__soy"><?php  echo $resultado['quien_soy']  ?></p>
+                <p class="datos__basicos quien__soy"><strong> Quien soy : </strong><?php  echo $resultado['quien_soy']  ?></p>
             </div>
             <?php } ?>
             <div>
@@ -74,7 +74,7 @@ $resultado = mysqli_fetch_array($ejecutar__consulta);
 </div>
 
 <div class="container contenedor__opinion">
-    <p class="titulo__opinion">Que poninan otros usuarios de este conductor</p>
+    <p class="titulo__opinion">Que opinan otros usuarios de este conductor</p>
     <?php      
 $consulta__comentarios = "SELECT * FROM comentarios WHERE id_conductor = '$id'";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);

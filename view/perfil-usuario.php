@@ -64,7 +64,7 @@ if(mysqli_num_rows($resultado__consulta__datos__conductor) > 0){
             </div>
            
              <div>
-             <p class="datos__basicos fecha__registro">Miembro desde : <?php echo $datos__resultado['fecha_de_registro'] ?></p>
+             <p class="datos__basicos fecha__registro">Miembro desde : <?php echo date("d-m-Y",strtotime($datos__resultado['fecha_de_registro'])) ?></p>
 
              </div>
 

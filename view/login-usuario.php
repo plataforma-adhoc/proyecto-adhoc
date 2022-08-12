@@ -12,11 +12,14 @@
 
         <div class="grupo__inputs block" id="grupo__email">
             <div class="contenedor__inputs">
-                <input type="password" placeholder="Tu contraseña" name="contrasena" id="" class="capturarDatos">
+                <input type="password" placeholder="Tu contraseña" name="contrasena" id="contrasena" class="capturarDatos">
             </div>
         </div>
        
-    
+        <label class="content-input">
+	         <input type="checkbox" name="Vehiculo" onclick="mostrar()" >Quiero ver mi contraseña
+	        <i></i>
+             </label>
         <div class="block">
             <input type="submit" value="INGRESAR" class="boton__registro" name="enviar">
         </div>
@@ -26,4 +29,20 @@
         </div>
     </div>
 </form>
+
+<script>
+
+    
+    function mostrar(){
+    
+        
+        let tipo = document.getElementById('contrasena')
+        if(tipo.type == 'password'){
+           tipo.type = 'text';
+        }else{
+            tipo.type = 'password'; 
+        }
+}
+
+</script>
 <?php include'layout/footer.php'?>

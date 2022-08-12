@@ -29,8 +29,8 @@ if($id =! $id || $id ===""){
     </div>
     <div id="myModalCambioContrasena" class="modal__contrasena  animate__animated animate__bounceInDown">
         <div class="modal__content">
-            <span class="close">&times;</span>
-          <p class="parrafo__modal">Escribe la contraseña que deseas acontinuacion</p>
+            <span class="close" id="cerrar-modal">&times;</span>
+          <p class="parrafo__modal">Escribe la contraseña que deseas a continuacion</p>
         <form class="formulario__registro" id="formulario-actaulizar-contrasena-conductor">
     <div class="contenedor__formulario">
         <div class="grupo__inputs block">

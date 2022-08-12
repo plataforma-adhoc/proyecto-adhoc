@@ -1,0 +1,72 @@
+.contenedor__como__funciona{
+    height: auto;
+}
+
+.parrafo__como__funciona{
+    width:60%;
+    margin: auto;
+    color: white;
+    font-size:$tamaño__parrafos;
+}
+
+.subtitulo__como__funciona{
+    text-align: center;
+    font-size: $tamaño__fuente__subtitulo;
+    color: white;
+}
+
+.texto__como__funciona{
+color: white;
+font-size: 20px;
+}
+
+.contenido__como__funciona{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.como__funciona{
+    background:$color__cards;
+    width: 20%;
+    height:230px;
+    border-radius: 100%;
+    padding: 20px;
+    position: relative;
+    border: solid 4px $color__verde;
+}
+
+.conductores{
+    margin: 200px 0 0  0;
+}
+
+.como__funciona span{
+    display: inline-block;
+    position: absolute;
+    top: 95%;
+    left:45%;
+    background:$color__verde;
+    border-radius: 50px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.parrafo__item__funciona{
+    text-align: center;
+    color: $color__accent;
+    font-size: $tamaño__parrafos;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.item__parrafo{
+    text-align: center;
+    color: $color__gris;
+}

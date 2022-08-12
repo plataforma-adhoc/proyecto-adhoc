@@ -249,6 +249,9 @@ margin:0 0 0 120px;
 }
 
 // datos de metodo de pago del conductor
+.contenedor__formulario__datos__de_pago{
+height: auto;
+}
 
 .parrafo__metodo__pago{
     text-align: center;
@@ -268,4 +271,19 @@ margin:0 0 0 120px;
 
 .seleccionar:focus{
  border: solid 3px $color__verde;
+}
+
+.item__info__pagos{
+    width: 97%;
+    background:$color__accent;
+    margin: 50px  auto 0 auto;
+    padding: 5px;
+    color: white;
+    font-size: 20px;
+    border-radius: 7px;
+
+}
+
+.item__info__pagos p{
+    margin: 10px  0 0 0;
 }

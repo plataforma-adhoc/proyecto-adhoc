@@ -1,9 +1,21 @@
 export function insert__datos__usuario(){
+  let nombre =  document.getElementById('nombre');
+  let primer__apellido =  document.getElementById('primer-apellido');
+  let segundo__apellido =  document.getElementById('segundo-apellido');
+  let email =  document.getElementById('email');
+  let documento =  document.getElementById('documento');
+  let telefono =  document.getElementById('telefono');
+  let contrasena =  document.getElementById('contrasena');
+  let parrafo =  document.getElementById('parrafo');
+
+
+
     let formulario__registro = document.getElementById('formulario-registro-usuario');
     if(formulario__registro){
      formulario__registro.addEventListener('submit',function(evento){
         evento.preventDefault();
-        
+       
+
         let data = new FormData(document.getElementById('formulario-registro-usuario'))
         fetch('insert-datos-usuario',{
             method:'POST',
@@ -15,6 +27,7 @@ export function insert__datos__usuario(){
 
            }else{
             Swal.fire({
+              background:'#202F36',
                 icon: 'error',
                 title: `${datos}`,
                 footer: 'Esta informacion es importante',
@@ -44,6 +57,7 @@ export function  insert__login__usuario(){
                 window.location.href = './dashboard-usuario';
             }else{
                 Swal.fire({
+                  background:'#202F36',
                     icon: 'error',
                     title: `${data}`,
                     footer: 'Esta informacion es importante',
@@ -71,6 +85,7 @@ export function password__usuario(){
       console.log(data)
       if(data == 'ok'){
         Swal.fire({
+          background:'#202F36',
           icon: 'success',
           title: `Hemos enviado un correo con una contraseña temporal`,
           footer: 'Esta informacion es importante',
@@ -192,4 +207,8 @@ export  function actualizar__contrasena__usuario(){
       }
     
     }
+     }
+
+     export function validar__datos__usuario() {
+    
      }

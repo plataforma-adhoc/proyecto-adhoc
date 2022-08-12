@@ -16,20 +16,22 @@ $ejecutar__consulta__notificaciones = mysqli_query($conexion__db__accent,$consul
     $ejecutar__consulta__usuario = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
     $fila__datos__usuario = mysqli_fetch_array($ejecutar__consulta__usuario);
     ?>
-<div class="contenido__notificacion">
-    <a href="" class="enlace__notificacion__individual">
-        <div>
-            <img src="upload/<?php echo $fila__datos__usuario['avatar'] ?>" alt="" class="avatar__notificacion">
-        </div>
-        <div class="parrafo__de__notificaciones"><p> <span class="nombre__comentario"><?php echo $fila__datos__usuario['nombre_usuario'] ?></span> ha dado su opinio  <i class="fas fa-comment-alt"></i></p>
-        
-    </div>
-</a>
-<a href="./eliminar-notificacion?id=<?php  echo $fila__datos['id_notificacion'] ?>" class="hidde">Eliminar esta notificacion</a>
-</div>
-<?php } ?>
+    <div class="contenido__notificacion">
+                <a href="./perfil-conductor?id=<?php  echo $datos__resultado['id_conductor'] ?>"class="enlaces__ver__notificacion enlace__notificacion__individual">
+                    <img src="upload/<?php echo $fila__datos__usuario['avatar'] ?>" alt="" class="avatar__perfil">
+                    <div class="datos datos__de__notificacion"> <?php echo $fila__datos__usuario['nombre_usuario'] ?> ha hecho un comentario <i
+                            class="fas fa-comment-alt"></i> <br>
+                        <p class="fecha__notificacion"> El dia
+                            <?php echo date("d-m-Y",strtotime($fila__datos['fecha_notificacion'])) ?></p>
+                    </div>
+                </a>  
+       <a href="./eliminar-notificacion?id=<?php  echo $fila__datos['id_notificacion'] ?>" class="hidde">Eliminar esta notificacion</a>
+
 </div>
 
+<?php } ?>
+</div>
+<br><br>
 
 
 <?php  include'layout/footer-home.php' ?>

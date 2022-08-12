@@ -1,5 +1,5 @@
 .contenedor__notificaiones{
-    width: 60%;
+    width: 50%;
     margin-top: -600px;
     background:$color__dark;
     border-radius: 10px;
@@ -7,19 +7,21 @@
 
 .contenido__notificacion{
     width: 90%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     margin: auto;
     padding: 10px;
 }
 
-
+.datos__de__notificacion{
+    margin:  15px 0 0 -100px;
+}
 
 .enlace__notificacion__individual{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    width: 100%; 
     text-decoration: 0;
-    line-height: 80px;
-    
+ 
 }
 
 .nombre__comentario{

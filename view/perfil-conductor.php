@@ -40,7 +40,7 @@ if(mysqli_num_rows($resultado__consulta) > 0){
 
         </div>
 
-        <a href="./edit-perfil-conductor?id=<?php echo $datos__resultado__conductor['id_conductor'] ?>" class="enlace__editar__perfil">Editar perfil <i
+        <a href="./edit-perfil-conductor?id=<?php echo $datos__resultado__conductor['id_conductor'] ?>" class="enlace__editar__perfil">Editar mi perfil <i
                 class="fas fa-long-arrow-alt-right"></i></a>
     </div>
     <div class="info__perfil">
@@ -106,15 +106,11 @@ if(mysqli_num_rows($resultado__consulta) > 0){
         <select name="opciones" id=""class="grupo__inputs seleccionar">
             <option value="Nequi">Nequi</option>
             <option value="daviplata">daviplata</option>
-            <option value="bancopopular">Banco popular</option>
-            <option value="bbva">BBVA</option>
         </select>
 
         <div class="grupo__inputs" id="grupo__email">
             <div class="contenedor__inputs">
                 <input type="text" placeholder="Numero de cuenta" name="numeroCuenta"  class="capturarDatos">
-
-
             </div>
         </div>
         <input type="hidden" placeholder="Numero de cuenta" name="idConductor"  class="capturarDatos" value="<?php echo $datos__resultado__conductor['id_conductor'] ?>">
@@ -123,16 +119,18 @@ if(mysqli_num_rows($resultado__consulta) > 0){
         </div>
 
     </div>
+    <div class="item__info__pagos">
+        <p><i class="fas fa-info-circle"></i> <strong>Nota : </strong> recuerda que los pagos se haran al finalizar la semana </p>
+        </div>   
 </form>
-     
 </div>
 
 <br><br><br><br>
 <div class="container contenedor__opinion conductor">
     <p class="titulo__opinion">Centro de opiniones</p>
-    <p class="parrafo__info__opinion"><span><i class="fas fa-bullhorn"></i> ATENCION : </span> en este panel de comentarios esta prohibido usar groserias,hablar en tono obseno,
-    insultar alos demas, u otro tipo de agresion berval, esto es solo para hacer comentarios sobre el servicio prestado . 
-    Si tienes dudas te invitamos a conocer nuestros <a href="./terminos-y-condiciones-de-uso" class="enlace__a__terminos">Terminos y condiciones</a>
+    <p class="parrafo__info__opinion"><span><i class="fas fa-bullhorn"></i> ATENCION : </span> Esta prohibido hacer comentarios fuera de lugar,
+    insultar alos demas, u otro tipo de agresion, esto es solo para hacer comentarios sobre el servicio prestado . 
+     Si tienes dudas te invitamos a conocer nuestros <a href="./terminos-y-condiciones-de-uso" class="enlace__a__terminos">Terminos y condiciones</a>
 </p>
 <?php      
 $consulta__comentarios = "SELECT * FROM comentarios WHERE id_conductor = '{$_SESSION['id_conductor']}'";

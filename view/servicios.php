@@ -31,13 +31,7 @@
         <div class="cards__servicios">
         <h3 class="titulo__producto"><?php echo $fila['nombre_producto'] ?></h3>
         <p class="precio_producto">$ <?php echo number_format($fila['valor_producto'],2,'.','.') ?></p>
-        <div class="puntuacion__servicios">
-           <span><i class="fas fa-star"></i></span>
-           <span><i class="fas fa-star"></i></span>
-           <span><i class="fas fa-star"></i></span>
-           <span><i class="fas fa-star"></i></span>
-           <span><i class="fas fa-star"></i></span>
-        </div>
+      
       <br><br>
          <div class="botones">
              <a href="./detalles?ids=<?php echo $fila['id_producto'] ?>&token=<?php echo hash_hmac('sha1',$fila['id_producto'],TOKEN)?>&idc=<?php echo $resultado['id_conductor'] ?>">detalles</a>

@@ -21,7 +21,7 @@
                             <p class="card__list">Disfruta del momento sin preocupaciones</p>
                             <h3 class="card__title">Entrega las llaves<span class="point">.</span></h3>
                             <p class="card__copy">Entreganos las llaves que nosotros te llevamos a casa sin ningun problema </p>
-                            <!-- <a href="#" class="card__button"></a> -->
+                            <a href="./funcionamiento" class="card__button">Quiero ver como funciona</a>
                         </div>
                     </div>
                     <div class="card" data-aos="zoom-in">
