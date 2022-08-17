@@ -73,7 +73,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                     href="./configuracion-conductor?id=<?php  echo $datos__resultado['id_conductor'] ?>"
                     class="enlaces__menu__home"><i class="fas fa-cogs"></i> Configuracion</a></div>
             <div class="contenedor__enalces__menu__home"><a href="./perfil-conductor" class="enlaces__menu__home"><i
-                        class="fas fa-comments"></i> Reseñas</a></div>
+                        class="fas fa-comments"></i> Comentarios</a></div>
             <div class="contenedor__enalces__menu__home"><a href="./desconectar-conductor?id=<?php  echo $datos__resultado['id_conductor'] ?>"
                     class="enlaces__menu__home"><i class="fas fa-power-off"></i> Desconectarse</a></div>
         </div>

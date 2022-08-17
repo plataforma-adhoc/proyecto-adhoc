@@ -7,9 +7,9 @@
    $token__temporal = hash_hmac('sha1',$id,TOKEN);
    if($token == $token__temporal){
     session_start();
-    if( isset($_SESSION['carrito']['servicios'][$id])){
-       $_SESSION['carrito']['servicios'][$id] += 1;
-    }
+    // if( isset($_SESSION['carrito']['servicios'][$id])){
+    //    $_SESSION['carrito']['servicios'][$id] = 1;
+    // }
     $_SESSION['carrito']['servicios'][$id] = 1;
     $datos['numero'] = count($_SESSION['carrito']['servicios']); 
     $datos['ok'] = true;

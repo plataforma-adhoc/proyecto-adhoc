@@ -63,6 +63,7 @@ if($lista__carrito == null){
 <?php   if($lista__carrito != null){  ?>
 <div class="contenedor__saldo">
  <h2 id="total" class="total__servicio"> Total a pagar  $ <?php  echo  number_format($total,2,'.','.') ?></h2>
+ 
 </div>
 <?php } ?>
 </div>

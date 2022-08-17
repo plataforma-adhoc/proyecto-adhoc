@@ -10,7 +10,7 @@ include'conexion/conexion-db-accent.php';
 }?>
 
 <div class="container contenedor__dashboard">
-    <h2 class="vista__nombre__usuario"><i class="fas fa-user-astronaut"></i> Hola <?php echo $datos__resultado['nombre_usuario'] ?></h2>
+    <h2 class="vista__nombre__usuario"><i class="fas fa-user-astronaut"></i> Hola <strong> <?php echo $datos__resultado['nombre_usuario'] ?></strong></h2>
     <p class="titulo__dashboard">Te presentamos algunos conductores</p>
 
     <div class="datos__perfiles__conductor">

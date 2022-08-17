@@ -167,3 +167,37 @@ text-align: center;
     color:$color__verde;
     text-decoration:underline;
   }
+
+  .enlace__conectarme{
+    text-decoration: 0;
+    width: 300px;
+    padding: 10px;
+    display: inline-block;
+    background: $color__verde;
+    text-align: center;
+    color: white;
+    margin: 100px 0 0 0;
+  }
+
+  .enlace__conectarme:hover{
+    color: white;
+  }
+
+  .modal__boostrap{
+    background: #000;
+  }
+
+  .parrafo__modal__body{
+    color: white;
+  }
+
+  .btn__conectarse{
+    display: inline-block;
+      width: 300px;
+      padding: 13px;
+      color: white;
+      background: $color__verde;
+      text-align: center;
+      border: 0;
+  
+  }

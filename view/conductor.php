@@ -1,69 +1,82 @@
 <?php  include'layout/nabvar.php' ?>
-<h2 class="subtitulo__registro">Crea una cuenta gratis</h2>
+<!-- <h2 class="subtitulo__registro">Crea una cuenta gratis</h2> -->
 <form class="formulario__registro" id="formulario-registro-conductor">
     <div class="contenedor__formulario">
-        <div class="grupo__inputs">
-            <div class="contenedor__inputs" id="grupo__nombre">
+        <div class="grupo__inputs" id="grupo__nombre">
+        <label for="nombre"class="formulario__label">Nombre</label>
+            <div class="formulario__grupo_-input">
                 <input type="text" placeholder="Nombre" name="nombre" 
                     class="capturarDatos" autofocus autocomplete="">
+                    <i class="formulario__validacion-estado uno fas fa-times-circle"></i>
+            </div>
+        </div>
+
+        <div class="grupo__inputs" id="grupo__primer__apellido">
+        <label for="nombre"class="formulario__label">Primer apellido</label>
+            <div class="formulario__grupo_-input">
+                <input type="text" placeholder="Primer apellido" name="primerApellido"  class="capturarDatos">
+                <i class="formulario__validacion-estado dos fas fa-times-circle"></i>
+            </div>
+        </div>
+        <div class="grupo__inputs" id="grupo__segundo__apellido">
+        <label for="nombre"class="formulario__label">Segundo apellido</label>
+            <div class="formulario__grupo_-input">
+                <input type="text" placeholder="Segundo apellido" name="segundoApellido"  class="capturarDatos">
+                <i class="formulario__validacion-estado tres fas fa-times-circle"></i>
 
             </div>
         </div>
 
         <div class="grupo__inputs" id="grupo__email">
-            <div class="contenedor__inputs">
-                <input type="text" placeholder="Primer apellido" name="primerApellido"  class="capturarDatos">
-
-
+        <label for="nombre"class="formulario__label">E-mail</label>
+            <div class="formulario__grupo_-input">
+                <input type="email" placeholder="E-mail" name="email"  class="capturarDatos">
+                <i class="formulario__validacion-estado cuatro fas fa-times-circle"></i>
             </div>
         </div>
-        <div class="grupo__inputs" id="">
-            <div class="contenedor__inputs">
-                <input type="text" placeholder="Segundo apellido" name="segundoApellido"  class="capturarDatos">
+
+        <div class="grupo__inputs" id="grupo__documento">
+        <label for="nombre"class="formulario__label">Documento</label>
+            <div class="formulario__grupo_-input">
+                <input type="text" placeholder="Documento" name="documento"  class="capturarDatos">
+                <i class="formulario__validacion-estado cinco fas fa-times-circle"></i>
 
             </div>
         </div>
 
         <div class="grupo__inputs" id="grupo__telefono">
-            <div class="contenedor__inputs">
-                <input type="email" placeholder="E-mail" name="email"  class="capturarDatos">
-
-            </div>
-        </div>
-
-        <div class="grupo__inputs" id="grupo__documento">
-            <div class="contenedor__inputs">
-                <input type="text" placeholder="Documento" name="documento"  class="capturarDatos">
-
-            </div>
-        </div>
-
-        <div class="grupo__inputs" id="">
-            <div class="contenedor__inputs">
+        <label for="nombre"class="formulario__label">Telefono</label>
+            <div class="formulario__grupo_-input">
                 <input type="text" placeholder="Numero telefono" name="telefono" 
                     class="capturarDatos">
-
+                    <i class="formulario__validacion-estado seis fas fa-times-circle"></i>
             </div>
         </div>
 
-        <div class="grupo__inputs" id="">
-            <div class="contenedor__inputs">
+        <div class="grupo__inputs" id="grupo__licencia">
+        <label for="nombre"class="formulario__label">Licencia</label>
+
+            <div class="formulario__grupo_-input">
                 <input type="text" placeholder="Numero licencia" name="licencia" 
                     class="capturarDatos">
-
+                    <i class="formulario__validacion-estado uno fas fa-times-circle"></i>
             </div>
         </div>
-        <div class="grupo__inputs" id="">
-            <div class="contenedor__inputs">
+        <div class="grupo__inputs" id="grupo__categoria">
+        <label for="nombre"class="formulario__label">Categoria</label>
+            <div class="formulario__grupo_-input">
                 <input type="text" placeholder="Categoria licencia" name="categoria" 
                     class="capturarDatos">
-
+                    <i class="formulario__validacion-estado uno fas fa-times-circle"></i>
             </div>
         </div>
-        <div class="grupo__inputs block" id="grupo__password">
-            <div class="contenedor__inputs">
+        <div class="grupo__inputs block" id="grupo__contrasena">
+        <label for="nombre"class="formulario__label">Contraseña</label>
+            <div class="formulario__grupo_-input">
                 <input type="password" placeholder="Crea una contraseña" name="contrasena" id="contrasena"
                     class="capturarDatos">
+                    <i class="formulario__validacion-estado uno fas fa-times-circle"></i>
+
                     <label class="content-input">
 	         <input type="checkbox" name="Vehiculo" onclick="mostrar()" >Quiero ver mi contraseña
 	        <i></i>

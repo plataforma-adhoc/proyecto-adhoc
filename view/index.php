@@ -2,7 +2,9 @@
         <section class=" hero__main">  
             <div class=" container hero__textos">
                 <h1 class="title">La mejor <span class="title--active">Experiencia tras el volante.</span></h1> 
-                <p class="copy">Nos encargamos de llevar tu celebracion <span class="copy__active">al siguiente nivel</span></p>
+                <p class="copy">Te enviaremos un conductor elegido a la puerta de tu casa en caso de que no te encuentres en condiciones de 
+                conducir tu vehiculo    
+                <span class="copy__active">¡ solicitalo aqui !</span></p>
                 <a href="./usuario" class="cta">Quiero ser un usuario</a>
             </div>
         </section>
@@ -46,7 +48,7 @@
             </div>
         </section>
         <section class="projects container" data-aos="zoom-in">
-            <h2 class="subtitle">Solicitud en tiempo real<span class="point">.</span></h2>
+            <h2 class="subtitle solicitud">Solicitud en tiempo real<span class="point">.</span></h2>
             <p class="copy__section">Observa si el conductor esta disponible y contrata su servicios </p>
             <article class="container-bg">
                 <div class="card">
@@ -106,7 +108,7 @@
                             <!-- <i class='bx bxl-apple testimony__logo'></i> -->
                             <div class="testimony__info">
                                 <h3 class="testimony__name">Feedback</h3>
-                                <p class="testimony__position">recibe retroalimentacion mutua cunado el servicio halla terminado</p>
+                                <p class="testimony__position">recibe tu calificacion una vez   el servicio termine </p>
                             </div>
                         </div>
                     </div>
@@ -142,7 +144,7 @@
                     <i class='bx bx-check' ></i>
                     <div class="check__numbers">
                         <p class="check__number">+200</p>
-                        <p class="check__copy">Servicios enteregados con exito</p>
+                        <p class="check__copy">Servicios entregados con exito</p>
                     </div>
                 </div>
                 <div class="check__item">

@@ -9,11 +9,10 @@ $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos__condu
 $resultado = mysqli_fetch_array($ejecutar__consulta);
 
 ?>
-
 <div class="container contenedor__datos__perfil">
     <div class="info__perfil">
         <img src="upload/<?php  echo $resultado['avatar']  ?>" alt="" class="foto__de__perfil">
-        <div>
+        <div class="redes__sociales">
         <?php  if($resultado['facebook'] !=NULL ){ ?>
             <a href="<?php echo $resultado['facebook'] ?>" class="enlace__de__redes__sociales" target="_blank"><i class="fab fa-facebook"></i></a>
              <?php } ?>  
@@ -94,7 +93,7 @@ while($fila = mysqli_fetch_array($ejecutar__consulta)){ ?>
  </div>
 
  <?php } ?>
-  
+ </div> 
 <br><br>
 
 <?php include'layout/footer-home.php'  ?>

@@ -265,9 +265,9 @@
 
 .copy {
   font-size: 24px;
-  color: var(--gray);
-  text-shadow: var(--shadow) var(--color_shadow);
   margin: 15px 0;
+  width: 600px;
+  color: white;
 }
 
 .copy__active {
@@ -294,9 +294,14 @@
   font-size: 42px;
 }
 
+.solicitud {
+  color: white;
+}
+
 .subtitle--modifier {
   text-align: center;
   margin-bottom: 16px;
+  color: white;
 }
 
 .copy__section {
@@ -489,10 +494,6 @@
   color: #fff;
 }
 
-.google__logo {
-  margin-bottom: 20px;
-}
-
 .testimony__history {
   font-size: 21px;
   font-weight: 300;
@@ -539,10 +540,12 @@
 
 .check__number {
   font-weight: 700;
+  color: white;
 }
 
 .check__copy {
   font-weight: 300;
+  color: white;
 }
 
 .contenedor__footer {
@@ -1224,10 +1227,96 @@ template {
 }
 
 .formulario__registro {
-  width: 37%;
+  width: 40%;
   margin: 100px auto;
   background: #112240;
   border-radius: 7px;
+}
+
+.formulario__label {
+  display: block;
+  font-weight: 700;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.formulario__grupo-input {
+  position: relative;
+}
+
+.formulario__input-error {
+  font-size: 10px;
+  margin-top: 2px;
+  display: none;
+  color: #bb2929;
+}
+
+.formulario__input-error-activo {
+  display: block;
+}
+
+.formulario__validacion-estado {
+  position: absolute;
+  right: 51%;
+  font-size: 16px;
+  opacity: 0;
+}
+
+.uno {
+  top: 250px;
+}
+
+.dos {
+  top: 250px;
+  right: 31.5%;
+}
+
+.tres {
+  top: 360px;
+}
+
+.cuatro {
+  right: 31.5%;
+  top: 360px;
+}
+
+.cinco {
+  right: 51%;
+  top: 470px;
+}
+
+.seis {
+  right: 31.5%;
+  top: 475px;
+}
+
+.siete {
+  right: 31.5%;
+  top: 590px;
+}
+
+.icono__email__login {
+  right: 32%;
+  top: 250px;
+}
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+  color: #1ed12d;
+  opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+  color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+  color: #bb2929;
+  opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+  border: 3px solid #bb2929;
 }
 
 .capturarDatos {
@@ -1249,15 +1338,6 @@ template {
   box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.3);
 }
 
-.capturar__datos__sintomas {
-  max-width: 100%;
-  height: 60px;
-  min-width: 100%;
-  min-height: 60px;
-  max-width: 100%;
-  max-height: 100%;
-}
-
 .boton_registro:hover {
   opacity: 0.8;
 }
@@ -1267,7 +1347,7 @@ template {
   border-radius: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px;
+  gap: 10px;
 }
 
 .block {
@@ -1394,6 +1474,34 @@ template {
 
 .content-input input[type=checkbox]:checked + i:after {
   opacity: 1;
+}
+
+.formulario__label {
+  display: block;
+  font-weight: 700;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.formulario__grupo-input {
+  position: relative;
+}
+
+.formulario__input {
+  width: 100%;
+  background: #fff;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 40px 0 10px;
+  transition: 0.3s ease all;
+}
+
+.formulario__input:focus {
+  border: 3px solid #0075FF;
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
 }
 
 .subtitulos {
@@ -1593,6 +1701,11 @@ template {
 .info__perfil {
   width: 100%;
   margin: -70px 0 0 30px;
+}
+
+.redes__sociales {
+  margin: 0 0 0 -20px;
+  width: 270px;
 }
 
 .biografia__detallada {
@@ -2329,6 +2442,39 @@ template {
   text-decoration: underline;
 }
 
+.enlace__conectarme {
+  text-decoration: 0;
+  width: 300px;
+  padding: 10px;
+  display: inline-block;
+  background: #008A55;
+  text-align: center;
+  color: white;
+  margin: 100px 0 0 0;
+}
+
+.enlace__conectarme:hover {
+  color: white;
+}
+
+.modal__boostrap {
+  background: #000;
+}
+
+.parrafo__modal__body {
+  color: white;
+}
+
+.btn__conectarse {
+  display: inline-block;
+  width: 300px;
+  padding: 13px;
+  color: white;
+  background: #008A55;
+  text-align: center;
+  border: 0;
+}
+
 .titulo__historial {
   color: white;
   position: absolute;
@@ -2539,7 +2685,8 @@ template {
   margin: auto;
 }
 
-.parrafo__mas__informacion {
+.parrafo__descripcion {
+  font-size: 14px;
   color: white;
 }
 
@@ -2617,6 +2764,16 @@ template {
 .titulo__pago {
   text-align: center;
   color: white;
+}
+
+.contenedor__parrafo__saldo {
+  width: 30%;
+  margin-left: 70%;
+}
+
+.parrafo__saldo {
+  color: white;
+  text-align: center;
 }
 
 .contenedor__compra__completada {

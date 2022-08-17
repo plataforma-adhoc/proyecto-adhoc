@@ -36,9 +36,13 @@ if($id =! $id || $id ===""){
         <div class="grupo__inputs block">
             <div class="contenedor__inputs" id="grupo__nombre">
                 <input type="password" placeholder="Ingresa tu nueva contraseña" name="nuevaContrasena" 
-                    class="capturarDatos" autofocus autocomplete="">
-
+                    class="capturarDatos" autofocus autocomplete="" id="contrasena">
+            
             </div>
+            <label class="content-input">
+	         <input type="checkbox" name="Vehiculo" onclick="mostrar()" >Quiero ver mi contraseña
+	        <i></i>
+             </label>
             <input type="hidden" name="id"class="capturarDatos" value="<?php echo $datos__resultado['id_conductor'] ?>">
 
         </div>
@@ -53,5 +57,16 @@ if($id =! $id || $id ===""){
     </div>
 </div>
 
+<script>
+    function mostrar(){
+    
+        let tipo = document.getElementById('contrasena')
+        if(tipo.type == 'password'){
+           tipo.type = 'text';
+        }else{
+            tipo.type = 'password'; 
+        }
+}
 
+</script>
 <?php  include'layout/footer-home.php' ?>

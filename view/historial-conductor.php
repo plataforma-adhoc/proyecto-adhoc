@@ -7,7 +7,7 @@ if($id__conductor ===""){
  
 ?>
 <h2 class="titulo__historial">Historial</h2>
-<p class="parrafo__historial">En tu historial puedes revisar a detalles tu solicitudes, en esta seccion te mostramos todos los detalles de tu pedido</p>
+<p class="parrafo__historial">En tu historial puedes revisar a detalles tu solicitudes, en esta seccion veras la informacion necesaria de tus servicos de conductor elegido</p>
 <?php  
 
 $consulta__datos__servicio = "SELECT *  FROM detalles__de__la__compra WHERE id_conductor = '{$_SESSION['id_conductor']}'";

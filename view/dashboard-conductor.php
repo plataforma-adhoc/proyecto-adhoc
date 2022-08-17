@@ -17,7 +17,7 @@ $saldo__total = $saldo__actual - $descuento;
 ?>
  
 <div class="container contenedor__dashboard">
-    <h2 class="vista__nombre__usuario"><i class="fas fa-user-astronaut"></i> Hola <?php echo $datos__resultado['nombre_conductor'] ?></h2>
+    <h2 class="vista__nombre__usuario"><i class="fas fa-user-astronaut"></i> Hola <strong><?php echo $datos__resultado['nombre_conductor'] ?></strong></h2>
     <h2 class="titulo__dashboard">Estadisticas principales</h2>
     <div class="contenedor__cards__dashboard">
         <a href="./saldo" class="cards__dashboard animate__animated  animate__bounceInDown">
@@ -70,8 +70,29 @@ $saldo__total = $saldo__actual - $descuento;
 
     </div>
 
+    <a href="#" class="enlace__conectarme"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Hacerme visible para los usuarios</a>
 </div>
 
+<div class="modal fade modal__boostrap" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Entrar en linea</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="parrafo__modal__body">Hazte visible para que los usuarios saben que estaras disponible</p>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button> -->
+<form id="form-conectarse">
+<button class="btn__conectarse">Conectarme</button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <?php  include'layout/footer-home.php' ?>

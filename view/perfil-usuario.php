@@ -25,7 +25,7 @@ if(mysqli_num_rows($resultado__consulta__datos__conductor) > 0){
 <div class="container contenedor__datos__perfil"> 
     <div class="info__perfil">
         <img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt="" class="foto__de__perfil">
-        <div>
+        <div class="redes__sociales">
         <?php  if($datos__resultado['facebook'] !=NULL ){ ?>
             <a href="<?php echo $datos__resultado['facebook'] ?>" class="enlace__de__redes__sociales" target="_blank"><i class="fab fa-facebook"></i></a>
              <?php } ?>  
