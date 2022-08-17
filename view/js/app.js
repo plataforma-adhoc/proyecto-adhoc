@@ -19,7 +19,8 @@ validar__datos__usuario();
 
 
 import {insert__datos__conductor,insert__login__conductor,password__conductor,
-    insert__datos__edit__perfil__conductor,actualizar__contrasena,metodo__de__pago, modal__cambio__contrasena__conductor,modal__Notificaciones, conectarse} from './insert-datos-conductor.js';
+    insert__datos__edit__perfil__conductor,actualizar__contrasena,metodo__de__pago, modal__cambio__contrasena__conductor,modal__Notificaciones, conectarse,
+  desconectarse} from './insert-datos-conductor.js';
 insert__datos__conductor();
 insert__login__conductor();
 password__conductor();
@@ -29,7 +30,7 @@ metodo__de__pago();
 modal__cambio__contrasena__conductor();
 modal__Notificaciones();
 conectarse()
-
+desconectarse();
 
 
 

@@ -535,10 +535,31 @@ if(span){
       body:form__data
     }).then(respuesta => respuesta.json())
     .then(data =>{
-      console.log(data)
+      if(data === 'true'){
+        window.location.reload()
+      }
     })
     })
     }
    }
 
 
+   export function desconectarse(){
+    let form__desconectarse = document.getElementById('form-desconectarse');
+    if(form__desconectarse){
+    form__desconectarse.addEventListener('submit',function(evento){
+     evento.preventDefault();
+
+     let form__data = new FormData(document.getElementById('form-desconectarse'))
+    fetch('desconectarse',{
+      method:'POST',
+      body:form__data
+    }).then(respuesta => respuesta.json())
+    .then(data =>{
+      if(data ==='true'){
+        window.location.reload()
+      }
+    })
+    })
+    }
+   }

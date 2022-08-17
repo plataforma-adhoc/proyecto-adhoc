@@ -113,7 +113,7 @@ paypal.Buttons({
 
         }).then(respuesta => respuesta.json())
         .then(data=>{
-          if(data == 'true'){
+          if(data === 'true'){
            window.location.href='compra-completada?idc=<?php echo $id_conductor  ?>&idu=<?php echo $datos__resultado['id_usuario'] ?>'
           }
           console.log(data)

@@ -4,8 +4,6 @@ function cerrar__sesion(){
 
     $id__conductor = isset($_GET['id']) ? $_GET['id']: '';
     if($id__conductor){
-            $estado = 'desconectado';
-            $actaulizar__estado = mysqli_query($conexion__db__accent,"UPDATE conductores SET status = '$estado' WHERE id_conductor = '$id__conductor'");
             session_destroy();
             header('Location:./login-conductor');
 

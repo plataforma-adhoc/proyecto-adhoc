@@ -11,7 +11,7 @@ $numero__telefono =  mysqli_real_escape_string($conexion__db__accent,$_POST['tel
 $numero__licencia =  mysqli_real_escape_string($conexion__db__accent,$_POST['licencia'] ? $_POST['licencia'] :'');
 $categoria__licencia =  mysqli_real_escape_string($conexion__db__accent,$_POST['categoria'] ? $_POST['categoria'] :'');
 $contraseña = password_hash($_POST['contrasena'] ? $_POST['contrasena'] : '',PASSWORD_BCRYPT);
-$estatus = 'disponible';
+
 
 
 
@@ -29,9 +29,9 @@ if($nombre__conductor ==="" || $primer__apellido ==="" || $segundo__apellido ===
   
   }else{
     $insertar__datos = "INSERT INTO conductores (nombre_conductor, primer_apellido, segundo_apellido, email, numero_documento, numero_telefono, numero_licencia,
-    categoria_licencia, contrasena,status) 
+    categoria_licencia, contrasena) 
     
-    VALUES ('$nombre__conductor', '$primer__apellido', '$segundo__apellido', '$email', '$documento', '$numero__telefono','$numero__licencia','$categoria__licencia' ,'$contraseña','$estatus')";
+    VALUES ('$nombre__conductor', '$primer__apellido', '$segundo__apellido', '$email', '$documento', '$numero__telefono','$numero__licencia','$categoria__licencia' ,'$contraseña')";
     $resultado = mysqli_query($conexion__db__accent,$insertar__datos);
     if($resultado){
       session_start();

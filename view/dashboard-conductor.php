@@ -1,6 +1,6 @@
 <?php  include'layout/nav-home-conductor.php ';
 include'conexion/conexion-db-accent.php';
-$consulta__datos__conductor = "SELECT id_conductor, nombre_conductor  FROM conductores   WHERE id_conductor = '{$_SESSION['id_conductor']}' LIMIT 1";
+$consulta__datos__conductor = "SELECT id_conductor, nombre_conductor,status  FROM conductores   WHERE id_conductor = '{$_SESSION['id_conductor']}' LIMIT 1";
 $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__conductor);
 if(mysqli_num_rows($resultado__consulta) > 0){
   $datos__resultado = mysqli_fetch_array($resultado__consulta); 
@@ -69,8 +69,18 @@ $saldo__total = $saldo__actual - $descuento;
             </a>
 
     </div>
-
+    <?php  if($datos__resultado['status'] ==="fuera de linea"){  ?>
     <a href="#" class="enlace__conectarme"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Hacerme visible para los usuarios</a>
+    <?php }?>
+
+    <?php  if($datos__resultado['status'] === 'disponible'){  ?>
+        <form id="form-desconectarse">
+        <input type="hidden" value="<?php echo $datos__resultado['id_conductor'] ?>" name="idConductor">
+        <button class="btn__conectarse desconectarse">Desconectarme</button>
+        <p class="texto__en__linea">Estoy en modo On line</p>
+        </form>
+        <?php  } ?>
+
 </div>
 
 <div class="modal fade modal__boostrap" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -78,17 +88,19 @@ $saldo__total = $saldo__actual - $descuento;
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="staticBackdropLabel">Entrar en linea</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
       </div>
       <div class="modal-body">
-        <p class="parrafo__modal__body">Hazte visible para que los usuarios saben que estaras disponible</p>
+        <p class="parrafo__modal__body">Entra en  linea para que los usuario noten que estas disponible</p>
       </div>
       <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button> -->
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No entrar en linea</button>
+
 <form id="form-conectarse">
+<input type="hidden" value="<?php echo $datos__resultado['id_conductor'] ?>" name="idConductor">
 <button class="btn__conectarse">Conectarme</button>
 </form>
+
       </div>
     </div>
   </div>

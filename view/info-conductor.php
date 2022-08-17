@@ -77,6 +77,8 @@ $resultado = mysqli_fetch_array($ejecutar__consulta);
     <?php      
 $consulta__comentarios = "SELECT * FROM comentarios WHERE id_conductor = '$id'";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
+if(mysqli_num_rows($ejecutar__consulta) > 0){
+
 while($fila = mysqli_fetch_array($ejecutar__consulta)){ ?>
 <div class="opinion">
  <div class="opinion__1" >
@@ -91,6 +93,10 @@ while($fila = mysqli_fetch_array($ejecutar__consulta)){ ?>
      </div>
  
  </div>
+
+ <?php } ?>
+ <?php }else{ ?>
+    <p class="titulo__opinion">No hay comentarios aun</p>
 
  <?php } ?>
  </div> 

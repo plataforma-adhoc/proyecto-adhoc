@@ -36,9 +36,9 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
             <div class="container nav__container">
                 <div class="logo">
                     <a href="./dashboard-usuario"><img src="./img/logo__accent.png" alt="" class="logo__accent"></a>
+                    <span class="texto__beta">BETA</span>
                 </div>
-
-
+        
                 <div class="enlaces__varios">
                    <a href="./perfil-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__perfil__usuario"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"></a> 
                     <label class="btn btn-open " for="nav" id="abrir-menu"><i class="fab fa-creative-commons-nd btn__abrir__menu"></i></label> 

@@ -37,12 +37,10 @@ if($id__conductor){
      </form>
 
       <br>
-      <form action="./cancelar-servicio" method="POST">
+      <!-- <form action="./cancelar-servicio" method="POST">
         <input type="hidden" value="<?php  echo $_SESSION['id_conductor'] ?>" name="idConductor">
         <button class="enlaces__servicios cancelar"  name="cancelar-servicio">Cancelar servicio</button>
-
-    
-      </form>
+      </form> -->
         <br>
         <form action="./terminar-servicio" method="POST">
         <input type="hidden" value="<?php  echo $_SESSION['id_conductor'] ?>" name="idConductor">
@@ -81,7 +79,16 @@ if($id__conductor){
             <div>
                 <p class="datos__basicos"><strong>Telefono :</strong><?php echo $resultado['numero_telefono'] ?></p>
             </div>
-           
+           <?php   $consulta__detalles__compra = "SELECT * FROM detalles__de__la__compra WHERE id_conductor = '$id__conductor' ";  
+            $ejecutar__consulta__compra = mysqli_query($conexion__db__accent,$consulta__detalles__compra);
+            if(mysqli_num_rows($ejecutar__consulta) > 0)
+            while($fila__resultado = mysqli_fetch_array($ejecutar__consulta__compra)){?>
+            <br>
+                <div>
+                <p class="texto">Detalles de la compra</p>
+                <p class="datos__basicos"><strong></strong><?php echo $fila__resultado['descripcion'] ?></p>
+            </div>
+            <?php }   ?>
         </div>
       </div>
       <div class="info__perfil">
@@ -97,6 +104,7 @@ if($id__conductor){
             <div>
                 <p class="datos__basicos"><strong>El dia:  </strong> <?php echo $fila['fecha_inicio'] ?></p>
             </div>
+           
         </div>
         <?php   if($fila['estado_recorrido'] === "Iniciado"){ ?>
         <p class="parrafo__estado" id="estado">Estado solicitud : <?php echo $fila['estado_recorrido']  ?></p>
