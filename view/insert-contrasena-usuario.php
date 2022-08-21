@@ -30,6 +30,10 @@
       $contenido__mensaje = ' <h1>Hola '.$resultado__fila['nombre_usuario'] .'<br> </h1>';
       $contenido__mensaje .='<p>has solicitado el cambio de tu credencial de acceso a nuestro sistema <br>
       nuestro algoritmo te ha generado una credencial aleatoria '.  $nueva__contrasena.' la cual es de un solo uso</p>';
+      $contenido__mensaje .='<p>Solo para recordarte <br></p> ';
+      $contenido__mensaje .=' <li> No comparta nunca su contraseña o preguntas de seguridad con otra persona. <br></li> ';
+      $contenido__mensaje .=' <li>	Cree contraseñas difíciles de adivinar y nunca utilice información personal. 
+      Asegúrese de incluir letras mayúsculas y minúsculas, números y símbolos.  <br></li> ';
       $contenido__mensaje .=' <p>Haz clik en el siguiente enlace <a href="'.$url.'">Pulsa aqui!</a>  para activar su credencial de acceso!  <br> <br> <br> <br></p>';
       $contenido__mensaje .='<p>Si no has sido tu omite este mensaje</p>';
       $mail = new PHPMailer(true);

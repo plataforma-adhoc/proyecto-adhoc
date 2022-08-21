@@ -16,9 +16,10 @@
   <header class="hero">
     <nav class="nav__hero">
       <div class="container nav__container">
-        <div class="logo">
-          <a href="./"><img src="./img/logo__accent.png" alt="" class="logo__accent"></a>
-          <span class="texto__beta">BETA</span>
+      <div class="logo">
+            <a href="./"><img src="./img/logo__accent.png" alt="" class="logo__accent"></a>
+            <p class="texto__beta beta__home">BETA</p>
+              
         </div>
 
 

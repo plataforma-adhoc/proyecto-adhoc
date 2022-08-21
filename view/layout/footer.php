@@ -2,7 +2,8 @@
     <footer class="contenedor__footer"> 
       <div class="enlaces__footer container">
         <div class="footer">
-        <a href="./"><img src="./img/logo__accent.png" alt="" class="logo__accent"></a>
+        <a href="./"><img src="./img/logo__accent.png" alt="" class="logo__accent"> </a>
+       
           <p class="titulo__footer">Accent</p>
           <p>Bogota, Colombia</p>
         </div>

@@ -37,4 +37,28 @@ include'conexion/conexion-db-accent.php';
 <?php } ?>  
 </div>
 </div>
+
+<?php  
+ $consulta__servicios__completados = "SELECT estado_recorrido,status_2 FROM datos__inicio__recorrido WHERE estado_recorrido = 'Recorrido terminado' AND id_conductor ='{$_SESSION['id_usuario']}' AND status_2 = '0' ";  
+$ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__servicios__completados);
+$total__completados = mysqli_num_rows($ejecutar__consulta);
+$estado__recorrido = mysqli_fetch_array($ejecutar__consulta);
+
+if($estado__recorrido['estado_recorrido'] ==='Recorrido terminado') {?>
+<div class="modal__recorrido">
+<div class="contendido__modal__recorrido">
+  <div>
+    <img src="./img/icon__celebracion.svg" alt="" class="imagen__celebracion">
+
+  </div>
+  <div>
+    <h4 class="subtitulo__estado__recorrido">Completaste un nuevo recorrido</h4>
+    <p class="parrafo__recorrido">Dejanos saber tu opinion sobres el usuario que acabas de dejar </p>
+     <a href="./perfil-usuario?id=<?php  echo $datos__resultado['id_usuario']  ?>#opinion1" class="btn__dejar__opinion ">Dejar mi opinion</a>
+  </div>
+</div>
+
+</div>
+
+<?php  }  ?>
 <?php include'layout/footer-home.php' ?>

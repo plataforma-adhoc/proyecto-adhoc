@@ -5,7 +5,7 @@ export function comentarios__conductor(){
         evento.preventDefault();
            let form__data = new FormData(document.getElementById('formulario-comentario-conductor'))
 
-           fetch('insert-comentarios',{
+           fetch('insert-comentarios-conductor',{
              method:'POST',
              body:form__data
            }).then(respuesta => respuesta.json())

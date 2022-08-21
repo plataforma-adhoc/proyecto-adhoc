@@ -19,7 +19,7 @@ if(mysqli_num_rows($resultado__consulta) > 0){
 
 }
 
-$consulta__comentarios = "SELECT * FROM comentarios WHERE id_conductor = '$id__conductor' AND  id_usuario ='$id__usuario' OR 
+$consulta__comentarios = "SELECT * FROM comentarios__conductor WHERE id_conductor = '$id__conductor' AND  id_usuario ='$id__usuario' OR 
 id_conductor = '$id__usuario' AND  id_usuario ='$id__conductor'";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
 $salida = "";

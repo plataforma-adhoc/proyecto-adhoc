@@ -13,15 +13,23 @@
 
 }
 .contenedor__enlace__iniciar__sesion{
-    width: 50%;
+    width: 30%;
     margin: auto;
     text-align: center;
+    
 }
+
 .enlace__iniciar__sesion{
+    width: 100%;
     display: inline-block;
     text-decoration: 0;
     color:$color__gris;
+    background:$color__verde;
+    padding: 10px;
+    color: white;
+    border-radius: 7px;
+    text-transform: uppercase;
 }
 .enlace__iniciar__sesion:hover{
-    border-bottom: 2px solid $color__accent;
+   color: white;
 }

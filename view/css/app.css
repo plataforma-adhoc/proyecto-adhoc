@@ -24,6 +24,15 @@
   --nav-count: 10;
 }
 
+.texto__beta {
+  font-size: 12px;
+  color: gray;
+}
+
+.beta__home {
+  margin: -37px 0 0 105px;
+}
+
 .btn-open {
   font-size: 30px;
   cursor: pointer;
@@ -1536,12 +1545,6 @@ template {
   font-size: 20px;
 }
 
-.texto__beta {
-  display: inline-block;
-  font-size: 12px;
-  color: gray;
-}
-
 .contenedor__enalces__menu__home {
   width: 100%;
   margin: 0 0 0 10px;
@@ -2301,7 +2304,7 @@ template {
 
 .cards__dashboard {
   margin: 50px 0 0 0;
-  width: 18%;
+  width: 23%;
   height: 120px;
   border-top: solid 6px #008A55;
   border-radius: 7px;
@@ -2492,6 +2495,69 @@ template {
   color: #008A55;
 }
 
+.modal__recorrido {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.contendido__modal__recorrido {
+  background-color: #112240;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen__celebracion {
+  width: 60%;
+  animation-name: mover;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+
+.subtitulo__estado__recorrido {
+  color: white;
+}
+
+.parrafo__recorrido {
+  color: white;
+  font-size: 20px;
+}
+
+.btn__dejar__opinion {
+  display: inline-block;
+  text-decoration: 0;
+  width: 300px;
+  padding: 13px;
+  color: white;
+  background: #008A55;
+  text-align: center;
+  border: 0;
+}
+
+.btn__dejar__opinion:hover {
+  color: white;
+}
+
+@keyframes mover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
 .titulo__historial {
   color: white;
   position: absolute;
@@ -2525,12 +2591,10 @@ template {
 
 .item__datos__servicio {
   color: gray;
-  font-size: 15px;
 }
 
-.item__datos__servicio span {
-  color: #008A55;
-  font-size: 19px;
+.foto__historial {
+  width: 70%;
 }
 
 .datos__de__historial {
@@ -2564,6 +2628,10 @@ template {
 .fa-info-circle {
   color: yellow;
   font-size: 25px;
+}
+
+.historial {
+  margin: -30px 0 0 0;
 }
 
 .contendor__datos__servicio {
@@ -2612,19 +2680,25 @@ template {
 }
 
 .contenedor__enlace__iniciar__sesion {
-  width: 50%;
+  width: 30%;
   margin: auto;
   text-align: center;
 }
 
 .enlace__iniciar__sesion {
+  width: 100%;
   display: inline-block;
   text-decoration: 0;
   color: gray;
+  background: #008A55;
+  padding: 10px;
+  color: white;
+  border-radius: 7px;
+  text-transform: uppercase;
 }
 
 .enlace__iniciar__sesion:hover {
-  border-bottom: 2px solid #C0392B;
+  color: white;
 }
 
 .contenedor__detalles {
@@ -2984,6 +3058,10 @@ template {
   opacity: 0.5;
 }
 
+.sevicio {
+  margin: -90px 0 0 0;
+}
+
 .contenedor__como__funciona {
   height: auto;
 }
@@ -3057,6 +3135,323 @@ template {
   color: gray;
 }
 
+.texto__404 {
+  font-size: 100px;
+  color: white;
+  font-weight: bolder;
+}
+
+.subtitulo__404 {
+  color: white;
+  font-size: 30px;
+  width: 450px;
+  margin: -50px auto;
+}
+
+@-moz-keyframes rocket-movement {
+  100% {
+    -moz-transform: translate(1200px, -600px);
+  }
+}
+@-webkit-keyframes rocket-movement {
+  100% {
+    -webkit-transform: translate(1200px, -600px);
+  }
+}
+@keyframes rocket-movement {
+  100% {
+    transform: translate(1200px, -600px);
+  }
+}
+@-moz-keyframes spin-earth {
+  100% {
+    -moz-transform: rotate(-360deg);
+    transition: transform 20s;
+  }
+}
+@-webkit-keyframes spin-earth {
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transition: transform 20s;
+  }
+}
+@keyframes spin-earth {
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    transition: transform 20s;
+  }
+}
+@-moz-keyframes move-astronaut {
+  100% {
+    -moz-transform: translate(-160px, -160px);
+  }
+}
+@-webkit-keyframes move-astronaut {
+  100% {
+    -webkit-transform: translate(-160px, -160px);
+  }
+}
+@keyframes move-astronaut {
+  100% {
+    -webkit-transform: translate(-160px, -160px);
+    transform: translate(-160px, -160px);
+  }
+}
+@-moz-keyframes rotate-astronaut {
+  100% {
+    -moz-transform: rotate(-720deg);
+  }
+}
+@-webkit-keyframes rotate-astronaut {
+  100% {
+    -webkit-transform: rotate(-720deg);
+  }
+}
+@keyframes rotate-astronaut {
+  100% {
+    -webkit-transform: rotate(-720deg);
+    transform: rotate(-720deg);
+  }
+}
+@-moz-keyframes glow-star {
+  40% {
+    -moz-opacity: 0.3;
+  }
+  90%, 100% {
+    -moz-opacity: 1;
+    -moz-transform: scale(1.2);
+  }
+}
+@-webkit-keyframes glow-star {
+  40% {
+    -webkit-opacity: 0.3;
+  }
+  90%, 100% {
+    -webkit-opacity: 1;
+    -webkit-transform: scale(1.2);
+  }
+}
+@keyframes glow-star {
+  40% {
+    -webkit-opacity: 0.3;
+    opacity: 0.3;
+  }
+  90%, 100% {
+    -webkit-opacity: 1;
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    border-radius: 999999px;
+  }
+}
+.spin-earth-on-hover {
+  transition: ease 200s !important;
+  transform: rotate(-3600deg) !important;
+}
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Dosis", sans-serif;
+  font-weight: 300;
+  -webkit-user-select: none;
+  /* Safari 3.1+ */
+  -moz-user-select: none;
+  /* Firefox 2+ */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Standard syntax */
+}
+
+.bg-purple {
+  background: url(http://salehriaz.com/404Page/img/bg_purple.png);
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: left top;
+  height: 100%;
+  overflow: hidden;
+}
+
+.custom-navbar {
+  padding-top: 15px;
+}
+
+.brand-logo {
+  margin-left: 25px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.btn-request {
+  padding: 10px 25px;
+  border: 1px solid #FFCB39;
+  border-radius: 100px;
+  font-weight: 400;
+}
+
+.btn-request:hover {
+  background-color: #FFCB39;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-go-home {
+  position: relative;
+  z-index: 200;
+  margin: 15px auto;
+  width: 200px;
+  padding: 10px 15px;
+  border: 1px solid #FFCB39;
+  border-radius: 100px;
+  font-weight: 400;
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 11px;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.btn-go-home:hover {
+  background-color: #008A55;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.central-body {
+  padding: 17% 5% 10% 5%;
+  text-align: center;
+}
+
+.objects img {
+  z-index: 90;
+  pointer-events: none;
+}
+
+.object_rocket {
+  z-index: 95;
+  position: absolute;
+  transform: translateX(-50px);
+  top: 75%;
+  pointer-events: none;
+  animation: rocket-movement 200s linear infinite both running;
+}
+
+.object_earth {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  z-index: 90;
+  /*    animation: spin-earth 100s infinite linear both;*/
+}
+
+.object_moon {
+  position: absolute;
+  top: 12%;
+  left: 25%;
+  /*
+      transform: rotate(0deg);
+      transition: transform ease-in 99999999999s;
+  */
+}
+
+.object_astronaut {
+  animation: rotate-astronaut 200s infinite linear both alternate;
+}
+
+.box_astronaut {
+  z-index: 110 !important;
+  position: absolute;
+  top: 60%;
+  right: 20%;
+  will-change: transform;
+  animation: move-astronaut 50s infinite linear both alternate;
+}
+
+.image-404 {
+  position: relative;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.stars {
+  background: url(http://salehriaz.com/404Page/img/overlay_stars.svg);
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: left top;
+}
+
+.glowing_stars .star {
+  position: absolute;
+  border-radius: 100%;
+  background-color: #fff;
+  width: 3px;
+  height: 3px;
+  opacity: 0.3;
+  will-change: opacity;
+}
+
+.glowing_stars .star:nth-child(1) {
+  top: 80%;
+  left: 25%;
+  animation: glow-star 2s infinite ease-in-out alternate 1s;
+}
+
+.glowing_stars .star:nth-child(2) {
+  top: 20%;
+  left: 40%;
+  animation: glow-star 2s infinite ease-in-out alternate 3s;
+}
+
+.glowing_stars .star:nth-child(3) {
+  top: 25%;
+  left: 25%;
+  animation: glow-star 2s infinite ease-in-out alternate 5s;
+}
+
+.glowing_stars .star:nth-child(4) {
+  top: 75%;
+  left: 80%;
+  animation: glow-star 2s infinite ease-in-out alternate 7s;
+}
+
+.glowing_stars .star:nth-child(5) {
+  top: 90%;
+  left: 50%;
+  animation: glow-star 2s infinite ease-in-out alternate 9s;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .custom-navbar {
+    text-align: center;
+  }
+
+  .brand-logo img {
+    width: 120px;
+  }
+
+  .box_astronaut {
+    top: 70%;
+  }
+
+  .central-body {
+    padding-top: 25%;
+  }
+}
 body {
   font-family: "Baloo Bhaina 2", cursive;
   background: #0A192F;

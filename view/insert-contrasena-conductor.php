@@ -32,10 +32,10 @@ if($email__contrasena ===""){
   nuestro algoritmo te ha generado una credencial aleatoria '.  $nueva__contrasena.' la cual es de un solo uso</p>';
   $contenido__mensaje .='<p>Solo para recordarte <br></p> ';
   $contenido__mensaje .=' <li> No comparta nunca su contraseña o preguntas de seguridad con otra persona. <br></li> ';
-  $contenido__mensaje .=' <li>•	Cree contraseñas difíciles de adivinar y nunca utilice información personal. 
+  $contenido__mensaje .=' <li>	Cree contraseñas difíciles de adivinar y nunca utilice información personal. 
   Asegúrese de incluir letras mayúsculas y minúsculas, números y símbolos.  <br></li> ';
 
-  $contenido__mensaje .=' <li>•	Utilice contraseñas diferentes para cada una de sus cuentas en línea. <br></li> ';
+  $contenido__mensaje .=' <li> Utilice contraseñas diferentes para cada una de sus cuentas en línea. <br></li> ';
   $contenido__mensaje .=' <p>Haz clik en el siguiente enlace <a href="'.$url.'">Pulsa aqui!</a>  para activar su credencial de acceso!  <br> <br> <br> <br></p>';
   $contenido__mensaje .='<p>Si no has sido tu omite este mensaje</p>';
   $mail = new PHPMailer(true);
@@ -53,7 +53,7 @@ if($email__contrasena ===""){
       //Recipients
       $mail->setFrom('luisrbn10@outlook.es', 'Accent Corporation ');
       $mail->addAddress($email__contrasena,$resultado__fila['nombre_conductor'] );                  
-      $wmail->addAttachment('./img/logo__accent.png');
+      // $mail->addAttachment('./img/logo__accent.png');
   
       //Content
       $mail->isHTML(true);                                  

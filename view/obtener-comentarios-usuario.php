@@ -11,7 +11,7 @@ if(mysqli_num_rows($resultado__consulta) > 0){
 
 }
 
-$consulta__comentarios = "SELECT * FROM comentarios WHERE id_usuario = '$id__usuario'";
+$consulta__comentarios = "SELECT * FROM comentarios__usuario WHERE id_usuario = '$id__usuario'";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
 $salida = "";
 

@@ -30,12 +30,11 @@
 
 .item__datos__servicio{
     color:$color__gris;
-    font-size: 15px;
+ 
 }
 
-.item__datos__servicio span{
-color:$color__verde;
-font-size: 19px;
+.foto__historial{
+    width: 70%;
 }
 
 .datos__de__historial{
@@ -70,4 +69,8 @@ color: white;
 .fa-info-circle{
     color: yellow;
     font-size: 25px;
+}
+
+.historial{
+    margin: -30px  0 0 0;
 }

@@ -38,9 +38,10 @@ $saldo__total = $saldo__actual - $descuento;
                 <h2 class="item__total"><?php echo $resultado;  ?></h2>
             </div>
         </a>
-        <?php  $consulta__servicios__completados = "SELECT estado_recorrido FROM datos__inicio__recorrido WHERE estado_recorrido = 'Recorrido terminado'";  
+        <?php  $consulta__servicios__completados = "SELECT id_conductor,id_usuario, estado_recorrido,status_1 FROM datos__inicio__recorrido WHERE estado_recorrido = 'Recorrido terminado' AND id_conductor ='{$_SESSION['id_conductor']}' AND status_1 = '0' ";  
         $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__servicios__completados);
         $total__completados = mysqli_num_rows($ejecutar__consulta);
+        $estado__recorrido = mysqli_fetch_array($ejecutar__consulta);
         ?>
         <a href="./servicio-completado" class="cards__dashboard animate__animated  animate__bounceInDown">
             <div>
@@ -48,16 +49,13 @@ $saldo__total = $saldo__actual - $descuento;
             <h2 class="item__total"><?php echo $total__completados  ?></h2>
             </div>
         </a>
-        <?php  $consulta__servicios__completados = "SELECT estado_recorrido FROM datos__inicio__recorrido WHERE estado_recorrido = 'Rechazado'";  
-        $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__servicios__completados);
-        $total__cancelados = mysqli_num_rows($ejecutar__consulta);
-        ?>
-        <a href="./servicio-cancelado" class="cards__dashboard animate__animated  animate__bounceInDown">
+        
+        <!-- <a href="./servicio-cancelado" class="cards__dashboard animate__animated  animate__bounceInDown">
             <div>
             <p class="item__titulo__cards"><i class="fas fa-bell-slash"></i> Servicios rechazados</p>
             <h2 class="item__total"><?php echo $total__cancelados ?></h2>
             </div>
-        </a>
+        </a> -->
 
         <a href="./mis-solicitudes?idc=<?php echo $datos__resultado['id_conductor'] ?>" class="cards__dashboard nuevo__servicio animate__animated  animate__bounceInDown">
         <div>
@@ -88,7 +86,6 @@ $saldo__total = $saldo__actual - $descuento;
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="staticBackdropLabel">Entrar en linea</h5>
-        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
       </div>
       <div class="modal-body">
         <p class="parrafo__modal__body">Entra en  linea para que los usuario noten que estas disponible</p>
@@ -106,5 +103,24 @@ $saldo__total = $saldo__actual - $descuento;
   </div>
 </div>
 
+<?php  
+if($estado__recorrido['estado_recorrido'] ==='Recorrido terminado') {?>
+<div class="modal__recorrido">
+<div class="contendido__modal__recorrido">
+  <div>
+    <img src="./img/icon__celebracion.svg" alt="" class="imagen__celebracion">
 
+  </div>
+  <div>
+    <h4 class="subtitulo__estado__recorrido">Completaste un nuevo recorrido</h4>
+    <p class="parrafo__recorrido">Dejanos saber tu opinion sobres el usuario que acabas de dejar </p>
+      <a href="./perfil-conductor?id=<?php  echo $datos__resultado['id_conductor']  ?>#opinion" class="btn__dejar__opinion ">Dejar mi opinion</a>
+  </div>
+</div>
+
+</div>
+
+<?php  } ?>
+ 
+ 
 <?php  include'layout/footer-home.php' ?>

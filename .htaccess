@@ -1,9 +1,12 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteCond %{REQUEST_URI} ^/404/$
 RewriteRule ^(.*)$ $1.php
 
-ErrorDocument 404 /404.php
+ErrorDocument 404 /accent__hollding/view/404
 </IfModule>
+
+

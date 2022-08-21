@@ -126,14 +126,14 @@ if(mysqli_num_rows($resultado__consulta) > 0){
 </div>
 
 <br><br><br><br>
-<div class="container contenedor__opinion conductor">
+<div class="container contenedor__opinion conductor" id="opinion">
     <p class="titulo__opinion">Centro de opiniones</p>
     <p class="parrafo__info__opinion"><span><i class="fas fa-bullhorn"></i> ATENCION : </span> Esta prohibido hacer comentarios fuera de lugar,
     insultar alos demas, u otro tipo de agresion, esto es solo para hacer comentarios sobre el servicio prestado . 
      Si tienes dudas te invitamos a conocer nuestros <a href="./terminos-y-condiciones-de-uso" class="enlace__a__terminos">Terminos y condiciones</a>
 </p>
 <?php      
-$consulta__comentarios = "SELECT * FROM comentarios WHERE id_conductor = '{$_SESSION['id_conductor']}'";
+$consulta__comentarios = "SELECT * FROM comentarios__usuario WHERE id_conductor = '{$_SESSION['id_conductor']}'";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
 while($fila = mysqli_fetch_array($ejecutar__consulta)){ ?>
         <div class="opinion">
@@ -149,27 +149,25 @@ while($fila = mysqli_fetch_array($ejecutar__consulta)){ ?>
              </div>
          
          </div>
+       
          
          <?php } ?>
        <div id="comentario-conductor"></div>
     
 
 
-    <form action="" class="formulario__respuesta" id="formulario-comentario-conductor">
+    <form action="" class="formulario__respuesta" id="formulario-comentario-conductor">  
+        <?php   $consulta__datos__usuario = "SELECT id_usuario  FROM usuarios ";
+        $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
+        $datos__resultado__id = mysqli_fetch_array($resultado__consulta); ?>
+    <input type="hidden" value="<?php echo  $datos__resultado__id['id_usuario'] ?>" name="idUsuario">
    
- <?php   $consulta__datos__usuario = "SELECT id_usuario  FROM usuarios ";
-$resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
-if(mysqli_num_rows($resultado__consulta) > 0){
-  $datos__resultado = mysqli_fetch_array($resultado__consulta); ?>
-    <input type="hidden" value="<?php   $datos__resultado['id_usuario'] ?>" name="idUsuario">
-   <?php  } ?>
         <input type="hidden" value="<?php  echo $datos__resultado__conductor['id_conductor'] ?>" name="idConductor">
-
-        <?php  if(mysqli_num_rows($ejecutar__consulta) > 0){ ?>
         <input type="text" placeholder="Escribe una posible respuesta" class="respuesta" name="respuesta" autocomplete="off"id="respuesta-comentario"> 
         <button class="boton__respuesta"><i class="fas fa-paper-plane"></i></button>
-        <?php }else{ ?>
-            <h2 class="titulo__opinion"><i class="fas fa-comment-dots"></i> Aun no hay comentarios</h2>
+
+        <?php  if(mysqli_num_rows($ejecutar__consulta) < 0){ ?>
+                <h2 class="titulo__opinion"><i class="fas fa-comment-dots"></i> Aun no hay comentarios</h2>
             <?php } ?>
 </form>
 </div>

@@ -38,9 +38,14 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                     <a href="./dashboard-usuario"><img src="./img/logo__accent.png" alt="" class="logo__accent"></a>
                     <span class="texto__beta">BETA</span>
                 </div>
-        
+                <?php  $consulta__comentarios = "SELECT * FROM notificaciones__conductor WHERE id_usuario = '{$_SESSION['id_usuario']}' AND leido = '0'  ORDER BY id_notificacion DESC LIMIT 5";
+                $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
+                 $total__notificaciones = mysqli_num_rows($ejecutar__consulta) ?>
                 <div class="enlaces__varios">
-                   <a href="./perfil-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__perfil__usuario"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"></a> 
+                   <a href="./perfil-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__perfil__usuario"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"></a>
+                   <a href="#" class="enlace__notificaciones" id="abrir-modal"><i class="far fa-bell"></i>
+                       <span class="numero__notificaciones">1</span>
+                    </a> 
                     <label class="btn btn-open " for="nav" id="abrir-menu"><i class="fab fa-creative-commons-nd btn__abrir__menu"></i></label> 
             
 
@@ -62,4 +67,31 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
         </div>
 
     </div>
+    <div id="myModalNotificaciones" class="modal__notificaciones">
+        <div class="" id="modal__content__notificaciones">
+            <span class="close">x</span>
+            <h3 class="titulo__notificaciones">Notificaciones</h3>
 
+        <?php while($fila__recorrido = mysqli_fetch_array($ejecutar__consulta)){
+        $consulta__datos__usuario = "SELECT * FROM conductores WHERE id_conductor = '{$fila__recorrido['id_conductor']}' ";
+        $ejecutar__consulta__usuario = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
+        $fila__datos = mysqli_fetch_array($ejecutar__consulta__usuario);
+        ?>
+                <div class="contenido__notificacion">
+                <a href="./notificaciones-usuario?id=<?php  echo $fila__recorrido['id_notificacion'] ?>"class="enlaces__ver__notificacion">
+                    <img src="upload/<?php echo $fila__datos['avatar'] ?>" alt="" class="avatar__perfil">
+                    <div class="datos"> <?php echo $fila__datos['nombre_conductor'] ?> ha hecho un comentario <i
+                            class="fas fa-comment-alt"></i> <br>
+                        <p class="fecha__notificacion"> El dia
+                            <?php echo date("d-m-Y",strtotime($fila__recorrido['fecha_notificacion'])) ?></p>
+                    </div>
+                </a>  
+            </div>
+            <?php } ?>
+            <br>
+            <?php   if(mysqli_num_rows($ejecutar__consulta) > 6){ ?>
+            <a href="./notificaciones" class="enlace__mas__notificaciones"><i class="fas fa-plus"></i> ver mas
+                notificaciones</a>
+                <?php } ?>
+        </div>
+    </div>

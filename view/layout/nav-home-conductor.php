@@ -68,7 +68,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                 </a></div>
             <div class="contenedor__enalces__menu__home"><a href="./dashboard-conductor" class="enlaces__menu__home"> <i
                         class="fas fa-home"></i> Home</a></div>
-            <div class="contenedor__enalces__menu__home"><a href="./historial-conductor" class="enlaces__menu__home"><i
+            <div class="contenedor__enalces__menu__home"><a href="./historial-conductor?idc=<?php echo $datos__resultado['id_conductor'] ?>" class="enlaces__menu__home"><i
                         class="fas fa-history"></i> Historial</a></div>
             <div class="contenedor__enalces__menu__home"><a
                     href="./configuracion-conductor?id=<?php  echo $datos__resultado['id_conductor'] ?>"

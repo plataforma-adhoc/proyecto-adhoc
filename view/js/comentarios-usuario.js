@@ -5,7 +5,7 @@ export function comentarios__usuario(){
         evento.preventDefault();
            let form__data = new FormData(document.getElementById('form-comentario-usuario'))
 
-           fetch('insert-comentarios',{
+           fetch('insert-comentarios-usuario',{
              method:'POST',
              body:form__data
            }).then(respuesta => respuesta.json())
