@@ -34,8 +34,7 @@ desconectarse();
 
 
 
-import { modal__servicios} from './modal.js';
-modal__servicios();
+
 
 
 

@@ -1,5 +1,5 @@
 <?php include'layout/nabvar.php'?>
-
+<div class="contenedor__del__formulario">
 <form class="formulario__registro" id="formulario-login">
     <div class="contenedor__formulario">
         <div class="grupo__inputs block" id="grupo__email">
@@ -28,13 +28,14 @@
         <div class="block">
             <input type="submit" value="INGRESAR" class="boton__registro" name="enviar">
         </div>
-        <div class="contenedor__enlace__sesion">
+        <div class="contenedor__enlace__sesion block">
         <div><a href="./usuario" class="enlace___login">Registrarme </a></div>
             <div> <a href="./password-usuario" class="enlace___login">Olvide mi contraseña </a></div>
         </div>
     </div>
 </form>
-
+</div>
+<br><br>
 <script>
 
     

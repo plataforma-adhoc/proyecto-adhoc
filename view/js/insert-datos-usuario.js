@@ -295,6 +295,7 @@ export function password__usuario(){
         })
       }else{
         Swal.fire({
+          background:'#202F36',
             icon: 'error',
             title: `${data}`,
             footer: 'Esta informacion es importante',

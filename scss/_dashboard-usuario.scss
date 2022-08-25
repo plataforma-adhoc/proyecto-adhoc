@@ -23,7 +23,7 @@ width: 30px;
 height: 30px;
 border-radius: 50px;
 border: solid 2px $color__verde;
-
+margin-left: -10px;
 }
 
 .item__nombre{
@@ -35,9 +35,10 @@ margin-top: 6px;
 margin-right: 5px;
 }
 
+
 .overlay {
     height: 100%;
-    width: 0;
+    width:0;
     position: fixed; 
     z-index: 1; 
     left: 0;
@@ -60,6 +61,10 @@ margin-right: 5px;
   background:$color__fondo;
   border-radius: 100px;
   padding: 10px;
+}
+
+.fa-home,.fa-cogs,.fa-history,.fa-mail-bulk,.fa-comments,.fa-power-off,.usuario__menu:hover{
+  color: white;
 }
 
   .enlaces__menu__home{
@@ -121,9 +126,7 @@ margin-right: 5px;
   color: white;
  }
 
- 
 
-  
  
   .fa-circle{
     color:$color__verde;
@@ -161,13 +164,13 @@ text-align: center;
 
 
 
-  @media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    }
-  }
+  // @media screen and (max-height: 450px) {
+  //   .overlay a {font-size: 20px}
+  //   .overlay .closebtn {
+  //     font-size: 40px;
+  //     top: 15px;
+  //     right: 35px;
+  //   }
+  // }
 
   

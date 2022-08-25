@@ -1,4 +1,5 @@
 <?php include'layout/nabvar.php'?>
+<div class="contenedor__del__formulario">
 <form class="formulario__registro" id="formulario-contrasena">
     <div class="contenedor__formulario">
         <div class="grupo__inputs block">
@@ -10,8 +11,10 @@
         </div>
     
         <div class="block">
-            <input type="submit" value="INGRESAR" class="boton__registro" name="enviar">
+            <input type="submit" value="RECUPERAR MI CONTRASEÑA" class="boton__registro" name="enviar">
         </div>
     </div>
 </form>
+</div>
+<br><br>
 <?php include'layout/footer.php'?>

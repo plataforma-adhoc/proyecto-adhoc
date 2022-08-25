@@ -4,14 +4,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     background:$color__menu__dashboard;
     border-radius: 7px;
+    
 }
 
 
 .info__perfil{
-    width: 100%;
-    margin: -70px 0 0 30px;
+    width: 30%;
+    margin: -70px auto 0 auto;
+
+    
 }
 
 .redes__sociales{
@@ -26,7 +30,7 @@
 }
 
 .foto__de__perfil{
-    width: 40%;
+    width: 80%;
     height:300px;
     border-radius: 25px;
 }
@@ -222,25 +226,32 @@ color: yellow;
     margin: 10px 0 0 10px;
 }
 
-.formulario__respuesta{
-    width: 90%;
-    margin: 30px 100px 0 100px;
+
+.form-search {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    padding: 5px;
+    background:$color__fondo;
+    border-radius: 0.375rem;
+    width: 80%;
+    margin: 50px auto 0 auto;
+  
+}
+
+.form-search button{
+    color:white;
+    opacity: 0.5;
+}
+
+.form-search input {
+    border: none;
+    outline: none;
+    background-color:$color__fondo;
+    margin-left: 1rem;
+    color: white;
     
-   
 }
 
 
-.respuesta{
-width: 75%;
-padding: 15px;
-border: 0;
-outline: 0;
-background:$color__fondo;
-border-radius: 7px;
-color: white;
-margin:0 0 0 120px;
-
-}
 
 .boton__respuesta{
     display: inline-block;
@@ -293,3 +304,31 @@ height: auto;
     margin: 10px  0 0 0;
 }
 
+
+@media screen and(max-width:1300px) {
+   .contenedor__datos__perfil{
+    width: 90%;
+    margin-top: -500px;
+   } 
+   
+}
+
+@media screen and(max-width:900px) {
+    .info__perfil{
+        width: 55%;
+        margin: 30px auto 0 auto;
+    }
+    .foto__de__perfil{
+        width: 90%;
+    }
+
+    .redes__sociales{
+        margin: auto;
+    }
+    .enlace__editar__perfil{
+       width: 90%;
+    }
+    
+ }
+ 
+ 

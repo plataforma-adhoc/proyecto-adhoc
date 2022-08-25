@@ -1,3 +1,5 @@
+
+
 .subtitulo__registro{
   text-align: center;
   color: white;
@@ -7,7 +9,7 @@
 
 .formulario__registro {
     width: 40%;
-    margin: 100px auto;
+    margin: 100px  auto 0 auto;
     background:$color__formularios;
     border-radius: 7px;
   }
@@ -309,3 +311,38 @@ cursor: pointer;
       }
 
 
+
+
+
+      @media screen and (max-width:900px){
+    .formulario__registro {
+    width: 60%;
+    background:$color__formularios;
+    border-radius: 7px;
+  }
+ 
+      }
+
+
+      @media screen and (max-width:700px){
+        .formulario__registro {
+        width: 80%;
+        margin: 100px auto;
+        background:$color__formularios;
+        border-radius: 7px;
+      }
+     
+          }
+
+          @media screen and (max-width:500px){
+            .formulario__registro {
+            width: 90%;
+            margin: 100px auto;
+            background:$color__formularios;
+            border-radius: 7px;
+          }
+         
+        }
+
+         
+    

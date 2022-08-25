@@ -2,7 +2,7 @@
 
 <div class="container contenedor__como__funciona">
   <h2 class="subtitulo__como__funciona">Como funciona</h2>
-  <p class="parrafo__como__funciona">Quieres saber como funciona nuestro sistema ? te invitamos a dar un recorrido por esta seccion y veras lo facil que usar la plataforma</p>
+  <p class="parrafo__como__funciona">Quieres saber como funciona nuestro sistema ? te invitamos a dar un recorrido por esta sección y veras lo facil que es  usar la plataforma</p>
  <br><br><br><br>
   <p class="texto__como__funciona">Para los usuarios</p>
   <div class="contenido__como__funciona">
@@ -47,7 +47,7 @@
     <div class="como__funciona">
         <br>
     <p class="parrafo__item__funciona">Crea un registro</p>
-        <p class="item__parrafo">ingresa ala seccion de registro de conductores y crea una cuenta totalmente gratis, si ya tienes la cuenta inicia sesion</p>
+        <p class="item__parrafo">ingresa ala seccion de registro de conductores y crea una cuenta totalmente gratis, si ya tienes la cuenta inicia sesión</p>
         <span>1</span>
     </div>
     <div class="como__funciona">
@@ -63,7 +63,7 @@
     <div class="como__funciona">
       <br>
     <p class="parrafo__item__funciona">Recibiendo las solicitudes</p>
-    <p class="item__parrafo"> Si eres admitido estaras listo para recibir soliicitudes de servicio de conductor elegido y emepzaras 
+    <p class="item__parrafo"> Si eres admitido estaras listo para recibir solicitudes de servicio de conductor elegido y emepzaras 
         generar ganacias
 
     </p>

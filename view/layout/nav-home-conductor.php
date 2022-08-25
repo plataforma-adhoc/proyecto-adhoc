@@ -49,37 +49,65 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                        <?php  if($total__notificaciones > 0){ ?><span class="numero__notificaciones"> <?php   echo $total__notificaciones ?></span> <?php } ?>
                     </a> 
                      
-                    <label class="btn btn-open" for="nav" id="abrir-menu"><i
+                    <!-- <label class="btn btn-open" for="nav" id="abrir-menu"><i
                             class="fab fa-creative-commons-nd btn__abrir__menu"></i>
-                        </label>
+                        </label> -->
                     <div>
                     </div>
+                    <div class="containers">
+          <label class="btn btn-open" for="nav"><i class="fab fa-creative-commons-nd"></i></label>
+          <input type="checkbox" id="nav" class="nav-opener" />
+          <div class="nav">
+            <div class="nav-header">
+              <div class="nav-title">MENU</div>
+              <label class="btn btn-nav" for="nav">
+                <svg style="width: 36px; height: 36px" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                    d="M20 6.91L17.09 4L12 9.09L6.91 4L4 6.91L9.09 12L4 17.09L6.91 20L12 14.91L17.09 20L20 17.09L14.91 12L20 6.91Z" />
+                </svg>
+              </label>
+            </div>
+            <ul class="nav-links">
+              <li class="nav-link">
+                  <a href="./perfil-conductor?id=<?php echo $datos__resultado['id_conductor'] ?>" class="enlaces__menu__home">
+                  <img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt=""class="avatar__perfil">
+              </a>
+              <div class="item__nombre"><?php echo $datos__resultado['nombre_conductor'] ?></div>
+                  
+                
+              </li>
+              <li class="nav-link">
+              <i class="fas fa-home"></i>
+                <a href="./dashboard-conductor">Home</a>
+                  
+              </li>
+              <li class="nav-link">
+              <i class="fas fa-history"></i>
+                <a href="./historial-conductor?idc=<?php echo $datos__resultado['id_conductor'] ?>" class="enlaces__menu__home">Mi historial</a>
+              </li>
+              <li class="nav-link">
+              <i class="fas fa-cogs"></i>
+                <a href="./configuracion-conductor?id=<?php  echo $datos__resultado['id_conductor'] ?>"> Configuracion</a>
+
+              </li>
+              <li class="nav-link">
+              <i class="fas fa-power-off"></i>
+                <a href="./desconectar-conductor?id=<?php  echo $datos__resultado['id_conductor'] ?>">Cerrar sesión</a>
+              </li>
+            </ul>
+          
+            <div class="nav-images">
+              <div class="nav-image image-1">
+                <!-- <h2 class="texto__nav__images">Solicita tu conductor elegido desde <span class="precio__hora">$ 25.000 COP</span>  hora, y un conductor elegido llegara a la puerta de tu casa</h2> -->
+               
+              </div>
+            </div>
+          </div>
+        </div>
                 </div>
         </nav>
     </header>
-    <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" id="cerrar-menu"><i class="fas fa-times"></i></a>
-        <div class="overlay-content">
-            <div class="contenedor__enalces__menu__home"><a
-                    href="./perfil-conductor?id=<?php echo $datos__resultado['id_conductor'] ?>"
-                    class="enlaces__menu__home"><img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt=""
-                        class="avatar__perfil">
-                    <div class="item__nombre"><?php echo $datos__resultado['nombre_conductor'] ?></div>
-                </a></div>
-            <div class="contenedor__enalces__menu__home"><a href="./dashboard-conductor" class="enlaces__menu__home"> <i
-                        class="fas fa-home"></i> Home</a></div>
-            <div class="contenedor__enalces__menu__home"><a href="./historial-conductor?idc=<?php echo $datos__resultado['id_conductor'] ?>" class="enlaces__menu__home"><i
-                        class="fas fa-history"></i> Historial</a></div>
-            <div class="contenedor__enalces__menu__home"><a
-                    href="./configuracion-conductor?id=<?php  echo $datos__resultado['id_conductor'] ?>"
-                    class="enlaces__menu__home"><i class="fas fa-cogs"></i> Configuracion</a></div>
-            <div class="contenedor__enalces__menu__home"><a href="./perfil-conductor" class="enlaces__menu__home"><i
-                        class="fas fa-comments"></i> Comentarios</a></div>
-            <div class="contenedor__enalces__menu__home"><a href="./desconectar-conductor?id=<?php  echo $datos__resultado['id_conductor'] ?>"
-                    class="enlaces__menu__home"><i class="fas fa-power-off"></i> Desconectarse</a></div>
-        </div>
-
-    </div>
+  
 
     <div id="myModalNotificaciones" class="modal__notificaciones">
         <div class="" id="modal__content__notificaciones">

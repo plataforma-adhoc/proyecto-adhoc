@@ -44,10 +44,10 @@
                  <hr>
                  <p class="parrafo__valores">3. disponibilidad al cambio</p>
                  <hr>
-                 <p class="parrafo__valores">4. Pasion por lo que hacemos</p>
+                 <p class="parrafo__valores">4. Pasión por lo que hacemos</p>
                   <hr>
                </div>
           </div> 
         </div>
-
+<br>
 <?php  include'layout/footer.php' ?>

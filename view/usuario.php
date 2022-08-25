@@ -1,5 +1,4 @@
 <?php include'layout/nabvar.php' ?>
-
 <form class="formulario__registro" id="formulario-registro-usuario">
 <!-- <h2 class="subtitulo__registro">Crea una cuenta gratis</h2> -->
     <div class="contenedor__formulario">  
@@ -100,7 +99,7 @@
                 href="./terminos-y-condiciones-de-uso">Terminos y
                 condiciones</a> y
             <a class="enlace__terminos" href="./politicas-de-privacidad">politicas de privacidad</a> </p>
-        <div class="contenedor_enlace_sesion">
+        <div class="contenedor__enlace__sesion block">
             <a href="./login-usuario" class="enlace___login">Ya tienes una cuenta <strong>Inicia sesion</strong>
             </a>
         </div>

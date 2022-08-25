@@ -1,5 +1,6 @@
 <?php  include'layout/nabvar.php' ?>
 <!-- <h2 class="subtitulo__registro">Crea una cuenta gratis</h2> -->
+<div class="contenedor__del__formulario">
 <form class="formulario__registro" id="formulario-registro-conductor">
     <div class="contenedor__formulario">
         <div class="grupo__inputs" id="grupo__nombre">
@@ -92,12 +93,13 @@
         <p class="terminos block">Al registrarte aceptas nuestros <a class="enlace__terminos" href="./terminos-y-condiciones-de-uso">Terminos y
                 condiciones</a> y
             <a class="enlace__terminos" href="./politicas-de-privacidad">politicas de privacidad</a> </p>
-        <div class="contenedor_enlace_sesion">
-              
+        <div class="contenedor__enlace__sesion block">       
             <a href="./login-conductor" class="enlace___login">Ya tienes una cuenta <strong>Inicia sesion</strong></a>
         </div>
     </div>
 </form>
+</div>
+<br><br>
 <script>
  
     function mostrar(){

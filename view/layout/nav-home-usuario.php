@@ -63,7 +63,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
            <div class="contenedor__enalces__menu__home"><a href="./configuracion-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlaces__menu__home"><i class="fas fa-cogs"></i> Configuracion</a></div> 
             <div class="contenedor__enalces__menu__home"><a href="./ayudanos-a-mejorar" class="enlaces__menu__home"><i class="fas fa-mail-bulk"></i> Ayudanos a mejorar</a></div>
            <div class="contenedor__enalces__menu__home"><a href="./perfil-usuario" class="enlaces__menu__home"><i class="fas fa-comments"></i> Comentarios</a></div> 
-            <div class="contenedor__enalces__menu__home"><a href="./desconectar-usuario" class="enlaces__menu__home"><i class="fas fa-power-off"></i> Desconectarse</a></div>
+            <div class="contenedor__enalces__menu__home"><a href="./desconectar-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlaces__menu__home"><i class="fas fa-power-off"></i> Desconectarse</a></div>
         </div>
 
     </div>

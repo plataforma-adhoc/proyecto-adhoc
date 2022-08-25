@@ -155,21 +155,21 @@ while($fila = mysqli_fetch_array($ejecutar__consulta)){ ?>
        <div id="comentario-conductor"></div>
     
 
-
-    <form action="" class="formulario__respuesta" id="formulario-comentario-conductor">  
+    <form class="form-search" id="formulario-comentario-conductor">
         <?php   $consulta__datos__usuario = "SELECT id_usuario  FROM usuarios ";
         $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
         $datos__resultado__id = mysqli_fetch_array($resultado__consulta); ?>
-    <input type="hidden" value="<?php echo  $datos__resultado__id['id_usuario'] ?>" name="idUsuario">
-   
-        <input type="hidden" value="<?php  echo $datos__resultado__conductor['id_conductor'] ?>" name="idConductor">
-        <input type="text" placeholder="Escribe una posible respuesta" class="respuesta" name="respuesta" autocomplete="off"id="respuesta-comentario"> 
-        <button class="boton__respuesta"><i class="fas fa-paper-plane"></i></button>
 
-        <?php  if(mysqli_num_rows($ejecutar__consulta) < 0){ ?>
+         <input type="hidden" value="<?php  echo $datos__resultado__conductor['id_conductor'] ?>" name="idConductor">
+        <input type="hidden" value="<?php echo  $datos__resultado__id['id_usuario'] ?>" name="idUsuario">
+        <button class="boton__respuesta"><i class="fas fa-paper-plane"></i></button>
+    <input type="text" placeholder="Escribe una respuesta"name="respuesta" autocomplete="off"id="respuesta-comentario">
+
+    <?php  if(mysqli_num_rows($ejecutar__consulta) < 0){ ?>
                 <h2 class="titulo__opinion"><i class="fas fa-comment-dots"></i> Aun no hay comentarios</h2>
             <?php } ?>
-</form>
+  </form>
+       
 </div>
 <br><br>
 

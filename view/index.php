@@ -4,7 +4,7 @@
                 <h1 class="title">La mejor <span class="title--active">Experiencia tras el volante.</span></h1> 
                 <p class="copy">Te enviaremos un conductor elegido a la puerta de tu casa en caso de que no te encuentres en condiciones de 
                 conducir tu vehiculo    
-                <span class="copy__active">¡ solicitalo aqui !</span></p>
+                <span class="copy__active">¡ solicitalo tu servicio  !</span></p>
                 <a href="./usuario" class="cta">Quiero ser un usuario</a>
             </div>
         </section>
@@ -14,7 +14,7 @@
         <section class="services">
             <div class="container">
                 <h2 class="subtitle">Soluciones de movilidad<span class="point">.</span></h2>
-                <p class="copy__section">Ofrecemos la solucion perfecta para tu movilidad</p>
+                <p class="copy__section">Ofrecemos la solucion perfecta para cuando no puedas conducir tu vehiculo</p>
 
                 <article class="container-cards">
                     <div class="card" data-aos="zoom-in">
