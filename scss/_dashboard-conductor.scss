@@ -170,13 +170,14 @@ text-align: center;
 
   .enlace__conectarme{
     text-decoration: 0;
-    width: 300px;
-    padding: 10px;
+    width:280px;
+    padding: 12px;
     display: inline-block;
     background: $color__verde;
     text-align: center;
     color: white;
     margin: 100px 0 0 0;
+    border-radius: 12px;
   }
 
   .enlace__conectarme:hover{
@@ -193,12 +194,13 @@ text-align: center;
 
   .btn__conectarse{
     display: inline-block;
-      width: 300px;
-      padding: 13px;
+      width:$tamaño__btn;
+      padding: 12px;
       color: white;
       background: $color__verde;
       text-align: center;
       border: 0;
+      border-radius: 10px;
   
   }
 
@@ -212,6 +214,7 @@ text-align: center;
   
   .texto__en__linea{
     color: $color__verde;
+    line-height: 60px;
   }
 
   .modal__recorrido {
@@ -254,12 +257,13 @@ text-align: center;
 .btn__dejar__opinion{
       display: inline-block;
       text-decoration: 0;
-      width: 300px;
-      padding: 13px;
+      width:$tamaño__btn;
+      padding: 12px;
       color: white;
       background: $color__verde;
       text-align: center;
       border: 0;
+      border-radius: 10px;
   
 }
 .btn__dejar__opinion:hover{
@@ -274,7 +278,11 @@ text-align: center;
   }
   .modal__notificaciones{
     width: 100%;
-    left: 0;
+   left:0;
+   
+  }
+  .contendido__modal__recorrido{
+    width: 90%;
   }
   
 }
@@ -292,6 +300,9 @@ text-align: center;
   .cards__dashboard{
     width: 80%;
     margin: 30px  auto 0 auto;
+  }
+  .imagen__celebracion{
+    display: none;
   }
 
  

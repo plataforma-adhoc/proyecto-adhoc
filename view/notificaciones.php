@@ -25,7 +25,7 @@ $ejecutar__consulta__notificaciones = mysqli_query($conexion__db__accent,$consul
                             <?php echo date("d-m-Y",strtotime($fila__datos['fecha_notificacion'])) ?></p>
                     </div>
                 </a>  
-       <a href="./eliminar-notificacion?id=<?php  echo $fila__datos['id_notificacion'] ?>" class="hidde">Eliminar esta notificacion</a>
+       <a href="./eliminar-notificacion?id=<?php  echo $fila__datos['id_notificacion'] ?>" class="hidde">Eliminar </a>
 
 </div>
 

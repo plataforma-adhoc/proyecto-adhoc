@@ -55,8 +55,9 @@ obtener__solicitudes();
 
 
 
-
-
+import {insertar__sugerencia__usaurio,insertar__sugerencia__conductor} from'./sugerencias.js';
+insertar__sugerencia__usaurio()
+insertar__sugerencia__conductor()
 
 
 

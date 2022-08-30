@@ -18,13 +18,16 @@ margin: auto;
 
 .datos__de__solicitud{
     width: 100%;
-    height:500px;
+    height:auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     background:$color__menu__dashboard;
    border-top-right-radius: 10px;
 }
+
+
 
 .enlaces__servicios{
     text-decoration: 0;
@@ -88,6 +91,16 @@ opacity: 0.5;
     opacity: 0.5;
 }
 
-.sevicio{
+.servicio{
     margin: -90px  0 0 0;
+}
+
+
+@media screen and (max-width:900px) {
+    .servicio{
+        margin: 0;
+    }
+    .texto__solicitud{
+        width: 90%;
+    }
 }

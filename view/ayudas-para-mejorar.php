@@ -1,10 +1,10 @@
-<?php  include'layout/nav-home-usuario.php'  ?>
+<?php  include'layout/nav-home-conductor.php'  ?>
 <div class="container contenedor__formulario__sugerencia">
     <h2 class="titulo__mejoras">Ayudanos a mejorar</h2>
     <p class="parrafo__mejoras">En que quieres que mejoremos, escribenos tu sugerencia y trabajaremos para mejorar 
         o tienes alguna duda sobre nuestros servicos <a href="./contacto" class="enlace__a__contacto">contacatanos</a> y con gusto te ayudaremos
     </p>
-    <form class="formulario__registro formulario__sugerencia" id="form-sugerencias">
+    <form class="formulario__registro formulario__sugerencia" id="form-sugerencias-conductor">
         <div class="contenedor__formulario">
         <div class="grupo__inputs" id="grupo__telefono">
         <label for="telefono"class="formulario__label">Nombre</label>

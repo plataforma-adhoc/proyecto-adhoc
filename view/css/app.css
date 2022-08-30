@@ -24,13 +24,8 @@
   --nav-count: 10;
 }
 
-.texto__beta {
-  font-size: 12px;
-  color: gray;
-}
-
 .beta__home {
-  margin: -37px 0 0 105px;
+  margin: -30px 0 0 80px;
 }
 
 .btn-open {
@@ -233,8 +228,16 @@
 }
 
 .logo__accent {
-  width: 100px;
-  height: 50px;
+  width: 80%;
+  height: 30px;
+  position: relative;
+}
+
+.texto__beta {
+  font-size: 12px;
+  color: gray;
+  position: absolute;
+  left: 12.7%;
 }
 
 .point {
@@ -259,8 +262,8 @@
 
 .title {
   font-size: 56px;
-  font-weight: 300;
-  color: #fff;
+  font-weight: bold;
+  color: #C0392B;
 }
 
 .copy {
@@ -268,6 +271,7 @@
   margin: 15px 0;
   width: 600px;
   color: white;
+  line-height: 40px;
 }
 
 .copy__active {
@@ -285,9 +289,16 @@
   border-radius: 6px;
 }
 
+.cta:hover {
+  background: #000;
+  color: white;
+  transition: ease-in-out 0.5s;
+}
+
 /* services */
 .subtitle {
   font-size: 42px;
+  color: white;
 }
 
 .solicitud {
@@ -374,6 +385,12 @@
   padding: 12px 0;
 }
 
+.card__button:hover {
+  background: #000;
+  color: white;
+  transition: ease-in-out 0.5s;
+}
+
 .card__date {
   color: var(--gold2);
   font-size: 18px;
@@ -421,7 +438,7 @@
 }
 
 .testimony {
-  background: #fafafa;
+  background: #0A192F;
 }
 
 .testimony-container {
@@ -588,6 +605,10 @@ ul {
   width: 50px;
 }
 
+.logo__footer {
+  width: 100px;
+}
+
 .footer-col ul li:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -621,23 +642,16 @@ ul {
   transition: all 0.5s ease;
 }
 
+.social-links {
+  width: 100%;
+}
+
 .footer-col .social-links a:hover {
   color: #24262b;
   background-color: #ffffff;
 }
 
 /*responsive*/
-@media (max-width: 767px) {
-  .footer-col {
-    width: 50%;
-    margin-bottom: 30px;
-  }
-}
-@media (max-width: 574px) {
-  .footer-col {
-    width: 100%;
-  }
-}
 @media screen and (max-width: 900px) {
   .title {
     font-size: 50px;
@@ -789,6 +803,11 @@ footer .container {
   .item__contact {
     width: 100%;
     padding: 30px 0;
+  }
+
+  .footer-col {
+    width: 60%;
+    margin-bottom: 30px;
   }
 }
 @media (min-width: 768px) {
@@ -1584,6 +1603,10 @@ template {
     width: 35%;
   }
 }
+.logo__home {
+  width: 90%;
+}
+
 .contenedor__enalces__menu__home {
   width: 100%;
   margin: 0 0 0 10px;
@@ -1688,12 +1711,12 @@ template {
 }
 
 .datos__perfiles__conductor {
-  margin-top: 80px;
   width: 100%;
   display: flex;
   height: auto;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .card__perfiles__dashboard {
@@ -1730,6 +1753,18 @@ template {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 900px) {
+  .card__del__conductor {
+    width: 45%;
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .card__del__conductor {
+    width: 70%;
+    margin: 60px auto 0 auto;
+  }
+}
 .contenedor__datos__perfil {
   margin-top: -600px;
   width: 100%;
@@ -1758,17 +1793,25 @@ template {
 }
 
 .foto__de__perfil {
-  width: 80%;
+  width: 70%;
   height: 300px;
   border-radius: 25px;
+  text-align: center;
+}
+
+.redes__sociales {
+  width: 70%;
+  margin: 0 2% 0 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .enlace__de__redes__sociales {
   display: inline-block;
   text-decoration: 0;
   font-size: 25px;
-  margin: 10px 30px 0 30px;
-  color: red;
+  margin-top: 20px;
 }
 
 .fa-facebook {
@@ -2017,12 +2060,19 @@ template {
 }
 @media screen and (max-width: 900px) {
   .info__perfil {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .info__perfil {
     width: 55%;
     margin: 30px auto 0 auto;
+    text-align: center;
   }
 
   .foto__de__perfil {
-    width: 90%;
+    width: 70%;
+    height: 50%;
   }
 
   .redes__sociales {
@@ -2030,7 +2080,21 @@ template {
   }
 
   .enlace__editar__perfil {
+    width: 70%;
+  }
+
+  .parrafo__info__opinion {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .info__perfil {
     width: 90%;
+  }
+
+  .parrafo__info__opinion {
+    margin: auto;
+    font-size: 16px;
   }
 }
 .titulo__configuracion {
@@ -2055,10 +2119,11 @@ template {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .card__configuracion {
-  width: 35%;
+  width: 47%;
   border-radius: 7px;
   height: 200px;
   text-decoration: 0;
@@ -2073,19 +2138,17 @@ template {
 }
 
 .cambiar__contraseña {
-  background-image: url(../img/cambiar__contrasena.svg);
+  background-image: url(../img/cambiar__contrasena.avif);
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #008A55;
-  background-position: center;
 }
 
 .eliminar__cuenta {
   background: #b71540;
-  background-image: url(../img/eliminar__cuenta.svg);
+  background-image: url(../img/eliminar__cuenta.png);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
 }
 
 .parrafo__item__configuracion {
@@ -2135,8 +2198,28 @@ template {
   cursor: pointer;
 }
 
+@media screen and (max-width: 900px) {
+  .card__configuracion {
+    width: 90%;
+    margin: 40px auto 0 auto;
+  }
+
+  .parrafo__configuracion {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .card__configuracion {
+    width: 90%;
+    margin: 40px auto 0 auto;
+  }
+
+  .parrafo__configuracion {
+    width: 90%;
+  }
+}
 .editarPerfil {
-  margin-top: -600px;
+  margin-top: -500px;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
@@ -2222,15 +2305,43 @@ template {
   color: white;
 }
 
+@media screen and (max-width: 900px) {
+  .editarPerfil {
+    width: 60%;
+    margin-top: -500px;
+    background: #112240;
+    border-radius: 7px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .editarPerfil {
+    width: 80%;
+    background: #112240;
+    border-radius: 7px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .editarPerfil {
+    width: 90%;
+    background: #112240;
+    border-radius: 7px;
+  }
+}
 .contenedor__formulario__sugerencia {
-  margin-top: -700px;
+  margin-top: -600px;
 }
 
 .formulario__sugerencia {
   width: 70%;
 }
 
-.titulo__mejoras, .parrafo__mejoras {
+.titulo__mejoras {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+.parrafo__mejoras {
   color: gray;
   text-align: center;
 }
@@ -2253,6 +2364,16 @@ template {
   border-bottom: solid 2px #008A55;
 }
 
+@media screen and (max-width: 900px) {
+  .parrafo__mejoras {
+    width: 80%;
+    margin: auto;
+  }
+
+  .formulario__sugerencia {
+    width: 90%;
+  }
+}
 .contenedor__servicios {
   margin-top: -600px;
 }
@@ -2264,7 +2385,7 @@ template {
 
 .parrafo__servicios__info {
   color: gray;
-  width: 50%;
+  width: 90%;
   margin: auto;
   text-align: justify;
 }
@@ -2275,6 +2396,7 @@ template {
 }
 
 .contenedor__cards__servicios {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2351,6 +2473,31 @@ template {
   color: white;
 }
 
+@media screen and (max-width: 1200px) {
+  .cards__servicios {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .cards__servicios {
+    width: 40%;
+    margin: 60px auto 0 auto;
+  }
+
+  .parrafo__servicios__info {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .cards__servicios {
+    width: 70%;
+    margin: 60px auto 0 auto;
+  }
+
+  .parrafo__servicios__info {
+    width: 90%;
+  }
+}
 .contenedor__cards__dashboard {
   width: 100%;
   display: flex;
@@ -2517,13 +2664,14 @@ template {
 
 .enlace__conectarme {
   text-decoration: 0;
-  width: 300px;
-  padding: 10px;
+  width: 280px;
+  padding: 12px;
   display: inline-block;
   background: #008A55;
   text-align: center;
   color: white;
   margin: 100px 0 0 0;
+  border-radius: 12px;
 }
 
 .enlace__conectarme:hover {
@@ -2540,12 +2688,13 @@ template {
 
 .btn__conectarse {
   display: inline-block;
-  width: 300px;
-  padding: 13px;
+  width: 250px;
+  padding: 12px;
   color: white;
   background: #008A55;
   text-align: center;
   border: 0;
+  border-radius: 10px;
 }
 
 .desconectarse {
@@ -2557,6 +2706,7 @@ template {
 
 .texto__en__linea {
   color: #008A55;
+  line-height: 60px;
 }
 
 .modal__recorrido {
@@ -2597,12 +2747,13 @@ template {
 .btn__dejar__opinion {
   display: inline-block;
   text-decoration: 0;
-  width: 300px;
-  padding: 13px;
+  width: 250px;
+  padding: 12px;
   color: white;
   background: #008A55;
   text-align: center;
   border: 0;
+  border-radius: 10px;
 }
 
 .btn__dejar__opinion:hover {
@@ -2618,6 +2769,10 @@ template {
     width: 100%;
     left: 0;
   }
+
+  .contendido__modal__recorrido {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 700px) {
   .cards__dashboard {
@@ -2628,6 +2783,10 @@ template {
   .cards__dashboard {
     width: 80%;
     margin: 30px auto 0 auto;
+  }
+
+  .imagen__celebracion {
+    display: none;
   }
 
   .titulo__dashboard {
@@ -2644,7 +2803,9 @@ template {
 }
 
 .parrafo__historial {
+  text-align: center;
   color: gray;
+  flex-basis: 100%;
   position: absolute;
   top: 250px;
   width: 500px;
@@ -2656,9 +2817,10 @@ template {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  flex-wrap: wrap;
   background: #112240;
-  border-radius: 7px;
+  border-radius: 10px;
 }
 
 .texto {
@@ -2675,9 +2837,7 @@ template {
 }
 
 .datos__de__historial {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  width: 32%;
 }
 
 .enlace__eliminar__historial {
@@ -2711,6 +2871,29 @@ template {
   margin: -30px 0 0 0;
 }
 
+@media screen and (max-width: 1250px) {
+  .contenedor__datos__historial {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .contenedor__datos__historial {
+    margin-top: -550px;
+  }
+
+  .datos__de__historial {
+    width: 90%;
+    margin-top: 90px;
+  }
+
+  .foto__historial {
+    margin-left: 15%;
+  }
+
+  .titulo__historial, .parrafo__historial {
+    display: none;
+  }
+}
 .contendor__datos__servicio {
   margin-top: -400px;
 }
@@ -2782,9 +2965,14 @@ template {
   margin-top: -600px;
 }
 
-.titulo__detalles, .parrafo__detalles {
+.titulo__detalles {
   text-align: center;
+  color: white;
+}
+
+.parrafo__detalles {
   color: gray;
+  text-align: center;
 }
 
 .contenido__detalles {
@@ -2797,7 +2985,7 @@ template {
 }
 
 .detalles {
-  width: 30%;
+  width: 45%;
   background: #112240;
   margin: 50px 0 0 0;
   text-align: center;
@@ -2858,6 +3046,12 @@ template {
   color: white;
 }
 
+@media screen and (max-width: 700px) {
+  .detalles {
+    width: 70%;
+    margin: 60px auto 0 auto;
+  }
+}
 .contenedor__compra {
   margin-top: -600px;
 }
@@ -2944,6 +3138,11 @@ template {
   text-align: center;
 }
 
+@media screen and (max-width: 500px) {
+  .total__a__pagar {
+    text-align: center;
+  }
+}
 .contenedor__compra__completada {
   margin-top: -600px;
 }
@@ -2981,9 +3180,14 @@ template {
   margin: auto;
 }
 
+@media screen and (max-width: 700px) {
+  .formulario__completar__compra {
+    width: 90%;
+  }
+}
 .contenedor__notificaiones {
-  width: 50%;
-  margin-top: -600px;
+  width: 40%;
+  margin-top: -500px;
   background: #212F37;
   border-radius: 10px;
 }
@@ -2992,13 +3196,11 @@ template {
   width: 90%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: auto;
   padding: 10px;
-}
-
-.datos__de__notificacion {
-  margin: 15px 0 0 -100px;
+  border-bottom: solid 1px white;
+  border-top: solid 1px white;
 }
 
 .enlace__notificacion__individual {
@@ -3019,25 +3221,27 @@ template {
 }
 
 .hidde {
-  display: inline-block;
-  background: #b71540;
-  border-radius: 10px;
-  text-align: center;
-  color: white;
-  width: 250px;
-  padding: 10px 0;
-  border: 0;
+  margin: 20px 0 0 0;
   text-decoration: 0;
+  display: inline-block;
+  color: white;
+  padding: 12px;
+  width: 250px;
+  text-align: center;
+  border-radius: 7px;
+  background: #b71540;
+  font-size: 20px;
 }
 
 .hidde:hover {
   color: white;
+  opacity: 0.5;
 }
 
 .contenido__notificacion:hover {
   background: #112240;
   border-radius: 7px;
-  padding: 10px;
+  width: 90%;
 }
 
 .avatar__notificacion {
@@ -3047,6 +3251,25 @@ template {
   border: solid 2px #008A55;
 }
 
+@media screen and (max-width: 1200px) {
+  .contenedor__notificaiones {
+    width: 60%;
+  }
+
+  .hidde {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .contenedor__notificaiones {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contenedor__notificaiones {
+    width: 95%;
+  }
+}
 .contenedor__mis__solicitudes {
   margin-top: -600px;
 }
@@ -3065,10 +3288,11 @@ template {
 
 .datos__de__solicitud {
   width: 100%;
-  height: 500px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   background: #112240;
   border-top-right-radius: 10px;
 }
@@ -3135,10 +3359,19 @@ template {
   opacity: 0.5;
 }
 
-.sevicio {
+.servicio {
   margin: -90px 0 0 0;
 }
 
+@media screen and (max-width: 900px) {
+  .servicio {
+    margin: 0;
+  }
+
+  .texto__solicitud {
+    width: 90%;
+  }
+}
 .contenedor__como__funciona {
   height: auto;
 }
@@ -3342,22 +3575,6 @@ template {
   transform: rotate(-3600deg) !important;
 }
 
-html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  font-family: "Dosis", sans-serif;
-  font-weight: 300;
-  -webkit-user-select: none;
-  /* Safari 3.1+ */
-  -moz-user-select: none;
-  /* Firefox 2+ */
-  -ms-user-select: none;
-  /* IE 10+ */
-  user-select: none;
-  /* Standard syntax */
-}
-
 .bg-purple {
   background: url(http://salehriaz.com/404Page/img/bg_purple.png);
   background-repeat: repeat-x;
@@ -3523,7 +3740,11 @@ html, body {
   animation: glow-star 2s infinite ease-in-out alternate 9s;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
+  .bg-purple {
+    height: 800px;
+  }
+
   .navbar-links {
     display: none;
   }
@@ -3538,10 +3759,6 @@ html, body {
 
   .box_astronaut {
     top: 70%;
-  }
-
-  .central-body {
-    padding-top: 25%;
   }
 }
 body {

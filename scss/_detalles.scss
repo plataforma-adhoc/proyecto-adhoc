@@ -1,11 +1,16 @@
 .contenedor__detalles{
     margin-top: -600px;
 }
-.titulo__detalles,.parrafo__detalles{
+.titulo__detalles{
   text-align: center;
-  color: $color__gris;
+  color: white;
 }
 
+
+.parrafo__detalles{
+    color: $color__gris;
+    text-align: center;
+}
 .contenido__detalles{
     width: 100%;
     height: auto;
@@ -15,7 +20,7 @@
     flex-wrap: wrap;
 }
 .detalles{
-    width: 30%;
+    width: 45%;
     background:$color__menu__dashboard;
     margin: 50px 0 0 0;
     text-align: center;
@@ -79,3 +84,9 @@ color: $color__gris;
 
 
 
+@media screen and (max-width:700px) {
+  .detalles{
+    width: 70%;
+    margin: 60px auto 0 auto;
+  }  
+}

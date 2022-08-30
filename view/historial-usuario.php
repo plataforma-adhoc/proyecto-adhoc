@@ -43,7 +43,7 @@ $resultado__datos__usuario = mysqli_fetch_array($ejecutar__consulta);
 
 ?>
 
-<div class="info__perfil">
+<div class="info__perfil datos__de__historial">
         <img src="upload/<?php  echo $resultado__datos__usuario['avatar'] ?>" alt="" class="foto__de__perfil foto__historial">
         
     </div> 
@@ -78,24 +78,27 @@ $resultado__datos__usuario = mysqli_fetch_array($ejecutar__consulta);
         </div>
 
 </div>
-       <div class="datos__del__perfil__de__usuario ">
-        <p class="texto historial">datos del servicio</p>
-        <br>
-            <div>
-                <p class="datos__basicos"><strong>Id servicio </strong> : <?php  echo $resultado['id'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"><strong>Nombre servicio : <br><br></strong> <?php  echo $resultado['nombre_servicio'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"><strong>Valor servicio : </strong> <?php  echo $resultado['precio_compra'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"><strong>Cantidad servicio : </strong> <?php  echo $resultado['cantidad_compra'] ?></p>
-            </div>
-            <p class="texto">Datos adicionales</p>
-                <p class="datos__basicos"><strong></strong><?php echo $resultado['descripcion'] ?></p>
-        </div>
+<div class="info__perfil datos__de__historial">
+    <div class="datos__del__perfil__de__usuario ">
+     <p class="texto historial">datos del servicio</p>
+     <br>
+         <div>
+             <p class="datos__basicos"><strong>Id servicio </strong> : <?php  echo $resultado['id'] ?></p>
+         </div>
+         <div>
+             <p class="datos__basicos"><strong>Nombre servicio : <br><br></strong> <?php  echo $resultado['nombre_servicio'] ?></p>
+         </div>
+         <div>
+             <p class="datos__basicos"><strong>Valor servicio : </strong> <?php  echo $resultado['precio_compra'] ?></p>
+         </div>
+         <div>
+             <p class="datos__basicos"><strong>Cantidad servicio : </strong> <?php  echo $resultado['cantidad_compra'] ?></p>
+         </div>
+         <p class="texto">Datos adicionales</p>
+             <p class="datos__basicos"><strong></strong><?php echo $resultado['descripcion'] ?></p>
+     </div>
+</div>
+
 </div>
     <?php   } ?>
 <br><br>

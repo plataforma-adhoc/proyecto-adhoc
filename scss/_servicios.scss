@@ -10,7 +10,7 @@
 
 .parrafo__servicios__info{
     color: $color__gris;
-    width: 50%;
+    width: 90%;
     margin: auto;
     text-align: justify;
 }
@@ -22,6 +22,7 @@
 }
 
 .contenedor__cards__servicios{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -99,3 +100,31 @@ margin: 0 10px 0 10px;
 .enlace__compra__servicio:hover{
   color: white;
 }
+
+@media screen and (max-width:1200px) {
+    .cards__servicios{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .cards__servicios{
+      width: 40%;
+      margin:60px  auto 0 auto;
+    }
+    .parrafo__servicios__info{
+      width: 90%;
+    }  
+  }
+
+
+@media screen and (max-width:700px) {
+  .cards__servicios{
+    width: 70%;
+    margin:60px  auto 0 auto;
+  }
+  .parrafo__servicios__info{
+    width: 90%;
+  }  
+}
+

@@ -29,7 +29,7 @@ $resultado = mysqli_fetch_array($ejecutar__consulta);
 
         <a href="./servicios?idc=<?php  echo $resultado['id_conductor']  ?>" class="enlace__editar__perfil">Quiero este conductor </a>
         <br><br>
-        <p class="datos__basicos">Este conductor sus antecedentes han sido verificados</p>
+        <p class="datos__basicos">Conductor disponible</p>
     </div>
     <div class="info__perfil">
         <div class="datos__del__perfil__de__usuario">
@@ -75,7 +75,7 @@ $resultado = mysqli_fetch_array($ejecutar__consulta);
 <div class="container contenedor__opinion">
     <p class="titulo__opinion">Que opinan otros usuarios de este conductor</p>
     <?php      
-$consulta__comentarios = "SELECT * FROM comentarios WHERE id_conductor = '$id'";
+$consulta__comentarios = "SELECT * FROM comentarios__conductor WHERE id_conductor = '$id'";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
 if(mysqli_num_rows($ejecutar__consulta) > 0){
 

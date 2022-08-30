@@ -35,8 +35,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
         <nav class="nav__hero">
             <div class="container nav__container">
                 <div class="logo">
-                    <a href="./dashboard-usuario"><img src="./img/logo__accent.png" alt="" class="logo__accent"></a>
-                    <span class="texto__beta">BETA</span>
+                    <a href="./dashboard-usuario"><img src="./img/logo.png" alt="" class="logo__accent logo__home"></a>
                 </div>
                 <?php  $consulta__comentarios = "SELECT * FROM notificaciones__conductor WHERE id_usuario = '{$_SESSION['id_usuario']}' AND leido = '0'  ORDER BY id_notificacion DESC LIMIT 5";
                 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
@@ -46,15 +45,75 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                    <a href="#" class="enlace__notificaciones" id="abrir-modal"><i class="far fa-bell"></i>
                        <span class="numero__notificaciones">1</span>
                     </a> 
-                    <label class="btn btn-open " for="nav" id="abrir-menu"><i class="fab fa-creative-commons-nd btn__abrir__menu"></i></label> 
-            
-
+                    <!-- <label class="btn btn-open " for="nav" id="abrir-menu"><i class="fab fa-creative-commons-nd btn__abrir__menu"></i></label>  -->
                     <div>
                     </div>
+                    <div class="containers">
+            <label class="btn btn-open" for="nav"><i class="fab fa-creative-commons-nd"></i></label>
+            <input type="checkbox" id="nav" class="nav-opener" />
+            <div class="nav">
+              <div class="nav-header">
+                <div class="nav-title">MENU</div>
+                <label class="btn btn-nav" for="nav">
+                  <svg style="width: 36px; height: 36px" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="M20 6.91L17.09 4L12 9.09L6.91 4L4 6.91L9.09 12L4 17.09L6.91 20L12 14.91L17.09 20L20 17.09L14.91 12L20 6.91Z" />
+                  </svg>
+                </label>
+              </div>
+              <ul class="nav-links">
+                <li class="nav-link">
+                  <a href="./perfil-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>"
+                    class="enlaces__menu__home">
+                    <img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil">
+                  </a>
+                  <div class="item__nombre"><?php echo $datos__resultado['nombre_usuario'] ?></div>
+
+
+                </li>
+                <li class="nav-link">
+                  <i class="fas fa-home"></i>
+                  <a href="./dashboard-usuario">Home</a>
+
+                </li>
+                <li class="nav-link">
+                  <i class="fas fa-history"></i>
+                  <a href="./historial-usuario?idu=<?php echo $datos__resultado['id_usuario'] ?>"
+                    class="enlaces__menu__home">Mi historial</a>
+                </li>
+                <li class="nav-link">
+                  <i class="fas fa-cogs"></i>
+                  <a href="./configuracion-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
+                    Configuracion</a>
+
+                </li>
+                <li class="nav-link">
+                <i class="fas fa-mail-bulk"></i>
+                  <a href="./ayudanos-a-mejorar?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
+                    Ayudanos a mejorar</a>
+
+                </li>
+                <li class="nav-link">
+                  <i class="fas fa-power-off"></i>
+                  <a href="./desconectar-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>">Cerrar
+                    sesión</a>
+                </li>
+              </ul>
+
+              <div class="nav-images">
+                <div class="nav-image image-1">
+                  <!-- <h2 class="texto__nav__images">Solicita tu conductor elegido desde <span class="precio__hora">$ 25.000 COP</span>  hora, y un conductor elegido llegara a la puerta de tu casa</h2> -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
                </div>
+              
         </nav>
     </header>
-    <div id="myNav" class="overlay">
+    <!-- <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" id="cerrar-menu"><i class="fas fa-times"></i></a>
         <div class="overlay-content">
          <div class="contenedor__enalces__menu__home"><a href="./perfil-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlaces__menu__home"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"><div class="item__nombre"><?php echo $datos__resultado['nombre_usuario'] ?></div></a></div>
@@ -66,7 +125,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
             <div class="contenedor__enalces__menu__home"><a href="./desconectar-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlaces__menu__home"><i class="fas fa-power-off"></i> Desconectarse</a></div>
         </div>
 
-    </div>
+    </div> -->
     <div id="myModalNotificaciones" class="modal__notificaciones">
         <div class="" id="modal__content__notificaciones">
             <span class="close">x</span>

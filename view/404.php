@@ -1,11 +1,8 @@
 <?php include'layout/nabvar.php'?>
 
-<body class="bg-purple">
-        
-        <div class="stars">
-          
+<body class="bg-purple">        
+        <div class="stars">   
             <div class="central-body">
-                <!-- <img class="image-404" src="http://salehriaz.com/404Page/img/404.svg" width="300px"> -->
                 <h2 class="texto__404">404</h2>
              <h2 class="subtitulo__404">Al parecer estas navegando por universos desconocido</h2>
              <br><br>
@@ -33,4 +30,3 @@
         </div>
 
     </body>
-<?php include'layout/footer.php'?>

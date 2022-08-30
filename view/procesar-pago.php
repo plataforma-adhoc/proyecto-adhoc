@@ -62,14 +62,14 @@ if($lista__carrito == null){
 <?php  } ?>
 <?php   if($lista__carrito != null){  ?>
 <div class="contenedor__saldo">
- <h2 id="total" class="total__servicio"> Total a pagar  $ <?php  echo  number_format($total,2,'.','.') ?></h2>
+ <h2 id="total" class="total__servicio total__a__pagar"> Total a pagar  $ <?php  echo  number_format($total,2,'.','.') ?></h2>
  
 </div>
 <?php } ?>
 </div>
 
 <div class="container contenedor__detalles__de__pago">
-  <h2 class="titulo__pago">Proceder a pagar</h2>
+  <h2 class="titulo__pago">Procesar  pago</h2>
 <div id="paypal-button-container" class="contenedor__boton__paypal"></div>
 </div>
 

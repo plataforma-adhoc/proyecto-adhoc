@@ -72,7 +72,7 @@
         <br>
         7.Gestionar las preferencias del usuario referente a su cuenta.
         <br>
-        8.Realizar estudios estadísticos para potenciar el funcionamiento de los servicios prestados por Accent y lograr
+        8.Realizar estudios estadísticos para potenciar el funcionamiento de los servicios prestados por Ad Hoc y lograr
         <br>
         mejorar la experiencia de usuario, así como tendencias, tráfico y realizar seguimiento de compras.
         <br>
@@ -96,7 +96,7 @@
         Administración del sistema: La información personal del usuario será usada para enviar a su correo nuestros
         anuncios, ofertas y publicidad sobre los productos ofrecidos por la plataforma. El usuario expresará su total
         consentimiento de recibir este tipo de contenido, ya que al registrarse puede activar en el "check box" la
-        opción "Acepto recibir material publicitario y/o comercial de Accent". Si luego el usuario quiere desistir de
+        opción "Acepto recibir material publicitario y/o comercial de Ad Hoc". Si luego el usuario quiere desistir de
         este servicio puede oprimir la opción "Darse de baja".
         <br><br>
         Encuestas: A través del correo electrónico el usuario o cualquier otro medio disponible el usuario recibirá
@@ -105,7 +105,7 @@
         Facturación: Usaremos los datos personales del usuario con el fin de crear un registro y un historial de las
         compras realizadas a la empresa.
         <br><br>
-        Accent responde a cualquier duda que se tenga sobre la Política de Privacidad. 
+        Ad Hoc responde a cualquier duda que se tenga sobre la Política de Privacidad. 
     </p>
 </div>
 <?php include'layout/footer.php'; ?>

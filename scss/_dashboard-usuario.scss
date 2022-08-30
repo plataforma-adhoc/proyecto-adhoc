@@ -1,4 +1,9 @@
 
+.logo__home{
+  width: 90%;
+}
+
+
 
 .contenedor__enalces__menu__home{
   width: 100%;
@@ -112,12 +117,13 @@ margin-right: 5px;
   }
 
 .datos__perfiles__conductor{
-  margin-top: 80px;
+  // margin-top: 80px;
   width: 100%;
   display: flex;
   height: auto;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
  
 }
 
@@ -141,8 +147,6 @@ text-align: center;
 }
 
 
-
-
 .card__del__conductor{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
@@ -162,6 +166,21 @@ text-align: center;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+@media screen and (max-width:900px) {
+  .card__del__conductor{
+    width: 45%;
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .card__del__conductor{
+    width: 70%;
+    margin:60px auto 0 auto;
+
+  }
+  
+}
 
 
   // @media screen and (max-height: 450px) {

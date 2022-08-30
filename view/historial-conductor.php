@@ -13,7 +13,8 @@ if($id__conductor ===""){
 $consulta__datos__servicio = "SELECT *  FROM detalles__de__la__compra WHERE id_conductor = '{$_SESSION['id_conductor']}'";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos__servicio);
 while($resultado = mysqli_fetch_array($ejecutar__consulta)){?>
-    <div class="container contenedor__datos__historial">  
+<br><br>
+<div class="container contenedor__datos__historial">  
 <?php
 $consulta__datos__servicio = "SELECT *  FROM usuarios WHERE id_usuario = '{$resultado['id_usuario']}'";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos__servicio);
@@ -22,14 +23,14 @@ $resultado__datos__usuario = mysqli_fetch_array($ejecutar__consulta);
 
 ?>
 
-<div class="info__perfil">
+<div class="info__perfil datos__de__historial">
         <img src="upload/<?php  echo $resultado__datos__usuario['avatar'] ?>" alt="" class="foto__de__perfil foto__historial">
         
     </div> 
     <div class="info__perfil datos__de__historial">
         <div class="datos__del__perfil__de__usuario">
         <br><br><br><br>
-            <p class="texto">datos del usuario</p>
+            <p class="texto texto__historial">datos del usuario</p>
             <div>
                 <p class="datos__basicos"><strong> Nombre : </strong><?php  echo $resultado__datos__usuario['nombre_usuario'] ?></p>
             </div>
@@ -55,27 +56,32 @@ $resultado__datos__usuario = mysqli_fetch_array($ejecutar__consulta);
           <br><br>
             <p class="parrafo__info"><i class="fas fa-info-circle"></i> si eliminas este historial no sera posible recuperarlo</p>
         </div>
+</div>
+<div class="info__perfil datos__de__historial">
+    <div class="datos__del__perfil__de__usuario ">
+         <p class="texto texto__historial">datos del servicio</p>
+         <br>
+  
+             <div>
+                 <p class="datos__basicos"><strong>Id servicio </strong> : <?php  echo $resultado['id'] ?></p>
+             </div>
+             <div>
+                 <p class="datos__basicos"><strong>Nombre servicio : <br><br></strong> <?php  echo $resultado['nombre_servicio'] ?></p>
+             </div>
+             <div>
+                 <p class="datos__basicos"><strong>Valor servicio : </strong> <?php  echo $resultado['precio_compra'] ?></p>
+             </div>
+             <div>
+                 <p class="datos__basicos"><strong>Cantidad servicio : </strong> <?php  echo $resultado['cantidad_compra'] ?></p>
+             </div>
+             <p class="texto">Datos adicionales</p>
+                 <p class="datos__basicos"><strong></strong><?php echo $resultado['descripcion'] ?></p>
+         </div>
+ </div>
+</div>
 
-</div>
-       <div class="datos__del__perfil__de__usuario ">
-        <p class="texto historial">datos del servicio</p>
-        <br>
-            <div>
-                <p class="datos__basicos"><strong>Id servicio </strong> : <?php  echo $resultado['id'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"><strong>Nombre servicio : <br><br></strong> <?php  echo $resultado['nombre_servicio'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"><strong>Valor servicio : </strong> <?php  echo $resultado['precio_compra'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"><strong>Cantidad servicio : </strong> <?php  echo $resultado['cantidad_compra'] ?></p>
-            </div>
-            <p class="texto">Datos adicionales</p>
-                <p class="datos__basicos"><strong></strong><?php echo $resultado['descripcion'] ?></p>
-        </div>
-</div>
+
+        
     <?php   } ?>
 <br><br>
 <?php  include'layout/footer-home.php' ?>

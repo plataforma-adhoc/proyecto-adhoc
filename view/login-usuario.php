@@ -18,13 +18,13 @@
         <div class="grupo__inputs block" id="">
             <div class="contenedor__inputs">
                 <input type="password" placeholder="Tu contraseña" name="contrasena" id="contrasena" class="capturarDatos">
+                <label class="content-input">
+                     <input type="checkbox" name="Vehiculo" onclick="mostrar()" >Quiero ver mi contraseña
+                    <i></i>
+                     </label>
             </div>
         </div>
        
-        <label class="content-input">
-	         <input type="checkbox" name="Vehiculo" onclick="mostrar()" >Quiero ver mi contraseña
-	        <i></i>
-             </label>
         <div class="block">
             <input type="submit" value="INGRESAR" class="boton__registro" name="enviar">
         </div>

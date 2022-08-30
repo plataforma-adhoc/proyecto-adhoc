@@ -1,11 +1,15 @@
 .contenedor__formulario__sugerencia{
-    margin-top: -700px;
+    margin-top: -600px;
 }
 .formulario__sugerencia{
     width: 70%;
 }
-
-.titulo__mejoras,.parrafo__mejoras{
+.titulo__mejoras{
+    color: white;
+    text-align: center;
+    font-size: $tamaño__fuente__subtitulo;
+}
+.parrafo__mejoras{
     color: $color__gris;
     text-align: center;
 }
@@ -26,4 +30,13 @@ color: $color__verde;
 
 .enlace__a__contacto:hover{
     border-bottom: solid 2px $color__verde;
+}
+@media screen and (max-width:900px) {
+    .parrafo__mejoras{
+        width: 80%;
+        margin: auto;
+    }
+    .formulario__sugerencia{
+        width: 90%;
+    }
 }

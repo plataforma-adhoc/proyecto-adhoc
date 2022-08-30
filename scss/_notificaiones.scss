@@ -1,6 +1,6 @@
 .contenedor__notificaiones{
-    width: 50%;
-    margin-top: -600px;
+    width: 40%;
+    margin-top: -500px;
     background:$color__dark;
     border-radius: 10px;
 }
@@ -9,18 +9,21 @@
     width: 90%; 
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    margin: auto;
+    justify-content:space-between;
+    margin:  auto;
     padding: 10px;
+     border-bottom: solid 1px white;
+     border-top: solid 1px white;
+
 }
 
-.datos__de__notificacion{
-    margin:  15px 0 0 -100px;
-}
+
+
 
 .enlace__notificacion__individual{
     width: 100%; 
     text-decoration: 0;
+
  
 }
 
@@ -39,27 +42,30 @@
 
 
 .hidde{
-    display: inline-block;
-    background:$color__danger;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    width: 250px;
-    padding: 10px 0;
-    border: 0;
+    margin: 20px 0 0 0;
     text-decoration: 0;
+    display: inline-block;
+    color:white;
+    padding: 12px;
+    width:$tamaño__btn;
+    text-align: center;
+    border-radius: 7px;
+    background:$color__danger;
+    font-size: 20px;
+   
+
 }
 
 .hidde:hover{
     color: white;
+    opacity: 0.5;
 }
 
 
 .contenido__notificacion:hover{
     background:$color__menu__dashboard;
     border-radius: 7px;
-    padding: 10px;
-   
+   width: 90%;
 }
 
 .avatar__notificacion{
@@ -71,4 +77,31 @@
 }
 
 
- 
+ @media screen and (max-width:1200px) {
+    .contenedor__notificaiones{
+        width: 60%;
+       
+    }
+    .hidde{
+        width: 200px;
+    }
+   
+ }
+
+ @media screen and (max-width:900px) {
+    .contenedor__notificaiones{
+        width: 80%;
+       
+    } 
+    
+      
+ }
+
+ @media screen and (max-width:500px) {
+    .contenedor__notificaiones{
+        width: 95%;
+       
+    } 
+    
+      
+ }

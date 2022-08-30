@@ -43,10 +43,16 @@ $saldo__total = $saldo__actual - $descuento;
         $total__completados = mysqli_num_rows($ejecutar__consulta);
         $estado__recorrido = mysqli_fetch_array($ejecutar__consulta);
         ?>
-        <a href="./servicio-completado" class="cards__dashboard animate__animated  animate__bounceInDown">
+
+   <?php  $consulta__servicios__completado = "SELECT estado_recorrido FROM datos__inicio__recorrido WHERE estado_recorrido = 'Recorrido terminado' AND id_conductor ='{$_SESSION['id_conductor']}'";  
+        $ejecutar__consulta__estado = mysqli_query($conexion__db__accent,$consulta__servicios__completado);
+        $total__servicios__completados = mysqli_num_rows($ejecutar__consulta__estado);
+       
+        ?>
+        <a href="./servicio-completado?idc=<?php   echo $datos__resultado['id_conductor']?>" class="cards__dashboard animate__animated  animate__bounceInDown">
             <div>
             <p class="item__titulo__cards"><i class="fas fa-thumbs-up"></i> Servicios completados</p>
-            <h2 class="item__total"><?php echo $total__completados  ?></h2>
+            <h2 class="item__total"><?php echo $total__servicios__completados  ?></h2>
             </div>
         </a>
         
@@ -67,7 +73,7 @@ $saldo__total = $saldo__actual - $descuento;
             </a>
 
     </div>
-    <?php  if($datos__resultado['status'] ==="fuera de linea"){  ?>
+    <?php  if($datos__resultado['status'] === NULL || $datos__resultado['status'] === 'fuera de linea' ){  ?>
     <a href="#" class="enlace__conectarme"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Hacerme visible para los usuarios</a>
     <?php }?>
 
@@ -75,7 +81,7 @@ $saldo__total = $saldo__actual - $descuento;
         <form id="form-desconectarse">
         <input type="hidden" value="<?php echo $datos__resultado['id_conductor'] ?>" name="idConductor">
         <button class="btn__conectarse desconectarse">Desconectarme</button>
-        <p class="texto__en__linea">Estoy en modo On line</p>
+        <p class="texto__en__linea">Estoy disponible</p>
         </form>
         <?php  } ?>
 
@@ -88,7 +94,7 @@ $saldo__total = $saldo__actual - $descuento;
         <h5 class="modal-title" id="staticBackdropLabel">Entrar en linea</h5>
       </div>
       <div class="modal-body">
-        <p class="parrafo__modal__body">Entra en  linea para que los usuario noten que estas disponible</p>
+        <p class="parrafo__modal__body">En el momento que lo desees puedes entrar en  linea para que los usuario noten que estas disponible</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No entrar en linea</button>

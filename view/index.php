@@ -4,7 +4,7 @@
                 <h1 class="title">La mejor <span class="title--active">Experiencia tras el volante.</span></h1> 
                 <p class="copy">Te enviaremos un conductor elegido a la puerta de tu casa en caso de que no te encuentres en condiciones de 
                 conducir tu vehiculo    
-                <span class="copy__active">¡ solicitalo tu servicio  !</span></p>
+                <span class="copy__active">¡ solicita tu servicio  !</span></p>
                 <a href="./usuario" class="cta">Quiero ser un usuario</a>
             </div>
         </section>
@@ -40,7 +40,7 @@
                         <div class="cards__text">
                             <p class="card__list">Seguridad ante todo</p>
                             <h3 class="card__title">Seguridad<span class="point">.</span></h3>
-                            <p class="card__copy">En accent estamos comprometidos con la seguridad , verificamos los antecedentes de los conductores</p>
+                            <p class="card__copy">En Ad Hoc estamos comprometidos con la seguridad , verificamos los antecedentes de los conductores</p>
                             <!-- <a href="#" class="card__button">Comienza tu proyecto</a> -->
                         </div>
                     </div>
@@ -63,8 +63,8 @@
                     <img src="img/background__1.webp" class="background__img">
                     <div class="background__text">
                         <h3 class="background__title">Control</h3>
-                        <p class="background__copy">con nostros tu tienes el control de pedir tu conductor elegido al instante o puedes resevar el servicios 
-                            con una fecha especifica todo esto en la palma de tu mano
+                        <p class="background__copy">Tienes el control a la hora  de solicitar  tu conductor elegido al instante o puedes resevar el servicio 
+                            con una fecha especifica, todo esto en la palma de tu mano
                         </p>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                     <div class="cards__text">
                         <h3 class="card__title">Perfil y experiencia<span class="point">.</span></h3>
                         <p class="card__date">Perfil</p>
-                        <p class="card__copy">observa el perfil de cada conductor, su calificacion y años experiencia como conductor</p>
+                        <p class="card__copy">observa el perfil de cada conductor, su calificacion y comentarios de otros usuarios,  años experiencia como conductor</p>
                         <a href="./conductor" class="card__button">Quiero ser conductor</a>
                     </div>
                 </div>
@@ -116,8 +116,8 @@
                     <div class="testimony__card">
                         <div class="testimony__text">
                             <!-- <img src="img/google_logo.svg" class="google__logo"> -->
-                            <a href="./"><img src="./img/logo__accent.png" alt="" class="logo__accent"></a>
-                            <p class="testimony__history">“Desde Accent creemos que la desicion mas paqueña y simple que pueda ser  hace la diferencia” , 
+                            <a href="./"><img src="./img/logo.png" alt="" class="logo__accent logo__footer"></a>
+                            <p class="testimony__history">“Desde Ad Hoc creemos que la desicion mas paqueña y simple que pueda ser  hace la diferencia” , 
                                 cuando eliges uno de nuestros conductores pones en nuestras manos tu seguridad 
                             </p>
                             <!-- <div class="testimony__copy testimony__copy--modifier">
@@ -151,7 +151,7 @@
                     <i class='bx bx-check' ></i>
                     <div class="check__numbers">
                         <p class="check__number">+2000</p>
-                        <p class="check__copy">Conductores  trabajan con nosotros para que eligas el mejor</p>
+                        <p class="check__copy">Conductores  forman parte de nuestro equipo para que eligas el mejor</p>
                     </div>
                 </div>
                 <div class="check__item">

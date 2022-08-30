@@ -163,7 +163,7 @@ while($fila = mysqli_fetch_array($ejecutar__consulta)){ ?>
          <input type="hidden" value="<?php  echo $datos__resultado__conductor['id_conductor'] ?>" name="idConductor">
         <input type="hidden" value="<?php echo  $datos__resultado__id['id_usuario'] ?>" name="idUsuario">
         <button class="boton__respuesta"><i class="fas fa-paper-plane"></i></button>
-    <input type="text" placeholder="Escribe una respuesta"name="respuesta" autocomplete="off"id="respuesta-comentario">
+        <input type="text" placeholder="Escribe una respuesta"name="respuesta" autocomplete="off"id="respuesta-comentario">
 
     <?php  if(mysqli_num_rows($ejecutar__consulta) < 0){ ?>
                 <h2 class="titulo__opinion"><i class="fas fa-comment-dots"></i> Aun no hay comentarios</h2>

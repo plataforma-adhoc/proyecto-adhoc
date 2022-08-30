@@ -11,7 +11,7 @@ include'conexion/conexion-db-accent.php';
 
 <div class="container contenedor__dashboard">
     <h2 class="vista__nombre__usuario"><i class="fas fa-user-astronaut"></i> Hola <strong> <?php echo $datos__resultado['nombre_usuario'] ?></strong></h2>
-    <p class="titulo__dashboard">Te presentamos algunos conductores</p>
+    <p class="titulo__dashboard">Conductores disponibles</p>
 
     <div class="datos__perfiles__conductor">
   <?php 

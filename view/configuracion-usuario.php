@@ -1,6 +1,6 @@
 <?php  include'layout/nav-home-usuario.php';
 
-$id = $_GET['id'] ? $_GET['id']:'';
+$id = $_GET['idu'] ? $_GET['idu']:'';
 if($id =! $id || $id ===""){
  header('Location: ./dashboard-usuario');
 }
@@ -21,7 +21,8 @@ if($id =! $id || $id ===""){
             </div>
 
         </a>
-        <a href="./eliminar-cuenta-usuario?id=<?php echo $datos__resultado['id_usuario'] ?>" class="card__configuracion eliminar__cuenta animate__animated animate__bounceInDown">
+        <a href="./eliminar-cuenta-usuario?id=<?php echo $datos__resultado['id_usuario'] ?>"
+            class="card__configuracion eliminar__cuenta animate__animated animate__bounceInDown">
             <div>
                 <h3 class="titulo__item__configuracion">Eliminar mi cuenta</h3>
                 <p class="parrafo__item__configuracion">se eliminaran todos tu datos de nuestro sistema</p>
@@ -43,11 +44,12 @@ if($id =! $id || $id ===""){
                             </div>
                         </div>
                         <label class="content-input">
-                            <input type="checkbox" name="Vehiculo" onclick="mostrar()" >Quiero ver mi contraseña
+                            <input type="checkbox" name="Vehiculo" onclick="mostrar()">Quiero ver mi contraseña
                             <i></i>
                         </label>
 
-                                <input type="hidden" name="id"class="capturarDatos" value="<?php echo $datos__resultado['id_usuario'] ?>">
+                        <input type="hidden" name="id" class="capturarDatos"
+                            value="<?php echo $datos__resultado['id_usuario'] ?>">
 
                         <div class="block">
                             <input type="submit" value="ACTUALIZAR CONTRASEÑA" class="boton__registro" name="enviar">
@@ -58,15 +60,14 @@ if($id =! $id || $id ===""){
         </div>
     </div>
     <script>
-    function mostrar(){
-    
-        let tipo = document.getElementById('contrasena')
-        if(tipo.type == 'password'){
-           tipo.type = 'text';
-        }else{
-            tipo.type = 'password'; 
-        }
-}
+        function mostrar() {
 
-</script>
+            let tipo = document.getElementById('contrasena')
+            if (tipo.type == 'password') {
+                tipo.type = 'text';
+            } else {
+                tipo.type = 'password';
+            }
+        }
+    </script>
     <?php  include'layout/footer-home.php'  ?>

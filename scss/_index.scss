@@ -25,13 +25,10 @@
     --nav-width: 320px;
     --nav-count: 10;
   }
-  .texto__beta{
-    font-size: 12px;
-    color: $color__gris;
-  }
+ 
 
   .beta__home{
-   margin: -37px 0 0 105px;
+   margin: -30px 0 0 80px;
  
   }
  
@@ -240,16 +237,23 @@
     padding: 0;
 }
 
+
 .logo__name{
     font-size: 24px;
 }
 
 .logo__accent{
-    width: 100px;
-    height: 50px;
+    width: 80%;
+    height: 30px;
+    position: relative;
 }
 
-
+.texto__beta{
+    font-size: 12px;
+    color: $color__gris;
+    position: absolute;
+    left: 12.7%;
+  }
 .point{
     color:$color__accent;
 }
@@ -270,7 +274,6 @@
 
 .hero__textos{
     // width: 90%;
-
         width:90%;
        margin: auto;
 
@@ -278,8 +281,8 @@
 
 .title{
     font-size: 56px;
-    font-weight: 300;
-    color: #fff;
+    font-weight: bold;
+    color: $color__accent;
 }
 
 
@@ -287,7 +290,8 @@
     font-size: 24px;
     margin: 15px 0;
     width: 600px;
-    color: white;
+    color:white;
+    line-height: 40px;
 }
 
 .copy__active{
@@ -305,12 +309,18 @@
     border-radius: 6px;
 }
 
+.cta:hover{
+    background: #000;
+    color: white;
+    transition: ease-in-out 0.5s;
+}
+
 /* services */
 
 
 .subtitle{
     font-size: 42px;
-    
+    color: white;
 }
 .solicitud{
     color: white;
@@ -397,6 +407,13 @@
     padding: 12px 0;
 }
 
+.card__button:hover{
+    background: #000;
+    color: white;
+    transition: ease-in-out 0.5s;;
+
+}
+
 .card__date{
     color: var(--gold2);
     font-size: 18px;
@@ -445,7 +462,7 @@
 }
 
 .testimony{
-    background: #fafafa;
+    background:$color__fondo;
 }
 
 .testimony-container{
@@ -612,6 +629,11 @@ ul{
 	box-sizing: border-box;
 	width: 50px;
 }
+
+.logo__footer{
+width: 100px;
+}
+
 .footer-col ul li:not(:last-child){
 	margin-bottom: 10px;
 }
@@ -641,6 +663,10 @@ ul{
 	color: #ffffff;
 	transition: all 0.5s ease;
 }
+.social-links{
+    width: 100%;
+}
+
 .footer-col .social-links a:hover{
 	color: #24262b;
 	background-color: #ffffff;
@@ -649,17 +675,14 @@ ul{
 
 
 /*responsive*/
-@media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
-}
-}
-@media(max-width: 574px){
-  .footer-col{
-    width: 100%;
-}
-}
+
+
+
+// @media(max-width: 574px){
+//   .footer-col{
+//     width: 100%;
+// }
+// }
 
 
 @media screen and (max-width:900px){
@@ -828,6 +851,10 @@ ul{
     .item__contact{
         width: 100%;
         padding: 30px 0;
+    }
+    .footer-col{
+        width: 60%;
+        margin-bottom: 30px;
     }
 }
 

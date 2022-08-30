@@ -3,14 +3,14 @@
       <div class=" container contenedor__terminos">
       <h2 class="subtitulos__terminos">AVISO PARA LOS USUARIOS SOLICITANTES:</h2>
             <P class="parrafo__terminos">
-                La presente Política de Privacidad establece los términos en que ACCENT 
+                La presente Política de Privacidad establece los términos en que Ad Hoc 
                 usa y protege la información que es proporcionada por sus usuarios al momento de utilizar nuestra plataforma. 
                 Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los 
                 campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará 
                 de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede 
                 cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente
                 esta página para asegurarse que está de acuerdo con dichos cambios .
-                ACCENT le notificará sobre la expedición de nuevas políticas para brindar servicios específicos, así como las 
+                Ad Hoc le notificará sobre la expedición de nuevas políticas para brindar servicios específicos, así como las 
                 actualizaciones de las mismas, en el momento en que ello ocurriera. En el caso en que el Usuario Solicitante no esté de 
                 acuerdo con los términos y condiciones siguientes o sus actualizaciones, deberá abstenerse de utilizar esta Plataforma y 
                 sus actualizaciones, toda vez que la utilización de la Plataforma, implica la manifestación 
@@ -33,7 +33,7 @@
                         nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún beneficio, 
                         estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en cualquier momento.
 
-                        ACCENT está altamente comprometido para cumplir con el compromiso de mantener su información segura. 
+                        Ad Hoc está altamente comprometido para cumplir con el compromiso de mantener su información segura. 
                         Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso 
                         no autorizado.
                         </p>
@@ -72,16 +72,16 @@
                Al descargar y/o usar la Plataforma el Usuario Solicitante manifiesta y garantiza que.
                Tiene el derecho, autoridad y capacidad para cumplir con todos los presentes términos y condiciones; 
                Está en la posibilidad de pagar por los Servicios brindado por los Usuarios Prestadores; 
-               La información que proporcione a ACCENT será veraz y precisa; y 
+               La información que proporcione a Ad Hoc será veraz y precisa; y 
                 La utilización de la Plataforma es a título personal, por tal razón no podrá ser utilizada por  un tercero,
-                diferente al Usuario Solicitante que acepta los presentes términos y condiciones. ACCENT se reseva el derecho de dar de baja a cualquier
+                diferente al Usuario Solicitante que acepta los presentes términos y condiciones. Ad Hoc se reseva el derecho de dar de baja a cualquier
                 usuario y / o que infrinja las normas. 
 
               </p>
 
               <h2 class="subtitulos__terminos"> 2.MODIFICACION Y CANCELACION DE SERVICIOS </h2>
                <p class="parrafo__terminos">
-               1.3. Accent cambia y mejora constantemente sus servicios para brindar una mejor experiencia y calidad a sus usuarios. La empresa puede agregar, modificar o eliminar funciones, características, requisitos, promociones y servicios si lo considera necesario.
+               1.3. Ad Hoc cambia y mejora constantemente sus servicios para brindar una mejor experiencia y calidad a sus usuarios. La empresa puede agregar, modificar o eliminar funciones, características, requisitos, promociones y servicios si lo considera necesario.
 
 
 

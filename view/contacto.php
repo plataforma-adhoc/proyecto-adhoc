@@ -5,26 +5,26 @@
 <p class="parrafo__contacto">siempre que quieras puedes escribirnos , nuestro equipo esta dispusto a resolver tus dudas.</p>
 
 <div class="cards__contacto">
-    <a href="" class="formas__de__contacto animate__animated  animate__bounceInDown">
+    <a href="https://twitter.com/AdHoc_Colombia" class="formas__de__contacto animate__animated  animate__bounceInDown" target="_blank">
         <div>
             <p>Twitter</p>
         </div>
         <i class="fab fa-twitter"></i>
     </a>
-    <a href="" class="formas__de__contacto animate__animated  animate__bounceInDown">
+    <a href="https://www.facebook.com/profile.php?id=100085378410645" class="formas__de__contacto animate__animated  animate__bounceInDown" target="_blank">
     <div>
         <p>Facebook</p>      
     </div>
     <i class="fab fa-facebook"></i>
 </a>
-<a href="" class="formas__de__contacto animate__animated  animate__bounceInDown">
+<a href="https://www.instagram.com/adhoc__col/" class="formas__de__contacto animate__animated  animate__bounceInDown" target="_blank">
 <div>
     <p>Instagram</p>
    
 </div>
 <i class="fab fa-instagram"></i>
 </a>
-<a href="" class="formas__de__contacto animate__animated  animate__bounceInDown">
+<a href="https://api.whatsapp.com/send?phone=3227603630&text=Gracias por comunicarte con Ad Hoc ¿ en que te puedo ayudar ?" class="formas__de__contacto animate__animated  animate__bounceInDown" target="_blank">
 <div>
     <p>WhastApp</p>
     

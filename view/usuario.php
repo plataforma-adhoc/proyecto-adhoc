@@ -1,4 +1,5 @@
 <?php include'layout/nabvar.php' ?>
+<div class="contenedor__del__formulario">
 <form class="formulario__registro" id="formulario-registro-usuario">
 <!-- <h2 class="subtitulo__registro">Crea una cuenta gratis</h2> -->
     <div class="contenedor__formulario">  
@@ -105,7 +106,8 @@
         </div>
     </div>
 </form>
-
+</div>
+<br><br>
 <script>
 
     

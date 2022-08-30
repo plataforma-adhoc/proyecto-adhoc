@@ -1,33 +1,13 @@
 
-    <!-- <footer class="contenedor__footer container"> 
-      <div class="enlaces__footer">
-        <div class="footer">
-        <a href="./"><img src="./img/logo__accent.png" alt="" class="logo__accent"> </a>
-       
-          <p class="titulo__footer">Accent</p>
-          <p>Bogota, Colombia</p>
-        </div>
-        <div class="footer">
-          <p class="titulo__footer">Conectate con Accent</p>
-           <a href="./quienes-somos" class="enlaces__footer">Quienes somos</a>
-           <a href="./terminos-y-condiciones-de-uso" class="enlaces__footer">Terminos y condiciones</a>
-           <a href="./politicas-de-privacidad" class="enlaces__footer">Politicas de privacidad</a>
-           <a href="./contacto" class="enlaces__footer">Contactanos</a>
-        </div>
-        <div class="footer">
-          <p class="titulo__footer">Siguenos</p>
-           <a href="" class="enlaces__footer">Facebook</a>
-           <a href="" class="enlaces__footer">Twitter</a>
-          <a href="" class="enlaces__footer">Instagram</a>
-        </div>
-
-  </div> 
-      </footer> -->
       <footer class="footer">
   	 <div class="contenedor__footer container">
   	 	<div class="row">
   	 		<div class="footer-col">
-  	 			<h4>Accent</h4>
+				<h4>
+
+					<a href="./"><img src="./img/logo.png" alt="" class="logo__accent logo__footer"></a>
+
+				</h4>
   	 			<ul>
   	 				<li><a href="#">Bogotá D.C - Colombia</a></li>
   	 			
@@ -55,10 +35,10 @@
   	 		<div class="footer-col">
   	 			<h4>Siguenos en</h4>
   	 			<div class="social-links">
-  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
-  	 				<a href="#"><i class="fab fa-twitter"></i></a>
-  	 				<a href="#"><i class="fab fa-instagram"></i></a>
-  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
+  	 				<a href="https://www.facebook.com/profile.php?id=100085378410645" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="https://twitter.com/AdHoc_Colombia" target="_blank"><i class="fab fa-twitter"></i></a>
+  	 				<a href="https://www.instagram.com/adhoc__col/" target="_blank"><i class="fab fa-instagram"></i></a>
+  	 				<!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
   	 			</div>
   	 		</div>
   	 	</div>
