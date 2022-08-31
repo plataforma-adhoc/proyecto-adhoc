@@ -1,11 +1,12 @@
-<?php  include'layout/nav-home-conductor.php';
+
+<?php  include'layout/nav-home-conductor.php'; 
 include'conexion/conexion-db-accent.php';
 
 $id__conductor = isset($_GET['id']) ?  $_GET['id']: '';
 if($id__conductor ===""){
  header("Location: ./dashboard-conductor");
  exit;
-}
+} 
 
 $consulta__datos__usuario = "SELECT *  FROM usuarios ";
 $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
@@ -21,7 +22,7 @@ if(mysqli_num_rows($resultado__consulta) > 0){
 
 
  }?>
-
+    <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
 <div class="container contenedor__datos__perfil">
     <div class="info__perfil">
         <img src="upload/<?php  echo $datos__resultado__conductor['avatar'] ?>" alt="" class="foto__de__perfil">
@@ -160,14 +161,15 @@ while($fila = mysqli_fetch_array($ejecutar__consulta)){ ?>
         $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
         $datos__resultado__id = mysqli_fetch_array($resultado__consulta); ?>
 
-         <input type="hidden" value="<?php  echo $datos__resultado__conductor['id_conductor'] ?>" name="idConductor">
+       
+
+    <?php  if(mysqli_num_rows($ejecutar__consulta) > 0){ ?>
+        <input type="hidden" value="<?php  echo $datos__resultado__conductor['id_conductor'] ?>" name="idConductor">
         <input type="hidden" value="<?php echo  $datos__resultado__id['id_usuario'] ?>" name="idUsuario">
         <button class="boton__respuesta"><i class="fas fa-paper-plane"></i></button>
         <input type="text" placeholder="Escribe una respuesta"name="respuesta" autocomplete="off"id="respuesta-comentario">
-
-    <?php  if(mysqli_num_rows($ejecutar__consulta) < 0){ ?>
-                <h2 class="titulo__opinion"><i class="fas fa-comment-dots"></i> Aun no hay comentarios</h2>
-            <?php } ?>
+        <?php } ?>
+        <h2 class="titulo__opinion"><i class="fas fa-comment-dots"></i> Aun no hay comentarios</h2>
   </form>
        
 </div>

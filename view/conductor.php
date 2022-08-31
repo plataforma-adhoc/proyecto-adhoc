@@ -60,7 +60,7 @@
             <div class="formulario__grupo_-input">
                 <input type="text" placeholder="Numero licencia" name="licencia" 
                     class="capturarDatos">
-                    <i class="formulario__validacion-estado uno fas fa-times-circle"></i>
+                    <i class="formulario__validacion-estado siete fas fa-times-circle"></i>
             </div>
         </div>
         <div class="grupo__inputs" id="grupo__categoria">
@@ -68,7 +68,7 @@
             <div class="formulario__grupo_-input">
                 <input type="text" placeholder="Categoria licencia" name="categoria" 
                     class="capturarDatos">
-                    <i class="formulario__validacion-estado uno fas fa-times-circle"></i>
+                    <i class="formulario__validacion-estado ocho fas fa-times-circle"></i>
             </div>
         </div>
         <div class="grupo__inputs block" id="grupo__contrasena">
@@ -76,7 +76,7 @@
             <div class="formulario__grupo_-input">
                 <input type="password" placeholder="Crea una contraseña" name="contrasena" id="contrasena"
                     class="capturarDatos">
-                    <i class="formulario__validacion-estado uno fas fa-times-circle"></i>
+                    <i class="formulario__validacion-estado nueve fas fa-times-circle"></i>
 
                     <label class="content-input">
 	         <input type="checkbox" name="Vehiculo" onclick="mostrar()" >Quiero ver mi contraseña

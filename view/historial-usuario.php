@@ -1,36 +1,5 @@
 <?php  include'layout/nav-home-usuario.php'  ?>
-<!-- <div class="container contenedor__datos__historial"> -->
-    <!-- <div class="info__perfil">
-        <img src="./img/first-person.jpg" alt="" class="foto__de__perfil">
-    </div>
-    <div class="info__perfil datos__de__historial">
-        <div class="datos__del__perfil__de__usuario">
-            <p class="texto">datos del conductor</p>
-            <div>
-                <p class="item__datos__servicio">nOMBRE</p>
-            </div>
-            <div>
-                <p class="item__datos__servicio">nOMBRE</p>
-            </div>
-            <div>
-                <p class="item__datos__servicio">nOMBRE</p>
-            </div>
-        </div>
 
-        <div class="datos__del__perfil__de__usuario">
-        <p class="texto">datos del servicio</p>
-            <div>
-                <p class="item__datos__servicio">nOMBRE</p>
-            </div>
-            <div>
-                <p class="item__datos__servicio">nOMBRE</p>
-            </div>
-            <div>
-                <p class="item__datos__servicio">nOMBRE</p>
-            </div>
-        </div>
-    </div>
-</div> -->
 <?php $consulta__datos__servicio = "SELECT *  FROM detalles__de__la__compra WHERE id_usuario = '{$_SESSION['id_usuario']}'";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos__servicio);
 while($resultado = mysqli_fetch_array($ejecutar__consulta)){?>
@@ -42,6 +11,7 @@ $resultado__datos__usuario = mysqli_fetch_array($ejecutar__consulta);
 
 
 ?>
+    <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
 
 <div class="info__perfil datos__de__historial">
         <img src="upload/<?php  echo $resultado__datos__usuario['avatar'] ?>" alt="" class="foto__de__perfil foto__historial">

@@ -7,6 +7,7 @@ $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__cond
   $datos__resultado = mysqli_fetch_array($resultado__consulta); 
 
  ?>
+    <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
 
 <form class="formulario editarPerfil"  action="insert-edit-perfil-conductor" method="POST" enctype="multipart/form-data">
     <br><br>

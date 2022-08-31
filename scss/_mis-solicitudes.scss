@@ -12,8 +12,9 @@
 margin: auto;
  width: 50%;
  color: $color__gris;
- text-align: justify;
+
 }
+
 
 
 .datos__de__solicitud{
@@ -21,14 +22,17 @@ margin: auto;
     height:auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
     background:$color__menu__dashboard;
-   border-top-right-radius: 10px;
+   border-radius: 10px;
+   margin: 20px  0 0 0;
 }
 
-
-
+.datos__mis__solicitudes{
+    width: 20%;
+    background: #000;
+}
 .enlaces__servicios{
     text-decoration: 0;
     border: 0;
@@ -82,10 +86,7 @@ text-transform: uppercase;
 opacity: 0.5;
 }
 
-.rechazado{
-    background:$color__danger;
-    opacity: 0.5;
-}
+
 .culminado{
     background:$color__verde;
     opacity: 0.5;
@@ -95,6 +96,9 @@ opacity: 0.5;
     margin: -90px  0 0 0;
 }
 
+.solicitudes{
+margin-top: 30px;
+}
 
 @media screen and (max-width:900px) {
     .servicio{

@@ -228,16 +228,9 @@
 }
 
 .logo__accent {
-  width: 80%;
+  width: 90%;
   height: 30px;
   position: relative;
-}
-
-.texto__beta {
-  font-size: 12px;
-  color: gray;
-  position: absolute;
-  left: 12.7%;
 }
 
 .point {
@@ -1330,8 +1323,23 @@ template {
 }
 
 .siete {
+  right: 51.5%;
+  top: 590px;
+}
+
+.siete__contrasena {
   right: 31.5%;
   top: 590px;
+}
+
+.ocho {
+  right: 31.5%;
+  top: 590px;
+}
+
+.nueve {
+  right: 31.5%;
+  top: 700px;
 }
 
 .icono__email__login {
@@ -1548,6 +1556,23 @@ template {
     background: #112240;
     border-radius: 7px;
   }
+
+  .dos, .cuatro, .seis, .ocho, .nueve {
+    right: 22.5%;
+  }
+
+  .uno, .tres, .cinco, .siete {
+    right: 52.5%;
+  }
+
+  .siete__contrasena {
+    right: 22.5%;
+  }
+
+  .icono__email__login {
+    right: 23%;
+    top: 250px;
+  }
 }
 @media screen and (max-width: 700px) {
   .formulario__registro {
@@ -1556,6 +1581,15 @@ template {
     background: #112240;
     border-radius: 7px;
   }
+
+  .dos, .cuatro, .seis, .ocho, .nueve, .siete__contrasena {
+    right: 14.5%;
+  }
+
+  .icono__email__login {
+    right: 14%;
+    top: 250px;
+  }
 }
 @media screen and (max-width: 500px) {
   .formulario__registro {
@@ -1563,6 +1597,10 @@ template {
     margin: 100px auto;
     background: #112240;
     border-radius: 7px;
+  }
+
+  .dos, .cuatro, .seis, .ocho, .nueve, .siete__contrasena {
+    right: 10.5%;
   }
 }
 .subtitulos {
@@ -1761,35 +1799,49 @@ template {
 }
 @media screen and (max-width: 700px) {
   .card__del__conductor {
-    width: 70%;
-    margin: 60px auto 0 auto;
+    width: 40%;
   }
 }
 .contenedor__datos__perfil {
-  margin-top: -600px;
-  width: 100%;
+  margin-top: -400px;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   background: #112240;
   border-radius: 7px;
+  position: relative;
+}
+
+.btn__back {
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  position: absolute;
+  top: 100px;
+  left: 200px;
+}
+
+.btn__back:hover {
+  background: #000;
+  color: white;
+  transition: ease-in-out 0.5s;
 }
 
 .info__perfil {
   width: 30%;
-  margin: -70px auto 0 auto;
-}
-
-.redes__sociales {
-  margin: 0 0 0 -20px;
-  width: 270px;
+  margin: -30px auto 0 auto;
 }
 
 .biografia__detallada {
   color: white;
   font-size: 22px;
   font-weight: bold;
+  margin-top: -50px;
 }
 
 .foto__de__perfil {
@@ -1812,6 +1864,18 @@ template {
   text-decoration: 0;
   font-size: 25px;
   margin-top: 20px;
+  background: #000;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 60px;
+}
+
+.enlace__de__redes__sociales:hover {
+  background: #008A55;
+  transition: ease-in-out 0.5s;
+  opacity: 0.9;
 }
 
 .fa-facebook {
@@ -2052,27 +2116,24 @@ template {
   margin: 10px 0 0 0;
 }
 
-@media screen and (max-width: 1300px) {
-  .contenedor__datos__perfil {
-    width: 90%;
-    margin-top: -500px;
-  }
-}
 @media screen and (max-width: 900px) {
   .info__perfil {
     width: 40%;
+  }
+
+  .btn__back {
+    left: 5%;
   }
 }
 @media screen and (max-width: 700px) {
   .info__perfil {
     width: 55%;
-    margin: 30px auto 0 auto;
-    text-align: center;
   }
 
   .foto__de__perfil {
     width: 70%;
     height: 50%;
+    margin: auto;
   }
 
   .redes__sociales {
@@ -2081,6 +2142,10 @@ template {
 
   .enlace__editar__perfil {
     width: 70%;
+  }
+
+  .biografia__detallada {
+    margin-top: 50px;
   }
 
   .parrafo__info__opinion {
@@ -2328,7 +2393,7 @@ template {
   }
 }
 .contenedor__formulario__sugerencia {
-  margin-top: -600px;
+  margin-top: -50px;
 }
 
 .formulario__sugerencia {
@@ -2385,7 +2450,7 @@ template {
 
 .parrafo__servicios__info {
   color: gray;
-  width: 90%;
+  width: 60%;
   margin: auto;
   text-align: justify;
 }
@@ -2883,11 +2948,12 @@ template {
 
   .datos__de__historial {
     width: 90%;
-    margin-top: 90px;
+    margin-top: 10px;
   }
 
   .foto__historial {
-    margin-left: 15%;
+    margin: auto;
+    width: 50%;
   }
 
   .titulo__historial, .parrafo__historial {
@@ -2985,7 +3051,7 @@ template {
 }
 
 .detalles {
-  width: 45%;
+  width: 35%;
   background: #112240;
   margin: 50px 0 0 0;
   text-align: center;
@@ -3046,7 +3112,7 @@ template {
   color: white;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .detalles {
     width: 70%;
     margin: 60px auto 0 auto;
@@ -3283,7 +3349,6 @@ template {
   margin: auto;
   width: 50%;
   color: gray;
-  text-align: justify;
 }
 
 .datos__de__solicitud {
@@ -3291,10 +3356,16 @@ template {
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   background: #112240;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
+  margin: 20px 0 0 0;
+}
+
+.datos__mis__solicitudes {
+  width: 20%;
+  background: #000;
 }
 
 .enlaces__servicios {
@@ -3349,11 +3420,6 @@ template {
   opacity: 0.5;
 }
 
-.rechazado {
-  background: #b71540;
-  opacity: 0.5;
-}
-
 .culminado {
   background: #008A55;
   opacity: 0.5;
@@ -3361,6 +3427,10 @@ template {
 
 .servicio {
   margin: -90px 0 0 0;
+}
+
+.solicitudes {
+  margin-top: 30px;
 }
 
 @media screen and (max-width: 900px) {
@@ -3761,6 +3831,15 @@ template {
     top: 70%;
   }
 }
+.datos__conductor {
+  margin-bottom: 150px;
+}
+
+.texto__servicio__completado {
+  text-align: center;
+  color: gray;
+}
+
 body {
   font-family: "Baloo Bhaina 2", cursive;
   background: #0A192F;

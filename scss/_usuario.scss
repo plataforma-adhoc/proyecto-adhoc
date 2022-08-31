@@ -82,9 +82,25 @@ top: 250px;
 }
 
 .siete{
-  right: 31.5%;
+  right: 51.5%;
   top: 590px;
 
+}
+
+.siete__contrasena{
+  right: 31.5%;
+  top: 590px;
+}
+
+.ocho{
+  right: 31.5%;
+  top: 590px;
+  
+}
+
+.nueve{
+  right: 31.5%;
+  top: 700px; 
 }
 
 .icono__email__login{
@@ -320,6 +336,23 @@ cursor: pointer;
     background:$color__formularios;
     border-radius: 7px;
   }
+  .dos,.cuatro ,.seis,.ocho,.nueve{
+  right:22.5%;
+
+
+  }
+  .uno,.tres,.cinco,.siete{
+  right:52.5%;   
+  }
+
+ .siete__contrasena{
+  right:22.5%;   
+
+ }
+ .icono__email__login{
+  right: 23%;
+  top:250px;
+}
  
       }
 
@@ -331,6 +364,15 @@ cursor: pointer;
         background:$color__formularios;
         border-radius: 7px;
       }
+      .dos,.cuatro ,.seis,.ocho,.nueve,.siete__contrasena{
+        right:14.5%;
+      
+      
+        }
+        .icono__email__login{
+          right: 14%;
+          top:250px;
+        }
      
           }
 
@@ -341,6 +383,12 @@ cursor: pointer;
             background:$color__formularios;
             border-radius: 7px;
           }
+
+          .dos,.cuatro ,.seis,.ocho,.nueve,.siete__contrasena{
+            right:10.5%;
+          
+          
+            }
          
         }
 

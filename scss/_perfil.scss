@@ -1,32 +1,47 @@
 .contenedor__datos__perfil{
-    margin-top: -600px;
-    width: 100%;
+    margin-top: -400px;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     background:$color__menu__dashboard;
     border-radius: 7px;
+    position: relative;
     
 }
 
+.btn__back{
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+}
+
+.btn__back:hover{
+    background: #000;
+    color: white;
+    transition: ease-in-out 0.5s;
+}
 
 .info__perfil{
     width: 30%;
-    margin: -70px auto 0 auto;
+    margin: -30px auto 0 auto;
 
     
 }
 
-.redes__sociales{
-    margin: 0 0 0 -20px;
-    width: 270px;
-}
 
 .biografia__detallada{
     color: white;
     font-size: 22px;
     font-weight: bold;
+     margin-top: -50px;
 }
 
 .foto__de__perfil{
@@ -42,13 +57,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 .enlace__de__redes__sociales{
     display: inline-block;
     text-decoration: 0;
     font-size: 25px;
-   margin-top: 20px;
+    margin-top: 20px;
+    background: #000;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 60px;
     
+}
+.enlace__de__redes__sociales:hover{
+    background:$color__verde;
+    transition: ease-in-out 0.5s;
+     opacity: 0.9;
 }
 
 .fa-facebook{
@@ -313,30 +340,39 @@ height: auto;
 }
 
 
-@media screen and(max-width:1300px) {
-   .contenedor__datos__perfil{
-    width: 90%;
-    margin-top: -500px;
-   } 
+// @media screen and(max-width:1300px) {
+//    .contenedor__datos__perfil{
+//     width: 90%;
+//     margin-top: -500px;
+//    } 
+//    .enlace__editar__perfil{
+//     width: 70%;
+//    }
    
-}
+// }
+
 
 @media screen and (max-width:900px) {
   .info__perfil{
     width: 40%;
-  }  
+  } 
+  .btn__back{
+    left: 5%;
+  } 
 }
 
 
 @media screen and(max-width:700px) {
     .info__perfil{
         width: 55%;
-        margin: 30px auto 0 auto;
-        text-align: center;
+        // margin: 10px auto 0 auto;
+    
     }
+
     .foto__de__perfil{
         width: 70%;
         height: 50%;
+        margin: auto;
     }
 
     .redes__sociales{
@@ -344,6 +380,9 @@ height: auto;
     }
     .enlace__editar__perfil{
        width: 70%;
+    }
+    .biografia__detallada{
+        margin-top: 50px;
     }
 
     .parrafo__info__opinion{

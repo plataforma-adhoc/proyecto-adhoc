@@ -92,7 +92,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                 </li>
                 <li class="nav-link">
                 <i class="fas fa-mail-bulk"></i>
-                  <a href="./ayudanos-a-mejorar?idc=<?php  echo $datos__resultado['id_conductor'] ?>">
+                  <a href="./ayudanos-a-mejorar">
                     Ayudanos a mejorar</a>
 
                 </li>

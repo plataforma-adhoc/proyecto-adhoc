@@ -6,6 +6,8 @@ if($id__conductor ===""){
 }
  
 ?>
+    <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
+
 <h2 class="titulo__historial">Historial</h2>
 <p class="parrafo__historial">En tu historial puedes revisar a detalles tu solicitudes, en esta seccion veras la informacion necesaria de tus servicos de conductor elegido</p>
 <?php  

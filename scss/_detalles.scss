@@ -20,7 +20,7 @@
     flex-wrap: wrap;
 }
 .detalles{
-    width: 45%;
+    width: 35%;
     background:$color__menu__dashboard;
     margin: 50px 0 0 0;
     text-align: center;
@@ -84,7 +84,7 @@ color: $color__gris;
 
 
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:900px) {
   .detalles{
     width: 70%;
     margin: 60px auto 0 auto;

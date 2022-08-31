@@ -22,6 +22,8 @@ if(mysqli_num_rows($resultado__consulta__datos__conductor) > 0){
 
  }
 ?>
+    <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
+
 <div class="container contenedor__datos__perfil"> 
     <div class="info__perfil">
         <img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt="" class="foto__de__perfil">
@@ -103,15 +105,19 @@ while($fila = mysqli_fetch_array($ejecutar__consulta)){?>
         $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__conductor);
         $datos__resultado__id = mysqli_fetch_array($resultado__consulta); ?>
 
-         <input type="hidden" value="<?php  echo $datos__resultado['id_usuario'] ?>" name="idUsuario">
+      
+
+    <?php  if(mysqli_num_rows($ejecutar__consulta) >  0){ ?>
+        <input type="hidden" value="<?php  echo $datos__resultado['id_usuario'] ?>" name="idUsuario">
         <input type="hidden" value="<?php echo  $datos__resultado__id['id_conductor'] ?>" name="idConductor">
         <button class="boton__respuesta"><i class="fas fa-paper-plane"></i></button>
         <input type="text" placeholder="Escribe una respuesta"name="respuesta" autocomplete="off"id="respuesta-comentario">
+        <?php }else{ ?>
+            <h2 class="titulo__opinion"><i class="fas fa-comment-dots"></i> Aun no hay comentarios</h2>
+            <?php }?>
 
-    <?php  if(mysqli_num_rows($ejecutar__consulta) < 0){ ?>
-                <h2 class="titulo__opinion"><i class="fas fa-comment-dots"></i> Aun no hay comentarios</h2>
-            <?php } ?>
   </form>
 </div>
 <br><br>
+
 <?php   include'layout/footer-home.php' ?>

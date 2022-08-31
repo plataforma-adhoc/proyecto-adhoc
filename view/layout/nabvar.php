@@ -18,7 +18,7 @@
       <div class="container nav__container">
       <div class="logo">
             <a href="./"><img src="./img/logo.png" alt="" class="logo__accent"></a>
-            <p class="texto__beta beta__home">BETA</p>
+            <!-- <p class="texto__beta beta__home">BETA</p> -->
               
         </div>
 

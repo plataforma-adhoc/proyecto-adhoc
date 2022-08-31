@@ -1,4 +1,6 @@
-<?php  include'layout/nav-home-usuario.php'  ?>
+<?php  include'layout/nabvar.php'  ?>
+
+
 <div class="container contenedor__formulario__sugerencia">
     <h2 class="titulo__mejoras">Ayudanos a mejorar</h2>
     <p class="parrafo__mejoras">En que quieres que mejoremos, escribenos tu sugerencia y trabajaremos para mejorar 
@@ -10,8 +12,8 @@
         <label for="telefono"class="formulario__label">Nombre</label>
         <div class="formulario__grupo_-input">
             <div class="contenedor__inputs">
-                <input type="text" placeholder="Telefono" name="nombre" 
-                    class="capturarDatos" id="telefono" value="<?php echo $datos__resultado['nombre_usuario'] ?>" readonly>
+                <input type="text" placeholder="Nombre completo" name="nombre" 
+                    class="capturarDatos" id="telefono">
 
 
             </div>
@@ -23,8 +25,8 @@
         <label for="telefono"class="formulario__label">E-mail</label>
         <div class="formulario__grupo_-input">
             <div class="contenedor__inputs">
-                <input type="email" placeholder="Telefono" name="email" 
-                    class="capturarDatos" id="telefono" value="<?php echo $datos__resultado['email'] ?>" readonly>
+                <input type="email" placeholder="Tu email" name="email" 
+                    class="capturarDatos" id="telefono" >
           
 
             </div>
@@ -45,4 +47,4 @@
     </form>
 
 </div>
-<?php  include'layout/footer-home.php'  ?>
+<?php  include'layout/footer.php'  ?>

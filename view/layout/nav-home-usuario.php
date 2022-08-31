@@ -43,8 +43,10 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                 <div class="enlaces__varios">
                    <a href="./perfil-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__perfil__usuario"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"></a>
                    <a href="#" class="enlace__notificaciones" id="abrir-modal"><i class="far fa-bell"></i>
-                       <span class="numero__notificaciones">1</span>
-                    </a> 
+            <?php  if($total__notificaciones > 0){ ?><span class="numero__notificaciones">
+              <?php   echo $total__notificaciones ?></span> <?php } ?>
+          </a>
+              
                     <!-- <label class="btn btn-open " for="nav" id="abrir-menu"><i class="fab fa-creative-commons-nd btn__abrir__menu"></i></label>  -->
                     <div>
                     </div>
@@ -89,7 +91,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                 </li>
                 <li class="nav-link">
                 <i class="fas fa-mail-bulk"></i>
-                  <a href="./ayudanos-a-mejorar?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
+                  <a href="./ayudanos-a-mejorar">
                     Ayudanos a mejorar</a>
 
                 </li>

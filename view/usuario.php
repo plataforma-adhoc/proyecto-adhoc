@@ -82,7 +82,7 @@
             <div class="contenedor__inputs">
                 <input type="password" placeholder="Crea una contraseña" name="contrasena" 
                     class="capturarDatos" id="contrasena">
-                    <i class="formulario__validacion-estado siete fas fa-times-circle"></i>
+                    <i class="formulario__validacion-estado  siete__contrasena fas fa-times-circle"></i>
 
             </div>
             <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->

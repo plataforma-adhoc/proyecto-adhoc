@@ -27,11 +27,11 @@ $resultado = mysqli_fetch_array($ejecutar__consulta);
 
         </div>
 
-        <a href="./servicios?idc=<?php  echo $resultado['id_conductor']  ?>" class="enlace__editar__perfil">Quiero este conductor </a>
+        <a href="./servicios?idc=<?php  echo $resultado['id_conductor']  ?>" class="enlace__editar__perfil">Solicitar </a>
         <br><br>
         <p class="datos__basicos">Conductor disponible</p>
     </div>
-    <div class="info__perfil">
+    <div class="info__perfil datos__conductor">
         <div class="datos__del__perfil__de__usuario">
             <div>
                 <p class="datos__basicos"><strong>Nombre : </strong><?php  echo $resultado['nombre_conductor']  ?></p>

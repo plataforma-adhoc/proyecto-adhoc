@@ -94,4 +94,10 @@ insertar__sugerencia__conductor()
 
 
 
+    let btn__back =  document.getElementById('btn-back');
+    if(btn__back){
+     btn__back.addEventListener('click',function(){
+        window.history.back();
+     })
+    }
 

@@ -6,10 +6,11 @@ if($id__conductor){
 
 
 }?>
+    <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
 
 <div class="container contenedor__mis__solicitudes">
-    <h2 class="subtitulo__solicitudes">Servivios completados</h2>
-    <p class="texto__solicitud">Toda la informacin de servicios completados aparecera aqui .
+    <h2 class="subtitulo__solicitudes">Servicios completados</h2>
+    <p class="texto__servicio__completado">Toda la información de tus servicios completados apareceran aqui .
     </p>
     <br><br>
     <?php                              
@@ -22,14 +23,14 @@ if($id__conductor){
              $resultado = mysqli_fetch_array($ejecutar__consulta__datos__usuario);?>
         
      <div class="datos__de__solicitud">
-      <div class="info__perfil  datos__mis__solicitudes"> 
+      <div class="info__perfil solicitudes"> 
       <img src="upload/<?php echo $resultado['avatar'] ?>" alt="" class="foto__de__perfil">
       <div>
       
 
      </div>
     </div>
-      <div class="info__perfil datos__mis__solicitudes">
+      <div class="info__perfil solicitudes">
       <div class="datos__del__perfil__de__usuario ">
     <br><br><br><br><br>
       <p class="texto">datos del usuario</p>
@@ -71,9 +72,9 @@ if($id__conductor){
          <?php }   ?>
         </div>
       </div>
-      <div class="info__perfil datos__mis__solicitudes">
+      <div class="info__perfil solicitudes">
       <div class="datos__del__perfil__de__usuario servicio">
-      <p class="texto">datos del servicio a tomar</p>
+      <p class="texto">datos del servicio terminado</p>
             <div>
                 <p class="datos__basicos"><strong>Direccion inicio:</strong>  <?php echo $fila['direccion_inicio']  ?></p>
             </div>
