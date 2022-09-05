@@ -169,7 +169,7 @@
 }
 
 .image-1 {
-  background-image: url(../img/imagen__menu.jpg), linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+  background-image: url(../img/fondo__conductor__elegido.jpg), linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
 }
 
 .texto__nav__images {
@@ -1823,7 +1823,7 @@ template {
   border-radius: 100px;
   position: absolute;
   top: 100px;
-  left: 200px;
+  left: 13%;
 }
 
 .btn__back:hover {
@@ -1845,10 +1845,11 @@ template {
 }
 
 .foto__de__perfil {
-  width: 70%;
-  height: 300px;
-  border-radius: 25px;
+  width: 60%;
+  height: 200px;
+  border-radius: 100%;
   text-align: center;
+  margin: auto;
 }
 
 .redes__sociales {
@@ -1908,7 +1909,7 @@ template {
   display: inline-block;
   color: white;
   padding: 12px;
-  width: 250px;
+  width: 200px;
   text-align: center;
   border-radius: 7px;
   background: #008A55;
@@ -2065,6 +2066,7 @@ template {
   background-color: #0A192F;
   margin-left: 1rem;
   color: white;
+  width: 90%;
 }
 
 .boton__respuesta {
@@ -2116,6 +2118,11 @@ template {
   margin: 10px 0 0 0;
 }
 
+@media screen and (max-width: 1500px) {
+  .btn__back {
+    left: 5%;
+  }
+}
 @media screen and (max-width: 900px) {
   .info__perfil {
     width: 40%;
@@ -2507,6 +2514,15 @@ template {
   margin: 0 10px 0 10px;
 }
 
+.contenido__mas__vendido {
+  width: 100%;
+  background: #FE019A;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+}
+
 .titulo__producto {
   color: gray;
   font-size: 22px;
@@ -2576,6 +2592,23 @@ template {
   color: white;
   line-height: 200px;
   font-size: 30px;
+}
+
+.btn__recargar {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  margin-right: 20px;
+  background: #112240;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin-top: -5px;
+  line-height: 35px;
+  font-size: 20px;
 }
 
 .cards__dashboard {
@@ -2798,6 +2831,7 @@ template {
 
 .imagen__celebracion {
   width: 60%;
+  margin-bottom: 70px;
 }
 
 .subtitulo__estado__recorrido {
@@ -2859,6 +2893,10 @@ template {
     line-height: 40px;
   }
 }
+.contenedor__datos__historial {
+  margin-top: -500px;
+}
+
 .titulo__historial {
   color: white;
   position: absolute;
@@ -2877,8 +2915,7 @@ template {
   left: 40%;
 }
 
-.contenedor__datos__historial {
-  margin-top: -400px;
+.contenido__historial {
   width: 100%;
   display: flex;
   align-items: center;
@@ -2886,6 +2923,7 @@ template {
   flex-wrap: wrap;
   background: #112240;
   border-radius: 10px;
+  margin: 30px auto 0 auto;
 }
 
 .texto {
@@ -2898,7 +2936,8 @@ template {
 }
 
 .foto__historial {
-  width: 70%;
+  width: 50%;
+  border: solid 4px #008A55;
 }
 
 .datos__de__historial {
@@ -3351,6 +3390,10 @@ template {
   color: gray;
 }
 
+.nombre__servicio {
+  line-height: 20px;
+}
+
 .datos__de__solicitud {
   width: 100%;
   height: auto;
@@ -3387,10 +3430,6 @@ template {
   background: #0652DD;
 }
 
-.cancelar {
-  background: #b71540;
-}
-
 .terminar {
   background: #008A55;
 }
@@ -3399,10 +3438,6 @@ template {
   background: #0A192F;
   transition: all 0.5s;
   color: white;
-}
-
-.deshabilitado {
-  opacity: 0.5;
 }
 
 .modal-content {
@@ -3426,11 +3461,7 @@ template {
 }
 
 .servicio {
-  margin: -90px 0 0 0;
-}
-
-.solicitudes {
-  margin-top: 30px;
+  margin: -150px 0 0 0;
 }
 
 @media screen and (max-width: 900px) {

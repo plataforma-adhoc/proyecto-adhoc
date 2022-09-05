@@ -32,6 +32,8 @@ $resultado = mysqli_fetch_array($ejecutar__consulta);
         <p class="datos__basicos">Conductor disponible</p>
     </div>
     <div class="info__perfil datos__conductor">
+        <br><br><br><br>
+    <p class="biografia__detallada">Informacion del conductor</p> 
         <div class="datos__del__perfil__de__usuario">
             <div>
                 <p class="datos__basicos"><strong>Nombre : </strong><?php  echo $resultado['nombre_conductor']  ?></p>
@@ -75,7 +77,7 @@ $resultado = mysqli_fetch_array($ejecutar__consulta);
 <div class="container contenedor__opinion">
     <p class="titulo__opinion">Que opinan otros usuarios de este conductor</p>
     <?php      
-$consulta__comentarios = "SELECT * FROM comentarios__conductor WHERE id_conductor = '$id'";
+$consulta__comentarios = "SELECT * FROM comentarios__usuario WHERE id_conductor = '$id'";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
 if(mysqli_num_rows($ejecutar__consulta) > 0){
 

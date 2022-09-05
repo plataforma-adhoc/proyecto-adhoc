@@ -1,3 +1,7 @@
+.contenedor__datos__historial{
+    margin-top: -500px;
+  
+}
 .titulo__historial{
  color: white;
  position:absolute;
@@ -15,8 +19,7 @@
     width: 500px;  
     left: 40%;
 }
-.contenedor__datos__historial{
-    margin-top: -400px;
+.contenido__historial{
     width: 100%;
     display: flex;
     align-items: center;
@@ -24,6 +27,7 @@
     flex-wrap: wrap;
     background:$color__menu__dashboard;
     border-radius: 10px;
+    margin: 30px auto 0 auto;
 }
 
 .texto{
@@ -37,7 +41,8 @@
 }
 
 .foto__historial{
-    width: 70%;
+    width: 50%;
+    border: solid 4px $color__verde;
 }
 
 .datos__de__historial{

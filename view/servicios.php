@@ -35,10 +35,11 @@
       <br><br>
          <div class="botones">
              <a href="./detalles?ids=<?php echo $fila['id_producto'] ?>&token=<?php echo hash_hmac('sha1',$fila['id_producto'],TOKEN)?>&idc=<?php echo $resultado['id_conductor'] ?>">detalles</a>
-             <button type="button" onclick="agregar(<?php echo  $fila['id_producto']?>,'<?php echo hash_hmac('sha1',$fila['id_producto'],TOKEN) ?>')">Agregar</button> 
+             <button type="button" onclick="agregar(<?php echo  $fila['id_producto']?>,'<?php echo hash_hmac('sha1',$fila['id_producto'],TOKEN) ?>')">Agregar</button>
             </div>
             <br>
-         </div>
+            <div><?php echo utf8_encode($fila['mas_vendido'] ) ?></div>
+          </div>
      <?php } ?>
     </div>
 

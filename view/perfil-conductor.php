@@ -157,19 +157,19 @@ while($fila = mysqli_fetch_array($ejecutar__consulta)){ ?>
     
 
     <form class="form-search" id="formulario-comentario-conductor">
-        <?php   $consulta__datos__usuario = "SELECT id_usuario  FROM usuarios ";
+        <?php   $consulta__datos__usuario = "SELECT id_usuario  FROM usuarios WHERE id_usuario = '{$datos__resultado['id_usuario']}'";
         $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
         $datos__resultado__id = mysqli_fetch_array($resultado__consulta); ?>
 
        
 
-    <?php  if(mysqli_num_rows($ejecutar__consulta) > 0){ ?>
+    <?php  if(mysqli_num_rows($ejecutar__consulta) < 0){ ?>
+        <h2 class="titulo__opinion"><i class="fas fa-comment-dots"></i> Aun no hay comentarios</h2>
+        <?php } ?>
         <input type="hidden" value="<?php  echo $datos__resultado__conductor['id_conductor'] ?>" name="idConductor">
         <input type="hidden" value="<?php echo  $datos__resultado__id['id_usuario'] ?>" name="idUsuario">
         <button class="boton__respuesta"><i class="fas fa-paper-plane"></i></button>
         <input type="text" placeholder="Escribe una respuesta"name="respuesta" autocomplete="off"id="respuesta-comentario">
-        <?php } ?>
-        <h2 class="titulo__opinion"><i class="fas fa-comment-dots"></i> Aun no hay comentarios</h2>
   </form>
        
 </div>

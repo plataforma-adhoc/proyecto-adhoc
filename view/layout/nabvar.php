@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página web AlexCG Design</title>
+  <meta name="description" content="Descubre cientos de conductores elegidos, disponibles las 24 horas">
+  <title><?php echo  $titulo="Ad Hoc | Servicios Profesional De Conductor Elegido" ?></title>
   <link rel="stylesheet" href="./css/app.css">
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />

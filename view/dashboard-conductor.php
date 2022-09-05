@@ -5,20 +5,23 @@ $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__cond
 if(mysqli_num_rows($resultado__consulta) > 0){
   $datos__resultado = mysqli_fetch_array($resultado__consulta); 
 }
-
+$saldo__total = 0;
 $consulta__datos__servicio = "SELECT *  FROM detalles__de__la__compra WHERE id_conductor = '{$_SESSION['id_conductor']}'";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos__servicio);
 $resultado = mysqli_num_rows($ejecutar__consulta); 
-$fila__resultado__servicios = mysqli_fetch_array($ejecutar__consulta);
+while($fila__resultado__servicios = mysqli_fetch_array($ejecutar__consulta)){
+  $saldo__actual = $fila__resultado__servicios['precio_compra'];
+  $descuento =  $saldo__actual * 0.25;
+  $subtotal = $saldo__actual - $descuento;
+  $saldo__total += $subtotal;
 
-$saldo__actual = $fila__resultado__servicios['precio_compra'];
-$descuento =  $saldo__actual * 0.25;
-$saldo__total = $saldo__actual - $descuento;
+};
+
 ?>
  
 <div class="container contenedor__dashboard">
     <h2 class="vista__nombre__usuario"><i class="fas fa-user-astronaut"></i> Hola <strong><?php echo $datos__resultado['nombre_conductor'] ?></strong></h2>
-    <h2 class="titulo__dashboard">Estadisticas principales</h2>
+    <h2 class="titulo__dashboard"><i class="fas fa-sitemap"></i> Estadisticas principales</h2>
     <div class="contenedor__cards__dashboard">
         <a href="./saldo" class="cards__dashboard animate__animated  animate__bounceInDown">
             <div>
@@ -62,16 +65,22 @@ $saldo__total = $saldo__actual - $descuento;
             <h2 class="item__total"><?php echo $total__cancelados ?></h2>
             </div>
         </a> -->
+         <?php       
+        $consulta__solicitudes = "SELECT * FROM datos__inicio__recorrido WHERE id_conductor = {$_SESSION['id_conductor']} AND leido = '0'";
+        $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__solicitudes);
+        $total__solicitudes  = mysqli_num_rows($ejecutar__consulta);
 
-        <a href="./mis-solicitudes?idc=<?php echo $datos__resultado['id_conductor'] ?>" class="cards__dashboard nuevo__servicio animate__animated  animate__bounceInDown">
-        <div>
-           
+        $consulta__id = "SELECT id FROM datos__inicio__recorrido WHERE id_conductor = {$_SESSION['id_conductor']} ";
+        $ejecutar__consulta__id = mysqli_query($conexion__db__accent,$consulta__id);
+        $id_solicitud  = mysqli_fetch_array($ejecutar__consulta__id);
+        ?>
 
+        <a href="./mis-solicitudes?idc=<?php echo $datos__resultado['id_conductor'] ?>&ids=<?php echo $id_solicitud['id'] ?>" class="cards__dashboard nuevo__servicio animate__animated  animate__bounceInDown">
+        <div>  
                 <p class="item__titulo__cards"><i class="fas fa-plus"></i> Total solicitudes</p>
-               <span class="nueva__notificacion" id="numero-solicitudes"></span>
+               <span class="nueva__notificacion"> <?php  echo $total__solicitudes ?></span>
                 </div>
             </a>
-
     </div>
     <?php  if($datos__resultado['status'] === NULL || $datos__resultado['status'] === 'fuera de linea' ){  ?>
     <a href="#" class="enlace__conectarme"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Hacerme visible para los usuarios</a>
@@ -119,7 +128,7 @@ if($estado__recorrido['estado_recorrido'] ==='Recorrido terminado') {?>
   </div>
   <div>
     <h4 class="subtitulo__estado__recorrido">Completaste un nuevo recorrido</h4>
-    <p class="parrafo__recorrido">Dejanos saber tu opinion sobres el usuario que acabas de dejar </p>
+    <p class="parrafo__recorrido">Dejanos saber tu opinion sobre el usuario que acabas de dejar </p>
       <a href="./perfil-conductor?id=<?php  echo $datos__resultado['id_conductor']  ?>#opinion" class="btn__dejar__opinion ">Dejar mi opinion</a>
   </div>
 </div>

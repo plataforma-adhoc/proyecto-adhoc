@@ -52,8 +52,8 @@ if($estado__recorrido['estado_recorrido'] ==='Recorrido terminado') {?>
 
   </div>
   <div>
-    <h4 class="subtitulo__estado__recorrido">Completaste un nuevo recorrido</h4>
-    <p class="parrafo__recorrido">Dejanos saber tu opinion sobres el usuario que acabas de dejar </p>
+    <h4 class="subtitulo__estado__recorrido">Tu servicio de conductor elegido acaba de terminar</h4>
+    <p class="parrafo__recorrido">Dejanos saber tu opinion sobres el conductor que elegiste </p>
      <a href="./perfil-usuario?id=<?php  echo $datos__resultado['id_usuario']  ?>#opinion1" class="btn__dejar__opinion ">Dejar mi opinion</a>
   </div>
 </div>

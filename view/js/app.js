@@ -50,8 +50,6 @@ mostrar__comentario__conductor();
 
 
 
-import {obtener__solicitudes} from'./obtener-solicitudes.js';
-obtener__solicitudes();
 
 
 

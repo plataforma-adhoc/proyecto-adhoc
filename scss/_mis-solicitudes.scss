@@ -15,7 +15,9 @@ margin: auto;
 
 }
 
-
+.nombre__servicio{
+    line-height: 20px;
+}
 
 .datos__de__solicitud{
     width: 100%;
@@ -51,9 +53,7 @@ margin: auto;
 .iniciar{
     background:#0652DD;
 }
-.cancelar{
-    background:$color__danger;
-}
+
 
 .terminar{
     background: $color__verde;
@@ -67,9 +67,7 @@ color: white;
   
 }
 
-.deshabilitado{
-    opacity: 0.5;
-}
+
 
 .modal-content{
     background: $color__dark;
@@ -93,12 +91,10 @@ opacity: 0.5;
 }
 
 .servicio{
-    margin: -90px  0 0 0;
+    margin: -150px  0 0 0;
 }
 
-.solicitudes{
-margin-top: 30px;
-}
+
 
 @media screen and (max-width:900px) {
     .servicio{

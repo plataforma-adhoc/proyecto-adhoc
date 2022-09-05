@@ -13,12 +13,12 @@
     <main>
         <section class="services">
             <div class="container">
-                <h2 class="subtitle">Soluciones de movilidad<span class="point">.</span></h2>
+                <h2 class="subtitle">Tu decides a donde quieres llegar<span class="point">.</span></h2>
                 <p class="copy__section">Ofrecemos la solucion perfecta para cuando no puedas conducir tu vehiculo</p>
 
                 <article class="container-cards">
                     <div class="card" data-aos="zoom-in">
-                        <img src="img/imagen__2.webp" class="card__img">
+                        <img src="img/entregando__las__llaves.webp" class="card__img" alt="llaves,licor,personas" >
                         <div class="cards__text">
                             <p class="card__list">Disfruta del momento sin preocupaciones</p>
                             <h3 class="card__title">Entrega las llaves<span class="point">.</span></h3>
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                     <div class="card" data-aos="zoom-in">
-                        <img src="img/imagen__1.webp" class="card__img">
+                        <img src="img/medios__de__pago.webp" class="card__img" alt="telefono,tarjetas,dinero" >
                         <div class="cards__text">
                             <p class="card__list">Tu eliges la forma de pago</p>
                             <h3 class="card__title">Metodos de pago<span class="point">.</span></h3>
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="card"  data-aos="zoom-in">
-                        <img src="img/imagen__3.webp" class="card__img">
+                        <img src="img/seguridad__informatica.webp" class="card__img" al="seguridad,proteccion de datos" >
                         <div class="cards__text">
                             <p class="card__list">Seguridad ante todo</p>
                             <h3 class="card__title">Seguridad<span class="point">.</span></h3>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <div class="background">
-                    <img src="img/background__1.webp" class="background__img">
+                    <img src="img/celular__en__las__manos.webp" class="background__img" alt="persona en la calle con el celular en las manos" >
                     <div class="background__text">
                         <h3 class="background__title">Control</h3>
                         <p class="background__copy">Tienes el control a la hora  de solicitar  tu conductor elegido al instante o puedes resevar el servicio 
@@ -77,7 +77,7 @@
                     </div>
                 </div>
                 <div class="background">
-                    <img src="img/background2.jpg" class="background__img">
+                    <img src="img/conductor.jpg" class="background__img" alt="persona conduciendo un vehiculo">
                     <div class="background__text">
                         <h3 class="background__title">Ayuda y soporte</h3>
                         <p class="background__copy">contamos con un equipo humno dispuesto a resolver tus dudas en el menor tiempo posible</p>

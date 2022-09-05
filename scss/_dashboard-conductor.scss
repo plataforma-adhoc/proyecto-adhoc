@@ -13,6 +13,23 @@ line-height: 200px;
 font-size: $tamaño__fuente__subtitulo;
 }
 
+
+.btn__recargar{
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  width: 38px;
+  height: 38px;
+  border-radius:50%;
+  margin-right: 20px;
+  background:$color__menu__dashboard;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin-top: -5px;
+  line-height:35px;
+  font-size: 20px;
+}
 .cards__dashboard{
     margin: 50px 0 0 0;
     width: 23%;
@@ -241,6 +258,7 @@ text-align: center;
 
 .imagen__celebracion{
   width: 60%;
+  margin-bottom: 70px;
  
 }
 

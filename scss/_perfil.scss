@@ -20,7 +20,7 @@
     border-radius: 100px;
     position: absolute;
     top: 100px;
-    left: 200px;
+    left: 13%;
 }
 
 .btn__back:hover{
@@ -45,10 +45,12 @@
 }
 
 .foto__de__perfil{
-    width: 70%;
-    height:300px;
-    border-radius: 25px;
+    width: 60%;
+    height:200px;
+    border-radius: 100%;
     text-align: center;
+    margin: auto;
+  
 }
 
 .redes__sociales{
@@ -111,7 +113,7 @@ text-decoration: 0;
 display: inline-block;
 color:white;
 padding: 12px;
-width: 250px;
+width: 200px;
 text-align: center;
 border-radius: 7px;
 background:$color__verde;
@@ -283,6 +285,7 @@ color: yellow;
     background-color:$color__fondo;
     margin-left: 1rem;
     color: white;
+    width: 90%;
     
 }
 
@@ -340,6 +343,7 @@ height: auto;
 }
 
 
+
 // @media screen and(max-width:1300px) {
 //    .contenedor__datos__perfil{
 //     width: 90%;
@@ -351,6 +355,11 @@ height: auto;
    
 // }
 
+@media screen and(max-width:1500px) {
+    .btn__back{
+        left: 5%;
+      }   
+}
 
 @media screen and (max-width:900px) {
   .info__perfil{
@@ -358,7 +367,9 @@ height: auto;
   } 
   .btn__back{
     left: 5%;
-  } 
+  }
+ 
+   
 }
 
 

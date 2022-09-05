@@ -18,7 +18,7 @@ $ejecutar__consulta__notificaciones = mysqli_query($conexion__db__accent,$consul
     ?>
     <div class="contenido__notificacion">
     
-            <a href="./perfil-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>"class="enlaces__ver__notificacion enlace__notificacion__individual">
+            <a href="./perfil-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>#opinion1"class="enlaces__ver__notificacion enlace__notificacion__individual">
                 <img src="upload/<?php echo $fila__datos__usuario['avatar'] ?>" alt="" class="avatar__perfil">
                 <div class="datos datos__de__notificacion"> <?php echo $fila__datos__usuario['nombre_conductor'] ?> ha hecho un comentario <i
                         class="fas fa-comment-alt"></i> <br>

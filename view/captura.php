@@ -40,7 +40,7 @@ if(is_array($datos)){
         $precio__descuento  =  $precio__producto - (($precio__producto * $descuento__producto) / 100) ;
 
         $sql__insert = "INSERT INTO detalles__de__la__compra(id_compra,id_servicio,id_usuario,id_conductor,nombre_servicio,precio_compra,cantidad_compra,descripcion)
-        VALUES('$id__compra','$id__usuario','$id__conductor','$clave','$nombre__servicio',' $precio__descuento','$cantidad','$descripcion')";
+        VALUES('$id__compra','$clave','$id__usuario','$id__conductor','$nombre__servicio',' $precio__descuento','$cantidad','$descripcion')";
 
         $ejecutar__consulta = mysqli_query($conexion__db__accent,$sql__insert);
      if($ejecutar__consulta){

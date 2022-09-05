@@ -20,7 +20,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página web AlexCG Design</title>
+  <title>Conductor elegido | <?php echo $datos__resultado['nombre_conductor']  ?></title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/app.css">
@@ -42,6 +42,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                  $total__notificaciones = mysqli_num_rows($ejecutar__consulta) ?>
 
         <div class="enlaces__varios">
+    <button type="button" onclick="location.reload()" class="btn__recargar"><i class="fas fa-sync" title="recargar"></i></button>
           <a href="./perfil-conductor?id=<?php echo $datos__resultado['id_conductor'] ?>"
             class="enlace__perfil__usuario"><img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt=""
               class="avatar__perfil"></a>
