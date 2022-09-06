@@ -39,18 +39,18 @@
       $mail = new PHPMailer(true);
       try {
           //Server settings
-          // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                    
+          $mail->SMTPDebug = SMTP::DEBUG_SERVER;                    
           $mail->isSMTP();                                           
-          $mail->Host       = '	smtp.office365.com';                  
+          $mail->Host       = 'smtp.gmail.com';                  
           $mail->SMTPAuth   = true;                                 
-          $mail->Username   = 'luisrbn10@outlook.es';                   
-          $mail->Password   = 'Luisruben1073992580';                            
+          $mail->Username   = 'soporteaccent@gmail.com';                   
+          $mail->Password   = 'khsrvhkxqxxbbhba';                            
           // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  
           $mail->SMTPSecure = 'tls';        
-          $mail->Port       = 587;  
+          $mail->Port       =  587;  
                                   
           //Recipients
-          $mail->setFrom('luisrbn10@outlook.es', 'Accent Corporation ');
+          $mail->setFrom('soporteaccent@gmail.com', 'Ad Hoc ');
           $mail->addAddress($email__contrasena,$resultado__fila['nombre_usuario'] );                  
        
       

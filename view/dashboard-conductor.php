@@ -9,8 +9,12 @@ $saldo__total = 0;
 $consulta__datos__servicio = "SELECT *  FROM detalles__de__la__compra WHERE id_conductor = '{$_SESSION['id_conductor']}'";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos__servicio);
 $resultado = mysqli_num_rows($ejecutar__consulta); 
-while($fila__resultado__servicios = mysqli_fetch_array($ejecutar__consulta)){
-  $saldo__actual = $fila__resultado__servicios['precio_compra'];
+
+$consulta__seleccion__saldo = "SELECT precio_compra FROM detalles__de__la__compra  WHERE id_conductor = '{$_SESSION['id_conductor']}' AND estado_pago = '0'";
+$resultado__seleccion__saldo = mysqli_query($conexion__db__accent,$consulta__seleccion__saldo);
+
+while($fila__resultado__saldo = mysqli_fetch_array($resultado__seleccion__saldo)){
+  $saldo__actual = $fila__resultado__saldo['precio_compra'];
   $descuento =  $saldo__actual * 0.25;
   $subtotal = $saldo__actual - $descuento;
   $saldo__total += $subtotal;
