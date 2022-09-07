@@ -6,7 +6,7 @@ RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteCond %{REQUEST_URI} ^/404/$
 RewriteRule ^(.*)$ $1.php
 
-ErrorDocument 404 /accent__hollding/view/404
+ErrorDocument 404 /accent__hollding/404
 </IfModule>
 
 
