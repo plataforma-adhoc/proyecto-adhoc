@@ -27,7 +27,7 @@
   	 		<div class="footer-col">
   	 			<h4>Acerca de la empresa</h4>
   	 			<ul>
-           <li><a href="./quienes-somos">quienes somos</a></li>
+           <li><a href="quienes-somos.php">quienes somos</a></li>
   	 				<li><a href="terminos-y-condiciones-de-uso.php">Terminos y condiciones</a></li>
   	 				<li><a href="politicas-de-privacidad.php">Politicas de privacidad</a></li>
   	 			</ul>
