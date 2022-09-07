@@ -1,6 +1,6 @@
 
 <?php  include'layout/nav-home-conductor.php'; 
-include'conexion/conexion-db-accent.php';
+include'conexion-db-accent.php';
 
 $id__conductor = isset($_GET['id']) ?  $_GET['id']: '';
 if($id__conductor ===""){

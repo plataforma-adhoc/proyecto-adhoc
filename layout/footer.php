@@ -20,7 +20,7 @@
   	 				<!-- <li><a href="#">shipping</a></li>
   	 				<li><a href="#">returns</a></li>
   	 				<li><a href="#">order status</a></li> -->
-  	 				<li><a href="./funcionamiento">Como funciona</a></li>
+  	 				<li><a href="/funcionamiento">Como funciona</a></li>
   	 				<li><a href="#">Opciones de pago</a></li>
   	 			</ul>
   	 		</div>
@@ -28,7 +28,7 @@
   	 			<h4>Acerca de la empresa</h4>
   	 			<ul>
            <li><a href="./quienes-somos">quienes somos</a></li>
-  	 				<li><a href="./terminos-y-condiciones-de-uso">Terminos y condiciones</a></li>
+  	 				<li><a href="/terminos-y-condiciones-de-uso">Terminos y condiciones</a></li>
   	 				<li><a href="./politicas-de-privacidad">Politicas de privacidad</a></li>
   	 			</ul>
   	 		</div>

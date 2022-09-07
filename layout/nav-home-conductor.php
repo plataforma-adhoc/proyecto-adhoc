@@ -35,7 +35,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
     <nav class="nav__hero">
       <div class="container nav__container">
         <div class="logo">
-          <a href="./dashboard-conductor"><img src="./img/logo.png" alt="" class="logo__accent"></a>
+          <a href="dashboard-conductor"><img src="./img/logo.png" alt="" class="logo__accent"></a>
         </div>
         <?php  $consulta__comentarios = "SELECT * FROM notificaciones__conductor WHERE id_conductor = '{$_SESSION['id_conductor']}' AND leido = '0'  ORDER BY id_notificacion DESC LIMIT 5";
                 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);

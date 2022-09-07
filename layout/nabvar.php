@@ -18,7 +18,7 @@
     <nav class="nav__hero">
       <div class="container nav__container">
       <div class="logo">
-            <a href="./"><img src="./img/logo.png" alt="" class="logo__accent"></a>
+            <a href="/"><img src="./img/logo.png" alt="" class="logo__accent"></a>
             <!-- <p class="texto__beta beta__home">BETA</p> -->
               
         </div>
@@ -40,25 +40,25 @@
             <ul class="nav-links">
               <li class="nav-link">
               <i class="fas fa-house-user"></i>
-                <a href="./">Inicio</a>
+                <a href="/">Inicio</a>
               </li>
               <li class="nav-link">
               
               <i class="fas fa-user-astronaut"></i>
-                  <a href="./usuario">Crear un registro de usuario</a>
+                  <a href="usuario">Crear un registro de usuario</a>
               </li>
               <li class="nav-link">
               <i class="fas fa-sign-in-alt"></i>
-                <a href="./login-usuario">Loguearme como usuario</a>
+                <a href="login-usuario">Loguearme como usuario</a>
               </li>
               <li class="nav-link">
               <i class="fas fa-user-astronaut"></i>
-                <a href="./conductor">Recibir solicitudes</a>
+                <a href="conductor">Recibir solicitudes</a>
 
               </li>
               <li class="nav-link">
               <i class="fas fa-sign-in-alt"></i>
-                <a href="./login-conductor">Loguearme como conductor</a>
+                <a href="login-conductor">Loguearme como conductor</a>
               </li>
             </ul>
             <div class="nav-images">
