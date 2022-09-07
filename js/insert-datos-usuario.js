@@ -182,7 +182,7 @@
         evento.preventDefault();
         
         let data = new FormData(document.getElementById('formulario-registro-usuario'))
-        fetch('insert-datos-usuario.php',{
+        fetch('./insert-datos-usuario.php',{
             method:'POST',
             body:data
         }).then(respuesta => respuesta.json())
@@ -249,7 +249,7 @@ export function  insert__login__usuario(){
         evento.preventDefault();
         
         let datos = new FormData(document.getElementById('formulario-login'));
-        fetch('insert-login-usuario',{
+        fetch('insert-login-usuario.php',{
             method:'POST',
             body:datos
 
