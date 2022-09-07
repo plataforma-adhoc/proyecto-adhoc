@@ -2,7 +2,7 @@
 
 $id = isset($_GET['idc']) ? $_GET['idc'] : '';
 if($id ==="" || $id !=$id){
-header("Location:./dashboard-usuario");
+header("Location: dashboard-usuario.php");
 }
 $consulta__datos__conductor = "SELECT * FROM conductores WHERE id_conductor = '$id' LIMIT 1";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos__conductor);
@@ -27,7 +27,7 @@ $resultado = mysqli_fetch_array($ejecutar__consulta);
 
         </div>
 
-        <a href="./servicios?idc=<?php  echo $resultado['id_conductor']  ?>" class="enlace__editar__perfil">Solicitar </a>
+        <a href="servicios.php?idc=<?php  echo $resultado['id_conductor']  ?>" class="enlace__editar__perfil">Solicitar </a>
         <br><br>
         <p class="datos__basicos">Conductor disponible</p>
     </div>

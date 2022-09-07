@@ -4,7 +4,7 @@ include'conexion-db-accent.php';
 
 $id__conductor = isset($_GET['id']) ?  $_GET['id']: '';
 if($id__conductor ===""){
- header("Location: ./dashboard-conductor");
+ header("Location: dashboard-conductor.php");
  exit;
 } 
 
@@ -41,7 +41,7 @@ if(mysqli_num_rows($resultado__consulta) > 0){
 
         </div>
 
-        <a href="./edit-perfil-conductor?id=<?php echo $datos__resultado__conductor['id_conductor'] ?>" class="enlace__editar__perfil">Editar mi perfil <i
+        <a href="edit-perfil-conductor.php?id=<?php echo $datos__resultado__conductor['id_conductor'] ?>" class="enlace__editar__perfil">Editar mi perfil <i
                 class="fas fa-long-arrow-alt-right"></i></a>
     </div>
     <div class="info__perfil">

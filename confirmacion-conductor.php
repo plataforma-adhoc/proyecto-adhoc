@@ -30,7 +30,7 @@ include'layout/nabvar.php';
      <h1 class="titulo__actualizacion">Tu contraseña se actualizo con exito</h1>
     </div>
     <div class="contenedor__enlace__iniciar__sesion">
-        <a href="./login-conductor" class="enlace__iniciar__sesion">iniciar sesion</a>
+        <a href="login-conductor.php" class="enlace__iniciar__sesion">iniciar sesion</a>
     </div>
   
  

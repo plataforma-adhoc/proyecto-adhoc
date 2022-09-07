@@ -2,7 +2,7 @@
 
 $id = $_GET['idu'] ? $_GET['idu']:'';
 if($id =! $id || $id ===""){
- header('Location: ./dashboard-usuario');
+ header('Location: dashboard-usuario.php');
 }
 
 ?>
@@ -23,7 +23,7 @@ if($id =! $id || $id ===""){
             </div>
 
         </a>
-        <a href="./eliminar-cuenta-usuario?id=<?php echo $datos__resultado['id_usuario'] ?>"
+        <a href="./eliminar-cuenta-usuario.php?id=<?php echo $datos__resultado['id_usuario'] ?>"
             class="card__configuracion eliminar__cuenta animate__animated animate__bounceInDown">
             <div>
                 <h3 class="titulo__item__configuracion">Eliminar mi cuenta</h3>

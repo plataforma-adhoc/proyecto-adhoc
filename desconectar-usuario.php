@@ -5,11 +5,11 @@ function cerrar__sesion(){
     if($id__usuario){
         echo $id__usuario;
             session_unset();
-            header('Location:./login-usuario');
+            header('Location: login-usuario.php');
             exit;
 
     }else{
-        header('Location:./login-usuario');
+        header('Location: login-usuario.php');
         
 
     }

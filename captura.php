@@ -1,6 +1,6 @@
 <?php
 include'config/config.php'; 
-include'conexion/conexion-db-accent.php';
+include'conexion-db-accent.php';
 session_start();
 $json =  file_get_contents('php://input');
 $datos = json_decode($json,true);

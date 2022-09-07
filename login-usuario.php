@@ -29,8 +29,8 @@
             <input type="submit" value="INGRESAR" class="boton__registro" name="enviar">
         </div>
         <div class="contenedor__enlace__sesion block">
-        <div><a href="./usuario" class="enlace___login">Registrarme </a></div>
-            <div> <a href="./password-usuario" class="enlace___login">Olvide mi contraseña </a></div>
+        <div><a href="usuario.php" class="enlace___login">Registrarme </a></div>
+            <div> <a href="password-usuario.php" class="enlace___login">Olvide mi contraseña </a></div>
         </div>
     </div>
 </form>

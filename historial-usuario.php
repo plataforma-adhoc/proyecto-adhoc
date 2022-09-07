@@ -49,7 +49,7 @@ $resultado__datos__conductor = mysqli_fetch_array($ejecutar__consulta__datos__co
             <div>
                 <p class="datos__basicos"><strong>Telefono :</strong>  <?php  echo $resultado__datos__conductor['numero_telefono'] ?></p>
             </div>
-            <a href="./eliminar-historial-conductor?id=<?php echo $resultado__servicios['id'] ?>" class="enlace__eliminar__historial">Eliminar <i class="fas fa-trash-alt"></i></a>
+            <a href="eliminar-historial-conductor.php?id=<?php echo $resultado__servicios['id'] ?>" class="enlace__eliminar__historial">Eliminar <i class="fas fa-trash-alt"></i></a>
           <br><br>
             <p class="parrafo__info"><i class="fas fa-info-circle"></i> si eliminas este historial no sera posible recuperarlo</p>
         </div>

@@ -17,7 +17,7 @@
         La suscripción a boletines de correos electrónicos es voluntaria y se le dará la opción de seleccionarla al
         momento de crear su cuenta y en cualquier momento usted podrá darse de baja.
         Es necesario acotar que la presente política forma parte de nuestros Términos y Condiciones que podrán encontrar
-        en <a href="./terminos-y-condiciones-de-uso" class="enlace__a__terminos"> Terminos y condiciones de uso</a>.
+        en <a href="terminos-y-condiciones-de-uso.php" class="enlace__a__terminos"> Terminos y condiciones de uso</a>.
         Asimismo, la empresa se reserva los derechos de modificar la Política de Privacidad sin previo aviso.
     </P>
     <br><br>

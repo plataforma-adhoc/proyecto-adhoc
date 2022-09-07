@@ -10,7 +10,7 @@ function insertar__cancelar__servicio(){
     $ejecutar__consulta = mysqli_query($conexion__db__accent,$insert__datos__recorrido);
     if($ejecutar__consulta){
      echo json_encode('true');
-     header("Location: ./mis-solicitudes?idc=$id__conductor");
+     header("Location: mis-solicitudes.php?idc=$id__conductor");
              
     }else{
       echo   json_encode('false');

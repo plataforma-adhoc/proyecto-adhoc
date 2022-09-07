@@ -3,7 +3,7 @@ include'conexion-db-accent.php';
 
 $id_usuario = isset($_GET['id']) ? $_GET['id']:'';
 if($id_usuario ===""){
-  header("Location: ./dashboard-usuario");
+  header("Location: dashboard-usuario.php");
   exit;
 }
 
@@ -41,7 +41,7 @@ if(mysqli_num_rows($resultado__consulta__datos__conductor) > 0){
              <?php } ?>
                     
             </div>
-        <a href="./edit-perfil-usuario?id=<?php echo $datos__resultado['id_usuario'] ?>" class="enlace__editar__perfil">Editar perfil <i class="fas fa-long-arrow-alt-right"></i></a>
+        <a href="edit-perfil-usuario.php?id=<?php echo $datos__resultado['id_usuario'] ?>" class="enlace__editar__perfil">Editar perfil <i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
         <div class="info__perfil">
         <p class="biografia__detallada">Biografia detallada</p>

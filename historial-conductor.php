@@ -1,7 +1,7 @@
 <?php  include'layout/nav-home-conductor.php';
 $id__conductor = isset($_GET['id']) ? $_GET['id']: 0;
 if($id__conductor ===""){
-  header("Location: ./dashboard-conductor");
+  header("Location: dashboard-conductor.php");
   exit;
 }
 $consulta__datos__servicio = "SELECT *  FROM detalles__de__la__compra WHERE id_conductor = '{$_SESSION['id_conductor']}'";
@@ -60,7 +60,7 @@ if(mysqli_num_rows($ejecutar__consulta__servicios) > 0) {
             <div>
                 <p class="datos__basicos"><strong>Fecha de registro :</strong>  <?php  echo date("d-m-Y", strtotime($resultado__datos__usuario['fecha_de_registro']))?></p>
             </div>
-            <a href="./eliminar-historial-conductor?id=<?php echo $resultado__servicio['id'] ?>" class="enlace__eliminar__historial">Eliminar <i class="fas fa-trash-alt"></i></a>
+            <a href="eliminar-historial-conductor.php?id=<?php echo $resultado__servicio['id'] ?>" class="enlace__eliminar__historial">Eliminar <i class="fas fa-trash-alt"></i></a>
           <br><br>
             <p class="parrafo__info"><i class="fas fa-info-circle"></i> si eliminas este historial no sera posible recuperarlo</p>
         </div>

@@ -20,7 +20,7 @@ include'conexion-db-accent.php';
   if(mysqli_num_rows($ejecutar__consulta) > 0){ ?>
    <?php while($fila__datos__resultado = mysqli_fetch_array($ejecutar__consulta)){ ?>
       <div class="card__del__conductor">
-      <a href="./info-conductor?idc=<?php  echo $fila__datos__resultado['id_conductor']  ?>"class="card__perfiles__dashboard" data-aos="zoom-in">
+      <a href="info-conductor.php?idc=<?php  echo $fila__datos__resultado['id_conductor']  ?>"class="card__perfiles__dashboard" data-aos="zoom-in">
     <img src="upload/<?php  echo $fila__datos__resultado['avatar']  ?>" alt="Avatar" class="imagen__del__conductor">
    <div class="datos__del__conductor">
     <br>
@@ -54,7 +54,7 @@ if($estado__recorrido['estado_recorrido'] ==='Recorrido terminado') {?>
   <div>
     <h4 class="subtitulo__estado__recorrido">Tu servicio de conductor elegido acaba de terminar</h4>
     <p class="parrafo__recorrido">Dejanos saber tu opinion sobres el conductor que elegiste </p>
-     <a href="./perfil-usuario?id=<?php  echo $datos__resultado['id_usuario']  ?>#opinion1" class="btn__dejar__opinion ">Dejar mi opinion</a>
+     <a href="perfil-usuario.php?id=<?php  echo $datos__resultado['id_usuario']  ?>#opinion1" class="btn__dejar__opinion ">Dejar mi opinion</a>
   </div>
 </div>
 

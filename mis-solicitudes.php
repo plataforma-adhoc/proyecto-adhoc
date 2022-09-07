@@ -50,7 +50,7 @@ if($id__conductor && $id__solicitud){
    <?php  if($resultado__inicio__servicio['estado_recorrido'] == NULL ){ ?>
     <br><br>
         <div class="contenedor__btn__recorridos">
-      <form  action="./insertar-inicio-recorrido" method="POST">
+      <form  action="insertar-inicio-recorrido.php" method="POST">
        <input type="hidden" value="<?php  echo $_SESSION['id_conductor'] ?>" name="idConductor">
        <input type="hidden" value="<?php  echo $id__solicitud ?>" name="idSolicitud">
        <button class="enlaces__servicios iniciar" name="iniciar-servicio">Iniciar servicio</button>
@@ -61,7 +61,7 @@ if($id__conductor && $id__solicitud){
       <?php  if($resultado__inicio__servicio['estado_recorrido'] ==='Iniciado'){ ?>
         <br><br>
         <div class="contenedor__btn__recorridos">
-        <form action="./terminar-servicio" method="POST">
+        <form action="terminar-servicio.php" method="POST">
         <input type="hidden" value="<?php  echo $_SESSION['id_conductor'] ?>" name="idConductor">
        <input type="hidden" value="<?php  echo $id__solicitud ?>" name="idSolicitud">
           <button class="enlaces__servicios terminar" name ="terminar-servicio">Terminar servicio</button>

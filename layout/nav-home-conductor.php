@@ -67,7 +67,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
               </div>
               <ul class="nav-links">
                 <li class="nav-link">
-                  <a href="./perfil-conductor?id=<?php echo $datos__resultado['id_conductor'] ?>"
+                  <a href="perfil-conductor.php?id=<?php echo $datos__resultado['id_conductor'] ?>"
                     class="enlaces__menu__home">
                     <img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil">
                   </a>
@@ -77,29 +77,29 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                 </li>
                 <li class="nav-link">
                   <i class="fas fa-home"></i>
-                  <a href="./dashboard-conductor">Home</a>
+                  <a href="dashboard-conductor.php">Home</a>
 
                 </li>
                 <li class="nav-link">
                   <i class="fas fa-history"></i>
-                  <a href="./historial-conductor?idc=<?php echo $datos__resultado['id_conductor'] ?>"
+                  <a href="historial-conductor.php?idc=<?php echo $datos__resultado['id_conductor'] ?>"
                     class="enlaces__menu__home">Mi historial</a>
                 </li>
                 <li class="nav-link">
                   <i class="fas fa-cogs"></i>
-                  <a href="./configuracion-conductor?id=<?php  echo $datos__resultado['id_conductor'] ?>">
+                  <a href="configuracion-conductor.php?id=<?php  echo $datos__resultado['id_conductor'] ?>">
                     Configuracion</a>
 
                 </li>
                 <li class="nav-link">
                 <i class="fas fa-mail-bulk"></i>
-                  <a href="./ayudanos-a-mejorar">
+                  <a href="ayudanos-a-mejorar.php">
                     Ayudanos a mejorar</a>
 
                 </li>
                 <li class="nav-link">
                   <i class="fas fa-power-off"></i>
-                  <a href="./desconectar-conductor?id=<?php  echo $datos__resultado['id_conductor'] ?>">Cerrar
+                  <a href="desconectar-conductor.php?id=<?php  echo $datos__resultado['id_conductor'] ?>">Cerrar
                     sesión</a>
                 </li>
               </ul>
@@ -128,7 +128,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
         $fila__datos = mysqli_fetch_array($ejecutar__consulta__usuario);
         ?>
       <div class="contenido__notificacion">
-        <a href="./notificaciones?id=<?php  echo $fila__recorrido['id_notificacion'] ?>"
+        <a href="notificaciones.php?id=<?php  echo $fila__recorrido['id_notificacion'] ?>"
           class="enlaces__ver__notificacion">
           <img src="upload/<?php echo $fila__datos['avatar'] ?>" alt="" class="avatar__perfil">
           <div class="datos"> <?php echo $fila__datos['nombre_usuario'] ?> ha hecho un comentario <i
@@ -141,7 +141,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
       <?php } ?>
       <br>
       <?php   if(mysqli_num_rows($ejecutar__consulta) > 6){ ?>
-      <a href="./notificaciones" class="enlace__mas__notificaciones"><i class="fas fa-plus"></i> ver mas
+      <a href="notificaciones.php" class="enlace__mas__notificaciones"><i class="fas fa-plus"></i> ver mas
         notificaciones</a>
       <?php } ?>
     </div>

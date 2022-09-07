@@ -7,7 +7,7 @@
                 <p class="copy">Te enviaremos un conductor elegido a la puerta de tu casa en caso de que no te encuentres en condiciones de 
                 conducir tu vehiculo    
                 <span class="copy__active">¡ solicita tu servicio  !</span></p>
-                <a href="./usuario" class="cta">Quiero ser un usuario</a>
+                <a href="usuario.php" class="cta">Quiero ser un usuario</a>
             </div>
         </section>
     </header>
@@ -25,7 +25,7 @@
                             <p class="card__list">Disfruta del momento sin preocupaciones</p>
                             <h3 class="card__title">Entrega las llaves<span class="point">.</span></h3>
                             <p class="card__copy">Entreganos las llaves que nosotros te llevamos a casa sin ningun problema </p>
-                            <a href="./funcionamiento" class="card__button">Quiero ver como funciona</a>
+                            <a href="funcionamiento.php" class="card__button">Quiero ver como funciona</a>
                         </div>
                     </div>
                     <div class="card" data-aos="zoom-in">
@@ -58,7 +58,7 @@
                         <h3 class="card__title">Comodidad <span class="point">.</span></h3>
                         <p class="card__date">Comodidad</p>
                         <p class="card__copy">Pide tu conductor elegido desde tu casa u oficina o donde te encuentres sin importar la hora que sea</p>
-                        <a href="./usuario" class="card__button">Quiero ser usuario</a>
+                        <a href="usuario.php" class="card__button">Quiero ser usuario</a>
                     </div>
                 </div>
                 <div class="background">
@@ -75,7 +75,7 @@
                         <h3 class="card__title">Perfil y experiencia<span class="point">.</span></h3>
                         <p class="card__date">Perfil</p>
                         <p class="card__copy">observa el perfil de cada conductor, su calificacion y comentarios de otros usuarios,  años experiencia como conductor</p>
-                        <a href="./conductor" class="card__button">Quiero ser conductor</a>
+                        <a href="conductor.php" class="card__button">Quiero ser conductor</a>
                     </div>
                 </div>
                 <div class="background">

@@ -1,6 +1,6 @@
 <?php  
 
-include'conexion/conexion-db-accent.php';
+include'conexion-db-accent.php';
 $opciones = isset($_POST['opciones']) ? $_POST['opciones']: '';
 $numero__cuenta  = isset($_POST['numeroCuenta']) ? $_POST['numeroCuenta']: '';
 $id__conductor  = isset($_POST['idConductor']) ? $_POST['idConductor']: '';

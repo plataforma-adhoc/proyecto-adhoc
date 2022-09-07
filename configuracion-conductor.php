@@ -2,7 +2,7 @@
 
 $id = $_GET['id'] ? $_GET['id']:'';
 if($id =! $id || $id ===""){
- header('Location: ./dashboard-conductor');
+ header('Location: dashboard-conductor.php');
 }
 
 ?>
@@ -21,7 +21,7 @@ if($id =! $id || $id ===""){
             </div>
 
         </a>
-        <a href="eliminar-cuenta-conductor?id=<?php  echo $datos__resultado ['id_conductor'] ?>" class="card__configuracion eliminar__cuenta animate__animated animate__bounceInDown" id="eliminar-cuenta">
+        <a href="eliminar-cuenta-conductor.php?id=<?php  echo $datos__resultado ['id_conductor'] ?>" class="card__configuracion eliminar__cuenta animate__animated animate__bounceInDown" id="eliminar-cuenta">
             <div>
                 <h3 class="titulo__item__configuracion">Eliminar mi cuenta</h3>
              <p class="parrafo__item__configuracion">se eliminaran todos tu datos de nuestro sistema</p>

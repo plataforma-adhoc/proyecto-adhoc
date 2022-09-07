@@ -1,6 +1,6 @@
 <?php 
 function insert__datos__edit__perfil__usuario(){
-include'conexion/conexion-db-accent.php';
+include'conexion-db-accent.php';
 $id__usuario = isset($_POST['id']) ? $_POST['id']: '';
 if($id__usuario){
     $consulta__datos = "SELECT * FROM  usuarios WHERE id_usuario = '$id__usuario' LIMIT 1";

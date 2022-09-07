@@ -27,7 +27,7 @@ while($fila__resultado__saldo = mysqli_fetch_array($resultado__seleccion__saldo)
     <h2 class="vista__nombre__usuario"><i class="fas fa-user-astronaut"></i> Hola <strong><?php echo $datos__resultado['nombre_conductor'] ?></strong></h2>
     <h2 class="titulo__dashboard"><i class="fas fa-sitemap"></i> Estadisticas principales</h2>
     <div class="contenedor__cards__dashboard">
-        <a href="./saldo" class="cards__dashboard animate__animated  animate__bounceInDown">
+        <a href="saldo.php" class="cards__dashboard animate__animated  animate__bounceInDown">
             <div>
                 <p class="item__titulo__cards"><i class="fas fa-coins"></i> Tu saldo</p>
                 <?php  if($saldo__total != NULL){?>
@@ -39,7 +39,7 @@ while($fila__resultado__saldo = mysqli_fetch_array($resultado__seleccion__saldo)
                 <span class="item__disponible">Disponible</span>
             </div>
         </a>
-        <a href="./historial-conductor?id=<?php  echo $datos__resultado['id_conductor']  ?>"  class="cards__dashboard animate__animated  animate__bounceInDown">
+        <a href="historial-conductor.php?id=<?php  echo $datos__resultado['id_conductor']  ?>"  class="cards__dashboard animate__animated  animate__bounceInDown">
             <div>
                 <p class="item__titulo__cards"><i class="fab fa-creative-commons-zero"></i> Total servicos</p>
                 <h2 class="item__total"><?php echo $resultado;  ?></h2>
@@ -56,7 +56,7 @@ while($fila__resultado__saldo = mysqli_fetch_array($resultado__seleccion__saldo)
         $total__servicios__completados = mysqli_num_rows($ejecutar__consulta__estado);
        
         ?>
-        <a href="./servicio-completado?idc=<?php   echo $datos__resultado['id_conductor']?>" class="cards__dashboard animate__animated  animate__bounceInDown">
+        <a href="servicio-completado.php?idc=<?php   echo $datos__resultado['id_conductor']?>" class="cards__dashboard animate__animated  animate__bounceInDown">
             <div>
             <p class="item__titulo__cards"><i class="fas fa-thumbs-up"></i> Servicios completados</p>
             <h2 class="item__total"><?php echo $total__servicios__completados  ?></h2>
@@ -79,7 +79,7 @@ while($fila__resultado__saldo = mysqli_fetch_array($resultado__seleccion__saldo)
         $id_solicitud  = mysqli_fetch_array($ejecutar__consulta__id);
         ?>
 
-        <a href="./mis-solicitudes?idc=<?php echo $datos__resultado['id_conductor'] ?>&ids=<?php echo $id_solicitud['id'] ?>" class="cards__dashboard nuevo__servicio animate__animated  animate__bounceInDown">
+        <a href="mis-solicitudes.php?idc=<?php echo $datos__resultado['id_conductor'] ?>&ids=<?php echo $id_solicitud['id'] ?>" class="cards__dashboard nuevo__servicio animate__animated  animate__bounceInDown">
         <div>  
                 <p class="item__titulo__cards"><i class="fas fa-plus"></i> Total solicitudes</p>
                <span class="nueva__notificacion"> <?php  echo $total__solicitudes ?></span>
@@ -133,7 +133,7 @@ if($estado__recorrido['estado_recorrido'] ==='Recorrido terminado') {?>
   <div>
     <h4 class="subtitulo__estado__recorrido">Completaste un nuevo recorrido</h4>
     <p class="parrafo__recorrido">Dejanos saber tu opinion sobre el usuario que acabas de dejar </p>
-      <a href="./perfil-conductor?id=<?php  echo $datos__resultado['id_conductor']  ?>#opinion" class="btn__dejar__opinion ">Dejar mi opinion</a>
+      <a href="perfil-conductor.php?id=<?php  echo $datos__resultado['id_conductor']  ?>#opinion" class="btn__dejar__opinion ">Dejar mi opinion</a>
   </div>
 </div>
 

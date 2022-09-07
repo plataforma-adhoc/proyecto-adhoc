@@ -65,7 +65,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
               </div>
               <ul class="nav-links">
                 <li class="nav-link">
-                  <a href="perfil-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>"
+                  <a href="perfil-usuario.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>"
                     class="enlaces__menu__home">
                     <img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil">
                   </a>
@@ -75,12 +75,12 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                 </li>
                 <li class="nav-link">
                   <i class="fas fa-home"></i>
-                  <a href="dashboard-usuario">Home</a>
+                  <a href="dashboard-usuario.php">Home</a>
 
                 </li>
                 <li class="nav-link">
                   <i class="fas fa-history"></i>
-                  <a href="historial-usuario?idu=<?php echo $datos__resultado['id_usuario'] ?>"
+                  <a href="historial-usuario.php?idu=<?php echo $datos__resultado['id_usuario'] ?>"
                     class="enlaces__menu__home">Mi historial</a>
                 </li>
                 <li class="nav-link">
@@ -97,7 +97,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                 </li>
                 <li class="nav-link">
                   <i class="fas fa-power-off"></i>
-                  <a href="desconectar-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>">Cerrar
+                  <a href="desconectar-usuario.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>">Cerrar
                     sesión</a>
                 </li>
               </ul>
@@ -139,7 +139,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
         $fila__datos = mysqli_fetch_array($ejecutar__consulta__usuario);
         ?>
                 <div class="contenido__notificacion">
-                <a href="notificaciones-usuario?id=<?php  echo $fila__recorrido['id_notificacion'] ?>"class="enlaces__ver__notificacion">
+                <a href="notificaciones-usuario.php?id=<?php  echo $fila__recorrido['id_notificacion'] ?>"class="enlaces__ver__notificacion">
                     <img src="upload/<?php echo $fila__datos['avatar'] ?>" alt="" class="avatar__perfil">
                     <div class="datos"> <?php echo $fila__datos['nombre_conductor'] ?> ha hecho un comentario <i
                             class="fas fa-comment-alt"></i> <br>
@@ -151,7 +151,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
             <?php } ?>
             <br>
             <?php   if(mysqli_num_rows($ejecutar__consulta) > 6){ ?>
-            <a href="notificaciones" class="enlace__mas__notificaciones"><i class="fas fa-plus"></i> ver mas
+            <a href="notificaciones.php" class="enlace__mas__notificaciones"><i class="fas fa-plus"></i> ver mas
                 notificaciones</a>
                 <?php } ?>
         </div>
