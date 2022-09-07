@@ -91,7 +91,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                 </li>
                 <li class="nav-link">
                 <i class="fas fa-mail-bulk"></i>
-                  <a href="ayudanos-a-mejorar">
+                  <a href="ayudanos-a-mejorar.php">
                     Ayudanos a mejorar</a>
 
                 </li>

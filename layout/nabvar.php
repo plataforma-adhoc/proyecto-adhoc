@@ -45,20 +45,20 @@
               <li class="nav-link">
               
               <i class="fas fa-user-astronaut"></i>
-                  <a href="usuario">Crear un registro de usuario</a>
+                  <a href="usuario.php">Crear un registro de usuario</a>
               </li>
               <li class="nav-link">
               <i class="fas fa-sign-in-alt"></i>
-                <a href="login-usuario">Loguearme como usuario</a>
+                <a href="login-usuario.php">Loguearme como usuario</a>
               </li>
               <li class="nav-link">
               <i class="fas fa-user-astronaut"></i>
-                <a href="conductor">Recibir solicitudes</a>
+                <a href="conductor.php">Recibir solicitudes</a>
 
               </li>
               <li class="nav-link">
               <i class="fas fa-sign-in-alt"></i>
-                <a href="login-conductor">Loguearme como conductor</a>
+                <a href="login-conductor.php">Loguearme como conductor</a>
               </li>
             </ul>
             <div class="nav-images">
