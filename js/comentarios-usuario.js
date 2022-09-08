@@ -5,7 +5,7 @@ export function comentarios__usuario(){
         evento.preventDefault();
            let form__data = new FormData(document.getElementById('form-comentario-usuario'))
 
-           fetch('insert-comentarios-usuario',{
+           fetch('insert-comentarios-usuario.php',{
              method:'POST',
              body:form__data
            }).then(respuesta => respuesta.json())
@@ -22,7 +22,7 @@ export function comentarios__usuario(){
 
 export function mostrar__comentario(){
   let xhr  =  new XMLHttpRequest()
-  xhr.open("POST","obtener-comentarios-usuario",true) 
+  xhr.open("POST","obtener-comentarios-usuario.php",true) 
   xhr.onload = () =>{
     if(xhr.readyState === XMLHttpRequest.DONE){
     if(xhr.status === 200){

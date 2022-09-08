@@ -233,13 +233,13 @@ export function insert__datos__conductor(){
         evento.preventDefault();
         
         let data = new FormData(document.getElementById('formulario-registro-conductor'))
-        fetch('insert-datos-conductor',{
+        fetch('insert-datos-conductor.php',{
             method:'POST',
             body:data
         }).then(respuesta => respuesta.json())
         .then(datos =>{
            if(datos === 'true'){
-            window.location.href = './dashboard-conductor';
+            window.location.href = 'dashboard-conductor.php';
 
            }else{
             Swal.fire({
@@ -298,14 +298,14 @@ export function  insert__login__conductor(){
         evento.preventDefault();
         
         let datos = new FormData(document.getElementById('formulario-login-conductor'));
-        fetch('insert-login-conductor',{
+        fetch('insert-login-conductor.php',{
             method:'POST',
             body:datos
 
         }).then(respuesta => respuesta.json())
         .then(data =>{
             if(data ==  'true'){
-                window.location.href = './dashboard-conductor';
+                window.location.href = 'dashboard-conductor.php';
             }else{
                 Swal.fire({
                   background:'#202F36',
@@ -368,7 +368,7 @@ export function insert__datos__edit__perfil__conductor(){
 
     let datos = new FormData( document.getElementById('formulario-edit-perfil'))
     evento.preventDefault();
-     fetch('insert-edit-perfil-conductor',{
+     fetch('insert-edit-perfil-conductor.php',{
       method:'POST',
       body:datos
      }).then(respuesta => respuesta.json())
@@ -392,7 +392,7 @@ export  function actualizar__contrasena(){
     evento.preventDefault();
 
    let data = new FormData( document.getElementById('formulario-actaulizar-contrasena-conductor'));
-    fetch('insert-nueva-contrasena-conductor',{
+    fetch('insert-nueva-contrasena-conductor.php',{
       method:'POST',
       body:data
     }).then(respuesta => respuesta.json())
@@ -438,7 +438,7 @@ export  function actualizar__contrasena(){
 
    let data = new FormData( document.getElementById('formulario-metodo-pago'));
    console.log(data);
-    fetch('insert-metodo-pago',{
+    fetch('insert-metodo-pago.php',{
       method:'POST',
       body:data
     }).then(respuesta => respuesta.json())
@@ -530,7 +530,7 @@ if(span){
      evento.preventDefault();
 
      let form__data = new FormData(document.getElementById('form-conectarse'))
-    fetch('conectarse',{
+    fetch('conectarse.php',{
       method:'POST',
       body:form__data
     }).then(respuesta => respuesta.json())
@@ -551,7 +551,7 @@ if(span){
      evento.preventDefault();
 
      let form__data = new FormData(document.getElementById('form-desconectarse'))
-    fetch('desconectarse',{
+    fetch('desconectarse.php',{
       method:'POST',
       body:form__data
     }).then(respuesta => respuesta.json())

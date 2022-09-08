@@ -256,7 +256,7 @@ export function  insert__login__usuario(){
         }).then(respuesta => respuesta.json())
         .then(data =>{
             if(data ==  'true'){
-                window.location.href = './dashboard-usuario.php';
+                window.location.href = 'dashboard-usuario.php';
             }else{
                 Swal.fire({
                   background:'#202F36',
@@ -373,7 +373,7 @@ export  function actualizar__contrasena__usuario(){
             title: `Tu proceso se ha completado con exito`
           
           })
-          window.location.href='./dashboard-usuario'
+          window.location.href='dashboard-usuario.php'
 
         }else{
           Swal.fire({

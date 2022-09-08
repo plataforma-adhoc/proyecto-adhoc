@@ -4,7 +4,7 @@ export  function insertar__sugerencia__usaurio(){
     form__susgrencia.addEventListener('submit',function(evento){
         let data = new FormData(document.getElementById('form-sugerencias'))
         evento.preventDefault();
-        fetch('insert-sugerencia',{
+        fetch('insert-sugerencia.php',{
             method:'POST',
             body:data
         }).then(respuesta => respuesta.json())

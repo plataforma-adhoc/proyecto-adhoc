@@ -5,7 +5,7 @@ export function comentarios__conductor(){
         evento.preventDefault();
            let form__data = new FormData(document.getElementById('formulario-comentario-conductor'))
 
-           fetch('insert-comentarios-conductor',{
+           fetch('insert-comentarios-conductor.php',{
              method:'POST',
              body:form__data
            }).then(respuesta => respuesta.json())
@@ -22,7 +22,7 @@ export function comentarios__conductor(){
 
 export function mostrar__comentario__conductor(){
   let xhr  =  new XMLHttpRequest()
-  xhr.open("POST","obtener-comentarios-conductor",true) 
+  xhr.open("POST","obtener-comentarios-conductor.php",true) 
   xhr.onload = () =>{
     if(xhr.readyState === XMLHttpRequest.DONE){
     if(xhr.status === 200){

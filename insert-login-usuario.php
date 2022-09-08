@@ -2,7 +2,6 @@
 function login__usuario(){
     include'conexion-db-accent.php';
     $email = mysqli_real_escape_string($conexion__db__accent,$_POST['email'] ? $_POST['email']: '');
-    $estado = 'disponible';
     $contrasena = mysqli_real_escape_string($conexion__db__accent,$_POST['contrasena'] ? $_POST['contrasena']: '');
     if($email ==="" || $contrasena ===""){
       echo json_encode('No podemos procesar tu solicidtud por falta de datos');
@@ -22,7 +21,6 @@ function login__usuario(){
                 $_SESSION['id_usuario'] = $resultado__consulta__login['id_usuario'];  
                 echo json_encode('true');
 
-                $actalizar__estado = mysqli_query($conexion__db__accent,"UPDATE usuarios SET status = '$estado' WHERE imail = '$email' ");
             }
         
         }else{
