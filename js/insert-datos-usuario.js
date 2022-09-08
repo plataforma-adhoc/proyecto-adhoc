@@ -182,13 +182,13 @@
         evento.preventDefault();
         
         let data = new FormData(document.getElementById('formulario-registro-usuario'))
-        fetch('./insert-datos-usuario.php',{
+        fetch('insert-datos-usuario.php',{
             method:'POST',
             body:data
         }).then(respuesta => respuesta.json())
         .then(datos =>{
            if(datos == 'true'){
-            window.location.href = './dashboard-usuario';
+            window.location.href = 'dashboard-usuario.php';
 
            }else{
             Swal.fire({

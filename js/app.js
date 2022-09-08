@@ -6,9 +6,9 @@ import {abrir__menu,cerrar__menu} from'./usuario.js';
 abrir__menu();
 cerrar__menu();
 
-import { insert__login__usuario,
+import {insert__datos__usuario, insert__login__usuario,
   password__usuario,actualizar__contrasena__usuario,formulario__completar__proceso,modal__cambio__contrasena__usuario,validar__datos__usuario} from './insert-datos-usuario.js';
-// insert__datos__usuario();
+insert__datos__usuario();
 insert__login__usuario();
 password__usuario();
 actualizar__contrasena__usuario();

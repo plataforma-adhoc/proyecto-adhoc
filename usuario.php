@@ -123,32 +123,7 @@
    
 }
 
-let formulario__registro = document.getElementById('formulario-registro-usuario');
-    if(formulario__registro){
-     formulario__registro.addEventListener('submit',function(evento){
-        evento.preventDefault();
-        
-        let data = new FormData(document.getElementById('formulario-registro-usuario'))
-        fetch('insert-datos-usuario.php',{
-            method:'POST',
-            body:data
-        }).then(respuesta => respuesta.json())
-        .then(datos =>{
-           if(datos == 'true'){
-            window.location.href = './dashboard-usuario';
 
-           }else{
-            Swal.fire({
-              background:'#202F36',
-                icon: 'error',
-                title: `${datos}`,
-                footer: 'Esta informacion es importante',
-               
-              })
-           }
-        })
-     })
-    }
 
 
 </script>
