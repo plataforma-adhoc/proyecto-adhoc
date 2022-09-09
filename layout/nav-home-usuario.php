@@ -35,13 +35,13 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
         <nav class="nav__hero">
             <div class="container nav__container">
                 <div class="logo">
-                    <a href="./dashboard-usuario"><img src="./img/logo.png" alt="" class="logo__accent logo__home"></a>
+                    <a href="dashboard-usuario.php"><img src="./img/logo.png" alt="" class="logo__accent logo__home"></a>
                 </div>
                 <?php  $consulta__comentarios = "SELECT * FROM notificaciones__conductor WHERE id_usuario = '{$_SESSION['id_usuario']}' AND leido = '0'  ORDER BY id_notificacion DESC LIMIT 5";
                 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
                  $total__notificaciones = mysqli_num_rows($ejecutar__consulta) ?>
                 <div class="enlaces__varios">
-                   <a href="perfil-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__perfil__usuario"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"></a>
+                   <a href="perfil-usuario.php?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__perfil__usuario"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"></a>
                    <a href="#" class="enlace__notificaciones" id="abrir-modal"><i class="far fa-bell"></i>
             <?php  if($total__notificaciones > 0){ ?><span class="numero__notificaciones">
               <?php   echo $total__notificaciones ?></span> <?php } ?>
@@ -85,7 +85,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                 </li>
                 <li class="nav-link">
                   <i class="fas fa-cogs"></i>
-                  <a href="configuracion-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
+                  <a href="configuracion-usuario.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
                     Configuracion</a>
 
                 </li>

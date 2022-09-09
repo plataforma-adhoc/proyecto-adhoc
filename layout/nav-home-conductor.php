@@ -35,7 +35,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
     <nav class="nav__hero">
       <div class="container nav__container">
         <div class="logo">
-          <a href="dashboard-conductor"><img src="./img/logo.png" alt="" class="logo__accent"></a>
+          <a href="dashboard-conductor.php"><img src="./img/logo.png" alt="" class="logo__accent"></a>
         </div>
         <?php  $consulta__comentarios = "SELECT * FROM notificaciones__conductor WHERE id_conductor = '{$_SESSION['id_conductor']}' AND leido = '0'  ORDER BY id_notificacion DESC LIMIT 5";
                 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
@@ -43,7 +43,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
 
         <div class="enlaces__varios">
     <button type="button" onclick="location.reload()" class="btn__recargar"><i class="fas fa-sync" title="recargar"></i></button>
-          <a href="./perfil-conductor?id=<?php echo $datos__resultado['id_conductor'] ?>"
+          <a href="perfil-conductor.php?id=<?php echo $datos__resultado['id_conductor'] ?>"
             class="enlace__perfil__usuario"><img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt=""
               class="avatar__perfil"></a>
           <a href="#" class="enlace__notificaciones" id="abrir-modal"><i class="far fa-bell"></i>
