@@ -1,10 +1,11 @@
+var url__servidor = 'https://app-prueba-adhoc.herokuapp.com/'
 export  function insertar__sugerencia__usaurio(){
     let form__susgrencia = document.getElementById('form-sugerencias')
     if(form__susgrencia){
     form__susgrencia.addEventListener('submit',function(evento){
         let data = new FormData(document.getElementById('form-sugerencias'))
         evento.preventDefault();
-        fetch('insert-sugerencia.php',{
+        fetch(url__servidor+'insert-sugerencia.php',{
             method:'POST',
             body:data
         }).then(respuesta => respuesta.json())
@@ -30,7 +31,7 @@ export  function insertar__sugerencia__conductor(){
     form__susgrencia.addEventListener('submit',function(evento){
         let data = new FormData(document.getElementById('form-sugerencias-conductor'))
         evento.preventDefault();
-        fetch('insert-sugerencia',{
+        fetch(url__servidor+'insert-sugerencia',{
             method:'POST',
             body:data
         }).then(respuesta => respuesta.json())

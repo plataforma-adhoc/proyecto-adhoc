@@ -1,6 +1,6 @@
 
 
-
+   var url__servidor = 'https://app-prueba-adhoc.herokuapp.com/'
    const inputs =  document.querySelectorAll('#formulario-registro-conductor input');
    const expresiones = {
    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -233,7 +233,7 @@ export function insert__datos__conductor(){
         evento.preventDefault();
         
         let data = new FormData(document.getElementById('formulario-registro-conductor'))
-        fetch('insert-datos-conductor.php',{
+        fetch(url__servidor+'insert-datos-conductor.php',{
             method:'POST',
             body:data
         }).then(respuesta => respuesta.json())
@@ -298,7 +298,7 @@ export function  insert__login__conductor(){
         evento.preventDefault();
         
         let datos = new FormData(document.getElementById('formulario-login-conductor'));
-        fetch('insert-login-conductor.php',{
+        fetch(url__servidor+'insert-login-conductor.php',{
             method:'POST',
             body:datos
 
@@ -328,7 +328,7 @@ export function password__conductor(){
 
     let datos = new FormData( document.getElementById('formulario-contrasena'))
     evento.preventDefault();
-     fetch('insert-contrasena-conductor',{
+     fetch(url__servidor+'insert-contrasena-conductor',{
       method:'POST',
       body:datos
      }).then(respuesta => respuesta.json())
@@ -368,7 +368,7 @@ export function insert__datos__edit__perfil__conductor(){
 
     let datos = new FormData( document.getElementById('formulario-edit-perfil'))
     evento.preventDefault();
-     fetch('insert-edit-perfil-conductor.php',{
+     fetch(url__servidor+'insert-edit-perfil-conductor.php',{
       method:'POST',
       body:datos
      }).then(respuesta => respuesta.json())
@@ -392,7 +392,7 @@ export  function actualizar__contrasena(){
     evento.preventDefault();
 
    let data = new FormData( document.getElementById('formulario-actaulizar-contrasena-conductor'));
-    fetch('insert-nueva-contrasena-conductor.php',{
+    fetch(url__servidor+'insert-nueva-contrasena-conductor.php',{
       method:'POST',
       body:data
     }).then(respuesta => respuesta.json())
@@ -438,7 +438,7 @@ export  function actualizar__contrasena(){
 
    let data = new FormData( document.getElementById('formulario-metodo-pago'));
    console.log(data);
-    fetch('insert-metodo-pago.php',{
+    fetch(url__servidor+'insert-metodo-pago.php',{
       method:'POST',
       body:data
     }).then(respuesta => respuesta.json())
@@ -530,7 +530,7 @@ if(span){
      evento.preventDefault();
 
      let form__data = new FormData(document.getElementById('form-conectarse'))
-    fetch('conectarse.php',{
+    fetch(url__servidor+'conectarse.php',{
       method:'POST',
       body:form__data
     }).then(respuesta => respuesta.json())
@@ -551,7 +551,7 @@ if(span){
      evento.preventDefault();
 
      let form__data = new FormData(document.getElementById('form-desconectarse'))
-    fetch('desconectarse.php',{
+    fetch(url__servidor+'desconectarse.php',{
       method:'POST',
       body:form__data
     }).then(respuesta => respuesta.json())

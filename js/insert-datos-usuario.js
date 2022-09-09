@@ -1,4 +1,4 @@
-  var url__servidor = 'https://pruebaadhoc.000webhostapp.com/'
+  var url__servidor = 'https://app-prueba-adhoc.herokuapp.com/'
    const inputs =  document.querySelectorAll('#formulario-registro-usuario input');
    const expresiones = {
    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -182,7 +182,7 @@
         evento.preventDefault();
         
         let data = new FormData(document.getElementById('formulario-registro-usuario'))
-        fetch('https://app-prueba-adhoc.herokuapp.com/insert-datos-usuario.php',{
+        fetch(url__servidor+'insert-datos-usuario.php',{
             method:'POST',
             body:data
         }).then(respuesta => respuesta.json())
@@ -249,7 +249,7 @@ export function  insert__login__usuario(){
         evento.preventDefault();
         
         let datos = new FormData(document.getElementById('formulario-login'));
-        fetch('insert-login-usuario.php',{
+        fetch(url__servidor+'insert-login-usuario.php',{
             method:'POST',
             body:datos
 

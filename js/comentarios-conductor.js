@@ -1,3 +1,5 @@
+var url__servidor= 'https://app-prueba-adhoc.herokuapp.com/'
+
 export function comentarios__conductor(){
     let form__comentario = document.getElementById('formulario-comentario-conductor');
     if(form__comentario){
@@ -5,7 +7,7 @@ export function comentarios__conductor(){
         evento.preventDefault();
            let form__data = new FormData(document.getElementById('formulario-comentario-conductor'))
 
-           fetch('insert-comentarios-conductor.php',{
+           fetch(url__servidor+'insert-comentarios-conductor.php',{
              method:'POST',
              body:form__data
            }).then(respuesta => respuesta.json())
@@ -22,7 +24,7 @@ export function comentarios__conductor(){
 
 export function mostrar__comentario__conductor(){
   let xhr  =  new XMLHttpRequest()
-  xhr.open("POST","obtener-comentarios-conductor.php",true) 
+  xhr.open("POST",url__servidor+"obtener-comentarios-conductor.php",true) 
   xhr.onload = () =>{
     if(xhr.readyState === XMLHttpRequest.DONE){
     if(xhr.status === 200){
