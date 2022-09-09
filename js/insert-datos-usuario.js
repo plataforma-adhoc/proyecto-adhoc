@@ -1,4 +1,4 @@
-
+  var url__servidor = 'https://pruebaadhoc.000webhostapp.com/'
    const inputs =  document.querySelectorAll('#formulario-registro-usuario input');
    const expresiones = {
    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -182,7 +182,7 @@
         evento.preventDefault();
         
         let data = new FormData(document.getElementById('formulario-registro-usuario'))
-        fetch('insert-datos-usuario.php',{
+        fetch('https://app-prueba-adhoc.herokuapp.com/insert-datos-usuario.php',{
             method:'POST',
             body:data
         }).then(respuesta => respuesta.json())
@@ -279,7 +279,7 @@ export function password__usuario(){
 
     let datos = new FormData( document.getElementById('formulario-contraseña'))
     evento.preventDefault();
-     fetch('insert-contrasena-usuario.php',{
+     fetch(url__servidor+'insert-contrasena-usuario.php',{
       method:'POST',
       body:datos
      }).then(respuesta => respuesta.json())
@@ -318,7 +318,7 @@ export  function actualizar__contrasena__usuario(){
     evento.preventDefault();
 
    let data = new FormData( document.getElementById('formulario-actaulizar-contrasena-usuario'));
-    fetch('insert-nueva-contrasena-usuario.php',{
+    fetch(url__servidor+'insert-nueva-contrasena-usuario.php',{
       method:'POST',
       body:data
     }).then(respuesta => respuesta.json())
@@ -361,7 +361,7 @@ export  function actualizar__contrasena__usuario(){
      formulario__fin__de__compra.addEventListener('submit',function(event){
        event.preventDefault();
        let data = new FormData(document.getElementById('formulario-fin-de-compra'))
-       fetch('insert-datos-fin-compra.php',{
+       fetch(url__servidor+'insert-datos-fin-compra.php',{
         method:'POST',
         body:data
        }).then(respuesta => respuesta.json())
