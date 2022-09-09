@@ -24,7 +24,7 @@ if($nombre__conductor ==="" || $primer__apellido ==="" || $segundo__apellido ===
   $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__conductor__registrado);
   
   if(mysqli_num_rows($resultado__consulta) > 0){
-    echo json_encode('Es impsoble registar un nuevo conductor con ese email');
+    echo json_encode('Es imposible registar un nuevo conductor con ese email');
     
   
   }else{

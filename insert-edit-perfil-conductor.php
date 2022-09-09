@@ -1,11 +1,10 @@
 <?php 
 function insert__datos__edit__perfil__conductor(){
-include'layout/nav-home-conductor.php';
-include'conexion-db-accent.php';
-
-
+    include'conexion-db-accent.php';
+$id__conductor = isset($_GET['id']) ? $_GET['id']:'';
+if($id__conductor){
    
-$consulta__datos = "SELECT * FROM  conductores WHERE id_conductor = '{$_SESSION['id_conductor']}' LIMIT 1";
+$consulta__datos = "SELECT * FROM  conductores WHERE id_conductor = '$id__conductor' LIMIT 1";
 $ejecutar__consulta__conductor = mysqli_query($conexion__db__accent,$consulta__datos);
 $resultado__datos = mysqli_fetch_array($ejecutar__consulta__conductor);
 $id__conductor = $resultado__datos['id_conductor'];
@@ -43,15 +42,15 @@ $id__conductor = $resultado__datos['id_conductor'];
             $ejecutar__consulta = mysqli_query($conexion__db__accent,$actualizar__datos);
 
             if($ejecutar__consulta){
-             echo '<script>
-             window.location.href="edit-perfil-conductor"
-             </script>';
-            
+             header("edit-perfil-conductor.php?id={$resultado__datos['id_conductor']}");
+           echo json_decode('true');
              
+       
             }
             
 
 
+        }  
 }  
 
     

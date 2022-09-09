@@ -19,7 +19,7 @@ if($nombre__usuario ==="" || $primer__apellido ==="" || $segundo__apellido ===""
   
   if(mysqli_num_rows($resultado__consulta) > 0){
     $fila = mysqli_fetch_array($resultado__consulta);
-    echo json_encode('Es impsoble registar un nuevo usuario con ese email');
+    echo json_encode('Es imposible registar un nuevo usuario con ese email');
     
   }else{
   

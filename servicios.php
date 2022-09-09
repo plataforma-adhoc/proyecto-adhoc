@@ -34,7 +34,7 @@
       
       <br><br>
          <div class="botones">
-             <a href="./detalles?ids=<?php echo $fila['id_producto'] ?>&token=<?php echo hash_hmac('sha1',$fila['id_producto'],TOKEN)?>&idc=<?php echo $resultado['id_conductor'] ?>">detalles</a>
+             <a href="detalles.php?ids=<?php echo $fila['id_producto'] ?>&token=<?php echo hash_hmac('sha1',$fila['id_producto'],TOKEN)?>&idc=<?php echo $resultado['id_conductor'] ?>">detalles</a>
              <button type="button" onclick="agregar(<?php echo  $fila['id_producto']?>,'<?php echo hash_hmac('sha1',$fila['id_producto'],TOKEN) ?>')">Agregar</button>
             </div>
             <br>
@@ -47,14 +47,14 @@
 
 <script>
    function agregar(id,token){
-       let url = 'agregar-servicio';
+       let url = 'https://app-prueba-adhoc.herokuapp.com/';
        let form__data = new FormData();
 
        form__data.append('id',id);
        form__data.append('token',token);
      
 
-       fetch(url,{
+       fetch(url+'agregar-servicio',{
        method:'POST',
         body:form__data,
         

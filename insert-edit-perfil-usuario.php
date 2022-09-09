@@ -36,7 +36,7 @@ if($id__usuario){
                 $ejecutar__consulta = mysqli_query($conexion__db__accent,$actualizar__datos);
     
                 if($ejecutar__consulta){
-                    header("Location: ./edit-perfil-usuario?id={$resultado__datos['id_usuario']}");
+                    header("Location: edit-perfil-usuario.php?id={$resultado__datos['id_usuario']}");
                     echo json_encode('true');
                  
                 }

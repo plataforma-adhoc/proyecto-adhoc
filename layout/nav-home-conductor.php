@@ -2,7 +2,7 @@
 include'conexion-db-accent.php';
 session_start();
 if(!isset($_SESSION['id_conductor'])){
-  header("Location: ./login-conductor");
+  header("Location: login-conductor.php");
   die();
 }
 $consulta__datos__conductor = "SELECT *  FROM conductores   WHERE id_conductor = '{$_SESSION['id_conductor']}' LIMIT 1";

@@ -1,23 +1,18 @@
 .contenedor__datos__historial{
-    margin-top: -500px;
+    margin-top: -600px;
   
 }
 .titulo__historial{
  color: white;
- position:absolute;
- top: 200px;
  text-align: center;
- left: 50%;
+
  
 }
 .parrafo__historial{
-    text-align: center;
     color:$color__gris;
-    flex-basis: 100%;
-    position:absolute;
-    top: 250px; 
-    width: 500px;  
-    left: 40%;
+    width: 50%;  
+    margin: 0  auto 0 auto;
+    
 }
 .contenido__historial{
     width: 100%;
@@ -99,10 +94,16 @@ color: white;
 
       .foto__historial{
        margin: auto;
-        width:50%;
+        width:30%;
       }
-      .titulo__historial, .parrafo__historial{
-        display: none;
-      }
+      
+      
      
+}
+
+@media screen and (max-width:700px) {
+    .foto__historial{
+        margin: auto;
+         width:40%;
+       }
 }

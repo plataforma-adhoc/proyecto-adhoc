@@ -2,7 +2,7 @@
 include'conexion-db-accent.php';  
 session_start();
 if(!isset($_SESSION['id_usuario'])){
-  header("Location: ./login-usuario");
+  header("Location: login-usuario.php");
   die();
 }
 $consulta__datos = "SELECT *  FROM usuarios   WHERE id_usuario = '{$_SESSION['id_usuario']}' LIMIT 1";

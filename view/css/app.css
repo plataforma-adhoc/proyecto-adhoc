@@ -2894,18 +2894,25 @@ template {
   }
 }
 .contenedor__datos__historial {
-  margin-top: -600px;
+  margin-top: -500px;
 }
 
 .titulo__historial {
   color: white;
+  position: absolute;
+  top: 200px;
   text-align: center;
+  left: 50%;
 }
 
 .parrafo__historial {
+  text-align: center;
   color: gray;
-  width: 50%;
-  margin: 0 auto 0 auto;
+  flex-basis: 100%;
+  position: absolute;
+  top: 250px;
+  width: 500px;
+  left: 40%;
 }
 
 .contenido__historial {
@@ -2985,13 +2992,7 @@ template {
 
   .foto__historial {
     margin: auto;
-    width: 30%;
-  }
-}
-@media screen and (max-width: 700px) {
-  .foto__historial {
-    margin: auto;
-    width: 40%;
+    width: 10%;
   }
 }
 .contendor__datos__servicio {
