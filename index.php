@@ -1,6 +1,4 @@
-<?php  include'layout/nabvar.php'; 
-
-?> 
+<?php  include'layout/nabvar.php'; ?> 
         <section class=" hero__main">  
             <div class=" container hero__textos">
                 <h1 class="title">La mejor <span class="title--active">Experiencia tras el volante.</span></h1> 
@@ -28,7 +26,7 @@
                             <a href="funcionamiento.php" class="card__button">Quiero ver como funciona</a>
                         </div>
                     </div>
-                    <div class="card" data-aos="zoom-in">
+                    <div class="card" data-aos="zoom-in" id="formas-de-pago">
                         <img src="img/medios__de__pago.webp" class="card__img" alt="telefono,tarjetas,dinero" >
                         <div class="cards__text">
                             <p class="card__list">Tu eliges la forma de pago</p>
@@ -55,7 +53,7 @@
             <article class="container-bg">
                 <div class="card">
                     <div class="cards__text">
-                        <h3 class="card__title">Comodidad <span class="point">.</span></h3>
+                        <h3 class="card__title">Es facil <span class="point">.</span></h3>
                         <p class="card__date">Comodidad</p>
                         <p class="card__copy">Pide tu conductor elegido desde tu casa u oficina o donde te encuentres sin importar la hora que sea</p>
                         <a href="usuario.php" class="card__button">Quiero ser usuario</a>
@@ -73,7 +71,7 @@
                 <div class="card">
                     <div class="cards__text">
                         <h3 class="card__title">Perfil y experiencia<span class="point">.</span></h3>
-                        <p class="card__date">Perfil</p>
+                        <p class="card__date">Perfil del conductor</p>
                         <p class="card__copy">observa el perfil de cada conductor, su calificacion y comentarios de otros usuarios,  años experiencia como conductor</p>
                         <a href="conductor.php" class="card__button">Quiero ser conductor</a>
                     </div>
@@ -109,7 +107,7 @@
                         <div class="testimony__copy">
                             <!-- <i class='bx bxl-apple testimony__logo'></i> -->
                             <div class="testimony__info">
-                                <h3 class="testimony__name">Feedback</h3>
+                                <h3 class="testimony__name">Tu servicio es valorado </h3>
                                 <p class="testimony__position">recibe tu calificacion una vez   el servicio termine </p>
                             </div>
                         </div>
@@ -119,8 +117,8 @@
                         <div class="testimony__text">
                             <!-- <img src="img/google_logo.svg" class="google__logo"> -->
                             <a href="./"><img src="./img/logo.png" alt="" class="logo__accent logo__footer"></a>
-                            <p class="testimony__history">“Desde Ad Hoc creemos que la desicion mas paqueña y simple que pueda ser  hace la diferencia” , 
-                                cuando eliges uno de nuestros conductores pones en nuestras manos tu seguridad 
+                            <p class="testimony__history">En Ad Hoc pedir tu conductor elegido es facil y rapido, 
+                                puedes elgir el conductor que te llevara cual sea tu destino.
                             </p>
                             <!-- <div class="testimony__copy testimony__copy--modifier">
                                 <img src="img/first-person.jpg" class="testimony__logo logo--picture">

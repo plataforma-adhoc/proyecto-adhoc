@@ -21,7 +21,7 @@
   	 				<li><a href="#">returns</a></li>
   	 				<li><a href="#">order status</a></li> -->
   	 				<li><a href="funcionamiento.php">Como funciona</a></li>
-  	 				<li><a href="#">Opciones de pago</a></li>
+  	 				<li><a href="#formas-de-pago">Opciones de pago</a></li>
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">
@@ -37,7 +37,7 @@
   	 			<div class="social-links">
   	 				<a href="https://www.facebook.com/profile.php?id=100085378410645" target="_blank"><i class="fab fa-facebook-f"></i></a>
   	 				<a href="https://twitter.com/AdHoc_Colombia" target="_blank"><i class="fab fa-twitter"></i></a>
-  	 				<a href="https://www.instagram.com/adhoc__col/" target="_blank"><i class="fab fa-instagram"></i></a>
+  	 				<a href="https://www.instagram.com/adhoc_colombia/" target="_blank"><i class="fab fa-instagram"></i></a>
   	 				<!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
   	 			</div>
   	 		</div>

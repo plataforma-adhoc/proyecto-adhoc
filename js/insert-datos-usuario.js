@@ -249,7 +249,7 @@ export function  insert__login__usuario(){
         evento.preventDefault();
         
         let datos = new FormData(document.getElementById('formulario-login'));
-        fetch('insert-login-usuario.php',{
+        fetch(url__servidor+'insert-login-usuario.php',{
             method:'POST',
             body:datos
 
