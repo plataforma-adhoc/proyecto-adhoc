@@ -1,6 +1,6 @@
-<?php  include'layout/nav-home-conductor.php ';
+<?php  include'layout/nav-home-conductor.php';
 include'conexion-db-accent.php';
-$consulta__datos__conductor = "SELECT id_conductor, nombre_conductor,status  FROM conductores   WHERE id_conductor = '{$_SESSION['id_conductor']}' LIMIT 1";
+$consulta__datos__conductor = "SELECT * FROM conductores   WHERE id_conductor = '{$_SESSION['id_conductor']}' LIMIT 1";
 $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__conductor);
 if(mysqli_num_rows($resultado__consulta) > 0){
   $datos__resultado = mysqli_fetch_array($resultado__consulta); 
@@ -19,9 +19,7 @@ while($fila__resultado__saldo = mysqli_fetch_array($resultado__seleccion__saldo)
   $subtotal = $saldo__actual - $descuento;
   $saldo__total += $subtotal;
 
-};
-
-?>
+}?>
  
 <div class="container contenedor__dashboard">
     <h2 class="vista__nombre__usuario"><i class="fas fa-user-astronaut"></i> Hola <strong><?php echo $datos__resultado['nombre_conductor'] ?></strong></h2>
@@ -142,4 +140,4 @@ if($estado__recorrido['estado_recorrido'] ==='Recorrido terminado') {?>
 <?php  } ?>
  
  
-<?php  include'layout/footer-home.php' ?>
+<?php include'layout/footer-home.php' ?>
