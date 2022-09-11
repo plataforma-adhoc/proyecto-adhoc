@@ -2,9 +2,11 @@
 AOS.init();
 
 
-import {abrir__menu,cerrar__menu} from'./usuario.js';
+import {abrir__menu,cerrar__menu,cerrar__ventana} from'./complementos.js';
 abrir__menu();
 cerrar__menu();
+cerrar__ventana();
+
 
 import {insert__datos__usuario, insert__login__usuario,
   password__usuario,actualizar__contrasena__usuario,formulario__completar__proceso,modal__cambio__contrasena__usuario,validar__datos__usuario} from './insert-datos-usuario.js';

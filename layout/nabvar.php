@@ -18,7 +18,7 @@
     <nav class="nav__hero">
       <div class="container nav__container">
       <div class="logo">
-            <a href="/"><img src="./img/logo.png" alt="" class="logo__accent"></a>
+            <a href="index.php"><img src="./img/logo.png" alt="" class="logo__accent"></a>
             <!-- <p class="texto__beta beta__home">BETA</p> -->
               
         </div>
@@ -40,7 +40,7 @@
             <ul class="nav-links">
               <li class="nav-link">
               <i class="fas fa-house-user"></i>
-                <a href="/">Inicio</a>
+                <a href="index.php">Inicio</a>
               </li>
               <li class="nav-link">
               

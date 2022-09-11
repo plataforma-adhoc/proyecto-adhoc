@@ -11,6 +11,42 @@
     </header>
 
     <main>
+    <div class="container services">
+        <h2 class="subtitle subtitle">Qué te ofrece AdHoc ?<span class="point">.</span></h2>
+        <p class="copy__section">Tu decides las horas de conductor elegido que necesites. <br> No te asignamos conductor, tú lo eliges.</p>
+        <div class="servicios">
+          <div class="slider"data-aos="zoom-in">
+	      <h3>1 Hora de servicio de conductor elegido</h3>
+		</div>
+        <div class="slider"data-aos="zoom-in">
+	      <h3>2 Horas de servicio de conductor elegido</h3>
+		</div>
+        <div class="slider"data-aos="zoom-in">
+	      <h3>3 Horas de servicio de conductor elegido</h3>
+		</div>
+        <div class="slider"data-aos="zoom-in">
+	      <h3>4 Horas de servicio de conductor elegido</h3>
+		</div>
+        <div class="slider"data-aos="zoom-in">
+	      <h3>5 Horas de servicio de conductor elegido</h3>
+		</div>
+        <div class="slider"data-aos="zoom-in">
+	      <h3>6 Horas de servicio de conductor elegido</h3>
+		</div>
+        <div class="slider"data-aos="zoom-in">
+	      <h3>7 Horas de servicio de conductor elegido</h3>
+		</div>
+        <div class="slider"data-aos="zoom-in">
+	      <h3>8 Horas de servicio de conductor elegido</h3>
+		</div>
+        <div class="slider"data-aos="zoom-in">
+	      <h3>9 Horas de servicio de conductor elegido</h3>
+		</div>
+        <div class="slider"data-aos="zoom-in">
+	      <h3>10 Horas de servicio de conductor elegido</h3>
+		</div>
+        </div>
+</div>
         <section class="services">
             <div class="container">
                 <h2 class="subtitle">Tu decides a donde quieres llegar<span class="point">.</span></h2>
@@ -47,9 +83,10 @@
                 </article>
             </div>
         </section>
+   
         <section class="projects container" data-aos="zoom-in">
             <h2 class="subtitle solicitud">Solicitud en tiempo real<span class="point">.</span></h2>
-            <p class="copy__section">Observa si el conductor esta disponible y contrata su servicios </p>
+            <p class="copy__section">Observa si el conductor esta disponible y contrata su servicio </p>
             <article class="container-bg">
                 <div class="card">
                     <div class="cards__text">
@@ -72,7 +109,7 @@
                     <div class="cards__text">
                         <h3 class="card__title">Perfil y experiencia<span class="point">.</span></h3>
                         <p class="card__date">Perfil del conductor</p>
-                        <p class="card__copy">observa el perfil de cada conductor, su calificacion y comentarios de otros usuarios,  años experiencia como conductor</p>
+                        <p class="card__copy">observa el perfil de cada conductor, su calificacion y comentarios de otros usuarios,  años de  experiencia como conductor</p>
                         <a href="conductor.php" class="card__button">Quiero ser conductor</a>
                     </div>
                 </div>
@@ -133,7 +170,7 @@
                 </div>
             </div>
         </section>
-
+       
         <section class="email container container--modifier">
             <h2 class="subtitle subtitle--modifier">Somos tu mejor opción para cuando quieras elegir un conductor<span class="point">.</span></h2>
 

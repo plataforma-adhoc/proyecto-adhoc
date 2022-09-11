@@ -138,6 +138,18 @@ if($estado__recorrido['estado_recorrido'] ==='Recorrido terminado') {?>
 </div>
 
 <?php  } ?>
- 
- 
+
+<?php   if($resultado['avatar'] === NULL && $resultado['quien_soy'] === NULL){  ?>
+<div class=" container card__perfil__sin__editar" id="ventana-perfil">
+<a href="#" class="cerrar__ventana" id="cerrar-ventana">X</a>
+<div class="contenido">
+  <img src="./img/perfil.svg" alt="configuracion perfil" class="avatar__de__configuracion">
+ </div>
+ <div class="contenido">
+   <h3 class="subtitulo__perfil__sin__editar"><strong><?php echo $datos__resultado['nombre_conductor'] ?></strong> configura tu perfil para que sea todo un éxito</h3>
+   <p class="subtitulo__perfil__sin__editar">Termina de configurar tus datos para que las personas sepan que tu perfil es confiable.</p>
+   <a href="edit-perfil-conductor.php?idc=<?php echo $datos__resultado['id_conductor'] ?>" class="enlace__a__edicion">Empezar</a>
+ </div>
+</div>
+ <?php } ?>
 <?php include'layout/footer-home.php' ?>

@@ -285,8 +285,8 @@ color: yellow;
     background-color:$color__fondo;
     margin-left: 1rem;
     color: white;
-    width: 90%;
-    
+    width: 80%;
+    margin: auto;
 }
 
 
@@ -358,7 +358,11 @@ height: auto;
 @media screen and(max-width:1500px) {
     .btn__back{
         left: 5%;
-      }   
+      } 
+      .form-search input{
+        width: 80%;
+        margin: auto;
+      }  
 }
 
 @media screen and (max-width:900px) {

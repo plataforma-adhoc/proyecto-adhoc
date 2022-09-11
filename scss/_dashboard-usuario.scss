@@ -62,13 +62,14 @@ margin-right: 5px;
   }
 
   
-.fa-home,.fa-cogs,.fa-history,.fa-mail-bulk,.fa-comments,.fa-power-off,.usuario__menu{
+.fa-home,.fa-cogs,.fa-history,.fa-mail-bulk,.fa-comments,.fa-power-off,.usuario__menu,.fa-briefcase{
   background:$color__fondo;
   border-radius: 100px;
   padding: 10px;
+  color: white;
 }
 
-.fa-home,.fa-cogs,.fa-history,.fa-mail-bulk,.fa-comments,.fa-power-off,.usuario__menu:hover{
+.fa-home,.fa-cogs,.fa-history,.fa-mail-bulk,.fa-comments,.fa-power-off,.usuario__menu,.fa-briefcase:hover{
   color: white;
 }
 
@@ -164,6 +165,11 @@ text-align: center;
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.no__conductores__en__linea{
+  background: #000;
+  height: 200px;
 }
 
 @media screen and (max-width:900px) {

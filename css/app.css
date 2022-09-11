@@ -24,10 +24,6 @@
   --nav-count: 10;
 }
 
-.beta__home {
-  margin: -30px 0 0 80px;
-}
-
 .btn-open {
   font-size: 30px;
   cursor: pointer;
@@ -174,7 +170,7 @@
 
 .texto__nav__images {
   font-size: 35px;
-  margin: 20% auto 0 auto;
+  margin: 45% auto 0 auto;
   width: 90%;
 }
 
@@ -289,6 +285,35 @@
 }
 
 /* services */
+.servicios {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url(../img/wave.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50px;
+}
+
+.slider {
+  width: 30%;
+  height: 100px;
+  margin: 20px 10px 0 10px;
+  background: #112240;
+  border-radius: 7px;
+}
+
+.slider h3 {
+  color: white;
+  width: 90%;
+  margin: 20px auto 0 auto;
+}
+
+.img__cargando__productos {
+  margin: auto;
+  width: 25%;
+}
+
 .subtitle {
   font-size: 42px;
   color: white;
@@ -645,6 +670,11 @@ ul {
 }
 
 /*responsive*/
+@media (max-width: 1200px) {
+  .texto__nav__images {
+    margin: 70% auto 0 auto;
+  }
+}
 @media screen and (max-width: 900px) {
   .title {
     font-size: 50px;
@@ -693,6 +723,10 @@ ul {
 
   .socialmedia__legend {
     font-size: 18px;
+  }
+
+  .slider {
+    width: 100%;
   }
 }
 @media screen and (max-width: 700px) {
@@ -1696,13 +1730,14 @@ template {
   margin-top: 30px;
 }
 
-.fa-home, .fa-cogs, .fa-history, .fa-mail-bulk, .fa-comments, .fa-power-off, .usuario__menu {
+.fa-home, .fa-cogs, .fa-history, .fa-mail-bulk, .fa-comments, .fa-power-off, .usuario__menu, .fa-briefcase {
   background: #0A192F;
   border-radius: 100px;
   padding: 10px;
+  color: white;
 }
 
-.fa-home, .fa-cogs, .fa-history, .fa-mail-bulk, .fa-comments, .fa-power-off, .usuario__menu:hover {
+.fa-home, .fa-cogs, .fa-history, .fa-mail-bulk, .fa-comments, .fa-power-off, .usuario__menu, .fa-briefcase:hover {
   color: white;
 }
 
@@ -1789,6 +1824,11 @@ template {
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.no__conductores__en__linea {
+  background: #000;
+  height: 200px;
 }
 
 @media screen and (max-width: 900px) {
@@ -2066,7 +2106,8 @@ template {
   background-color: #0A192F;
   margin-left: 1rem;
   color: white;
-  width: 90%;
+  width: 80%;
+  margin: auto;
 }
 
 .boton__respuesta {
@@ -2121,6 +2162,11 @@ template {
 @media screen and (max-width: 1500px) {
   .btn__back {
     left: 5%;
+  }
+
+  .form-search input {
+    width: 80%;
+    margin: auto;
   }
 }
 @media screen and (max-width: 900px) {
@@ -2859,6 +2905,63 @@ template {
   color: white;
 }
 
+.card__perfil__sin__editar {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  background: #112240;
+  border-radius: 7px;
+  border: solid 0.5px white;
+  margin: 20px auto 30px auto;
+  position: relative;
+}
+
+.cerrar__ventana {
+  text-decoration: 0;
+  display: inline-block;
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  background: #0A192F;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  line-height: 35px;
+  right: 1%;
+  top: 5%;
+  font-weight: bolder;
+}
+
+.cerrar__ventana:hover {
+  opacity: 0.5;
+  color: white;
+}
+
+.avatar__de__configuracion {
+  width: 150px;
+}
+
+.subtitulo__perfil__sin__editar, .subtitulo__perfil__sin__editar {
+  color: white;
+}
+
+.enlace__a__edicion {
+  display: inline-block;
+  text-decoration: 0;
+  color: white;
+  background: #C0392B;
+  padding: 10px;
+  border-radius: 7px;
+  width: 20%;
+  font-size: 17px;
+}
+
+.enlace__a__edicion:hover {
+  opacity: 0.5;
+  color: white;
+}
+
 @media screen and (max-width: 1000px) {
   .menu__dashborad {
     width: 30%;
@@ -2876,6 +2979,10 @@ template {
 @media screen and (max-width: 700px) {
   .cards__dashboard {
     width: 45%;
+  }
+
+  .enlace__a__edicion {
+    width: 30%;
   }
 }
 @media screen and (max-width: 400px) {

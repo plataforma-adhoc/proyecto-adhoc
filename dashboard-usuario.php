@@ -1,7 +1,7 @@
 <?php include'layout/nav-home-usuario.php';
 include'conexion-db-accent.php';
 
-    $consulta__datos__usuario = "SELECT *  FROM usuarios   WHERE email = '{$_SESSION['id_usuario']}' LIMIT 1";
+    $consulta__datos__usuario = "SELECT *  FROM usuarios   WHERE id_usuario = '{$_SESSION['id_usuario']}' LIMIT 1";
     $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
     if(mysqli_num_rows($resultado__consulta) > 0){
       $datos__resultado = mysqli_fetch_array($resultado__consulta);
@@ -33,8 +33,11 @@ include'conexion-db-accent.php';
   </div>
 </a> 
 </div>
+
+
+<?php } ?> 
 <?php } ?>
-<?php } ?>  
+ 
 </div>
 </div>
 

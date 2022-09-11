@@ -16,3 +16,13 @@ export function abrir__menu(){
      })
     }
     }
+
+ export function cerrar__ventana(){
+  let cerrar__ventana = document.getElementById('cerrar-ventana');
+  let ventana__perfil =  document.getElementById('ventana-perfil');
+  if(cerrar__ventana){
+   cerrar__ventana.addEventListener('click',function(){
+     ventana__perfil.style.display="none"
+   })
+  }
+ }

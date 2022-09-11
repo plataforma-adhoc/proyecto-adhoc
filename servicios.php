@@ -1,15 +1,15 @@
 <?php 
-
+ 
    include'layout/nav-home-usuario.php';
     include'config/config.php';
     include'conexion-db-accent.php';
 
-    $id_conductor = $_GET['idc'] ? $_GET['idc'] : '';
-    if($id_conductor ===""){
-       header("Location: dashboard-usuario.php");
-    }
+    $id__conductor = $_GET['idc'] ? $_GET['idc']:'';
+    // if($id__conductor ===""){
+    //    header("Location: dashboard-usuario.php");
+    // }
     
-    $consulta__datos__conductor = "SELECT * FROM conductores WHERE id_conductor = '$id_conductor' LIMIT 1";
+    $consulta__datos__conductor = "SELECT * FROM conductores WHERE id_conductor = '$id__conductor' LIMIT 1";
     $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos__conductor);
    $resultado = mysqli_fetch_array($ejecutar__consulta);
 
@@ -38,7 +38,7 @@
              <button type="button" onclick="agregar(<?php echo  $fila['id_producto']?>,'<?php echo hash_hmac('sha1',$fila['id_producto'],TOKEN) ?>')">Agregar</button>
             </div>
             <br>
-            <div><?php echo utf8_encode($fila['mas_vendido'] ) ?></div>
+            <div><?php echo $fila['mas_vendido'] ?></div>
           </div>
      <?php } ?>
     </div>
