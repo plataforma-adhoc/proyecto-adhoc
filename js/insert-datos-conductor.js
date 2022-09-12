@@ -530,7 +530,7 @@ if(span){
      evento.preventDefault();
 
      let form__data = new FormData(document.getElementById('form-conectarse'))
-    fetch('conectarse.php',{
+    fetch(url__servidor__conductor+'conectarse.php',{
       method:'POST',
       body:form__data
     }).then(respuesta => respuesta.json())

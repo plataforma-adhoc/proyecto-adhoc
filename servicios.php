@@ -54,7 +54,7 @@
        form__data.append('token',token);
      
 
-       fetch(url+'agregar-servicio',{
+       fetch(url+'agregar-servicio.php',{
        method:'POST',
         body:form__data,
         

@@ -71,7 +71,8 @@
 
 <script>
    function agregarProducto(id,token){
-       let url = 'agregar-servicio';
+    let url = 'https://app-prueba-adhoc.herokuapp.com/';
+       let url+'agregar-servicio.php';
        let form__data = new FormData();
 
        form__data.append('id',id);
