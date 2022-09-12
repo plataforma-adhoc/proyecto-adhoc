@@ -22,7 +22,7 @@ $resultado__datos__conductor = mysqli_fetch_array($ejecutar__consulta__datos__co
     
     ?>
 
-<div class="contenido__historial">
+<div class="contenido__historial"data-aos="zoom-in">
 <div class="info__perfil datos__de__historial">
         <img src="upload/<?php  echo $resultado__datos__conductor['avatar'] ?>" alt="" class="foto__de__perfil foto__historial">
         

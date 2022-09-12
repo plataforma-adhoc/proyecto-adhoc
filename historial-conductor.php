@@ -30,7 +30,7 @@ while($resultado__datos__usuario = mysqli_fetch_array($ejecutar__consulta__datos
 if(mysqli_num_rows($ejecutar__consulta__servicios) > 0) {  
     while($resultado__servicio = mysqli_fetch_array($ejecutar__consulta__servicios)){
         ?>
-    <div class="contenido__historial">
+    <div class="contenido__historial"data-aos="zoom-in">
 <div class="info__perfil datos__de__historial">
         <img src="upload/<?php  echo $resultado__datos__usuario['avatar'] ?>" alt="" class="foto__de__perfil foto__historial">
         

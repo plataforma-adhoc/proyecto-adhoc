@@ -3,7 +3,7 @@ $id__conductor = isset($_GET['idc']) ? $_GET['idc'] : '';
 if($id__conductor){
     $consulta__datos__servicios = "SELECT * FROM datos__inicio__recorrido WHERE id_conductor = '$id__conductor'";
     $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos__servicios);
-
+ 
 
 }?>
     <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
@@ -17,6 +17,7 @@ if($id__conductor){
 
       if(mysqli_num_rows( $ejecutar__consulta) > 0){
         while($fila = mysqli_fetch_array($ejecutar__consulta)){       
+          if($fila['estado_recorrido'] ==='Recorrido terminado'){
           $consulta__datos__usuario = "SELECT avatar FROM  usuarios WHERE id_usuario = '{$fila['id_usuario']}'";  
           $ejecutar__consulta__datos__usuario = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
           $resultado = mysqli_fetch_array($ejecutar__consulta__datos__usuario);?>
@@ -69,6 +70,7 @@ if($id__conductor){
       </div>
       </div>
      
+      <?php } ?>
       <?php } ?>
       <?php } ?>
       
