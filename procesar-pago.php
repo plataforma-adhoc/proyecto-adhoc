@@ -94,10 +94,10 @@ paypal.Buttons({
       });
     },
     onApprove: function(data, actions) {
-        let URL = 'captura';
+      let url = 'https://app-prueba-adhoc.herokuapp.com/'
     return actions.order.capture().then(function(detalles) {
         console.log(detalles)
-        fetch(URL,{
+        fetch('captura.php',{
         method:'POST',
         headers:{
               'content-type':'application/json'
