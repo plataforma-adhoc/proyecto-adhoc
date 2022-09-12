@@ -25,7 +25,8 @@
 
         $insertar__datos = mysqli_query($conexion__db__accent,"INSERT INTO recuperar__contrasena__usuario (email,clave__nueva,token) VALUES('$email__contrasena','$nueva__contrasena','$token')");
     
-      $url = "http://localhost/accent__hollding/view/confirmacion-usuario?email=$email__contrasena&token=$token";
+      // $url = "http://localhost/accent__hollding/view/confirmacion-usuario.php?email=$email__contrasena&token=$token";
+      $url = "https://app-prueba-adhoc.herokuapp.com/confirmacion-usuario.php?email=$email__contrasena&token=$token";
 
       $contenido__mensaje = ' <h1>Hola '.$resultado__fila['nombre_usuario'] .'<br> </h1>';
       $contenido__mensaje .='<p>has solicitado el cambio de tu credencial de acceso a nuestro sistema <br>
