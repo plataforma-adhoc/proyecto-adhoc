@@ -1877,6 +1877,10 @@ template {
   width: 100%;
 }
 
+.imagen__de_perfil {
+  height: 120px;
+}
+
 .biografia__detallada {
   color: white;
   font-size: 22px;
@@ -3002,8 +3006,9 @@ template {
 
 .parrafo__historial {
   color: gray;
-  width: 50%;
+  width: 60%;
   margin: 0 auto 0 auto;
+  font-size: 20px;
 }
 
 .contenido__historial {
@@ -3077,6 +3082,11 @@ template {
 @media screen and (max-width: 900px) {
   .contenedor__datos__historial {
     margin-top: -550px;
+  }
+
+  .parrafo__historial {
+    width: 90%;
+    margin: auto;
   }
 
   .datos__de__historial {

@@ -10,8 +10,9 @@
 }
 .parrafo__historial{
     color:$color__gris;
-    width: 50%;  
+    width: 60%;  
     margin: 0  auto 0 auto;
+    font-size: $tamaño__parrafos;
     
 }
 .contenido__historial{
@@ -89,6 +90,11 @@ color: white;
 @media screen and (max-width:900px) {
     .contenedor__datos__historial{
         margin-top: -550px;
+    }
+
+    .parrafo__historial{
+        width: 90%;
+        margin: auto;
     }
       .datos__de__historial{
         width: 60%;
