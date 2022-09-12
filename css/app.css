@@ -4102,7 +4102,16 @@ template {
   margin-bottom: 150px;
 }
 
-.datos__de__servicio__completado {
+.contenido__servicio__completado {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.datos__solicitud__completada {
   width: 35%;
   height: auto;
   background: #112240;
@@ -4115,6 +4124,16 @@ template {
   color: gray;
 }
 
+.estado__terminado {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 700px) {
+  .datos__solicitud__completada {
+    width: 90%;
+    margin: 20px auto 20px auto;
+  }
+}
 body {
   font-family: "Baloo Bhaina 2", cursive;
   background: #0A192F;
