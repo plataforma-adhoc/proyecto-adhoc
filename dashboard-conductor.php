@@ -140,7 +140,7 @@ if($estado__recorrido['estado_recorrido'] ==='Recorrido terminado') {?>
 <?php  } ?>
 
 <?php   if($resultado['avatar'] === NULL && $resultado['quien_soy'] === NULL){  ?>
-<div class=" container card__perfil__sin__editar" id="ventana-perfil">
+<div class="container card__perfil__sin__editar" id="ventana-perfil">
 <a href="#" class="cerrar__ventana" id="cerrar-ventana">X</a>
 <div class="contenido">
   <img src="./img/perfil.svg" alt="configuracion perfil" class="avatar__de__configuracion">

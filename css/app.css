@@ -2980,7 +2980,7 @@ template {
     width: 30%;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .cards__dashboard {
     width: 80%;
     margin: 30px auto 0 auto;
@@ -2993,6 +2993,10 @@ template {
   .titulo__dashboard {
     font-size: 25px;
     line-height: 40px;
+  }
+
+  .card__perfil__sin__editar {
+    height: 290px;
   }
 }
 .contenedor__datos__historial {
@@ -3032,11 +3036,11 @@ template {
 }
 
 .foto__historial {
-  border-radius: 100px;
-  width: 8rem;
-  min-width: 80px;
+  border-radius: 50%;
   box-shadow: 0 0 0 5px #FFF;
   margin-left: 20px;
+  width: 30%;
+  height: 120px;
 }
 
 .datos__de__historial {
@@ -4108,6 +4112,11 @@ template {
     top: 70%;
   }
 }
+.foto__de__perfil__del__conductor {
+  width: 30%;
+  height: 120px;
+}
+
 .datos__conductor {
   margin-bottom: 150px;
 }
