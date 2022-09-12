@@ -68,7 +68,7 @@ if($lista__carrito == null){
 <?php   if($lista__carrito != null){  ?>
 <div class="contenedor__saldo">
  <h2 id="total" class="total__servicio"> Total a pagar  $ <?php  echo  number_format($total,2,'.','.') ?></h2>
- <a href="./procesar-pago?idc=<?php  echo $id_conductor  ?>" class="enlace__proceder__pago">Proceder a pagar</a>
+ <a href="procesar-pago.php?idc=<?php  echo $id_conductor  ?>" class="enlace__proceder__pago">Proceder a pagar</a>
 
 </div>
 <?php } ?>
@@ -106,12 +106,13 @@ boton__eliminar.value = id;
 
 
 function elimina(){
+  let url = 'https://app-prueba-adhoc.herokuapp.com/'
   let boton__eliminar =  document.getElementById('boton-eliminar');
   let id = boton__eliminar.value;
   let form__data = new FormData();
   form__data.append('action','eliminar')
   form__data.append('id',id)
-  fetch('eliminar-producto',{
+  fetch(url+'eliminar-producto.php',{
     method:'POST',
     body:form__data,
     mode:'cors'
