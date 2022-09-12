@@ -328,7 +328,7 @@ export function password__conductor(){
 
     let datos = new FormData( document.getElementById('formulario-contrasena'))
     evento.preventDefault();
-     fetch(url__servidor__conductor+'insert-contrasena-conductor',{
+     fetch(url__servidor__conductor+'insert-contrasena-conductor.php',{
       method:'POST',
       body:datos
      }).then(respuesta => respuesta.json())
