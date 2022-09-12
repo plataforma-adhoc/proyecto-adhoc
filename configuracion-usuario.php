@@ -34,9 +34,9 @@ if($id =! $id || $id ===""){
 
         <div id="myModalCambioContrasena" class="modal__contrasena  animate__animated animate__bounceInDown">
             <div class="modal__content">
-                <span class="close">&times;</span>
+                <span class="close" id="cerrar">&times;</span>
                 <p class="parrafo__modal">Escribe la contraseña que deseas a continuacion</p>
-                <form class="formulario__registro" id="formulario-actaulizar-contrasena-usuario">
+                <form class="formulario__registro actualizar__contraseña" id="formulario-actaulizar-contrasena-usuario">
                     <div class="contenedor__formulario">
                         <div class="grupo__inputs block">
                             <div class="contenedor__inputs" id="grupo__nombre">

@@ -28,8 +28,8 @@ $resultado__datos__conductor = mysqli_fetch_array($ejecutar__consulta__datos__co
         
     </div> 
     <div class="info__perfil datos__de__historial">
-        <div class="datos__del__perfil__de__usuario">
-        <br><br><br><br>
+        <div class="datos__del__perfil__historial">
+        <br><br>
             <p class="texto">Datos del conductor</p>
             <div>
                 <p class="datos__basicos"><strong> Nombre : </strong><?php  echo $resultado__datos__conductor['nombre_conductor'] ?></p>
@@ -56,8 +56,8 @@ $resultado__datos__conductor = mysqli_fetch_array($ejecutar__consulta__datos__co
 
 </div>
 <div class="info__perfil datos__de__historial">
-    <div class="datos__del__perfil__de__usuario ">
-        <br><br><br>
+    <div class="datos__del__perfil__historial">
+        <br><br>
      <p class="texto historial">Datos del servicio</p>
          <div>
              <p class="datos__basicos"><strong>Id servicio </strong> : <?php  echo $resultado__servicios['id'] ?></p>

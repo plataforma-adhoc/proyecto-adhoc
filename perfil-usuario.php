@@ -25,55 +25,57 @@ if(mysqli_num_rows($resultado__consulta__datos__conductor) > 0){
     <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
 
 <div class="container contenedor__datos__perfil"> 
-    <div class="info__perfil">
-        <img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt="" class="foto__de__perfil">
-        <div class="redes__sociales">
-        <?php  if($datos__resultado['facebook'] !=NULL ){ ?>
-            <a href="<?php echo $datos__resultado['facebook'] ?>" class="enlace__de__redes__sociales" target="_blank"><i class="fab fa-facebook"></i></a>
-             <?php } ?>  
-              
-             <?php  if($datos__resultado['instagram'] !=NULL ){ ?>
-                <a href="<?php echo $datos__resultado['instagram'] ?>" class="enlace__de__redes__sociales"target="_blank"><i class="fab fa-instagram"></i></a>
-             <?php } ?> 
-
-             <?php  if($datos__resultado['twitter'] !=NULL ){ ?>
-                <a href="<?php echo $datos__resultado['twitter'] ?>" class="enlace__de__redes__sociales"target="_blank"><i class="fab fa-twitter"></i></a>
-             <?php } ?>
-                    
-            </div>
-        <a href="edit-perfil-usuario.php?id=<?php echo $datos__resultado['id_usuario'] ?>" class="enlace__editar__perfil">Editar perfil <i class="fas fa-long-arrow-alt-right"></i></a>
-        </div>
-        <div class="info__perfil">
-        <p class="biografia__detallada">Biografia detallada</p>
-        <div class="datos__del__perfil__de__usuario">
-            <div>
-                <p class="datos__basicos"><strong>Nombre :</strong> <?php echo $datos__resultado['nombre_usuario'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"><strong>Primer apellido :</strong> <?php echo $datos__resultado['primer_apellido'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"><strong>Segundo apellido :</strong> <?php echo $datos__resultado['segundo_apellido'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"> <strong>E-mail :</strong> <?php echo $datos__resultado['email'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"><strong>Documento :</strong> <?php echo $datos__resultado['numero_documento'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"><strong>Telefono :</strong> <?php echo $datos__resultado['numero_telefono'] ?></p>
-            </div>
-           
-             <div>
-             <p class="datos__basicos fecha__registro">Miembro desde : <?php echo date("d-m-Y",strtotime($datos__resultado['fecha_de_registro'])) ?></p>
-
-             </div>
-
-        </div>
+<div class="datos__de__perfil">
+<div class="card__solicitudes perfil">
+     <div class="img">
+       <img src="upload/<?php echo $datos__resultado['avatar'] ?>" class="imagen__de_perfil">
     </div>
-</div>
+    <div class="infos">
+      <div class="name">
+   <h2><?php echo $datos__resultado['nombre_usuario']  ?></h2>
+   <h4><?php echo $datos__resultado['primer_apellido'] ?> <?php echo $datos__resultado['segundo_apellido'] ?></h4>
+   <h2>Biografia detallada</h2>
+   <h4><?php echo $datos__resultado['email'] ?></h4>
+   <h4><?php echo $datos__resultado['numero_documento'] ?></h4>
+   <h4><?php echo $datos__resultado['numero_telefono'] ?></h4>
+   <h4><?php echo  date("d-m-Y",strtotime($datos__resultado['fecha_de_registro'])) ?></h4> 
 
+  </div>
+
+  <p class="text">
+
+    </p>
+
+    <ul class="stats">
+    <li>  <h4>
+    <?php  if($datos__resultado['facebook'] !=NULL ){ ?>
+    <a href="<?php echo $datos__resultado['facebook'] ?>" class="enlace__de__redes__sociales" target="_blank"><i class="fab fa-facebook"></i></a>
+        <?php } ?> 
+    </h4> 
+</li>
+    <li>  <h4> <?php  if($datos__resultado['instagram'] !=NULL ){ ?>
+    <a href="<?php echo $datos__resultado['instagram'] ?>" class="enlace__de__redes__sociales" target="_blank"><i class="fab fa-instagram"></i></a>
+    <?php } ?></h4> 
+    </li>
+    <li>  <h4> <?php  if($datos__resultado['twitter'] !=NULL ){ ?>
+        <a href="<?php echo $datos__resultado['twitter'] ?>" class="enlace__de__redes__sociales"target="_blank"><i class="fab fa-twitter"></i></a>
+    <?php } ?></h4> 
+</li>
+  </ul>
+
+  <div class="links">
+     <a href="edit-perfil-usuario.php?id=<?php echo $datos__resultado['id_usuario'] ?>" class="follow">Editar mi perfil <i class="fas fa-long-arrow-alt-right"></i></a>
+
+  </div>
+
+</div>
+</div>
+</div>
+</div>
+     
+</div>
+</div>
+<br><br>
 <div class="container contenedor__opinion" id="opinion1">
   <p class="titulo__opinion">Centro de opiniones</p>
   <p class="parrafo__info__opinion"><span><i class="fas fa-bullhorn"></i> ATENCION : </span> en este panel de comentarios esta prohibido usar groserias,hablar en tono obseno,
@@ -117,7 +119,4 @@ while($fila = mysqli_fetch_array($ejecutar__consulta)){?>
             <?php }?>
 
   </form>
-</div>
-<br><br>
-
 <?php   include'layout/footer-home.php' ?>

@@ -116,6 +116,7 @@ Subir una foto...
 
             </div>
         </div>
+        <input type="hidden"  name="id" value="<?php   echo $datos__resultado['id_conductor'] ?>">
         <p class="block">
         <label for="" class="label">Acerca de mi</label>
             <textarea name="descripcion" rows="3" class="text__area__mensaje" placeholder="Una breve descrpicion de mi perfil"><?php  echo $datos__resultado['quien_soy'] ?></textarea>

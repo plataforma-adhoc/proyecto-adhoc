@@ -33,7 +33,7 @@ if($id =! $id || $id ===""){
         <div class="modal__content">
             <span class="close" id="cerrar-modal">&times;</span>
           <p class="parrafo__modal">Escribe la contraseña que deseas a continuacion</p>
-        <form class="formulario__registro" id="formulario-actaulizar-contrasena-conductor">
+        <form class="formulario__registro actualizar__contraseña" id="formulario-actaulizar-contrasena-conductor">
     <div class="contenedor__formulario">
         <div class="grupo__inputs block">
             <div class="contenedor__inputs" id="grupo__nombre">

@@ -1,40 +1,158 @@
 .contenedor__mis__solicitudes{
     margin-top: -600px;
+   
+
     
 }
 
+
 .subtitulo__solicitudes{
-    text-align: center;
-    color: white;
+color: white;
+text-align: center;
 }
 
 .texto__solicitud{
-margin: auto;
- width: 50%;
+ width: 60%;
  color: $color__gris;
+margin: auto;
+font-size: $tamaño__parrafos;
+
 
 }
 
-.nombre__servicio{
-    line-height: 20px;
+.contenido__solicitudes{
+width: 100%;
+height: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .datos__de__solicitud{
-    width: 100%;
+    width: 35%;
     height:auto;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
     background:$color__menu__dashboard;
    border-radius: 10px;
-   margin: 20px  0 0 0;
+   margin:50px auto 20px auto;
 }
 
-.datos__mis__solicitudes{
-    width: 20%;
-    background: #000;
+.card__solicitudes{
+display: flex;
+padding: 2.5rem 2rem;
+border-radius: 10px;
+background:$color__menu__dashboard;
+max-width: 500px;
+min-height:200px;
+min-width:300px;
+margin: 1rem;
+position: relative;
+transform-style: preserve-3d;
+overflow: hidden;
 }
+
+.card__solicitudes::before,
+.card__solicitudes::after {
+content: '';
+position: absolute;
+z-index: -1;
+}
+.card__solicitudes::before {
+width: 100%;
+height: 100%;
+border: 1px solid #FFF;
+border-radius: 10px;
+top: -.7rem;
+left: -.7rem;
+}
+.card__solicitudes::after {
+height: 15rem;
+width: 15rem;
+background-color: #4172f5aa;
+top: -8rem;
+right: -8rem;
+box-shadow: 2rem 6rem 0 -3rem #FFF
+}
+.card__solicitudes img {
+    border-radius: 50%;
+    }
+     
+    .imagen__de_perfil {
+    max-width: 100%;
+    display: block;
+    } 
+    
+    .card__solicitudes img {
+    width: 8rem;
+    min-width: 80px;
+    box-shadow: 0 0 0 5px #FFF;
+    }
+    
+    .infos {
+        margin-left: 1.5rem;
+        }
+        
+        .name {
+        margin-bottom: 1rem;
+        color: white;
+        }
+        .name h2 {
+        font-size: 1.3rem;
+        }
+        .name h4 {
+        font-size: 1rem;
+        color: white;
+        }
+        
+        .text {
+        font-size: .9rem;
+        margin-bottom: 1rem;
+        }
+
+        .stats {
+            display: flex;
+            margin-bottom: 1rem;
+            }
+            .stats li {
+            min-width: 5rem;
+            }
+            .stats li h3 {
+            font-size: .99rem;
+            }
+            .stats li h4 {
+            font-size: 1.2rem;
+           
+            
+            }
+
+            .links{
+                display: flex;
+            }
+
+            .links a {
+                text-decoration: 0;
+                display: inline;
+                min-width: 200px;
+                padding: .6rem;
+                border: 1px solid #222;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all .25s linear;
+                margin-left: 5px;
+                }
+                .links .follow,
+                .links .view:hover {
+                background-color:$color__verde;
+                color: #FFF;
+                }
+                .links .view,
+                .links .follow:hover{
+                background-color: transparent;
+                color: white;;
+                }
+        
+
 .enlaces__servicios{
     text-decoration: 0;
     border: 0;
@@ -75,32 +193,55 @@ color: white;
 
 .parrafo__estado{
  background:#0652DD;
- width: 80%; 
+ width: 100%; 
  color: white;
  font-weight: bold;  
  padding: 7px;
  border-radius: 7px;
 text-transform: uppercase;
 opacity: 0.5;
+margin-left: -22px;
 }
 
 
 .culminado{
     background:$color__verde;
     opacity: 0.5;
-}
-
-.servicio{
-    margin: -150px  0 0 0;
+    margin-left: -22px;
 }
 
 
 
-@media screen and (max-width:900px) {
-    .servicio{
-        margin: 0;
-    }
+
+
+// @media screen and (max-width:900px) {
+//   .datos__de__solicitud{
+//     margin: 30px auto 20px auto;
+//   }
+   
+//     .texto__solicitud{
+//         width: 90%;
+//     }
+// }
+
+@media screen and (max-width: 900px) {
     .texto__solicitud{
+    width: 90%;
+}
+    .datos__de__solicitud{
+        margin: 30px auto 20px auto;
         width: 90%;
     }
-}
+    .card__solicitudes {
+      display: block;
+      margin: auto;
+      width: 100%;
+    }
+    .infos {
+      margin-left: 0;
+      margin-top: 1.5rem;
+    }
+    .links button {
+      min-width: 100px;
+    }
+    }

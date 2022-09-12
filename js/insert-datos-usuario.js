@@ -395,7 +395,9 @@ export  function actualizar__contrasena__usuario(){
     var btn = document.getElementById("card-cambiar-contrasena");
     
     
-    var span = document.getElementsByClassName("close")[0];
+    // var span = document.getElementsByClassName("close")[0];
+    var span = document.getElementById('cerrar');
+
     
     if(btn){
       btn.onclick = function() {
@@ -412,9 +414,7 @@ export  function actualizar__contrasena__usuario(){
     }
      }
 
-     export function validar__datos__usuario() {
-    
-     }
+   
 
 
     

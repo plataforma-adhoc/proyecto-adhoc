@@ -1,13 +1,13 @@
 <?php 
 function insert__datos__edit__perfil__conductor(){
     include'conexion-db-accent.php';
-$id__conductor = isset($_GET['id']) ? $_GET['id']:'';
+$id__conductor = isset($_POST['id']) ? $_POST['id']:'';
 if($id__conductor){
-   
+ echo $id__conductor;  
 $consulta__datos = "SELECT * FROM  conductores WHERE id_conductor = '$id__conductor' LIMIT 1";
 $ejecutar__consulta__conductor = mysqli_query($conexion__db__accent,$consulta__datos);
 $resultado__datos = mysqli_fetch_array($ejecutar__consulta__conductor);
-$id__conductor = $resultado__datos['id_conductor'];
+
 
 
         $nombre_conductor = $_POST['nombre'] ? $_POST['nombre']: '';
@@ -38,11 +38,13 @@ $id__conductor = $resultado__datos['id_conductor'];
 
             $actualizar__datos  = "UPDATE  conductores SET 	nombre_conductor ='$nombre_conductor',primer_apellido = '$primer__apellido',segundo_apellido ='$segundo__apellido',
             email ='$email', numero_documento	 = '$documento',numero_telefono = '$telefono',numero_licencia = '$licencia',categoria_licencia ='$categoria',
-            avatar = '$nombre__archivo',facebook ='$facebook',instagram = '$instagram',twitter='$twitter', quien_soy = '$descripcion'WHERE id_conductor = '{$_SESSION['id_conductor']}'";
+            avatar = '$nombre__archivo',facebook ='$facebook',instagram = '$instagram',twitter='$twitter', quien_soy = '$descripcion' WHERE id_conductor = '$id__conductor'";
             $ejecutar__consulta = mysqli_query($conexion__db__accent,$actualizar__datos);
 
             if($ejecutar__consulta){
-             header("edit-perfil-conductor.php?id={$resultado__datos['id_conductor']}");
+            //  header("Location: edit-perfil-conductor.php?id={$resultado__datos['id_conductor']}");
+            header("Location: edit-perfil-conductor.php?id={$resultado__datos['id_conductor']}");
+
            echo json_decode('true');
              
        

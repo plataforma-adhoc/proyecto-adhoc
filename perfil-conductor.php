@@ -24,79 +24,59 @@ if(mysqli_num_rows($resultado__consulta) > 0){
  }?>
     <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
 <div class="container contenedor__datos__perfil">
-    <div class="info__perfil">
-        <img src="upload/<?php  echo $datos__resultado__conductor['avatar'] ?>" alt="" class="foto__de__perfil">
-        <div class="redes__sociales">
-        <?php  if($datos__resultado__conductor['facebook'] !=NULL ){ ?>
-            <a href="<?php echo $datos__resultado__conductor['facebook'] ?>" class="enlace__de__redes__sociales" target="_blank"><i class="fab fa-facebook"></i></a>
-             <?php } ?>  
-              
-             <?php  if($datos__resultado__conductor['instagram'] !=NULL ){ ?>
-                <a href="<?php echo $datos__resultado__conductor['instagram'] ?>" class="enlace__de__redes__sociales"target="_blank"><i class="fab fa-instagram"></i></a>
-             <?php } ?> 
-
-             <?php  if($datos__resultado__conductor['twitter'] !=NULL ){ ?>
-                <a href="<?php echo $datos__resultado__conductor['twitter'] ?>" class="enlace__de__redes__sociales"target="_blank"><i class="fab fa-twitter"></i></a>
-             <?php } ?>
-
-        </div>
-
-        <a href="edit-perfil-conductor.php?id=<?php echo $datos__resultado__conductor['id_conductor'] ?>" class="enlace__editar__perfil">Editar mi perfil <i
-                class="fas fa-long-arrow-alt-right"></i></a>
+<div class="datos__de__perfil">
+<div class="card__solicitudes perfil">
+     <div class="img">
+       <img src="upload/<?php echo $datos__resultado__conductor['avatar'] ?>" class="imagen__de_perfil">
     </div>
-    <div class="info__perfil">
-    <br><br><br>
-        <p class="biografia__detallada">Biografia detallada</p> 
-        <div class="datos__del__perfil__de__usuario">
-            <div>
-                <p class="datos__basicos"><strong>Nombre :</strong>  <?php echo $datos__resultado__conductor['nombre_conductor'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"><strong>Primer apellido:</strong>  <?php echo $datos__resultado__conductor['primer_apellido'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"><strong>Segundo apellido :</strong>  <?php echo $datos__resultado__conductor['segundo_apellido'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"><strong>E-mail :</strong>  <?php echo $datos__resultado__conductor['email'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"><strong> Documento :</strong> <?php echo $datos__resultado__conductor['numero_documento'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"><strong> Telefono :</strong> <?php echo $datos__resultado__conductor['numero_telefono'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"><strong>Numero licencia: </strong> <?php echo $datos__resultado__conductor['numero_licencia'] ?></p>
-            </div>
-            <div>
-                <p class="datos__basicos"> <strong>Categoria : </strong> <?php echo $datos__resultado__conductor['categoria_licencia'] ?></p>
-            </div>
+    <div class="infos">
+      <div class="name">
+   <h2><?php echo $datos__resultado__conductor['nombre_conductor']  ?></h2>
+   <h4><?php echo $datos__resultado__conductor['primer_apellido'] ?> <?php echo $datos__resultado__conductor['segundo_apellido'] ?></h4>
+   <h2>Biografia detallada</h2>
+   <h4><?php echo $datos__resultado__conductor['email'] ?></h4>
+   <h4><?php echo $datos__resultado__conductor['numero_documento'] ?></h4>
+   <h4><?php echo $datos__resultado__conductor['numero_telefono'] ?></h4>
+   <h4><?php echo $datos__resultado__conductor['numero_licencia'] ?></h4>
+   <h4><?php echo $datos__resultado__conductor['categoria_licencia'] ?></h4> 
+   <h4><?php echo  date("d-m-Y",strtotime($datos__resultado__conductor['fecha_de_registro'])) ?></h4> 
+   <?php    if($datos__resultado__conductor['quien_soy'] != NULL){   ?>
+   <h4><?php echo $datos__resultado__conductor['quien_soy'] ?></h4>
+<?php } ?>
 
-            <div>
-                <p class="datos__basicos"><strong>Estado :</strong>  <?php echo $datos__resultado__conductor['status'] ?></p>
-            </div>
-            <?php    if($datos__resultado__conductor['entidad_bancaria'] !=NULL){   ?>
-            <div>
-                <p class="datos__basicos"> <strong> Numero de cuenta :</strong><?php echo $datos__resultado__conductor['entidad_bancaria'] ?></p>
-            </div>
-            <?php   } ?>
-            <?php    if($datos__resultado__conductor['cuenta_de_pago'] !=NULL){   ?>
-            <div>
-                <p class="datos__basicos"> <strong>Numero de cuenta :</strong>  <?php echo $datos__resultado__conductor['cuenta_de_pago'] ?></p>
-            </div>
-            <?php   } ?>
+  </div>
 
-           <?php    if($datos__resultado__conductor['quien_soy'] != NULL){   ?>
-            <div>
-                <p class="datos__basicos quien__soy"><strong>Quien soy : </strong><?php  echo $datos__resultado__conductor['quien_soy']  ?></p>
-            </div>
-       <?php   } ?>
-            <div>
-                <p class="datos__basicos fecha__registro">Miembro desde  : <?php echo  date("d-m-Y",strtotime($datos__resultado__conductor['fecha_de_registro'])) ?></p>
-            </div>
-        </div>
-    </div>
+  <p class="text">
+
+    </p>
+
+    <ul class="stats">
+    <li>  <h4>
+    <?php  if($datos__resultado__conductor['facebook'] !=NULL ){ ?>
+    <a href="<?php echo $datos__resultado__conductor['facebook'] ?>" class="enlace__de__redes__sociales" target="_blank"><i class="fab fa-facebook"></i></a>
+        <?php } ?> 
+    </h4> 
+</li>
+    <li>  <h4> <?php  if($datos__resultado__conductor['instagram'] !=NULL ){ ?>
+    <a href="<?php echo $datos__resultado__conductor['instagram'] ?>" class="enlace__de__redes__sociales" target="_blank"><i class="fab fa-instagram"></i></a>
+    <?php } ?></h4> 
+    </li>
+    <li>  <h4> <?php  if($datos__resultado__conductor['twitter'] !=NULL ){ ?>
+        <a href="<?php echo $datos__resultado__conductor['twitter'] ?>" class="enlace__de__redes__sociales"target="_blank"><i class="fab fa-twitter"></i></a>
+    <?php } ?></h4> 
+</li>
+  </ul>
+
+  <div class="links">
+     <a href="edit-perfil-conductor.php?id=<?php echo $datos__resultado__conductor['id_conductor'] ?>" class="follow">Editar mi perfil <i class="fas fa-long-arrow-alt-right"></i></a>
+
+  </div>
+
+</div>
+</div>
+</div>
+</div>
+     
 </div>
 <div class="container contenedor__formulario__datos__de_pago">
     <p class="titulo__opinion">Metodo de pago</p>

@@ -1842,18 +1842,6 @@ template {
     width: 40%;
   }
 }
-.contenedor__datos__perfil {
-  margin-top: -400px;
-  width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background: #112240;
-  border-radius: 7px;
-  position: relative;
-}
-
 .btn__back {
   display: inline-block;
   border: 0;
@@ -1872,9 +1860,21 @@ template {
   transition: ease-in-out 0.5s;
 }
 
-.info__perfil {
-  width: 30%;
-  margin: -30px auto 0 auto;
+.contenedor__datos__perfil {
+  margin-top: -400px;
+  width: 90%;
+  height: auto;
+  background: #112240;
+  border-radius: 7px;
+}
+
+.datos__de__perfil {
+  width: 50%;
+  margin: -80px auto 20px auto;
+}
+
+.perfil {
+  width: 100%;
 }
 
 .biografia__detallada {
@@ -1882,14 +1882,6 @@ template {
   font-size: 22px;
   font-weight: bold;
   margin-top: -50px;
-}
-
-.foto__de__perfil {
-  width: 60%;
-  height: 200px;
-  border-radius: 100%;
-  text-align: center;
-  margin: auto;
 }
 
 .redes__sociales {
@@ -1906,11 +1898,11 @@ template {
   font-size: 25px;
   margin-top: 20px;
   background: #000;
-  border-radius: 50px;
-  width: 50px;
-  height: 50px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   text-align: center;
-  line-height: 60px;
+  line-height: 50px;
 }
 
 .enlace__de__redes__sociales:hover {
@@ -1941,25 +1933,6 @@ template {
 
 .fa-twitter:hover {
   color: #1DA1F2;
-}
-
-.enlace__editar__perfil {
-  margin: 20px 0 0 0;
-  text-decoration: 0;
-  display: inline-block;
-  color: white;
-  padding: 12px;
-  width: 200px;
-  text-align: center;
-  border-radius: 7px;
-  background: #008A55;
-  font-size: 20px;
-}
-
-.enlace__editar__perfil:hover {
-  background: black;
-  color: white;
-  transition: ease-in-out 0.5s;
 }
 
 .datos__del__perfil__de__usuario {
@@ -2170,8 +2143,8 @@ template {
   }
 }
 @media screen and (max-width: 900px) {
-  .info__perfil {
-    width: 40%;
+  .contenedor__datos__perfil {
+    height: 600px;
   }
 
   .btn__back {
@@ -2180,12 +2153,26 @@ template {
 }
 @media screen and (max-width: 700px) {
   .info__perfil {
-    width: 55%;
+    width: 70%;
+    margin-top: 20px;
+  }
+
+  .enlace__editar__perfil {
+    margin-left: 15%;
   }
 
   .foto__de__perfil {
-    width: 70%;
+    margin-left: 25%;
+    width: 50%;
     height: 50%;
+  }
+
+  .biografia__detallada {
+    text-align: center;
+  }
+
+  .datos__del__perfil__de__usuario {
+    width: 55%;
     margin: auto;
   }
 
@@ -2206,10 +2193,6 @@ template {
   }
 }
 @media screen and (max-width: 500px) {
-  .info__perfil {
-    width: 90%;
-  }
-
   .parrafo__info__opinion {
     margin: auto;
     font-size: 16px;
@@ -2221,6 +2204,7 @@ template {
 }
 
 .parrafo__configuracion {
+  font-size: 20px;
   color: gray;
   margin: auto;
   width: 50%;
@@ -2291,15 +2275,22 @@ template {
 }
 
 .modal__content {
-  background-color: #202F36;
+  background-color: #000000;
   margin: 15% auto;
   padding: 20px;
-  width: 90%;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.actualizar__contraseña {
+  background: #000;
+  margin-top: -20px;
 }
 
 .parrafo__modal {
   text-align: center;
   color: white;
+  font-size: 20px;
 }
 
 .close {
@@ -2311,7 +2302,7 @@ template {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: white;
   text-decoration: none;
   cursor: pointer;
 }
@@ -3036,8 +3027,11 @@ template {
 }
 
 .foto__historial {
-  width: 50%;
-  border: solid 4px #008A55;
+  border-radius: 100px;
+  width: 8rem;
+  min-width: 80px;
+  box-shadow: 0 0 0 5px #FFF;
+  margin-left: 20px;
 }
 
 .datos__de__historial {
@@ -3086,19 +3080,25 @@ template {
   }
 
   .datos__de__historial {
-    width: 90%;
+    width: 60%;
     margin-top: 10px;
+    margin: auto;
   }
 
   .foto__historial {
+    margin: 20px 30% 10px;
+    width: 40%;
+  }
+
+  .datos__del__perfil__historial {
+    width: 55%;
     margin: auto;
-    width: 30%;
   }
 }
 @media screen and (max-width: 700px) {
-  .foto__historial {
+  .datos__del__perfil__historial {
     margin: auto;
-    width: 40%;
+    width: 80%;
   }
 }
 .contendor__datos__servicio {
@@ -3482,35 +3482,155 @@ template {
 }
 
 .subtitulo__solicitudes {
-  text-align: center;
   color: white;
+  text-align: center;
 }
 
 .texto__solicitud {
-  margin: auto;
-  width: 50%;
+  width: 60%;
   color: gray;
+  margin: auto;
+  font-size: 20px;
 }
 
-.nombre__servicio {
-  line-height: 20px;
-}
-
-.datos__de__solicitud {
+.contenido__solicitudes {
   width: 100%;
   height: auto;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
-  background: #112240;
-  border-radius: 10px;
-  margin: 20px 0 0 0;
 }
 
-.datos__mis__solicitudes {
-  width: 20%;
-  background: #000;
+.datos__de__solicitud {
+  width: 35%;
+  height: auto;
+  background: #112240;
+  border-radius: 10px;
+  margin: 50px auto 20px auto;
+}
+
+.card__solicitudes {
+  display: flex;
+  padding: 2.5rem 2rem;
+  border-radius: 10px;
+  background: #112240;
+  max-width: 500px;
+  min-height: 200px;
+  min-width: 300px;
+  margin: 1rem;
+  position: relative;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.card__solicitudes::before,
+.card__solicitudes::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+.card__solicitudes::before {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #FFF;
+  border-radius: 10px;
+  top: -0.7rem;
+  left: -0.7rem;
+}
+
+.card__solicitudes::after {
+  height: 15rem;
+  width: 15rem;
+  background-color: #4172f5aa;
+  top: -8rem;
+  right: -8rem;
+  box-shadow: 2rem 6rem 0 -3rem #FFF;
+}
+
+.card__solicitudes img {
+  border-radius: 50%;
+}
+
+.imagen__de_perfil {
+  max-width: 100%;
+  display: block;
+}
+
+.card__solicitudes img {
+  width: 8rem;
+  min-width: 80px;
+  box-shadow: 0 0 0 5px #FFF;
+}
+
+.infos {
+  margin-left: 1.5rem;
+}
+
+.name {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.name h2 {
+  font-size: 1.3rem;
+}
+
+.name h4 {
+  font-size: 1rem;
+  color: white;
+}
+
+.text {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.stats {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.stats li {
+  min-width: 5rem;
+}
+
+.stats li h3 {
+  font-size: 0.99rem;
+}
+
+.stats li h4 {
+  font-size: 1.2rem;
+}
+
+.links {
+  display: flex;
+}
+
+.links a {
+  text-decoration: 0;
+  display: inline;
+  min-width: 200px;
+  padding: 0.6rem;
+  border: 1px solid #222;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s linear;
+  margin-left: 5px;
+}
+
+.links .follow,
+.links .view:hover {
+  background-color: #008A55;
+  color: #FFF;
+}
+
+.links .view,
+.links .follow:hover {
+  background-color: transparent;
+  color: white;
 }
 
 .enlaces__servicios {
@@ -3548,31 +3668,45 @@ template {
 
 .parrafo__estado {
   background: #0652DD;
-  width: 80%;
+  width: 100%;
   color: white;
   font-weight: bold;
   padding: 7px;
   border-radius: 7px;
   text-transform: uppercase;
   opacity: 0.5;
+  margin-left: -22px;
 }
 
 .culminado {
   background: #008A55;
   opacity: 0.5;
-}
-
-.servicio {
-  margin: -150px 0 0 0;
+  margin-left: -22px;
 }
 
 @media screen and (max-width: 900px) {
-  .servicio {
-    margin: 0;
-  }
-
   .texto__solicitud {
     width: 90%;
+  }
+
+  .datos__de__solicitud {
+    margin: 30px auto 20px auto;
+    width: 90%;
+  }
+
+  .card__solicitudes {
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+
+  .infos {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+
+  .links button {
+    min-width: 100px;
   }
 }
 .contenedor__como__funciona {
@@ -3966,6 +4100,14 @@ template {
 }
 .datos__conductor {
   margin-bottom: 150px;
+}
+
+.datos__de__servicio__completado {
+  width: 35%;
+  height: auto;
+  background: #112240;
+  border-radius: 10px;
+  margin: 50px auto 20px auto;
 }
 
 .texto__servicio__completado {
