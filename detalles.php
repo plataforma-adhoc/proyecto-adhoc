@@ -72,13 +72,12 @@
 <script>
    function agregarProducto(id,token){
     let url = 'https://app-prueba-adhoc.herokuapp.com/';
-       let url+'agregar-servicio.php';
        let form__data = new FormData();
 
        form__data.append('id',id);
        form__data.append('token',token);
 
-       fetch(url,{
+       fetch(url+'agregar-servicio.php',{
        method:'POST',
         body:form__data,
         

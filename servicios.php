@@ -4,10 +4,10 @@
     include'config/config.php';
     include'conexion-db-accent.php';
 
-    $id__conductor = $_GET['idc'] ? $_GET['idc']:'';
-    // if($id__conductor ===""){
-    //    header("Location: dashboard-usuario.php");
-    // }
+    $id__conductor = isset($_GET['idc']) ? $_GET['idc']:'';
+    if($id__conductor ===""){
+       header("Location: dashboard-usuario.php");
+    }
     
     $consulta__datos__conductor = "SELECT * FROM conductores WHERE id_conductor = '$id__conductor' LIMIT 1";
     $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos__conductor);
@@ -65,7 +65,7 @@
       position: 'bottom-end',
       background:'#202F36',
       icon: 'success',
-      title: `<a href="compra.php?idc=<?php  echo $id_conductor  ?>"class="enlace__compra__servicio" >Se agrego a tu lista</a>`,
+      title: `<a href="compra.php?idc=<?php  echo $id__conductor  ?>"class="enlace__compra__servicio" >Se agrego a tu lista</a>`,
       toast:true,
       showConfirmButton: false,
       })
