@@ -14,7 +14,7 @@ $id__usuario = isset($_GET['idu']) ?  $_GET['idu']: '';
     <div class="contenedor__formulario">
         <div class="grupo__inputs">
             <div class="contenedor__inputs" id="grupo__nombre">
-                <label for="" class="label__finalizar__compra">A que direccion te recogemos ? </label>
+                <label for="" class="label__finalizar__compra">A que direccion llego ? </label>
                 <input type="text"  name="direccion" id=""
                     class="capturarDatos" autofocus autocomplete="">
 

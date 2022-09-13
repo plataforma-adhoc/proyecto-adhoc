@@ -3517,7 +3517,7 @@ template {
 }
 
 .datos__de__solicitud {
-  width: 35%;
+  width: 90%;
   height: auto;
   background: #112240;
   border-radius: 10px;
@@ -3529,7 +3529,7 @@ template {
   padding: 2.5rem 2rem;
   border-radius: 10px;
   background: #112240;
-  max-width: 500px;
+  max-width: 100%;
   min-height: 200px;
   min-width: 300px;
   margin: 1rem;

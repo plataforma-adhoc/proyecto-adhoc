@@ -30,7 +30,7 @@ height: auto;
 }
 
 .datos__de__solicitud{
-    width: 35%;
+    width: 90%;
     height:auto;
     background:$color__menu__dashboard;
    border-radius: 10px;
@@ -42,7 +42,7 @@ display: flex;
 padding: 2.5rem 2rem;
 border-radius: 10px;
 background:$color__menu__dashboard;
-max-width: 500px;
+max-width: 100%;
 min-height:200px;
 min-width:300px;
 margin: 1rem;

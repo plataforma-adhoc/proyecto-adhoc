@@ -43,7 +43,7 @@ if($email__contrasena ===""){
   try {
                 
       $mail->isSMTP();                                           
-      $mail->Host       = '	smtp.gmail.com';                  
+      $mail->Host       = 'smtp.gmail.com';                  
       $mail->SMTPAuth   = true;                                 
       $mail->Username   = 'soporteaccent@gmail.com';                   
       $mail->Password   = 'khsrvhkxqxxbbhba';                            
@@ -59,7 +59,7 @@ if($email__contrasena ===""){
       //Content
       $mail->isHTML(true);                                  
       $mail->Subject = 'Has solicitado el cambio de tus credencial de acceso a nuestra plataforma';
-      $mail->Body    = utf8_decode($contenido__mensaje);
+      $mail->Body    = $contenido__mensaje;
       $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
   
       $mail->send();
