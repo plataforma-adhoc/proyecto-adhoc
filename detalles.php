@@ -34,6 +34,7 @@
     }
 
 ?>
+    <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
 
 <div class="container contenedor__detalles">
     <h2 class="titulo__detalles">Detalle individual</h2>

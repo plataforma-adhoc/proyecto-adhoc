@@ -18,6 +18,7 @@
     $ejecutar__consulta__productos = mysqli_query($conexion__db__accent, $consulta__productos);
  
 ?>
+<button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
 <div class="container contenedor__servicios">
     <h2 class="titulo__servicios"> Servicios</h2>
     <p class="parrafo__servicios__info">Cada servicio de conductor elegido que eligas tiene un timepo maximo de espera, una vez llegue el conductor

@@ -1,10 +1,12 @@
 
 
-.subtitulo__registro{
-  text-align: center;
+.subtitulo__formularios{
   color: white;
   font-size:$tamaño__fuente__subtitulo;
-  margin-top: 100px;
+  position: absolute;
+  right: 30%;
+  left: 30%;;
+  top: 90px;
 }
 
 .formulario__registro {

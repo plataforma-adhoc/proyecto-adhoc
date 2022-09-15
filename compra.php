@@ -18,6 +18,7 @@ if($servicios != null || $id_conductor !=""){
        
    
 }?>
+    <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
 
 
 <div class="container contenedor__compra">

@@ -22,7 +22,7 @@ if($servicios != null || $id_conductor !=""){
 
 
 <div class="container contenedor__compra contenedor__pago">
-    <h2 class="titulo__compra">detalles de tus servicios </h2>
+    <h2 class="titulo__compra">Detalles de pedido </h2>
     <?php   
 if($lista__carrito == null){
   echo ' <tr><td colspan="5"><h3 class="titulo__compra">No has selecionado ningun servicio de conductor elegido</h3></td> </tr>  ';

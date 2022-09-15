@@ -1,6 +1,6 @@
 
 
-   var url__servidor__conductor = 'https://app-prueba-adhoc.herokuapp.com/'
+   var url__servidor__conductor = 'https://www.adhoc.com.co/'
    const inputs =  document.querySelectorAll('#formulario-registro-conductor input');
    const expresiones = {
    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.

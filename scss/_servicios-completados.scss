@@ -17,10 +17,16 @@
    margin:50px auto 20px auto;
 }
 
-.texto__servicio__completado{
-text-align: center;
-color: $color__gris;
+.subtitulo__solicitudes{
+  color: $color__gris;
+  font-size: $tamaño__fuente__subtitulo;
 }
+.texto__servicio__completado{
+color: $color__gris;
+font-size: $tamaño__parrafos;
+}
+
+
 
 .estado__terminado{
     font-size: 15px;

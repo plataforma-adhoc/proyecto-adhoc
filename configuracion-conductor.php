@@ -9,7 +9,7 @@ if($id =! $id || $id ===""){
     <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
 
 <div class="container contenedor__configuracion">
-    <h2 class="titulo__configuracion">Configuracion</h2> 
+    <h2 class="titulo__dashboard">Configuracion</h2> 
     <p class="parrafo__configuracion">Elige una de las siguientes opciones para continuar, recuerda que si decides eliminar tu cuenta se perderan todos los datos, incluido
        el saldo que tengas en nuestro sistema .
     </p>

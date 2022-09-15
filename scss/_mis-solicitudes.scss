@@ -7,16 +7,16 @@
 
 
 .subtitulo__solicitudes{
-color: white;
-text-align: center;
+color:$color__gris;
+font-size: $tamaño__fuente__subtitulo;
+
 }
 
 .texto__solicitud{
  width: 60%;
  color: $color__gris;
-margin: auto;
 font-size: $tamaño__parrafos;
-
+line-height: $line__heigth__parrafos;
 
 }
 

@@ -4,7 +4,24 @@
 }
 
 
+.contenedor__subtitulo__ad__panel{
+    text-align: left;
+    position: absolute;
+    top: 30%;
+    left: 12%;
+}
 
+.contenedor__subtitulo__ad__panel h2{
+    color:$color__gris;
+    font-size: $tamaño__fuente__subtitulo;
+}
 .datos__conductor{
     margin-bottom: 150px;
+}
+
+
+@media  screen and (max-width:1200px){
+ .contenedor__subtitulo__ad__panel{
+    left: 5%;
+ }   
 }

@@ -2,18 +2,12 @@
     margin-top: -600px;
   
 }
-.titulo__historial{
- color: white;
- text-align: center;
 
- 
-}
 .parrafo__historial{
     color:$color__gris;
-    width: 60%;  
-    margin: 0  auto 0 auto;
     font-size: $tamaño__parrafos;
-    
+    width: 80%;
+    line-height: $line__heigth__parrafos;
 }
 .contenido__historial{
     width: 100%;
@@ -91,10 +85,10 @@ color: white;
     .contenedor__datos__historial{
         margin-top: -550px;
     }
-
+    
     .parrafo__historial{
         width: 90%;
-        margin: auto;
+        margin:20px auto auto 10px;
     }
       .datos__de__historial{
         width: 60%;
@@ -106,7 +100,8 @@ color: white;
       
     .foto__historial{
         margin: 20px 30% 10px;
-         width:40%;
+         width:30%;
+         height: 120px;
        } 
        .datos__del__perfil__historial{
         width: 55%;

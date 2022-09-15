@@ -3,20 +3,19 @@
 }
 
 .titulo__servicios{
-    text-align: center;
-    color: white;
+    color:$color__gris;
+    font-size: $tamaño__fuente__subtitulo;
 
 }
 
 .parrafo__servicios__info{
     color: $color__gris;
     width: 60%;
-    margin: auto;
-    text-align: justify;
+    font-size: $tamaño__parrafos;
+    line-height:$line__heigth__parrafos;
 }
 
 .parrafo__servicios{
-    text-align: center;
     color:$color__gris;
     
 }
@@ -121,7 +120,8 @@ margin: 0 10px 0 10px;
       margin:60px  auto 0 auto;
     }
     .parrafo__servicios__info{
-      width: 90%;
+      width: 80%;
+      
     }  
   }
 
@@ -130,9 +130,6 @@ margin: 0 10px 0 10px;
   .cards__servicios{
     width: 70%;
     margin:60px  auto 0 auto;
-  }
-  .parrafo__servicios__info{
-    width: 90%;
   }  
 }
 

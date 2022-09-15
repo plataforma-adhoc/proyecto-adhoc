@@ -6,6 +6,7 @@
 .titulo__finalizar__compra{
 text-align: center;
 color: $color__gris;
+font-size: $tamaño__fuente__subtitulo;
 }
 
 .formulario__completar__compra{
@@ -17,9 +18,11 @@ color: $color__verde;
 }
 
 .parrafo__finalizar__compra{
-color: white;
-width: 500px;
+color:$color__gris;
+font-size: $tamaño__parrafos;
+width: 60%;
 margin: auto;
+line-height: $line__heigth__parrafos;
 }
 
 .fa-stopwatch-20{

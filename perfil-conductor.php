@@ -23,6 +23,9 @@ if(mysqli_num_rows($resultado__consulta) > 0){
 
  }?>
     <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
+<div class="contenedor__subtitulo__ad__panel">
+    <h2 class="subtitulo__ad__panel">Mi perfil</h2>
+</div>
 <div class="container contenedor__datos__perfil">
 <div class="datos__de__perfil">
 <div class="card__solicitudes perfil">

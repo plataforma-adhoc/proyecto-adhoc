@@ -1,7 +1,7 @@
 <?php include'layout/nabvar.php' ?>
 <div class="contenedor__del__formulario">
+    <h2 class="subtitulo__formularios">Crea una cuenta gratis</h2>
 <form class="formulario__registro" id="formulario-registro-usuario">
-<!-- <h2 class="subtitulo__registro">Crea una cuenta gratis</h2> -->
     <div class="contenedor__formulario">  
             <div class="grupo__inputs" id="grupo__nombre">
                 <label for="nombre"class="formulario__label">Nombre</label>

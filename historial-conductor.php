@@ -20,7 +20,7 @@ if(mysqli_num_rows($ejecutar__consulta__datos__usuario) > 0){
 <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
 <div class="container contenedor__datos__historial">  
 
-<h2 class="titulo__historial">Historial</h2>
+<h2 class="titulo__dashboard">Historial</h2>
 <p class="parrafo__historial">En tu historial puedes revisar a detalles tu solicitudes, en esta seccion veras la informacion necesaria de tus servicos de conductor elegido</p>
 
 <?php  

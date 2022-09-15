@@ -24,7 +24,7 @@ if($id__conductor){
      <div class="datos__solicitud__completada" data-aos="zoom-in">
      <div class="card__solicitudes">
      <div class="img">
-     <img src="upload/<?php echo $resultado['avatar'] ?>" class="imagen__de_perfil">
+     <img src="upload/<?php echo $resultado['avatar'] ?>" class="imagen__de_perfil imagen__solicitudes">
     </div>
     <div class="infos">
       <div class="name">

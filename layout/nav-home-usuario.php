@@ -41,7 +41,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
                  $total__notificaciones = mysqli_num_rows($ejecutar__consulta) ?>
                 <div class="enlaces__varios">
-                   <a href="perfil-usuario.php?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__perfil__usuario"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"></a>
+                   <a href="perfil-usuario.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__perfil__usuario"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"></a>
                    <a href="#" class="enlace__notificaciones" id="abrir-modal"><i class="far fa-bell"></i>
             <?php  if($total__notificaciones > 0){ ?><span class="numero__notificaciones">
               <?php   echo $total__notificaciones ?></span> <?php } ?>

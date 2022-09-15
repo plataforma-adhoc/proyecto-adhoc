@@ -1,4 +1,5 @@
 <?php include'layout/nabvar.php'?>
+<h2 class="subtitulo__formularios">Incia sesión con tu cuenta</h2>
 <div class="contenedor__del__formulario">
 <form class="formulario__registro" id="formulario-login-conductor">
     <div class="contenedor__formulario">

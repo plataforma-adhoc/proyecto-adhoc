@@ -1,4 +1,4 @@
-var url__servidor= 'https://app-prueba-adhoc.herokuapp.com/'
+var url__servidor= 'https://www.adhoc.com.co/'
 
 export function comentarios__conductor(){
     let form__comentario = document.getElementById('formulario-comentario-conductor');

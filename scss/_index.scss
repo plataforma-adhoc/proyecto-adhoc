@@ -298,12 +298,13 @@
 .cta{
     padding: 20px 30px;
     display: inline-block;
-    background:$color__accent ;
+    background:$color__accent;
     text-decoration: none;
-    color:$color__negro;
+    color:white;
     font-weight: 700;
     box-shadow: var(--shadow) var(--color_shadow);
-    border-radius: 6px;
+    border-radius: 7px;
+    font-size: $tamaño__parrafos;
 }
 
 .cta:hover{

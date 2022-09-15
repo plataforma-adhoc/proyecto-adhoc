@@ -12,10 +12,10 @@ $ejecutar__consulta__datos__conductor = mysqli_query($conexion__db__accent,$cons
 $resultado__datos__conductor = mysqli_fetch_array($ejecutar__consulta__datos__conductor); ?>
 
 
+<button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
 <div class="container contenedor__datos__historial">  
-    <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
-    <h2 class="titulo__historial">Historial</h2>
-<p class="parrafo__historial">En tu historial puedes revisar a detalles tu solicitudes, en esta seccion veras la informacion necesaria de tus servicos de conductor elegido</p>
+    <p class="titulo__dashboard">Mi historial</p>
+<p class="parrafo__historial">En tu historial puedes revisar a detalles tu solicitudes, en esta seccion veras la informacion necesaria de tus servicios de conductor elegido</p>
     <?php  if(mysqli_num_rows($ejecutar__consulta__datos__servicio) > 0) {
     while($resultado__servicios = mysqli_fetch_array($ejecutar__consulta__datos__servicio)){
      

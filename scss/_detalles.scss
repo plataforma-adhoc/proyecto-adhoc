@@ -2,14 +2,14 @@
     margin-top: -600px;
 }
 .titulo__detalles{
-  text-align: center;
-  color: white;
+  color:$color__gris;
+  font-size: $tamaño__fuente__subtitulo;
 }
 
 
 .parrafo__detalles{
     color: $color__gris;
-    text-align: center;
+    font-size: $tamaño__parrafos;
 }
 .contenido__detalles{
     width: 100%;

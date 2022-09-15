@@ -59,7 +59,7 @@ if($email__contrasena ===""){
       //Content
       $mail->isHTML(true);                                  
       $mail->Subject = 'Has solicitado el cambio de tus credencial de acceso a nuestra plataforma';
-      $mail->Body    = $contenido__mensaje;
+      $mail->Body    = utf8_decode($contenido__mensaje);
       $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
   
       $mail->send();

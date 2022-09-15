@@ -16,16 +16,25 @@
     transition: ease-in-out 0.5s;
 }
 
+
 .contenedor__datos__perfil{
     margin-top: -400px;
     width: 90%;
     height: auto;
     background:$color__menu__dashboard;
     border-radius: 7px;
-    
+    position: relative;
 }
 
 
+// .subtitulo__ad__panel{
+//     font-size:$tamaño__fuente__subtitulo;
+//     color:$color__gris;
+//     font-weight: bold;
+//     position:absolute;
+//     top: 250px;
+//     left: 200px;
+// }
 .datos__de__perfil{
     width: 50%;
     margin: -80px auto 20px auto;
@@ -340,6 +349,7 @@ height: auto;
         width: 80%;
         margin: auto;
       }  
+     
 }
 
 @media screen and (max-width:900px) {
@@ -350,6 +360,7 @@ height: auto;
     left: 5%;
   }
  
+
    
 }
 
