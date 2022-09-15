@@ -671,12 +671,11 @@ ul {
 }
 
 /*responsive*/
-@media (max-width: 1200px) {
-  .texto__nav__images {
-    margin: 70% auto 0 auto;
-  }
-}
 @media screen and (max-width: 900px) {
+  .texto__nav__images {
+    margin: 50% auto 0 auto;
+  }
+
   .title {
     font-size: 50px;
   }

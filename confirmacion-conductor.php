@@ -11,7 +11,7 @@ include'layout/nabvar.php';
    $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__recuperar__contrasena);
    $resultado__consulta = mysqli_fetch_array($ejecutar__consulta);
    if(!$resultado__consulta){
-     header('Location: ./password-conductor');
+     header('Location: password-conductor.php');
   die();
    }else{
      
