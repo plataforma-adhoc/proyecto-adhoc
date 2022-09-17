@@ -84,8 +84,10 @@ while($fila__resultado__saldo = mysqli_fetch_array($resultado__seleccion__saldo)
                 </div>
             </a>
     </div>
-    <?php  if($datos__resultado['status'] === NULL || $datos__resultado['status'] === 'fuera de linea' ){  ?>
-    <a href="#" class="enlace__conectarme"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Hacerme visible para los usuarios</a>
+    <?php  
+    if($datos__resultado['aprobado'] ==='1'){
+    if($datos__resultado['status'] === NULL || $datos__resultado['status'] === 'fuera de linea' ){  ?>
+    <a href="#" class="enlace__conectarme"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Conectarme</a>
     <?php }?>
 
     <?php  if($datos__resultado['status'] === 'disponible'){  ?>
@@ -95,6 +97,14 @@ while($fila__resultado__saldo = mysqli_fetch_array($resultado__seleccion__saldo)
         <p class="texto__en__linea">Estoy disponible</p>
         </form>
         <?php  } ?>
+        <?php  }else{ ?>
+       <div class="estado__aprobacion">
+         <p>Gracias por tu registro, estamos validando tu informacion esto puede tardar varios 
+          te informaremos cuando esto termine
+         </p>
+       </div>
+     <?php   } ?>
+ 
 
 </div>
 

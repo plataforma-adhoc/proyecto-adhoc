@@ -90,7 +90,7 @@
             <input type="submit" value="CREAR MI CUENTA" class="boton__registro" name="enviar">
         </div>
 
-        <p class="terminos block">Al registrarte aceptas nuestros <a class="enlace__terminos" href="./terminos-y-condiciones-de-uso">Terminos y
+        <p class="terminos block">Al registrarte aceptas nuestros <a class="enlace__terminos" href="terminos-y-condiciones-de-uso.php">Terminos y
                 condiciones</a> y
             <a class="enlace__terminos" href="politicas-de-privacidad.php">politicas de privacidad</a> </p>
         <div class="contenedor__enlace__sesion block">       

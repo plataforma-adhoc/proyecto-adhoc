@@ -185,14 +185,14 @@ text-align: center;
 
   .enlace__conectarme{
     text-decoration: 0;
-    width:280px;
-    padding: 12px;
+    width:200px;
+    padding: 10px;
     display: inline-block;
     background: $color__verde;
     text-align: center;
     color: white;
     margin: 100px 0 0 0;
-    border-radius: 12px;
+    border-radius: 7px;
   }
 
   .enlace__conectarme:hover{
@@ -210,7 +210,7 @@ text-align: center;
   .btn__conectarse{
     display: inline-block;
       width:$tamaño__btn;
-      padding: 12px;
+      padding: 10px;
       color: white;
       background: $color__verde;
       text-align: center;
@@ -222,8 +222,8 @@ text-align: center;
   
   .desconectarse{
     margin: 150px 0 0 0;
-    background: yellow;
-    color: black;
+    background:black;
+    color:white;
     font-weight: bold;
   }
   
@@ -254,6 +254,21 @@ text-align: center;
  align-items: center;
 }
 
+.estado__aprobacion{
+  width: 70%;
+  margin-top: 80px;
+  font-size: $tamaño__parrafos;
+  padding: 10px;
+  color: white;
+  background:$color__menu__dashboard;
+  border: solid 0.5px white;
+  border-radius: 7px;
+}
+
+.estado__aprobacion p{
+  line-height:$line__heigth__parrafos;
+
+}
 .imagen__celebracion{
   width: 60%;
   margin-bottom: 70px;
