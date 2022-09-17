@@ -99,8 +99,8 @@ while($fila__resultado__saldo = mysqli_fetch_array($resultado__seleccion__saldo)
         <?php  } ?>
         <?php  }else{ ?>
        <div class="estado__aprobacion">
-         <p>Gracias por tu registro, estamos validando tu informacion esto puede tardar varios 
-          te informaremos cuando esto termine
+         <p>Gracias por tu registro, estamos validando tu informacion esto puede tardar varios  dias
+          te informaremos cuando esto termine .
          </p>
        </div>
      <?php   } ?>
