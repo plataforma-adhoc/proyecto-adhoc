@@ -7,6 +7,12 @@
     margin: auto;
     color: white;
     font-size:$tamaño__parrafos;
+    line-height: 20px;
+}
+
+.enlaces__de__ayuda{
+ color:$color__verde;
+
 }
 
 .subtitulo__como__funciona{
@@ -36,7 +42,7 @@ font-size: 20px;
     height:230px;
     padding: 20px;
     position: relative;
-    border: solid 4px $color__verde;
+    border: solid 2px $color__verde;
     margin: 50px  auto 0  auto;
 }
 
