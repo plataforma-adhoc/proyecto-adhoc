@@ -43,7 +43,7 @@ padding: 2.5rem 2rem;
 border-radius: 10px;
 background:$color__menu__dashboard;
 max-width: 100%;
-min-height:200px;
+height: auto;
 min-width:300px;
 margin: 1rem;
 position: relative;
@@ -210,8 +210,105 @@ margin-left: -22px;
     margin-left: -22px;
 }
 
+.btn__open__modal__calificacion{
+  display: inline-block;
+  border: none;
+  outline: 0;
+  color:white;
+  font-weight: bold;
+  border-radius: 7px;
+  background:$color__accent;
+  padding: 7px;
+}
+
+.cerrar__modal__calificacion{
+  display: inline-block;
+  font-size: 30px;
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+  top: 30px;
+}
+
+.cerrar__modal__calificacion:hover{
+  color: white;
+  transition: all 0.5s;
+}
+
+.modal__recorrido {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  transition: ease-in-out 0.5s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
 
 
+
+.contendido__modal__recorrido{
+background-color:$color__cards;
+margin: 15% auto; 
+padding: 20px;
+width: 50%; 
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.formulario__calificacion{
+    width: 90%;
+}
+
+.area__mensaje{
+max-width: 100%;
+min-width: 100%;
+min-height: 70px;
+max-height: 70px;
+}
+
+@keyframes animatetop {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+  
+  
+  .subtitulo__estado__recorrido{
+    color: white;
+  }
+  
+  .parrafo__recorrido{
+    color: white;
+    font-size: $tamaño__parrafos;
+    line-height: 20px;
+  }
+  
+  
+  
+  
+  .contenido__calificaciones{
+  width: 80%;
+  display: flex;
+  }
+  
+  .btn__calificaciones{
+   display: inline-block;
+   padding: 0;
+   outline: 0;
+   border: 0;
+   margin-left: 15px;
+   background:$color__verde;
+   color: white;
+   padding: 10px;
+  }
 
 
 // @media screen and (max-width:900px) {

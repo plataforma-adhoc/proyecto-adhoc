@@ -1,21 +1,4 @@
-export function abrir__menu(){
-    let abrir__menu = document.getElementById('abrir-menu');
-    if(abrir__menu){
-  abrir__menu.addEventListener('click',function(){
-      document.getElementById("myNav").style.width = "19%";
-      
-    })
-    }
-      }
-    
-   export function cerrar__menu() {
-    let cerrar__menu = document.getElementById('cerrar-menu');
-    if(cerrar__menu){
-     cerrar__menu.addEventListener('click',function(){
-         document.getElementById("myNav").style.width = "0%";
-     })
-    }
-    }
+
 
  export function cerrar__ventana(){
   let cerrar__ventana = document.getElementById('cerrar-ventana');
@@ -25,4 +8,26 @@ export function abrir__menu(){
      ventana__perfil.style.display="none"
    })
   }
+ }
+
+export function abrir__modal__calificaciones(){
+  let btn__abrir__modal = document.getElementById('myBtn');
+  let modal__recorrido =  document.getElementById('modal-recorrido');
+
+  if(btn__abrir__modal){
+    btn__abrir__modal.addEventListener('click',function(){
+     modal__recorrido.style.display="block"
+    })
+  }
+}
+
+
+ export function cerrar__modal__calificaciones(){
+  let modal__recorrido =  document.querySelector('.modal__recorrido');
+ let cerrar__modal__calificacion = document.getElementById('cerrar-modal-calificacion');
+ if(cerrar__modal__calificacion){
+    cerrar__modal__calificacion.addEventListener('click',function(){
+  modal__recorrido.style.display='none'
+    })
+ }
  }

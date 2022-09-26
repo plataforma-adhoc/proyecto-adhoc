@@ -1956,15 +1956,14 @@ p {
 .contenedor__datos__perfil {
   margin-top: -400px;
   width: 90%;
-  height: auto;
   background: #112240;
   border-radius: 7px;
-  position: relative;
 }
 
 .datos__de__perfil {
   width: 50%;
   margin: -80px auto 20px auto;
+  height: auto;
 }
 
 .perfil {
@@ -2076,6 +2075,11 @@ p {
   height: 550px;
 }
 
+.contenido__comentario {
+  width: 40%;
+  margin: auto;
+}
+
 .contenedor__formulario__datos__de_pago {
   height: 400px;
 }
@@ -2087,60 +2091,23 @@ p {
 }
 
 .opinion {
-  width: 50%;
+  width: 100%;
   height: auto;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   border-top-right-radius: 25px;
   background: #0A192F;
-  margin: -30px 0 0 100px;
-}
-
-.opinion__2 {
-  width: 50%;
-  margin-left: 40%;
-  background: #0A192F;
-  margin-top: -30px;
-  border-top-right-radius: 25px;
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-}
-
-.parrafo__info__opinion {
-  color: white;
-  width: 80%;
-  margin: 0 0 0 100px;
-  font-size: 18px;
-}
-
-.parrafo__info__opinion span {
-  color: yellow;
-}
-
-.avatar__opinion__1 {
-  width: 30px;
-  height: 30px;
-  border-radius: 50px;
-  border: solid 2px #008A55;
+  margin-top: 30px;
 }
 
 .item__opinion {
-  display: flex;
-  align-items: center;
-  margin: 50px 0 0 10px;
+  width: 95%;
+  margin: auto;
   color: gray;
 }
 
 .nombre__item__opinion {
-  margin-left: 10px;
-  margin-top: 15px;
-}
-
-.parrafo__item__opinion {
-  margin-left: 50px;
-  margin-top: -15px;
-  width: 80%;
-  height: auto;
+  line-height: 30px;
 }
 
 .parrafo {
@@ -2155,40 +2122,6 @@ p {
   font-size: 12px;
   color: gray;
   margin: 10px 0 0 10px;
-}
-
-.form-search {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  padding: 5px;
-  background: #0A192F;
-  border-radius: 0.375rem;
-  width: 80%;
-  margin: 50px auto 0 auto;
-}
-
-.form-search button {
-  color: white;
-  opacity: 0.5;
-}
-
-.form-search input {
-  border: none;
-  outline: none;
-  background-color: #0A192F;
-  margin-left: 1rem;
-  color: white;
-  width: 80%;
-  margin: auto;
-}
-
-.boton__respuesta {
-  display: inline-block;
-  background: #0A192F;
-  border: 0;
-  padding: 15px;
-  cursor: pointer;
-  color: white;
-  border-radius: 50px;
 }
 
 .contenedor__formulario__datos__de_pago {
@@ -2242,7 +2175,11 @@ p {
 }
 @media screen and (max-width: 900px) {
   .contenedor__datos__perfil {
-    height: 600px;
+    height: 800px;
+  }
+
+  .datos__de__perfil {
+    height: auto;
   }
 
   .btn__back {
@@ -2291,9 +2228,15 @@ p {
   }
 }
 @media screen and (max-width: 500px) {
-  .parrafo__info__opinion {
+  .opinion {
+    width: 90%;
+    background: #000;
     margin: auto;
-    font-size: 16px;
+  }
+
+  .datos__de__perfil {
+    width: 100%;
+    height: 800px;
   }
 }
 .titulo__configuracion {
@@ -2934,28 +2877,6 @@ p {
   line-height: 60px;
 }
 
-.modal__recorrido {
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.contendido__modal__recorrido {
-  background-color: #112240;
-  margin: 15% auto;
-  padding: 20px;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .estado__aprobacion {
   width: 70%;
   margin-top: 80px;
@@ -2969,36 +2890,6 @@ p {
 
 .estado__aprobacion p {
   line-height: 30px;
-}
-
-.imagen__celebracion {
-  width: 60%;
-  margin-bottom: 70px;
-}
-
-.subtitulo__estado__recorrido {
-  color: white;
-}
-
-.parrafo__recorrido {
-  color: white;
-  font-size: 18px;
-}
-
-.btn__dejar__opinion {
-  display: inline-block;
-  text-decoration: 0;
-  width: 250px;
-  padding: 12px;
-  color: white;
-  background: #008A55;
-  text-align: center;
-  border: 0;
-  border-radius: 10px;
-}
-
-.btn__dejar__opinion:hover {
-  color: white;
 }
 
 .card__perfil__sin__editar {
@@ -3178,6 +3069,10 @@ p {
   .contenedor__datos__historial {
     width: 90%;
   }
+
+  .foto__historial {
+    width: 40%;
+  }
 }
 @media screen and (max-width: 900px) {
   .contenedor__datos__historial {
@@ -3198,7 +3093,7 @@ p {
   .foto__historial {
     margin: 20px 30% 10px;
     width: 30%;
-    height: 120px;
+    height: 150px;
   }
 
   .datos__del__perfil__historial {
@@ -3210,6 +3105,17 @@ p {
   .datos__del__perfil__historial {
     margin: auto;
     width: 80%;
+  }
+
+  .foto__historial {
+    width: 30%;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .foto__historial {
+    width: 50%;
+    height: 120px;
   }
 }
 .contendor__datos__servicio {
@@ -3630,7 +3536,7 @@ p {
   border-radius: 10px;
   background: #112240;
   max-width: 100%;
-  min-height: 200px;
+  height: auto;
   min-width: 300px;
   margin: 1rem;
   position: relative;
@@ -3796,6 +3702,104 @@ p {
   background: #008A55;
   opacity: 0.5;
   margin-left: -22px;
+}
+
+.btn__open__modal__calificacion {
+  display: inline-block;
+  border: none;
+  outline: 0;
+  color: white;
+  font-weight: bold;
+  border-radius: 7px;
+  background: #C0392B;
+  padding: 7px;
+}
+
+.cerrar__modal__calificacion {
+  display: inline-block;
+  font-size: 30px;
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+  top: 30px;
+}
+
+.cerrar__modal__calificacion:hover {
+  color: white;
+  transition: all 0.5s;
+}
+
+.modal__recorrido {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: ease-in-out 0.5s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.contendido__modal__recorrido {
+  background-color: #112240;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario__calificacion {
+  width: 90%;
+}
+
+.area__mensaje {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 70px;
+  max-height: 70px;
+}
+
+@keyframes animatetop {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+.subtitulo__estado__recorrido {
+  color: white;
+}
+
+.parrafo__recorrido {
+  color: white;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.contenido__calificaciones {
+  width: 80%;
+  display: flex;
+}
+
+.btn__calificaciones {
+  display: inline-block;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  margin-left: 15px;
+  background: #008A55;
+  color: white;
+  padding: 10px;
 }
 
 @media screen and (max-width: 900px) {

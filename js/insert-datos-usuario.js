@@ -182,7 +182,7 @@
         evento.preventDefault();
         
         let data = new FormData(document.getElementById('formulario-registro-usuario'))
-        fetch(url__servidor+'insert-datos-usuario.php',{
+        fetch('insert-datos-usuario.php',{
             method:'POST',
             body:data
         }).then(respuesta => respuesta.json())

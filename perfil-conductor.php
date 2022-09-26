@@ -8,6 +8,8 @@ if($id__conductor ===""){
  exit;
 } 
 
+
+
 $consulta__datos__usuario = "SELECT *  FROM usuarios ";
 $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
 if(mysqli_num_rows($resultado__consulta) > 0){
@@ -34,15 +36,16 @@ if(mysqli_num_rows($resultado__consulta) > 0){
     </div>
     <div class="infos">
       <div class="name">
-   <h2><?php echo $datos__resultado__conductor['nombre_conductor']  ?></h2>
-   <h4><?php echo $datos__resultado__conductor['primer_apellido'] ?> <?php echo $datos__resultado__conductor['segundo_apellido'] ?></h4>
+   <h2>Nombre : <?php echo $datos__resultado__conductor['nombre_conductor']  ?></h2>
+   <h4>Apellidos : <?php echo $datos__resultado__conductor['primer_apellido'] ?> <?php echo $datos__resultado__conductor['segundo_apellido'] ?></h4>
    <h2>Biografia detallada</h2>
-   <h4><?php echo $datos__resultado__conductor['email'] ?></h4>
-   <h4><?php echo $datos__resultado__conductor['numero_documento'] ?></h4>
-   <h4><?php echo $datos__resultado__conductor['numero_telefono'] ?></h4>
-   <h4><?php echo $datos__resultado__conductor['numero_licencia'] ?></h4>
-   <h4><?php echo $datos__resultado__conductor['categoria_licencia'] ?></h4> 
-   <h4><?php echo  date("d-m-Y",strtotime($datos__resultado__conductor['fecha_de_registro'])) ?></h4> 
+   <h4>Email :<?php echo $datos__resultado__conductor['email'] ?></h4>
+   <h4>Documento : <?php echo $datos__resultado__conductor['numero_documento'] ?></h4>
+   <h4>Telefono : <?php echo $datos__resultado__conductor['numero_telefono'] ?></h4>
+   <h4>Licencia : <?php echo $datos__resultado__conductor['numero_licencia'] ?></h4>
+   <h4>Categoria : <?php echo $datos__resultado__conductor['categoria_licencia'] ?></h4> 
+   <h4>Miembro desde : <?php echo  date("d-m-Y",strtotime($datos__resultado__conductor['fecha_de_registro'])) ?></h4> 
+
    <?php    if($datos__resultado__conductor['quien_soy'] != NULL){   ?>
    <h4><?php echo $datos__resultado__conductor['quien_soy'] ?></h4>
 <?php } ?>
@@ -78,8 +81,7 @@ if(mysqli_num_rows($resultado__consulta) > 0){
 </div>
 </div>
 </div>
-</div>
-     
+</div> 
 </div>
 <div class="container contenedor__formulario__datos__de_pago">
     <p class="titulo__opinion">Metodo de pago</p>
@@ -110,52 +112,26 @@ if(mysqli_num_rows($resultado__consulta) > 0){
 </div>
 
 <br><br><br><br>
-<div class="container contenedor__opinion conductor" id="opinion">
-    <p class="titulo__opinion">Centro de opiniones</p>
-    <p class="parrafo__info__opinion"><span><i class="fas fa-bullhorn"></i> ATENCION : </span> Esta prohibido hacer comentarios fuera de lugar,
-    insultar alos demas, u otro tipo de agresion, esto es solo para hacer comentarios sobre el servicio prestado . 
-     Si tienes dudas te invitamos a conocer nuestros <a href="./terminos-y-condiciones-de-uso" class="enlace__a__terminos">Terminos y condiciones</a>
-</p>
-<?php      
-$consulta__comentarios = "SELECT * FROM comentarios__usuario WHERE id_conductor = '{$_SESSION['id_conductor']}'";
+<div class="container contenedor__opinion" id="opinion1">
+  <p class="titulo__opinion">Centro de opiniones</p>
+  <div class="contenido__comentario">
+<?php    
+$consulta__comentarios = "SELECT * FROM comentario__usuario WHERE id_conductor = '{$_SESSION['id_conductor']}'";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
-while($fila = mysqli_fetch_array($ejecutar__consulta)){ ?>
-        <div class="opinion">
-         <div class="opinion__1" >
-             <div class="item__opinion">
-                 <img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt="" class="avatar__opinion__1">
-                 <div class="nombre__item__opinion"><p><?php echo $datos__resultado['nombre_usuario'] ?></p></div>
-             </div>
-                 <div class="parrafo__item__opinion">
-                     <p class="parrafo"><?php echo $fila['comentario'] ?></p>
-                     <p class="fecha__publicacion"><?php echo $fila['fecha_comentario'] ?></p>
-             </div>
-             </div>
-         
-         </div>
-       
-         
-         <?php } ?>
-       <div id="comentario-conductor"></div>
+while($fila = mysqli_fetch_array($ejecutar__consulta)){?>
+  <div class="opinion">
+        <div class="item__opinion">
+               <p class="nombre__item__opinion"> De <?php echo $fila['nombre'] ?></a></p>
+                <p class="parrafo"><?php echo $fila['comentario'] ?></p>
+                <p class="fecha__publicacion">esto fue el  <?php echo $fila['fecha_de_calificacion'] ?></p>
+  
+        </div>
     
-
-    <form class="form-search" id="formulario-comentario-conductor">
-        <?php   $consulta__datos__usuario = "SELECT id_usuario  FROM usuarios WHERE id_usuario = '{$datos__resultado['id_usuario']}'";
-        $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
-        $datos__resultado__id = mysqli_fetch_array($resultado__consulta); ?>
-
-       
-
-    <?php  if(mysqli_num_rows($ejecutar__consulta) < 0){ ?>
-        <h2 class="titulo__opinion"><i class="fas fa-comment-dots"></i> Aun no hay comentarios</h2>
-        <?php } ?>
-        <input type="hidden" value="<?php  echo $datos__resultado__conductor['id_conductor'] ?>" name="idConductor">
-        <input type="hidden" value="<?php echo  $datos__resultado__id['id_usuario'] ?>" name="idUsuario">
-        <button class="boton__respuesta"><i class="fas fa-paper-plane"></i></button>
-        <input type="text" placeholder="Escribe una respuesta"name="respuesta" autocomplete="off"id="respuesta-comentario">
-  </form>
-       
+    </div>
+ <?php } ?>
+</div> 
 </div>
+<br><br>
 <br><br>
 
 <?php  include'layout/footer-home.php' ?>

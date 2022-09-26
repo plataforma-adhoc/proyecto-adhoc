@@ -19,7 +19,7 @@ include'conexion-db-accent.php';
 </div>
 </div>
 
-<?php  
+<!-- <?php  
  $consulta__servicios__completados = "SELECT estado_recorrido,status_2 FROM datos__inicio__recorrido WHERE estado_recorrido = 'Recorrido terminado' AND id_conductor ='{$_SESSION['id_usuario']}' AND status_2 = '0' ";  
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__servicios__completados);
 $total__completados = mysqli_num_rows($ejecutar__consulta);
@@ -41,5 +41,7 @@ if($estado__recorrido['estado_recorrido'] ==='Recorrido terminado') {?>
 
 </div>
 
-<?php  }  ?>
+<?php  }  ?> -->
+
+
 <?php include'layout/footer-home.php' ?>

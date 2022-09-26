@@ -73,6 +73,8 @@ $resultado__datos__conductor = mysqli_fetch_array($ejecutar__consulta__datos__co
          </div>
          <p class="texto">Datos adicionales</p>
              <p class="datos__basicos"><strong></strong><?php echo $resultado__servicios['descripcion'] ?></p>
+          <button id="myBtn" class="btn__open__modal__calificacion">Dejar un comentario</button>
+<br><br>
      </div>
 </div>
 </div>
@@ -85,4 +87,34 @@ $resultado__datos__conductor = mysqli_fetch_array($ejecutar__consulta__datos__co
 
 <br><br>
 <br><br>
+
+
+<div class="modal__recorrido" id="modal-recorrido">
+  <div class="contendido__modal__recorrido">
+  <span class="cerrar__modal__calificacion" id="cerrar-modal-calificacion"><i class="far fa-times-circle"></i></span>
+    <form  class="formulario__calificacion" id="form-comentario">
+  <h4 class="subtitulo__estado__recorrido">Felicidades</h4>
+      <h4 class="subtitulo__estado__recorrido">completaste un nuevo recorrido</h4>
+      <p class="parrafo__recorrido">Dejanos saber tu opinion sobre el conductor que elegiste</p>
+    <div class="contenedor__formulario">
+        <div class="grupo__inputs block">
+            <div class="contenedor__inputs" id="grupo__nombre">
+                <input type="text"  name="nombre" value="<?php echo $datos__resultado['nombre_usuario'] ?>"
+                    class="capturarDatos" autofocus autocomplete="" readonly>
+            </div>
+        </div>
+        <div class="grupo__inputs block">
+            <div class="contenedor__inputs" id="grupo__nombre">
+               <textarea name="areaMensaje" id="" cols="30" rows="10" class="area__mensaje" placeholder="Aqui tu mensaje"></textarea>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" value="<?php echo $datos__resultado['id_usuario'] ?>" name="idUsuario">
+    <input type="hidden" value="<?php echo $resultado__datos__conductor['id_conductor'] ?>" name="idConductor">
+    <button class="btn__calificaciones">Publicar ahora</button>
+</form>
+</div>
+
+</div>
+
 <?php  include'layout/footer-home.php'  ?>

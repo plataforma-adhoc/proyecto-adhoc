@@ -63,7 +63,7 @@
             </ul>
             <div class="nav-images">
               <div class="nav-image image-1">
-                <h2 class="texto__nav__images">Solicita tu conductor elegido desde <span class="precio__hora">$ 25.000 COP</span>  hora, y un conductor elegido llegara a la puerta de tu casa</h2>
+                <h2 class="texto__nav__images">Solicita tu conductor elegido desde <span class="precio__hora">$ 19.990 COP</span>  hora, y un conductor elegido llegara a la puerta de tu casa</h2>
                
               </div>
             </div>

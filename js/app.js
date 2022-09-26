@@ -2,10 +2,10 @@
 AOS.init();
 
 
-import {abrir__menu,cerrar__menu,cerrar__ventana} from'./complementos.js';
-abrir__menu();
-cerrar__menu();
+import {cerrar__ventana,abrir__modal__calificaciones, cerrar__modal__calificaciones} from'./complementos.js';
 cerrar__ventana();
+abrir__modal__calificaciones();
+cerrar__modal__calificaciones();
 
 
 import {insert__datos__usuario, insert__login__usuario,
@@ -20,8 +20,7 @@ obtener__conductores__disponibles();
 
 
 import {insert__datos__conductor,insert__login__conductor,password__conductor,
-    insert__datos__edit__perfil__conductor,actualizar__contrasena,metodo__de__pago, modal__cambio__contrasena__conductor,modal__Notificaciones, conectarse,
-  desconectarse} from './insert-datos-conductor.js';
+    insert__datos__edit__perfil__conductor,actualizar__contrasena,metodo__de__pago, modal__cambio__contrasena__conductor,modal__Notificaciones, conectarse,desconectarse} from './insert-datos-conductor.js';
 insert__datos__conductor();
 insert__login__conductor();
 password__conductor();
@@ -39,14 +38,13 @@ desconectarse();
 
 
 
-import {comentarios__usuario,mostrar__comentario} from './comentarios-usuario.js';
-comentarios__usuario();
-mostrar__comentario();
+import {comentario__usuario} from './comentario-usuario.js';
+comentario__usuario()
 
 
-import {comentarios__conductor,mostrar__comentario__conductor} from'./comentarios-conductor.js';
-comentarios__conductor(),
-mostrar__comentario__conductor();
+import {comentarios__conductor} from'./comentario-conductor.js';
+comentarios__conductor()
+// mostrar__comentario__conductor();
 
 
 

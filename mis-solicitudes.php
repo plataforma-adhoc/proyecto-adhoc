@@ -14,7 +14,7 @@ if($id__conductor ){
   $consulta__inicio__servicio = "SELECT * FROM datos__inicio__recorrido WHERE id_conductor = '$id__conductor'";
   $ejecutar__consulta__inicio__servicio = mysqli_query($conexion__db__accent,$consulta__inicio__servicio);
 
-  $consulta__datos__usuario = "SELECT nombre_usuario, primer_apellido,segundo_apellido,email,numero_documento,numero_telefono,avatar FROM  usuarios";
+  $consulta__datos__usuario = "SELECT id_usuario, nombre_usuario, primer_apellido,segundo_apellido,email,numero_documento,numero_telefono,avatar FROM  usuarios";
  $ejecutar__consulta__datos__usuario = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
  $resultado = mysqli_fetch_array($ejecutar__consulta__datos__usuario);
   
@@ -68,9 +68,12 @@ if($id__conductor ){
         <?php } ?>
 
         <?php   if($resultado__inicio__servicio['estado_recorrido'] === "Recorrido terminado"){ ?>
-        <p class="parrafo__estado culminado" id="estado">Estado solicitud : <?php echo $resultado__inicio__servicio['estado_recorrido']  ?></p>
+        <p class="parrafo__estado culminado" id="estado">Estado solicitud : <?php echo $resultado__inicio__servicio['estado_recorrido']  ?>
+       <br><br>
+
+       <button id="myBtn" class="btn__open__modal__calificacion">Dejar un comentario</button>
         <?php } ?>
-  </ul>
+      </ul>
   <div class="links">
      <!-- <button class="follow">Follow</button>
      <button class="view">View profile</button> -->
@@ -95,6 +98,7 @@ if($id__conductor ){
       </div>
      
       <?php } ?>
+      
       <?php } ?>
       
       
@@ -103,24 +107,34 @@ if($id__conductor ){
     </div>
 
 
- <br><br><br>
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog  modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Iniciar recorrido de conductor elegido</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Comenzar</button>
-      </div>
-    </div>
-  </div>
-</div>  -->
 
+</div>
+<div class="modal__recorrido" id="modal-recorrido">
+  <span class="cerrar__modal__calificacion" id="cerrar-modal-calificacion"><i class="far fa-times-circle"></i></span>
+  <div class="contendido__modal__recorrido">
+    <form  class="formulario__calificacion" id="form-comentario">
+  <h4 class="subtitulo__estado__recorrido">Felicidades</h4>
+      <h4 class="subtitulo__estado__recorrido">completaste un nuevo recorrido</h4>
+      <p class="parrafo__recorrido">Dejanos saber tu opinion sobre el usuario que acabas de dejar </p>
+    <div class="contenedor__formulario">
+        <div class="grupo__inputs block">
+            <div class="contenedor__inputs" id="grupo__nombre">
+                <input type="text"  name="nombre" value="<?php echo $datos__resultado['nombre_conductor'] ?>"
+                    class="capturarDatos" autofocus autocomplete="" readonly>
+            </div>
+        </div>
+        <div class="grupo__inputs block">
+            <div class="contenedor__inputs" id="grupo__nombre">
+               <textarea name="areaMensaje" id="" cols="30" rows="10" class="area__mensaje" placeholder="Aqui tu mensaje"></textarea>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" value="<?php echo $resultado['id_usuario'] ?>" name="idUsuario">
+    <input type="hidden" value="<?php echo $datos__resultado['id_conductor'] ?>" name="idConductor">
+    <button class="btn__calificaciones">Publicar ahora</button>
+</form>
+</div>
+ <br><br><br>
 
 
 <?php

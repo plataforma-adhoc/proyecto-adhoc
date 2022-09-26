@@ -1,5 +1,12 @@
 <?php
-function insert__datos__usuario(){
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'Exception.php';
+require 'PHPMailer.php';
+require 'SMTP.php';
+
 include'conexion-db-accent.php';
 
 $nombre__usuario = mysqli_real_escape_string($conexion__db__accent,$_POST['nombre'] ?  $_POST['nombre']: '');
@@ -36,6 +43,43 @@ if($nombre__usuario ==="" || $primer__apellido ==="" || $segundo__apellido ===""
     $fila__datos = mysqli_fetch_array($resultado);
     $_SESSION['id_usuario'] = $fila__datos['id_usuario'];  
     echo json_encode('true');
+
+    $contenido__mensaje = ' <h1>Hola '.$fila__datos['nombre_usuario'] .'<br> </h1>';
+    $contenido__mensaje .='<p> Parece que acabas de unirte a Adhoc </p>';
+    $contenido__mensaje .='<p> Te damos la bienvenida a nuestra de parte de nuestro equipo </p>';
+    $contenido__mensaje .='<p>Espero que   disfrutes usando nuestra plataforma <br></p>';
+    $contenido__mensaje .='<p>Equipo de Adhoc  <br></p>';
+   
+  
+    $mail = new PHPMailer(true);
+    try {
+                  
+        $mail->isSMTP();                                           
+        $mail->Host       = 'smtp.gmail.com';                  
+        $mail->SMTPAuth   = true;                                 
+        $mail->Username   = 'soporteaccent@gmail.com';                   
+        $mail->Password   = 'khsrvhkxqxxbbhba';                            
+        // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  
+        $mail->SMTPSecure = 'tls';        
+        $mail->Port       = 587;  
+                               
+        //Recipients
+        $mail->setFrom('soporteaccent@gmail.com', 'Ad Hoc ');
+        $mail->addAddress($email,$fila__datos['nombre_usuario'] );                  
+        // $mail->addAttachment('./img/logo__accent.png');
+    
+        //Content
+        $mail->isHTML(true);                                  
+        $mail->Subject = 'Gracias por  crear tu cuenta con nosotros';
+        $mail->Body    = utf8_decode($contenido__mensaje);
+        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    
+        $mail->send();
+        
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    }
+
   }
   
     }else{
@@ -48,9 +92,6 @@ if($nombre__usuario ==="" || $primer__apellido ==="" || $segundo__apellido ===""
 
 
 
-}
-
-insert__datos__usuario();
 
 
 ?>

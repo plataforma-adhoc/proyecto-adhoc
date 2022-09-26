@@ -1,18 +1,18 @@
 <?php   
 include'conexion-db-accent.php';
-
-$respuesta = isset($_POST['respuesta']) ? $_POST['respuesta'] :'';
+$nombre  = isset($_POST['nombre']) ? $_POST['nombre'] :'';
+$comentario  = isset($_POST['areaMensaje']) ? $_POST['areaMensaje'] :'';
 $id__usuario= isset($_POST['idUsuario']) ? $_POST['idUsuario'] :'';
 $id__conductor = isset($_POST['idConductor']) ? $_POST['idConductor'] :'';
+;
 
-if($respuesta ===""){
-   
-
-}else{
-    $insertar__comentario = "INSERT INTO comentarios__conductor (comentario,id_usuario,id_conductor) VALUES('$respuesta','$id__usuario','$id__conductor')";
+    $insertar__comentario = "INSERT INTO  comentario__conductor(nombre,comentario,id_usuario,id_conductor) VALUES('$nombre','$comentario','$id__usuario','$id__conductor')";
     $ejecutar__consulta = mysqli_query($conexion__db__accent,$insertar__comentario);
     if($ejecutar__consulta){
         echo json_encode('true');
+
+    }else{
+        echo json_encode('error');
 
     }
 
@@ -29,4 +29,3 @@ if($respuesta ===""){
 
     $actualizar__estado__recorrido = "UPDATE datos__inicio__recorrido SET status_1 =  '1' WHERE id_conductor = '$id__conductor '";
    $ejecutar__actualizacion = mysqli_query($conexion__db__accent,$actualizar__estado__recorrido);
-}

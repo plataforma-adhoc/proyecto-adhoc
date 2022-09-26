@@ -26,7 +26,7 @@ if($email__contrasena ===""){
     $insertar__datos = mysqli_query($conexion__db__accent,"INSERT INTO recuperar__contrasena__conductor (email,clave__nueva,token) VALUES('$email__contrasena','$nueva__contrasena','$token')");
 
   // $url = "http://localhost/accent__hollding/confirmacion-conductor.php?email=$email__contrasena&token=$token";
-  $url = "https://www.adhoc.com.co/com/confirmacion-conductor.php?email=$email__contrasena&token=$token";
+  $url = "https://www.adhoc.com.co/confirmacion-conductor.php?email=$email__contrasena&token=$token";
 
   $contenido__mensaje = ' <h1>Hola '.$resultado__fila['nombre_conductor'] .'<br> </h1>';
   $contenido__mensaje .='<p>has solicitado el cambio de tu credencial de acceso a nuestro sistema <br>
