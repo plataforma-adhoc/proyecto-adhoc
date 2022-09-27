@@ -42,11 +42,11 @@
           //Server settings
           // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                    
           $mail->isSMTP();                                           
-          $mail->Host       = 'smtp.gmail.com';                  
+          $mail->Host       = 'smtp.mail.yahoo.com';                  
           $mail->SMTPAuth   = true;                                 
           $mail->Username   = 'soporteaccent@gmail.com';                   
           $mail->Password   = 'khsrvhkxqxxbbhba';                            
-          // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  
+          $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  
           $mail->SMTPSecure = 'tls';        
           $mail->Port       =  587;  
                                   

@@ -6,7 +6,7 @@
                 conducir tu vehiculo    
                 <span class="copy__active">¡ solicita tu servicio  !</span></p>
                 <p class="texto__beta">BETA</p>
-                <a href="usuario.php" class="cta">Pedir mi conductor</a>
+                <!-- <a href="usuario.php" class="cta">Pedir mi conductor</a> -->
             </div>
         </section>
     </header>

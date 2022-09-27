@@ -19,12 +19,12 @@
       <div class="container nav__container">
       <div class="logo">
             <a href="index.php"><img src="./img/logo.png" alt="" class="logo__accent"></a>
-            <!-- <p class="texto__beta beta__home">BETA</p> -->
-              
+            <!-- <p class="texto__beta beta__home">BETA</p> -->           
         </div>
 
 
         <div class="containers">
+          <button class="btn__cuenta" id="myBtn">Crear  cuenta</button>
           <label class="btn btn-open" for="nav"><i class="fab fa-creative-commons-nd"></i></label>
           <input type="checkbox" id="nav" class="nav-opener" />
           <div class="nav">
@@ -71,4 +71,38 @@
         </div>
       </div>
     </nav>
-  
+
+
+<div id="myModal" class="modal__registro__de__cuenta">
+  <div class="modal__registros">
+    <p class="close"><i class="far fa-times-circle"></i></p>
+    <p class="titulo__crear__cuenta">Crear una cuenta como </p>
+    <div class="contenedor__btn__registros">
+      <div>
+        <a href="usuario.php"class="btn__cuenta__registro">Usuario <i class="fas fa-arrow-right flecha"></i></a>
+      </div>
+      <div>
+        <a href="conductor.php" class="btn__cuenta__registro">Conductor <i class="fas fa-arrow-right flecha"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>

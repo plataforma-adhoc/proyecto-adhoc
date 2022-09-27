@@ -1,5 +1,7 @@
 
-
+.contenedor__del__formulario{
+  display: flex;
+}
 .subtitulo__formularios{
   color: white;
   font-size:$tamaño__fuente__subtitulo;
@@ -10,13 +12,39 @@
 }
 
 .formulario__registro {
-    width: 40%;
+    width: 35%;
     margin: 100px  auto 0 auto;
     background:$color__formularios;
     border-radius: 7px;
   }
 
-  
+  .contenido__beneficios{
+  width: 40%;
+  }
+
+.item__beneficios{
+  display: flex;
+ margin-top: 50px;
+}
+
+.contenedor__de_textos{
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
+
+.texto__beneficios{
+  margin-left: -5px;
+  color: white;
+  line-height: 20px;
+}
+
+.imagen__beneficios{
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  margin-top: 30px;
+}
 
   .formulario__label {
     display: block;

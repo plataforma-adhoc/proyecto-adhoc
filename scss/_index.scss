@@ -200,6 +200,99 @@
     height: auto;
 }
 
+.btn__cuenta{
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+   top: -8px;
+   right: 20px;
+   background:$color__accent;
+   border: 0;
+   outline: 0;
+   color: white;
+   font-weight: bold;
+   border-radius: 5px;
+}
+
+.btn__cuenta:hover{
+    background: #000;
+    transition: all 0.5s;
+}
+
+
+.modal__registro__de__cuenta{
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+
+.titulo__crear__cuenta{
+    font-size:22px;
+    color: white;
+}
+
+  .modal__registros{
+    background-color:$color__fondo__footer;
+    margin: 15% auto; 
+    padding: 20px;
+    border-radius: 7px;
+    width: 30%; 
+    position: relative;
+    height:200px;
+  }
+  
+  .contenedor__btn__registros{
+    display: flex;
+    margin-top: 50px;
+  }
+
+.btn__cuenta__registro{
+    display: inline-block;
+    text-decoration: 0;
+    color: white;
+    padding: 12px;
+     background: $color__accent;
+     margin-right: 30px;
+     width: 180px;
+     border-radius: 7px;
+     font-weight: bold;
+}
+
+.flecha{
+    margin-left: 80px;
+}
+
+.btn__cuenta__registro:hover{
+    background: #000;
+    transition: all 0.5s;
+}
+
+  .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: -10px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
 .container::-webkit-scrollbar{
     width: 10px;
 }
@@ -298,23 +391,23 @@
     font-weight: 700;
 }
 
-.cta{
-    padding: 20px 30px;
-    display: inline-block;
-    background:$color__accent;
-    text-decoration: none;
-    color:white;
-    font-weight: 700;
-    box-shadow: var(--shadow) var(--color_shadow);
-    border-radius: 7px;
-    font-size: $tamaño__parrafos;
-}
+// .cta{
+//     padding: 20px 30px;
+//     display: inline-block;
+//     background:$color__accent;
+//     text-decoration: none;
+//     color:white;
+//     font-weight: 700;
+//     box-shadow: var(--shadow) var(--color_shadow);
+//     border-radius: 7px;
+//     font-size: $tamaño__parrafos;
+// }
 
-.cta:hover{
-    background: #000;
-    color: white;
-    transition: ease-in-out 0.5s;
-}
+// .cta:hover{
+//     background: #000;
+//     color: white;
+//     transition: ease-in-out 0.5s;
+// }
 
 /* services */
 .servicios{
@@ -810,7 +903,9 @@ width: 100px;
 
 
 @media screen and (max-width:900px){
-  
+  .modal__registros{
+    width: 80%;
+  }
     .texto__nav__images{
         margin: 50% auto 0 auto;
 
