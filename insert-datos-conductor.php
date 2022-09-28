@@ -50,41 +50,41 @@ if($nombre__conductor ==="" || $primer__apellido ==="" || $segundo__apellido ===
     $_SESSION['id_conductor'] = $fila__datos['id_conductor'];
       echo json_encode('true');
       
-      $contenido__mensaje = ' <h1>Hola '.$fila__datos['nombre_conductor'] .'<br> </h1>';
-      $contenido__mensaje .='<p> Parece que acabas de unirte a Adhoc </p>';
-      $contenido__mensaje .='<p> Te damos la bienvenida a nuestra de parte de nuestro equipo </p>';
-      $contenido__mensaje .='<p>Espero que   disfrutes usando nuestra plataforma <br></p>';
-      $contenido__mensaje .='<p>Equipo de Adhoc  <br></p>';
+      // $contenido__mensaje = ' <h1>Hola '.$fila__datos['nombre_conductor'] .'<br> </h1>';
+      // $contenido__mensaje .='<p> Parece que acabas de unirte a Adhoc </p>';
+      // $contenido__mensaje .='<p> Te damos la bienvenida a nuestra de parte de nuestro equipo </p>';
+      // $contenido__mensaje .='<p>Espero que   disfrutes usando nuestra plataforma <br></p>';
+      // $contenido__mensaje .='<p>Equipo de Adhoc  <br></p>';
      
     
-      $mail = new PHPMailer(true);
-      try {
+      // $mail = new PHPMailer(true);
+      // try {
                     
-          $mail->isSMTP();                                           
-          $mail->Host       = 'smtp.gmail.com';                  
-          $mail->SMTPAuth   = true;                                 
-          $mail->Username   = 'soporteaccent@gmail.com';                   
-          $mail->Password   = 'khsrvhkxqxxbbhba';                            
-          // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  
-          $mail->SMTPSecure = 'tls';        
-          $mail->Port       = 587;  
+      //     $mail->isSMTP();                                           
+      //     $mail->Host       = 'smtp.gmail.com';                  
+      //     $mail->SMTPAuth   = true;                                 
+      //     $mail->Username   = 'soporteaccent@gmail.com';                   
+      //     $mail->Password   = 'khsrvhkxqxxbbhba';                            
+      //     // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  
+      //     $mail->SMTPSecure = 'tls';        
+      //     $mail->Port       = 587;  
                                  
-          //Recipients
-          $mail->setFrom('soporteaccent@gmail.com', 'Ad Hoc ');
-          $mail->addAddress($email,$fila__datos['nombre_conductor'] );                  
-          // $mail->addAttachment('./img/logo__accent.png');
+      //     //Recipients
+      //     $mail->setFrom('soporteaccent@gmail.com', 'Ad Hoc ');
+      //     $mail->addAddress($email,$fila__datos['nombre_conductor'] );                  
+      //     // $mail->addAttachment('./img/logo__accent.png');
       
-          //Content
-          $mail->isHTML(true);                                  
-          $mail->Subject = 'Gracias por  crear tu cuenta con nosotros';
-          $mail->Body    = utf8_decode($contenido__mensaje);
-          $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+      //     //Content
+      //     $mail->isHTML(true);                                  
+      //     $mail->Subject = 'Gracias por  crear tu cuenta con nosotros';
+      //     $mail->Body    = utf8_decode($contenido__mensaje);
+      //     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
       
-          $mail->send();
+      //     $mail->send();
           
-      } catch (Exception $e) {
-          echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-      }
+      // } catch (Exception $e) {
+      //     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+      // }
 
 
   }

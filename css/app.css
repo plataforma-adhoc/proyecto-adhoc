@@ -238,6 +238,7 @@
 .contenedor__btn__registros {
   display: flex;
   margin-top: 50px;
+  flex-wrap: wrap;
 }
 
 .btn__cuenta__registro {
@@ -250,6 +251,7 @@
   width: 180px;
   border-radius: 7px;
   font-weight: bold;
+  margin: 10px 10px 0;
 }
 
 .flecha {
@@ -1045,6 +1047,21 @@ footer .container {
   .check__copy {
     width: 300px;
     margin-right: 200px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .btn__cuenta__registro {
+    margin-right: 15px;
+    width: 110px;
+    padding: 10px;
+  }
+
+  .btn__cuenta__registro i {
+    display: none;
+  }
+
+  .modal__registros {
+    margin-top: 160px;
   }
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

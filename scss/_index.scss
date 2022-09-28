@@ -253,6 +253,8 @@
   .contenedor__btn__registros{
     display: flex;
     margin-top: 50px;
+    flex-wrap: wrap;
+    
   }
 
 .btn__cuenta__registro{
@@ -265,6 +267,7 @@
      width: 180px;
      border-radius: 7px;
      font-weight: bold;
+     margin: 10px 10px 0;
 }
 
 .flecha{
@@ -1099,8 +1102,7 @@ width: 100px;
   
 
 @media screen and (max-width:500px){
-   
-
+    
     .services .card{
         width: 95%;
     }
@@ -1142,4 +1144,20 @@ width: 100px;
     }
   
     
+}
+
+@media screen and (max-width:600px) {
+ 
+    .btn__cuenta__registro{
+        margin-right: 15px;
+        width: 110px;
+        padding: 10px;
+    }
+   .btn__cuenta__registro i{
+    display: none;
+   }
+   
+    .modal__registros{
+        margin-top: 160px;
+    }
 }
