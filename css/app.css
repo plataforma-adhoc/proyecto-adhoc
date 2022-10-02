@@ -216,7 +216,7 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -342,7 +342,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0;
-  background-image: url(../img/fondo__banner.webp);
+  background-image: url(../img/fondo__baner__bogota__colombia.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -835,60 +835,46 @@ ul {
   .modal__registros {
     width: 80%;
   }
-
   .texto__nav__images {
     margin: 50% auto 0 auto;
   }
-
   .title {
     font-size: 50px;
   }
-
   .copy {
     font-size: 22px;
   }
-
   .cta {
     padding: 15px 22px;
   }
-
   .container-cards {
     justify-content: space-evenly;
   }
-
   .services .card {
     width: 45%;
   }
-
   .background {
     width: 52%;
   }
-
   .card {
     width: 42%;
   }
-
   .testimony-container {
     justify-content: space-evenly;
   }
-
   .testimony__card {
     width: 45%;
   }
-
   .check__item {
     width: 45%;
     margin-bottom: 35px;
   }
-
   .socialmedia__icon {
     font-size: 18px;
   }
-
   .socialmedia__legend {
     font-size: 18px;
   }
-
   .slider {
     width: 100%;
     height: 120px;
@@ -899,29 +885,23 @@ ul {
 footer .container {
     padding: 60px 0;
   }
-
   .texto__beta {
     display: none;
   }
-
   .nav__hero {
     height: auto;
   }
-
   .logo {
     padding: 15px 0;
     text-align: center;
   }
-
   .links {
     padding-bottom: 10px;
     text-align: center;
   }
-
   .link {
     padding: 7px 10px;
   }
-
   .hero__main {
     flex-direction: column-reverse;
     justify-content: flex-end;
@@ -929,74 +909,58 @@ footer .container {
     height: auto;
     padding: 30px 0;
   }
-
   .title {
     font-size: 35px;
   }
-
   .copy {
     width: 80%;
     font-size: 20px;
     line-height: 30px;
   }
-
   .subtitle {
     font-size: 35px;
     text-align: center;
   }
-
   .copy__section {
     font-size: 20px;
     text-align: center;
   }
-
   .services .card {
     width: 80%;
   }
-
   .container-bg {
     justify-content: space-evenly;
   }
-
   .card {
     margin-bottom: 40px;
     width: 65%;
   }
-
   .card__title {
     font-size: 35px;
   }
-
   .card__button {
     width: 100%;
   }
-
   .background {
     width: 65%;
     margin-bottom: 40px;
   }
-
   .background__copy {
     width: 70%;
   }
-
   .testimony__card {
     width: 65%;
   }
-
   .testimony__name {
     font-size: 20px;
   }
-
   .container--modifier {
     width: 80%;
   }
-
   .item__contact {
     width: 100%;
     padding: 30px 0;
   }
-
   .footer-col {
     width: 60%;
     margin-bottom: 30px;
@@ -1007,7 +971,6 @@ footer .container {
     grid-template-rows: var(--nav-height) auto;
     grid-template-columns: var(--nav-width) auto;
   }
-
   .nav-header {
     grid-column-start: span 2;
   }
@@ -1016,34 +979,27 @@ footer .container {
   .services .card {
     width: 95%;
   }
-
   .card {
     width: 95%;
   }
-
   .background {
     width: 95%;
   }
-
   .testimony__card {
     width: 95%;
   }
-
   .testimony__history {
     font-size: 20px;
   }
-
   .container--modifier {
     width: 90%;
   }
-
   .check__item {
     width: 100%;
     border: none;
     padding: none;
     justify-content: space-between;
   }
-
   .check__copy {
     width: 300px;
     margin-right: 200px;
@@ -1055,11 +1011,9 @@ footer .container {
     width: 110px;
     padding: 10px;
   }
-
   .btn__cuenta__registro i {
     display: none;
   }
-
   .modal__registros {
     margin-top: 160px;
   }
@@ -1072,10 +1026,8 @@ footer .container {
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -1110,12 +1062,9 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -1123,10 +1072,8 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -1143,12 +1090,9 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -1166,10 +1110,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -1219,14 +1161,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -1234,8 +1172,7 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -1244,8 +1181,7 @@ input {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -1294,18 +1230,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -1328,10 +1258,8 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
@@ -1347,10 +1275,8 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -1365,10 +1291,8 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /* Interactive
@@ -1468,15 +1392,20 @@ template {
 
 .contenedor__del__formulario {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .subtitulo__formularios {
   color: white;
   font-size: 21px;
   position: absolute;
-  right: 30%;
-  left: 30%;
   top: 90px;
+  left: 12%;
+}
+
+.login {
+  left: 35%;
+  right: 35%;
 }
 
 .formulario__registro {
@@ -1487,12 +1416,20 @@ template {
 }
 
 .contenido__beneficios {
-  width: 40%;
+  width: 50%;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.subtitulo__beneficios {
+  color: white;
+  font-size: 21px;
 }
 
 .item__beneficios {
   display: flex;
-  margin-top: 50px;
+  width: 90%;
+  margin: 50px auto 0 auto;
 }
 
 .contenedor__de_textos {
@@ -1503,15 +1440,16 @@ template {
 
 .texto__beneficios {
   margin-left: -5px;
-  color: white;
+  color: gray;
   line-height: 20px;
+  font-size: 18px;
 }
 
 .imagen__beneficios {
   border-radius: 50px;
-  width: 50px;
-  height: 50px;
-  margin-top: 30px;
+  width: 70px;
+  height: 70px;
+  margin-top: 10px;
 }
 
 .formulario__label {
@@ -1593,7 +1531,7 @@ template {
 }
 
 .icono__email__login {
-  right: 32%;
+  right: 35%;
   top: 250px;
 }
 
@@ -1802,42 +1740,51 @@ template {
 
 @media screen and (max-width: 900px) {
   .formulario__registro {
-    width: 60%;
+    width: 50%;
     background: #112240;
     border-radius: 7px;
   }
-
+  .login {
+    left: 30%;
+    right: 30%;
+  }
+  .contenido__beneficios {
+    width: 48%;
+  }
+  .contenedor__de_textos {
+    width: 70%;
+    margin: auto;
+  }
   .dos, .cuatro, .seis, .ocho, .nueve {
     right: 22.5%;
   }
-
   .uno, .tres, .cinco, .siete {
     right: 52.5%;
   }
-
   .siete__contrasena {
     right: 22.5%;
   }
-
   .icono__email__login {
-    right: 23%;
+    right: 28%;
     top: 250px;
   }
 }
 @media screen and (max-width: 700px) {
+  .contenido__beneficios {
+    margin: auto;
+    width: 90%;
+  }
   .formulario__registro {
-    width: 80%;
+    width: 90%;
     margin: 100px auto;
     background: #112240;
     border-radius: 7px;
   }
-
   .dos, .cuatro, .seis, .ocho, .nueve, .siete__contrasena {
     right: 14.5%;
   }
-
   .icono__email__login {
-    right: 14%;
+    right: 10%;
     top: 250px;
   }
 }
@@ -1848,7 +1795,6 @@ template {
     background: #112240;
     border-radius: 7px;
   }
-
   .dos, .cuatro, .seis, .ocho, .nueve, .siete__contrasena {
     right: 10.5%;
   }
@@ -2293,7 +2239,6 @@ p {
   .btn__back {
     left: 5%;
   }
-
   .form-search input {
     width: 80%;
     margin: auto;
@@ -2303,11 +2248,9 @@ p {
   .contenedor__datos__perfil {
     height: 800px;
   }
-
   .datos__de__perfil {
     height: auto;
   }
-
   .btn__back {
     left: 5%;
   }
@@ -2317,38 +2260,30 @@ p {
     width: 70%;
     margin-top: 20px;
   }
-
   .enlace__editar__perfil {
     margin-left: 15%;
   }
-
   .foto__de__perfil {
     margin-left: 25%;
     width: 50%;
     height: 50%;
   }
-
   .biografia__detallada {
     text-align: center;
   }
-
   .datos__del__perfil__de__usuario {
     width: 55%;
     margin: auto;
   }
-
   .redes__sociales {
     margin: auto;
   }
-
   .enlace__editar__perfil {
     width: 70%;
   }
-
   .biografia__detallada {
     margin-top: 50px;
   }
-
   .parrafo__info__opinion {
     margin: auto;
   }
@@ -2359,7 +2294,6 @@ p {
     background: #000;
     margin: auto;
   }
-
   .datos__de__perfil {
     width: 100%;
     height: 800px;
@@ -2406,7 +2340,7 @@ p {
 }
 
 .cambiar__contraseña {
-  background-image: url(../img/cambiar__contrasena.avif);
+  background-image: url(../img/encryptacion__contrasena.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #008A55;
@@ -2435,7 +2369,7 @@ p {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   transition: all 0.5s;
 }
@@ -2478,7 +2412,6 @@ p {
     width: 90%;
     margin: 40px auto 0 auto;
   }
-
   .parrafo__configuracion {
     width: 90%;
   }
@@ -2488,7 +2421,6 @@ p {
     width: 90%;
     margin: 40px auto 0 auto;
   }
-
   .parrafo__configuracion {
     width: 90%;
   }
@@ -2644,7 +2576,6 @@ p {
     width: 80%;
     margin: auto;
   }
-
   .formulario__sugerencia {
     width: 90%;
   }
@@ -2766,7 +2697,6 @@ p {
     width: 40%;
     margin: 60px auto 0 auto;
   }
-
   .parrafo__servicios__info {
     width: 80%;
   }
@@ -3079,12 +3009,10 @@ p {
   .menu__dashborad {
     width: 30%;
   }
-
   .modal__notificaciones {
     width: 100%;
     left: 0;
   }
-
   .contendido__modal__recorrido {
     width: 90%;
   }
@@ -3093,7 +3021,6 @@ p {
   .cards__dashboard {
     width: 45%;
   }
-
   .enlace__a__edicion {
     width: 30%;
   }
@@ -3103,16 +3030,13 @@ p {
     width: 80%;
     margin: 30px auto 0 auto;
   }
-
   .imagen__celebracion {
     display: none;
   }
-
   .titulo__dashboard {
     font-size: 25px;
     line-height: 40px;
   }
-
   .card__perfil__sin__editar {
     height: 290px;
   }
@@ -3195,7 +3119,6 @@ p {
   .contenedor__datos__historial {
     width: 90%;
   }
-
   .foto__historial {
     width: 40%;
   }
@@ -3204,24 +3127,20 @@ p {
   .contenedor__datos__historial {
     margin-top: -550px;
   }
-
   .parrafo__historial {
     width: 90%;
     margin: 20px auto auto 10px;
   }
-
   .datos__de__historial {
     width: 60%;
     margin-top: 10px;
     margin: auto;
   }
-
   .foto__historial {
     margin: 20px 30% 10px;
     width: 30%;
     height: 150px;
   }
-
   .datos__del__perfil__historial {
     width: 55%;
     margin: auto;
@@ -3232,7 +3151,6 @@ p {
     margin: auto;
     width: 80%;
   }
-
   .foto__historial {
     width: 30%;
     height: 120px;
@@ -3608,7 +3526,6 @@ p {
   .contenedor__notificaiones {
     width: 60%;
   }
-
   .hidde {
     width: 200px;
   }
@@ -3689,7 +3606,7 @@ p {
 .card__solicitudes::after {
   height: 15rem;
   width: 15rem;
-  background-color: #4172f5aa;
+  background-color: rgba(65, 114, 245, 0.6666666667);
   top: -8rem;
   right: -8rem;
   box-shadow: 2rem 6rem 0 -3rem #FFF;
@@ -3864,7 +3781,7 @@ p {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   transition: ease-in-out 0.5s;
   animation-name: animatetop;
@@ -3932,23 +3849,19 @@ p {
   .texto__solicitud {
     width: 90%;
   }
-
   .datos__de__solicitud {
     margin: 30px auto 20px auto;
     width: 90%;
   }
-
   .card__solicitudes {
     display: block;
     margin: auto;
     width: 100%;
   }
-
   .infos {
     margin-left: 0;
     margin-top: 1.5rem;
   }
-
   .links button {
     min-width: 100px;
   }
@@ -4330,19 +4243,15 @@ p {
   .bg-purple {
     height: 800px;
   }
-
   .navbar-links {
     display: none;
   }
-
   .custom-navbar {
     text-align: center;
   }
-
   .brand-logo img {
     width: 120px;
   }
-
   .box_astronaut {
     top: 70%;
   }

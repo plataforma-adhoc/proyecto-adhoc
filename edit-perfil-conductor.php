@@ -94,7 +94,7 @@ Subir una foto...
             <div class="contenedor__inputs">
             <label for="" class="label">Facebook</label>
                 <input type="text"  name="facebook" value="<?php   echo $datos__resultado['facebook'] ?>"
-                    class="capturarDatos">
+                    class="capturarDatos"  placeholder="Ej: https://www.facebook.com/jhonDoe">
 
             </div>
         </div>
@@ -103,7 +103,7 @@ Subir una foto...
             <div class="contenedor__inputs">
             <label for="" class="label">Instagram</label>
                 <input type="text" name="instagram"  value="<?php echo $datos__resultado['instagram']?>" 
-                    class="capturarDatos">
+                    class="capturarDatos"  placeholder="Ej: https://www.instagram.com/jhonDoe">
 
             </div>
         </div>
@@ -112,7 +112,7 @@ Subir una foto...
             <div class="contenedor__inputs">
             <label for="" class="label">Twiiter</label>
                 <input type="text"  name="twitter" value="<?php  echo $datos__resultado['twitter']?>"   
-                    class="capturarDatos">
+                    class="capturarDatos" placeholder="Ej: https://www.twitter.com//jhonDoe">
 
             </div>
         </div>

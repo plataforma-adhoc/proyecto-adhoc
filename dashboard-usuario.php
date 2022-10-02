@@ -43,5 +43,17 @@ if($estado__recorrido['estado_recorrido'] ==='Recorrido terminado') {?>
 
 <?php  }  ?> -->
 
-
+<?php   if($datos__resultado['avatar'] === 'avatar__defecto.svg'){  ?>
+<div class="container card__perfil__sin__editar" id="ventana-perfil">
+<a href="#" class="cerrar__ventana" id="cerrar-ventana">X</a>
+<div class="contenido">
+  <img src="./img/perfil.svg" alt="configuracion perfil" class="avatar__de__configuracion">
+ </div>
+ <div class="contenido">
+   <h3 class="subtitulo__perfil__sin__editar"><strong><?php echo $datos__resultado['nombre_usuario'] ?></strong> Configura tu foto de perfil</h3>
+   <p class="subtitulo__perfil__sin__editar">Termina de configurar tus datos para que las personas sepan que tu perfil es confiable.</p>
+   <a href="edit-perfil-usuario.php?idu=<?php echo $datos__resultado['id_usuario'] ?>" class="enlace__a__edicion">Empezar</a>
+ </div>
+</div>
+ <?php } ?>
 <?php include'layout/footer-home.php' ?>

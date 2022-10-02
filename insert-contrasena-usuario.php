@@ -1,6 +1,5 @@
 <?php
    include'conexion-db-accent.php';
-
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
@@ -23,13 +22,14 @@
         $contrasena__encryptada  = password_hash($nueva__contrasena,PASSWORD_BCRYPT);
         $token = md5($resultado__fila['id_usuario']. time(). rand(1000,9999));
 
-        $insertar__datos = mysqli_query($conexion__db__accent,"INSERT INTO recuperar__contrasena__usuario (email,clave__nueva,token) VALUES('$email__contrasena','$nueva__contrasena','$token')");
+        $insertar__datos = mysqli_query($conexion__db__accent,"INSERT INTO recuperar__contrasena__usuario (email,clave__nueva,token) VALUES('$email__contrasena','$nueva__contrasena','$token')
+        ON DUPLICATE KEY UPDATE token = '$token', clave__nueva = '$nueva__contrasena'");
     
-      // $url = "http://localhost/accent__hollding/view/confirmacion-usuario.php?email=$email__contrasena&token=$token";
+      // $url = "http://localhost/accent__hollding/confirmacion-usuario.php?email=$email__contrasena&token=$token";
       $url = "https://www.adhoc.com.co/confirmacion-usuario.php?email=$email__contrasena&token=$token";
 
       $contenido__mensaje = ' <h1>Hola '.$resultado__fila['nombre_usuario'] .'<br> </h1>';
-      $contenido__mensaje .='<p>has solicitado el cambio de tu credencial de acceso a nuestro sistema <br>
+      $contenido__mensaje .='<p>Haz solicitado el cambio de tu credencial de acceso a nuestro sistema <br>
       nuestro algoritmo te ha generado una credencial aleatoria '.  $nueva__contrasena.' la cual es de un solo uso</p>';
       $contenido__mensaje .='<p>Solo para recordarte <br></p> ';
       $contenido__mensaje .=' <li> No comparta nunca su contraseña o preguntas de seguridad con otra persona. <br></li> ';
@@ -42,16 +42,16 @@
           //Server settings
           // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                    
           $mail->isSMTP();                                           
-          $mail->Host       = 'smtp.mail.yahoo.com';                  
+          $mail->Host       = 'smtp.office365.com';                  
           $mail->SMTPAuth   = true;                                 
-          $mail->Username   = 'soporteaccent@gmail.com';                   
-          $mail->Password   = 'khsrvhkxqxxbbhba';                            
+          $mail->Username   = 'soporteadhoc@outlook.com';                   
+          $mail->Password   = 'contrasenasoporte01';                            
           $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  
           $mail->SMTPSecure = 'tls';        
           $mail->Port       =  587;  
                                   
           //Recipients
-          $mail->setFrom('soporteaccent@gmail.com', 'Ad Hoc ');
+          $mail->setFrom('soporteadhoc@outlook.com', 'AdHoc ');
           $mail->addAddress($email__contrasena,$resultado__fila['nombre_usuario'] );                  
        
       
@@ -76,7 +76,7 @@
    
   
    
-
+    mysqli_close ($conexion__db__accent);
     
 
     

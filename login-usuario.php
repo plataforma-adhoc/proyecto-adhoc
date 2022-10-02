@@ -1,6 +1,6 @@
 <?php include'layout/nabvar.php'?>
-<div class="contenedor__del__formulario">
-<h2 class="subtitulo__formularios">Inicia sesión con tu cuenta</h2>
+
+<h2 class="subtitulo__formularios login">Inicia sesión con tu cuenta</h2>
 <form class="formulario__registro" id="formulario-login">
     <div class="contenedor__formulario">
         <div class="grupo__inputs block" id="grupo__email">
@@ -35,7 +35,7 @@
         </div>
     </div>
 </form>
-</div>
+
 <br><br>
 <script>
 

@@ -18,7 +18,7 @@
         <div class="servicios">
           <div class="slider slider__1"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono__conductor" class="icono__conductor">
+            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
             </div>
             <div>
                 <h3>1 Hora de servicio de conductor elegido</h3>
@@ -27,7 +27,7 @@
 		</div>
         <div class="slider slider__2"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono__conductor" class="icono__conductor">
+            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
             </div>
             <div>
                 <h3>2 Horas de servicio de conductor elegido</h3>
@@ -36,7 +36,7 @@
 		</div>
         <div class="slider slider__3"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono__conductor" class="icono__conductor">      
+            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">      
             </div>
             <div>
                 <h3>3 Horas de servicio de conductor elegido</h3>
@@ -45,7 +45,7 @@
 		</div>
         <div class="slider slider__4"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono__conductor" class="icono__conductor">
+            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
             </div>
             <div>
                 <h3>4 Horas de servicio de conductor elegido</h3>
@@ -54,7 +54,7 @@
 		</div>
         <div class="slider slider__5"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono__conductor" class="icono__conductor">
+            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
             </div>
             <div>
                 <h3>5 Horas de servicio de conductor elegido</h3>
@@ -63,7 +63,7 @@
 		</div>
         <div class="slider slider__6"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono__conductor" class="icono__conductor">
+            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
             </div>
             <div>
                 <h3>6 Horas de servicio de conductor elegido</h3>
@@ -72,7 +72,7 @@
 		</div>
         <div class="slider slider__7"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono__conductor" class="icono__conductor">
+            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
             </div>
             <div>
                 <h3>7 Horas de servicio de conductor elegido</h3>
@@ -81,7 +81,7 @@
 		</div>
         <div class="slider slider__8"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono__conductor" class="icono__conductor">
+            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
             </div>
             <div>
                 <h3>8 Horas de servicio de conductor elegido</h3>
@@ -90,7 +90,7 @@
 		</div>
         <div class="slider slider__9"data-aos="zoom-in">
             <div>
-                <img src="img/icono__conductor.png" alt="icono__conductor" class="icono__conductor">
+                <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
             </div>
             <div>
             <h3>9 Horas de servicio de conductor elegido</h3>
@@ -99,7 +99,7 @@
 		</div>
         <div class="slider slider__10"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono__conductor" class="icono__conductor">
+            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
             </div>
             <div>
                 <h3>10 Horas de servicio de conductor elegido</h3>
@@ -116,7 +116,7 @@
 
                 <article class="container-cards">
                     <div class="card" data-aos="zoom-in">
-                        <img src="img/entregando__las__llaves.svg" class="card__img" alt="llaves,licor,personas" >
+                        <img src="img/entregando__las__llaves.svg" class="card__img" alt="llaves,licor,hombre">
                         <div class="cards__text">
                             <p class="card__list">Que no pare la diversion.</p>
                             <h3 class="card__title">Entrega las llaves<span class="point">.</span></h3>
@@ -134,7 +134,7 @@
                         </div>
                     </div>
                     <div class="card"  data-aos="zoom-in">
-                        <img src="img/seguridad__adhoc.svg" class="card__img" al="seguridad,proteccion de datos" >
+                        <img src="img/seguridad__adhoc.svg" class="card__img" al="seguridad,proteccion de datos">
                         <div class="cards__text">
                             <p class="card__list">Seguridad ante todo</p>
                             <h3 class="card__title">Seguridad<span class="point">.</span></h3>
@@ -191,7 +191,7 @@
 
                 <div class="testimony-container">
                     <div class="testimony__card">
-                        <img src="img/Notifications_Outline.svg" class="testimony__img">
+                        <img src="img/Notifications_Outline.svg" class="testimony__img" alt="avatar, notificaciones, ilustracion svg">
                         <div class="testimony__copy">
                             <i class='fas fa-tire-flat testimony__logo'></i>
                             <div class="testimony__info">
@@ -202,7 +202,7 @@
                     </div>
 
                     <div class="testimony__card">
-                        <img src="img/feedback.svg" class="testimony__img">
+                        <img src="img/relacion__de__usuarios.svg" class="testimony__img" alt="usuarios, icono, ilustracion">
                         <div class="testimony__copy">
                             <!-- <i class='bx bxl-apple testimony__logo'></i> -->
                             <div class="testimony__info">
@@ -214,19 +214,12 @@
 
                     <div class="testimony__card">
                         <div class="testimony__text">
-                            <img src="img/tomando__servicio.svg" class="testimony__img">
+                            <img src="img/tomando__servicio.svg" class="testimony__img" alt=" ilustracion, svg, vehiculo,calle">
                             <!-- <a href="./"><img src="./img/logo.png" alt="" class="logo__accent logo__footer"></a> -->
                             <p class="testimony__history">En AdHoc pedir tu conductor elegido es facil y rapido, 
                                 puedes elgir el conductor que te llevara cual sea tu destino con la seguridad de  que tu vehiculo esta 
                                 en las mejores manos.
                             </p>
-                            <!-- <div class="testimony__copy testimony__copy--modifier">
-                                <img src="img/first-person.jpg" class="testimony__logo logo--picture">
-                                <div class="testimony__info">
-                                    <h3 class="testimony__name">Andres García</h3>
-                                    <p class="testimony__position">Director de Apple México</p>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                     

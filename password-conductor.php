@@ -1,6 +1,6 @@
 <?php include'layout/nabvar.php'?>
 <div class="contenedor__del__formulario">
-<h2 class="subtitulo__formularios">Recuperar contraseña</h2>
+<h2 class="subtitulo__formularios login">Recuperar contraseña</h2>
 <form class="formulario__registro" id="formulario-contrasena">
     <div class="contenedor__formulario">
         <div class="grupo__inputs block">

@@ -9,7 +9,7 @@
                     <input type="text" placeholder="Nombre" name="nombre" 
                         class="capturarDatos" autofocus autocomplete="" id="nombre">
                         
-                        <i class="formulario__validacion-estado uno fas fa-times-circle"></i>
+                        <!-- <i class="formulario__validacion-estado uno fas fa-times-circle"></i> -->
                 </div>
                 <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
             </div>
@@ -19,7 +19,7 @@
         <div class="formulario__grupo_-input">
             <div class="contenedor__inputs">
                 <input type="text" placeholder="Primer apellido" name="primerApellido"  class="capturarDatos" id="primer-apellido">
-                <i class="formulario__validacion-estado dos fas fa-times-circle"></i>
+                <!-- <i class="formulario__validacion-estado dos fas fa-times-circle"></i> -->
             </div>
             <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
 
@@ -31,7 +31,7 @@
         <div >
             <div class="contenedor__inputs">
                 <input type="text" placeholder="Segundo apellido" name="segundoApellido"  class="capturarDatos" id="segundo-apellido">
-                <i class="formulario__validacion-estado tres fas fa-times-circle"></i>
+                <!-- <i class="formulario__validacion-estado tres fas fa-times-circle"></i> -->
            
             </div>
             <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
@@ -43,7 +43,7 @@
            <div class="formulario__grupo_-input">
                <div class="contenedor__inputs">
                    <input type="email" placeholder="Email" name="email"  class="capturarDatos" id="email">
-                   <i class="formulario__validacion-estado cuatro fas fa-times-circle"></i>
+                   <!-- <i class="formulario__validacion-estado cuatro fas fa-times-circle"></i> -->
                </div>
                <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
            </div>
@@ -55,7 +55,7 @@
           <div class="contenedor__inputs">
               <input type="text" placeholder="Documento" name="documento" 
                   class="capturarDatos" id="documento">
-                  <i class="formulario__validacion-estado cinco fas fa-times-circle"></i>
+                  <!-- <i class="formulario__validacion-estado cinco fas fa-times-circle"></i> -->
           </div>
           <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
 
@@ -68,7 +68,7 @@
             <div class="contenedor__inputs">
                 <input type="text" placeholder="Telefono" name="telefono" 
                     class="capturarDatos" id="telefono">
-                  <i class="formulario__validacion-estado seis fas fa-times-circle"></i>
+                  <!-- <i class="formulario__validacion-estado seis fas fa-times-circle"></i> -->
 
             </div>
           <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
@@ -82,7 +82,7 @@
             <div class="contenedor__inputs">
                 <input type="password" placeholder="Crea una contraseña" name="contrasena" 
                     class="capturarDatos" id="contrasena">
-                    <i class="formulario__validacion-estado  siete__contrasena fas fa-times-circle"></i>
+                    <!-- <i class="formulario__validacion-estado  siete__contrasena fas fa-times-circle"></i> -->
 
             </div>
             <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
@@ -106,6 +106,33 @@
         </div>
     </div>
 </form>
+<div class="contenido__beneficios">
+<h2 class="subtitulo__beneficios">Beneficios de adhoc.com</h2>
+<div class="item__beneficios">
+<img src="./img/estrella___beneficio.png" alt="estrella de beneficios de adhoc" class="imagen__beneficios">
+<div class="contenedor__de_textos">
+    <p class="texto__beneficios"><strong>Te conectamos con cientos de conductores.</strong> Ponemos a tu disposición   conductores calificados que  conduciran tu vehiculo en caso de que por alguna razon no lo puedas hacer.</p>
+</div>
+</div>
+<div class="item__beneficios">
+<img src="./img/icono__monedas.png" alt="estrella de beneficios de adhoc" class="imagen__beneficios">
+<div class="contenedor__de_textos">
+    <p class="texto__beneficios"><strong>Puedes elegir cuanto pagar.</strong> Elige el numero de horas que tu conductor elegido conducira tu vehiculo, y puedes tener un control de cuanto pagaras sin salirte de tu presupuesto</p>
+</div>
+</div>
+<div class="item__beneficios">
+<img src="./img/online.png" alt="estrella de beneficios de adhoc" class="imagen__beneficios">
+<div class="contenedor__de_textos">
+    <p class="texto__beneficios"><strong>Puedes elegir para cuando es tu servicio.</strong> Elige una fecha y una hora de inicio de tu servicio de conductor elegido.  </p>
+</div>
+</div>
+<div class="item__beneficios">
+<img src="./img/computador__con__codigo.png" alt="estrella de beneficios de adhoc" class="imagen__beneficios">
+<div class="contenedor__de_textos">
+    <p class="texto__beneficios"><strong>Trabajamos a toda marcha.</strong> Trabajamos sin parar para mejorar nuestros sistemas de segurida e interfaz para brindarte una mejor experiencia.</p>
+</div>
+</div>
+</div>
 </div>
 <br><br>
 <script>

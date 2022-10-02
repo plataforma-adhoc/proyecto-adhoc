@@ -162,7 +162,7 @@ if($estado__recorrido['estado_recorrido'] ==='Recorrido terminado') {?>
 
 <?php  } ?>
 
-<?php   if($resultado['avatar'] === NULL && $resultado['quien_soy'] === NULL){  ?>
+<?php   if($resultado['avatar'] === 'avatar__defecto__conductor' && $resultado['quien_soy'] === NULL){  ?>
 <div class="container card__perfil__sin__editar" id="ventana-perfil">
 <a href="#" class="cerrar__ventana" id="cerrar-ventana">X</a>
 <div class="contenido">

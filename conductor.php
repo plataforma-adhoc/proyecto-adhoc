@@ -98,8 +98,8 @@
         </div>
     </div>
 </form>
-<!-- <div class="contenido__beneficios">
-<h2>Beneficios de adhoc.com</h2>
+<div class="contenido__beneficios">
+<h2 class="subtitulo__beneficios">Beneficios de adhoc.com</h2>
 <div class="item__beneficios">
 <img src="./img/estrella___beneficio.png" alt="estrella de beneficios de adhoc" class="imagen__beneficios">
 <div class="contenedor__de_textos">
@@ -109,13 +109,22 @@
 <div class="item__beneficios">
 <img src="./img/grupo__usuarios.png" alt="estrella de beneficios de adhoc" class="imagen__beneficios">
 <div class="contenedor__de_textos">
-    <p class="texto__beneficios"><strong>AdHoc.com.co te accerca a miles de usuarios</strong> los usuarios encontrarán tu perfil profesional para interesarse en recibir servicio  contigo. Conviértete en el conductor preferido de las familias colombianas.</p>
+    <p class="texto__beneficios"><strong>AdHoc.com.co te accerca a miles de usuarios.</strong> los usuarios encontrarán tu perfil profesional para interesarse en recibir servicio  contigo. Conviértete en el conductor preferido de las familias colombianas.</p>
 </div>
 </div>
 <div class="item__beneficios">
-
+<img src="./img/online.png" alt="estrella de beneficios de adhoc" class="imagen__beneficios">
+<div class="contenedor__de_textos">
+    <p class="texto__beneficios"><strong>Organiza tu horario laboral.</strong> Elige los espacios del día en los que quieres trabajar, de acuerdo con la disponibilidad . </p>
 </div>
-</div> -->
+</div>
+<div class="item__beneficios">
+<img src="./img/computador__con__codigo.png" alt="estrella de beneficios de adhoc" class="imagen__beneficios">
+<div class="contenedor__de_textos">
+    <p class="texto__beneficios"><strong>Trabajamos a toda marcha.</strong> Trabajamos sin parar para mejorar nuestros sistemas de segurida e interfaz para brindarte una mejor experiencia.</p>
+</div>
+</div>
+</div>
 </div>
 <br><br>
 <script>

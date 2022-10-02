@@ -1,14 +1,20 @@
 
 .contenedor__del__formulario{
   display: flex;
+  flex-wrap: wrap;
 }
+
 .subtitulo__formularios{
   color: white;
   font-size:$tamaño__fuente__subtitulo;
   position: absolute;
-  right: 30%;
-  left: 30%;;
   top: 90px;
+  left: 12%;
+}
+
+.login{
+  left: 35%;
+  right: 35%;
 }
 
 .formulario__registro {
@@ -19,12 +25,20 @@
   }
 
   .contenido__beneficios{
-  width: 40%;
+  width: 50%;
+  margin-top: 30px;
+  border-radius: 10px;
+  }
+
+  .subtitulo__beneficios{
+  color: white;
+  font-size:$tamaño__fuente__subtitulo;
   }
 
 .item__beneficios{
   display: flex;
- margin-top: 50px;
+ width: 90%;
+ margin: 50px  auto 0 auto;
 }
 
 .contenedor__de_textos{
@@ -35,15 +49,16 @@
 
 .texto__beneficios{
   margin-left: -5px;
-  color: white;
+  color:$color__gris;
   line-height: 20px;
+  font-size: 18px;
 }
 
 .imagen__beneficios{
   border-radius: 50px;
-  width: 50px;
-  height: 50px;
-  margin-top: 30px;
+  width: 70px;
+  height: 70px;
+  margin-top: 10px;
 }
 
   .formulario__label {
@@ -134,7 +149,7 @@ top: 250px;
 }
 
 .icono__email__login{
-  right: 32%;
+  right: 35%;
   top:250px;
 }
 
@@ -361,10 +376,25 @@ cursor: pointer;
 
 
       @media screen and (max-width:900px){
+
     .formulario__registro {
-    width: 60%;
+    width: 50%;
     background:$color__formularios;
     border-radius: 7px;
+  }
+
+  .login{
+    left: 30%;
+    right: 30%;
+  }
+
+  .contenido__beneficios{
+    width: 48%;
+  }
+
+  .contenedor__de_textos{
+    width: 70%;
+    margin: auto;
   }
   .dos,.cuatro ,.seis,.ocho,.nueve{
   right:22.5%;
@@ -380,7 +410,7 @@ cursor: pointer;
 
  }
  .icono__email__login{
-  right: 23%;
+  right: 28%;
   top:250px;
 }
  
@@ -388,8 +418,12 @@ cursor: pointer;
 
 
       @media screen and (max-width:700px){
+        .contenido__beneficios{
+          margin: auto;
+          width: 90%;
+        }
         .formulario__registro {
-        width: 80%;
+        width: 90%;
         margin: 100px auto;
         background:$color__formularios;
         border-radius: 7px;
@@ -400,7 +434,7 @@ cursor: pointer;
       
         }
         .icono__email__login{
-          right: 14%;
+          right: 10%;
           top:250px;
         }
      

@@ -354,20 +354,19 @@
     color:$color__accent;
 }
 
+
 .hero__main{
     height: calc(100vh - 70px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding:0;
-    background-image: url(../img/fondo__banner.webp);
+    background-image: url(../img/fondo__baner__bogota__colombia.jpg);
     background-repeat: no-repeat;
     background-size:cover;
   
     
 }
-
-
 .hero__textos{
     // width: 90%;
         width:90%;
