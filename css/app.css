@@ -1932,7 +1932,7 @@ template {
 }
 
 .contenedor__dashboard {
-  margin-top: -600px;
+  margin-top: -700px;
 }
 
 .vista__nombre__usuario {
@@ -1948,13 +1948,12 @@ template {
 }
 
 .datos__perfiles__conductor {
-  margin-top: 150px;
-  width: 100%;
   display: flex;
-  height: auto;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
+  height: auto;
 }
 
 .card__perfiles__dashboard {
@@ -1962,11 +1961,18 @@ template {
   color: white;
 }
 
+.insert__datos__de__conductor {
+  width: 20%;
+  height: auto;
+}
+
 .card__del__conductor {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 20%;
+  width: 15%;
   border-radius: 7px;
+  margin-top: 90px;
+  margin-left: 20px;
 }
 
 .imagen__del__conductor {
@@ -2005,6 +2011,14 @@ p {
 @media screen and (max-width: 700px) {
   .card__del__conductor {
     width: 40%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .contenedor__dashboard {
+    margin-top: -600px;
+  }
+  .card__del__conductor {
+    width: 80%;
   }
 }
 .btn__back {
@@ -3039,6 +3053,9 @@ p {
   }
   .card__perfil__sin__editar {
     height: 290px;
+  }
+  .enlace__a__edicion {
+    width: 150px;
   }
 }
 .contenedor__datos__historial {

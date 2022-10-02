@@ -391,41 +391,40 @@ export  function actualizar__contrasena__usuario(){
   }
 
 
-  export function obtener__conductores__disponibles(){
-    let insert__conductores__disponibles = document.getElementById('insert-conductores-disponibles')
-    if(insert__conductores__disponibles){
+//   export function obtener__conductores__disponibles(){
+//     let insert__conductores__disponibles = document.getElementById('insert-conductores-disponibles')
+//     if(insert__conductores__disponibles){
 
-      fetch(url__servidor+'obtener-conductores-disponibles.php',{
-       method:'GET'
-      }).then(respuesta => respuesta.json())
-      .then(data =>{
-    let  str = "";
-    data.forEach((item =>{
-      insert__conductores__disponibles.innerHTML = "";
-      console.log(item)
-      str += `
-          <div class="card__del__conductor">
-          <a href="info-conductor.php?idc=${item.id_conductor}"class="card__perfiles__dashboard" data-aos="zoom-in">
-        <img src="upload/${item.avatar}" alt="Avatar" class="imagen__del__conductor">
-       <div class="datos__del__conductor">
-        <br>
-        <h4><b>${item.nombre_conductor}</b></h4>
-        <p>${item.numero_documento} <br> Disponible</p>    
-        <p> </p>
-      </div>
-    </a> 
-    </div>
+//       fetch('obtener-conductores-disponibles.php',{
+//        method:'GET'
+//       }).then(respuesta => respuesta.json())
+//       .then(data =>{
+//     let  str = "";
+//     data.forEach((item =>{
+//       insert__conductores__disponibles.innerHTML = "";
+//       console.log(item)
+//       str += `
+//       <div class="card__del__conductor">
+//       <a href="info-conductor.php?idc=${item.id_conductor}"class="card__perfiles__dashboard">
+//     <img src="upload/${item.avatar}" alt="Avatar" class="imagen__del__conductor">
+//    <div class="datos__del__conductor">
+//     <br>
+//     <h4><b>${item.nombre_conductor}</b></h4>
+//     <p>${item.numero_documento} <br> Disponible</p>    
+//     <p> </p>
+//   </div>
+// </a> 
+// </div>
       
-      ` 
- insert__conductores__disponibles.innerHTML = str
-    }))
-       })
+//       ` 
+//  insert__conductores__disponibles.innerHTML = str
+//     }))
+//        })
        
-    }
+//     }
       
-  }
-  
-  setInterval(obtener__conductores__disponibles,20000)
+//   }
+//   setInterval(obtener__conductores__disponibles,20000)
 
        
   

@@ -9,14 +9,14 @@ cerrar__modal__calificaciones();
 
 
 import {insert__datos__usuario, insert__login__usuario,
-  password__usuario,actualizar__contrasena__usuario,formulario__completar__proceso,modal__cambio__contrasena__usuario,obtener__conductores__disponibles} from './insert-datos-usuario.js';
+  password__usuario,actualizar__contrasena__usuario,formulario__completar__proceso,modal__cambio__contrasena__usuario} from './insert-datos-usuario.js';
 insert__datos__usuario();
 insert__login__usuario();
 password__usuario();
 actualizar__contrasena__usuario();
 formulario__completar__proceso();
 modal__cambio__contrasena__usuario();
-obtener__conductores__disponibles();
+
 
 
 import {insert__datos__conductor,insert__login__conductor,password__conductor,
@@ -56,40 +56,6 @@ comentarios__conductor()
 import {insertar__sugerencia__usaurio,insertar__sugerencia__conductor} from'./sugerencias.js';
 insertar__sugerencia__usaurio()
 insertar__sugerencia__conductor()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var modal = document.getElementById("myModal");
-// var btn = document.getElementById("card-cambiar-contrasena");
-
-
-// var span = document.getElementsByClassName("close")[0];
-
-// if(btn){
-//   btn.onclick = function() {
-//     modal.style.display = "block";
-//   }
-
-// }
-
-// if(span){
-//   span.onclick = function() {
-//     modal.style.display = "none";
-//   }
-
-// }
-
 
 
     let btn__back =  document.getElementById('btn-back');

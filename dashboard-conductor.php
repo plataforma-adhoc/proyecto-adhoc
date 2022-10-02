@@ -130,39 +130,8 @@ while($fila__resultado__saldo = mysqli_fetch_array($resultado__seleccion__saldo)
   </div>
 </div>
 
-<?php  
-if($estado__recorrido['estado_recorrido'] ==='Recorrido terminado') {?>
-<div class="modal__recorrido">
-<div class="contendido__modal__recorrido">
-  <div>
-    <img src="./img/icon__celebracion.svg" alt="" class="imagen__celebracion">
 
-  </div>
-  <div>
-  <h4 class="subtitulo__estado__recorrido">Felicidades</h4>
-    <h4 class="subtitulo__estado__recorrido">completaste un nuevo recorrido</h4>
-    <p class="parrafo__recorrido">Dejanos saber tu opinion sobre el usuario que acabas de dejar </p>
-      <!-- <a href="perfil-conductor.php?id=<?php  echo $datos__resultado['id_conductor']  ?>#opinion" class="btn__dejar__opinion ">Dejar mi opinion</a> -->
-   <div class="contenido__calificaciones">
-     <form id="form-me-gusta">
-    <input type="hidden" value="<?php echo $datos__resultado['id_conductor'] ?>" name="idConductor">
-      <button class="btn__calificaciones"><i class="fas fa-thumbs-up"></i> Me gusta</button>
-    </form>
-    <form id="form-no-me-gusta">
-     <input type="hidden" value="<?php echo $datos__resultado['id_conductor'] ?>" name="idConductor">
-      <button class="btn__calificaciones"><i class="fas fa-thumbs-down"></i> No me gusta</button>
-    </form>
-
-   </div>
-
-  </div>
-</div>
-
-</div>
-
-<?php  } ?>
-
-<?php   if($resultado['avatar'] === 'avatar__defecto__conductor' && $resultado['quien_soy'] === NULL){  ?>
+<?php   if($datos__resultado['avatar'] === 'avatar__defecto__conductor.png' || $datos__resultado['quien_soy'] === NULL){  ?>
 <div class="container card__perfil__sin__editar" id="ventana-perfil">
 <a href="#" class="cerrar__ventana" id="cerrar-ventana">X</a>
 <div class="contenido">
