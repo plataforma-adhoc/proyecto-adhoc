@@ -1,4 +1,4 @@
-var url__servidor= 'https://www.adhoc.com.co/'
+var url__servidor = 'https://www.adhoc.com.co/'
 
 
 
@@ -40,11 +40,11 @@ var url__servidor= 'https://www.adhoc.com.co/'
 
     
     export function comentarios__conductor(){
-      let form__me_gusta = document.getElementById('form-comentario');
+      let form__me_gusta = document.getElementById('form-comentario-conductor');
       if(form__me_gusta){
        form__me_gusta.addEventListener('submit',function(evento){
         evento.preventDefault();
-        let form__data = new FormData(document.getElementById('form-comentario'))
+        let form__data = new FormData(document.getElementById('form-comentario-conductor'))
         fetch(url__servidor+'insert-comentario-conductor.php',{
           method:'POST',
           body:form__data

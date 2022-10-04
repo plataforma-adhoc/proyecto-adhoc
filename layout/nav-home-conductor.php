@@ -36,7 +36,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
         <div class="logo">
           <a href="dashboard-conductor.php"><img src="./img/logo.png" alt="" class="logo__accent"></a>
         </div>
-        <?php  $consulta__comentarios = "SELECT * FROM notificaciones__conductor WHERE id_conductor = '{$_SESSION['id_conductor']}' AND leido = '0'  ORDER BY id_notificacion DESC LIMIT 5";
+        <?php  $consulta__comentarios = "SELECT * FROM notificaciones__usuario WHERE id_conductor = '{$_SESSION['id_conductor']}' AND leido = '0'  ORDER BY id_notificacion DESC LIMIT 5";
                 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
                  $total__notificaciones = mysqli_num_rows($ejecutar__consulta) ?>
 
@@ -121,16 +121,12 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
       <span class="close">x</span>
       <h3 class="titulo__notificaciones">Notificaciones</h3>
 
-      <?php while($fila__recorrido = mysqli_fetch_array($ejecutar__consulta)){
-        $consulta__datos__usuario = "SELECT * FROM usuarios WHERE id_usuario = '{$fila__recorrido['id_usuario']}' ";
-        $ejecutar__consulta__usuario = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
-        $fila__datos = mysqli_fetch_array($ejecutar__consulta__usuario);
-        ?>
+      <?php while($fila__recorrido = mysqli_fetch_array($ejecutar__consulta)){?>
       <div class="contenido__notificacion">
         <a href="notificaciones.php?id=<?php  echo $fila__recorrido['id_notificacion'] ?>"
           class="enlaces__ver__notificacion">
-          <img src="upload/<?php echo $fila__datos['avatar'] ?>" alt="" class="avatar__perfil">
-          <div class="datos"> <?php echo $fila__datos['nombre_usuario'] ?> ha hecho un comentario <i
+          <img src="upload/<?php echo $fila__recorrido['avatar'] ?>" alt="" class="avatar__perfil">
+          <div class="datos"> <?php echo $fila__recorrido['nombre_conductor'] ?> ha hecho un comentario <i
               class="fas fa-comment-alt"></i> <br>
             <p class="fecha__notificacion"> El dia
               <?php echo date("d-m-Y",strtotime($fila__recorrido['fecha_notificacion'])) ?></p>
@@ -139,9 +135,9 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
       </div>
       <?php } ?>
       <br>
-      <?php   if(mysqli_num_rows($ejecutar__consulta) > 6){ ?>
+   
       <a href="notificaciones.php" class="enlace__mas__notificaciones"><i class="fas fa-plus"></i> ver mas
         notificaciones</a>
-      <?php } ?>
+      
     </div>
   </div>

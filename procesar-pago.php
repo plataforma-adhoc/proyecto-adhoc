@@ -1,10 +1,16 @@
 <?php  include'layout/nav-home-usuario.php';
        include'config/config.php'; 
+include'conexion-db-accent.php'; 
+
 
 $servicios = isset($_SESSION['carrito']['servicios']) ? $_SESSION['carrito']['servicios'] : null;
 $id_conductor =  isset($_GET['idc']) ? $_GET['idc'] : '';
 
+
 if($servicios != null || $id_conductor !=""){
+  
+ 
+  
     $lista__carrito = array();
     foreach ($servicios as $clave => $cantidad) {
         $consulta__productos = "SELECT id_producto,nombre_producto,	valor_producto,descuento, $cantidad AS cantidad FROM productos    WHERE id_producto = '$clave' AND  activo = 1";
@@ -94,20 +100,24 @@ paypal.Buttons({
       });
     },
     onApprove: function(data, actions) {
-      let url = 'https://app-prueba-adhoc.herokuapp.com/'
+      let url = 'https://www.adhoc.com.co/'
     return actions.order.capture().then(function(detalles) {
         console.log(detalles)
-        fetch('captura.php',{
+        fetch(url+'captura.php',{
         method:'POST',
         headers:{
               'content-type':'application/json'
         },
+ 
+ 
         body:JSON.stringify({
             detalles:detalles,
             identificadores:{
               idc:<?php   echo $id_conductor ?>,
               idu:<?php  echo $datos__resultado['id_usuario'] ?>
+           
             }
+            
           
         })
 

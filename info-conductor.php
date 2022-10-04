@@ -1,5 +1,5 @@
 <?php include'layout/nav-home-usuario.php';
-
+include'conexion-db-accent.php'; 
 $id = isset($_GET['idc']) ? $_GET['idc'] : '';
 if($id ==="" || $id !=$id){
 header("Location: dashboard-usuario.php");
@@ -69,31 +69,24 @@ $datos__resultado__conductor = mysqli_fetch_array($ejecutar__consulta);
      
 <div class="container contenedor__opinion">
     <p class="titulo__opinion">Que opinan otros usuarios de este conductor</p>
+    <div class="contenido__comentario">
     <?php      
-$consulta__comentarios = "SELECT * FROM comentarios__usuario WHERE id_conductor = '$id'";
-$ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
-if(mysqli_num_rows($ejecutar__consulta) > 0){
+$consulta__comentarios = "SELECT * FROM comentario__usuario WHERE id_conductor = '$id'";
+$ejecutar__consulta__comentarios = mysqli_query($conexion__db__accent,$consulta__comentarios);
 
-while($fila = mysqli_fetch_array($ejecutar__consulta)){ ?>
-<div class="opinion">
- <div class="opinion__1" >
-     <div class="item__opinion">
-         <img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt="" class="avatar__opinion__1">
-         <div class="nombre__item__opinion"><p><?php echo $datos__resultado['nombre_usuario'] ?></p></div>
-     </div>
-         <div class="parrafo__item__opinion">
-             <p class="parrafo"><?php echo $fila['comentario'] ?></p>
-             <p class="fecha__publicacion"><?php echo $fila['fecha_comentario'] ?></p>
-     </div>
-     </div>
- 
- </div>
+while($fila = mysqli_fetch_array($ejecutar__consulta__comentarios)){ ?>
+ <div class="opinion">
+        <div class="item__opinion">
+               <p class="nombre__item__opinion"> De <?php echo $fila['nombre'] ?></a></p>
+                <p class="parrafo"><?php echo $fila['comentario'] ?></p>
+                <p class="fecha__publicacion">esto fue el  <?php echo $fila['fecha_de_calificacion'] ?></p>
+  
+        </div>    
+    </div>
 
  <?php } ?>
- <?php }else{ ?>
-    <p class="titulo__opinion">No hay comentarios aun</p>
+ </div> 
 
- <?php } ?>
  </div> 
 <br><br>
 

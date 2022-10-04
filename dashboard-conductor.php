@@ -22,6 +22,7 @@ while($fila__resultado__saldo = mysqli_fetch_array($resultado__seleccion__saldo)
 }?>
  
 <div class="container contenedor__dashboard">
+  <br><br>
     <h2 class="vista__nombre__usuario"><i class="fas fa-user-astronaut"></i> Hola <strong><?php echo $datos__resultado['nombre_conductor'] ?></strong></h2>
     <h2 class="titulo__dashboard"><i class="fas fa-sitemap"></i> Estadisticas principales</h2>
     <div class="contenedor__cards__dashboard">

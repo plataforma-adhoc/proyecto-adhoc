@@ -216,9 +216,9 @@ margin-left: -22px;
   outline: 0;
   color:white;
   font-weight: bold;
-  border-radius: 7px;
+  border-radius: 50px;
   background:$color__accent;
-  padding: 7px;
+  padding: 7px 30px;
 }
 
 .cerrar__modal__calificacion{
@@ -232,7 +232,7 @@ margin-left: -22px;
 
 .cerrar__modal__calificacion:hover{
   color: white;
-  transition: all 0.5s;
+  transition: 0.5s ease-in-out;
 }
 
 .modal__recorrido {
@@ -340,5 +340,8 @@ max-height: 70px;
     }
     .links button {
       min-width: 100px;
+    }
+    .contendido__modal__recorrido{
+      width: 90%;
     }
     }

@@ -9,14 +9,8 @@ if($id__conductor ){
   $ejecutar__consulta = mysqli_query($conexion__db__accent,$actualizar__solicitud); 
   
 
-
-
   $consulta__inicio__servicio = "SELECT * FROM datos__inicio__recorrido WHERE id_conductor = '$id__conductor'";
   $ejecutar__consulta__inicio__servicio = mysqli_query($conexion__db__accent,$consulta__inicio__servicio);
-
-  $consulta__datos__usuario = "SELECT id_usuario, nombre_usuario, primer_apellido,segundo_apellido,email,numero_documento,numero_telefono,avatar FROM  usuarios";
- $ejecutar__consulta__datos__usuario = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
- $resultado = mysqli_fetch_array($ejecutar__consulta__datos__usuario);
   
  $consulta__detalles__compra = "SELECT * FROM detalles__de__la__compra WHERE id_conductor = '$id__conductor'";
  $ejecutar__consulta__detalles = mysqli_query($conexion__db__accent,$consulta__detalles__compra);
@@ -41,15 +35,14 @@ if($id__conductor ){
      <div class="datos__de__solicitud">
      <div class="card__solicitudes">
      <div class="img">
-       <img src="upload/<?php echo $resultado['avatar'] ?>" class="imagen__de_perfil">
+       <img src="upload/<?php echo $resultado__inicio__servicio['avatar_usuario'] ?>" class="imagen__de_perfil">
     </div>
     <div class="infos">
       <div class="name">
-   <h2><?php echo $resultado['nombre_usuario']  ?></h2>
-   <h4><?php echo $resultado['primer_apellido'] ?> <?php echo $resultado['segundo_apellido'] ?></h4>
-   <h4><?php echo $resultado['email'] ?></h4>
-   <h4><?php echo $resultado['numero_documento'] ?></h4>
-   <h4><?php echo $resultado['numero_telefono'] ?></h4>
+   <h2><?php echo $resultado__inicio__servicio['nombre_usuario']  ?></h2>
+   <h4><?php echo $resultado__inicio__servicio['primer_apellido_usuario'] ?> <?php echo $resultado__inicio__servicio['segundo_apellido_usuario'] ?></h4>
+   <h4><?php echo $resultado__inicio__servicio['documento_usuario'] ?></h4>
+   <h4><?php echo $resultado__inicio__servicio['telefono_usuario'] ?></h4>
    <h2>Datos del servicio a tomar</h2>
    <h4>  <?php echo $resultado__inicio__servicio['direccion_inicio']  ?></h4>
    <?php echo $resultado__inicio__servicio['fecha_inicio'] ?>
@@ -112,7 +105,7 @@ if($id__conductor ){
 <div class="modal__recorrido" id="modal-recorrido">
   <span class="cerrar__modal__calificacion" id="cerrar-modal-calificacion"><i class="far fa-times-circle"></i></span>
   <div class="contendido__modal__recorrido">
-    <form  class="formulario__calificacion" id="form-comentario">
+    <form  class="formulario__calificacion" id="form-comentario-conductor">
   <h4 class="subtitulo__estado__recorrido">Felicidades</h4>
       <h4 class="subtitulo__estado__recorrido">completaste un nuevo recorrido</h4>
       <p class="parrafo__recorrido">Dejanos saber tu opinion sobre el usuario que acabas de dejar </p>
@@ -129,8 +122,23 @@ if($id__conductor ){
             </div>
         </div>
     </div>
-    <input type="hidden" value="<?php echo $resultado['id_usuario'] ?>" name="idUsuario">
+    <?php  
+      $consulta__id__usuario = "SELECT * FROM datos__inicio__recorrido WHERE id_conductor = '$id__conductor'";
+      $ejecutar__consulta__id__usuario = mysqli_query($conexion__db__accent,$consulta__id__usuario);
+    $resultado__id__usuario = mysqli_fetch_array($ejecutar__consulta__id__usuario);
+    
+    $consulta__datos = "SELECT *  FROM datos__inicio__recorrido WHERE id_conductor = '{$_SESSION['id_conductor']}'";
+    $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
+    if(mysqli_num_rows($ejecutar__consulta) > 0){
+    $resultado__datos = mysqli_fetch_array($ejecutar__consulta)
+    ?>
+
+    <input type="hidden" value="<?php echo $resultado__id__usuario['id_usuario'] ?>" name="idUsuario">
     <input type="hidden" value="<?php echo $datos__resultado['id_conductor'] ?>" name="idConductor">
+    <input type="hidden" value="<?php echo $resultado__datos['nombre_conductor'] ?>" name="nombreUsuario">
+    <input type="hidden" value="<?php echo $resultado__datos['avatar'] ?>" name="avatar">
+
+    <?php } ?>
     <button class="btn__calificaciones">Publicar ahora</button>
 </form>
 </div>

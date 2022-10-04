@@ -37,10 +37,13 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                 <div class="logo">
                     <a href="dashboard-usuario.php"><img src="./img/logo.png" alt="" class="logo__accent logo__home"></a>
                 </div>
-                <?php  $consulta__comentarios = "SELECT * FROM notificaciones__conductor WHERE id_usuario = '{$_SESSION['id_usuario']}' AND leido = '0'  ORDER BY id_notificacion DESC LIMIT 5";
+                <?php  $consulta__comentarios = "SELECT * FROM notificaciones__conductor WHERE id_usuario = '{$_SESSION['id_usuario']}' AND leido = '0'   ORDER BY id_notificacion DESC LIMIT 5";
                 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
-                 $total__notificaciones = mysqli_num_rows($ejecutar__consulta) ?>
-                <div class="enlaces__varios">
+                 $total__notificaciones = mysqli_num_rows($ejecutar__consulta);
+       
+               
+                 ?>
+                 <div class="enlaces__varios">
                    <a href="perfil-usuario.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__perfil__usuario"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"></a>
                    <a href="#" class="enlace__notificaciones" id="abrir-modal"><i class="far fa-bell"></i>
             <?php  if($total__notificaciones > 0){ ?><span class="numero__notificaciones">
@@ -101,12 +104,15 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                     Ayudanos a mejorar</a>
 
                 </li>
+              
                 <li class="nav-link">
                   <i class="fas fa-power-off"></i>
-                  <a href="desconectar-usuario.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>">Cerrar
+                  <a href="desconectar-usuario.php?id=<?php  echo $datos__resultado['id_usuario'] ?>">Cerrar
                     sesión</a>
                 </li>
               </ul>
+
+            
 
               <div class="nav-images">
                 <div class="nav-image image-1">
@@ -121,44 +127,33 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
               
         </nav>
     </header>
-    <!-- <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" id="cerrar-menu"><i class="fas fa-times"></i></a>
-        <div class="overlay-content">
-         <div class="contenedor__enalces__menu__home"><a href="./perfil-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlaces__menu__home"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"><div class="item__nombre"><?php echo $datos__resultado['nombre_usuario'] ?></div></a></div>
-           <div class="contenedor__enalces__menu__home"><a href="./dashboard-usuario" class="enlaces__menu__home"> <i class="fas fa-home"></i> Home</a></div>  
-           <div class="contenedor__enalces__menu__home"><a href="./historial-usuario" class="enlaces__menu__home"><i class="fas fa-history"></i> Historial</a></div> 
-           <div class="contenedor__enalces__menu__home"><a href="./configuracion-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlaces__menu__home"><i class="fas fa-cogs"></i> Configuracion</a></div> 
-            <div class="contenedor__enalces__menu__home"><a href="./ayudanos-a-mejorar" class="enlaces__menu__home"><i class="fas fa-mail-bulk"></i> Ayudanos a mejorar</a></div>
-           <div class="contenedor__enalces__menu__home"><a href="./perfil-usuario" class="enlaces__menu__home"><i class="fas fa-comments"></i> Comentarios</a></div> 
-            <div class="contenedor__enalces__menu__home"><a href="./desconectar-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlaces__menu__home"><i class="fas fa-power-off"></i> Desconectarse</a></div>
-        </div>
-
-    </div> -->
     <div id="myModalNotificaciones" class="modal__notificaciones">
         <div class="" id="modal__content__notificaciones">
             <span class="close">x</span>
             <h3 class="titulo__notificaciones">Notificaciones</h3>
-
-        <?php while($fila__recorrido = mysqli_fetch_array($ejecutar__consulta)){
-        $consulta__datos__usuario = "SELECT * FROM conductores WHERE id_conductor = '{$fila__recorrido['id_conductor']}' ";
-        $ejecutar__consulta__usuario = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
-        $fila__datos = mysqli_fetch_array($ejecutar__consulta__usuario);
-        ?>
+        <?php 
+        if(mysqli_num_rows($ejecutar__consulta) > 0){
+          while($fila__recorrido = mysqli_fetch_array($ejecutar__consulta)){?>
                 <div class="contenido__notificacion">
                 <a href="notificaciones-usuario.php?id=<?php  echo $fila__recorrido['id_notificacion'] ?>"class="enlaces__ver__notificacion">
-                    <img src="upload/<?php echo $fila__datos['avatar'] ?>" alt="" class="avatar__perfil">
-                    <div class="datos"> <?php echo $fila__datos['nombre_conductor'] ?> ha hecho un comentario <i
+                    <img src="upload/<?php echo $fila__recorrido['avatar'] ?>" alt="" class="avatar__perfil">
+                    <div class="datos"> <?php echo $fila__recorrido['nombre_usuario'] ?> ha hecho un comentario <i
                             class="fas fa-comment-alt"></i> <br>
                         <p class="fecha__notificacion"> El dia
                             <?php echo date("d-m-Y",strtotime($fila__recorrido['fecha_notificacion'])) ?></p>
                     </div>
                 </a>  
             </div>
+           
             <?php } ?>
+            <?php } ?> 
+            <a href="notificaciones-usuario.php" class="enlace__mas__notificaciones"><i class="fas fa-plus"></i> ver mas
+           notificaciones</a>
+      
+             
             <br>
-            <?php   if(mysqli_num_rows($ejecutar__consulta) > 6){ ?>
-            <a href="notificaciones.php" class="enlace__mas__notificaciones"><i class="fas fa-plus"></i> ver mas
-                notificaciones</a>
-                <?php } ?>
+         
+                <?php  mysqli_close($conexion__db__accent)?>
         </div>
+
     </div>

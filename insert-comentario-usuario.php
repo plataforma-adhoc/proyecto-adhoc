@@ -5,6 +5,9 @@ $nombre = isset($_POST['nombre']) ? $_POST['nombre'] :'';
 $comentario = isset($_POST['areaMensaje']) ? $_POST['areaMensaje'] :'';
 $id__usuario= isset($_POST['idUsuario']) ? $_POST['idUsuario'] :'';
 $id__conductor = isset($_POST['idConductor']) ? $_POST['idConductor'] :'';
+$nombre__conductor = isset($_POST['nombreConductor']) ? $_POST['nombreConductor'] :'';
+$avatar__conductor = isset($_POST['avatar']) ? $_POST['avatar'] :'';
+
 
 
 
@@ -18,7 +21,7 @@ $id__conductor = isset($_POST['idConductor']) ? $_POST['idConductor'] :'';
 
     $id = mysqli_insert_id($conexion__db__accent);
     if($id > 0){
-        $insertar__notificacion = "INSERT INTO  notificaciones__conductor(id_usuario,id_conductor,leido) VALUES('$id__usuario','$id__conductor','0')";
+        $insertar__notificacion = "INSERT INTO  notificaciones__usuario(id_usuario,id_conductor,nombre_conductor,avatar,leido) VALUES('$id__usuario','$id__conductor','$nombre__conductor','$avatar__conductor','0')";
         $ejecutar__consulta__notificacion = mysqli_query($conexion__db__accent,$insertar__notificacion);
         if($ejecutar__consulta__notificacion){
           

@@ -45,16 +45,16 @@ if(mysqli_num_rows($resultado__consulta__datos__conductor) > 0){
     <ul class="stats">
     <li>  <h4>
     <?php  if($datos__resultado['facebook'] !=NULL ){ ?>
-    <a href="<?php echo $datos__resultado['facebook'] ?>" class="enlace__de__redes__sociales" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.facebook.com/<?php echo $datos__resultado['facebook'] ?>" class="enlace__de__redes__sociales" target="_blank"><i class="fab fa-facebook"></i></a>
         <?php } ?> 
     </h4> 
 </li>
     <li>  <h4> <?php  if($datos__resultado['instagram'] !=NULL ){ ?>
-    <a href="<?php echo $datos__resultado['instagram'] ?>" class="enlace__de__redes__sociales" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.instagram.com/<?php echo $datos__resultado['instagram'] ?>" class="enlace__de__redes__sociales" target="_blank"><i class="fab fa-instagram"></i></a>
     <?php } ?></h4> 
     </li>
     <li>  <h4> <?php  if($datos__resultado['twitter'] !=NULL ){ ?>
-        <a href="<?php echo $datos__resultado['twitter'] ?>" class="enlace__de__redes__sociales"target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://twitter.com/<?php echo $datos__resultado['twitter'] ?>" class="enlace__de__redes__sociales"target="_blank"><i class="fab fa-twitter"></i></a>
     <?php } ?></h4> 
 </li>
   </ul>

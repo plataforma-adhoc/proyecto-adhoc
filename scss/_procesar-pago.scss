@@ -1,6 +1,6 @@
 
 .contenedor__detalles__de__pago{
-    width: 40%;
+    width: 90%;
     margin: -90px auto 0 auto;
 }
 
@@ -20,9 +20,23 @@
 }
 
  
+.contenedor__boton__paypal{
+    width: 60%;
+    margin: auto;
+}
+
+
+@media screen and (max-width:700px) {
+    .contenedor__boton__paypal{
+        width: 90%;
+       }
+}
 
 @media screen and (max-width:500px) {
    .total__a__pagar{
     text-align: center;
    } 
+
+   
+   
 }

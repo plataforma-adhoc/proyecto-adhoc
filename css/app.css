@@ -574,6 +574,29 @@
   flex-wrap: wrap;
 }
 
+.card__productos::before {
+  background: #9bdc28;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(100px at 80% 2%);
+  transition: 0.5s ease-in-out;
+}
+
+.nombre__producto {
+  color: white;
+  font-size: 30px;
+}
+
+.card__productos:hover:before {
+  clip-path: circle(300px at 50% 1%);
+  opacity: 0.1;
+  z-index: 100;
+}
+
 .background {
   width: 68%;
   height: 290px;
@@ -740,6 +763,45 @@
   color: white;
 }
 
+.contenedor__unete {
+  background: #008A55;
+  height: 200px;
+}
+
+.unete {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.subtitulo__unete {
+  color: white;
+}
+
+.parrafo__unete {
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.enlace__unete__conductor {
+  display: inline-block;
+  text-decoration: 0;
+  color: white;
+  padding: 10px 100px;
+  border-radius: 50px;
+  border: solid 2px white;
+  font-weight: bold;
+}
+
+.enlace__unete__conductor:hover {
+  background: #C0392B;
+  transition: 0.5s ease-in-out;
+}
+
 .container__footer {
   width: 100%;
   margin: auto;
@@ -878,6 +940,9 @@ ul {
   .slider {
     width: 100%;
     height: 120px;
+  }
+  .contenedor__unete {
+    height: auto;
   }
 }
 @media screen and (max-width: 700px) {
@@ -2247,6 +2312,7 @@ p {
 
 .item__info__pagos p {
   margin: 10px 0 0 0;
+  height: 40px;
 }
 
 @media screen and (max-width: 1500px) {
@@ -2267,6 +2333,9 @@ p {
   }
   .btn__back {
     left: 5%;
+  }
+  .item__info__pagos {
+    height: 60px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -3166,10 +3235,10 @@ p {
 @media screen and (max-width: 700px) {
   .datos__del__perfil__historial {
     margin: auto;
-    width: 80%;
+    width: 100%;
   }
   .foto__historial {
-    width: 30%;
+    width: 40%;
     height: 120px;
   }
 }
@@ -3404,7 +3473,7 @@ p {
 }
 
 .contenedor__detalles__de__pago {
-  width: 40%;
+  width: 90%;
   margin: -90px auto 0 auto;
 }
 
@@ -3423,6 +3492,16 @@ p {
   text-align: center;
 }
 
+.contenedor__boton__paypal {
+  width: 60%;
+  margin: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .contenedor__boton__paypal {
+    width: 90%;
+  }
+}
 @media screen and (max-width: 500px) {
   .total__a__pagar {
     text-align: center;
@@ -3770,9 +3849,9 @@ p {
   outline: 0;
   color: white;
   font-weight: bold;
-  border-radius: 7px;
+  border-radius: 50px;
   background: #C0392B;
-  padding: 7px;
+  padding: 7px 30px;
 }
 
 .cerrar__modal__calificacion {
@@ -3786,7 +3865,7 @@ p {
 
 .cerrar__modal__calificacion:hover {
   color: white;
-  transition: all 0.5s;
+  transition: 0.5s ease-in-out;
 }
 
 .modal__recorrido {
@@ -3881,6 +3960,9 @@ p {
   }
   .links button {
     min-width: 100px;
+  }
+  .contendido__modal__recorrido {
+    width: 90%;
   }
 }
 .contenedor__como__funciona {
@@ -4275,7 +4357,7 @@ p {
 }
 .foto__de__perfil__del__conductor {
   width: 30%;
-  height: 120px;
+  height: 100px;
 }
 
 .contenedor__subtitulo__ad__panel {

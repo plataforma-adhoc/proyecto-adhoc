@@ -1,5 +1,7 @@
 <?php  include'layout/nav-home-usuario.php';
        include'config/config.php'; 
+include'conexion-db-accent.php'; 
+
 
 $servicios = isset($_SESSION['carrito']['servicios']) ? $_SESSION['carrito']['servicios'] : null;
 $id_conductor =  isset($_GET['idc']) ? $_GET['idc'] : '';
@@ -107,7 +109,7 @@ boton__eliminar.value = id;
 
 
 function elimina(){
-  let url = 'https://app-prueba-adhoc.herokuapp.com/'
+  let url = 'https://www.adhoc.com.co/'
   let boton__eliminar =  document.getElementById('boton-eliminar');
   let id = boton__eliminar.value;
   let form__data = new FormData();

@@ -16,7 +16,7 @@ if(is_array($datos)){
     $monto = $datos['detalles']['purchase_units'][0]['amount']['value'];
     $id__usuario = $datos['identificadores']['idu'];
     $id__conductor = $datos['identificadores']['idc'];
-
+   
     
 
     $insertar__datos = "INSERT INTO compra(id_transaccion, fecha_de_compra,status,email_cliente,id_cliente,total_compra)

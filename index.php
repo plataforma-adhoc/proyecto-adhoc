@@ -145,6 +145,28 @@
                 </article>
             </div>
         </section>
+        <section class="projects container" data-aos="zoom-in">
+            <h2 class="subtitle solicitud">Servicios de conductor elegido disponibles<span class="point">.</span></h2>
+            <article class="container-bg">
+                <?php  
+                include'conexion-db-accent.php';
+                
+                $consulta__productos = "SELECT nombre_producto,valor_producto,descripcion,mas_vendido FROM productos WHERE activo = '1'";
+                $ejecutar__la__consulta = mysqli_query($conexion__db__accent,$consulta__productos);
+                while($fila__productos = mysqli_fetch_array($ejecutar__la__consulta)){ ?>
+                     <div class="card card__productos">
+                    <div class="cards__text card__tex__productos">
+                        <h3 class="card__title"> <span class="point"></span></h3>
+                        <br><br>
+                        <p class="card__date nombre__producto"><?php echo $fila__productos['nombre_producto']   ?></p>
+                        <p class="card__copy"><?php echo number_format($fila__productos['valor_producto'],2,'.','.')  ?></p>
+                        <p class="card__copy"><?php echo $fila__productos['descripcion'] ?></p>   
+                    </div>
+                    <p class="card__copy"><?php echo $fila__productos['mas_vendido'] ?></p>
+                </div>                                                                                                                               
+               <?php }?>    
+            </article>
+        </section>
    
         <section class="projects container" data-aos="zoom-in">
             <h2 class="subtitle solicitud">Solicitud en tiempo real<span class="point">.</span></h2>
@@ -228,7 +250,7 @@
         </section>
        
         <section class="email container container--modifier">
-            <h2 class="subtitle subtitle--modifier">Somos tu mejor opción para cuando quieras elegir un conductor<span class="point">.</span></h2>
+            <h2 class="subtitle subtitle--modifier">Tu opción para cuando necesites un conductor elegido<span class="point">.</span></h2>
 
             <p class="copy__section copy__section--modifier">Los numeros hablan por nosotros</p>
 
@@ -260,6 +282,18 @@
                 <input type="submit" class="newsletter__submit" value="Comienza hoy">
             </form> -->
         </section>
+        <div class=" contenedor__unete">
+            <div class="unete">
+                <div>
+                    <br><br>
+                    <h2 class="subtitulo__unete">¿ Eres conductor ? </h2>
+                    <p class="parrafo__unete">Haz parte de nuestra red de profesionales en Colombia</p>
+                </div>
+                <br><br>
+               <a href="conductor.php" class="enlace__unete__conductor">¡UNETE!</a>
+            </div>
+            <br>
+        </div>
     </main>
 
 <?php include'layout/footer.php'; ?>

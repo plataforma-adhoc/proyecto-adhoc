@@ -48,7 +48,7 @@
 
 <script>
    function agregar(id,token){
-       let url = 'https://app-prueba-adhoc.herokuapp.com/';
+       let url = 'https://www.adhoc.com.co/';
        let form__data = new FormData();
 
        form__data.append('id',id);
