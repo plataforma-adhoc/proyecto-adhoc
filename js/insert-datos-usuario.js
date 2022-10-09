@@ -428,9 +428,9 @@ setInterval(recargar__conductores__disponibles,5000)
    
 
 
+
 export function getData(){
 
-document.getElementById('search').addEventListener('keyup',getData)
   let search = document.getElementById('search').value
   let insertar__conductores = document.getElementById('conductores-disponibles');
  let form__data = new FormData();
