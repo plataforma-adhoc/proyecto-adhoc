@@ -9,7 +9,7 @@ $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__cond
  ?>
     <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
 
-<form class="formulario editarPerfil"  action="insert-edit-perfil-conductor.php" method="POST" enctype="multipart/form-data">
+<form class="formulario editarPerfil formulario__conductor"  action="insert-edit-perfil-conductor.php" method="POST" enctype="multipart/form-data">
     <br><br>
     <div class="avatar">
         <img src="upload/<?php echo $datos__resultado['avatar'] ?>" class="imagen__avatar">
@@ -21,7 +21,7 @@ Subir una foto...
 </div>
 </div>
 <br><br><br> 
-    <div class="contenedor__formulario">
+    <div class="contenedor__formulario contenedor__formulario__conductor">
         <div class="grupo__inputs">
             <div class="contenedor__inputs" id="grupo__nombre">
                 <label for="" class="label">Nombre</label>
@@ -88,8 +88,15 @@ Subir una foto...
             </div>
         </div>
 
-        
-        <hr class="linea__editar__perfil">  
+        <div class="grupo__inputs" id="grupo__password">
+            <div class="contenedor__inputs">
+            <label for="" class="label">Localidad donde vives</label>
+                <input type="text"  name="localidad" 
+                    class="capturarDatos"  placeholder="Localidad"value="<?php  echo $datos__resultado['localidad']?>">
+
+            </div>
+        </div>
+
         <div class="grupo__inputs" id="grupo__password">
             <div class="contenedor__inputs">
             <label for="" class="label">Facebook</label>
@@ -108,9 +115,9 @@ Subir una foto...
             </div>
         </div>
 
-        <div class="grupo__inputs block" id="grupo__password">
+        <div class="grupo__inputs" id="grupo__password">
             <div class="contenedor__inputs">
-            <label for="" class="label">Twiiter</label>
+            <label for="" class="label">Twitter</label>
                 <input type="text"  name="twitter" value="<?php  echo $datos__resultado['twitter']?>"   
                     class="capturarDatos" placeholder="Twitter">
 
@@ -122,7 +129,7 @@ Subir una foto...
             <textarea name="descripcion" rows="3" class="text__area__mensaje" placeholder="Una breve descrpicion de mi perfil"><?php  echo $datos__resultado['quien_soy'] ?></textarea>
         </p>
         <div class="block">
-            <input type="submit" value="ACTUALIZAR  MI CUENTA" class="boton__registro" name="enviar">
+            <input type="submit" value="ACTUALIZAR  MI CUENTA" class="boton__registro boton__perfil__conductor" name="enviar">
         </div>
     </div>
     </div>

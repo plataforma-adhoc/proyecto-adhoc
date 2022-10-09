@@ -238,6 +238,8 @@ export function insert__datos__conductor(){
             body:data
         }).then(respuesta => respuesta.json())
         .then(datos =>{
+
+
            if(datos === 'true'){
             window.location.href = 'dashboard-conductor.php';
 
@@ -245,8 +247,8 @@ export function insert__datos__conductor(){
             Swal.fire({
               background:'#202F36',
                 icon: 'error',
-                title: `${datos}`,
-                footer: 'Esta informacion es importante',
+                title: `Atención`,
+                footer: `${datos}`,
                
               })
            }
@@ -561,3 +563,9 @@ if(span){
 
 
    
+export function recargar__solicitudes__conductores(){
+  let contenedor__dasboard = document.getElementById('contenedor-dashboard');
+  console.log('cargando..')
+ }
+ 
+ setInterval(recargar__solicitudes__conductores,5000)

@@ -9,18 +9,20 @@ cerrar__modal__calificaciones();
 
 
 import {insert__datos__usuario, insert__login__usuario,
-  password__usuario,actualizar__contrasena__usuario,formulario__completar__proceso,modal__cambio__contrasena__usuario} from './insert-datos-usuario.js';
+  password__usuario,actualizar__contrasena__usuario,formulario__completar__proceso,modal__cambio__contrasena__usuario,recargar__conductores__disponibles,getData} from './insert-datos-usuario.js';
 insert__datos__usuario();
 insert__login__usuario();
 password__usuario();
 actualizar__contrasena__usuario();
 formulario__completar__proceso();
 modal__cambio__contrasena__usuario();
+recargar__conductores__disponibles()
+getData();
 
 
 
 import {insert__datos__conductor,insert__login__conductor,password__conductor,
-    insert__datos__edit__perfil__conductor,actualizar__contrasena,metodo__de__pago, modal__cambio__contrasena__conductor,modal__Notificaciones, conectarse,desconectarse} from './insert-datos-conductor.js';
+    insert__datos__edit__perfil__conductor,actualizar__contrasena,metodo__de__pago, modal__cambio__contrasena__conductor,modal__Notificaciones, conectarse,desconectarse,recargar__solicitudes__conductores} from './insert-datos-conductor.js';
 insert__datos__conductor();
 insert__login__conductor();
 password__conductor();
@@ -31,6 +33,7 @@ modal__cambio__contrasena__conductor();
 modal__Notificaciones();
 conectarse()
 desconectarse();
+recargar__solicitudes__conductores()
 
 
 

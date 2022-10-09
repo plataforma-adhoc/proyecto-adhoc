@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Descubre cientos de conductores elegidos, disponibles las 24 horas">
-  <title><?php echo  $titulo="Ad Hoc | Servicios Profesional De Conductor Elegido" ?></title>
+  <meta name="description" content="Descubre cientos de conductores elegidos disponibles las 24 horas">
+  <title><?php echo  $titulo="AdHoc | Servicios  De Conductor Elegido Conduce El Vehiculo De Otra Persona" ?></title>
   <link rel="stylesheet" href="./css/app.css">
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -27,7 +27,7 @@
           <button class="btn__cuenta" id="myBtn">Crear  cuenta</button>
           <label class="btn btn-open" for="nav"><i class="fab fa-creative-commons-nd"></i></label>
           <input type="checkbox" id="nav" class="nav-opener" />
-          <div class="nav">
+          <div class="navegacion">
             <div class="nav-header">
               <div class="nav-title">MENU</div>
               <label class="btn btn-nav" for="nav">
@@ -47,19 +47,19 @@
               <i class="fas fa-user-astronaut"></i>
                   <a href="usuario.php">Crear un registro de usuario</a>
               </li>
-              <li class="nav-link">
+              <!-- <li class="nav-link">
               <i class="fas fa-sign-in-alt"></i>
                 <a href="login-usuario.php">Loguearme como usuario</a>
-              </li>
+              </li> -->
               <li class="nav-link">
               <i class="fas fa-user-astronaut"></i>
                 <a href="conductor.php">Recibir solicitudes</a>
 
               </li>
-              <li class="nav-link">
+              <!-- <li class="nav-link">
               <i class="fas fa-sign-in-alt"></i>
                 <a href="login-conductor.php">Loguearme como conductor</a>
-              </li>
+              </li> -->
             </ul>
             <div class="nav-images">
               <div class="nav-image image-1">

@@ -39,14 +39,14 @@
   display: none;
 }
 
-.nav-opener:checked + .nav {
+.nav-opener:checked + .navegacion {
   width: var(--screen-width);
   height: var(--screen-height);
   opacity: 1;
   transition: opacity 300ms ease-out;
 }
 
-.nav {
+.navegacion {
   z-index: 1;
   width: 0;
   height: 100%;
@@ -143,7 +143,6 @@
 .btn-nav {
   text-align: center;
   background-color: #ef2424;
-  width: 40px;
 }
 
 .btn-nav:active, .btn-nav:focus {
@@ -165,7 +164,7 @@
 }
 
 .image-1 {
-  background-image: url(../img/fondo__conductor__elegido.jpg), linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+  background-image: url(../img/fondo__conductor__elegido.png), linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
 }
 
 .texto__nav__images {
@@ -1032,7 +1031,7 @@ footer .container {
   }
 }
 @media (min-width: 768px) {
-  .nav {
+  .navegacion {
     grid-template-rows: var(--nav-height) auto;
     grid-template-columns: var(--nav-width) auto;
   }
@@ -1549,54 +1548,56 @@ template {
 
 .uno {
   top: 250px;
+  left: 22.5%;
 }
 
 .dos {
   top: 250px;
-  right: 31.5%;
+  right: 59.5%;
 }
 
 .tres {
   top: 360px;
+  left: 22.5%;
 }
 
 .cuatro {
-  right: 31.5%;
+  right: 59.5%;
   top: 360px;
 }
 
 .cinco {
-  right: 51%;
+  left: 22.5%;
   top: 470px;
 }
 
 .seis {
-  right: 31.5%;
+  right: 59.5%;
   top: 475px;
 }
 
 .siete {
-  right: 51.5%;
+  left: 22.5%;
   top: 590px;
 }
 
 .siete__contrasena {
-  right: 31.5%;
+  right: 59.5%;
   top: 590px;
 }
 
 .ocho {
-  right: 31.5%;
+  right: 59.5%;
   top: 590px;
 }
 
 .nueve {
-  right: 31.5%;
+  right: 59.5%;
   top: 700px;
 }
 
 .icono__email__login {
-  right: 35%;
+  right: 59.5%;
   top: 250px;
 }
 
@@ -1624,17 +1625,15 @@ template {
   margin: 8px 0;
   display: inline-block;
   box-sizing: border-box;
-  background: #fff;
-  border: 3px solid transparent;
-  border-radius: 3px;
-  color: black;
+  background: #112240;
+  color: white;
   transition: 0.3s ease all;
+  border: none;
+  border-bottom: 2px solid #212F37;
 }
 
 .capturarDatos:focus {
-  border: 3px solid #008A55;
   outline: none;
-  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.3);
 }
 
 .boton_registro:hover {
@@ -1656,11 +1655,13 @@ template {
 .boton__registro {
   display: inline-block;
   width: 100%;
-  border-radius: 7px;
+  border-radius: 50px;
   border: none;
   padding: 15px;
-  background: #008A55;
+  background: black;
   cursor: pointer;
+  color: white;
+  font-weight: bold;
 }
 
 .enlace_recuperar_contraseña {
@@ -2005,10 +2006,68 @@ template {
   font-size: 25px;
 }
 
+.contenedor__del__buscador {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  background: #AA076B; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #61045F, #AA076B); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #61045F, #AA076B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.buscador {
+  width: 60%;
+  margin: auto;
+}
+
+form.example input[type=text] {
+  padding: 13px;
+  font-size: 17px;
+  float: left;
+  width: 70%;
+  background: #0A192F;
+  border: 0;
+  outline: 0;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+  color: white;
+  background: #000;
+  margin-left: 70px;
+}
+
+form.example button {
+  float: left;
+  width: 10%;
+  padding: 11.5px;
+  background: #0A192F;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  border: 0;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.subtitulo__buscador {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  line-height: 150px;
+}
+
 .titulo__dashboard {
   font-size: 21px;
   color: gray;
-  line-height: 50px;
+  margin-top: 100px;
   font-weight: bold;
 }
 
@@ -2052,7 +2111,7 @@ template {
 }
 
 .datos__del__conductor {
-  color: white;
+  color: black;
   margin-top: -90px;
   margin-left: 10px;
 }
@@ -2077,6 +2136,29 @@ p {
   .card__del__conductor {
     width: 40%;
   }
+  .subtitulo__buscador {
+    font-size: 25px;
+  }
+  .buscador {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .subtitulo__buscador {
+    font-size: 20px;
+  }
+  .buscador {
+    width: 100%;
+    border-radius: 7px;
+  }
+  .buscador button {
+    display: none;
+  }
+  form.example input[type=text] {
+    width: 80%;
+    border-radius: 7px;
+    margin-left: 40px;
+  }
 }
 @media screen and (max-width: 400px) {
   .contenedor__dashboard {
@@ -2084,6 +2166,14 @@ p {
   }
   .card__del__conductor {
     width: 80%;
+  }
+  .subtitulo__buscador {
+    font-size: 15px;
+  }
+  form.example input[type=text] {
+    width: 80%;
+    border-radius: 7px;
+    margin-left: 20px;
   }
 }
 .btn__back {
@@ -2105,16 +2195,58 @@ p {
 }
 
 .contenedor__datos__perfil {
-  margin-top: -400px;
   width: 90%;
   background: #112240;
   border-radius: 7px;
+  height: auto;
+  margin-top: 30px;
 }
 
 .datos__de__perfil {
-  width: 50%;
-  margin: -80px auto 20px auto;
+  width: 90%;
+  margin: -80px auto 20px 20px;
   height: auto;
+}
+
+.otros__datos__de__perfil {
+  width: 80%;
+  margin-top: -500px;
+  margin-left: 12%;
+}
+
+.parrafo__de__mi__cuenta {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background: #0A192F;
+  padding: 12px;
+  border-radius: 7px;
+}
+
+.enlaces__de__mi__cuenta {
+  text-decoration: 0;
+  display: inline-block;
+  color: white;
+  font-size: 17px;
+  background: #112240;
+  border-radius: 7px;
+  padding: 10px;
+  width: 15%;
+  margin: 20px 20px 0 0;
+}
+
+.enlaces__de__mi__cuenta:hover {
+  color: white;
+}
+
+.parrafo__de__mi__cuenta i {
+  font-size: 25px;
+  padding: 0 7px 0 0;
+}
+
+.enlaces__de__mi__cuenta i {
+  font-size: 22px;
+  padding: 0 7px 0 0;
 }
 
 .perfil {
@@ -2293,11 +2425,14 @@ p {
   border: 0;
   height: 50px;
   margin: 5px 0 0 0;
-  border-radius: 5px;
+  border: none;
+  border-bottom: 2px solid #212F37;
+  background: #112240;
+  color: white;
 }
 
 .seleccionar:focus {
-  border: solid 3px #008A55;
+  outline: 0;
 }
 
 .item__info__pagos {
@@ -2319,14 +2454,17 @@ p {
   .btn__back {
     left: 5%;
   }
-  .form-search input {
-    width: 80%;
-    margin: auto;
+  .otros__datos__de__perfil {
+    margin-left: 5%;
+    margin-top: -450px;
+  }
+  .enlaces__de__mi__cuenta {
+    width: 25%;
   }
 }
 @media screen and (max-width: 900px) {
   .contenedor__datos__perfil {
-    height: 800px;
+    height: auto;
   }
   .datos__de__perfil {
     height: auto;
@@ -2336,6 +2474,14 @@ p {
   }
   .item__info__pagos {
     height: 60px;
+  }
+  .otros__datos__de__perfil {
+    margin-left: 5%;
+    margin-top: -450px;
+  }
+  .enlaces__de__mi__cuenta {
+    width: 32%;
+    font-size: 17px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -2370,6 +2516,14 @@ p {
   .parrafo__info__opinion {
     margin: auto;
   }
+  .otros__datos__de__perfil {
+    margin-left: 5%;
+    margin-top: -450px;
+  }
+  .enlaces__de__mi__cuenta {
+    width: 40%;
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 500px) {
   .opinion {
@@ -2380,6 +2534,13 @@ p {
   .datos__de__perfil {
     width: 100%;
     height: 800px;
+  }
+  .otros__datos__de__perfil {
+    margin-top: -450px;
+  }
+  .enlaces__de__mi__cuenta {
+    font-size: 12px;
+    width: 40%;
   }
 }
 .titulo__configuracion {
@@ -2392,6 +2553,12 @@ p {
   color: gray;
   width: 80%;
   line-height: 30px;
+}
+
+.contraseña {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .contenedor__configuracion {
@@ -2458,16 +2625,16 @@ p {
 }
 
 .modal__content {
-  background-color: #000000;
+  background-color: #112240;
   margin: 15% auto;
   padding: 20px;
-  width: 80%;
+  width: 40%;
   border-radius: 10px;
 }
 
 .actualizar__contraseña {
-  background: #000;
   margin-top: -20px;
+  width: 100%;
 }
 
 .parrafo__modal {
@@ -2517,6 +2684,20 @@ p {
   border-radius: 7px;
 }
 
+.formulario__conductor {
+  width: 90%;
+}
+
+.contenedor__formulario__conductor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.boton__perfil__conductor {
+  width: 50%;
+}
+
 .avatar {
   width: 150px;
   height: 150px;
@@ -2562,13 +2743,6 @@ p {
   color: white;
 }
 
-.linea__editar__perfil {
-  border-bottom: 1px;
-  width: 100%;
-  color: white;
-  grid-column: 1/3;
-}
-
 .actualizar {
   padding: 4px;
 }
@@ -2578,7 +2752,14 @@ p {
   min-width: 100%;
   max-height: 100px;
   min-height: 100px;
-  border-radius: 4px;
+  border: none;
+  border-bottom: 2px solid #212F37;
+  background: #112240;
+  color: white;
+}
+
+.text__area__mensaje:focus {
+  outline: 0;
 }
 
 .contenedor__capturara__datos {
@@ -2597,10 +2778,15 @@ p {
 
 @media screen and (max-width: 900px) {
   .editarPerfil {
-    width: 60%;
+    width: 80%;
     margin-top: -500px;
     background: #112240;
     border-radius: 7px;
+  }
+  .contenedor__formulario__conductor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -2608,6 +2794,9 @@ p {
     width: 80%;
     background: #112240;
     border-radius: 7px;
+  }
+  .boton__perfil__conductor {
+    width: 100%;
   }
 }
 @media screen and (max-width: 500px) {
@@ -2803,6 +2992,45 @@ p {
   font-size: 21px;
 }
 
+.headers__dashobard {
+  width: 20%;
+  position: relative;
+}
+
+.btn__cerrar__menu {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.btn__cerrar__menu {
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav-opener:checked + .nav {
+  width: var(--screen-width);
+  height: var(--screen-height);
+  opacity: 1;
+  transition: opacity 300ms ease-out;
+}
+
+.nav {
+  z-index: 1;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 300ms ease-out, width 0ms 300ms, height 0ms 300ms;
+}
+
+.links__dashboard {
+  margin-top: 30px;
+}
+
 .btn__recargar {
   display: inline-block;
   outline: 0;
@@ -2905,7 +3133,7 @@ p {
   display: none;
   position: fixed;
   z-index: 1;
-  left: 75%;
+  left: 60%;
   top: 70px;
   width: 25%;
   height: 100%;
@@ -3099,6 +3327,9 @@ p {
   .contendido__modal__recorrido {
     width: 90%;
   }
+  .headers__dashobard {
+    width: 40%;
+  }
 }
 @media screen and (max-width: 700px) {
   .cards__dashboard {
@@ -3125,6 +3356,9 @@ p {
   }
   .enlace__a__edicion {
     width: 150px;
+  }
+  .headers__dashobard {
+    width: 90%;
   }
 }
 .contenedor__datos__historial {
@@ -4355,6 +4589,10 @@ p {
     top: 70%;
   }
 }
+.info__conductor {
+  margin-top: -400px;
+}
+
 .foto__de__perfil__del__conductor {
   width: 30%;
   height: 100px;
@@ -4418,6 +4656,20 @@ p {
     margin: 20px auto 20px auto;
   }
 }
+.no__resultado {
+  width: 100%;
+}
+
+.imagen__no__resultados {
+  width: 100%;
+  height: 200px;
+}
+
+.subtitulo__sin__resultados {
+  text-align: center;
+  color: white;
+}
+
 body {
   font-family: "Baloo Bhaina 2", cursive;
   background: #0A192F;

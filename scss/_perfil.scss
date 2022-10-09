@@ -18,11 +18,11 @@
 
 
 .contenedor__datos__perfil{
-    margin-top: -400px;
     width: 90%;
     background:$color__menu__dashboard;
     border-radius: 7px;
-
+   height: auto;
+   margin-top: 30px;
 }
 
 
@@ -35,15 +35,56 @@
 //     left: 200px;
 // }
 .datos__de__perfil{
-    width: 50%;
-    margin: -80px auto 20px auto;
+    width: 90%;
+    margin: -80px auto 20px 20px;
    height: auto;
+}
+
+.otros__datos__de__perfil{
+    width: 80%;
+   margin-top: -500px;
+   margin-left: 12%;
+}
+
+.parrafo__de__mi__cuenta{
+    color: white;
+    font-size: $tamaño__parrafos;
+    font-weight: bold;
+    background:$color__fondo;
+    padding: 12px;
+    border-radius: 7px;
+
+}
+
+.enlaces__de__mi__cuenta{
+    text-decoration: 0;
+    display: inline-block;
+    color: white;
+    font-size:17px;
+    background: $color__menu__dashboard;
+    border-radius: 7px;
+    padding: 10px;
+   width: 15%;
+   margin: 20px 20px 0 0;
+}
+
+.enlaces__de__mi__cuenta:hover{
+    color: white;
+}
+.parrafo__de__mi__cuenta i{
+    font-size: 25px;
+    padding:  0 7px 0 0;
+
+}
+
+.enlaces__de__mi__cuenta i{
+    font-size: 22px;
+    padding:  0 7px 0 0;
 }
 
 .perfil{
     width: 100%;
     
-
 }
 
 .imagen__de_perfil{
@@ -84,6 +125,7 @@
     transition: ease-in-out 0.5s;
      opacity: 0.9;
 }
+
 
 .fa-facebook{
 color: #4267B2;
@@ -236,11 +278,14 @@ height: auto;
     border: 0;
     height: 50px;
     margin: 5px  0 0 0;
-    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid $color__dark;
+    background:$color__formularios;
+    color: white;
 }
 
 .seleccionar:focus{
- border: solid 3px $color__verde;
+    outline: 0;
 }
 
 .item__info__pagos{
@@ -276,16 +321,21 @@ height: auto;
     .btn__back{
         left: 5%;
       } 
-      .form-search input{
-        width: 80%;
-        margin: auto;
-      }  
+    
+      .otros__datos__de__perfil{
+        margin-left: 5%;
+        margin-top: -450px;
+    }
+    
+    .enlaces__de__mi__cuenta{
+        width: 25%;
+    }  
      
 }
 
 @media screen and (max-width:900px) {
 .contenedor__datos__perfil{
-    height: 800px;
+    height:auto;
 }
 .datos__de__perfil{
     height: auto;
@@ -296,8 +346,15 @@ height: auto;
 .item__info__pagos{
     height: 60px;
 }
+.otros__datos__de__perfil{
+    margin-left: 5%;
+    margin-top: -450px;
+}
 
-   
+.enlaces__de__mi__cuenta{
+    width: 32%;
+    font-size: 17px;
+} 
 }
 
 
@@ -338,6 +395,15 @@ height: auto;
     .parrafo__info__opinion{
         margin: auto;
     }
+    .otros__datos__de__perfil{
+        margin-left: 5%;
+        margin-top: -450px;
+    }
+
+    .enlaces__de__mi__cuenta{
+        width: 40%;
+        font-size: 15px;
+    }
     
  }
  
@@ -352,4 +418,12 @@ height: auto;
         width: 100%;
         height: 800px;
     }
+    .otros__datos__de__perfil{
+        margin-top: -450px;
+    }
+   .enlaces__de__mi__cuenta{
+    font-size: 12px;
+    width: 40%;
+   }
+   
  }

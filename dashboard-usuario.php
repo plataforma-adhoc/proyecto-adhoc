@@ -13,9 +13,23 @@ include'conexion-db-accent.php';
 
 <div class="container contenedor__dashboard">
     <h2 class="vista__nombre__usuario"><i class="fas fa-user-astronaut"></i> Hola <strong> <?php echo $datos__resultado['nombre_usuario'] ?></strong></h2>
+    <br><br>
+    <div class="contenedor__del__buscador">
+      <h2 class="subtitulo__buscador">¿Que conductor buscaremos hoy?</h2>
+        <div class="buscador">
+        <form class="example">
+        <input type="text" placeholder="Buscar..." name="search" id="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+</div>
+  </div>
+    
     <p class="titulo__dashboard">Conductores disponibles</p>
 
-    <div class="datos__perfiles__conductor">
+    <div id="insertar-conductores"></div>
+
+    <div class="datos__perfiles__conductor" id="conductores-disponibles">
       <!-- <div id="insert-conductores-disponibles" class="insert__datos__de__conductor"></div> -->
       <?php 
       $extraer__conductores__disponibles = "SELECT * FROM conductores WHERE status = 'disponible'";
@@ -35,11 +49,12 @@ include'conexion-db-accent.php';
     </div>
     
       <?php  } ?>
-     <?php } ?>
+      <?php  } ?>
+
 
 </div>
 </div>
-<?php   if($datos__resultado['avatar'] === 'avatar__defecto.svg'){  ?>
+<?php   if($datos__resultado['avatar'] === 'avatar__defecto.png'){  ?>
 <div class="container card__perfil__sin__editar datos__sin__editar__usuario" id="ventana-perfil">
 <a href="#" class="cerrar__ventana" id="cerrar-ventana">X</a>
 <div class="contenido">

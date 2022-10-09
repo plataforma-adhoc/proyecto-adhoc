@@ -18,6 +18,7 @@ $resultado__datos = mysqli_fetch_array($ejecutar__consulta__conductor);
         $telefono = $_POST['telefono'] ? $_POST['telefono']: '';
         $licencia = $_POST['licencia'] ? $_POST['licencia']: '';
         $categoria= $_POST['categoria'] ? $_POST['categoria']: '';
+        $localidad = $_POST['localidad'] ? $_POST['localidad']: '';
         $facebook = $_POST['facebook'] ? $_POST['facebook']: '';
         $instagram = $_POST['instagram'] ? $_POST['instagram']: '';
         $twitter = $_POST['twitter'] ? $_POST['twitter']: '';
@@ -37,7 +38,7 @@ $resultado__datos = mysqli_fetch_array($ejecutar__consulta__conductor);
         }
 
             $actualizar__datos  = "UPDATE  conductores SET 	nombre_conductor ='$nombre_conductor',primer_apellido = '$primer__apellido',segundo_apellido ='$segundo__apellido',
-            email ='$email', numero_documento	 = '$documento',numero_telefono = '$telefono',numero_licencia = '$licencia',categoria_licencia ='$categoria',
+            email ='$email', numero_documento	 = '$documento',numero_telefono = '$telefono',numero_licencia = '$licencia',categoria_licencia ='$categoria',localidad = '$localidad',
             avatar = '$nombre__archivo',facebook ='$facebook',instagram = '$instagram',twitter='$twitter', quien_soy = '$descripcion' WHERE id_conductor = '$id__conductor'";
             $ejecutar__consulta = mysqli_query($conexion__db__accent,$actualizar__datos);
 

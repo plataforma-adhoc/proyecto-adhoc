@@ -21,7 +21,7 @@ while($fila__resultado__saldo = mysqli_fetch_array($resultado__seleccion__saldo)
 
 }?>
  
-<div class="container contenedor__dashboard">
+<div class="container contenedor__dashboard" id="contenedor-dashboard">
   <br><br>
     <h2 class="vista__nombre__usuario"><i class="fas fa-user-astronaut"></i> Hola <strong><?php echo $datos__resultado['nombre_conductor'] ?></strong></h2>
     <h2 class="titulo__dashboard"><i class="fas fa-sitemap"></i> Estadisticas principales</h2>
@@ -132,7 +132,7 @@ while($fila__resultado__saldo = mysqli_fetch_array($resultado__seleccion__saldo)
 </div>
 
 
-<?php   if($datos__resultado['avatar'] === 'avatar__defecto__conductor.png' || $datos__resultado['quien_soy'] === NULL){  ?>
+<?php   if($datos__resultado['avatar'] === 'avatar__defecto.png' || $datos__resultado['quien_soy'] === NULL){  ?>
 <div class="container card__perfil__sin__editar" id="ventana-perfil">
 <a href="#" class="cerrar__ventana" id="cerrar-ventana">X</a>
 <div class="contenido">

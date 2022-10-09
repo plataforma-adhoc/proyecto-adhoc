@@ -11,6 +11,45 @@ color:$color__gris;
 font-size: $tamaño__fuente__subtitulo;
 }
 
+.headers__dashobard{
+  width: 20%;
+  position: relative;
+}
+.btn__cerrar__menu{
+  position: absolute;
+   right: 10px;
+   top: 10px;
+}
+
+.btn__cerrar__menu{
+  text-align: center;
+  cursor: pointer;
+}
+
+
+
+.nav-opener:checked + .nav {
+  width: var(--screen-width);
+  height: var(--screen-height);
+  opacity: 1;
+  transition: opacity 300ms ease-out;
+}
+
+.nav {
+  z-index: 1;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  position:fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 300ms ease-out, width 0ms 300ms, height 0ms 300ms;
+}
+
+.links__dashboard{
+  margin-top: 30px;
+}
 
 .btn__recargar{
   display: inline-block;
@@ -116,7 +155,7 @@ text-align: center;
     display: none; 
     position: fixed;
     z-index: 1; 
-    left: 75%;
+    left: 60%;
     top: 70px;
     width: 25%;
     height: 100%; 
@@ -305,6 +344,8 @@ width: 150px;
 .enlace__a__edicion:hover{
   opacity: 0.5;
   color: white;
+
+
 }
 @media screen and (max-width:1000px) {
   .menu__dashborad{
@@ -319,7 +360,17 @@ width: 150px;
     width: 90%;
   }
   
+  .headers__dashobard{
+    width: 40%;
+  }
 }
+
+
+// @media screen and (max-width:900px) {
+//    .headers__dashobard{
+//     width: 40%;
+//    }
+// }
 
 
 @media screen and (max-width:700px){
@@ -355,6 +406,9 @@ width: 150px;
 
  .enlace__a__edicion{
   width: 150px;
+ }
+ .headers__dashobard{
+  width: 90%;
  }
   }
   

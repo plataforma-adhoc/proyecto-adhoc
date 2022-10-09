@@ -57,73 +57,64 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
             <label class="btn btn-open" for="nav"><i class="fab fa-creative-commons-nd"></i></label>
             <input type="checkbox" id="nav" class="nav-opener" />
             <div class="nav">
-              <div class="nav-header">
-                <div class="nav-title">MENU</div>
-                <label class="btn btn-nav" for="nav">
+              <div class="nav-header headers__dashobard">   
+                <label class="btn__cerrar__menu btn-nav" for="nav">
                   <svg style="width: 36px; height: 36px" viewBox="0 0 24 24">
                     <path fill="currentColor"
                       d="M20 6.91L17.09 4L12 9.09L6.91 4L4 6.91L9.09 12L4 17.09L6.91 20L12 14.91L17.09 20L20 17.09L14.91 12L20 6.91Z" />
                   </svg>
                 </label>
+                <ul class="nav-links links__dashboard">
+                  <li class="nav-link">
+                    <a href="perfil-usuario.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>"
+                      class="enlaces__menu__home">
+                      <img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil">
+                    </a>
+                    <div class="item__nombre"><?php echo $datos__resultado['nombre_usuario'] ?></div>
+  
+  
+                  </li>
+                  <li class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <a href="dashboard-usuario.php">Home</a>
+  
+                  </li>
+                  <li class="nav-link">
+                    <i class="fas fa-history"></i>
+                    <a href="historial-usuario.php?idu=<?php echo $datos__resultado['id_usuario'] ?>"
+                      class="enlaces__menu__home">Mi historial</a>
+                  </li>
+                  <!-- <li class="nav-link">
+                  <i class="fas fa-briefcase"></i>
+                    <a href="servicios.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
+                      Servicios</a>
+  
+                  </li> -->
+                  <li class="nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <a href="configuracion-usuario.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
+                      Configuracion</a>
+  
+                  </li>
+                  <li class="nav-link">
+                  <i class="fas fa-mail-bulk"></i>
+                    <a href="ayudanos-a-mejorar.php">
+                      Ayudanos a mejorar</a>
+  
+                  </li>
+                
+                  <li class="nav-link">
+                    <i class="fas fa-power-off"></i>
+                    <a href="desconectar-usuario.php?id=<?php  echo $datos__resultado['id_usuario'] ?>">Cerrar
+                      sesión</a>
+                  </li>
+                </ul>
               </div>
-              <ul class="nav-links">
-                <li class="nav-link">
-                  <a href="perfil-usuario.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>"
-                    class="enlaces__menu__home">
-                    <img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil">
-                  </a>
-                  <div class="item__nombre"><?php echo $datos__resultado['nombre_usuario'] ?></div>
 
-
-                </li>
-                <li class="nav-link">
-                  <i class="fas fa-home"></i>
-                  <a href="dashboard-usuario.php">Home</a>
-
-                </li>
-                <li class="nav-link">
-                  <i class="fas fa-history"></i>
-                  <a href="historial-usuario.php?idu=<?php echo $datos__resultado['id_usuario'] ?>"
-                    class="enlaces__menu__home">Mi historial</a>
-                </li>
-                <!-- <li class="nav-link">
-                <i class="fas fa-briefcase"></i>
-                  <a href="servicios.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
-                    Servicios</a>
-
-                </li> -->
-                <li class="nav-link">
-                  <i class="fas fa-cogs"></i>
-                  <a href="configuracion-usuario.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
-                    Configuracion</a>
-
-                </li>
-                <li class="nav-link">
-                <i class="fas fa-mail-bulk"></i>
-                  <a href="ayudanos-a-mejorar.php">
-                    Ayudanos a mejorar</a>
-
-                </li>
-              
-                <li class="nav-link">
-                  <i class="fas fa-power-off"></i>
-                  <a href="desconectar-usuario.php?id=<?php  echo $datos__resultado['id_usuario'] ?>">Cerrar
-                    sesión</a>
-                </li>
-              </ul>
-
-            
-
-              <div class="nav-images">
-                <div class="nav-image image-1">
-                  <!-- <h2 class="texto__nav__images">Solicita tu conductor elegido desde <span class="precio__hora">$ 25.000 COP</span>  hora, y un conductor elegido llegara a la puerta de tu casa</h2> -->
-
-                </div>
-              </div>
             </div>
           </div>
         </div>
-               </div>
+   </div>
               
         </nav>
     </header>

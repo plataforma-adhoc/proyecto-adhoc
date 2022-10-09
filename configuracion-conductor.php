@@ -13,6 +13,7 @@ if($id =! $id || $id ===""){
     <p class="parrafo__configuracion">Elige una de las siguientes opciones para continuar, recuerda que si decides eliminar tu cuenta se perderan todos los datos, incluido
        el saldo que tengas en nuestro sistema .
     </p>
+    <p class="contraseña">Contraseña</p>
     <div class="item__configuracion">
         <a href="#" class="card__configuracion cambiar__contraseña animate__animated  animate__bounceInDown" id="card-cambiar-contrasena">
             <div>

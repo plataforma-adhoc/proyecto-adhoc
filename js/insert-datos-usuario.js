@@ -194,8 +194,8 @@
             Swal.fire({
               background:'#202F36',
                 icon: 'error',
-                title: `${datos}`,
-                footer: 'Esta informacion es importante',
+                title: 'Atención',
+                footer: `${datos}`,
                
               })
            }
@@ -391,43 +391,7 @@ export  function actualizar__contrasena__usuario(){
   }
 
 
-//   export function obtener__conductores__disponibles(){
-//     let insert__conductores__disponibles = document.getElementById('insert-conductores-disponibles')
-//     if(insert__conductores__disponibles){
 
-//       fetch('obtener-conductores-disponibles.php',{
-//        method:'GET'
-//       }).then(respuesta => respuesta.json())
-//       .then(data =>{
-//     let  str = "";
-//     data.forEach((item =>{
-//       insert__conductores__disponibles.innerHTML = "";
-//       console.log(item)
-//       str += `
-//       <div class="card__del__conductor">
-//       <a href="info-conductor.php?idc=${item.id_conductor}"class="card__perfiles__dashboard">
-//     <img src="upload/${item.avatar}" alt="Avatar" class="imagen__del__conductor">
-//    <div class="datos__del__conductor">
-//     <br>
-//     <h4><b>${item.nombre_conductor}</b></h4>
-//     <p>${item.numero_documento} <br> Disponible</p>    
-//     <p> </p>
-//   </div>
-// </a> 
-// </div>
-      
-//       ` 
-//  insert__conductores__disponibles.innerHTML = str
-//     }))
-//        })
-       
-//     }
-      
-//   }
-//   setInterval(obtener__conductores__disponibles,20000)
-
-       
-  
 
   export function modal__cambio__contrasena__usuario(){
     var modal = document.getElementById("myModalCambioContrasena");
@@ -455,5 +419,28 @@ export  function actualizar__contrasena__usuario(){
 
    
 
+export function recargar__conductores__disponibles(){
+ let conductores__disponibles = document.getElementById('conductores-disponibles');
+ console.log('cargando..')
+}
 
-    
+setInterval(recargar__conductores__disponibles,5000)
+   
+
+
+export function getData(){
+
+document.getElementById('search').addEventListener('keyup',getData)
+  let search = document.getElementById('search').value
+  let insertar__conductores = document.getElementById('conductores-disponibles');
+ let form__data = new FormData();
+ form__data.append('search',search)
+
+ fetch(url__servidor+'load.php',{
+  method:'POST',
+  body:form__data
+ }).then(respuesta => respuesta.json())
+ .then(data =>{
+  insertar__conductores.innerHTML = data
+ }).catch(err => console.log(err))
+}

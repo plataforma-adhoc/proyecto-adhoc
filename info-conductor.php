@@ -13,7 +13,7 @@ $datos__resultado__conductor = mysqli_fetch_array($ejecutar__consulta);
 <div class="contenedor__subtitulo__ad__panel">
     <h2 class="subtitulo__ad__panel">Informacion del conductor</h2>
 </div>
-<div class="container contenedor__datos__perfil">
+<div class="container contenedor__datos__perfil info__conductor">
 <div class="datos__de__perfil">
 <div class="card__solicitudes perfil">
      <div class="img">

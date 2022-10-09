@@ -18,8 +18,8 @@ $numero__telefono =  mysqli_real_escape_string($conexion__db__accent,$_POST['tel
 $contraseña = password_hash($_POST['contrasena'] ? $_POST['contrasena'] : '',PASSWORD_BCRYPT);
 
 
-if($nombre__usuario ==="" || $primer__apellido ==="" || $segundo__apellido ==="" || $documento ==="" || $numero__telefono ==="" || $contraseña ==="" ){
-  echo json_encode('No podemos procesar tu solicidtud por falta de datos');
+if($nombre__usuario ==="" || $primer__apellido ==="" || $segundo__apellido ==="" || !is_numeric($documento) || $documento ==="" || !is_numeric($numero__telefono) || $numero__telefono ==="" || $contraseña ==="" ){
+  echo json_encode('Los campos estan vacios o  hay datos incorrectos');
 }else{
   $consulta__usuario__registrado = "SELECT *  FROM usuarios   WHERE email = '$email' LIMIT 1";
   $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__usuario__registrado);

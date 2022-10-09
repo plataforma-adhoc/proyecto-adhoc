@@ -1,4 +1,4 @@
-<?php  include'layout/nabvar.php' ?>
+<?php  include'layout/nabvar.php'?>
 <div class="contenedor__del__formulario">
 <h2 class="subtitulo__formularios">Crea una cuenta gratis</h2>
     <form class="formulario__registro" id="formulario-registro-conductor">

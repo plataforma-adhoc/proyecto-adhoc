@@ -27,7 +27,7 @@
 		</div>
         <div class="slider slider__2"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
+            <img src="img/punto-de-recogida.png" alt="punto de recogida" class="icono__conductor">
             </div>
             <div>
                 <h3>2 Horas de servicio de conductor elegido</h3>
@@ -36,7 +36,7 @@
 		</div>
         <div class="slider slider__3"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">      
+            <img src="img/abordando__vehiculo.png" alt="icono, abriendo las puertas del vehiculo" class="icono__conductor">      
             </div>
             <div>
                 <h3>3 Horas de servicio de conductor elegido</h3>
@@ -45,7 +45,7 @@
 		</div>
         <div class="slider slider__4"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
+            <img src="img/telefono.png" alt="telefono celular window mobile" class="icono__conductor">
             </div>
             <div>
                 <h3>4 Horas de servicio de conductor elegido</h3>
@@ -54,7 +54,7 @@
 		</div>
         <div class="slider slider__5"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
+            <img src="img/reloj.png" alt="icono reloj apple watch" class="icono__conductor">
             </div>
             <div>
                 <h3>5 Horas de servicio de conductor elegido</h3>
@@ -63,7 +63,7 @@
 		</div>
         <div class="slider slider__6"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
+            <img src="img/vehiculo.png" alt="icono vehiculo" class="icono__conductor">
             </div>
             <div>
                 <h3>6 Horas de servicio de conductor elegido</h3>
@@ -72,7 +72,7 @@
 		</div>
         <div class="slider slider__7"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
+            <img src="img/bebida.png" alt="copa de vino" class="icono__conductor">
             </div>
             <div>
                 <h3>7 Horas de servicio de conductor elegido</h3>
@@ -81,7 +81,7 @@
 		</div>
         <div class="slider slider__8"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
+            <img src="img/volante.png" alt="volante de vehiculo " class="icono__conductor">
             </div>
             <div>
                 <h3>8 Horas de servicio de conductor elegido</h3>
@@ -90,7 +90,7 @@
 		</div>
         <div class="slider slider__9"data-aos="zoom-in">
             <div>
-                <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
+                <img src="img/computadora.png" alt="computador de mesa" class="icono__conductor">
             </div>
             <div>
             <h3>9 Horas de servicio de conductor elegido</h3>
@@ -99,7 +99,7 @@
 		</div>
         <div class="slider slider__10"data-aos="zoom-in">
             <div>
-            <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
+            <img src="img/baile.png" alt="icono bailando" class="icono__conductor">
             </div>
             <div>
                 <h3>10 Horas de servicio de conductor elegido</h3>

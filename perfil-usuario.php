@@ -18,16 +18,26 @@ if(mysqli_num_rows($resultado__consulta__datos__conductor) > 0){
 ?>
     <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
     <div class="contenedor__subtitulo__ad__panel">
-    <h2 class="subtitulo__ad__panel">Mi perfil</h2>
+    <h2 class="subtitulo__ad__panel">Mi Cuenta</h2>
 </div>
+<div class="otros__datos__de__perfil">
+  
+  <a href="desconectar-usuario.php?id=<?php  echo $datos__resultado__conductor['id_conductor'] ?>" class="enlaces__de__mi__cuenta"><i class="fas fa-sign-out-alt"></i></i>Cerrar mi sesion</a>
+            <a href="configuracion-usuario.php?idu=<?php echo $datos__resultado__conductor['id_conductor'] ?>" class="enlaces__de__mi__cuenta"><i class="fas fa-lock"></i> Acceso y seguridad</a>
+
+    </div>
     <div class="container contenedor__datos__perfil"> 
 <div class="datos__de__perfil">
+
 <div class="card__solicitudes perfil">
      <div class="img">
        <img src="upload/<?php echo $datos__resultado['avatar'] ?>" class="imagen__de_perfil">
     </div>
     <div class="infos">
       <div class="name">
+      <div>
+            <p class="parrafo__de__mi__cuenta"><i class="fas fa-user-circle"></i> Mi cuenta</p>
+        </div>
    <h2>Nombre : <?php echo $datos__resultado['nombre_usuario']  ?></h2>
    <h4> Apellidos : <?php echo $datos__resultado['primer_apellido'] ?> <?php echo $datos__resultado['segundo_apellido'] ?></h4>
    <h2>Biografia detallada</h2>
@@ -60,7 +70,7 @@ if(mysqli_num_rows($resultado__consulta__datos__conductor) > 0){
   </ul>
 
   <div class="links">
-     <a href="edit-perfil-usuario.php?id=<?php echo $datos__resultado['id_usuario'] ?>" class="follow">Editar mi perfil <i class="fas fa-long-arrow-alt-right"></i></a>
+     <a href="edit-perfil-usuario.php?id=<?php echo $datos__resultado['id_usuario'] ?>" class="follow">Editar mi cuenta <i class="fas fa-long-arrow-alt-right"></i></a>
 
   </div>
 

@@ -7,6 +7,23 @@
     background:$color__menu__dashboard;
     border-radius: 7px
 }
+
+.formulario__conductor{
+  width: 90%;
+}
+
+.contenedor__formulario__conductor{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.boton__perfil__conductor{
+  width: 50%;
+}
+
+
+
 .avatar{
     width: 150px;
     height: 150px;
@@ -52,12 +69,8 @@
 .textos__label{
     color: white;
 }
-.linea__editar__perfil{
-   border-bottom: 1px;
-    width: 100%;
-    color: white;
-    grid-column: 1 / 3;  
-}
+
+
 .actualizar{
     padding: 4px;
 }
@@ -66,8 +79,15 @@
     min-width: 100%;
     max-height: 100px;
     min-height: 100px;
-    border-radius: 4px;
+    border: none;
+    border-bottom: 2px solid $color__dark;
+    background:$color__formularios;
+    color: white;
 }
+.text__area__mensaje:focus{
+  outline: 0;
+}
+
 .contenedor__capturara__datos{
     display: grid;
     grid-template-columns: 1fr 1fr; 
@@ -81,14 +101,20 @@
  color:white;
 }
 
+
 @media screen and (max-width:900px){
     .editarPerfil{
-    width: 60%;
+    width: 80%;
     margin-top: -500px;
     background:$color__formularios;
     border-radius: 7px;
   }
- 
+
+ .contenedor__formulario__conductor{
+  display: grid;
+  grid-template-columns: 1fr  1fr;
+  gap: 10px;
+ }
       }
 
 
@@ -97,6 +123,9 @@
         width: 80%;
         background:$color__formularios;
         border-radius: 7px;
+      }
+      .boton__perfil__conductor{
+        width: 100%;
       }
      
           }
@@ -107,7 +136,7 @@
             background:$color__formularios;
             border-radius: 7px;
           }
-         
+          
         }
 
          

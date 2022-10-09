@@ -10,6 +10,12 @@
     line-height: 30px;
 }
 
+.contraseña{
+  color: white;
+  font-size: $tamaño__parrafos;
+  font-weight: bold;
+}
+
 .contenedor__configuracion{
     height: auto;
     margin-top: -600px;
@@ -77,16 +83,16 @@
   
  
   .modal__content{
-    background-color:$color__negro;
+    background-color:$color__formularios;
     margin: 15% auto; 
     padding: 20px;
-    width: 80%;
+    width: 40%;
     border-radius: 10px;
   }
 
   .actualizar__contraseña{
-    background: #000;
     margin-top: -20px;
+    width: 100%;
   }
   .parrafo__modal{
     text-align: center;

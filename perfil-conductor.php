@@ -10,12 +10,6 @@ if($id__conductor ===""){
 
 
 
-$consulta__datos__usuario = "SELECT *  FROM usuarios ";
-$resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
-if(mysqli_num_rows($resultado__consulta) > 0){
-  $datos__resultado = mysqli_fetch_array($resultado__consulta); 
-
- }
 
 $consulta__datos__conductor = "SELECT *  FROM conductores   WHERE id_conductor = '{$_SESSION['id_conductor']}' LIMIT 1";
 $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__conductor);
@@ -26,16 +20,24 @@ if(mysqli_num_rows($resultado__consulta) > 0){
  }?>
     <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
 <div class="contenedor__subtitulo__ad__panel">
-    <h2 class="subtitulo__ad__panel">Mi perfil</h2>
+    <h2 class="subtitulo__ad__panel">Mi Cuenta</h2>
 </div>
+<div class="otros__datos__de__perfil">
+    <a href="desconectar-conductor.php?id=<?php  echo $datos__resultado__conductor['id_conductor'] ?>" class="enlaces__de__mi__cuenta"><i class="fas fa-sign-out-alt"></i></i>Cerrar mi sesion</a>
+    <a href="configuracion-conductor.php?id=<?php echo $datos__resultado__conductor['id_conductor'] ?>" class="enlaces__de__mi__cuenta"><i class="fas fa-lock"></i> Acceso y seguridad</a>
+    
+    </div>
 <div class="container contenedor__datos__perfil">
-<div class="datos__de__perfil">
+    <div class="datos__de__perfil">  
 <div class="card__solicitudes perfil">
      <div class="img">
        <img src="upload/<?php echo $datos__resultado__conductor['avatar'] ?>" class="imagen__de_perfil">
     </div>
-    <div class="infos">
+    <div class="infos info__perfil">
       <div class="name">
+      <div>
+            <p class="parrafo__de__mi__cuenta"><i class="fas fa-user-circle"></i> Mi cuenta</p>
+        </div>
    <h2>Nombre : <?php echo $datos__resultado__conductor['nombre_conductor']  ?></h2>
    <h4>Apellidos : <?php echo $datos__resultado__conductor['primer_apellido'] ?> <?php echo $datos__resultado__conductor['segundo_apellido'] ?></h4>
    <h2>Biografia detallada</h2>
@@ -45,6 +47,9 @@ if(mysqli_num_rows($resultado__consulta) > 0){
    <h4>Licencia : <?php echo $datos__resultado__conductor['numero_licencia'] ?></h4>
    <h4>Categoria : <?php echo $datos__resultado__conductor['categoria_licencia'] ?></h4> 
    <h4>Miembro desde : <?php echo  date("d-m-Y",strtotime($datos__resultado__conductor['fecha_de_registro'])) ?></h4> 
+   <?php    if($datos__resultado__conductor['localidad'] != NULL){   ?>
+   <h4>Lugar de ubicación: <?php echo $datos__resultado__conductor['localidad'] ?>, Bogota - Cundinamarca</h4>
+<?php } ?>
 
    <?php    if($datos__resultado__conductor['quien_soy'] != NULL){   ?>
    <h4><?php echo $datos__resultado__conductor['quien_soy'] ?></h4>
@@ -74,25 +79,31 @@ if(mysqli_num_rows($resultado__consulta) > 0){
   </ul>
 
   <div class="links">
-     <a href="edit-perfil-conductor.php?id=<?php echo $datos__resultado__conductor['id_conductor'] ?>" class="follow">Editar mi perfil <i class="fas fa-long-arrow-alt-right"></i></a>
+     <a href="edit-perfil-conductor.php?id=<?php echo $datos__resultado__conductor['id_conductor'] ?>" class="follow">Editar mi cuenta <i class="fas fa-long-arrow-alt-right"></i></a>
 
   </div>
 
 </div>
 </div>
 </div>
+
+
+</div>
 </div> 
+<div>
 </div>
 <div class="container contenedor__formulario__datos__de_pago">
     <p class="titulo__opinion">Metodo de pago</p>
     <p class="parrafo__metodo__pago">Configura tu metodo de pago a continuacion</p>
     <form class="formulario__registro metodo__de__pago" id="formulario-metodo-pago">
     <div class="contenedor__formulario">
-        
-        <select name="opciones" id=""class="grupo__inputs seleccionar">
-            <option value="Nequi">Nequi</option>
-            <option value="daviplata">daviplata</option>
-        </select>
+        <div class="grupo__inputs">
+            <select name="opciones" id=""class="seleccionar capturarDatos">
+                <option value="Nequi" class="select">Nequi</option>
+                <option value="daviplata"  class="select">daviplata</option>
+            </select>
+
+        </div>
 
         <div class="grupo__inputs" id="grupo__email">
             <div class="contenedor__inputs">
