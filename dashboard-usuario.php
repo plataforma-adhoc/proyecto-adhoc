@@ -15,12 +15,12 @@ include'conexion-db-accent.php';
     <h2 class="vista__nombre__usuario"><i class="fas fa-user-astronaut"></i> Hola <strong> <?php echo $datos__resultado['nombre_usuario'] ?></strong></h2>
     <br><br>
     <div class="contenedor__del__buscador">
-      <h2 class="subtitulo__buscador">¿Que conductor buscaremos hoy?</h2>
+      <h2 class="subtitulo__buscador">Bienvenido</h2>
         <div class="buscador">
-        <form class="example">
+        <!-- <form class="example">
         <input type="text" placeholder="Buscar..." name="campo" id="campo">
         <button type="submit"><i class="fa fa-search"></i></button>
-</form>
+</form> -->
 
 </div>
   </div>
@@ -91,6 +91,7 @@ if($estado__recorrido['estado_recorrido'] ==='Recorrido terminado') {?>
 </div>
 
 <?php  }  ?> -->
+
 
 
 <?php include'layout/footer-home.php' ?>
