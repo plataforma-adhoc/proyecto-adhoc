@@ -52,8 +52,8 @@ if($nombre__conductor ==="" || $primer__apellido ==="" || $segundo__apellido ===
       
       $contenido__mensaje = ' <h1>Hola '.$fila__datos['nombre_conductor'] .'<br> </h1>';
       $contenido__mensaje .='<p> Parece que acabas de unirte a Adhoc </p>';
-      $contenido__mensaje .='<p> Te damos la bienvenida a nuestra de parte de nuestro equipo </p>';
-      $contenido__mensaje .='<p>Espero que   disfrutes usando nuestra plataforma <br></p>';
+      $contenido__mensaje .='<p> Te damos la bienvenida a nuestra plataforma </p>';
+      $contenido__mensaje .='<p>Esperamos  que la  disfrutes  <br></p>';
       $contenido__mensaje .='<p>Equipo de Adhoc  <br></p>';
      
     
@@ -70,7 +70,7 @@ if($nombre__conductor ==="" || $primer__apellido ==="" || $segundo__apellido ===
           $mail->Port       = 587;  
                                  
           //Recipients
-          $mail->setFrom('soporteadhoc@outlook.com', 'Ad Hoc ');
+          $mail->setFrom('soporteadhoc@outlook.com', 'AdHoc ');
           $mail->addAddress($email,$fila__datos['nombre_conductor'] );                  
           // $mail->addAttachment('./img/logo__accent.png');
       

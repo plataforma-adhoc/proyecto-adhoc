@@ -5,7 +5,7 @@ $consulta__datos = "SELECT *  FROM usuarios   WHERE id_usuario = '{$_SESSION['id
 $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
   $datos__resultado = mysqli_fetch_array($resultado__consulta); 
 ?>
-    <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
+    <!-- <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button> -->
 
 <form action="insert-edit-perfil-usuario.php" class="formulario editarPerfil" enctype="multipart/form-data" method="POST">
     <br><br>

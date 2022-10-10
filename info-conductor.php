@@ -9,7 +9,7 @@ $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos__condu
 $datos__resultado__conductor = mysqli_fetch_array($ejecutar__consulta);
 
 ?>
-<button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
+<!-- <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button> -->
 <div class="contenedor__subtitulo__ad__panel">
     <h2 class="subtitulo__ad__panel">Informacion del conductor</h2>
 </div>
@@ -21,19 +21,19 @@ $datos__resultado__conductor = mysqli_fetch_array($ejecutar__consulta);
     </div>
     <div class="infos">
       <div class="name">
-   <h2><?php echo $datos__resultado__conductor['nombre_conductor']  ?></h2>
-   <h4><?php echo $datos__resultado__conductor['primer_apellido'] ?> <?php echo $datos__resultado__conductor['segundo_apellido'] ?></h4>
+   <h2>Nombre : <?php echo $datos__resultado__conductor['nombre_conductor']  ?></h2>
+   <h4>Apellidos : <?php echo $datos__resultado__conductor['primer_apellido'] ?> <?php echo $datos__resultado__conductor['segundo_apellido'] ?></h4>
    <h2>Biografia detallada</h2>
-   <h4><?php echo $datos__resultado__conductor['email'] ?></h4>
-   <h4><?php echo $datos__resultado__conductor['numero_documento'] ?></h4>
-   <h4><?php echo $datos__resultado__conductor['numero_telefono'] ?></h4>
-   <h4><?php echo $datos__resultado__conductor['numero_licencia'] ?></h4>
-   <h4><?php echo $datos__resultado__conductor['categoria_licencia'] ?></h4> 
-   <h4><?php echo  date("d-m-Y",strtotime($datos__resultado__conductor['fecha_de_registro'])) ?></h4> 
+   <h4>Numero documento : <?php echo $datos__resultado__conductor['numero_documento'] ?></h4>
+   <h4>Numero telefono : <?php echo $datos__resultado__conductor['numero_telefono'] ?></h4>
+   <h4>Numero licencia : <?php echo $datos__resultado__conductor['numero_licencia'] ?></h4>
+   <h4>Categoria licencia : <?php echo $datos__resultado__conductor['categoria_licencia'] ?></h4>  
    <?php    if($datos__resultado__conductor['quien_soy'] != NULL){   ?>
-   <h4><?php echo $datos__resultado__conductor['quien_soy'] ?></h4>
+   <h4>Quien soy : <?php echo $datos__resultado__conductor['quien_soy'] ?></h4>
 <?php } ?>
-
+<?php    if($datos__resultado__conductor['localidad'] != NULL){   ?>
+   <h4>Mi ubicacion : <?php echo $datos__resultado__conductor['localidad'] ?></h4>
+<?php } ?>
   </div>
 
   <p class="text">

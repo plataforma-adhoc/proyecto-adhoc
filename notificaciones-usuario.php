@@ -9,7 +9,7 @@ $ejecutar__consulta = mysqli_query($conexion__db__accent,$actualizar__notificaci
 $consulta__comentarios = "SELECT * FROM notificaciones__conductor WHERE id_usuario = '{$_SESSION['id_usuario']}'   ORDER BY id_notificacion DESC LIMIT 5";
 $ejecutar__consulta__notificaciones = mysqli_query($conexion__db__accent,$consulta__comentarios);
 ?>
-<button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
+<!-- <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button> -->
 <div class="container contenedor__notificaiones">
 <h3 class="titulo__notificaciones">Notificaciones</h3>
 <?php    

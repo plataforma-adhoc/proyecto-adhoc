@@ -249,7 +249,7 @@ export function  insert__login__usuario(){
         evento.preventDefault();
         
         let datos = new FormData(document.getElementById('formulario-login'));
-        fetch(url__servidor +'insert-login-usuario.php',{
+        fetch(url__servidor+'insert-login-usuario.php',{
             method:'POST',
             body:datos
 
@@ -425,5 +425,29 @@ export function recargar__conductores__disponibles(){
 }
 
 setInterval(recargar__conductores__disponibles,5000)
+
+let campo = document.getElementById('campo')
+if(campo){
+ campo.addEventListener('keyup',getData)
+}
+export function getData(){
+  var input = document.getElementById('campo')
+
+  if(input != null){
+    var input = document.getElementById('campo').value
+
+    let insert__conductores__disponibles = document.getElementById('insertar-conductores');
+  
+    let form__data =  new FormData();
+    form__data.append('campo',input)
+    fetch(url__servidor+'load.php',{
+       method:'POST',
+       body:form__data
+    }).then(respuesta => respuesta.json())
+    .then(data=>{
+  insert__conductores__disponibles.innerHTML = data;
+    }).catch(err => console.log(err))
+  }
+  }
 
  

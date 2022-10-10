@@ -18,7 +18,7 @@ if(mysqli_num_rows($resultado__consulta) > 0){
 
 
  }?>
-    <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button>
+    <!-- <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button> -->
 <div class="contenedor__subtitulo__ad__panel">
     <h2 class="subtitulo__ad__panel">Mi Cuenta</h2>
 </div>

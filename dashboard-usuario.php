@@ -15,12 +15,12 @@ include'conexion-db-accent.php';
     <h2 class="vista__nombre__usuario"><i class="fas fa-user-astronaut"></i> Hola <strong> <?php echo $datos__resultado['nombre_usuario'] ?></strong></h2>
     <br><br>
     <div class="contenedor__del__buscador">
-      <h2 class="subtitulo__buscador">Bienvenido</h2>
+      <h2 class="subtitulo__buscador">¿Que conductor buscamos hoy? </h2>
         <div class="buscador">
-        <!-- <form class="example">
-        <input type="text" placeholder="Buscar..." name="campo" id="campo">
-        <button type="submit"><i class="fa fa-search"></i></button>
-</form> -->
+        <form class="example">
+        <input type="text" placeholder="Buscar un conductor" name="campo" id="campo">
+        <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
+</form>
 
 </div>
   </div>
@@ -31,27 +31,6 @@ include'conexion-db-accent.php';
 
     <div class="datos__perfiles__conductor" id="conductores-disponibles">
       <!-- <div id="insert-conductores-disponibles" class="insert__datos__de__conductor"></div> -->
-      <?php 
-      $extraer__conductores__disponibles = "SELECT * FROM conductores WHERE status = 'disponible'";
-      $ejecutar__la__consulta = mysqli_query($conexion__db__accent,$extraer__conductores__disponibles);
-      if($ejecutar__la__consulta){
-        while($fila__conductores__disponibles = mysqli_fetch_array($ejecutar__la__consulta)){ ?>
-          <div class="card__del__conductor">
-          <a href="info-conductor.php?idc=<?php  echo $fila__conductores__disponibles['id_conductor']   ?>"class="card__perfiles__dashboard">
-        <img src="upload/<?php  echo $fila__conductores__disponibles['avatar']   ?>" alt="Avatar" class="imagen__del__conductor">
-       <div class="datos__del__conductor">
-        <br>
-        <h4><b><?php  echo $fila__conductores__disponibles['nombre_conductor']   ?></b></h4>
-        <p> <?php  echo $fila__conductores__disponibles['status']   ?><br></p>    
-        <p> </p>
-      </div>
-    </a> 
-    </div>
-    
-      <?php  } ?>
-      <?php  } ?>
-
-
 </div>
 </div>
 <?php   if($datos__resultado['avatar'] === 'avatar__defecto.png'){  ?>
