@@ -249,7 +249,7 @@ export function  insert__login__usuario(){
         evento.preventDefault();
         
         let datos = new FormData(document.getElementById('formulario-login'));
-        fetch(url__servidor+'insert-login-usuario.php',{
+        fetch('insert-login-usuario.php',{
             method:'POST',
             body:datos
 
@@ -433,14 +433,13 @@ if(buscador){
 }
 export function getData(){
 
-  let search = document.getElementById('search').value
+  let input =    document.getElementById('campo').value
   if(search){
-    document.getElementById('search').value
     let insertar__conductores = document.getElementById('conductores-disponibles');
    let form__data = new FormData();
-   form__data.append('search',search)
-  
-   fetch(url__servidor+'load.php',{
+   form__data.append('campo',input)
+
+   fetch('load.php',{
     method:'POST',
     body:form__data
    }).then(respuesta => respuesta.json())

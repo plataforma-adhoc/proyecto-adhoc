@@ -18,7 +18,7 @@ include'conexion-db-accent.php';
       <h2 class="subtitulo__buscador">¿Que conductor buscaremos hoy?</h2>
         <div class="buscador">
         <form class="example">
-        <input type="text" placeholder="Buscar..." name="search" id="search">
+        <input type="text" placeholder="Buscar..." name="campo" id="campo">
         <button type="submit"><i class="fa fa-search"></i></button>
 </form>
 
