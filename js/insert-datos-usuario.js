@@ -427,20 +427,26 @@ export function recargar__conductores__disponibles(){
 setInterval(recargar__conductores__disponibles,5000)
    
 
-
-
+let buscador = document.getElementById('search')
+if(buscador){
+  buscador.addEventListener('keyup',getData)
+}
 export function getData(){
 
   let search = document.getElementById('search').value
-  let insertar__conductores = document.getElementById('conductores-disponibles');
- let form__data = new FormData();
- form__data.append('search',search)
+  if(search){
+    document.getElementById('search').value
+    let insertar__conductores = document.getElementById('conductores-disponibles');
+   let form__data = new FormData();
+   form__data.append('search',search)
+  
+   fetch(url__servidor+'load.php',{
+    method:'POST',
+    body:form__data
+   }).then(respuesta => respuesta.json())
+   .then(data =>{
+    insertar__conductores.innerHTML = data
+   }).catch(err => console.log(err))
 
- fetch(url__servidor+'load.php',{
-  method:'POST',
-  body:form__data
- }).then(respuesta => respuesta.json())
- .then(data =>{
-  insertar__conductores.innerHTML = data
- }).catch(err => console.log(err))
+  }
 }

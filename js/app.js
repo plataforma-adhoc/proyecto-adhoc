@@ -17,11 +17,7 @@ actualizar__contrasena__usuario();
 formulario__completar__proceso();
 modal__cambio__contrasena__usuario();
 recargar__conductores__disponibles()
-let search = document.getElementById('search')
-if(search){
-  search.addEventListener('keyup',getData)
-
-}
+getData()
 
 
 
