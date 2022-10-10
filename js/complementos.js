@@ -12,7 +12,7 @@
 
 export function abrir__modal__calificaciones(){
   let btn__abrir__modal = document.getElementById('myBtn');
-  let modal__recorrido =  document.getElementById('modal-recorrido');
+  var modal__recorrido =  document.querySelector('.modal__recorrido');
 
   if(btn__abrir__modal){
     btn__abrir__modal.addEventListener('click',function(){
