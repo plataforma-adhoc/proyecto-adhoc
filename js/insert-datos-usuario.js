@@ -249,7 +249,7 @@ export function  insert__login__usuario(){
         evento.preventDefault();
         
         let datos = new FormData(document.getElementById('formulario-login'));
-        fetch('insert-login-usuario.php',{
+        fetch(url__servidor +'insert-login-usuario.php',{
             method:'POST',
             body:datos
 
@@ -439,7 +439,7 @@ export function getData(){
    let form__data = new FormData();
    form__data.append('campo',input)
 
-   fetch('load.php',{
+   fetch(url__servidor+'load.php',{
     method:'POST',
     body:form__data
    }).then(respuesta => respuesta.json())
