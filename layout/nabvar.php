@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Descubre cientos de conductores elegidos disponibles las 24 horas">
+  <meta name="google-site-verification" content="pjfiKzcIqtbmwXzIHQRgS4BtoFvv-nM_E3Mjhpi8Uds" />
   <title><?php echo  $titulo="AdHoc | Servicios  De Conductor Elegido Conduce El Vehiculo De Otra Persona" ?></title>
   <link rel="stylesheet" href="./css/app.css">
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
