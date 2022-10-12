@@ -174,11 +174,11 @@
     display: none;
   }
   
-  .image-1 {
-    background-image:
-    url(../img/fondo__conductor__elegido.png),
-      linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)),
-  }
+//   .image-1 {
+//     background-image:
+//     url(../img/fondo__conductor__elegido.png),
+//       linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)),
+//   }
   
  .texto__nav__images{
     font-size: 35px;
@@ -187,10 +187,7 @@
     color:black;
  }
 
-  .precio__hora{
-  color: $color__accent;
-  }
-  
+
  
 
 .container{
@@ -214,7 +211,7 @@
    outline: 0;
    color: white;
    font-weight: bold;
-   border-radius: 5px;
+   border-radius: 50px;
 }
 
 .btn__cuenta:hover{
@@ -368,6 +365,18 @@
     background-size:cover;
   
     
+}
+
+.hero__main__vehiculos {
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0;
+    background-image: url(../img/carros__y__camionetas.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+ 
 }
 .hero__textos{
     // width: 90%;
@@ -540,7 +549,7 @@
 
 .copy__section{
     color:white;
-    font-size: 22px;
+    font-size: 17px;
     line-height:$line__heigth__parrafos;
     margin-bottom: 60px;
 }
@@ -776,7 +785,7 @@
 
 
 .testimony__history{
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 300;
     line-height: 20px;
 }
@@ -832,6 +841,8 @@
 .check__copy{
     font-weight: 300;
     color: white;
+    line-height: 20px;
+
 }
 
 
@@ -974,6 +985,12 @@ width: 100px;
   .modal__registros{
     width: 80%;
   }
+  .copy__section{
+    font-size: 15px;
+}
+.title{
+    font-size: 20px;
+}
     .texto__nav__images{
         margin: 50% auto 0 auto;
 
@@ -1035,6 +1052,7 @@ width: 100px;
     .contenedor__unete{
         height:auto;
     }
+
 }
 
 @media screen and (max-width:700px){
@@ -1094,7 +1112,7 @@ width: 100px;
     }
 
     .subtitle{
-        font-size: 35px;
+        font-size: 25px;
         text-align: center;
     }
 
@@ -1117,7 +1135,7 @@ width: 100px;
     }
 
     .card__title{
-        font-size: 35px;
+        font-size: 25px;
     }
 
     .card__button{
@@ -1228,5 +1246,15 @@ width: 100px;
    
     .modal__registros{
         margin-top: 160px;
+    }
+   
+}
+
+@media screen and (max-width:400px){
+  .slider h3{
+    font-size: 13px;
+  }
+    .texto__slider{
+        font-size: 13px;
     }
 }

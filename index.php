@@ -14,6 +14,7 @@
     <main>
     <div class="container services">
         <h2 class="subtitle subtitle">Qué te ofrece AdHoc ?<span class="point">.</span></h2>
+        <p class="copy__section">Con el Servicio de Conductor Elegido puedes trasladarte en la comodidad de tu propio vehículo. Lo más importante: contando con la experiencia de nuestra plataforma para ayudarte a volver seguro a casa.  Conductores elegidos ampliamente capacitados para prestarte un servicio 100% profesional y al precio justo. </p>
         <p class="copy__section">Tu decides las horas de conductor elegido que necesites. <br> No te asignamos conductor, tú lo eliges.</p>
         <div class="servicios">
           <div class="slider slider__1"data-aos="zoom-in">
@@ -112,6 +113,11 @@
         <section class="services">
             <div class="container">
                 <h2 class="subtitle">Tu decides a donde quieres llegar<span class="point">.</span></h2>
+                <p class="copy__section">Si por algun motivo no puedes conducir tu vehiculo pero necesitas movilizarte un conductor elegido es lo que necesitas.<br>
+               Cuando contratas un conductor elegido desde nuestra plataforma, no solo estas contratando a un conductor, si no tambien a una persona altamente calificada
+               con sentido de pertenecia y con un fuerte criterio de responsabilida capaz de llevarte a donde necesites.
+                <br>    
+            </p>
                 <p class="copy__section">Ofrecemos la solucion perfecta para cuando no puedas conducir tu vehiculo</p>
 
                 <article class="container-cards">

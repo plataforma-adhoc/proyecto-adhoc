@@ -23,7 +23,8 @@
 
 .texto__como__funciona{
 color: white;
-font-size: 20px;
+font-size: 17px;
+
 }
 
 .contenido__como__funciona{
@@ -39,7 +40,7 @@ font-size: 20px;
 .como__funciona{
     background:$color__cards;
     width: 20%;
-    height:230px;
+    height:auto;
     padding: 20px;
     position: relative;
     border: solid 2px $color__verde;
@@ -67,15 +68,17 @@ font-size: 20px;
 
 .parrafo__item__funciona{
     text-align: center;
-    color: $color__accent;
+    color:white;
     font-size: $tamaño__parrafos;
     font-weight: bold;
     text-transform: uppercase;
+    line-height: 17px;
 }
 
 .item__parrafo{
     text-align: center;
     color: $color__gris;
+    line-height: 18px;
 }
 
 
@@ -95,7 +98,7 @@ font-size: 20px;
 
    @media screen and (max-width:600px){
     .como__funciona{
-       width: 45%;
+       width: 60%;
       
     }
    }

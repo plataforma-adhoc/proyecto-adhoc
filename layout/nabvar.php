@@ -29,9 +29,9 @@
           <label class="btn btn-open" for="nav"><i class="fab fa-creative-commons-nd"></i></label>
           <input type="checkbox" id="nav" class="nav-opener" />
           <div class="navegacion">
-            <div class="nav-header">
+            <div class="nav-header headers__dashobard">
               <div class="nav-title">MENU</div>
-              <label class="btn btn-nav" for="nav">
+              <label class="btn__cerrar__menu  btn-nav" for="nav">
                 <svg style="width: 36px; height: 36px" viewBox="0 0 24 24">
                   <path fill="currentColor"
                     d="M20 6.91L17.09 4L12 9.09L6.91 4L4 6.91L9.09 12L4 17.09L6.91 20L12 14.91L17.09 20L20 17.09L14.91 12L20 6.91Z" />
@@ -62,12 +62,6 @@
                 <a href="login-conductor.php">Loguearme como conductor</a>
               </li> -->
             </ul>
-            <div class="nav-images">
-              <div class="nav-image image-1">
-                <h2 class="texto__nav__images">Solicita tu conductor elegido desde <span class="precio__hora">$ 19.990 COP</span>  hora, y un conductor elegido llegara a la puerta de tu casa</h2>
-               
-              </div>
-            </div>
           </div>
         </div>
       </div>
