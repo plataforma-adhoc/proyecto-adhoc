@@ -20,11 +20,13 @@
       <div class="container nav__container">
       <div class="logo">
             <a href="index.php"><img src="./img/logo.png" alt="" class="logo__accent"></a>
-            <!-- <p class="texto__beta beta__home">BETA</p> -->           
+            <!-- <p class="texto__beta beta__home">BETA</p> -->  
+                   
         </div>
 
 
         <div class="containers">
+        <!-- <a href="login-usuario.php" class="enlace__vender__vehiculo">Vender</a> -->
           <button class="btn__cuenta" id="myBtn">Crear  cuenta</button>
           <label class="btn btn-open" for="nav"><i class="fab fa-creative-commons-nd"></i></label>
           <input type="checkbox" id="nav" class="nav-opener" />

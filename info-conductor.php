@@ -28,12 +28,15 @@ $datos__resultado__conductor = mysqli_fetch_array($ejecutar__consulta);
    <h4>Numero telefono : <?php echo $datos__resultado__conductor['numero_telefono'] ?></h4>
    <h4>Numero licencia : <?php echo $datos__resultado__conductor['numero_licencia'] ?></h4>
    <h4>Categoria licencia : <?php echo $datos__resultado__conductor['categoria_licencia'] ?></h4>  
-   <?php    if($datos__resultado__conductor['quien_soy'] != NULL){   ?>
-   <h4>Quien soy : <?php echo $datos__resultado__conductor['quien_soy'] ?></h4>
-<?php } ?>
-<?php    if($datos__resultado__conductor['localidad'] != NULL){   ?>
-   <h4>Mi ubicacion : <?php echo $datos__resultado__conductor['localidad'] ?></h4>
-<?php } ?>
+   <?php    if($datos__resultado__conductor['localidad'] != NULL){   ?>
+    <h4>Mi ubicacion : <?php echo $datos__resultado__conductor['localidad'] ?></h4>
+    <?php } ?>
+    <?php    if($datos__resultado__conductor['movilidad'] != NULL){   ?>
+    <h4>Me movilizo en : <?php echo $datos__resultado__conductor['movilidad'] ?></h4>
+    <?php } ?>
+    <?php    if($datos__resultado__conductor['quien_soy'] != NULL){   ?>
+    <h4>Quien soy : <?php echo $datos__resultado__conductor['quien_soy'] ?></h4>
+ <?php } ?>
   </div>
 
   <p class="text">

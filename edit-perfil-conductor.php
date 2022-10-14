@@ -96,6 +96,14 @@ Subir una foto...
 
             </div>
         </div>
+        <div class="grupo__inputs" id="grupo__password">
+            <div class="contenedor__inputs">
+            <label for="" class="label">En que te movilizas ?</label>
+                <input type="text"  name="movilidad" 
+                    class="capturarDatos"  placeholder=""value="<?php  echo $datos__resultado['movilidad']?>">
+
+            </div>
+        </div>
 
         <div class="grupo__inputs" id="grupo__password">
             <div class="contenedor__inputs">

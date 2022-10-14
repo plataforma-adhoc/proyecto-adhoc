@@ -27,8 +27,16 @@
   }
  
 
- 
- 
+ .enlace__vender__vehiculo{
+ text-decoration: 0;
+ color: white;
+ margin-right: 80px;
+ }
+
+ .enlace__vender__vehiculo:hover{
+    border-bottom: 4px solid black;
+    color: $color__gris;
+ }
   .btn-open {
     font-size: 30px;
     cursor: pointer;
@@ -270,7 +278,7 @@
 }
 
 .flecha{
-    margin-left: 80px;
+    margin-left: 50px;
 }
 
 .btn__cuenta__registro:hover{
@@ -386,7 +394,7 @@
 }
 
 .title{
-    font-size: 56px;
+    font-size: 50px;
     font-weight: bold;
     color: $color__accent;
 }
@@ -448,10 +456,11 @@
     width: 60px;
     margin-left: 10px;
 }
-.slider h3{
+.subtitulo__slider{
     color: white;
     width: 90%;
     margin: 20px  5px  0 auto;
+    font-size: 18px;
 }
 
 .texto__slider{

@@ -46,14 +46,16 @@ if(mysqli_num_rows($resultado__consulta) > 0){
    <h4>Telefono : <?php echo $datos__resultado__conductor['numero_telefono'] ?></h4>
    <h4>Licencia : <?php echo $datos__resultado__conductor['numero_licencia'] ?></h4>
    <h4>Categoria : <?php echo $datos__resultado__conductor['categoria_licencia'] ?></h4> 
-   <h4>Miembro desde : <?php echo  date("d-m-Y",strtotime($datos__resultado__conductor['fecha_de_registro'])) ?></h4> 
    <?php    if($datos__resultado__conductor['localidad'] != NULL){   ?>
    <h4>Lugar de ubicación: <?php echo $datos__resultado__conductor['localidad'] ?>, Bogota - Cundinamarca</h4>
 <?php } ?>
-
+<?php    if($datos__resultado__conductor['movilidad'] != NULL){   ?>
+   <h4>Me movilizo en : <?php echo $datos__resultado__conductor['movilidad'] ?></h4>
+<?php } ?>
    <?php    if($datos__resultado__conductor['quien_soy'] != NULL){   ?>
    <h4><?php echo $datos__resultado__conductor['quien_soy'] ?></h4>
 <?php } ?>
+<h4>Miembro desde : <?php echo  date("d-m-Y",strtotime($datos__resultado__conductor['fecha_de_registro'])) ?></h4> 
 
   </div>
 

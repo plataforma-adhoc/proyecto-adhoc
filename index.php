@@ -22,7 +22,7 @@
             <img src="img/icono__conductor.png" alt="icono, conduciendo, conductor" class="icono__conductor">
             </div>
             <div>
-                <h3>1 Hora de servicio de conductor elegido</h3>
+                <h3 class="subtitulo__slider">1 Hora de servicio de conductor elegido</h3>
                 <p class="texto__slider">perfecto para trayectos muy cortos</p>
             </div>
 		</div>
@@ -31,7 +31,7 @@
             <img src="img/punto-de-recogida.png" alt="punto de recogida" class="icono__conductor">
             </div>
             <div>
-                <h3>2 Horas de servicio de conductor elegido</h3>
+                <h3 class="subtitulo__slider">2 Horas de servicio de conductor elegido</h3>
                 <p class="texto__slider">perfecto para trayectos muy cortos</p>
             </div>
 		</div>
@@ -40,7 +40,7 @@
             <img src="img/abordando__vehiculo.png" alt="icono, abriendo las puertas del vehiculo" class="icono__conductor">      
             </div>
             <div>
-                <h3>3 Horas de servicio de conductor elegido</h3>
+                <h3 class="subtitulo__slider">3 Horas de servicio de conductor elegido</h3>
                 <p class="texto__slider">perfecto para trayectos muy cortos en la ciudad</p>
             </div>
 		</div>
@@ -49,7 +49,7 @@
             <img src="img/telefono.png" alt="telefono celular window mobile" class="icono__conductor">
             </div>
             <div>
-                <h3>4 Horas de servicio de conductor elegido</h3>
+                <h3 class="subtitulo__slider">4 Horas de servicio de conductor elegido</h3>
                 <p class="texto__slider">perfecto para trayectos en la ciudad y lugares cerca</p>
             </div>
 		</div>
@@ -58,7 +58,7 @@
             <img src="img/reloj.png" alt="icono reloj apple watch" class="icono__conductor">
             </div>
             <div>
-                <h3>5 Horas de servicio de conductor elegido</h3>
+                <h3 class="subtitulo__slider">5 Horas de servicio de conductor elegido</h3>
                 <p class="texto__slider">perfecto para trayectos fuera de la ciudad no muy lejos</p>
             </div>
 		</div>
@@ -67,7 +67,7 @@
             <img src="img/vehiculo.png" alt="icono vehiculo" class="icono__conductor">
             </div>
             <div>
-                <h3>6 Horas de servicio de conductor elegido</h3>
+                <h3 class="subtitulo__slider">6 Horas de servicio de conductor elegido</h3>
                 <p class="texto__slider">perfecto para esa reunion o evento fuera de la ciudad</p>
             </div>
 		</div>
@@ -76,7 +76,7 @@
             <img src="img/bebida.png" alt="copa de vino" class="icono__conductor">
             </div>
             <div>
-                <h3>7 Horas de servicio de conductor elegido</h3>
+                <h3 class="subtitulo__slider">7 Horas de servicio de conductor elegido</h3>
                 <p class="texto__slider">perfecto para  destinos dentro y fuera de la ciudad no muy lejos</p>
             </div>
 		</div>
@@ -85,7 +85,7 @@
             <img src="img/volante.png" alt="volante de vehiculo " class="icono__conductor">
             </div>
             <div>
-                <h3>8 Horas de servicio de conductor elegido</h3>
+                <h3 class="subtitulo__slider">8 Horas de servicio de conductor elegido</h3>
                 <p class="texto__slider">vuelve a ese lugar que te enomoraste con este paquete </p>
             </div>
 		</div>
@@ -94,7 +94,7 @@
                 <img src="img/computadora.png" alt="computador de mesa" class="icono__conductor">
             </div>
             <div>
-            <h3>9 Horas de servicio de conductor elegido</h3>
+            <h3 class="subtitulo__slider">9 Horas de servicio de conductor elegido</h3>
             <p class="texto__slider">perfecto para trayectos largos </p>
             </div>
 		</div>
@@ -103,7 +103,7 @@
             <img src="img/baile.png" alt="icono bailando" class="icono__conductor">
             </div>
             <div>
-                <h3>10 Horas de servicio de conductor elegido</h3>
+                <h3 class="subtitulo__slider">10 Horas de servicio de conductor elegido</h3>
                 <p class="texto__slider">este paquete es perfecto para reuniones un poco demoradas </p>
                 
             </div>

@@ -24,6 +24,17 @@
   --nav-count: 10;
 }
 
+.enlace__vender__vehiculo {
+  text-decoration: 0;
+  color: white;
+  margin-right: 80px;
+}
+
+.enlace__vender__vehiculo:hover {
+  border-bottom: 4px solid black;
+  color: gray;
+}
+
 .btn-open {
   font-size: 30px;
   cursor: pointer;
@@ -247,7 +258,7 @@
 }
 
 .flecha {
-  margin-left: 80px;
+  margin-left: 50px;
 }
 
 .btn__cuenta__registro:hover {
@@ -356,7 +367,7 @@
 }
 
 .title {
-  font-size: 56px;
+  font-size: 50px;
   font-weight: bold;
   color: #C0392B;
 }
@@ -399,10 +410,11 @@
   margin-left: 10px;
 }
 
-.slider h3 {
+.subtitulo__slider {
   color: white;
   width: 90%;
   margin: 20px 5px 0 auto;
+  font-size: 18px;
 }
 
 .texto__slider {
@@ -2289,7 +2301,7 @@ p {
   width: 40px;
   height: 40px;
   text-align: center;
-  line-height: 50px;
+  line-height: 40px;
 }
 
 .enlace__de__redes__sociales:hover {
@@ -4275,7 +4287,7 @@ p {
 
 .parrafo__item__funciona {
   text-align: center;
-  color: #C0392B;
+  color: white;
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
@@ -4684,6 +4696,160 @@ p {
 .subtitulo__sin__resultados {
   text-align: center;
   color: white;
+}
+
+.contendor__de__vehiculos {
+  width: 100%;
+  height: auto;
+}
+
+.contenedor__de__busqueda {
+  width: 100%;
+  height: 200px;
+  background: #000;
+  border-radius: 10px;
+  position: relative;
+}
+
+.iconos__a__servicios {
+  width: 35px;
+}
+
+.iconos {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  height: 50px;
+  position: absolute;
+  top: 120px;
+  left: 40%;
+}
+
+.servicio__enlaces__dos {
+  margin-left: 52%;
+}
+
+.iconos a {
+  text-decoration: 0;
+  font-size: 28px;
+  color: white;
+  background: #0A192F;
+  border-radius: 100%;
+  padding: 7px;
+  height: 50px;
+  width: 50px;
+}
+
+.iconos p {
+  color: white;
+  font-size: 12px;
+}
+
+.parrafo__vehiculos {
+  margin-left: -20%;
+}
+
+.parrafo__conductores {
+  margin-left: 30%;
+}
+
+.subtitulo__vehiculos {
+  color: white;
+}
+
+.vehiculos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.descripcion__del__vehiculo {
+  width: 30%;
+  margin: 20px 20px 0;
+  background: #112240;
+  border-radius: 7px;
+}
+
+.imagen__del__vehiculo {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.datos__del__vehiculo {
+  width: 95%;
+  margin: auto;
+}
+
+.nombre__del__vehiculo {
+  color: white;
+}
+
+.motor__del__vehiculo {
+  color: wheat;
+}
+
+.kilometraje__y__año {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.kilometros, .modelo__del__vehiculo, .placas__del__vehiculo {
+  color: wheat;
+  background: #0A192F;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.precio__del__vehiculo {
+  color: white;
+}
+
+.enlace__whatsapp {
+  display: inline-block;
+  text-decoration: 0;
+  background: #000;
+  color: white;
+  padding: 12px;
+  border-radius: 50px;
+  margin: 10px 0 15px 0;
+  width: 230px;
+}
+
+.fa-whatsapp {
+  font-size: 25px;
+}
+
+.mas__detalles {
+  display: inline-block;
+  text-decoration: 0;
+  color: white;
+  padding: 12px;
+  margin: 0 0 15px 0;
+}
+
+.mas__detalles:hover {
+  color: gray;
+}
+
+.carousel-item {
+  height: 700px;
+}
+
+.d-block {
+  height: 100%;
+}
+
+.detalles__principales {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detalles__vehiculo {
+  width: 40%;
 }
 
 body {
