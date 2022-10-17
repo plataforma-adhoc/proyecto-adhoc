@@ -28,7 +28,7 @@
 
 
         <div class="containers">
-        <a href="login-usuario.php" class="enlace__vender__vehiculo">Vender</a>
+        <!-- <a href="login-usuario.php" class="enlace__vender__vehiculo">Vender</a> -->
           <button class="btn__cuenta" id="myBtn">Crear  cuenta</button>
           <label class="btn btn-open" for="nav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fab fa-creative-commons-nd"></i></label>
           <input type="checkbox" id="nav" class="nav-opener" />
