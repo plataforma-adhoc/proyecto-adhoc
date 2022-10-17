@@ -8,7 +8,7 @@ $conexion__db__accent = mysqli_connect('mysql-luisruben.alwaysdata.net','luisrub
 // $contraseña = $_ENV["PASSWORD"];
 // $database = $_ENV["DATABASE"];
 
-// $conexion__db__accent = mysqli_connect('localhost','root','','accent-hollding');
+// $conexion__db__accent = mysqli_connect('localhost','root','','accent-hollding')
 
 
 ?>

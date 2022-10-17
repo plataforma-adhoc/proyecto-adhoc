@@ -31,3 +31,24 @@ export function abrir__modal__calificaciones(){
     })
  }
  }
+
+ export function abrir__modal__vehiculos(){
+  if(document.querySelectorAll('.contendor__imagenes img')){
+    document.querySelectorAll('.contendor__imagenes img').forEach((image) =>{
+      image.onclick =  () =>{
+        document.querySelector('.popup-image').style.display  = 'block';
+        document.querySelector('.popup-image img').src = image.getAttribute('src')
+    
+      }
+    })
+
+  }
+if(document.querySelector('.popup-image span')){
+  document.querySelector('.popup-image span').onclick = () =>{
+    document.querySelector('.popup-image').style.display  = 'none';
+  
+  }
+
+}
+ 
+ }

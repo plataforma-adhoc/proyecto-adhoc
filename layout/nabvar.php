@@ -7,7 +7,9 @@
   <meta name="description" content="Descubre cientos de conductores elegidos disponibles las 24 horas">
   <meta name="google-site-verification" content="pjfiKzcIqtbmwXzIHQRgS4BtoFvv-nM_E3Mjhpi8Uds" />
   <title><?php echo  $titulo="AdHoc | Servicios  De Conductor Elegido Conduce El Vehiculo De Otra Persona" ?></title>
-  <link rel="stylesheet" href="./css/app.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">  
+  <link rel="stylesheet" href="./css/app.css"> 
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -26,21 +28,17 @@
 
 
         <div class="containers">
-        <!-- <a href="login-usuario.php" class="enlace__vender__vehiculo">Vender</a> -->
+        <a href="login-usuario.php" class="enlace__vender__vehiculo">Vender</a>
           <button class="btn__cuenta" id="myBtn">Crear  cuenta</button>
-          <label class="btn btn-open" for="nav"><i class="fab fa-creative-commons-nd"></i></label>
+          <label class="btn btn-open" for="nav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fab fa-creative-commons-nd"></i></label>
           <input type="checkbox" id="nav" class="nav-opener" />
-          <div class="navegacion">
-            <div class="nav-header headers__dashobard">
-              <div class="nav-title">MENU</div>
-              <label class="btn__cerrar__menu  btn-nav" for="nav">
-                <svg style="width: 36px; height: 36px" viewBox="0 0 24 24">
-                  <path fill="currentColor"
-                    d="M20 6.91L17.09 4L12 9.09L6.91 4L4 6.91L9.09 12L4 17.09L6.91 20L12 14.91L17.09 20L20 17.09L14.91 12L20 6.91Z" />
-                </svg>
-              </label>
-            </div>
-            <ul class="nav-links">
+          <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">MENU</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+      <ul class="nav-links">
               <li class="nav-link">
               <i class="fas fa-house-user"></i>
                 <a href="index.php">Inicio</a>
@@ -64,9 +62,8 @@
                 <a href="login-conductor.php">Loguearme como conductor</a>
               </li> -->
             </ul>
-          </div>
-        </div>
-      </div>
+  </div>
+</div>
     </nav>
 
 

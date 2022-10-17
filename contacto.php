@@ -7,18 +7,21 @@
 <div class="cards__contacto">
     <a href="https://twitter.com/AdHoc_Colombia" class="formas__de__contacto animate__animated  animate__bounceInDown" target="_blank">
         <div>
+            <br>
             <p>Twitter</p>
         </div>
         <i class="fab fa-twitter"></i>
     </a>
     <a href="https://www.facebook.com/profile.php?id=100085378410645" class="formas__de__contacto animate__animated  animate__bounceInDown" target="_blank">
     <div>
+        <br>
         <p>Facebook</p>      
     </div>
     <i class="fab fa-facebook"></i>
 </a>
 <a href="https://www.instagram.com/adhoc__col/" class="formas__de__contacto animate__animated  animate__bounceInDown" target="_blank">
 <div>
+    <br>
     <p>Instagram</p>
    
 </div>
@@ -26,6 +29,7 @@
 </a>
 <a href="https://api.whatsapp.com/send?phone=3227603630&text=Gracias por comunicarte con Ad Hoc ¿ en que te puedo ayudar ?" class="formas__de__contacto animate__animated  animate__bounceInDown" target="_blank">
 <div>
+    <br>
     <p>WhastApp</p>
     
 </div>
