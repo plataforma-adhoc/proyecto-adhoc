@@ -49,18 +49,7 @@
            </div>
         </div>
 
-        <div class="grupo__inputs" id="grupo__documento">
-        <label for="documento"class="formulario__label">Documento</label>
-      <div  class="formulario__grupo_-input">
-          <div class="contenedor__inputs">
-              <input type="text" placeholder="Documento" name="documento" 
-                  class="capturarDatos" id="documento">
-                  <!-- <i class="formulario__validacion-estado cinco fas fa-times-circle"></i> -->
-          </div>
-          <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
-
-      </div>
-        </div>
+       
 
         <div class="grupo__inputs" id="grupo__telefono">
         <label for="telefono"class="formulario__label">Telefono</label>
@@ -76,7 +65,7 @@
      </div>
         </div>
 
-        <div class="grupo__inputs block" id="grupo__contrasena">
+        <div class="grupo__inputs" id="grupo__contrasena">
         <label for="contrasena"class="formulario__label">Contraseña</label>
         <div  class="formulario__grupo_-input">
             <div class="contenedor__inputs">
@@ -88,11 +77,11 @@
             <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
 
             </div>
-            <label class="content-input">
-	         <input type="checkbox" name="Vehiculo" onclick="mostrar()" >Quiero ver mi contraseña
-	        <i></i>
-             </label>
-      </div>
+        </div>
+        <label class="content-input">
+         <input type="checkbox" name="Vehiculo" onclick="mostrar()" >Quiero ver mi contraseña
+        <i></i>
+         </label>
         <div class="block">
             <input type="submit" value="CREAR MI CUENTA" class="boton__registro" name="enviar">
         </div>

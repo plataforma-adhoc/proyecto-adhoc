@@ -85,9 +85,9 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                       class="enlaces__menu__home">Mi historial</a>
                   </li>
                   <!-- <li class="nav-link">
-                  <i class="fas fa-briefcase"></i>
-                    <a href="servicios.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
-                      Servicios</a>
+                  <i class="fas fa-shopping-bag"></i>
+                    <a href="publicar-vehiculos.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
+                      Publicar Vehiculo</a>
   
                   </li> -->
                   <li class="nav-link">

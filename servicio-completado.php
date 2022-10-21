@@ -37,7 +37,6 @@ if($id__conductor){
    <h4><?php echo $resultado['nombre_usuario'] ?></h4>
     <h4><?php echo $resultado['primer_apellido'] ?> <?php echo $resultado['segundo_apellido'] ?></h4>
    <h4><?php echo $resultado['email'] ?></h4>
-   <h4><?php echo $resultado['numero_documento'] ?></h4>
    <h4><?php echo $resultado['numero_telefono'] ?></h4>
    <h2>Datos del servicio completado</h2>
    <h4>  <?php echo $fila['direccion_inicio']  ?></h4>

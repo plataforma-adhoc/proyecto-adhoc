@@ -62,12 +62,6 @@ while($fila__resultado__saldo = mysqli_fetch_array($resultado__seleccion__saldo)
             </div>
         </a>
         
-        <!-- <a href="./servicio-cancelado" class="cards__dashboard animate__animated  animate__bounceInDown">
-            <div>
-            <p class="item__titulo__cards"><i class="fas fa-bell-slash"></i> Servicios rechazados</p>
-            <h2 class="item__total"><?php echo $total__cancelados ?></h2>
-            </div>
-        </a> -->
          <?php       
         $consulta__solicitudes = "SELECT * FROM datos__inicio__recorrido WHERE id_conductor = {$_SESSION['id_conductor']} AND leido = '0'";
         $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__solicitudes);

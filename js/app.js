@@ -9,7 +9,7 @@ cerrar__modal__calificaciones();
 abrir__modal__vehiculos();
 
 import {insert__datos__usuario, insert__login__usuario,
-  password__usuario,actualizar__contrasena__usuario,formulario__completar__proceso,modal__cambio__contrasena__usuario,recargar__conductores__disponibles,getData} from './insert-datos-usuario.js';
+  password__usuario,actualizar__contrasena__usuario,formulario__completar__proceso,modal__cambio__contrasena__usuario,getData,recargar__conductores__disponibles} from './insert-datos-usuario.js';
 insert__datos__usuario();
 insert__login__usuario();
 password__usuario();

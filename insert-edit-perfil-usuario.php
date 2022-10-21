@@ -12,7 +12,6 @@ if($id__usuario){
             $primer__apellido = $_POST['primerApellido'] ? $_POST['primerApellido']: '';
             $segundo__apellido = $_POST['segundoApellido'] ? $_POST['segundoApellido']: '';
             $email = $_POST['email'] ? $_POST['email']: '';
-            $documento = $_POST['documento'] ? $_POST['documento']: '';
             $telefono = $_POST['telefono'] ? $_POST['telefono']: '';
             $facebook = $_POST['facebook'] ? $_POST['facebook']: '';
             $instagram = $_POST['instagram'] ? $_POST['instagram']: '';
@@ -32,7 +31,7 @@ if($id__usuario){
             }
     
                 $actualizar__datos  = "UPDATE  usuarios SET 	nombre_usuario ='$nombre_usuario',primer_apellido = '$primer__apellido',segundo_apellido ='$segundo__apellido',
-                email ='$email', numero_documento = '$documento',numero_telefono = '$telefono', avatar = '$nombre__archivo',facebook ='$facebook',	instagram = '$instagram',twitter='$twitter' WHERE id_usuario = '$id__usuario' LIMIT 1";
+                email ='$email',numero_telefono = '$telefono', avatar = '$nombre__archivo',facebook ='$facebook',	instagram = '$instagram',twitter='$twitter' WHERE id_usuario = '$id__usuario' LIMIT 1";
                 $ejecutar__consulta = mysqli_query($conexion__db__accent,$actualizar__datos);
     
                 if($ejecutar__consulta){

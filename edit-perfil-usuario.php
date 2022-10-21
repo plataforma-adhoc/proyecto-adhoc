@@ -58,21 +58,13 @@ $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
 
         <div class="grupo__inputs" id="grupo__password">
             <div class="contenedor__inputs">
-            <label for="" class="label">Documento</label>
-                <input type="text"name="documento" value="<?php   echo $datos__resultado['numero_documento'] ?>"
-                    class="capturarDatos">
-
-            </div>
-        </div>
-        <div class="grupo__inputs" id="grupo__password">
-            <div class="contenedor__inputs">
             <label for="" class="label">Telefono</label>
                 <input type="text" name="telefono" value="<?php   echo $datos__resultado['numero_telefono'] ?>"
                     class="capturarDatos">
 
             </div>
         </div>
-        <hr class="linea__editar__perfil">
+
         <div class="grupo__inputs" id="grupo__password">
             <div class="contenedor__inputs">
             <label for="" class="label">Facebook</label>
@@ -89,7 +81,7 @@ $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
 
             </div>
         </div>
-        <div class="grupo__inputs block" id="grupo__password">
+        <div class="grupo__inputs " id="grupo__password">
             <div class="contenedor__inputs">
             <label for="" class="label">Twiiter</label>
                 <input type="text"  name="twitter" value="<?php   echo $datos__resultado['twitter'] ?>"

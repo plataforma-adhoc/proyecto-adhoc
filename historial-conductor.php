@@ -52,9 +52,6 @@ if(mysqli_num_rows($ejecutar__consulta__servicios) > 0) {
                 <p class="datos__basicos"><strong>Email :</strong>  <?php  echo $resultado__datos__usuario['email'] ?></p>
             </div>
             <div>
-                <p class="datos__basicos"><strong>Documento : </strong> <?php  echo $resultado__datos__usuario['numero_documento'] ?></p>
-            </div>
-            <div>
                 <p class="datos__basicos"><strong>Telefono :</strong>  <?php  echo $resultado__datos__usuario['numero_telefono'] ?></p>
             </div>
             <div>

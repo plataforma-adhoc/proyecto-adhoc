@@ -34,8 +34,8 @@
   	 		<div class="footer-col">
   	 			<h4>Siguenos en</h4>
   	 			<div class="social-links">
-  	 				<a href="https://www.facebook.com/Ad-hoc-106578782206519" target="_blank"><i class="fab fa-facebook-f"></i></a>
-  	 				<a href="https://twitter.com/AdHoc_Colombia" target="_blank"><i class="fab fa-twitter"></i></a>
+  	 				<a href="https://www.facebook.com/adhocColombia" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="https://twitter.com/adhoc_colombia" target="_blank"><i class="fab fa-twitter"></i></a>
   	 				<a href="https://www.instagram.com/adhoc_colombia/" target="_blank"><i class="fab fa-instagram"></i></a>
   	 				<!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
   	 			</div>

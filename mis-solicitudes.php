@@ -41,7 +41,6 @@ if($id__conductor ){
       <div class="name">
    <h2><?php echo $resultado__inicio__servicio['nombre_usuario']  ?></h2>
    <h4><?php echo $resultado__inicio__servicio['primer_apellido_usuario'] ?> <?php echo $resultado__inicio__servicio['segundo_apellido_usuario'] ?></h4>
-   <h4><?php echo $resultado__inicio__servicio['documento_usuario'] ?></h4>
    <h4><?php echo $resultado__inicio__servicio['telefono_usuario'] ?></h4>
    <h2>Datos del servicio a tomar</h2>
    <h4>  <?php echo $resultado__inicio__servicio['direccion_inicio']  ?></h4>

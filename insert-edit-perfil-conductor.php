@@ -28,7 +28,9 @@ $resultado__datos = mysqli_fetch_array($ejecutar__consulta__conductor);
         $tipo = "jpg";
         $ruta__foto = $_FILES['avatar']['tmp_name'];
         $nombre = time(). '.'.$tipo;
-
+        if(!is_dir('upload')){
+            mkdir('upload');
+          }
         if(is_uploaded_file($ruta__foto)){
          $destino = 'upload/'.$nombre;
          $nombre__archivo =  $nombre;
