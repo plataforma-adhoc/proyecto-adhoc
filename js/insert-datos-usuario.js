@@ -450,4 +450,28 @@ export function getData(){
   }
   }
 
+  let buscador = document.getElementById('buscador')
+if(buscador){
+ buscador.addEventListener('keyup',buscar__carro)
+}
  
+export function buscar__carro(){
+  var input = document.getElementById('buscador')
+
+  if(input != null){
+    var input = document.getElementById('buscador').value
+
+    let insert__resultados = document.getElementById('insertar-resultados');
+  
+    let form__data =  new FormData();
+    form__data.append('buscador',input)
+    fetch('load-carros.php',{
+       method:'POST',
+       body:form__data
+    }).then(respuesta => respuesta.json())
+    .then(data=>{
+  insert__resultados.innerHTML = data;
+  console.log(data)
+    }).catch(err => console.log(err))
+  }
+  }

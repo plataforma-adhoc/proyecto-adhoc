@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Descubre cientos de conductores elegidos disponibles las 24 horas">
+  <meta name="description" content="Conductores elegidos,carros usados">
   <meta name="google-site-verification" content="pjfiKzcIqtbmwXzIHQRgS4BtoFvv-nM_E3Mjhpi8Uds" />
-  <title><?php echo  $titulo="AdHoc | Servicios  De Conductor Elegido Conduce El Vehiculo De Otra Persona" ?></title>
+  <title><?php echo  $titulo="AdHoc | Vende y/o compra tu carro usado publica tu vehiculo y vendelo" ?></title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">  
   <link rel="stylesheet" href="./css/app.css"> 
@@ -28,7 +28,7 @@
 
 
         <div class="containers">
-        <!-- <a href="login-usuario.php" class="enlace__vender__vehiculo">Vender</a> -->
+          <a href="publicar-vehiculos.php" class="enlace__vender__vehiculo">Publicar mi carro</a>
           <button class="btn__cuenta" id="myBtn">Crear  cuenta</button>
           <label class="btn btn-open" for="nav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fab fa-creative-commons-nd"></i></label>
           <input type="checkbox" id="nav" class="nav-opener" />
@@ -57,10 +57,12 @@
                 <a href="conductor.php">Recibir solicitudes</a>
 
               </li>
-              <!-- <li class="nav-link">
-              <i class="fas fa-sign-in-alt"></i>
-                <a href="login-conductor.php">Loguearme como conductor</a>
-              </li> -->
+              <li class="nav-link">
+                  <i class="fas fa-shopping-bag"></i>
+                    <a href="publicar-vehiculos.php">
+                      Publicar Vehiculo</a>
+  
+                  </li>
             </ul>
   </div>
 </div>

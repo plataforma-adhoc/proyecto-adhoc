@@ -2,6 +2,8 @@
 .contenedor__del__formulario{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .subtitulo__formularios{
@@ -9,7 +11,7 @@
   font-size:$tamaño__fuente__subtitulo;
   position: absolute;
   top: 90px;
-  left: 12%;
+  left: 40%;
 }
 
 .login{
@@ -23,43 +25,6 @@
     background:$color__formularios;
     border-radius: 7px;
   }
-
-  .contenido__beneficios{
-  width: 50%;
-  margin-top: 30px;
-  border-radius: 10px;
-  }
-
-  .subtitulo__beneficios{
-  color: white;
-  font-size:$tamaño__fuente__subtitulo;
-  }
-
-.item__beneficios{
-  display: flex;
- width: 90%;
- margin: 50px  auto 0 auto;
-}
-
-.contenedor__de_textos{
-  width: 80%;
-  height: auto;
-  margin: auto;
-}
-
-.texto__beneficios{
-  margin-left: -5px;
-  color:$color__gris;
-  line-height: 20px;
-  font-size: 18px;
-}
-
-.imagen__beneficios{
-  border-radius: 50px;
-  width: 70px;
-  height: 70px;
-  margin-top: 10px;
-}
 
   .formulario__label {
     display: block;
@@ -309,7 +274,7 @@ font-weight: bold;
         background: #fff;
         border-radius: 50%;
         position: absolute;
-        z-index: 1;
+        z-index: -3;
         left: 0px;
         top: 0px;
         -webkit-box-shadow: 3px 0 3px 0 rgba(0,0,0,0.2);
@@ -371,13 +336,19 @@ font-weight: bold;
       }
 
 
-
+@media screen and (max-width:1220px) {
+  .formulario__registro {
+    width: 80%;
+    background:$color__formularios;
+    border-radius: 7px;
+  }
+}
 
 
       @media screen and (max-width:900px){
 
     .formulario__registro {
-    width: 50%;
+    width: 80%;
     background:$color__formularios;
     border-radius: 7px;
   }
@@ -417,10 +388,6 @@ font-weight: bold;
 
 
       @media screen and (max-width:700px){
-        .contenido__beneficios{
-          margin: auto;
-          width: 90%;
-        }
         .formulario__registro {
         width: 90%;
         margin: 100px auto;

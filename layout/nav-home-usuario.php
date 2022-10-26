@@ -4,11 +4,13 @@ session_start();
 if(!isset($_SESSION['id_usuario'])){
   header("Location: login-usuario.php");
   die();
+}else{
+  $consulta__datos = "SELECT *  FROM usuarios   WHERE id_usuario = '{$_SESSION['id_usuario']}' LIMIT 1";
+  $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
+  if(mysqli_num_rows($resultado__consulta) > 0){
+  $datos__resultado = mysqli_fetch_array($resultado__consulta); 
+
 }
-$consulta__datos = "SELECT *  FROM usuarios   WHERE id_usuario = '{$_SESSION['id_usuario']}' LIMIT 1";
-$resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
-if(mysqli_num_rows($resultado__consulta) > 0){
-$datos__resultado = mysqli_fetch_array($resultado__consulta); 
 
  }
 ?>
@@ -84,12 +86,12 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                     <a href="historial-usuario.php?idu=<?php echo $datos__resultado['id_usuario'] ?>"
                       class="enlaces__menu__home">Mi historial</a>
                   </li>
-                  <!-- <li class="nav-link">
+                  <li class="nav-link">
                   <i class="fas fa-shopping-bag"></i>
                     <a href="publicar-vehiculos.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
                       Publicar Vehiculo</a>
   
-                  </li> -->
+                  </li>
                   <li class="nav-link">
                     <i class="fas fa-cogs"></i>
                     <a href="configuracion-usuario.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>">

@@ -33,22 +33,3 @@ include'conexion-db-accent.php';
   
 
 echo json_encode($html,JSON_UNESCAPED_UNICODE);
-
-// <img src="upload/'.$fila['avatar'].'"alt="Avatar usuario adhoc" class="imagen__del__conductor">
-// <div class="datos__del__conductor">
-//  <br>
-//  <p class="nombre__perfil__conductor__card"><b>'.$fila['nombre_conductor'] .'</b></p>
-//  <p><br>'.$fila['status'] .'</b></p>    
-//  <p> </p>
-
-// <a href="info-conductor.php?idc='.$fila['id_conductor'].'" class="card__perfiles__dashboard">
-// <div class="card tarjeta__conductor">
-// <img src="upload/'.$fila['avatar'].'"alt="Avatar usuario adhoc"" class="card-img-top" alt="...">
-// <div class="card-body">
-//   <h5 class="card-title nombre__perfil__conductor__card">'.$fila['nombre_conductor'] .'</h5>
-//   <p class="estatus__del__conductor"><br>'.$fila['status'] .'</b></p>  
- 
-// </div>
-// </div>
-// </div>
-// </a>

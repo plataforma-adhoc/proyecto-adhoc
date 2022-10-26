@@ -1,12 +1,14 @@
 <?php  include'layout/nabvar.php'; ?> 
         <section class=" hero__main">  
             <div class=" container hero__textos">
-                <h1 class="title">La mejor <span class="title--active">Experiencia tras el volante.</span></h1> 
-                <p class="copy">Te enviaremos un conductor elegido a la puerta de tu casa en caso de que no te encuentres en condiciones de 
-                conducir tu vehiculo    
-                <span class="copy__active">¡ solicita tu servicio  !</span></p>
-                <p class="texto__beta">BETA</p>
-                <!-- <a href="usuario.php" class="cta">Pedir mi conductor</a> -->
+                <h1 class="title"> Acelera la venta de carro <span class="title--active">. <img src="https://img.icons8.com/bubbles/50/000000/chevron-right.png"/>
+
+</span></h1> 
+                <p class="copy">Con un anuncio que llegue a cientos de potenciales compradores 
+                
+                <span class="copy__active">Crea un perfil de tu carro y publicalo GRATIS </span></p>
+                <!-- <p class="texto__beta">BETA</p> -->
+                <a href="carros-y-camionetas.php" class="cta">Encuentra tu proximo carro</a>
             </div>
         </section>
     </header>
@@ -151,143 +153,20 @@
                 </article>
             </div>
         </section>
-        <section class="projects container" data-aos="zoom-in">
-            <h2 class="subtitle solicitud">Servicios de conductor elegido disponibles<span class="point">.</span></h2>
-            <article class="container-bg">
-                <?php  
-                include'conexion-db-accent.php';
-                
-                $consulta__productos = "SELECT nombre_producto,valor_producto,descripcion,mas_vendido FROM productos WHERE activo = '1'";
-                $ejecutar__la__consulta = mysqli_query($conexion__db__accent,$consulta__productos);
-                while($fila__productos = mysqli_fetch_array($ejecutar__la__consulta)){ ?>
-                     <div class="card card__productos">
-                    <div class="cards__text card__tex__productos">
-                        <h3 class="card__title"> <span class="point"></span></h3>
-                        <br><br>
-                        <p class="card__date nombre__producto"><?php echo $fila__productos['nombre_producto']   ?></p>
-                        <p class="card__copy"><?php echo number_format($fila__productos['valor_producto'],2,'.','.')  ?></p>
-                        <p class="card__copy"><?php echo $fila__productos['descripcion'] ?></p>   
-                    </div>
-                    <p class="card__copy"><?php echo $fila__productos['mas_vendido'] ?></p>
-                </div>                                                                                                                               
-               <?php }?>    
-            </article>
-        </section>
-   
-        <section class="projects container" data-aos="zoom-in">
-            <h2 class="subtitle solicitud">Solicitud en tiempo real<span class="point">.</span></h2>
-            <p class="copy__section">Observa si el conductor esta disponible y contrata su servicio </p>
-            <article class="container-bg">
-                <div class="card">
-                    <div class="cards__text">
-                        <h3 class="card__title">Es facil <span class="point">.</span></h3>
-                        <p class="card__date">Comodidad</p>
-                        <p class="card__copy">Pide tu conductor elegido desde tu casa u oficina o donde te encuentres sin importar la hora que sea</p>
-                        <a href="usuario.php" class="card__button">Quiero ser usuario</a>
-                    </div>
-                </div>
-                <div class="background">
-                    <img src="img/celular__en__las__manos.webp" class="background__img" alt="persona en la calle con el celular en las manos" >
-                    <div class="background__text">
-                        <h3 class="background__title">Control</h3>
-                        <p class="background__copy">Tienes el control a la hora  de solicitar  tu conductor elegido al instante o puedes resevar el servicio 
-                            con una fecha especifica, todo esto en la palma de tu mano
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="cards__text">
-                        <h3 class="card__title">Perfil y experiencia<span class="point">.</span></h3>
-                        <p class="card__date">Perfil del conductor</p>
-                        <p class="card__copy">observa el perfil de cada conductor, su calificacion y comentarios de otros usuarios,  años de  experiencia como conductor</p>
-                        <a href="conductor.php" class="card__button">Quiero ser conductor</a>
-                    </div>
-                </div>
-                <div class="background">
-                    <img src="img/conductor.jpg" class="background__img" alt="persona conduciendo un vehiculo">
-                    <div class="background__text">
-                        <h3 class="background__title">Ayuda y soporte</h3>
-                        <p class="background__copy">contamos con un equipo humno dispuesto a resolver tus dudas en el menor tiempo posible</p>
-                    </div>
-                </div>
-            </article>
-        </section>
-        <section class="testimony" data-aos="zoom-in">
-            <div class="container">
-                <h2 class="subtitle">Notificaciones en tiempo real<span class="point">.</span></h2>
-                <p class="copy__section">recibe una notificacion en tiempo real cuando tengas un nuevo servicio</p>
+    
+         <section class=" container contenedor__anuncio__propio">
+            <div class="contenido__anuncio">
+                <img src="./img/imagen__anuncio__carros.png" alt="" class="imagen__anuncio__carros">
 
-                <div class="testimony-container">
-                    <div class="testimony__card">
-                        <img src="img/Notifications_Outline.svg" class="testimony__img" alt="avatar, notificaciones, ilustracion svg">
-                        <div class="testimony__copy">
-                            <i class='fas fa-tire-flat testimony__logo'></i>
-                            <div class="testimony__info">
-                                <h3 class="testimony__name">Conductores</h3>
-                                <p class="testimony__position">acepta solicitudes de acuerdo a tu ubicacion y disponibilidad</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimony__card">
-                        <img src="img/relacion__de__usuarios.svg" class="testimony__img" alt="usuarios, icono, ilustracion">
-                        <div class="testimony__copy">
-                            <!-- <i class='bx bxl-apple testimony__logo'></i> -->
-                            <div class="testimony__info">
-                                <h3 class="testimony__name">Tu servicio es valorado </h3>
-                                <p class="testimony__position">recibe tu calificacion una vez   el servicio termine </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimony__card">
-                        <div class="testimony__text">
-                            <img src="img/tomando__servicio.svg" class="testimony__img" alt=" ilustracion, svg, vehiculo,calle">
-                            <!-- <a href="./"><img src="./img/logo.png" alt="" class="logo__accent logo__footer"></a> -->
-                            <p class="testimony__history">En AdHoc pedir tu conductor elegido es facil y rapido, 
-                                puedes elgir el conductor que te llevara cual sea tu destino con la seguridad de  que tu vehiculo esta 
-                                en las mejores manos.
-                            </p>
-                        </div>
-                    </div>
-                    
-                </div>
             </div>
-        </section>
+            <div class="contenido__anuncio">
+                <h2 class="subtitulo__anuncio">Tu proximo carro esta aqui </h2>
+                 <p class="texto__anuncio">Compra el usado que te gusta o publica la venta de tu carro en unos simples pasos y vendelo mas rapido de lo que crees.</p>
+                   <a href="login-usuario.php" class="publicar__carro">Publicar mi carro</a>
+                </div>
+         </section>
+         <br><br>
        
-        <section class="email container container--modifier">
-            <h2 class="subtitle subtitle--modifier">Tu opción para cuando necesites un conductor elegido<span class="point">.</span></h2>
-
-            <p class="copy__section copy__section--modifier">Los numeros hablan por nosotros</p>
-
-            <div class="check">
-                <div class="check__item">
-                    <i class='bx bx-check' ></i>
-                    <div class="check__numbers">
-                        <p class="check__number">+200</p>
-                        <p class="check__copy">Servicios entregados con exito</p>
-                    </div>
-                </div>
-                <div class="check__item">
-                    <i class='bx bx-check' ></i>
-                    <div class="check__numbers">
-                        <p class="check__number">+2000</p>
-                        <p class="check__copy">Conductores  forman parte de nuestro equipo para que eligas el mejor</p>
-                    </div>
-                </div>
-                <div class="check__item">
-                    <i class='bx bx-check' ></i>
-                    <div class="check__numbers">
-                        <p class="check__number">+1000</p>
-                        <p class="check__copy">usuarios registrados</p>
-                    </div>
-                </div>
-            </div>
-            <!-- <form class="newsletter">
-                <input type="text" class="newsletter__input" placeholder="Ingresa tu email">
-                <input type="submit" class="newsletter__submit" value="Comienza hoy">
-            </form> -->
-        </section>
         <div class=" contenedor__unete">
             <div class="unete">
                 <div>

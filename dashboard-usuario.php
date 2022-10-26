@@ -1,6 +1,9 @@
 <?php include'layout/nav-home-usuario.php';
 include'conexion-db-accent.php';
-
+if(!isset($_SESSION['id_usuario'])){
+  header("Location: login-usuario.php");
+  die();
+}
     $consulta__datos__usuario = "SELECT *  FROM usuarios   WHERE id_usuario = '{$_SESSION['id_usuario']}' LIMIT 1";
     $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
     if(mysqli_num_rows($resultado__consulta) > 0){
@@ -27,10 +30,7 @@ include'conexion-db-accent.php';
     
     <p class="titulo__dashboard">Conductores disponibles</p>
 
-    <div id="insertar-conductores"></div>
-
     <div class="datos__perfiles__conductor" id="conductores-disponibles">
-      <!-- <div id="insert-conductores-disponibles" class="insert__datos__de__conductor"></div> -->
 </div>
 </div>
 <?php   if($datos__resultado['avatar'] === 'avatar__defecto.png'){  ?>

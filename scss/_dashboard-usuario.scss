@@ -144,20 +144,7 @@ background: linear-gradient(to right, #61045F, #AA076B); /* W3C, IE 10+/ Edge, F
   }
   
 
-  // form.example button {
-  //   float: left;
-  //   width: 10%;
-  //   padding: 11.5px;
-  //   background:$color__fondo;
-  //   color: white;
-  //   font-size: 17px;
-  //   border: 1px solid grey;
-  //   border-left: none; /* Prevent double borders */
-  //   cursor: pointer;
-  //   border: 0;
-  //   border-top-right-radius: 7px;
-  //   border-bottom-right-radius: 7px;
-  // }
+  
   
   
   form.example::after {
@@ -168,7 +155,7 @@ background: linear-gradient(to right, #61045F, #AA076B); /* W3C, IE 10+/ Edge, F
 
   .subtitulo__buscador{
     text-align: center;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     color: white;
     line-height: 150px;

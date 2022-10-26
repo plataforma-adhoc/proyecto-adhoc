@@ -41,7 +41,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                  $total__notificaciones = mysqli_num_rows($ejecutar__consulta) ?>
 
         <div class="enlaces__varios">
-        <button type="button" onclick="location.reload()" class="btn__recargar"><i class="fas fa-sync" title="recargar"></i></button>
+       
           <a href="perfil-conductor.php?id=<?php echo $datos__resultado['id_conductor'] ?>"
             class="enlace__perfil__usuario"><img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt=""
               class="avatar__perfil"></a>
