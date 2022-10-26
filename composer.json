@@ -1,6 +1,5 @@
 {
     "require": {
-        "vlucas/phpdotenv": "^4.2",
-        "sendinblue/api-v3-sdk": "8.x.x"
+        "vlucas/phpdotenv": "^5.5"
     }
 }
