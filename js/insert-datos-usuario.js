@@ -1,4 +1,4 @@
-  var url__servidor = 'https://www.adhoc.com.co/'
+  var url__servidor = 'https://adhoc.com.co/'
    const inputs =  document.querySelectorAll('#formulario-registro-usuario input');
    const expresiones = {
    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -421,7 +421,7 @@ export  function actualizar__contrasena__usuario(){
 
 export function recargar__conductores__disponibles(){
  let conductores__disponibles = document.getElementById('conductores-disponibles');
- console.log('cargando..')
+
 }
 
 setInterval(recargar__conductores__disponibles,5000)
@@ -465,13 +465,13 @@ export function buscar__carro(){
   
     let form__data =  new FormData();
     form__data.append('buscador',input)
-    fetch('load-carros.php',{
+    fetch(url__servidor+'load-carros.php',{
        method:'POST',
        body:form__data
     }).then(respuesta => respuesta.json())
     .then(data=>{
   insert__resultados.innerHTML = data;
   console.log(data)
-    }).catch(err => console.log(err))
+    })
   }
   }

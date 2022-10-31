@@ -100,7 +100,7 @@ paypal.Buttons({
       });
     },
     onApprove: function(data, actions) {
-      let url = 'https://www.adhoc.com.co/'
+      let url = 'https://adhoc.com.co/'
     return actions.order.capture().then(function(detalles) {
         console.log(detalles)
         fetch(url+'captura.php',{

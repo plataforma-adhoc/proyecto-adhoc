@@ -1,13 +1,28 @@
-<IfModule mod_rewrite.c>
+# <IfModule mod_rewrite.c>
+# RewriteEngine on
+
+ # RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}.php -f
+#RewriteCond %{REQUEST_URI} ^/404/$
+#RewriteRule ^(.*)$ $1.php
+
+#ErrorDocument 404 /accent__hollding/404
+#</IfModule>
+
+
 RewriteEngine on
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteCond %{REQUEST_URI} ^/404/$
 RewriteRule ^(.*)$ $1.php
+#RewriteRule ^([a-z]+)/?$ $1.php [NC] agrega / al final de url php
 
-ErrorDocument 404 /accent__hollding/404
-</IfModule>
 
-   php_value upload_max_filesize 100M
-   php_value post_max_size 100M
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+
+ php_value upload_max_filesize 8G
+php_value post_max_size 8G
+php_value max_execution_time 300
+php_value max_input_time 300

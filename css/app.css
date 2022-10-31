@@ -3628,6 +3628,7 @@ form.example::after {
 .titulo__pago {
   text-align: center;
   color: white;
+  font-size: 22px;
 }
 
 .contenedor__parrafo__saldo {
@@ -4679,6 +4680,11 @@ form.example::after {
   width: 250px;
 }
 
+.enlace__whatsapp:hover {
+  color: white;
+  opacity: 0.7;
+}
+
 .fa-whatsapp {
   font-size: 25px;
 }
@@ -4888,7 +4894,7 @@ form.example::after {
 
 .telefono__del__vendedor {
   color: white;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .telefono {
@@ -4898,7 +4904,7 @@ form.example::after {
 
 .telefono i {
   color: white;
-  font-size: 28px;
+  font-size: 25px;
 }
 
 .contenedor__imagen__no__disponible {
@@ -5099,58 +5105,6 @@ form.example::after {
   align-items: flex-start;
 }
 
-.custom-select {
-  position: relative;
-}
-
-.custom-select select {
-  display: none; /*hide original SELECT element: */
-}
-
-.select-selected {
-  background-color: #0A192F;
-}
-
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
-}
-
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
-}
-
-.select-items div, .select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border-bottom: 2px solid #212F37;
-  cursor: pointer;
-}
-
-.select-items {
-  position: absolute;
-  background-color: DodgerBlue;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-
-.select-hide {
-  display: none;
-}
-
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
 .step {
   border-radius: 3px;
   min-width: 100%;
@@ -5206,6 +5160,10 @@ form.example::after {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   height: auto;
+}
+
+.formulario__info__adicional {
+  width: 100%;
 }
 
 .content-icon-camera {
@@ -5538,6 +5496,31 @@ form.example::after {
     font-size: 14px;
   }
 }
+.proceso__pago {
+  color: white;
+  font-size: 22px;
+}
+
+.alert-success {
+  background: #212F37;
+}
+
+.texto__pago__exitoso {
+  color: white;
+}
+
+.fa-check-circle {
+  color: #008A55;
+}
+
+img[src*="https://cdn.rawgit.com/000webhost/log"] {
+  display: none;
+}
+
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+  display: none;
+}
+
 body {
   background: #0A192F;
   user-select: none;

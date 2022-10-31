@@ -1,4 +1,4 @@
-var url__servidor = 'https://www.adhoc.com.co/'
+var url__servidor = 'https://adhoc.com.co/'
 export  function insertar__sugerencia__usaurio(){
     let form__susgrencia = document.getElementById('form-sugerencias')
     if(form__susgrencia){

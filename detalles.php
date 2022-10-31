@@ -72,13 +72,13 @@
 
 <script>
    function agregarProducto(id,token){
-    let url = 'https://www.adhoc.com.co/';
+    let url = 'https://adhoc.com.co/';
        let form__data = new FormData();
 
        form__data.append('id',id);
        form__data.append('token',token);
 
-       fetch('agregar-servicio.php',{
+       fetch(url+'agregar-servicio.php',{
        method:'POST',
         body:form__data,
         

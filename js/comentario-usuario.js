@@ -1,5 +1,5 @@
 
-var url__servidor = 'https://www.adhoc.com.co/'
+var url__servidor = 'https://.adhoc.com.co/'
 
 
 export function comentario__usuario(){

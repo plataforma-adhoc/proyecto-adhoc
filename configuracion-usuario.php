@@ -6,7 +6,7 @@ if($id =! $id || $id ===""){
 }
 
 ?>
-    <!-- <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button> -->
+
 
 <div class="container contenedor__configuracion">
 <p class="titulo__dashboard">Configuraciones</p>

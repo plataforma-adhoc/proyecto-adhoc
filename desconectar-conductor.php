@@ -4,7 +4,7 @@ function cerrar__sesion(){
     session_start();
     $id__conductor = isset($_GET['id']) ? $_GET['id']: '';
     if($id__conductor){
-            session_destroy();
+            session_unset();
             header('Location:login-conductor.php');
 
     }else{

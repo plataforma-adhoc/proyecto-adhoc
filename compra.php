@@ -109,7 +109,7 @@ boton__eliminar.value = id;
 
 
 function elimina(){
-  let url = 'https://www.adhoc.com.co/'
+  let url = 'https://adhoc.com.co/'
   let boton__eliminar =  document.getElementById('boton-eliminar');
   let id = boton__eliminar.value;
   let form__data = new FormData();

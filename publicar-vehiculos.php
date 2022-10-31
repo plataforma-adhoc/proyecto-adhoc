@@ -4,9 +4,10 @@ include'conexion-db-accent.php';
  ?>
 
 <div class="container root">
-    <form  class="form-register" action="server.php" method="POST" enctype="multipart/form-data">
+    <form  class="form-register" id="formulario-datos-basicos-vehiculo">
     <input type="hidden"  class="step__input"name="nombre" value="<?php  echo $datos__resultado['nombre_usuario']  ?>">
       <input type="hidden"  class="step__input"name="avatar" value="<?php  echo $datos__resultado['avatar']  ?>">
+      <input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
         <div class="form-register__header">
             <ul class="progressbar">
                 <li class="progressbar__option active">paso 1</li>
@@ -32,33 +33,17 @@ include'conexion-db-accent.php';
                     <input type="text" placeholder=" Numero de matricula ingresa el ultimo numero * " class="step__input"name="matricula"id="matricula">
                     <input type="text" placeholder="Ciudad donde esta registrada la matricula * " class="step__input"name="ciudad-matricula"id="ciudad">
                     <input type="text" placeholder="Ciudad de venta * " class="step__input"name="ciudad-venta"id="venta">
-                    <!-- <select name="propietario" id="propietario" class="step__input">
+                    <select name="propietario" id="propietario" class="step__input">
                         <option selected>Unico dueño * </option>
                         <option value="si">Si</option>
                         <option value="no">No</option>
 
-                    </select> -->
-                        <div class="custom-select" style="width:500px;">
-                        <select name="propietario" id="propietario" >
-                        <option selected>Unico dueño * </option>
-                        <option value="si">Si</option>
-                        <option value="no">No</option>
-                        </select>
-                        </div>
+                    </select>
+                       
                     <input type="text" placeholder="Kilometraje del vehiculo  * " class="step__input" name="kilometros"id="kilometros">
                     <input type="text" placeholder="$ Precio del vehiculo * " class="step__input" name="precio-vehiculo"id="precio">
-                </div>
-                <div class="step__footer">
-                    <button type="button" class="step__button--next  inicio" data-to_step="2"
-                        data-step="1" disabled id="activar-btn">Siguiente</button>
-                </div>
-            </div>
-            <div class="step" id="step-2">
-                <div class="step__header">
-                    <h2 class="step__title">Informacion adicional de tu vehiculo</h2>
-                </div>
-                <div class="step__body">
-                    <select name="combustible" id="" class="step__input">
+                    <input type="text" placeholder="Numero de puertas * " class="step__input" name="puertas"id="puertas">
+                    <select name="combustible" id="combustible" class="step__input">
                         <option selected>Tipo de combustible</option>
                         <option value="Gasolina">Gasolina</option>
                         <option value="Gas natural">Gas natural</option>
@@ -67,13 +52,13 @@ include'conexion-db-accent.php';
                         <option value="Hibrido">Hibrido</option>
 
                     </select>
-                    <select name="caja" id="" class="step__input">
+                    <select name="caja" id="caja" class="step__input">
                         <option selected>Tipo de caja</option>
                         <option value="Mecanica">Mecanica</option>
                         <option value="Automatica"> Automatica</option>
                         <option value="Secuencial">Secuencial</option>
                     </select>
-                    <select name="direccion" id="" class="step__input">
+                    <select name="direccion" id="direccion" class="step__input">
                         <option selected>Tipo de direccion</option>
                         <option value="Asistida">Asistida</option>
                         <option value="Asistida Hidraulica"> Asistida Hidraulica</option>
@@ -83,7 +68,31 @@ include'conexion-db-accent.php';
 
                     </select>
 
-                    <input type="text" placeholder="Cilindraje del vehiculo" class="step__input" name="cilindraje">
+                    <input type="text" placeholder="Cilindraje del vehiculo" class="step__input" name="cilindraje" id="cilindraje">
+                    <textarea rows="4" cols="80" placeholder="Agrega más información de tu vehiculo"
+                        class="step__input text__area block"  name="descripcion" id="descripcion"></textarea>
+             
+                </div>
+                <div class="step__footer">
+                <button type="submit" class="step__button--next  inicio" 
+                        disabled id="activar-btn">Guardar información</button>
+                    <!-- <button type="button" class="step__button--next  inicio" data-to_step="2"
+                        data-step="1" disabled id="activar-btn">Siguiente</button> -->
+                        <br><br>
+                        <div id="button"></div>
+                </div>
+            </div>
+            </form>
+          
+            <div class="step block" id="step-2">
+                <div class="step__header">
+                    <h2 class="step__title">Informacion adicional de tu vehiculo</h2>
+                </div>
+                <div class="step__body ">
+                    <form class="formulario__info__adicional block" id="formulario-info-adicional-vehiculo">
+                <input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
+
+                  <br><br>
                     <div class="accordion block " id="accordionExample">
                         <div class="accordion-item ">
                             <h2 class="accordion-header bg-dark" id="headingOne">
@@ -95,6 +104,7 @@ include'conexion-db-accent.php';
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body acordeon__checkbox acordion__body">
+                                    
                                     <div class="form-check form-switch">
                                         <input class="form-check-input" type="checkbox" role="switch"
                                             id="flexSwitchCheckDefault" name="airbag-delatero">
@@ -265,7 +275,7 @@ include'conexion-db-accent.php';
                                         <input class="form-check-input" type="checkbox" role="switch"
                                             id="flexSwitchCheckDefault" name="radio-cassette">
                                         <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Radio cassette</label>
+                                            Radio digital</label>
                                     </div>
                                     <div class="form-check form-switch">
                                         <input class="form-check-input" type="checkbox" role="switch"
@@ -284,27 +294,34 @@ include'conexion-db-accent.php';
                         </div>
                     </div>
                     <br><br>
-                    <textarea rows="4" cols="80" placeholder="Agrega más información de tu vehiculo"
-                        class="step__input text__area block"  name="descripcion"></textarea>
+                   
                 </div>
                 <div class="step__footer">
-                    <button type="button" class="step__button step__button--back" data-to_step="1"
-                        data-step="2">Regresar</button>
-                    <button type="button" class="step__button step__button--next" data-to_step="3"
-                        data-step="2">Siguiente</button>
-                </div>
-                <div class="toda__la__info__del__vehiculo">
-                    <br>
-                    <p>Proporciona toda la información posible de tu vehiculo, <br>
+                    <!-- <button type="button" class="step__button step__button--back" data-to_step="1"
+                        data-step="2">Regresar</button> -->
+                        <button type="submit" class="step__button step__button--next" id="button-info">Guardar información</button>
+                    <!-- <button type="button" class="step__button step__button--next" data-to_step="3"
+                        data-step="2">Siguiente</button> -->
+                  
+                        <br><br>
+                        <div id="button-info-adicional"></div>
+                    </div>
+                    
+                    <div class="toda__la__info__del__vehiculo">
+                        <br>
+                        <p>Proporciona toda la información posible de tu vehiculo, <br>
                         puedes aumentar las posibilidades de venta ante un posible comprador
                     </p>
                 </div>
             </div>
+        </form>
             <div class="step" id="step-3">
                 <div class="step__header">
                     <h2 class="step__title">Sube las fotografias de tu vehiculo maximo 10 imagenes</h2>
                 </div>
                 <div class="step__body">
+                    <form id="formulario-insertar-imagenes"class="formulario__info__adicional block">
+                <input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
                     <div id="wrapper" class="block">
                     <div id="container-input">
                     <div class="wrap-file">
@@ -320,13 +337,16 @@ include'conexion-db-accent.php';
 	       </div>
                 </div>
                 <div class="step__footer">
-                    <button type="button" class="step__button step__button--back" data-to_step="2"
-                        data-step="3">Regresar</button>
-                    <button type="button" class="step__button step__button--next " data-to_step="4"
-                        data-step="3" >Siguiente</button>
+                <button type="submit" class="step__button step__button--next" id="button-imagenes">Guardar información</button>
+                    <!-- <button type="button" class="step__button step__button--back" data-to_step="2"
+                        data-step="3">Regresar</button> -->
+              
                         
+                         <br><br>
+                         <div id="insert-fotos"></div>
                 </div>
             </div>
+            </form>
             <div class="step" id="step-4">
                 <div class="step__header">
                     <h2 class="step__title">Contacto </h2>
@@ -336,6 +356,8 @@ include'conexion-db-accent.php';
                 <p class="step__texto">En tu medio de contacto podras recibir ofertas de los posibles compradores</p>
                
                 <div class="step__body ">
+                    <form id="formulario-contactos"class ="formulario__info__adicional block">
+                <input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
                 <div class="chek block">
                     <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -385,13 +407,15 @@ include'conexion-db-accent.php';
             </div>
             <br><br>
             <div class="step__footer ">
-                    <button type="button" class="step__button step__button--back" data-to_step="3"data-step="4">Regresar</button>
-                    <!-- <button type="submit" class="step__button" name="publicar">Registrarse</button> -->
-                    <button type="button" class="step__button step__button--next" data-to_step="5"
-                        data-step="4">Siguiente</button>
+                    <!-- <button type="button" class="step__button step__button--back" data-to_step="3"data-step="4">Regresar</button>
+                 -->
+                    <button type="submit" class="step__button" id="button-contacto">Guardar informacion</button>
+                    <br><br>
+                  <div id="button-siguiente"></div>
                         
                 </div>
                 </div>
+                </form>
                 <div class="step " id="step-5">
                     <div class="step__header">
                         <h2 class="step__title">Escoge tu plan</h2>
@@ -411,7 +435,8 @@ include'conexion-db-accent.php';
             <img src="./img/plan__free.svg" alt="">
             <h3><?php  echo $fila__planes['valor_paquete']  ?> <sup>$</sup></h3>
             <p><?php  echo $fila__planes['descripcion_paquete']  ?></p>
-            <a href="" class="boton" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" data-bs-id="<?php echo $fila__planes['id_paquete']  ?>" id="plan">Lo quiero</a>
+          <a href="proceso-de-pago?idpaq=<?php  echo $fila__planes['id_paquete'] ?>"class="boton">Lo quiero</a>
+            <!-- <a href="" class="boton" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" data-bs-id="<?php echo $fila__planes['id_paquete']  ?>" id="plan">Lo quiero</a> -->
         </div>
         <!-- <div class="tabla hover">
             <h2>Estandar</h2>
@@ -434,28 +459,11 @@ include'conexion-db-accent.php';
         </div>
              
                 <div class="step__footer">
-                <button type="button" class="step__button step__button--back" data-to_step="4"data-step="5">Regresar</button>
+                <!-- <button type="button" class="step__button step__button--back" data-to_step="4"data-step="5">Regresar</button> -->
                     
                 </div>
             </div>
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content modal__paquetes">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Procesar pago</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
-      </div>
-      <div class="modal-body modal__body" id="modal-body">
-     
-       
-      </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-primary " id="boton" >Publicar mi vehiculo</button>
-      </div>
-    </div>
-  </div>
-</div>
-    </form>
+
     <br>
 </div>
 
@@ -464,31 +472,7 @@ include'conexion-db-accent.php';
 </div>
 <script>
 
-let exampleModal = document.getElementById('exampleModal');
-exampleModal.addEventListener('show.bs.modal',function(event){
- let boton = event.relatedTarget
- var id = boton.getAttribute('data-bs-id')
- let botonEliminar = exampleModal.querySelector('.modal-footer #boton')
- botonEliminar.value = id
- let modal_body = document.getElementById('modal-body');
 
- <?php          
- $consulta = "SELECT * FROM planes__de__publicaciones ";
- $ejecutar__la__consulta = mysqli_query($conexion__db__accent,$consulta);
- if($ejecutar__la__consulta){
-   $fila = mysqli_fetch_array($ejecutar__la__consulta);
-   echo '
-   modal_body.innerHTML ="<p>Elegiste el plan  '.$fila['nombre_paquete'].'<br>'.
-   'Total a pagar '.$fila['valor_paquete'].'</p>" 
-   
-   
-   ';
- }
- 
- 
- ?>
-
-})
     let form = document.querySelector('.form-register');
     let progressOptions = document.querySelectorAll('.progressbar__option');
 
@@ -521,7 +505,8 @@ exampleModal.addEventListener('show.bs.modal',function(event){
   function validar(){
    let habilitar = false
    if(form.marca.value ==="" || form.modelo.value ==="" || form.color.value ==="" || form.fabricacion.value ===""||form.matricula.value ==="" ||form.ciudad.value ==="" || form.venta.value ===""
-   || form.propietario.value ==="" || form.kilometros.value ==="" || form.precio.value ===""){
+   || form.propietario.value ==="" || form.kilometros.value ==="" || form.precio.value ==="" || form.puertas.value === "" || form.combustible.value ===""
+   || form.caja.value ==="" || form.direccion.value ==="" || form.cilindraje.value === "" || form.descripcion.value ==="" ){
     habilitar = true
    }
 
@@ -559,85 +544,6 @@ exampleModal.addEventListener('show.bs.modal',function(event){
   }
 });
 
-var x, i, j, l, ll, selElmnt, a, b, c;
-/* Look for any elements with the class "custom-select": */
-x = document.getElementsByClassName("custom-select");
-l = x.length;
-for (i = 0; i < l; i++) {
-  selElmnt = x[i].getElementsByTagName("select")[0];
-  ll = selElmnt.length;
-  /* For each element, create a new DIV that will act as the selected item: */
-  a = document.createElement("DIV");
-  a.setAttribute("class", "select-selected");
-  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-  x[i].appendChild(a);
-  /* For each element, create a new DIV that will contain the option list: */
-  b = document.createElement("DIV");
-  b.setAttribute("class", "select-items select-hide");
-  for (j = 1; j < ll; j++) {
-    /* For each option in the original select element,
-    create a new DIV that will act as an option item: */
-    c = document.createElement("DIV");
-    c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function(e) {
-        /* When an item is clicked, update the original select box,
-        and the selected item: */
-        var y, i, k, s, h, sl, yl;
-        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        sl = s.length;
-        h = this.parentNode.previousSibling;
-        for (i = 0; i < sl; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
-            s.selectedIndex = i;
-            h.innerHTML = this.innerHTML;
-            y = this.parentNode.getElementsByClassName("same-as-selected");
-            yl = y.length;
-            for (k = 0; k < yl; k++) {
-              y[k].removeAttribute("class");
-            }
-            this.setAttribute("class", "same-as-selected");
-            break;
-          }
-        }
-        h.click();
-    });
-    b.appendChild(c);
-  }
-  x[i].appendChild(b);
-  a.addEventListener("click", function(e) {
-    /* When the select box is clicked, close any other select boxes,
-    and open/close the current select box: */
-    e.stopPropagation();
-    closeAllSelect(this);
-    this.nextSibling.classList.toggle("select-hide");
-    this.classList.toggle("select-arrow-active");
-  });
-}
 
-function closeAllSelect(elmnt) {
-  /* A function that will close all select boxes in the document,
-  except the current select box: */
-  var x, y, i, xl, yl, arrNo = [];
-  x = document.getElementsByClassName("select-items");
-  y = document.getElementsByClassName("select-selected");
-  xl = x.length;
-  yl = y.length;
-  for (i = 0; i < yl; i++) {
-    if (elmnt == y[i]) {
-      arrNo.push(i)
-    } else {
-      y[i].classList.remove("select-arrow-active");
-    }
-  }
-  for (i = 0; i < xl; i++) {
-    if (arrNo.indexOf(i)) {
-      x[i].classList.add("select-hide");
-    }
-  }
-}
-
-/* If the user clicks anywhere outside the select box,
-then close all select boxes: */
-document.addEventListener("click", closeAllSelect);
 </script>
 <?php include'layout/footer-home.php' ?>

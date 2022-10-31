@@ -1,0 +1,265 @@
+
+.contenedor__detalles__usado{
+    width: 100%;
+}
+
+.contendor__imagenes{
+    margin-top: 90px;
+    width: 100%;
+    position: relative;
+   height:auto;
+}
+
+.contendor__imagenes{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.image{
+    width: 250px;
+    height: 150px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 10px 10px;
+}
+
+.image img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: .2s linear;
+}
+.image img:hover{
+    transform:scale(1.1);
+}
+
+.popup-image{
+position:fixed;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+z-index: 100;
+background:rgba(0,0,0,.9);
+display: none;
+}
+
+.popup-image span{
+    position: absolute;
+    top:0;
+    right: 10px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+ 
+}
+
+.popup-image img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    object-fit: cover;
+    border-radius: 10px;
+ 
+}
+
+.informacion__general__del__vehiculo{
+    margin-top: -70px;
+}
+
+.detalles__principales{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detalles__vehiculo{
+    width: 40%;
+}
+
+.nombre__del__vehiculo,.precio__del__vehiculo{
+    color:white;
+}
+
+.referencia__del__vehiculo,.kilometros__del__vehiculo{
+    color: $color__gris;
+    font-size: 14px;
+}
+
+.caracteristicas__del__vehiculo__e__informacion__del__vendedor{
+    width: 100%;
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: -50px;
+   border-bottom: 1px gray solid;
+   flex-wrap: wrap;
+}
+
+.caracteristicas{
+    width: 49%;
+}
+
+.caracteristicas__de__vehiculo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.info__caracteristicas{
+ width: 33%;
+ height: 80px;
+ margin: 10px 0 0 0;
+}
+
+.texto__caracteristicas{
+    color: white;
+    font-size: 14px;
+}
+
+.texto__caracteristicas img{
+    color: $color__accent;
+}
+.info__caracteristicas i{
+ font-size: 32px;
+ color: black;
+}
+
+.respuesta__caracteristicas{
+    color: $color__gris;
+    margin-left: 40px;
+    margin-top: -10px;
+}
+
+
+
+
+.telefono__del__vendedor{
+    color: white;
+    font-size: 15px;
+}
+.telefono{
+    color: white;
+    color: $color__gris;   
+}
+.telefono i{
+    color: white;
+    font-size: 25px;
+}
+.contenedor__imagen__no__disponible{
+    width: 30%;
+     height: 30%;
+  
+}
+
+.contenedor__imagen__no__disponible img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+}
+.vendedor__dice,.subtitulo__informacion{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-top: 150px;
+}
+
+.contenido__informacion__del__vehiculo{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid gray;
+}
+
+.que__dice__el__vendedor{
+    color: white;
+    line-height: 25px;
+}
+
+.ficha__tecnica__del__vehiculo{
+    margin-top: 20px;
+}
+
+.acordion__body{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.acordion__body div{
+    width: 40%;
+    height: auto;
+}
+
+
+
+.contenedor__acordeon__recomendaciones{
+margin-top: -23rem;
+}
+.acordion__recomendacion{
+    border-left: solid 4px yellow; 
+}
+
+.fa-exclamation-triangle{
+    font-size: 25px;
+    background:$color__accent;
+    padding: 10px;
+    border-radius: 50px;
+    color: black;
+    text-align: center;
+}
+
+.texto__precaucion{
+    line-height: 20px;
+}
+
+@media screen and (max-width:815px){
+.caracteristicas{
+    width: 90%;
+    margin-top: -100px;
+}
+}
+
+@media screen and (max-width:768px){
+    popup-image img{
+        width:90%
+    }
+}
+
+@media screen and (max-width:700px){
+.contendor__imagenes{
+    width: 100%;
+}
+.image{
+    width: 250px;
+}
+}
+@media screen and (max-width:539px){
+.image{
+    width: 100%;
+}
+.caracteristicas__del__vehiculo__e__informacion__del__vendedor{
+    margin-top: 30px;
+}
+} 
+@media screen and (max-width:400px) {
+    .caracteristicas__del__vehiculo__e__informacion__del__vendedor{
+        margin-top: -30px;
+    }
+   
+   .nombre__del__vehiculo,.precio__del__vehiculo{
+    font-size: 18px;
+   }
+   .texto__caracteristicas,.respuesta__caracteristicas{
+   
+   font-size: 13px;
+   }
+}

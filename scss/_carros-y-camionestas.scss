@@ -1,0 +1,172 @@
+
+.contendor__de__vehiculos{
+    width: 100%;
+    height: auto;
+}
+.title__carros__y__comionetas{
+    color: white;
+    font-weight: bolder;
+}
+
+
+
+.subtitulo__vehiculos{
+    color: white;
+}
+.vehiculos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.descripcion__del__vehiculo{
+    width: 30%;
+    margin: 20px 20px 0;
+    background:$color__cards;
+    border-radius: 7px;
+
+}
+
+.conetendor__imagen__vehiculo{
+    height: 350px;
+}
+.imagen__del__vehiculo{
+    width: 100%;
+    border-radius: 7px;
+    height: 290px;
+}
+
+.datos__del__vehiculo{
+    width: 90%;
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 10px;
+}
+
+.nombre__del__vehiculo{
+    color: white;
+    font-size: 22px;
+}
+.motor{
+    display: flex;
+    justify-content: space-between;
+}
+.motor__del__vehiculo{
+    color: wheat;
+
+}
+
+.kilometraje__y__año{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+
+.kilometros,.modelo__del__vehiculo,.placas__del__vehiculo{
+    color: wheat;
+    padding: 10px;
+}
+
+.precio__del__vehiculo{
+    color: white;
+}
+
+.enlace__whatsapp{
+    display: inline-block;
+    text-decoration: 0;
+    background: #000;
+    color: white;
+    padding: 12px;
+    border-radius: 50px;
+    margin: 10px 0 15px 0;
+    width: 250px;
+}
+
+.enlace__whatsapp:hover{
+ color: white;
+ opacity: .7;
+}
+.fa-whatsapp{
+    font-size: 25px;
+}
+
+.mas__detalles{
+    display: inline-block;
+    text-decoration: 0;
+    color: white;
+    padding: 12px;
+    margin: 0 0 15px 0;
+}
+
+.mas__detalles:hover{
+    color: $color__gris;
+}
+
+
+@media screen and (max-width:1200px){
+    .contendor__de__vehiculos{
+        margin-top: -120px;
+    }
+    .descripcion__del__vehiculo{
+        width: 27%;
+    }
+
+    .subtitulo__vehiculos{
+        text-align: center;
+    }
+    .kilometraje__y__año{
+        font-size: 13px;
+        width: 100%;
+
+    }
+    .enlace__whatsapp{
+        font-size: 13px;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .contendor__de__vehiculos{
+        margin-top: -120px;
+    }
+    .descripcion__del__vehiculo{
+        width: 43%;
+    } 
+    .subtitulo__vehiculos{
+        text-align: center;
+    }
+    .enlace__whatsapp{
+        font-size: 13px;
+        width: 200px;
+    }
+    .kilometraje__y__año{
+        font-size: 13px;
+        width: 100%;
+
+    }
+    .kilometros,.modelo__del__vehiculo,.placas__del__vehiculo{
+        font-size: 13px;
+    }
+}
+
+@media  screen and (max-width:600px){
+.descripcion__del__vehiculo{
+    width: 90%;
+}
+.subtitulo__vehiculos{
+    text-align: center;
+}
+
+.enlace__vender__vehiculo{
+    display: none;
+}
+
+}
+

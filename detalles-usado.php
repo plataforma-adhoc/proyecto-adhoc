@@ -5,43 +5,53 @@ $id__publicacion = isset($_GET['idp']) ? $_GET['idp']:'';
 if($id__publicacion){
   $consulta__detalles__usado = "SELECT * FROM informacion__del__vehiculo__en__venta WHERE id_publicacion_vehiculo = '$id__publicacion' ";
   $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__detalles__usado);
+
+  $consulta__fotos__vehiculos = "SELECT foto_1,foto_2,foto_3,foto_4,foto_5,foto_6,foto_7,foto_8,foto_9,foto_10 FROM fotos__del__vehiculo WHERE id_fotos ='$id__publicacion'";
+  $ejecutar__consulta__fotos = mysqli_query($conexion__db__accent,$consulta__fotos__vehiculos);
+  $fila__fotos = mysqli_fetch_array($ejecutar__consulta__fotos);
+
+
+$consulta__contactos = "SELECT  telefono_1,telefono_2,whatsapp_1,whatsapp_2 FROM  contacto__vendedor WHERE id_contacto = '$id__publicacion'";
+$ejecutar__consulta__contacto = mysqli_query($conexion__db__accent,$consulta__contactos);
+$fila__contacto = mysqli_fetch_array($ejecutar__consulta__contacto);
+
  if(mysqli_num_rows($ejecutar__consulta) > 0){
  $fila = mysqli_fetch_array($ejecutar__consulta);?>
 <div class=" contenedor__detalles__usado">
 <div class="contendor__imagenes">
     <div class="image">
-        <img src="<?php  echo $fila['foto_1'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_1'] ?>" alt="">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila['foto_2'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_2'] ?>" alt="">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila['foto_3'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_3'] ?>" alt="">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila['foto_4'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_4'] ?>" alt="">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila['foto_5'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_5'] ?>" alt="">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila['foto_6'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_6'] ?>" alt="">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila['foto_7'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_7'] ?>" alt="">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila['foto_8'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_8'] ?>" alt="">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila['foto_9'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_9'] ?>" alt="">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila['foto_10'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_10'] ?>" alt="">
     </div>
     <div class="popup-image">
     <span>&times;</span>
-    <img src="./img/prueba.jpg" alt="">
+    <img src="<?php  echo $fila__fotos['foto_10'] ?>" alt="">
 
     </div>
 </div>
@@ -50,7 +60,7 @@ if($id__publicacion){
     <div class="detalles__principales">
 <div class="detalles__vehiculo">   
     <h2 class="nombre__del__vehiculo"><?php  echo  ucwords($fila['marca_del_vehiculo']) ?></h2>
-    <P class="referencia__del__vehiculo"><?php  echo  ($fila['modelo_vehiculo']) ?></P>
+    <P class="referencia__del__vehiculo"><?php  echo ucwords($fila['modelo_vehiculo']) ?></P>
 </div>
 <div class="detalles__vehiculo">
 <h2 class="precio__del__vehiculo">$<?php echo number_format($fila['precio_del_vehiculo'],2,'.','.')   ?></h2>
@@ -64,9 +74,16 @@ if($id__publicacion){
             <img src="upload/<?php echo $fila['foto_vendedor']  ?>" alt="" class="img__no__disponible">
             <br><br>
             <p class="telefono__del__vendedor">Telefono del vendedor</p>
-            <p class="telefono"><i class="fas fa-phone-volume"></i> <?php echo $fila['telefono_1']  ?></p>
-            <p class="telefono"><i class="fas fa-phone-volume"></i> <?php echo $fila['telefono_2']  ?></p>
-          <a href="https://api.whatsapp.com/send?phone=numero<?php  echo $fila['whatsapp_1']  ?>&text=mensaje=Hola vi el anuncio de tu vehiculo an AdHoc" class="enlace__whatsapp"><i class="fab fa-whatsapp"></i> Habla con el vendedor</a>
+            <p class="telefono"><i class="fas fa-phone-volume"></i> 
+            <?php 
+            if($fila__contacto['telefono_1']){
+            echo $fila__contacto['telefono_1']; 
+            }
+            ?>
+          
+          </p>
+            <p class="telefono"><i class="fas fa-phone-volume"></i> <?php echo $fila__contacto['telefono_2']  ?></p>
+          <a href="https://api.whatsapp.com/send?phone=numero<?php  echo $fila__contacto['whatsapp_1']  ?>&text=mensaje=Hola vi el anuncio de tu vehiculo en AdHoc" class="enlace__whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Habla con el vendedor</a>
 
    
        </div>
@@ -93,14 +110,11 @@ if($id__publicacion){
       </div>
       <div class="info__caracteristicas">
         <p class="texto__caracteristicas"><img src="https://img.icons8.com/fluency-systems-filled/32/000000/door-ajar.png"/>  Puertas </p>
-        <p class="respuesta__caracteristicas">5</p>
+        <p class="respuesta__caracteristicas"><?php echo $fila['numero_puertas'] ?></p>
       </div>
       <div class="info__caracteristicas">
-        <p class="texto__caracteristicas"><img src="https://img.icons8.com/fluency-systems-filled/32/000000/wind.png"/> Aire  </p>
-        <p class="respuesta__caracteristicas"><?php 
-        if($fila['aire_acondicionado'] === 'on'){ ?>
-           Si
-      <?php  } ?>
+        <p class="texto__caracteristicas"><img src="https://img.icons8.com/ios-filled/32/000000/keys-holder.png"/> Propietario unico </p>
+        <p class="respuesta__caracteristicas"><?php echo $fila['unico_propietario']  ?> 
       </p>
       </div>
       <div class="info__caracteristicas">
@@ -109,7 +123,7 @@ if($id__publicacion){
       </div>
       <div class="info__caracteristicas">
         <p class="texto__caracteristicas"> <img src="https://img.icons8.com/glyph-neue/32/000000/piston.png"/> Cilindraje </p>
-        <p class="respuesta__caracteristicas"><?php echo number_format($fila['cilindraje_vehiculo'],0,'.','.') ?></p>
+        <p class="respuesta__caracteristicas"><?php echo $fila['cilindraje_vehiculo'] ?></p>
       </div>
       <div class="info__caracteristicas">
         <p class="texto__caracteristicas"><img src="https://img.icons8.com/ios-filled/32/000000/licence-plate.png"/> Matricula </p>
@@ -129,50 +143,74 @@ if($id__publicacion){
 </p>
 
 </div>
+<?php    
+$selecion__seguridad__vehiculo = "SELECT * FROM seguridad__del__vehiculo WHERE id_seguridad = '$id__publicacion'";
+$ejecutar__consulta__seguridad = mysqli_query($conexion__db__accent,$selecion__seguridad__vehiculo);
+$fila__seguridad = mysqli_fetch_array($ejecutar__consulta__seguridad);
+
+$conuslta__equipamiento__vehiculo = "SELECT * FROM equipamiento__del__vehiculo WHERE id_equipamiento ='$id__publicacion'";
+$ejecutar__consulta__equipamiento = mysqli_query($conexion__db__accent,$conuslta__equipamiento__vehiculo);
+$fila__equipamiento = mysqli_fetch_array($ejecutar__consulta__equipamiento);
+
+$consulta__lujos = "SELECT * FROM disenio__y__estilo__vehiculo WHERE id_estilos = '$id__publicacion'";
+$ejecutar__consulta__lujos = mysqli_query($conexion__db__accent,$consulta__lujos);
+$fila__lujos = mysqli_fetch_array($ejecutar__consulta__lujos);
+?>
 <h3 class="vendedor__dice">Ficha tecnica</h3>
 <div class="ficha__tecnica__del__vehiculo">
 <div class="accordion" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-       Información general
+     Seguridad del vehiculo
       </button>
     </h2>
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
       <div class="accordion-body acordion__body">
         <div>
-            <p><strong>Direccion : </strong>   <?php echo ucfirst($fila['tipo_de_direccion']) ?></p>
-            <p><strong>Unico propietario : </strong><?php echo ucfirst($fila['unico_propietario']) ?></p>
+          
             <p><strong>Air bag delantero : </strong> <?php 
-            if($fila['air_bag_delantero']==='on'){ ?>
+            if($fila__seguridad['air_bag_delantero']==='on'){ ?>
                Si
           <?php  } ?>
             </p>
-            <p><strong>Air bag trasero  : </strong> <?php   if($fila['air_bag_trasero']==='on'){ ?>
+            <p><strong>Air bag trasero  : </strong> <?php   if($fila__seguridad['air_bag_trasero']==='on'){ ?>
                Si
           <?php  }  ?></p>
             <p><strong>Bloqueo central : </strong> <?php 
-              if($fila['bloqueo_central']==='on'){ ?>
+              if($fila__seguridad['bloqueo_central']==='on'){ ?>
                 Si
            <?php  } ?>
             </p>
-
+            <p><strong>Sensor punto ciego : </strong> <?php 
+              if($fila__seguridad['sensor_punto_ciego']==='on'){ ?>
+                Si
+           <?php  } ?>
+            </p>
+            <p><strong>Camara reversa : </strong> <?php 
+              if($fila__seguridad['camara_reversa']==='on'){ ?>
+                Si
+           <?php  } ?>
+            </p>
         </div>
         <div>
-            <p><strong>Vidrios electricos: </strong> <?php 
-              if($fila['vidrios_electricos']==='on'){ ?>
+            <p><strong>Control de ascenso: </strong> <?php 
+              if($fila__seguridad['control_de_ascenso']==='on'){ ?>
                 Si
            <?php  } ?></p>
-            <p><strong>Alarma : </strong><?php 
-              if($fila['alarma']==='on'){ ?>
+            <p><strong>Control de descenso : </strong><?php 
+              if($fila__seguridad['control_de_descenso']==='on'){ ?>
                 Si
            <?php  } ?></p>
-            <p><strong>Espejos electricos : </strong> <?php 
-              if($fila['espejos_electrico']==='on'){ ?>
+            <p><strong>Sensor delantero</strong> <?php 
+              if($fila__seguridad['sensor_delantero']==='on'){ ?>
                 Si
            <?php  } ?></p> 
                 
-             
+           <p><strong>Sensor reversa</strong> <?php 
+              if($fila__seguridad['sensor_reversa']==='on'){ ?>
+                Si
+           <?php  } ?></p> 
         </div>
         
       </div>
@@ -181,53 +219,57 @@ if($id__publicacion){
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-        Confort
+      Equipamiento del vehiculo
       </button>
     </h2>
     <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
       <div class="accordion-body acordion__body">
       <div>
+      <p><strong>Aire acondicionado: </strong> <?php 
+              if($fila__equipamiento['aire_acondicionado']==='on'){ ?>
+                Si
+           <?php  } ?></p>
             <p><strong>Android auto : </strong> <?php 
-              if($fila['android_auto']==='on'){ ?>
+              if($fila__equipamiento['android_auto']==='on'){ ?>
                 Si
            <?php  } ?></p>
             <p><strong>Apple car play: </strong> <?php 
-              if($fila['aple_car_play']==='on'){ ?>
+              if($fila__equipamiento['apple_car_play']==='on'){ ?>
                 Si
            <?php  } ?></p>
             <p><strong>Techo corredizo : </strong> <?php 
-              if($fila['techo_corredizo']==='on'){ ?>
+              if($fila__equipamiento['techo_corredizo']==='on'){ ?>
                 Si
            <?php  } ?></p>
             <p><strong>Exploradoras: </strong> <?php 
-              if($fila['exploradoras']==='on'){ ?>
+              if($fila__equipamiento['exploradoras']==='on'){ ?>
                 Si
            <?php  } ?></p>
-            <p><strong>Retrovisores : </strong> <?php 
-              if($fila['bloqueo_central']==='on'){ ?>
+            <p><strong>Retrovisores electrico: </strong> <?php 
+              if($fila__equipamiento['espejos_electrico']==='on'){ ?>
                 Si
            <?php  } ?></p>
            <p><strong>Techo panoramico : </strong> <?php 
-              if($fila['techo_panoramico']==='on'){ ?>
+              if($fila__equipamiento['techo_panoramico']==='on'){ ?>
                 Si
            <?php  } ?></p>
          
         </div>
        <div>
        <p><strong>Desempañador trasero : </strong> <?php 
-              if($fila['desempaniador_trasero']==='on'){ ?>
+              if($fila__equipamiento['desempaniador_trasero']==='on'){ ?>
                 Si
            <?php  } ?></p>
            <p><strong>GPS: </strong> <?php 
-              if($fila['gps']==='on'){ ?>
+              if($fila__equipamiento['gps']==='on'){ ?>
                 Si
            <?php  } ?></p>
            <p><strong>Parqueo automatico: </strong> <?php 
-              if($fila['parqueo_automatico']==='on'){ ?>
+              if($fila__equipamiento['parqueo_automatico']==='on'){ ?>
                 Si
            <?php  } ?></p>
            <p><strong>Bluetooht: </strong> <?php 
-              if($fila['bluetooth']==='on'){ ?>
+              if($fila__equipamiento['bluetooth']==='on'){ ?>
                 Si
            <?php  } ?></p>
        </div>
@@ -237,55 +279,29 @@ if($id__publicacion){
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-      Accesorios y  seguridad
+      Lujos del vehiculo
       </button>
     </h2>
     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
       <div class="accordion-body acordion__body">
       <div>
-            <p><strong>Camara reversa: </strong>  <?php 
-              if($fila['camara_reversa']==='on'){ ?>
+            <p><strong>Rines de lujo: </strong>  <?php 
+              if($fila__lujos['rines_de_lujo']==='on'){ ?>
                 Si
            <?php  } ?></p></p>
-            <p><strong>Sensor reversa: </strong>  <?php 
-              if($fila['sensor_reversa']==='on'){ ?>
+            <p><strong>Radio digital: </strong>  <?php 
+              if($fila__lujos['radio_cassette']==='on'){ ?>
                 Si
            <?php  } ?></p></p>
-            <p><strong>Sensor delantero: </strong> <?php 
-              if($fila['sensor_delantero']==='on'){ ?>
+            <p><strong>Radio CD: </strong> <?php 
+              if($fila__lujos['radio_cd']==='on'){ ?>
                 Si
            <?php  } ?></p>
-            <p><strong>Sensor punto ciego </strong>  <?php 
-              if($fila['sensor_punto_ciego']==='on'){ ?>
+            <p><strong>Pantalla de video </strong>  <?php 
+              if($fila__lujos['pantalla_de_video']==='on'){ ?>
                 Si
            <?php  } ?></p>
-     
-           <p><strong>Control de ascenso </strong>  <?php 
-              if($fila['control_de_ascenso']==='on'){ ?>
-                Si
-           <?php  } ?></p>
-        </div>
-      <div>
-      <p><strong>Control de descenso</strong>  <?php 
-              if($fila['control_de_descenso']==='on'){ ?>
-                Si
-           <?php  } ?></p>
-           <p><strong>Rines de lujo </strong>  <?php 
-              if($fila['rines_de_lujo']==='on'){ ?>
-                Si
-           <?php  } ?></p>
-           <p><strong>Radio digital </strong>  <?php 
-              if($fila['radio_cassette']==='on'){ ?>
-                Si
-           <?php  } ?></p>
-           <p><strong>Radio cd</strong>  <?php 
-              if($fila['radio_cd']==='on'){ ?>
-                Si
-           <?php  } ?></p>
-           <p><strong>Pantalla de video </strong>  <?php 
-              if($fila['pantalla_de_video']==='on'){ ?>
-                Si
-           <?php  } ?></p>
+        
       </div>
       </div>
     </div>

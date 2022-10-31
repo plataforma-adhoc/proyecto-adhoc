@@ -1,5 +1,6 @@
-
-AOS.init();
+// if(AOS){
+//   AOS.init();
+// }
 
 
 import {cerrar__ventana,abrir__modal__calificaciones, cerrar__modal__calificaciones,abrir__modal__vehiculos} from'./complementos.js';
@@ -60,6 +61,15 @@ comentarios__conductor()
 import {insertar__sugerencia__usaurio,insertar__sugerencia__conductor} from'./sugerencias.js';
 insertar__sugerencia__usaurio()
 insertar__sugerencia__conductor()
+
+
+
+
+import {datos__obligatorios__de__vehiculo,informacion__adicional__vehiculo,guardar__imagenes__vehiculo,contacto__vendedor} from './datos-vehiculo.js';
+datos__obligatorios__de__vehiculo();
+informacion__adicional__vehiculo();
+guardar__imagenes__vehiculo();
+contacto__vendedor();
 
 
     let btn__back =  document.getElementById('btn-back');

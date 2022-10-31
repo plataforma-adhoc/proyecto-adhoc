@@ -1,6 +1,6 @@
 
 
-   var url__servidor__conductor = 'https://www.adhoc.com.co/'
+   var url__servidor__conductor = 'https://adhoc.com.co/'
    const inputs =  document.querySelectorAll('#formulario-registro-conductor input');
    const expresiones = {
    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -565,7 +565,7 @@ if(span){
    
 export function recargar__solicitudes__conductores(){
   let contenedor__dasboard = document.getElementById('contenedor-dashboard');
-  console.log('cargando..')
+
  }
  
  setInterval(recargar__solicitudes__conductores,5000)

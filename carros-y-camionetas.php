@@ -24,10 +24,16 @@
 
   </div>
 <div class="container contendor__de__vehiculos">
-    <h3 class="subtitulo__vehiculos">Novedades</h3>
-    <div class="vehiculos"id="insertar-resultados">
-  </div>
+    <h3 class="subtitulo__vehiculos">Novedades</h3> 
+    <div class="vehiculos" id="insertar-resultados">
+   
+
+
+ </div>
+
+
   
+
 </div>
 <section class=" container contenedor__anuncio__propio">
             <div class="contenido__anuncio">

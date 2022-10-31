@@ -48,7 +48,7 @@
 
 <script>
    function agregar(id,token){
-       let url = 'https://www.adhoc.com.co/';
+       let url = 'https://adhoc.com.co/';
        let form__data = new FormData();
 
        form__data.append('id',id);

@@ -21,7 +21,7 @@
     <nav class="nav__hero">
       <div class="container nav__container">
       <div class="logo">
-            <a href="index.php"><img src="./img/logo.png" alt="" class="logo__accent"></a>
+            <a href="/"><img src="./img/logo.png" alt="" class="logo__accent"></a>
             <!-- <p class="texto__beta beta__home">BETA</p> -->  
                    
         </div>
@@ -75,10 +75,10 @@
     <p class="titulo__crear__cuenta">Crear una cuenta como </p>
     <div class="contenedor__btn__registros">
       <div>
-        <a href="usuario.php"class="btn__cuenta__registro">Usuario <i class="fas fa-arrow-right flecha"></i></a>
+        <a href="usuario"class="btn__cuenta__registro">Usuario <i class="fas fa-arrow-right flecha"></i></a>
       </div>
       <div>
-        <a href="conductor.php" class="btn__cuenta__registro">Conductor <i class="fas fa-arrow-right flecha"></i></a>
+        <a href="conductor" class="btn__cuenta__registro">Conductor <i class="fas fa-arrow-right flecha"></i></a>
       </div>
     </div>
   </div>
