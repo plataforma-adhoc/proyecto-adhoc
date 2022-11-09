@@ -8,7 +8,6 @@
             <div class="contenedor__inputs" >
                 <input type="text" placeholder="Tu E-mail" name="email" id="email"
                     class="capturarDatos" autofocus autocomplete="">
-                    <!-- <i class="formulario__validacion-estado icono__email__login fas fa-times-circle"></i> -->
 
             </div>
                <p class="formulario__input-error">El emil solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
@@ -30,8 +29,8 @@
             <input type="submit" value="INGRESAR" class="boton__registro" name="enviar">
         </div>
         <div class="contenedor__enlace__sesion block">
-        <div><a href="usuario.php" class="enlace___login">Registrarme </a></div>
-            <div> <a href="password-usuario.php" class="enlace___login">Olvide mi contraseña </a></div>
+        <div><a href="usuario" class="enlace___login">Registrarme </a></div>
+            <div> <a href="password-usuario" class="enlace___login">Olvide mi contraseña </a></div>
         </div>
     </div>
 </form>

@@ -6,7 +6,7 @@
     $id_conductor =  isset($_GET['idc']) ? $_GET['idc'] : '';
 
     if($id__servicio ==="" || $token === "" || $id_conductor ===""){
-     header("Location: dashboard-usuario.php");
+     header("Location: dashboard-usuario");
      exit;
     }else{
         $token__temporal = hash_hmac('sha1',$id__servicio,TOKEN);
@@ -28,7 +28,7 @@
             }
 
         }else{
-            header("Location: dashboard-usuario.php"); 
+            header("Location: dashboard-usuario"); 
             exit;
         }
     }
@@ -78,7 +78,7 @@
        form__data.append('id',id);
        form__data.append('token',token);
 
-       fetch(url+'agregar-servicio.php',{
+       fetch(url+'agregar-servicio',{
        method:'POST',
         body:form__data,
         
@@ -87,7 +87,7 @@
         if(data.ok){
         
         let elemento = document.getElementById('agregar').innerHTML = `
-        <a href="compra.php?idc=<?php  echo $id_conductor  ?>"class="enlace__compra" >Se agrego este servicio a tu lista</a>
+        <a href="compra?idc=<?php  echo $id_conductor  ?>"class="enlace__compra" >Se agrego este servicio a tu lista</a>
         
         `
         }

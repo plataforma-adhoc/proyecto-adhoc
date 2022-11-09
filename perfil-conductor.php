@@ -4,7 +4,7 @@ include'conexion-db-accent.php';
 
 $id__conductor = isset($_GET['id']) ?  $_GET['id']: '';
 if($id__conductor ===""){
- header("Location: dashboard-conductor.php");
+ header("Location: dashboard-conductor");
  exit;
 } 
 
@@ -18,12 +18,12 @@ if(mysqli_num_rows($resultado__consulta) > 0){
 
 
  }?>
-    <!-- <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button> -->
+
 <div class="contenedor__subtitulo__ad__panel">
     <h2 class="subtitulo__ad__panel">Mi Cuenta</h2>
 </div>
 <div class="otros__datos__de__perfil">
-    <a href="desconectar-conductor.php?id=<?php  echo $datos__resultado__conductor['id_conductor'] ?>" class="enlaces__de__mi__cuenta"><i class="fas fa-sign-out-alt"></i></i>Cerrar mi sesion</a>
+    <a href="desconectar-conductor?id=<?php  echo $datos__resultado__conductor['id_conductor'] ?>" class="enlaces__de__mi__cuenta"><i class="fas fa-sign-out-alt"></i></i>Cerrar mi sesion</a>
     <a href="configuracion-conductor.php?id=<?php echo $datos__resultado__conductor['id_conductor'] ?>" class="enlaces__de__mi__cuenta"><i class="fas fa-lock"></i> Acceso y seguridad</a>
     
     </div>
@@ -81,7 +81,7 @@ if(mysqli_num_rows($resultado__consulta) > 0){
   </ul>
 
   <div class="links">
-     <a href="edit-perfil-conductor.php?id=<?php echo $datos__resultado__conductor['id_conductor'] ?>" class="follow">Editar mi cuenta <i class="fas fa-long-arrow-alt-right"></i></a>
+     <a href="edit-perfil-conductor?id=<?php echo $datos__resultado__conductor['id_conductor'] ?>" class="follow">Editar mi cuenta <i class="fas fa-long-arrow-alt-right"></i></a>
 
   </div>
 

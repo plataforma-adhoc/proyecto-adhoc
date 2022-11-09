@@ -6,7 +6,7 @@ export function datos__obligatorios__de__vehiculo(){
        formulario__datos__obligatorios.addEventListener('submit',function(evento){
         let form__data = new FormData(document.getElementById('formulario-datos-basicos-vehiculo'))
         evento.preventDefault()
-         fetch(url__servidor+'insert-datos-obligatorios-vehiculo.php',{
+         fetch(url__servidor+'insert-datos-obligatorios-vehiculo',{
             method:'POST',
             body:form__data
          }).then(respuesta => respuesta.json())
@@ -34,7 +34,7 @@ export function informacion__adicional__vehiculo(){
           let form__data = new FormData(document.getElementById('formulario-info-adicional-vehiculo'))
         evento.preventDefault();
        console.log(form__data)
-        fetch(url__servidor+'insert-info-adicional-vehiculo.php',{
+        fetch(url__servidor+'insert-info-adicional-vehiculo',{
             method:'POST',
             body:form__data
         }).then(respuesta => respuesta.json())
@@ -61,7 +61,7 @@ export function guardar__imagenes__vehiculo(){
           let form__data = new FormData(document.getElementById('formulario-insertar-imagenes'))
         evento.preventDefault();
        console.log(form__data)
-        fetch(url__servidor+'insert-imagenes.php',{
+        fetch(url__servidor+'insert-imagenes',{
             method:'POST',
             body:form__data
         }).then(respuesta => respuesta.json())
@@ -87,7 +87,7 @@ export function contacto__vendedor(){
         contacto__vendedor.addEventListener('submit',function(evento){
           let form__data = new FormData(document.getElementById('formulario-contactos'))
         evento.preventDefault();
-        fetch(url__servidor+'insert-contacto-vendedor.php',{
+        fetch(url__servidor+'insert-contacto-vendedor',{
             method:'POST',
             body:form__data
         }).then(respuesta => respuesta.json())

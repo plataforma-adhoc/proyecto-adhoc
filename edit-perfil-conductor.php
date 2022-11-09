@@ -9,7 +9,7 @@ $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__cond
  ?>
     <!-- <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button> -->
 
-<form class="formulario editarPerfil formulario__conductor"  action="insert-edit-perfil-conductor.php" method="POST" enctype="multipart/form-data">
+<form class="formulario editarPerfil formulario__conductor"  action="insert-edit-perfil-conductor" method="POST" enctype="multipart/form-data">
     <br><br>
     <div class="avatar">
         <img src="upload/<?php echo $datos__resultado['avatar'] ?>" class="imagen__avatar">

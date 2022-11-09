@@ -52,7 +52,7 @@ while($fila = mysqli_fetch_array($ejecutar__consulta)){
   <a href="https://api.whatsapp.com/send?phone=numero'. $fila__contactos['whatsapp_1'].'&text=mensaje=Hola vi el anuncio de tu vehiculo an AdHoc" class="enlace__whatsapp"><i class="fab fa-whatsapp" target="_blank"></i> Habla con el vendedor</a>
    </div>
    <div>
-  <a href="detalles-usado.php?idp='.$fila['id_publicacion_vehiculo'].'" class="mas__detalles"><i class="fas fa-plus"></i> Mas detalles</a>
+  <a href="detalles-usado?idp='.$fila['id_publicacion_vehiculo'].'" class="mas__detalles"><i class="fas fa-plus"></i> Mas detalles</a>
    </div>
   </div>
 

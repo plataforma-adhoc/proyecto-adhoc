@@ -56,7 +56,7 @@ formulario__de__pago.addEventListener('submit',function(evento){
     evento.preventDefault();
     let form__data = new FormData(document.getElementById('formulario-proceso-de-pago'))
 let url__servidor  = 'https://adhoc.com.co/'
-    fetch(url__servidor+'insert-informacion-pago.php',{
+    fetch(url__servidor+'insert-informacion-pago',{
      method:'POST',
      body:form__data
     }).then(respuesta => respuesta.json())

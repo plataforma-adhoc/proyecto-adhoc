@@ -6,7 +6,7 @@
 
     $id__conductor = isset($_GET['idc']) ? $_GET['idc']:'';
     if($id__conductor ===""){
-       header("Location: dashboard-usuario.php");
+       header("Location: dashboard-usuario");
     }
     
     $consulta__datos__conductor = "SELECT * FROM conductores WHERE id_conductor = '$id__conductor' LIMIT 1";
@@ -55,7 +55,7 @@
        form__data.append('token',token);
      
 
-       fetch(url+'agregar-servicio.php',{
+       fetch(url+'agregar-servicio',{
        method:'POST',
         body:form__data,
         
@@ -66,7 +66,7 @@
       position: 'bottom-end',
       background:'#202F36',
       icon: 'success',
-      title: `<a href="compra.php?idc=<?php  echo $id__conductor  ?>"class="enlace__compra__servicio" >Se agrego a tu lista</a>`,
+      title: `<a href="compra?idc=<?php  echo $id__conductor  ?>"class="enlace__compra__servicio" >Se agrego a tu lista</a>`,
       toast:true,
       showConfirmButton: false,
       })

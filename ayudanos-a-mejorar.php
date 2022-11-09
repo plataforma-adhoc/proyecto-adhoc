@@ -4,7 +4,7 @@
 <div class="container contenedor__formulario__sugerencia">
     <h2 class="titulo__mejoras">Ayudanos a mejorar</h2>
     <p class="parrafo__mejoras">En que quieres que mejoremos, escribenos tu sugerencia y trabajaremos para mejorar 
-        o tienes alguna duda sobre nuestros servicos <a href="./contacto" class="enlace__a__contacto">contacatanos</a> y con gusto te ayudaremos
+        o tienes alguna duda sobre nuestros servicos <a href="contacto" class="enlace__a__contacto">contacatanos</a> y con gusto te ayudaremos
     </p>
     <form class="formulario__registro formulario__sugerencia" id="form-sugerencias">
         <div class="contenedor__formulario">
@@ -27,11 +27,7 @@
             <div class="contenedor__inputs">
                 <input type="email" placeholder="Tu email" name="email" 
                     class="capturarDatos" id="telefono" >
-          
-
             </div>
-          <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
-
      </div>
 </div>
         <p class="block">

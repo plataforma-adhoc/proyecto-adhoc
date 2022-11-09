@@ -2,14 +2,14 @@
 
 $id = $_GET['idu'] ? $_GET['idu']:'';
 if($id =! $id || $id ===""){
- header('Location: dashboard-usuario.php');
+ header('Location: dashboard-usuario');
 }
 
 ?>
 
 
 <div class="container contenedor__configuracion">
-<p class="titulo__dashboard">Configuraciones</p>
+<h2 class="titulo__dashboard">Configuracion</h2> 
     <p class="parrafo__configuracion">Elige una de las siguientes opciones para continuar, recuerda que si decides
         eliminar tu cuenta se perderan todos los datos, incluido
         el saldo que tengas en nuestro sistema .

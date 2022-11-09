@@ -1,7 +1,7 @@
 <?php include'layout/nav-home-usuario.php';
 include'conexion-db-accent.php';
 if(!isset($_SESSION['id_usuario'])){
-  header("Location: login-usuario.php");
+  header("Location: login-usuario");
   die();
 }
     $consulta__datos__usuario = "SELECT *  FROM usuarios   WHERE id_usuario = '{$_SESSION['id_usuario']}' LIMIT 1";
@@ -22,7 +22,6 @@ if(!isset($_SESSION['id_usuario'])){
         <div class="buscador">
         <form class="example">
         <input type="text" placeholder="Buscar un conductor" name="campo" id="campo">
-        <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
 </form>
 
 </div>
@@ -42,7 +41,7 @@ if(!isset($_SESSION['id_usuario'])){
  <div class="contenido">
    <h3 class="subtitulo__perfil__sin__editar"><strong><?php echo $datos__resultado['nombre_usuario'] ?></strong> Configura tu foto de perfil</h3>
    <p class="subtitulo__perfil__sin__editar">Termina de configurar tus datos para que las personas sepan que tu perfil es confiable.</p>
-   <a href="edit-perfil-usuario.php?idu=<?php echo $datos__resultado['id_usuario'] ?>" class="enlace__a__edicion btn__usuario">Empezar</a>
+   <a href="edit-perfil-usuario?idu=<?php echo $datos__resultado['id_usuario'] ?>" class="enlace__a__edicion btn__usuario">Empezar</a>
  </div>
 </div>
  <?php } ?>

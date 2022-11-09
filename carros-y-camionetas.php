@@ -18,7 +18,6 @@
         <div class="buscador">
         <form class="example">
         <input type="text" placeholder="Buscar un carro" name="buscador" id="buscador">
-        <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
 </form>
 
 
@@ -43,7 +42,7 @@
             <div class="contenido__anuncio">
                 <h2 class="subtitulo__anuncio">Conductor elegido </h2>
                  <p class="texto__anuncio">Contrata los servicios de un conductor elegido si no puedes conducir tu carro </p>
-                   <a href="dashboard-usuario.php" class="publicar__carro">Conductores</a>
+                   <a href="dashboard-usuario" class="publicar__carro">Conductores</a>
                 </div>
          </section>
 <?php  include'layout/footer.php';

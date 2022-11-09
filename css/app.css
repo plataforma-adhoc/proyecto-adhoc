@@ -23,6 +23,25 @@
   --nav-count: 10;
 }
 
+.seccion__promocion {
+  height: 120px;
+  background-image: url(../img/imagen__navideña.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.texto__anuncio {
+  width: 40%;
+  height: 150px;
+  margin: auto;
+}
+
+.texto__anuncio h2 {
+  font-size: 20px;
+  color: white;
+  line-height: 20px;
+}
+
 .enlace__vender__vehiculo {
   display: inline-block;
   text-decoration: 0;
@@ -113,7 +132,7 @@
 .nav-link a {
   text-decoration: 0;
   color: gray;
-  font-size: 20px;
+  font-size: 18px;
   margin: 0 0 0 5px;
 }
 
@@ -121,7 +140,7 @@
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 7px;
   margin: 0 0 0 5px;
-  width: 95%;
+  width: 80%;
 }
 
 .nav-link:focus, .nav-link:active {
@@ -316,24 +335,9 @@
   padding: 0;
 }
 
-.logo__name {
-  font-size: 24px;
-}
-
 .logo__accent {
-  width: 90%;
-  height: 30px;
-  position: relative;
-}
-
-.texto__beta {
-  font-size: 12px;
-  color: white;
-  padding: 5px;
-  background: #C0392B;
-  border-radius: 25px;
-  width: 50px;
-  text-align: center;
+  width: 100%;
+  height: 50px;
 }
 
 .point {
@@ -811,7 +815,6 @@ ul {
   background-color: #ffffff;
 }
 
-/*responsive*/
 @media screen and (max-width: 900px) {
   .modal__registros {
     width: 80%;
@@ -976,6 +979,9 @@ footer .container {
   }
 }
 @media screen and (max-width: 680px) {
+  .texto__anuncio {
+    width: 80%;
+  }
   .contenedor__anuncio__propio {
     height: auto;
   }
@@ -1433,61 +1439,6 @@ template {
   opacity: 0;
 }
 
-.uno {
-  top: 250px;
-  left: 22.5%;
-}
-
-.dos {
-  top: 250px;
-  right: 59.5%;
-}
-
-.tres {
-  top: 360px;
-  left: 22.5%;
-}
-
-.cuatro {
-  right: 59.5%;
-  top: 360px;
-}
-
-.cinco {
-  left: 22.5%;
-  top: 470px;
-}
-
-.seis {
-  right: 59.5%;
-  top: 475px;
-}
-
-.siete {
-  left: 22.5%;
-  top: 590px;
-}
-
-.siete__contrasena {
-  right: 59.5%;
-  top: 590px;
-}
-
-.ocho {
-  right: 59.5%;
-  top: 590px;
-}
-
-.nueve {
-  right: 59.5%;
-  top: 700px;
-}
-
-.icono__email__login {
-  right: 59.5%;
-  top: 250px;
-}
-
 .formulario__grupo-correcto .formulario__validacion-estado {
   color: #1ed12d;
   opacity: 1;
@@ -1570,6 +1521,7 @@ template {
 
 .enlace___login:hover {
   border-bottom: solid 2px white;
+  color: white;
 }
 
 .terminos {
@@ -1606,8 +1558,8 @@ template {
   padding: 10px 0 5px 60px;
   display: block;
   color: white;
-  font-weight: bold;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .content-input input + i {
@@ -1784,7 +1736,7 @@ template {
 .formas__de__contacto {
   margin: 90px 0 0 0;
   width: 20%;
-  height: 100px;
+  height: 120px;
   border-radius: 7px;
   border: solid 2px #008A55;
   text-decoration: 0;
@@ -5214,18 +5166,32 @@ form.example::after {
   height: auto;
 }
 
+.label__datos__carro {
+  display: block;
+}
+
 .step__input {
   display: block;
   width: 100%;
   padding: 15px;
   margin-bottom: 10px;
-  border-radius: 3px;
-  outline: 0;
-  border: 0;
+  border-radius: 10px;
   color: white;
   transition: 0.3s ease all;
-  border: none;
-  border-bottom: 2px solid #212F37;
+  background: #0A192F;
+  border: solid 1px #4285f4;
+  outline: 0;
+}
+
+.form-floating label {
+  color: white;
+}
+
+.form-control {
+  color: white;
+}
+
+.step__input:focus {
   background: #0A192F;
 }
 

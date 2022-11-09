@@ -20,38 +20,38 @@ $fila__contacto = mysqli_fetch_array($ejecutar__consulta__contacto);
 <div class=" contenedor__detalles__usado">
 <div class="contendor__imagenes">
     <div class="image">
-        <img src="<?php  echo $fila__fotos['foto_1'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_1'] ?>" alt="venta de carros usados y seminuevos">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila__fotos['foto_2'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_2'] ?>" alt="venta de carros usados y seminuevos">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila__fotos['foto_3'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_3'] ?>" alt="venta de carros usados y seminuevos">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila__fotos['foto_4'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_4'] ?>" alt="venta de carros usados y seminuevos">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila__fotos['foto_5'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_5'] ?>" alt="venta de carros usados y seminuevos">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila__fotos['foto_6'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_6'] ?>" alt="venta de carros usados y seminuevos">
     </div>
     <div class="image">
         <img src="<?php  echo $fila__fotos['foto_7'] ?>" alt="">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila__fotos['foto_8'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_8'] ?>" alt="venta de carros usados y seminuevos">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila__fotos['foto_9'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_9'] ?>" alt="venta de carros usados y seminuevos">
     </div>
     <div class="image">
-        <img src="<?php  echo $fila__fotos['foto_10'] ?>" alt="">
+        <img src="<?php  echo $fila__fotos['foto_10'] ?>" alt="venta de carros usados y seminuevos">
     </div>
     <div class="popup-image">
     <span>&times;</span>
-    <img src="<?php  echo $fila__fotos['foto_10'] ?>" alt="">
+    <img src="<?php  echo $fila__fotos['foto_10'] ?>" alt="venta de carros usados y seminuevos">
 
     </div>
 </div>
@@ -338,7 +338,7 @@ para verificar la legalidad del vehiculo
 e incluso comunicate para estar seguro
 </p>
     <br>
-    <a href="contacto.php">No estas seguro ?  comunicate con nosotros</a>
+    <a href="contacto">No estas seguro ?  comunicate con nosotros</a>
       </div>
     </div>
   </div>

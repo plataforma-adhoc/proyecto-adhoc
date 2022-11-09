@@ -2,7 +2,7 @@
 
 $id = $_GET['id'] ? $_GET['id']:'';
 if($id =! $id || $id ===""){
- header('Location: dashboard-conductor.php');
+ header('Location: dashboard-conductor');
 }
 
 ?>

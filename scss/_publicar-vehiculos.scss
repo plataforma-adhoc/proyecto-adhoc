@@ -220,23 +220,33 @@
     width: 100%;
     height: auto;
 }
-
+.label__datos__carro{
+  display: block;
+}
 .step__input {
     display: block;
     width: 100%;
     padding: 15px;
     margin-bottom: 10px;
-    border-radius: 3px;
-    outline: 0;
-    border: 0;
+    border-radius: 10px;
     color:white;
     transition: .3s ease all;
-    border: none;
-    border-bottom: 2px solid $color__dark;
     background:$color__fondo;
+    border: solid 1px #4285f4;
+    outline: 0;
 }
 
+.form-floating label{
+  color: white;
+}
 
+.form-control{
+  color:white;
+}
+
+.step__input:focus{
+  background:$color__fondo;
+} 
 
 .text__area{
     max-width: 100%;

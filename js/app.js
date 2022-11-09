@@ -1,6 +1,5 @@
-// if(AOS){
-//   AOS.init();
-// }
+
+  AOS.init();
 
 
 import {cerrar__ventana,abrir__modal__calificaciones, cerrar__modal__calificaciones,abrir__modal__vehiculos} from'./complementos.js';

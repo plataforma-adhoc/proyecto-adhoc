@@ -6,7 +6,7 @@ var url__servidor = 'https://adhoc.com.co/'
        form__me_gusta.addEventListener('submit',function(evento){
         evento.preventDefault();
         let form__data = new FormData(document.getElementById('form-comentario-conductor'))
-        fetch(url__servidor+'insert-comentario-conductor.php',{
+        fetch(url__servidor+'insert-comentario-conductor',{
           method:'POST',
           body:form__data
         }).then(respuesta => respuesta.json())

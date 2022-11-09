@@ -8,7 +8,7 @@ export function comentario__usuario(){
    form__me_gusta.addEventListener('submit',function(evento){
     evento.preventDefault();
     let form__data = new FormData(document.getElementById('form-comentario'))
-    fetch(url__servidor+'insert-comentario-usuario.php',{
+    fetch(url__servidor+'insert-comentario-usuario',{
       method:'POST',
       body:form__data
     }).then(respuesta => respuesta.json())

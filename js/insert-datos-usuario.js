@@ -182,13 +182,13 @@
         evento.preventDefault();
         
         let data = new FormData(document.getElementById('formulario-registro-usuario'))
-        fetch(url__servidor+'insert-datos-usuario.php',{
+        fetch(url__servidor+'insert-datos-usuario',{
             method:'POST',
             body:data
         }).then(respuesta => respuesta.json())
         .then(datos =>{
            if(datos == 'true'){
-            window.location.href = 'dashboard-usuario.php';
+            window.location.href = 'dashboard-usuario';
 
            }else{
             Swal.fire({
@@ -249,14 +249,14 @@ export function  insert__login__usuario(){
         evento.preventDefault();
         
         let datos = new FormData(document.getElementById('formulario-login'));
-        fetch(url__servidor+'insert-login-usuario.php',{
+        fetch(url__servidor+'insert-login-usuario',{
             method:'POST',
             body:datos
 
         }).then(respuesta => respuesta.json())
         .then(data =>{
             if(data ==  'true'){
-                window.location.href = 'dashboard-usuario.php';
+                window.location.href = 'dashboard-usuario';
             }else{
                 Swal.fire({
                   background:'#202F36',
@@ -279,7 +279,7 @@ export function password__usuario(){
 
     let datos = new FormData( document.getElementById('formulario-contraseña'))
     evento.preventDefault();
-     fetch(url__servidor+'insert-contrasena-usuario.php',{
+     fetch(url__servidor+'insert-contrasena-usuario',{
       method:'POST',
       body:datos
      }).then(respuesta => respuesta.json())
@@ -318,7 +318,7 @@ export  function actualizar__contrasena__usuario(){
     evento.preventDefault();
 
    let data = new FormData( document.getElementById('formulario-actaulizar-contrasena-usuario'));
-    fetch(url__servidor+'insert-nueva-contrasena-usuario.php',{
+    fetch(url__servidor+'insert-nueva-contrasena-usuario',{
       method:'POST',
       body:data
     }).then(respuesta => respuesta.json())
@@ -361,7 +361,7 @@ export  function actualizar__contrasena__usuario(){
      formulario__fin__de__compra.addEventListener('submit',function(event){
        event.preventDefault();
        let data = new FormData(document.getElementById('formulario-fin-de-compra'))
-       fetch(url__servidor+'insert-datos-fin-compra.php',{
+       fetch(url__servidor+'insert-datos-fin-compra',{
         method:'POST',
         body:data
        }).then(respuesta => respuesta.json())
@@ -373,7 +373,7 @@ export  function actualizar__contrasena__usuario(){
             title: `Tu proceso se ha completado con exito`
           
           })
-          window.location.href='dashboard-usuario.php'
+          window.location.href='dashboard-usuario'
 
         }else{
           Swal.fire({
@@ -440,7 +440,7 @@ export function getData(){
   
     let form__data =  new FormData();
     form__data.append('campo',input)
-    fetch(url__servidor+'load.php',{
+    fetch(url__servidor+'load',{
        method:'POST',
        body:form__data
     }).then(respuesta => respuesta.json())
@@ -465,7 +465,7 @@ export function buscar__carro(){
   
     let form__data =  new FormData();
     form__data.append('buscador',input)
-    fetch(url__servidor+'load-carros.php',{
+    fetch(url__servidor+'load-carros',{
        method:'POST',
        body:form__data
     }).then(respuesta => respuesta.json())

@@ -11,7 +11,7 @@ include'layout/nabvar.php';
    $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__recuperar__contrasena);
    $resultado__consulta = mysqli_fetch_array($ejecutar__consulta);
    if(!$resultado__consulta){
-     header('Location: password-usuario.php');
+     header('Location: password-usuario');
      die();
    }else{
      
@@ -30,7 +30,7 @@ include'layout/nabvar.php';
      <h1 class="titulo__actualizacion">Tu contraseña se actualizo con exito</h1>
     </div>
     <div class="contenedor__enlace__iniciar__sesion">
-        <a href="login-usuario.php" class="enlace__iniciar__sesion">iniciar sesion</a>
+        <a href="login-usuario" class="enlace__iniciar__sesion">iniciar sesion</a>
     </div>
  
  </div>

@@ -3,7 +3,7 @@
 <div class="container contenedor__como__funciona">
   <h2 class="subtitulo__como__funciona">Como funciona</h2>
   <p class="parrafo__como__funciona">Quieres saber como funciona nuestro sistema ? te invitamos a dar un recorrido por esta sección y veras lo facil que es  usar la plataforma.
-    Tienes  dudas puedes ver los  <a href="terminos-y-condiciones-de-uso.php" class="enlaces__de__ayuda">terminos y condiciones</a> o <a href="contacto.php"  class="enlaces__de__ayuda">contactanos</a>
+    Tienes  dudas puedes ver los  <a href="terminos-y-condiciones-de-uso" class="enlaces__de__ayuda">terminos y condiciones</a> o <a href="contacto.php"  class="enlaces__de__ayuda">contactanos</a>
   </p>
  <br><br><br><br>
   <p class="texto__como__funciona">Para los usuarios</p>

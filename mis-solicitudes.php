@@ -18,8 +18,6 @@ if($id__conductor ){
 }
  ?>
 
-
-<!-- <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button> -->
 <div class="container contenedor__mis__solicitudes">
   <h2 class="subtitulo__solicitudes">Solicitudes</h2>
   <p class="texto__solicitud">En esta seccion podras encontrar toda la informacion de tus solicitudes de servicio de conductor elegido ,

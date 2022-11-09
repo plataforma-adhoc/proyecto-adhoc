@@ -2,7 +2,7 @@
 include'conexion-db-accent.php';  
 session_start();
 if(!isset($_SESSION['id_usuario'])){
-  header("Location: login-usuario.php");
+  header("Location: login-usuario");
   die();
 }else{
   $consulta__datos = "SELECT *  FROM usuarios   WHERE id_usuario = '{$_SESSION['id_usuario']}' LIMIT 1";
@@ -22,14 +22,14 @@ if(!isset($_SESSION['id_usuario'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ad Hoc | <?php echo $datos__resultado['nombre_usuario'] ?></title>
+    <title><?php echo $datos__resultado['nombre_usuario'] ?>en AdHoc, compra y venta de vehiculos usados</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/app.css">
-    <link rel="icon" type="image/ico" href="./img/favicon.ico"/>
+    <link rel="icon" type="image/ico" href="./img/favicon.png"/>
 </head>
 
 <body>
@@ -37,7 +37,7 @@ if(!isset($_SESSION['id_usuario'])){
         <nav class="nav__hero">
             <div class="container nav__container">
                 <div class="logo">
-                    <a href="dashboard-usuario.php"><img src="./img/logo.png" alt="" class="logo__accent logo__home"></a>
+                    <a href="dashboard-usuario"><img src="./img/logo.png" alt="" class="logo__accent logo__home"></a>
                 </div>
                 <?php  $consulta__comentarios = "SELECT * FROM notificaciones__conductor WHERE id_usuario = '{$_SESSION['id_usuario']}' AND leido = '0'   ORDER BY id_notificacion DESC LIMIT 5";
                 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
@@ -46,7 +46,7 @@ if(!isset($_SESSION['id_usuario'])){
                
                  ?>
                  <div class="enlaces__varios">
-                   <a href="perfil-usuario.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__perfil__usuario"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"></a>
+                   <a href="perfil-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__perfil__usuario"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"></a>
                    <a href="#" class="enlace__notificaciones" id="abrir-modal"><i class="far fa-bell"></i>
             <?php  if($total__notificaciones > 0){ ?><span class="numero__notificaciones">
               <?php   echo $total__notificaciones ?></span> <?php } ?>
@@ -68,7 +68,7 @@ if(!isset($_SESSION['id_usuario'])){
                 </label>
                 <ul class="nav-links links__dashboard">
                   <li class="nav-link">
-                    <a href="perfil-usuario.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>"
+                    <a href="perfil-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>"
                       class="enlaces__menu__home">
                       <img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil">
                     </a>
@@ -78,36 +78,36 @@ if(!isset($_SESSION['id_usuario'])){
                   </li>
                   <li class="nav-link">
                     <i class="fas fa-home"></i>
-                    <a href="dashboard-usuario.php">Home</a>
+                    <a href="dashboard-usuario">Home</a>
   
                   </li>
                   <li class="nav-link">
                     <i class="fas fa-history"></i>
-                    <a href="historial-usuario.php?idu=<?php echo $datos__resultado['id_usuario'] ?>"
+                    <a href="historial-usuario?idu=<?php echo $datos__resultado['id_usuario'] ?>"
                       class="enlaces__menu__home">Mi historial</a>
                   </li>
                   <li class="nav-link">
                   <i class="fas fa-shopping-bag"></i>
-                    <a href="publicar-vehiculos.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
+                    <a href="publicar-vehiculos?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
                       Publicar Vehiculo</a>
   
                   </li>
                   <li class="nav-link">
                     <i class="fas fa-cogs"></i>
-                    <a href="configuracion-usuario.php?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
+                    <a href="configuracion-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
                       Configuracion</a>
   
                   </li>
                   <li class="nav-link">
                   <i class="fas fa-mail-bulk"></i>
-                    <a href="ayudanos-a-mejorar.php">
+                    <a href="ayudanos-a-mejorar">
                       Ayudanos a mejorar</a>
   
                   </li>
                 
                   <li class="nav-link">
                     <i class="fas fa-power-off"></i>
-                    <a href="desconectar-usuario.php?id=<?php  echo $datos__resultado['id_usuario'] ?>">Cerrar
+                    <a href="desconectar-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>">Cerrar
                       sesión</a>
                   </li>
                 </ul>
@@ -128,7 +128,7 @@ if(!isset($_SESSION['id_usuario'])){
         if(mysqli_num_rows($ejecutar__consulta) > 0){
           while($fila__recorrido = mysqli_fetch_array($ejecutar__consulta)){?>
                 <div class="contenido__notificacion">
-                <a href="notificaciones-usuario.php?id=<?php  echo $fila__recorrido['id_notificacion'] ?>"class="enlaces__ver__notificacion">
+                <a href="notificaciones-usuario?id=<?php  echo $fila__recorrido['id_notificacion'] ?>"class="enlaces__ver__notificacion">
                     <img src="upload/<?php echo $fila__recorrido['avatar'] ?>" alt="" class="avatar__perfil">
                     <div class="datos"> <?php echo $fila__recorrido['nombre_usuario'] ?> ha hecho un comentario <i
                             class="fas fa-comment-alt"></i> <br>
@@ -140,7 +140,7 @@ if(!isset($_SESSION['id_usuario'])){
            
             <?php } ?>
             <?php } ?> 
-            <a href="notificaciones-usuario.php" class="enlace__mas__notificaciones"><i class="fas fa-plus"></i> ver mas
+            <a href="notificaciones-usuario" class="enlace__mas__notificaciones"><i class="fas fa-plus"></i> ver mas
            notificaciones</a>
       
              

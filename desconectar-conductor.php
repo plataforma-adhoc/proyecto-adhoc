@@ -5,10 +5,10 @@ function cerrar__sesion(){
     $id__conductor = isset($_GET['id']) ? $_GET['id']: '';
     if($id__conductor){
             session_unset();
-            header('Location:login-conductor.php');
+            header('Location:login-conductor');
 
     }else{
-        header('Location: login-conductor.php');
+        header('Location: login-conductor');
 
     }
     

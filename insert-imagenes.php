@@ -7,9 +7,6 @@
   }
   
 
-
-
-
 foreach($_FILES['file']['tmp_name'] as $key => $value){
  if(file_exists($_FILES['file']['tmp_name'][$key])){
   if(move_uploaded_file($_FILES['file']['tmp_name'][$key],'upload/'.$_FILES['file']['name'][$key])){
@@ -39,16 +36,7 @@ $ejecutar__consulta = mysqli_query($conexion__db__accent,$insertar__fotos);
 if($ejecutar__consulta){
   echo json_encode('ok');
 }
-// $insertar = "INSERT INTO informacion__del__vehiculo__en__venta(
 
-// foto_1,foto_2,foto_3,foto_4,foto_5,foto_6,foto_7,foto_8,foto_9,foto_10,) 
-// VALUES(
-
-// '$ruta__1','$ruta__2','$ruta__3','$ruta__4','$ruta__5','$ruta__6','$ruta__7','$ruta__8','$ruta__9','$ruta__10','$Whatsapp__uno','$Whatsapp__dos','$telefono__uno','$telefono__dos')";
-// $ejecutar__consulta = mysqli_query($conexion__db__accent,$insertar);
-// if($ejecutar__consulta){
- 
-// }
 
 
   

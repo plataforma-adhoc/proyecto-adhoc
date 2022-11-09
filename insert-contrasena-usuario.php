@@ -26,7 +26,7 @@
         ON DUPLICATE KEY UPDATE token = '$token', clave__nueva = '$nueva__contrasena'");
     
       // $url = "http://localhost/accent__hollding/confirmacion-usuario.php?email=$email__contrasena&token=$token";
-      $url = "https://adhoc.com.co/confirmacion-usuario.php?email=$email__contrasena&token=$token";
+      $url = "https://adhoc.com.co/confirmacion-usuario?email=$email__contrasena&token=$token";
 
       $contenido__mensaje = ' <h1>Hola '.$resultado__fila['nombre_usuario'] .'<br> </h1>';
       $contenido__mensaje .='<p>Haz solicitado el cambio de tu credencial de acceso a nuestro sistema <br>

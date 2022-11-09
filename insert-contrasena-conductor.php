@@ -27,7 +27,7 @@ if($email__contrasena ===""){
      ON DUPLICATE KEY UPDATE token = '$token', clave__nueva = '$nueva__contrasena' ");
 
   // $url = "http://localhost/accent__hollding/confirmacion-conductor.php?email=$email__contrasena&token=$token";
-  $url = "https://adhoc.com.co/confirmacion-conductor.php?email=$email__contrasena&token=$token";
+  $url = "https://adhoc.com.co/confirmacion-conductor?email=$email__contrasena&token=$token";
 
   $contenido__mensaje = ' <h1>Hola '.$resultado__fila['nombre_conductor'] .'<br> </h1>';
   $contenido__mensaje .='<p>Haz solicitado el cambio de tu credencial de acceso a nuestro sistema <br>
@@ -44,7 +44,7 @@ if($email__contrasena ===""){
   try {
                 
       $mail->isSMTP();                                           
-      $mail->Host       = 'smtp.gmail.com';                  
+      $mail->Host       = 'smtp.office365.com';                  
       $mail->SMTPAuth   = true;                                 
       $mail->Username   = 'soporteadhoc@outlook.com';                   
       $mail->Password   = 'contrasenasoporte01';                            

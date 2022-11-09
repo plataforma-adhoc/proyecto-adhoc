@@ -2,7 +2,7 @@
 include'conexion-db-accent.php';
 session_start();
 if(!isset($_SESSION['id_conductor'])){
-  header("Location: login-conductor.php");
+  header("Location: login-conductor");
   die();
 }
 $consulta__datos__conductor = "SELECT *  FROM conductores   WHERE id_conductor = '{$_SESSION['id_conductor']}' LIMIT 1";
@@ -26,7 +26,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="icon" type="image/ico" href="./img/favicon.ico" />
+  <link rel="icon" type="image/ico" href="./img/favicon.png" />
 </head>
 
 <body>
@@ -34,7 +34,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
     <nav class="nav__hero">
       <div class="container nav__container">
         <div class="logo">
-          <a href="dashboard-conductor.php"><img src="./img/logo.png" alt="" class="logo__accent"></a>
+          <a href="dashboard-conductor"><img src="./img/logo.png" alt="logo de adhoc" class="logo__accent"></a>
         </div>
         <?php  $consulta__comentarios = "SELECT * FROM notificaciones__usuario WHERE id_conductor = '{$_SESSION['id_conductor']}' AND leido = '0'  ORDER BY id_notificacion DESC LIMIT 5";
                 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
@@ -65,7 +65,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
     
                 <ul class="nav-links links__dashboard">
                   <li class="nav-link">
-                    <a href="perfil-conductor.php?id=<?php echo $datos__resultado['id_conductor'] ?>"
+                    <a href="perfil-conductor?id=<?php echo $datos__resultado['id_conductor'] ?>"
                       class="enlaces__menu__home">
                       <img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil">
                     </a>
@@ -75,29 +75,29 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
                   </li>
                   <li class="nav-link">
                     <i class="fas fa-home"></i>
-                    <a href="dashboard-conductor.php">Home</a>
+                    <a href="dashboard-conductor">Home</a>
   
                   </li>
                   <li class="nav-link">
                     <i class="fas fa-history"></i>
-                    <a href="historial-conductor.php?idc=<?php echo $datos__resultado['id_conductor'] ?>"
+                    <a href="historial-conductor?idc=<?php echo $datos__resultado['id_conductor'] ?>"
                       class="enlaces__menu__home">Mi historial</a>
                   </li>
                   <li class="nav-link">
                     <i class="fas fa-cogs"></i>
-                    <a href="configuracion-conductor.php?id=<?php  echo $datos__resultado['id_conductor'] ?>">
+                    <a href="configuracion-conductor?id=<?php  echo $datos__resultado['id_conductor'] ?>">
                       Configuracion</a>
   
                   </li>
                   <li class="nav-link">
                   <i class="fas fa-mail-bulk"></i>
-                    <a href="ayudanos-a-mejorar.php">
+                    <a href="ayudanos-a-mejorar">
                       Ayudanos a mejorar</a>
   
                   </li>
                   <li class="nav-link">
                     <i class="fas fa-power-off"></i>
-                    <a href="desconectar-conductor.php?id=<?php  echo $datos__resultado['id_conductor'] ?>">Cerrar
+                    <a href="desconectar-conductor?id=<?php  echo $datos__resultado['id_conductor'] ?>">Cerrar
                       sesión</a>
                   </li>
                 </ul>
@@ -118,7 +118,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
 
       <?php while($fila__recorrido = mysqli_fetch_array($ejecutar__consulta)){?>
       <div class="contenido__notificacion">
-        <a href="notificaciones.php?id=<?php  echo $fila__recorrido['id_notificacion'] ?>"
+        <a href="notificaciones?id=<?php  echo $fila__recorrido['id_notificacion'] ?>"
           class="enlaces__ver__notificacion">
           <img src="upload/<?php echo $fila__recorrido['avatar'] ?>" alt="" class="avatar__perfil">
           <div class="datos"> <?php echo $fila__recorrido['nombre_conductor'] ?> ha hecho un comentario <i
@@ -131,7 +131,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
       <?php } ?>
       <br>
    
-      <a href="notificaciones.php" class="enlace__mas__notificaciones"><i class="fas fa-plus"></i> ver mas
+      <a href="notificaciones" class="enlace__mas__notificaciones"><i class="fas fa-plus"></i> ver mas
         notificaciones</a>
       
     </div>
@@ -143,13 +143,7 @@ $datos__resultado = mysqli_fetch_array($resultado__consulta);
      var btn__cerrar__menu = document.getElementById("cerrar-menu-dasbhboard");
      var abrir__menu__dashboard = document.getElementById('abrir-menu-dashboard');
 
-  // if(abrir__menu__dashboard ){
-  //   abrir__menu__dashboard.onclick = function() {
-  //       menu.style.display = "block";
-  //     }
-  // }
-
-
+  
     
     if(btn__cerrar__menu){
       btn__cerrar__menu.onclick = function() {

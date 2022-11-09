@@ -8,8 +8,6 @@ $consulta__datos = "SELECT * FROM  conductores WHERE id_conductor = '$id__conduc
 $ejecutar__consulta__conductor = mysqli_query($conexion__db__accent,$consulta__datos);
 $resultado__datos = mysqli_fetch_array($ejecutar__consulta__conductor);
 
-
-
         $nombre_conductor = $_POST['nombre'] ? $_POST['nombre']: '';
         $primer__apellido = $_POST['primerApellido'] ? $_POST['primerApellido']: '';
         $segundo__apellido = $_POST['segundoApellido'] ? $_POST['segundoApellido']: '';
@@ -47,7 +45,7 @@ $resultado__datos = mysqli_fetch_array($ejecutar__consulta__conductor);
 
             if($ejecutar__consulta){
             //  header("Location: edit-perfil-conductor.php?id={$resultado__datos['id_conductor']}");
-            header("Location: edit-perfil-conductor.php?id={$resultado__datos['id_conductor']}");
+            header("Location: edit-perfil-conductor?id={$resultado__datos['id_conductor']}");
 
            echo json_decode('true');
              

@@ -56,68 +56,6 @@
 	opacity: 0;
 }
 
-.uno{
-top: 250px;
-left:22.5%;
-}
-
-.dos{
-  top: 250px;
-  right:59.5%;
-
-
-}
-
-.tres{
-  top: 360px;
-  left:22.5%;
-}
-
-.cuatro {
-  right:59.5%;
-  top: 360px;
-
-}
-
-.cinco{
-  left:22.5%;
-  top: 470px;
-
-
-}
-
-.seis{
-  right:59.5%;
-  top: 475px;
-
-}
-
-.siete{
-  left:22.5%;
-  top: 590px;
-
-}
-
-.siete__contrasena{
-  right:59.5%;
-  top: 590px;
-}
-
-.ocho{
-  right:59.5%;
-  top: 590px;
-  
-}
-
-.nueve{
-  right:59.5%;
-  top: 700px; 
-}
-
-.icono__email__login{
-  right:59.5%;
-  top:250px;
-}
 
 
 .formulario__grupo-correcto .formulario__validacion-estado {
@@ -209,6 +147,7 @@ font-weight: bold;
 
     .enlace___login:hover{
         border-bottom: solid 2px white;
+        color: white;
     }
 
 
@@ -247,8 +186,8 @@ font-weight: bold;
         padding:10px 0 5px 60px;
         display: block;
         color: white;
-        font-weight: bold;
         cursor: pointer;
+        font-size: 14px;
       }
        
   

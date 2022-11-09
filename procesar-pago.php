@@ -8,20 +8,15 @@ $id_conductor =  isset($_GET['idc']) ? $_GET['idc'] : '';
 
 
 if($servicios != null || $id_conductor !=""){
-  
- 
-  
     $lista__carrito = array();
     foreach ($servicios as $clave => $cantidad) {
         $consulta__productos = "SELECT id_producto,nombre_producto,	valor_producto,descuento, $cantidad AS cantidad FROM productos    WHERE id_producto = '$clave' AND  activo = 1";
         $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__productos);
             $lista__carrito[] = mysqli_fetch_array($ejecutar__consulta);
 
-      
-          
         }  
 }else{
-    header("Location: servicios.php");
+    header("Location: servicios");
     exit;
     
 }?>
@@ -103,7 +98,7 @@ paypal.Buttons({
       let url = 'https://adhoc.com.co/'
     return actions.order.capture().then(function(detalles) {
         console.log(detalles)
-        fetch(url+'captura.php',{
+        fetch(url+'captura',{
         method:'POST',
         headers:{
               'content-type':'application/json'
@@ -124,7 +119,7 @@ paypal.Buttons({
         }).then(respuesta => respuesta.json())
         .then(data=>{
           if(data === 'true'){
-           window.location.href='compra-completada.php?idc=<?php echo $id_conductor  ?>&idu=<?php echo $datos__resultado['id_usuario'] ?>'
+           window.location.href='compra-completada?idc=<?php echo $id_conductor  ?>&idu=<?php echo $datos__resultado['id_usuario'] ?>'
           }
           console.log(data)
         })

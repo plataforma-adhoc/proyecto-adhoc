@@ -26,49 +26,91 @@ include'conexion-db-accent.php';
                     <h2 class="step__title">Ingrese los datos básicos de su vehiculo</h2>
                 </div>
                 <div class="step__body">
-                    <input type="text" placeholder="Marca * " class="step__input" name="marca" id="marca">
-                    <input type="text" placeholder="Modelo del vehiculo * " class="step__input"name="modelo" id="modelo">
-                    <input type="text" placeholder="Color del vehiculo * " class="step__input"name="color" id="color">
-                    <input type="text" placeholder="Año del vehiculo * " class="step__input"name="fechaFabricacion" id="fabricacion">
-                    <input type="text" placeholder=" Numero de matricula ingresa el ultimo numero * " class="step__input"name="matricula"id="matricula">
-                    <input type="text" placeholder="Ciudad donde esta registrada la matricula * " class="step__input"name="ciudad-matricula"id="ciudad">
-                    <input type="text" placeholder="Ciudad de venta * " class="step__input"name="ciudad-venta"id="venta">
-                    <select name="propietario" id="propietario" class="step__input">
-                        <option selected>Unico dueño * </option>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control step__input marca" id="floatingInput " placeholder="Ej: Toyota"name="marca" id="">
+                    <label for="floatingInput">Marca del carro *</label>
+                    </div>
+                    <div class="form-floating">
+                    <input type="text" class="form-control step__input modelo" id="floatingPassword" placeholder="Ej: Land cruiser"name="modelo" id="">
+                    <label for="floatingPassword">Modelo  del carro *</label>
+                   
+                    </div>
+                    <div class="form-floating mb-3">
+                    <input type="text" class="form-control step__input color" id="floatingInput" placeholder="Ej: AZul"name="color" id="">
+                    <label for="floatingInput">Color del carro *</label>
+                    </div>
+                    <div class="form-floating">
+                    <input type="text" class="form-control step__input fabricacion" id="floatingPassword fabricacion" placeholder="Ej: Año 2000"name="fechaFabricacion" id="">
+                    <label for="floatingPassword">Año  del carro *</label>
+                   
+                    </div>
+                    <div class="form-floating mb-3">
+                    <input type="text" class="form-control step__input matricula" id="floatingInput" placeholder="Ej: 7 "name="matricula"id="">
+                    <label for="floatingInput">Matricula del carro o numero de placa ultimo numero *</label>
+                    </div>
+                    <div class="form-floating">
+                    <input type="text" class="form-control step__input ciudad" id="floatingPassword" placeholder="Ej: Bogotá"name="ciudad-matricula"id="">
+                    <label for="floatingPassword">Cuidad donde esta registrada la matricula *</label>
+                   
+                    </div>
+                    <div class="form-floating mb-3">
+                    <input type="text" class="form-control step__input venta" id="floatingInput" placeholder="Ej: Bogotá "name="ciudad-venta"id="">
+                    <label for="floatingInput">Cuidad donde vas a vender tu carro *</label>
+                    </div>
+                    <!-- <div class="form-floating">
+                    <input type="text" class="form-control step__input" id="floatingPassword" placeholder="Ej: Bogotá"name="ciudad-matricula"id="ciudad">
+                    <label for="floatingPassword">Cuidad donde esta registrada la matricula *</label>
+                   
+                    </div> -->
+                    <select class="form-select form-select-lg mb-3 step__input " aria-label=".form-select-lg example" name="propietario" id="propietario" >
+                    <option selected>Unico dueño * </option>
                         <option value="si">Si</option>
                         <option value="no">No</option>
-
                     </select>
-                       
-                    <input type="text" placeholder="Kilometraje del vehiculo  * " class="step__input" name="kilometros"id="kilometros">
-                    <input type="text" placeholder="$ Precio del vehiculo * " class="step__input" name="precio-vehiculo"id="precio">
-                    <input type="text" placeholder="Numero de puertas * " class="step__input" name="puertas"id="puertas">
-                    <select name="combustible" id="combustible" class="step__input">
-                        <option selected>Tipo de combustible</option>
+                    <div class="form-floating">
+                    <input type="text" class="form-control step__input kilometros" id="floatingPassword" placeholder="Ej: 100000"name="kilometros"id="">
+                    <label for="floatingPassword">Kilometros del carro ni puntos ni comas *</label>
+                   
+                    </div>
+                    <div class="form-floating">
+                    <input type="text" class="form-control step__input precio" id="floatingPassword" placeholder="Ej: 5000000"name="precio-vehiculo"id="">
+                    <label for="floatingPassword">Precio del carro ni puntos ni comas *</label>
+                   
+                    </div>
+                    <div class="form-floating">
+                    <input type="text" class="form-control step__input puertas" id="floatingPassword" placeholder="Ej: 5"name="puertas"id="">
+                    <label for="floatingPassword">Numero de puertas  *</label>
+                   
+                    </div>
+                    <select class="form-select form-select-lg mb-3 step__input" aria-label=".form-select-lg example"  name="combustible" id="combustible">
+                    <option selected>Tipo de combustible</option>
                         <option value="Gasolina">Gasolina</option>
                         <option value="Gas natural">Gas natural</option>
                         <option value="Electrico">Electrico</option>
                         <option value="Diesel">Diesel</option>
                         <option value="Hibrido">Hibrido</option>
-
                     </select>
-                    <select name="caja" id="caja" class="step__input">
-                        <option selected>Tipo de caja</option>
+                    <select class="form-select form-select-lg mb-3 step__input" aria-label=".form-select-lg example"  name="caja" id="caja">
+                    <option selected>Tipo de caja</option>
                         <option value="Mecanica">Mecanica</option>
                         <option value="Automatica"> Automatica</option>
                         <option value="Secuencial">Secuencial</option>
                     </select>
-                    <select name="direccion" id="direccion" class="step__input">
-                        <option selected>Tipo de direccion</option>
+                    <select class="form-select form-select-lg mb-3 step__input" aria-label=".form-select-lg example" name="direccion" id="direccion">
+                
+                    <option selected>Tipo de direccion</option>
                         <option value="Asistida">Asistida</option>
                         <option value="Asistida Hidraulica"> Asistida Hidraulica</option>
                         <option value="Asistida Electrica">Asistida Electrica</option>
                         <option value="Electro-Hidraulica">Electro-Hidraulica</option>
-                        <option value="Mecanica">Mecanica</option>
-
+                        <option value="Mecanica">Mecanica</option>>
                     </select>
-
-                    <input type="text" placeholder="Cilindraje del vehiculo" class="step__input" name="cilindraje" id="cilindraje">
+   
+                 <div class="form-floating">
+                    <input type="text" class="form-control step__input cilindraje" id="floatingPassword" placeholder="Ej: 1.6" name="cilindraje" id="">
+                    <label for="floatingPassword">Cilidraje del carro  1.6 *</label>
+                   
+                    </div>
                     <textarea rows="4" cols="80" placeholder="Agrega más información de tu vehiculo"
                         class="step__input text__area block"  name="descripcion" id="descripcion"></textarea>
              
@@ -501,12 +543,31 @@ include'conexion-db-accent.php';
     });
 
   let activar__btn = document.getElementById('activar-btn');
-
   function validar(){
+      let marca =  document.querySelector('.marca').value
+      let modelo =  document.querySelector('.modelo').value
+      let color =  document.querySelector('.color').value
+      let fabricacion =  document.querySelector('.fabricacion').value
+      let matricula =  document.querySelector('.matricula').value
+      let ciudad =  document.querySelector('.ciudad').value
+      let venta =  document.querySelector('.venta').value
+      let propietario = document.getElementById('propietario').value
+      let kilometros =  document.querySelector('.kilometros').value
+      let precio =  document.querySelector('.precio').value
+      let puertas =  document.querySelector('.puertas').value
+      let combustible = document.getElementById('combustible').value
+      let caja = document.getElementById('caja')
+      let direccion = document.getElementById('direccion').value
+      let cilindraje =  document.querySelector('.cilindraje').value
+      let descripcion = document.getElementById('descripcion').value
+      
+
+      console.log(marca,modelo,color,fabricacion,matricula,ciudad,venta,propietario,kilometros,precio,puertas,combustible,caja,direccion,cilindraje,descripcion)
+
    let habilitar = false
-   if(form.marca.value ==="" || form.modelo.value ==="" || form.color.value ==="" || form.fabricacion.value ===""||form.matricula.value ==="" ||form.ciudad.value ==="" || form.venta.value ===""
-   || form.propietario.value ==="" || form.kilometros.value ==="" || form.precio.value ==="" || form.puertas.value === "" || form.combustible.value ===""
-   || form.caja.value ==="" || form.direccion.value ==="" || form.cilindraje.value === "" || form.descripcion.value ==="" ){
+   if(marca ==="" || modelo ==="" || color ==="" || fabricacion ===""||matricula ==="" ||ciudad ==="" || venta ===""
+   || propietario ==="" || kilometros ==="" || precio ==="" || puertas === "" || combustible ===""
+   || caja ==="" || direccion ==="" || cilindraje === "" || descripcion ==="" ){
     habilitar = true
    }
 

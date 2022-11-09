@@ -2,14 +2,14 @@
 include'conexion-db-accent.php'; 
 $id = isset($_GET['idc']) ? $_GET['idc'] : '';
 if($id ==="" || $id !=$id){
-header("Location: dashboard-usuario.php");
+header("Location: dashboard-usuario");
 }
 $consulta__datos__conductor = "SELECT * FROM conductores WHERE id_conductor = '$id' LIMIT 1";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos__conductor);
 $datos__resultado__conductor = mysqli_fetch_array($ejecutar__consulta);
 
 ?>
-<!-- <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button> -->
+
 <div class="contenedor__subtitulo__ad__panel">
     <h2 class="subtitulo__ad__panel">Informacion del conductor</h2>
 </div>
@@ -61,7 +61,7 @@ $datos__resultado__conductor = mysqli_fetch_array($ejecutar__consulta);
   </ul>
 
   <div class="links">
-     <a href="servicios.php?idc=<?php  echo $datos__resultado__conductor['id_conductor']  ?>" class="follow">Elegir conductor <i class="fas fa-long-arrow-alt-right"></i></a>
+     <a href="servicios?idc=<?php  echo $datos__resultado__conductor['id_conductor']  ?>" class="follow">Elegir conductor <i class="fas fa-long-arrow-alt-right"></i></a>
 
   </div>
 

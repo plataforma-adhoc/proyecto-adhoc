@@ -5,13 +5,13 @@ include'layout/nabvar.php';
  $token =  $_GET['token'] ? $_GET['token']: '';
 
  if($email ==="" || $token === ''){
-  header('Location: ./password-usuario');
+  header('Location: password-conductor');
  }else{
    $consulta__recuperar__contrasena = "SELECT clave__nueva FROM recuperar__contrasena__conductor WHERE email = '$email' AND token = '$token'";
    $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__recuperar__contrasena);
    $resultado__consulta = mysqli_fetch_array($ejecutar__consulta);
    if(!$resultado__consulta){
-     header('Location: password-conductor.php');
+     header('Location: password-conductor');
   die();
    }else{
      
@@ -30,7 +30,7 @@ include'layout/nabvar.php';
      <h1 class="titulo__actualizacion">Tu contraseña se actualizo con exito</h1>
     </div>
     <div class="contenedor__enlace__iniciar__sesion">
-        <a href="login-conductor.php" class="enlace__iniciar__sesion">iniciar sesion</a>
+        <a href="login-conductor" class="enlace__iniciar__sesion">iniciar sesion</a>
     </div>
   
  

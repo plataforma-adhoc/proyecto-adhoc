@@ -16,7 +16,7 @@ include'conexion-db-accent.php';
         <div class="card-body">
         <h5 class="card-title nombre__perfil__conductor__card">'.$fila['nombre_conductor'] .'</h5>
         <p class="estatus__del__conductor"><br>'.$fila['status'] .'</b></p>
-          <a href="info-conductor.php?idc='.$fila['id_conductor'].'" class="btn btn-primary">Elegir conductor</a>
+          <a href="info-conductor?idc='.$fila['id_conductor'].'" class="btn btn-primary">Elegir conductor</a>
         </div>
       </div>
   </div>';

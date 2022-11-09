@@ -1,7 +1,7 @@
 <?php  include'layout/nav-home-conductor.php';
 $id__conductor = isset($_GET['id']) ? $_GET['id']: 0;
 if($id__conductor ===""){
-  header("Location: dashboard-conductor.php");
+  header("Location: dashboard-conductor");
   exit;
 }
 $consulta__datos__servicio = "SELECT *  FROM detalles__de__la__compra WHERE id_conductor = '{$_SESSION['id_conductor']}'";
@@ -15,9 +15,6 @@ if(mysqli_num_rows($ejecutar__consulta__datos__usuario) > 0){
 
 ?>
 
-
-
-<!-- <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button> -->
 <div class="container contenedor__datos__historial">  
 
 <h2 class="titulo__dashboard">Historial</h2>
