@@ -22,7 +22,7 @@ if(!isset($_SESSION['id_usuario'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $datos__resultado['nombre_usuario'] ?>en AdHoc, compra y venta de vehiculos usados</title>
+    <title><?php echo ucwords($datos__resultado['nombre_usuario']) ?> en AdHoc, compra y venta de vehiculos usados</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -39,20 +39,15 @@ if(!isset($_SESSION['id_usuario'])){
                 <div class="logo">
                     <a href="dashboard-usuario"><img src="./img/logo.png" alt="" class="logo__accent logo__home"></a>
                 </div>
-                <?php  $consulta__comentarios = "SELECT * FROM notificaciones__conductor WHERE id_usuario = '{$_SESSION['id_usuario']}' AND leido = '0'   ORDER BY id_notificacion DESC LIMIT 5";
-                $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
-                 $total__notificaciones = mysqli_num_rows($ejecutar__consulta);
        
-               
-                 ?>
+        
                  <div class="enlaces__varios">
                    <a href="perfil-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__perfil__usuario"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"></a>
-                   <a href="#" class="enlace__notificaciones" id="abrir-modal"><i class="far fa-bell"></i>
-            <?php  if($total__notificaciones > 0){ ?><span class="numero__notificaciones">
-              <?php   echo $total__notificaciones ?></span> <?php } ?>
+                  
+        
           </a>
               
-                    <!-- <label class="btn btn-open " for="nav" id="abrir-menu"><i class="fab fa-creative-commons-nd btn__abrir__menu"></i></label>  -->
+            
                     <div>
                     </div>
                     <div class="containers">
@@ -78,36 +73,38 @@ if(!isset($_SESSION['id_usuario'])){
                   </li>
                   <li class="nav-link">
                     <i class="fas fa-home"></i>
-                    <a href="dashboard-usuario">Home</a>
+                    <a href="dashboard-usuario" class="enlaces__menu__home">Regresar a mi casa</a>
   
                   </li>
-                  <li class="nav-link">
-                    <i class="fas fa-history"></i>
-                    <a href="historial-usuario?idu=<?php echo $datos__resultado['id_usuario'] ?>"
-                      class="enlaces__menu__home">Mi historial</a>
-                  </li>
+               
                   <li class="nav-link">
                   <i class="fas fa-shopping-bag"></i>
-                    <a href="publicar-vehiculos?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
+                    <a href="publicar-vehiculos?idu=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlaces__menu__home">
                       Publicar Vehiculo</a>
   
                   </li>
                   <li class="nav-link">
                     <i class="fas fa-cogs"></i>
-                    <a href="configuracion-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>">
+                    <a href="configuracion-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>"  class="enlaces__menu__home">
                       Configuracion</a>
   
                   </li>
                   <li class="nav-link">
                   <i class="fas fa-mail-bulk"></i>
-                    <a href="ayudanos-a-mejorar">
+                    <a href="ayudanos-a-mejorar"  class="enlaces__menu__home">
                       Ayudanos a mejorar</a>
+  
+                  </li>
+                  <li class="nav-link">
+                  <i class="fas fa-hand-holding-usd"></i>
+                    <a href="mis-carros-anunciados?idu=<?php  echo $datos__resultado['id_usuario'] ?>"  class="enlaces__menu__home">
+                    Historial de anuncios</a>
   
                   </li>
                 
                   <li class="nav-link">
                     <i class="fas fa-power-off"></i>
-                    <a href="desconectar-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>">Cerrar
+                    <a href="desconectar-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>"  class="enlaces__menu__home">Cerrar
                       sesión</a>
                   </li>
                 </ul>
@@ -120,31 +117,7 @@ if(!isset($_SESSION['id_usuario'])){
               
         </nav>
     </header>
-    <div id="myModalNotificaciones" class="modal__notificaciones">
-        <div class="" id="modal__content__notificaciones">
-            <span class="close">x</span>
-            <h3 class="titulo__notificaciones">Notificaciones</h3>
-        <?php 
-        if(mysqli_num_rows($ejecutar__consulta) > 0){
-          while($fila__recorrido = mysqli_fetch_array($ejecutar__consulta)){?>
-                <div class="contenido__notificacion">
-                <a href="notificaciones-usuario?id=<?php  echo $fila__recorrido['id_notificacion'] ?>"class="enlaces__ver__notificacion">
-                    <img src="upload/<?php echo $fila__recorrido['avatar'] ?>" alt="" class="avatar__perfil">
-                    <div class="datos"> <?php echo $fila__recorrido['nombre_usuario'] ?> ha hecho un comentario <i
-                            class="fas fa-comment-alt"></i> <br>
-                        <p class="fecha__notificacion"> El dia
-                            <?php echo date("d-m-Y",strtotime($fila__recorrido['fecha_notificacion'])) ?></p>
-                    </div>
-                </a>  
-            </div>
-           
-            <?php } ?>
-            <?php } ?> 
-            <a href="notificaciones-usuario" class="enlace__mas__notificaciones"><i class="fas fa-plus"></i> ver mas
-           notificaciones</a>
-      
-             
-            <br>
+  
          
                 <?php  mysqli_close($conexion__db__accent)?>
         </div>

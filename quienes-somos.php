@@ -1,4 +1,6 @@
-<?php  include'layout/nabvar.php' ?>
+<?php 
+$titulo ="Lo que somo en y lo que ofrecemos | AdHoc";
+ include'layout/nabvar.php' ?>
         <div class="">
            <h2 class="subtitulos"> Quienes somos</h2>
             <div class="contenedor_parrafo_quienes_somos">

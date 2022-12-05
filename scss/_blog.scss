@@ -1,0 +1,170 @@
+.contenido__blog{
+    width: 100%;
+    height: 600px;
+  
+}
+.titulo__blog{
+    color: white;
+    font-size: 20px;
+}
+.imagen__banner__blog{
+    margin: auto;
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+}
+.descripcion__blog{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;  
+    
+}
+
+.scroll{
+    height: 40rem;
+    overflow-y: scroll;
+    
+}
+
+.scroll::-webkit-scrollbar{
+    -webkit-appearance: none;
+    width: 8px;
+}
+
+.scroll::-webkit-scrollbar:horizontal{
+    height: 5px;
+   
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 20px;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    border-radius: 20px;
+}
+
+
+.scroll::-webkit-scrollbar-track {
+    border-radius: 10px; 
+     
+}
+
+
+.fecha__publicacion{
+    color: $color__verde;
+}
+
+.texto__blog{
+    color: white;
+}
+.subtitulo__blog{
+    background: #000;
+    color: white;
+    width: 70%;
+}
+
+.los__carros__mas__vendidos{
+    width: 60%;
+}
+
+.publicidad__blog{
+    width: 40%;
+    background-image: url(../img/anuncio__adhoc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    border-radius: 10px;
+    margin-left: 20px;
+    
+}
+
+.subtitulo___anuncio__blog{
+ color: $color__adhoc;
+ margin-top: 80px;
+ margin-left: 40px;
+ font-weight: bolder;
+}
+.enlace__blog{
+    text-decoration: 0;
+    display: inline-block;
+    margin-top: 300px;
+    margin-left: 10px;
+    background: #000;
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.enlace__blog:hover{
+    color: white;
+}
+
+.contendor__imagen__carro{
+    width: 80%;
+}
+
+.texto__los__mas__vendidos{
+    color: white;
+}
+
+.contador__los__mas__vendidos{
+color: $color__verde;
+font-weight: bolder;
+}
+
+.imagen__carro__los__mas__vendidos{
+    width: 100%;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.descripcion__los__carros__mas__vendidos{
+    border-left: 4px solid $color__verde;
+    height: 100px;
+}
+
+.texto__descripcion__los__mas__vendidos{
+    color:$color__gris;
+    font-weight: 100;
+    margin-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width:1200px) {
+   .publicidad__blog{
+    width: 70%;
+   } 
+}
+
+@media screen and (max-width:950px) {
+    .publicidad__blog{
+     width: 80%;
+    } 
+ }
+
+ @media screen and (max-width:800px) {
+    .descripcion__blog{
+        flex-wrap: wrap;
+
+    }
+    .publicidad__blog{
+        margin-top: 50px;
+    } 
+    .los__carros__mas__vendidos{
+        width: 100%;
+    }
+ }
+ @media screen and (max-width:600px) {
+    .imagen__banner__blog,.contenido__blog{
+        height: 300px;
+    }
+    .los__carros__mas__vendidos{
+        width: 100%;
+    }
+   .publicidad__blog{
+    width: 100%;
+   }
+ }

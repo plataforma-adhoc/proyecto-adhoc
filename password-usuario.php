@@ -1,6 +1,7 @@
-<?php include'layout/nabvar.php'?>
+<?php 
+$titulo ="AdHoc | Recuperar tu contraseña ";
+include'layout/nabvar.php'?>
 <div class="contenedor__del__formulario">
-<h2 class="subtitulo__formularios login">Recuperar contraseña</h2>
 <form class="formulario__registro" id="formulario-contraseña">
     <div class="contenedor__formulario">
         <div class="grupo__inputs block">

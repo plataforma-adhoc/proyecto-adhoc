@@ -62,21 +62,21 @@ margin-right: 5px;
   }
 
   
-.fa-home,.fa-cogs,.fa-history,.fa-mail-bulk,.fa-comments,.fa-power-off,.usuario__menu,.fa-briefcase,.fa-shopping-bag{
+.fa-home,.fa-cogs,.fa-history,.fa-mail-bulk,.fa-comments,.fa-power-off,.usuario__menu,.fa-briefcase,.fa-shopping-bag,.fa-hand-holding-usd{
   background:$color__fondo;
   border-radius: 100px;
   padding: 10px;
   color: white;
 }
 
-.fa-home,.fa-cogs,.fa-history,.fa-mail-bulk,.fa-comments,.fa-power-off,.usuario__menu,.fa-briefcase,.fa-shopping-bag:hover{
+.fa-home,.fa-cogs,.fa-history,.fa-mail-bulk,.fa-comments,.fa-power-off,.usuario__menu,.fa-briefcase,.fa-shopping-bag,.fa-hand-holding-usd:hover{
   color: white;
 }
 
   .enlaces__menu__home{
     padding: 8px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     color:white;
     display: block; 
     transition: 0.3s; 
@@ -85,12 +85,13 @@ margin-right: 5px;
 
   .enlaces__menu__home:hover{
     color: white;
+    font-size: 15px;
   }
   .contenedor__enalces__menu__home:hover, .econtenedor__enalces__menu__home:focus {
     color:$color__gris;
     border-radius: 7px;
     background:$color__fondo;
-    width: 90%;
+    width: 100%;
   }
   
 
@@ -114,16 +115,35 @@ margin-right: 5px;
     font-size:25px;
   }
 
-  .contenedor__del__buscador{
-    width: 100%;
-    height: 300px;
-    border-radius: 10px;
-    background: #AA076B;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #61045F, #AA076B);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #61045F, #AA076B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.subtitulo__dashboard{
+  font-size: 18px;
+  color: white;
+}
 
-  }
+.card__dashboard{
+  width: 40%;
+  height: 80px;
+  background:$color__fondo__footer;
+  border-radius: 10px;
+}
 
+.contenido{
+  margin-left: 10px;
+}
+.enlace__anunciar__carro{
+  width: 80%;
+  text-decoration: 0;
+  display: inline-block;
+  color: white;
+  line-height: 60px;
+}
+
+.icono__anunciar__carro{
+  color: $color__verde;
+}
+.enlace__anunciar__carro:hover{
+  color: white;
+}
   .buscador{
     width: 60%;
     margin: auto;

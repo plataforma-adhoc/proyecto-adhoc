@@ -1,12 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conductores elegidos,carros usados">
+  <meta name="description" content="plataforma de compra y  venta de  carros usados  en bogotá, publicalo ya, 🚀​🚀​  !VALLAMOS A REGISTRARLO!">
   <meta name="google-site-verification" content="pjfiKzcIqtbmwXzIHQRgS4BtoFvv-nM_E3Mjhpi8Uds" />
-  <title><?php echo  $titulo="AdHoc | Vende y/o compra tu carro usado publica tu vehiculo y vendelo " ?></title>
+  <title><?php echo  $titulo ?></title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">  
   <link rel="stylesheet" href="./css/app.css"> 
@@ -17,23 +17,15 @@
 </head>
 
 <body>
- <section class="seccion__promocion">
-  <br>
-  <div class="texto__anuncio">
-  <h2>Esta navidad anuncia la venta de tu carro GRATIS</h2>
-  <a href="publicar-vehiculos" class="publicar__carro">Anunciar</a>
- </div>
- </section>
+
   <header class="hero">
     <nav class="nav__hero">
       <div class="container nav__container">
       <div class="logo">
-            <a href="/"><img src="./img/logo.png" alt="" class="logo__accent"></a>          
+            <a href="/"><img src="./img/logo.png" alt="logo adhoc " class="logo__accent"></a>          
         </div>
-
-
         <div class="containers">
-          <a href="publicar-vehiculos" class="enlace__vender__vehiculo">Publicar mi carro</a>
+          <a href="publicar-vehiculos" class="enlace__vender__vehiculo">Publicar mi usado</a>
           <button class="btn__cuenta" id="myBtn">Crear  cuenta</button>
           <label class="btn btn-open" for="nav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fab fa-creative-commons-nd"></i></label>
           <input type="checkbox" id="nav" class="nav-opener" />
@@ -51,21 +43,20 @@
               <li class="nav-link">
               
               <i class="fas fa-user-astronaut"></i>
-                  <a href="usuario">Crear un registro de usuario</a>
+                  <a href="usuario">Crear un registro </a>
               </li>
-              <!-- <li class="nav-link">
-              <i class="fas fa-sign-in-alt"></i>
-                <a href="login-usuario.php">Loguearme como usuario</a>
-              </li> -->
-              <li class="nav-link">
-              <i class="fas fa-user-astronaut"></i>
-                <a href="conductor">Recibir solicitudes</a>
-
-              </li>
+            
+             
               <li class="nav-link">
                   <i class="fas fa-shopping-bag"></i>
                     <a href="publicar-vehiculos">
-                      Publicar Vehiculo</a>
+                      Publicar carro</a>
+  
+                  </li>
+                  <li class="nav-link">
+                  <i class="fas fa-coins"></i>
+                    <a href="precios">
+                     Nuestros precios</a>
   
                   </li>
             </ul>
@@ -77,13 +68,10 @@
 <div id="myModal" class="modal__registro__de__cuenta">
   <div class="modal__registros">
     <p class="close"><i class="far fa-times-circle"></i></p>
-    <p class="titulo__crear__cuenta">Crear una cuenta como </p>
+    <p class="titulo__crear__cuenta">Crear una cuenta en AdHoc </p>
     <div class="contenedor__btn__registros">
       <div>
-        <a href="usuario"class="btn__cuenta__registro">Usuario <i class="fas fa-arrow-right flecha"></i></a>
-      </div>
-      <div>
-        <a href="conductor" class="btn__cuenta__registro">Conductor <i class="fas fa-arrow-right flecha"></i></a>
+        <a href="usuario"class="btn__cuenta__registro">Crear una cuenta  <i class="fas fa-arrow-right flecha"></i></a>
       </div>
     </div>
   </div>

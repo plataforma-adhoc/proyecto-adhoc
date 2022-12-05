@@ -7,8 +7,9 @@
 					<a href="./"><img src="./img/logo.png" alt="logo adhoc " class="logo__accent logo__footer">
 				</a>    
 			</h4>
-  	 			<ul>
-  	 				<li><a href="#">Bogotá D.C - Colombia</a></li>
+			<ul>
+				<li><a href="#">Bogotá D.C - Colombia</a></li>
+				<p class="propuesta__de__valor">Tu quieres vender tu vehiculo, nuesta misión es llegar al comprador que lo esta buscando.</p>
   	 			
   	 			</ul>
   	 		</div>
@@ -19,7 +20,7 @@
   	 				<!-- <li><a href="#">shipping</a></li>
   	 				<li><a href="#">returns</a></li>
   	 				<li><a href="#">order status</a></li> -->
-  	 				<li><a href="funcionamiento">Como funciona</a></li>
+					   <li><a href="precios">Nuestros precios</a></li>
   	 				<li><a href="#formas-de-pago">Opciones de pago</a></li>
   	 			</ul>
   	 		</div>

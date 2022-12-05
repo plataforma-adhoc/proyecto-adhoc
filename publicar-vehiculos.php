@@ -57,11 +57,7 @@ include'conexion-db-accent.php';
                     <input type="text" class="form-control step__input venta" id="floatingInput" placeholder="Ej: Bogotá "name="ciudad-venta"id="">
                     <label for="floatingInput">Cuidad donde vas a vender tu carro *</label>
                     </div>
-                    <!-- <div class="form-floating">
-                    <input type="text" class="form-control step__input" id="floatingPassword" placeholder="Ej: Bogotá"name="ciudad-matricula"id="ciudad">
-                    <label for="floatingPassword">Cuidad donde esta registrada la matricula *</label>
-                   
-                    </div> -->
+                  
                     <select class="form-select form-select-lg mb-3 step__input " aria-label=".form-select-lg example" name="propietario" id="propietario" >
                     <option selected>Unico dueño * </option>
                         <option value="si">Si</option>
@@ -118,8 +114,6 @@ include'conexion-db-accent.php';
                 <div class="step__footer">
                 <button type="submit" class="step__button--next  inicio" 
                         disabled id="activar-btn">Guardar información</button>
-                    <!-- <button type="button" class="step__button--next  inicio" data-to_step="2"
-                        data-step="1" disabled id="activar-btn">Siguiente</button> -->
                         <br><br>
                         <div id="button"></div>
                 </div>
@@ -342,8 +336,7 @@ include'conexion-db-accent.php';
                     <!-- <button type="button" class="step__button step__button--back" data-to_step="1"
                         data-step="2">Regresar</button> -->
                         <button type="submit" class="step__button step__button--next" id="button-info">Guardar información</button>
-                    <!-- <button type="button" class="step__button step__button--next" data-to_step="3"
-                        data-step="2">Siguiente</button> -->
+                   
                   
                         <br><br>
                         <div id="button-info-adicional"></div>
@@ -351,8 +344,8 @@ include'conexion-db-accent.php';
                     
                     <div class="toda__la__info__del__vehiculo">
                         <br>
-                        <p>Proporciona toda la información posible de tu vehiculo, <br>
-                        puedes aumentar las posibilidades de venta ante un posible comprador
+                        <p>Proporcionar toda la información posible de tu vehiculo, esto<br>
+                        puede aumentar las posibilidades de venta ante un posible comprador
                     </p>
                 </div>
             </div>
@@ -382,8 +375,6 @@ include'conexion-db-accent.php';
                 <button type="submit" class="step__button step__button--next" id="button-imagenes">Guardar información</button>
                     <!-- <button type="button" class="step__button step__button--back" data-to_step="2"
                         data-step="3">Regresar</button> -->
-              
-                        
                          <br><br>
                          <div id="insert-fotos"></div>
                 </div>
@@ -463,41 +454,53 @@ include'conexion-db-accent.php';
                         <h2 class="step__title">Escoge tu plan</h2>
                     </div>
                     <br>
-                    <h2 class="subtitulo__planes"> Publica tu vehiculo gratis hasta que lo vendas, solo por tiempo <span class="limitado">LIMITADO</span></h2>
+                    <h2 class="subtitulo__planes"> Publica tu vehiculo con el 50% de descuento, solo por tiempo <span class="limitado">LIMITADO</span></h2>
+                    <br><br>
                         <div class="contenedor__tablas__precio">
-                        
-                <?php      
-                    $consulta__planes = "SELECT id_paquete, nombre_paquete, valor_paquete,descripcion_paquete FROM planes__de__publicaciones";
+                <?php  
+             
+                
+                    $consulta__planes = "SELECT id_paquete, nombre_paquete, valor_paquete,descripcion_paquete,descuento FROM planes__de__publicaciones WHERE activo = '1'";
                     $ejecutar = mysqli_query($conexion__db__accent,$consulta__planes);
                     if(mysqli_num_rows($ejecutar) > 0){
-                        while($fila__planes = mysqli_fetch_array($ejecutar)){ ?>
-        <div class="contenedor">
+                        while($fila__planes = mysqli_fetch_array($ejecutar)){ 
+                 $nombre__paquete = $fila__planes['nombre_paquete'];
+                 $valor__paquete = $fila__planes['valor_paquete'];
+                 $descripcion__paquete = $fila__planes['descripcion_paquete'];
+                 $descuento = $fila__planes['descuento'];
+                $precio__descuento = $valor__paquete - (($valor__paquete * $descuento) / 100 );
+                ?>
+        <div class="contenedor">   
         <div class="tabla">
-            <h2><?php  echo $fila__planes['nombre_paquete']  ?></h2>
-            <img src="./img/plan__free.svg" alt="">
-            <h3><?php  echo $fila__planes['valor_paquete']  ?> <sup>$</sup></h3>
-            <p><?php  echo $fila__planes['descripcion_paquete']  ?></p>
-          <a href="proceso-de-pago?idpaq=<?php  echo $fila__planes['id_paquete'] ?>"class="boton">Lo quiero</a>
-            <!-- <a href="" class="boton" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" data-bs-id="<?php echo $fila__planes['id_paquete']  ?>" id="plan">Lo quiero</a> -->
+            <h2><?php  echo $nombre__paquete  ?></h2>
+            <img src="./img/plan__free.svg" alt="contactos">
+            <?php   
+            if($descuento > 0){ ?>
+            <p>Antes <sup>$</sup> <del><?php  echo $valor__paquete;  ?> </del></p>
+            <h3>
+            <?php  echo number_format($precio__descuento,2,'.',',') ?> <br>
+                <small class="text-success"><?php  echo $descuento ?>% de descuento</small>
+            </h3>
+             
+          <?php  } else { ?>
+            <h3><sup>$</sup><?php  echo $valor__paquete  ?> </h3>
+            <?php  } ?>
+            <div class="contenido__descripcion">
+            <p><?php  echo  $descripcion__paquete ?></p>
+            </div>
+            <?php if( $valor__paquete > 0){ ?>
+            <a href="proceso-de-pago?idpaq=<?php  echo $fila__planes['id_paquete']?>&idu=<?php  echo $datos__resultado['id_usuario']  ?>"class="boton">Lo quiero</a>
+            <?php }else { ?>
+            <a href="plan-gratis?idpaq=<?php  echo $fila__planes['id_paquete'] ?>"class="boton">Lo quiero</a>
+                
+           <?php } ?>
+           <br><br>
         </div>
-        <!-- <div class="tabla hover">
-            <h2>Estandar</h2>
-            <img src="png/2.png" alt="">
-            <h3>200 <sup>$</sup></h3>
-            <p>Paga ahora y recibe un 30% en tu hosting y dominios</p>
-            <a href="" class="boton">Paga ahora</a>
-        </div>
-        <div class="tabla">
-            <h2>Premium</h2>
-            <img src="png/3.png" alt="">
-            <h3>300 <sup>$</sup></h3>
-            <p>Paga ahora y recibe un 30% en tu hosting y dominios</p>
-            <a href="" class="boton">Paga ahora</a>
-        </div> -->
+        
     </div>
      
-                   <?php  }?>
-                   <?php  }?>
+ <?php  }?>
+<?php  }?>
         </div>
              
                 <div class="step__footer">

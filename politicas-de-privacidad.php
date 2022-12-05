@@ -1,8 +1,10 @@
-<?php  include'layout/nabvar.php'; ?>
+<?php 
+$titulo ="Politicas y privacidad de datos | AdHoc";
+ include'layout/nabvar.php'; ?>
 <h1 class="titulo__terminos">POLITICA DE PRIVACIDA</h1>
 <div class=" container contenedor__terminos">
     <P class="parrafo__terminos">
-        Accent pretende ofrecer la mejor experiencia de compra y servicio a cada uno de sus usuarios.
+        AdHoc pretende ofrecer la mejor experiencia de compra y servicio a cada uno de sus usuarios.
         Por ello nos esforzamos encarecidamente en proteger su privacidad presentando este documento donde detallamos
         nuestros procedimientos y
         políticas respecto a la información y datos personales. Datos que son recopilados a través del sitio web y/o
@@ -17,7 +19,7 @@
         La suscripción a boletines de correos electrónicos es voluntaria y se le dará la opción de seleccionarla al
         momento de crear su cuenta y en cualquier momento usted podrá darse de baja.
         Es necesario acotar que la presente política forma parte de nuestros Términos y Condiciones que podrán encontrar
-        en <a href="terminos-y-condiciones-de-uso.php" class="enlace__a__terminos"> Terminos y condiciones de uso</a>.
+        en <a href="terminos-y-condiciones-de-uso" class="enlace__a__terminos"> Terminos y condiciones de uso</a>.
         Asimismo, la empresa se reserva los derechos de modificar la Política de Privacidad sin previo aviso.
     </P>
     <br><br>
@@ -85,7 +87,7 @@
         servicios, prevención de fraude y uso indebido del contenido de la empresa.
         <br>
 
-        Accent no divulga con ningún tercero tu información, pues su uso está restringido únicamente a nuestro servicio.
+        AdHoc no divulga con ningún tercero tu información, pues su uso está restringido únicamente a nuestro servicio.
         Asimismo, debemos acotar que los datos recopilados serán recopilados para las siguientes situaciones:
         <br><br>
 
@@ -105,7 +107,7 @@
         Facturación: Usaremos los datos personales del usuario con el fin de crear un registro y un historial de las
         compras realizadas a la empresa.
         <br><br>
-        Ad Hoc responde a cualquier duda que se tenga sobre la Política de Privacidad. 
+        AdHoc responde a cualquier duda que se tenga sobre la Política de Privacidad. 
     </p>
 </div>
 <?php include'layout/footer.php'; ?>

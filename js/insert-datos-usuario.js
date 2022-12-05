@@ -168,10 +168,7 @@
 
  inputs.forEach((input)=>{
   input.addEventListener('keyup', validar__formulario)
-  // input.addEventListener('blur', validar__formulario)
 
-
-  
   })
   
 
@@ -235,10 +232,7 @@ const validarCampo = (expresion, input, campo) => {
 
 inputs__login.forEach((input)=>{
   input.addEventListener('keyup', validar__formulario__login)
-  // input.addEventListener('blur', validar__formulario)
 
-
-  
   })
 
 export function  insert__login__usuario(){

@@ -2,7 +2,7 @@
 
 include'conexion-db-accent.php'; 
 $search = isset($_POST['buscador']) ?   mysqli_real_escape_string($conexion__db__accent,$_POST['buscador']) : NULL;
-$extraer__datos__publicaciones = "SELECT * FROM informacion__del__vehiculo__en__venta  WHERE marca_del_vehiculo LIKE '%{$search}%' OR modelo_vehiculo LIKE '%{$search}%'";
+$extraer__datos__publicaciones = "SELECT * FROM informacion__del__vehiculo__en__venta  WHERE marca_del_vehiculo LIKE '%{$search}%' OR modelo_vehiculo LIKE '%{$search}%' AND 	estado_anuncio = 'Activo' ";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$extraer__datos__publicaciones);
 $numero__fila = mysqli_num_rows($ejecutar__consulta);
 

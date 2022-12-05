@@ -1,4 +1,6 @@
-<?php   include'layout/nabvar.php'  ?>
+<?php  
+$titulo ="Contactanos en la publicacion de tu carro | AdHoc";
+ include'layout/nabvar.php'  ?>
 
 <div class="container">
 <h2 class="subtitulos">Contacta a nuestro equipo</h2>

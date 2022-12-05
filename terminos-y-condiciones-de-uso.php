@@ -1,9 +1,12 @@
-<?php  include'layout/nabvar.php'; ?> 
+<?php 
+$no__index = 'noindex, follow';
+$titulo ="Nuestros terminos y condiciones de uso | AdHoc";
+include'layout/nabvar.php'; ?> 
       <h1 class="titulo__terminos">TERMINOS Y CONDICIONES</h1>
       <div class=" container contenedor__terminos">
       <h2 class="subtitulos__terminos">AVISO PARA LOS USUARIOS SOLICITANTES:</h2>
             <P class="parrafo__terminos">
-                La presente Política de Privacidad establece los términos en que Ad Hoc 
+                La presente Política de Privacidad establece los términos en que AdHoc 
                 usa y protege la información que es proporcionada por sus usuarios al momento de utilizar nuestra plataforma. 
                 Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los 
                 campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará 
@@ -81,7 +84,7 @@
 
               <h2 class="subtitulos__terminos"> 2.MODIFICACION Y CANCELACION DE SERVICIOS </h2>
                <p class="parrafo__terminos">
-               1.3. Ad Hoc cambia y mejora constantemente sus servicios para brindar una mejor experiencia y calidad a sus usuarios. La empresa puede agregar, modificar o eliminar funciones, características, requisitos, promociones y servicios si lo considera necesario.
+               1.3. AdHoc cambia y mejora constantemente sus servicios para brindar una mejor experiencia y calidad a sus usuarios. La empresa puede agregar, modificar o eliminar funciones, características, requisitos, promociones y servicios si lo considera necesario.
 
 
 

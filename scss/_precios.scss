@@ -1,0 +1,60 @@
+.titulo__precios{
+    text-align: center;
+    color: white;
+}
+.parrafo__precios{
+    text-align: center;
+    color: $color__gris;
+}
+
+.tabla__de__precios{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.tarjetas__de__precio{
+    width: 40%;
+    background:$color__fondo__footer;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+.descripcion__de__precio{
+    width: 90%;
+    margin: auto;
+}
+
+.card-title{
+    color: $color__adhoc;
+    font-weight: bold;
+}
+.texto__plan{
+    color: white;
+    font-weight: 700;
+}
+
+.fa-times-circle{
+    color: $color__danger;
+}
+.card-text{
+    color:white;
+    font-weight: 700;
+}
+
+@media screen and (max-width:900px) {
+    .tarjetas__de__precio{
+        width: 70%;
+        margin: 50px  auto 0;
+    }
+    
+}
+
+@media screen and (max-width:700px) {
+    .tarjetas__de__precio{
+        width: 100%;
+        margin: 50px  auto 0;
+    }
+    
+}

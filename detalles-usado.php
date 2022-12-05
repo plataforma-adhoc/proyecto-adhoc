@@ -1,4 +1,6 @@
-<?php  include'layout/nabvar.php';
+<?php 
+$titulo="AdHoc | detalles usado";
+include'layout/nabvar.php';
  include'conexion-db-accent.php';
 
 $id__publicacion = isset($_GET['idp']) ? $_GET['idp']:'';
@@ -71,7 +73,7 @@ $fila__contacto = mysqli_fetch_array($ejecutar__consulta__contacto);
     <div class="caracteristicas">
        <h3 class="subtitulo__informacion">Informacion del vendedor</h3>
        <div class="contenedor__imagen__no__disponible">
-            <img src="upload/<?php echo $fila['foto_vendedor']  ?>" alt="" class="img__no__disponible">
+            <img src="upload/<?php echo $fila['foto_vendedor']  ?>" alt="foto del vendedor del carro usado" class="img__no__disponible">
             <br><br>
             <p class="telefono__del__vendedor">Telefono del vendedor</p>
             <p class="telefono"><i class="fas fa-phone-volume"></i> 

@@ -2,14 +2,21 @@
 include'layout/nav-home-usuario.php';
 include'conexion-db-accent.php';  
 $id__paquete = isset($_GET['idpaq']) ? $_GET['idpaq'] : '';
+$id__usuario = isset($_GET['idu']) ? $_GET['idu'] : '';
 
-if($id__paquete){
+if($id__paquete && $id__usuario){
     $consulta = "SELECT * FROM planes__de__publicaciones WHERE id_paquete = '$id__paquete'";
     $ejecutar__la__consulta = mysqli_query($conexion__db__accent,$consulta);
     if($ejecutar__la__consulta){
-      $fila = mysqli_fetch_array($ejecutar__la__consulta); ?>
+      $fila = mysqli_fetch_array($ejecutar__la__consulta); 
+      $nombre__paquete = $fila['nombre_paquete'];
+      $valor__paquete = $fila['valor_paquete'];
+      $descuento = $fila['descuento'];
+      $precio__descuento = $valor__paquete - (($valor__paquete * $descuento) / 100 );
+
+      ?>
       <div class="container contenedor__compra contenedor__pago">
-    <h2 class="titulo__compra">Detalles de tu plan  </h2>
+    <h2 class="titulo__compra">Detalles de tu pago  </h2>
     <div class="table-responsive ">
     <table class="table table-dark table-striped  table-hover ">
 
@@ -21,57 +28,89 @@ if($id__paquete){
     </tr>
     <tbody>
     <tr>
-      <th scope="row" class="texto__compra"><?php  echo $fila['nombre_paquete']?></th>
-      <td class="texto__compra"><?php echo  number_format($fila['valor_paquete'],2,'.','.') ?></td> 
-    
+      <th scope="row" class="texto__compra"><?php  echo  $nombre__paquete ?></th>
+      <td class="texto__compra"><?php 
+      if($descuento > 0){ echo  number_format($precio__descuento,2,'.','.') ?></td> 
+    <?php }else {?>
+      <?php  echo $valor__paquete; ?>
+      <?php }?>
     </tr>  
   </tbody>
 </table>
 </div>
-</div>
 <br>
+<div id="paypal-button-container"></div>
+</div>
 <?php  } ?>
 <?php  } ?>
-
 </div>
-     
-<div class="container contenedor__detalles__de__pago">
-  <h2 class="proceso__pago">Procesar  pago</h2>
-  <br>
-  <form id="formulario-proceso-de-pago">
-  <input type="hidden"  class="step__input"name="nombre-pagador" value="<?php  echo $datos__resultado['nombre_usuario']  ?>">
-  <input type="hidden"  class="step__input"name="nombre-paquete" value="<?php  echo $fila['nombre_paquete']  ?>">
-  <input type="hidden"  class="step__input"name="valor-paquete" value="<?php  echo $fila['valor_paquete']  ?>">
-<button type="submit" class="step__button">Pagar</button>
+<?php include'layout/footer-home.php' ?>   
 
-  </form>
-  <br><br>
-  <div id="alerta"></div>
-</div>
 
 <script>
-   let formulario__de__pago = document.getElementById('formulario-proceso-de-pago');
-if(formulario__de__pago){
-formulario__de__pago.addEventListener('submit',function(evento){
-    evento.preventDefault();
-    let form__data = new FormData(document.getElementById('formulario-proceso-de-pago'))
-let url__servidor  = 'https://adhoc.com.co/'
-    fetch(url__servidor+'insert-informacion-pago',{
-     method:'POST',
-     body:form__data
-    }).then(respuesta => respuesta.json())
-    .then(data =>{
-        if(data ==='ok'){
-         let alerta = document.getElementById('alerta');
-         alerta.innerHTML = ` <div class="alert alert-success alert-dismissible" role="alert">
-      <div class="texto__pago__exitoso"><i class="fas fa-check-circle"></i> Su publicacion  fue exitosa</div>
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>`
-        }
-    })
+paypal.Buttons({
+  style:{
+    label:'pay'
+  },
+  createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: <?php echo $precio__descuento; ?>
+          }
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      let url__servidor  = 'https://adhoc.com.co/'
+      actions.order.capture().then(function(detalles){
+        return fetch('capturar-datos',{
+         method:'POST',
+         headers:{
+          'content-type' : 'application/json'
+  
+         },
+         body:JSON.stringify({
+          detalles:detalles,
+          id:<?php  echo $_SESSION['id_usuario'] ?>
 
-})
-}
+          
+         })
+        
+        })
+
+      }).then(respuesta => respuesta.json())
+      .then(data =>{
+        if(data ==='true'){
+          window.location.href ='compra-confirmada'
+        }
+        console.log(data)
+      })
+      
+  },
+  onCancel:function(data){
+    Swal.fire({
+   background:'#202F36',
+    icon: 'error',
+     title: `Tu compra fue cancelada`,
+     footer: 'Pero calma en otro momento podemos cerrar el trato',
+                   
+      })
+      let datos = new FormData()
+      datos.append('id',<?php echo  $_SESSION['id_usuario']  ?>)
+      fetch('pago-cancelado',{
+        method:'POST',
+        body:datos
+      }).then(respuesta => respuesta.json())
+      .then(resultado =>{
+        if(resultado === 'true'){
+          console.log(resultado);
+
+        }
+      })
+  },
+}).render('#paypal-button-container')
 </script>
-   <?php include'layout/footer-home.php' ?>
+ <?php
+
 

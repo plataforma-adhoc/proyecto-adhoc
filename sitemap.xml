@@ -9,83 +9,53 @@
 
 <url>
   <loc>https://adhoc.com.co/</loc>
-  <lastmod>2022-11-07T23:29:18+00:00</lastmod>
+  <lastmod>2022-11-18T19:34:14+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://adhoc.com.co/usuario</loc>
-  <lastmod>2022-11-07T23:29:18+00:00</lastmod>
-  <priority>0.65</priority>
-</url>
-<url>
-  <loc>https://adhoc.com.co/conductor</loc>
-  <lastmod>2022-11-07T23:29:18+00:00</lastmod>
-  <priority>0.65</priority>
-</url>
-<url>
-  <loc>https://adhoc.com.co/carros-y-camionetas</loc>
-  <lastmod>2022-11-07T23:29:18+00:00</lastmod>
-  <priority>0.65</priority>
-</url>
-<url>
-  <loc>https://adhoc.com.co/publicar-vehiculos</loc>
-  <lastmod>2022-11-07T23:29:18+00:00</lastmod>
-  <priority>0.65</priority>
-</url>
-<url>
-  <loc>https://adhoc.com.co/funcionamiento</loc>
-  <lastmod>2022-11-07T23:29:18+00:00</lastmod>
+  <lastmod>2022-11-18T19:34:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://adhoc.com.co/login-usuario</loc>
-  <lastmod>2022-11-07T23:29:18+00:00</lastmod>
-  <priority>0.65</priority>
+  <loc>https://adhoc.com.co/carros-y-camionetas</loc>
+  <lastmod>2022-11-18T19:34:14+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://adhoc.com.co/contacto</loc>
-  <lastmod>2022-11-07T23:29:18+00:00</lastmod>
+  <lastmod>2022-11-18T19:34:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://adhoc.com.co/quienes-somos</loc>
-  <lastmod>2022-11-07T23:29:18+00:00</lastmod>
+  <lastmod>2022-11-18T19:34:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://adhoc.com.co/terminos-y-condiciones-de-uso</loc>
-  <lastmod>2022-11-07T23:29:18+00:00</lastmod>
+  <lastmod>2022-11-18T19:34:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://adhoc.com.co/politicas-de-privacidad</loc>
-  <lastmod>2022-11-07T23:29:18+00:00</lastmod>
+  <lastmod>2022-11-18T19:34:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://adhoc.com.co/terminos-y-condiciones-de-uso.php</loc>
-  <lastmod>2022-11-07T23:29:18+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2022-11-18T19:34:14+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://adhoc.com.co/login-conductor</loc>
-  <lastmod>2022-11-07T23:29:18+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://adhoc.com.co/contacto.php</loc>
-  <lastmod>2022-11-07T23:29:18+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://adhoc.com.co/login-usuario</loc>
+  <lastmod>2022-11-18T19:34:14+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://adhoc.com.co/password-usuario</loc>
-  <lastmod>2022-11-07T23:29:18+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://adhoc.com.co/password-conductor</loc>
-  <lastmod>2022-11-07T23:29:18+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2022-11-18T19:34:14+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 
 

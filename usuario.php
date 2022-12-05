@@ -1,4 +1,6 @@
-<?php include'layout/nabvar.php' ?>
+<?php 
+$titulo = "Registro usuario | AdHoc";
+include'layout/nabvar.php' ?>
 <div class="contenedor__del__formulario">
 <form class="formulario__registro" id="formulario-registro-usuario">
     <div class="contenedor__formulario">  

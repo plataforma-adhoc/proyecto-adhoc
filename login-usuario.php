@@ -1,6 +1,7 @@
-<?php include'layout/nabvar.php'?>
+<?php 
+$titulo = "AdHoc | login usuario";
+include'layout/nabvar.php'?>
 
-<h2 class="subtitulo__formularios login">Inicia sesión con tu cuenta</h2>
 <form class="formulario__registro" id="formulario-login">
     <div class="contenedor__formulario">
         <div class="grupo__inputs block" id="grupo__email">

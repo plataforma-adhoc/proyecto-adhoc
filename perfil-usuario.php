@@ -9,16 +9,10 @@ if($id__usuario ===""){
 
 
 
- $consulta__datos__conductor = "SELECT *  FROM conductores";
-$resultado__consulta__datos__conductor = mysqli_query($conexion__db__accent,$consulta__datos__conductor);
-if(mysqli_num_rows($resultado__consulta__datos__conductor) > 0){
-  $datos__resultado__conductor = mysqli_fetch_array($resultado__consulta__datos__conductor); 
 
- }
 ?>
 
     <div class="contenedor__subtitulo__ad__panel">
-    <h2 class="subtitulo__ad__panel">Mi Cuenta</h2>
 </div>
 <div class="otros__datos__de__perfil">
   
@@ -81,24 +75,5 @@ if(mysqli_num_rows($resultado__consulta__datos__conductor) > 0){
 </div>
 </div>
 <br><br>
- <div class="container contenedor__opinion" id="opinion1">
-  <p class="titulo__opinion">Centro de opiniones</p>
-  <div class="contenido__comentario">
-<?php    
-$consulta__comentarios = "SELECT * FROM comentario__conductor WHERE id_usuario = '{$_SESSION['id_usuario']}'";
-$ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__comentarios);
-while($fila = mysqli_fetch_array($ejecutar__consulta)){?>
-  <div class="opinion">
-        <div class="item__opinion">
-               <p class="nombre__item__opinion"> De <?php echo $fila['nombre'] ?></a></p>
-                <p class="parrafo"><?php echo $fila['comentario'] ?></p>
-                <p class="fecha__publicacion">esto fue el  <?php echo $fila['fecha_de_calificacion'] ?></p>
-  
-        </div>
-    
-    </div>
- <?php } ?>
-</div> 
-</div>
-<br><br>
+
 <?php   include'layout/footer-home.php' ?>

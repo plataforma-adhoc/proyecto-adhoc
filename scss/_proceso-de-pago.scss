@@ -13,3 +13,11 @@
  .fa-check-circle{
  color: $color__verde;
 }
+.enlace__volver__inicio{
+    text-decoration: 0;
+    color: $color__adhoc;
+}
+.enlace__volver__inicio:hover{
+    color: $color__adhoc;
+    border-bottom: 1px solid $color__adhoc;
+}
