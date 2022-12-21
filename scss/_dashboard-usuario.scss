@@ -118,10 +118,21 @@ margin-right: 5px;
 .subtitulo__dashboard{
   font-size: 18px;
   color: white;
+  line-height:40px;
 }
 
+.contenedor__card__dashboard{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.contenido__card__dashboard{
+  margin-left: 10px;
+  width: 20%;
+  margin-top: 10px;
+}
 .card__dashboard{
-  width: 40%;
+  width: 100%;
   height: 80px;
   background:$color__fondo__footer;
   border-radius: 10px;
@@ -129,57 +140,40 @@ margin-right: 5px;
 
 .contenido{
   margin-left: 10px;
+  display: flex;
+ align-items: center;
 }
 .enlace__anunciar__carro{
-  width: 80%;
+  width: 100%;
   text-decoration: 0;
   display: inline-block;
   color: white;
-  line-height: 60px;
+
 }
 
 .icono__anunciar__carro{
   color: $color__verde;
+
+}
+
+.total__positivo{
+  color:$color__verde;
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+.total__negativo{
+ color:$color__danger;
+ font-weight: bolder;
+
 }
 .enlace__anunciar__carro:hover{
   color: white;
+  opacity: 0.5;
+  transition: all 0.5s;
 }
-  .buscador{
-    width: 60%;
-    margin: auto;
-  }
-  form.example input[type=text] {
-    padding: 13px;
-    font-size: 17px;
-    float: left;
-    width: 70%;
-    background:$color__fondo;
-    border: 0;
-    outline: 0;
-    border-radius:7px;
-    color: white;
-    background: #000;
-    margin-left: 14%;
 
-  }
-  
 
-  
-  
-  
-  form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-  .subtitulo__buscador{
-    text-align: center;
-    font-size: 25px;
-    font-weight: bold;
-    color: white;
-    line-height: 150px;
-  }
   .titulo__dashboard{
     font-size:$tamaño__fuente__subtitulo;
     color:$color__gris;
@@ -187,49 +181,13 @@ margin-right: 5px;
     font-weight: bold;
   }
 
-  
 
-
-  
-
-.datos__perfiles__conductor{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  height: auto;
-
- 
-}
-
-.tarjeta__informacion__del__conductor{
-  width: 15rem;
-  height: 400px;
-  margin: 10px 3px 5px 3px;
-}
-
-.btn-primary{
-  display: inline-block;
-  margin-right: 25px;
-}
-
-.imagen__del__conductor{
-  width: 100%;
-  height: auto;
-  margin-top: -30px;
-  border-radius: 7px;
-}
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.datos__del__conductor{
-  color: black;
-  margin-top: -90px;
-  margin-left: 10px;
- }
+
 
  .nombre__perfil__conductor__card{
   font-size: 18px;
@@ -237,98 +195,27 @@ margin-right: 5px;
   text-align: center;
  }
  
- .estatus__del__conductor{
-  line-height: 10px;
-  text-align: center;
-  color: white;
- }
-.no__conductores__en__linea{
-  background: #000;
-  height: 200px;
-}
 
 
-
-@media screen and (max-width:900px) {
-  .tarjeta__informacion__del__conductor{
-    width: 12rem;
-    margin-top: 60px;
+@media screen and (max-width:1000px) {
+  .contenedor__card__dashboard{
+    width: 100%;
   }
-  .btn-primary{
-    width: 90%;
-  }
-  
-}
-
-@media screen and (max-width:700px) {
-
-  .subtitulo__buscador{
-    font-size: 25px;
-  }
-.buscador{
-  width: 80%;
-}
-
-.tarjeta__informacion__del__conductor{
-  width: 17rem;
-  height: 30rem;
-}
-
- 
-  
-}
-@media screen and (max-width:617px){
-  .tarjeta__informacion__del__conductor{
-    width: 15rem;
-    height: 25rem;
-  }
-  
-}
-
-@media screen and (max-width:600px){
-  .tarjeta__informacion__del__conductor{
-    width: 15rem;
-    height: 25rem;
-  }
-  
-}
-@media screen and (max-width:533px){
-  .tarjeta__informacion__del__conductor{
-    width: 20rem;
-    height: 25rem;
-    margin-left: 5rem;
-  }
-  
+ .contenido__card__dashboard{
+  width: 40%;
+ } 
 }
 
 
 
-@media screen and (max-width: 500px) {
 
-  .subtitulo__buscador{
-    font-size: 20px;
-  }
-.buscador{
+@media screen and (max-width:600px) {
+ .contenido__card__dashboard{
   width: 100%;
-  border-radius: 7px;
-}
-.buscador button{
-  display: none;
-}
-
-form.example input[type=text] {
-width: 80%;
-border-radius: 7px;
-margin-left: 40px;
-}
-.tarjeta__informacion__del__conductor{
-  width: 20rem;
-  margin: 10px 40px 0;
-  height: 30rem;
+ } 
 }
 
 
-}
 
 
   @media screen and (max-width: 400px) {
@@ -336,21 +223,6 @@ margin-left: 40px;
       margin-top: -600px;
     }
    
-    .tarjeta__informacion__del__conductor{
-      width: 20rem;
-      margin: 10px auto;
-      height: 30rem;
-    }
-
-    .subtitulo__buscador{
-      font-size: 15px;
-    }
- 
-    form.example input[type=text] {
-      width: 80%;
-      border-radius: 7px;
-      margin-left: 20px;
-      }
   }
 
 

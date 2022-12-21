@@ -1,6 +1,6 @@
 <?php 
-$no__index = 'noindex, follow';
-$titulo ="Nuestros terminos y condiciones de uso | AdHoc";
+
+$titulo ="AdHoc| Nuestros terminos y condiciones de uso ";
 include'layout/nabvar.php'; ?> 
       <h1 class="titulo__terminos">TERMINOS Y CONDICIONES</h1>
       <div class=" container contenedor__terminos">

@@ -1,5 +1,5 @@
 <?php 
-$titulo="AdHoc | detalles usado";
+$titulo="AdHoc | Detalles usado";
 include'layout/nabvar.php';
  include'conexion-db-accent.php';
 
@@ -7,6 +7,18 @@ $id__publicacion = isset($_GET['idp']) ? $_GET['idp']:'';
 if($id__publicacion){
   $consulta__detalles__usado = "SELECT * FROM informacion__del__vehiculo__en__venta WHERE id_publicacion_vehiculo = '$id__publicacion' ";
   $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__detalles__usado);
+
+  $consulta__contador__click = "SELECT contador_click FROM informacion__del__vehiculo__en__venta WHERE id_publicacion_vehiculo = '$id__publicacion' ";
+  $ejecutar__contador__click = mysqli_query($conexion__db__accent,$consulta__contador__click);
+  if(mysqli_num_rows($ejecutar__contador__click ) > 0){
+    $fila__contador = mysqli_fetch_array($ejecutar__contador__click);
+    echo $fila__contador['contador_click'];
+    $contador = $fila__contador['contador_click']+ 1;
+    $actualizar__click = "UPDATE informacion__del__vehiculo__en__venta SET 	contador_click = '$contador' WHERE id_publicacion_vehiculo = '$id__publicacion'";
+    $ejecutar__actualizacion = mysqli_query($conexion__db__accent,$actualizar__click);
+  
+
+  }
 
   $consulta__fotos__vehiculos = "SELECT foto_1,foto_2,foto_3,foto_4,foto_5,foto_6,foto_7,foto_8,foto_9,foto_10 FROM fotos__del__vehiculo WHERE id_fotos ='$id__publicacion'";
   $ejecutar__consulta__fotos = mysqli_query($conexion__db__accent,$consulta__fotos__vehiculos);
@@ -16,9 +28,12 @@ if($id__publicacion){
 $consulta__contactos = "SELECT  telefono_1,telefono_2,whatsapp_1,whatsapp_2 FROM  contacto__vendedor WHERE id_contacto = '$id__publicacion'";
 $ejecutar__consulta__contacto = mysqli_query($conexion__db__accent,$consulta__contactos);
 $fila__contacto = mysqli_fetch_array($ejecutar__consulta__contacto);
+ 
+
 
  if(mysqli_num_rows($ejecutar__consulta) > 0){
- $fila = mysqli_fetch_array($ejecutar__consulta);?>
+ $fila = mysqli_fetch_array($ejecutar__consulta);
+ ?>
 <div class=" contenedor__detalles__usado">
 <div class="contendor__imagenes">
     <div class="image">

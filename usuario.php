@@ -1,5 +1,5 @@
 <?php 
-$titulo = "Registro usuario | AdHoc";
+$titulo = "AdHoc | Registro usuarios";
 include'layout/nabvar.php' ?>
 <div class="contenedor__del__formulario">
 <form class="formulario__registro" id="formulario-registro-usuario">

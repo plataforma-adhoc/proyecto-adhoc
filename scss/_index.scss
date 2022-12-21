@@ -2,7 +2,7 @@
 @import 'variables';
 
 :root{
-    --gold1:#F4BD76;
+
     --gold2:#F6CD8F;
     --gray:#ffffff80;
     --gray2:#f7d9d990;
@@ -25,8 +25,18 @@
     --nav-width: 320px;
     --nav-count: 10;
   }
+  .oferta__de__lanzamiento{
+    background: $color__adhoc;
+    height: 80px;
+  }
 
-
+.titulo__promo__de__lanzamiento{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 100px;
+}
  .enlace__vender__vehiculo{
 display: inline-block;
  text-decoration: 0;
@@ -85,7 +95,7 @@ display: inline-block;
     justify-content: space-between;
   }
   
- .fa-user-astronaut,.fa-sign-in-alt,.fa-house-user,.fa-coins{
+ .fa-user-astronaut,.fa-sign-in-alt,.fa-house-user,.fa-coins,.fa-headset{
     font-size: 22px;
     background:$color__fondo;
     border-radius: 50px;
@@ -361,17 +371,7 @@ display: inline-block;
     
 }
 
-.hero__main__vehiculos {
-    height: calc(100vh - 70px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:0;
-    background-image: url(../img/carros__y__camionetas.png);
-    background-repeat: no-repeat;
-    background-size:cover;
- 
-}
+
 .hero__textos{
     // width: 90%;
         width:90%;
@@ -380,9 +380,9 @@ display: inline-block;
 }
 
 .title{
-    font-size: 30px;
-    font-weight: bold;
-    color: $color__accent;
+    font-size: 50px;
+    font-weight: bolder;
+    color: $color__adhoc;
 }
 
 
@@ -439,22 +439,18 @@ display: inline-block;
 
 .icono__conductor{
     height: auto;
-    width: 150px;
+    width: 220px;
 
 }
 .subtitulo__slider{
     color: white;
-    width: 90%;
-    margin: 20px  5px  0 auto;
     font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px 30px;
 }
 
-.texto__slider{
-    color: white;
-    margin-left: 20px;
-    margin-top: 4px;
-    line-height: 20px;
-}
+
 
 
 .slider__1:hover{
@@ -463,12 +459,6 @@ display: inline-block;
   
 }
 
-.slider__2:hover{
-    background:#222f3e;
-    transition:  ease 0.7s;
-
-
-}
 
 
 .slider__3:hover{
@@ -478,19 +468,8 @@ display: inline-block;
 
 }
 
-.slider__4:hover{
-    background:#be2edd;
-    transition:  ease 0.7s; 
 
 
-}
-
-.slider__5:hover{
-    background:#e84393;
-    transition:  ease 0.7s;  
- 
-
-}
 
 .slider__6:hover{
     background:#6D214F;
@@ -524,27 +503,52 @@ display: inline-block;
 
 }
 
-.contenedor__services{
-width:100%;
-height: auto;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-wrap: wrap;
+.contenido__consejo__aleatorio{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background:$color__fondo__footer;
+    border-radius: 10px;
+   align-items: center;
+   visibility: hidden;
+ 
+}
+.contenido__consejo{
+    margin-left: 40px;
+    width: 10%;
+}
+.aleatorio__2{
+    margin-top: 20px;
 
 }
-.services__vender__carro{
+.aleatorio__2{
+    margin-top: -90px;
+
+}
+.aleatorio__3{
+    margin-top: -150px;
+}
+
+.aleatorio__4{
+    margin-top: -150px;
+}
+.aleatorio__5{
+    margin-top: -180px;  
+}
+
+.aleatorio__6{
     margin-top: -100px;
+
+}
+.fa-lightbulb{
+    font-size: 50px;
+    color: $color__verde
+
+}
+.parrafo__consejo{
+    color: white;
 }
 
-.contenido__services{
-    width: 48%;
-}
-
-.texto__contenido__services{
-color: white;
-font-size: 18px;
-}
 
 .imagen__vende__tu__carro{
     width: 90%;
@@ -556,8 +560,13 @@ font-size: 18px;
 }
 
 .subtitle{
-    font-size: 42px;
+    font-size: 30px;
     color: white;
+    font-weight: bolder;
+}
+
+.subtitulo{
+    text-align: center;
 }
 .solicitud{
     color: white;
@@ -574,6 +583,44 @@ font-size: 18px;
     font-size: 17px;
     line-height:$line__heigth__parrafos;
     margin-bottom: 60px;
+}
+
+.texto__copy{
+    text-align: center;
+}
+
+.contenedor__funciones{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contenido__funciones{
+    width: 30%;
+    height:150px;
+    display: flex;
+    font-weight: 400;
+
+}
+.parrafo__contenido__funciones{
+color:$color__gris;
+margin-left: 10px;
+font-size: 18px;
+}
+
+
+.fa-circle{
+color: $color__adhoc;
+font-size: 15px;
+}
+
+.en__construccion{
+    color:black;
+    background:$color__adhoc;
+    border-radius: 25px;
+    padding: 10px;
 }
 
 .copy__section--modifier{
@@ -614,7 +661,7 @@ font-size: 18px;
 }
 
 .card__list{
-    color:$color__adhoc;
+    color:white;
     font-weight: 700;
     margin: 25px 0 12px ;
     font-size: 18px;
@@ -1189,6 +1236,7 @@ width: 100px;
     .texto__slider{
         font-size: 15px;
     }
+   
     
   }
   
@@ -1217,6 +1265,14 @@ width: 100px;
         width: 70%;
     }
   
+}
+
+@media screen and (max-width:700px) {
+    .contenido__funciones{
+        width: 100%;
+        height: 100px;
+        color: white;
+    }
 }
 @media screen and (max-width:680px) {
     .texto__anuncio__promocion{
@@ -1258,9 +1314,35 @@ width: 100px;
 
 @media screen and (max-width:400px){
   .slider h3{
-    font-size: 13px;
+    font-size: 15px;
   }
-    .texto__slider{
-        font-size: 13px;
+   
+    .icono__conductor{
+        width: 50%;
     }
+    .contenido__consejo__aleatorio{
+        height: 150px;
+        background: #000;
+
+    }
+    .contenido__consejo{
+        margin-left: 1rem;
+    }
+    .parrafo__consejo{
+        margin-left: 2rem;
+
+    }
+    .aleatorio__2{
+        margin-top: -7rem;
+    }
+   .aleatorio__3{
+    margin-top: -7rem;
+   }
+   .aleatorio__5{
+    margin-top: -10rem;
+   }
+   .aleatorio__6{
+    margin-top: -10rem;
+   }
+  
 }

@@ -203,7 +203,6 @@
 
 
 const  inputs__login = document.querySelectorAll('#formulario-login input')
-
 const validar__formulario__login = (e) =>{
   switch(e.target.name){
     case "email":
@@ -236,7 +235,6 @@ inputs__login.forEach((input)=>{
   })
 
 export function  insert__login__usuario(){
-
   let login__usuario = document.getElementById('formulario-login');
   if(login__usuario){
     login__usuario.addEventListener('submit',function(evento){
@@ -390,9 +388,6 @@ export  function actualizar__contrasena__usuario(){
   export function modal__cambio__contrasena__usuario(){
     var modal = document.getElementById("myModalCambioContrasena");
     var btn = document.getElementById("card-cambiar-contrasena");
-    
-    
-    // var span = document.getElementsByClassName("close")[0];
     var span = document.getElementById('cerrar');
 
     
@@ -411,38 +406,6 @@ export  function actualizar__contrasena__usuario(){
     }
      }
 
-   
-
-export function recargar__conductores__disponibles(){
- let conductores__disponibles = document.getElementById('conductores-disponibles');
-
-}
-
-setInterval(recargar__conductores__disponibles,5000)
-
-let campo = document.getElementById('campo')
-if(campo){
- campo.addEventListener('keyup',getData)
-}
-export function getData(){
-  var input = document.getElementById('campo')
-
-  if(input != null){
-    var input = document.getElementById('campo').value
-
-    let insert__conductores__disponibles = document.getElementById('conductores-disponibles');
-  
-    let form__data =  new FormData();
-    form__data.append('campo',input)
-    fetch(url__servidor+'load',{
-       method:'POST',
-       body:form__data
-    }).then(respuesta => respuesta.json())
-    .then(data=>{
-  insert__conductores__disponibles.innerHTML = data;
-    }).catch(err => console.log(err))
-  }
-  }
 
   let buscador = document.getElementById('buscador')
 if(buscador){

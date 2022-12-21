@@ -64,7 +64,7 @@ paypal.Buttons({
     onApprove: function(data, actions) {
       let url__servidor  = 'https://adhoc.com.co/'
       actions.order.capture().then(function(detalles){
-        return fetch('capturar-datos',{
+        return fetch(url__servidor+'capturar-datos',{
          method:'POST',
          headers:{
           'content-type' : 'application/json'
@@ -98,7 +98,7 @@ paypal.Buttons({
       })
       let datos = new FormData()
       datos.append('id',<?php echo  $_SESSION['id_usuario']  ?>)
-      fetch('pago-cancelado',{
+      fetch('https://adhoc.com.co/pago-cancelado',{
         method:'POST',
         body:datos
       }).then(respuesta => respuesta.json())

@@ -1,15 +1,12 @@
 <?php  
 
-$titulo =  "AdHoc | Venta de carros usados  en Bogotá  ";
+$titulo =  "AdHoc | Venta de carros usados  Bogotá ";
 include'layout/nabvar.php'; ?>
 <section class=" hero__main">
     <div class=" container hero__textos">
-        <h1 class="title">Aceleramos  la compra y venta de  carros usados<span class="title--active">. <img
-                    src="https://img.icons8.com/bubbles/50/000000/chevron-right.png"alt="flecha a la derecha" />
-
-            </span></h1>
-        <h2 class="copy">Llegamos a las personas interesadas en la compra de tu  carro usado  <br>
-            <span class="copy__active">Crea un perfil de tu vahiculo y publicalo facil  y rapido </span></h2>
+        <h1 class="title">Anuncia la venta de tu carro usado<span class="title--active"></span></h1>
+        <h2 class="copy">Vende tu carro usado de forma segura<br>
+            <span class="copy__active">Pruebalo gratis </span></h2>
 
         <a href="carros-y-camionetas" class="cta">Encuentra tu proximo carro</a>
     </div>
@@ -18,110 +15,185 @@ include'layout/nabvar.php'; ?>
 
 <main>
     <div class="container services">
-        <h2 class="subtitle subtitle">Qué te ofrece AdHoc ?<span class="point">.</span></h2>
-        <p class="copy__section">Publica la venta de tu carro usado en unos simples pasos y descubre los beneficios que tenemos,
-            ponemos a tu disposicion nuestra plataforma para que tu anuncia llegue a todos los posibles compradores.
-            <br>Nuestro algoritmo mostrara tu anuncio a las personas con más probabilidades de compra cuando visiten <br> nuestra plataforma 
-            segun sus preferencias .
-            </p>
-        <p class="copy__section">anuncia la venta de tu carro usado   y empieza a recibir ofertas de compra.
-           </p>
-        <div class="servicios">
+        <h2 class="subtitle subtitulo">Qué te ofrece AdHoc ?<span class="point">.</span></h2>
+        <p class="copy__section texto__copy">Nuestras funciones te permiten.</p>
+        <div class="contenedor__funciones">
+             <div class="contenido__funciones">
+                <div>
+                <i class="fas fa-circle"></i>
+
+                </div>
+               <div>
+                 <p class="parrafo__contenido__funciones">Llevar un control de cuantas veces ha sido visitado  el anuncio de tu carro usado.</p>
+               </div>
+             </div>
+             <div class="contenido__funciones">
+             <div>
+             <i class="fas fa-circle"></i>
+                </div>
+                <div>
+                 <p class="parrafo__contenido__funciones"> Decidir si los datos de tu carro pueden aparecer en nuestras redes sociales, esto sirve para acelerar el proceso de venta</p>
+                </div>
+            </div>
+            <div class="contenido__funciones">
+             <div>
+             <i class="fas fa-circle"></i>
+                </div>
+                <div>
+                 <p class="parrafo__contenido__funciones"> Modificar el precio del vehiculo y ofrecer un descuento.</p>
+                </div>
+            </div>
+            <div class="contenido__funciones">
+                 <div>
+                 <i class="fas fa-circle"></i>
+                    </div>
+                    <div>
+                     <p class="parrafo__contenido__funciones"> Prueba los primeros 15 dias <strong>SIN COSTO </strong>alguno.</p>
+                    </div>
+                </div>  
+                <div class="contenido__funciones">
+                 <div>
+                 <i class="fas fa-circle"></i>
+                    </div>
+                    <div>
+                     <p class="parrafo__contenido__funciones">Mide y analiza los resultados de tu anuncio en nuestro tablero</p>
+                      <strong class="en__construccion">En construcción</strong>
+                    </div>
+                </div> 
+        </div>
+        </div>   
+        </div>
+        <h2 class="subtitle subtitle subtitulo">Tambien puedes anunciar <span class="point">.</span></h2>
+        <div class="container servicios">
             <div class="slider slider__1 animate__animated">
-                <img src="img/retrovisor__de__ carro.jpg" alt="retrovisor de carros" class="icono__conductor">
+                <img src="img/toyota.jpg" alt="Toyota" class="icono__conductor">
                
                 <div>
-                    <h3 class="subtitulo__slider">Nuevos caminos por recorrer te esperan </h3>
-                    <p class="texto__slider">Todo es mas facil cuando tienes un carro no importa si es nuevo o usado aqui lo encontraras.</p>
+                    <h3 class="subtitulo__slider">Tu carro usado</h3>
                 </div>
             </div>
-            <div class="slider slider__2">
-                <img src="img/volante__de__carro.jpg" alt="parte interior de un carro" class="icono__conductor">
-                <div>
-                    <h3 class="subtitulo__slider">Explora todos los modelos y marcas publicadas</h3>
-                    <p class="texto__slider">Encuentra los carros usados publicados y escoje el   que mas se ajuste a tu presupuesto</p>
-                </div>
-            </div>
+          
             <div class="slider slider__3">
-                <img src="img/tractomula.jpg" alt="carro tractomula"
-                    class="icono__conductor">
+                <img src="img/tractomula.jpg" alt="carro tractomula"class="icono__conductor">
                
                 <div>
-                    <h3 class="subtitulo__slider">Anuncia tu vehiculo de carga.</h3>
-                    <p class="texto__slider">Puedes anunciar o comprar los carros  de carga usados que tu empresa necesita.</p>
+                    <h3 class="subtitulo__slider">Vehiculos de carga</h3>
+                   
                 </div>
             </div>
-            <div class="slider slider__4">
-                <img src="img/maquinaria__pesada.jpg" alt="caterpillar maquina amarilla" class="icono__conductor">
-                
-                <div>
-                    <h3 class="subtitulo__slider">Buscale comprador a esa maqunaria amarilla</h3>
-                    <p class="texto__slider">Tu maquina para trabajo pesado tambien tiene un espacio aqui.</p>
-                </div>
-            </div>
+        
             <div class="slider slider__7">
                 <img src="img/carro__electrico.jpg" alt="carro electrico" class="icono__conductor">
                 <div>
                 </div>
                 <div>
-                    <h3 class="subtitulo__slider">La movilidad esta cambiando</h3>
-                    <p class="texto__slider">Publica tu carro electrico usado  y deja que otra persona ayude al planeta</p>
+                    <h3 class="subtitulo__slider">Carros electricos</h3>
                 </div>
             </div>
             <div class="slider slider__8">
-                <img src="img/taxi.jpg" alt="taxi" class="icono__conductor">
+                <img src="img/Taxi.jpg" alt="taxi" class="icono__conductor">
                 
                 <div>
-                    <h3 class="subtitulo__slider">Tu vehiculo de trabajo</h3>
-                    <p class="texto__slider"> Ya sea que quieras vender o comprar un vehiculo usado  para servicio publico </p>
+                    <h3 class="subtitulo__slider">Carros de servicio publico</h3>
+                  
                 </div>
             </div>
           
         </div>
     </div>
-    <section class="container services">
-    <h3 class="subtitle">Llega mas rapido a tu potencial comprador <span class="point">.</span></h3>
-     <div class="contenedor__services">
-       <div class="contenido__services">
-           <p class="texto__contenido__services">La compra y venta de carros usados  en Bogotá y en Colombia va en aumento, segun encuestas recientes, <br>
-           sabemos que tu quieres  vender tu vehiculo en el menor tiempo posible y de la forma mas segura <br> 
-           nuestra mision es llegar a ese comprador que lo puede estar buscando.
-         </p>
-       </div>
-       <div class="contenido__services">
-           <img src="./img/vende__tu__carro usado.png" alt="carro" class="imagen__vende__tu__carro">
-       </div>
-     </div>
+    </div>
+    <section class="container">
+        <h2 class="subtitle">Consejo del dia para vender tu carro</h2>
+        <div class="contenido__consejo__aleatorio aleatorio__1">
+        <div class="contenido__consejo">
+        <i class="far fa-lightbulb"></i>
+        </div>
+        <div>
+            <p class="parrafo__consejo">Asegúrate de que tu carro esté en buen estado.
+
+            </p>
+        </div>
+        </div>
+        <div class="contenido__consejo__aleatorio aleatorio__2">
+        <div class="contenido__consejo">
+        <i class="far fa-lightbulb"></i>
+        </div>
+        <div>
+            <p class=" ">Define dónde y cómo quieres vender tu vehiculo usado.
+
+            </p>
+        </div>
+        </div>
+        <div class="contenido__consejo__aleatorio aleatorio__3">
+        <div class="contenido__consejo">
+        <i class="far fa-lightbulb"></i>
+        </div>
+        <div>
+            <p class="parrafo__consejo">Compara  los precios del mercado y de esa forma le puedes poner un precio competitivo.
+
+            </p>
+        </div>
+        </div>
+        <div class="contenido__consejo__aleatorio aleatorio__4">
+        <div class="contenido__consejo">
+        <i class="far fa-lightbulb"></i>
+        </div>
+        <div>
+            <p class="parrafo__consejo">Ten todo los documentos a la mano.
+
+            </p>
+        </div>
+        </div>
+        <div class="contenido__consejo__aleatorio aleatorio__5">
+        <div class="contenido__consejo">
+        <i class="far fa-lightbulb"></i>
+        </div>
+        <div>
+            <p class="parrafo__consejo">Investiga el perfil del posible comprador.
+
+            </p>
+        </div>
+        </div>
+        
+        </div>
+        <div class="contenido__consejo__aleatorio aleatorio__6">
+        <div class="contenido__consejo">
+        <i class="far fa-lightbulb"></i>
+        </div>
+        <div>
+            <p class="parrafo__consejo">No transfieras la propiedad del vehículo sin antes recibir la totalidad del dinero.
+
+            </p>
+        </div>
+        </div>
     </section>
+  
     <section class="services services__vender__carro">
         <div class="container">
-            <h3 class="subtitle">Compra o vende tu carro <span class="point">.</span></h3>
-            <p class="copy__section">Ha llegado el momento de vender tu vehiculo y cambiarlo por otro<br>
-               empieza hoy mismo creando un perfil de tu carro o busca el que quieres y ponte en contacto con el vendedor. <br>
-               Llega a cientos de potenciales compradores desde la comodidad de tu hogar. 
-                <br>
-            </p>
-            <p class="copy__section">Piensa en AdHoc como tu solución cuando quieras anuciar la venta de tu carro usado.</p>
-
+            <h3 class="subtitle subtitulo">La compra y venta de carros usados  va en aumento<span class="point">.</span></h3>
+            <p class="copy__section texto__copy"> Anuncia tu carro  a la hora que quieras y desde donde quieras.  </p>
             <article class="container-cards">
                 <div class="card precios">
-                    <img src="img/recibiendo__mensajes.svg" class="card__img" alt="recibiendo mensajes">
+                    <img src="img/Tiempo__real.svg" class="card__img" alt="recibiendo mensajes">
                     <div class="cards__text">
                         <p class="card__list">Recibe ofertas en tu celular</p>
                         <!-- <h3 class="card__title">Entrega las llaves<span class="point">.</span></h3> -->
-                        <p class="card__copy">Todas las ofertas de compras las podras recibir en tu telefono
+                        <p class="card__copy">Todas las ofertas de compras las podras recibir en tu telefono.
+                            Chatea o recibe llamadas de tu posible comprador.
                         </p>
-                        <a href="carros-y-camionetas" class="card__button">Ver todos los carros </a>
+                        <a href="usuario" class="card__button">Registrarme </a>
                     </div>
                 </div>
                 <div class="card precios" id="formas-de-pago">
-                    <img src="img/online.svg" class="card__img" alt="en linea">
+                    <img src="img/Online.svg" class="card__img" alt="en linea">
                     <div class="cards__text">
-                        <p class="card__list">Alcanza mayor visibilidad </p>
+                        <p class="card__list">A un no estas convencido ? Soporte 24/7/365</p>
                         <!-- <h3 class="card__title">Metodos de pago<span class="point">.</span></h3> -->
-                        <p class="card__copy">Llega a aquellos compradores interesados en comprar tu vehiculo, anuncialo y activalo de manera facil y rapido comenzando con una 
-                            prueba de 15 dias totalmente <strong>GRATIS</strong>.
+                        <p class="card__copy">
+                            Un equipo humano esta dispuesto a resover tus dudas.
                             </p>
+                        <a href="contacto" class="card__button">Necesito ayuda</a>
+
                     </div>
                 </div>
                 <div class="card precios">
@@ -129,7 +201,7 @@ include'layout/nabvar.php'; ?>
                     <div class="cards__text">
                         <p class="card__list">Ha llegado el momento de vender tu carro</p>
                         <!-- <h3 class="card__title">Seguridad<span class="point">.</span></h3> -->
-                        <p class="card__copy">Tu y tu familia se merecen un carro nuevo, compra el  que te gusta y vende el usado que tienes. 
+                        <p class="card__copy">Prueba sin <strong>costo</strong> alguno y luego tu decides si quieres continuar con el anuncio de tu carro usado. 
                           </p>
                         <a href="publicar-vehiculos" class="card__button">Quiero crear un anuncio</a>
                     </div>
@@ -139,7 +211,7 @@ include'layout/nabvar.php'; ?>
     </section>
 <section class="container nuestra__forma__de__pago">
 <h2 class="subtitulo__nuestra__forma">Formas de pago</h2>
-<p class="paypal__parrafo">Con paypal puedes pagar solo usando tu correo electronico y tu contraseña</p>
+<p class="paypal__parrafo">Con Paypal puedes pagar solo usando tu correo electronico y tu contraseña</p>
 <article class="container-cards">
                 <div class="card precios "id="formas-de-pago">
                     <div class="cards__text">
@@ -190,7 +262,7 @@ include'layout/nabvar.php'; ?>
         <p class="item__enumerado">Transparencia</p>
     </div>
     <p class="texto__enumerado">Todas nuestras promociones son publicadas con sus respectivos terminos y condiciones para que tengas conocimiento previo antes 
-        de adquirir una de nustras promociones.
+        de adquirir una de nuestras promociones.
     </p>
   </div>
   <div class="enumerados">
@@ -220,7 +292,7 @@ include'layout/nabvar.php'; ?>
     </section>
     <br><br>
 
-  <section class="container secction__blog">
+  <!-- <section class="container secction__blog">
   <h4 class="subtitulo__anuncio">Que esta pasando </h4>
   <br>
   <div class="contenido__lo__ultimo">
@@ -234,7 +306,7 @@ include'layout/nabvar.php'; ?>
           <button class="btn__ir__al__blog">Explorar</button>
     </a>
     </div>
-  </section>
+  </section> -->
 </main>
 
 <?php include'layout/footer.php'; ?>

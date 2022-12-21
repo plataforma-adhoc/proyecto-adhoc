@@ -1,6 +1,6 @@
-<?php  include'layout/nabvar.php'  ?>
-
-
+<?php 
+$titulo =  "AdHoc | Ayudanos a mejorar";
+ include'layout/nabvar.php'  ?>
 <div class="container contenedor__formulario__sugerencia">
     <h2 class="titulo__mejoras">Ayudanos a mejorar</h2>
     <p class="parrafo__mejoras">En que quieres que mejoremos, escribenos tu sugerencia y trabajaremos para mejorar 
@@ -17,7 +17,6 @@
 
 
             </div>
-          <!-- <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> -->
 
      </div>
 </div>

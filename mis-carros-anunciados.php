@@ -6,179 +6,84 @@ if($id__usuario){
 date_default_timezone_set('America/Bogota');
 setlocale(LC_ALL,"es_ES");
 setlocale(LC_TIME,"es_ES.UTF-8");
-
-
-
-// if($ejecutar__consulta__diseño && $ejecutar__consulta__contacto && $ejecutar__consulta__equipamiento && $ejecutar__consulta__fotos &&
-// $ejecutar__consulta__informacion && $ejecutar__consulta__seguridad){
-//   $fila__diseño = mysqli_fetch_array($ejecutar__consulta__diseño);
-//   $fecha__de__registro =  $fila__diseño['fecha_de_registro'];
-//   echo $fecha__de__registro;
-//   // $vencimiento__diseño = $fila__diseño['vencimiento_de_prueba'];
-//   // $interval = date_diff($fecha__de__registro, $vencimiento__diseño);
-//   // echo $interval -> format('%R%a días');
-
-//   $fila__contacto = mysqli_fetch_array($ejecutar__consulta__contacto);
-// $vencimiento__contacto = $fila__contacto['vencimiento_de_prueba'];
-
-// $fila__equipamiento = mysqli_fetch_array($ejecutar__consulta__equipamiento);
-// $vencimiento__equipamiento = $fila__equipamiento['vencimiento_de_prueba'];
-
-// $fila__fotos = mysqli_fetch_array($ejecutar__consulta__fotos);
-// $vencimiento__fotos = $fila__fotos['vencimiento_de_prueba'];
-
-// $fila__informacion = mysqli_fetch_array($ejecutar__consulta__informacion);
-// $vencimiento__informacion = $fila__informacion['vencimiento_de_prueba'];
-
-// $fila__seguridad = mysqli_fetch_array($ejecutar__consulta__seguridad);
-// $vencimiento__seguridad = $fila__seguridad['vencimiento_de_prueba'];
-// }
-//     // echo "actaulizado";
-//   }else{
-//     echo "error";
-
-//   }
-// }
 ?>
-
-
-
-
-
 <section class="container contenedor__mis__carros__anunciados">
   <?php  
-// EXTRAYENDO LA FECHA INICIAL DE LA PRUEBA GRATUITA 
-// $traer__datos__diseño ="SELECT id_usuario, fecha_de_registro  FROM disenio__y__estilo__vehiculo WHERE id_usuario = '{$_SESSION['id_usuario']}'";
-// $ejecutar__traer__diseño = mysqli_query($conexion__db__accent,$traer__datos__diseño);
-// $resultado = mysqli_fetch_array($ejecutar__traer__diseño);
-// $fecha__de__registro = $resultado['fecha_de_registro'];
-// $fecha__diseño =  date_create($fecha__de__registro);
-//  $fecha__vencimiento = date_add($fecha__diseño,date_interval_create_from_date_string('1 days'));
-//  $fecha__final = date_format($fecha__vencimiento,'Y-m-d');
 
-// $traer__datos__contacto ="SELECT id_usuario, fecha_de_registro  FROM contacto__vendedor WHERE id_usuario = '{$_SESSION['id_usuario']}'";
-// $ejecutar__traer__contacto = mysqli_query($conexion__db__accent,$traer__datos__contacto);
-// $resultado = mysqli_fetch_array($ejecutar__traer__contacto);
-// $fecha__de__registro = $resultado['fecha_de_registro'];
-// $fecha__contacto =  date_create($fecha__de__registro);
-// date_add($fecha__contacto,date_interval_create_from_date_string('1 days'));
-//  date_format($fecha__contacto,'Y-m-d');
-
-
-// $traer__datos__equipamiento ="SELECT id_usuario, fecha_de_registro  FROM equipamiento__del__vehiculo WHERE id_usuario = '{$_SESSION['id_usuario']}'";
-// $ejecutar__traer__equipamiento = mysqli_query($conexion__db__accent,$traer__datos__equipamiento);
-// $resultado__equipamiento = mysqli_fetch_array($ejecutar__traer__equipamiento);
-// $fecha__de__registro__equipamiento = $resultado__equipamiento['fecha_de_registro'];
-// $fecha__equipamiento =  date_create($fecha__de__registro__equipamiento);
-// date_add($fecha__equipamiento,date_interval_create_from_date_string('1 days'));
-// date_format($fecha__equipamiento,'Y-m-d');
-
-// $traer__datos__fotos="SELECT id_usuario, fecha_de_registro  FROM fotos__del__vehiculo WHERE id_usuario = '{$_SESSION['id_usuario']}'";
-// $ejecutar__traer__fotos = mysqli_query($conexion__db__accent,$traer__datos__fotos);
-// $resultado__fotos = mysqli_fetch_array($ejecutar__traer__fotos);
-// $fecha__de__registro__fotos = $resultado__fotos['fecha_de_registro'];
-// $fecha__fotos =  date_create($fecha__de__registro__fotos);
-// date_add($fecha__fotos,date_interval_create_from_date_string('1 days'));
-//  date_format($fecha__fotos,'Y-m-d');
-
-// $traer__datos__informacion ="SELECT id_usuario, fecha_de_publicacion  FROM informacion__del__vehiculo__en__venta WHERE id_usuario = '{$_SESSION['id_usuario']}'";
-// $ejecutar__traer__informacion = mysqli_query($conexion__db__accent,$traer__datos__informacion);
-// $resultado__informacion = mysqli_fetch_array($ejecutar__traer__informacion);
-// $fecha__de__registro__informacion = $resultado__informacion['fecha_de_publicacion'];
-// $fecha__informacion =  date_create($fecha__de__registro__informacion);
-// date_add($fecha__informacion,date_interval_create_from_date_string('1 days'));
-//  date_format($fecha__informacion,'Y-m-d');
-
-
-// $traer__datos__seguridad ="SELECT id_usuario, fecha_de_registro FROM seguridad__del__vehiculo WHERE id_usuario = '{$_SESSION['id_usuario']}'";
-// $ejecutar__traer__seguridad = mysqli_query($conexion__db__accent,$traer__datos__seguridad);
-// $resultado__seguridad = mysqli_fetch_array($ejecutar__traer__seguridad);
-// $fecha__de__registro__seguridad = $resultado__seguridad['fecha_de_registro'];
-// $fecha__seguridad =  date_create($fecha__de__registro__seguridad);
-// date_add($fecha__seguridad,date_interval_create_from_date_string('1 days'));
-//  date_format($fecha__seguridad,'Y-m-d');
-
-// // ACTUALIZANDO LA LA NUEVA FECHA DE VENCIMIENTO DEL PLAN GRATUITO
-// if($ejecutar__traer__diseño && $ejecutar__traer__contacto && $ejecutar__traer__equipamiento && $ejecutar__traer__fotos &&
-// $ejecutar__traer__informacion && $ejecutar__traer__seguridad){
-//   $actualizar__diseño = "UPDATE disenio__y__estilo__vehiculo SET vencimiento_de_prueba = '$fecha__final'  WHERE id_usuario = '{$_SESSION['id_usuario']}'";
-//   $ejecutar__actualizacion = mysqli_query($conexion__db__accent,$actualizar__diseño);
-
-//   $actualizar__contacto = "UPDATE contacto__vendedor SET vencimiento_de_prueba = '$fecha__final'  WHERE id_usuario = '{$_SESSION['id_usuario']}'";
-//   $ejecutar__actualizacion__contacto = mysqli_query($conexion__db__accent,$actualizar__contacto);
-
-//   $actualizar__equipamiento = "UPDATE equipamiento__del__vehiculo SET vencimiento_de_prueba = '$fecha__final'  WHERE id_usuario = '{$_SESSION['id_usuario']}'";
-//   $ejecutar__actualizacion__equipamiento = mysqli_query($conexion__db__accent,$actualizar__equipamiento);
-
-//   $actualizar__fotos = "UPDATE fotos__del__vehiculo SET vencimiento_de_prueba = '$fecha__final'  WHERE id_usuario = '{$_SESSION['id_usuario']}'";
-//   $ejecutar__actualizacion__fotos = mysqli_query($conexion__db__accent,$actualizar__fotos);
-
-//   $actualizar__informacion = "UPDATE informacion__del__vehiculo__en__venta  SET vencimiento_de_prueba = '$fecha__final'  WHERE id_usuario = '{$_SESSION['id_usuario']}'";
-//   $ejecutar__actualizacion__informacion = mysqli_query($conexion__db__accent,$actualizar__informacion);
-  
-//   $actualizar__seguridad = "UPDATE seguridad__del__vehiculo SET vencimiento_de_prueba = '$fecha__final'  WHERE id_usuario = '{$_SESSION['id_usuario']}'";
-//   $ejecutar__actualizacion__seguridad = mysqli_query($conexion__db__accent,$actualizar__seguridad);
-
-
-//   if($ejecutar__actualizacion &&  $ejecutar__actualizacion__contacto &&  $ejecutar__actualizacion__equipamiento &&   $ejecutar__actualizacion__equipamiento 
-//   && $ejecutar__actualizacion__fotos && $ejecutar__actualizacion__informacion && $ejecutar__actualizacion__seguridad){
    
     // SELECCIONANDO LA FECHA DE VENCIMIENTO DEL PLAN GRATUITO
 
     $consulta__datos__diseño ="SELECT id_estilos,fecha_de_registro FROM disenio__y__estilo__vehiculo WHERE id_usuario = '{$_SESSION['id_usuario']}'";
     $ejecutar__consulta__diseño = mysqli_query($conexion__db__accent,$consulta__datos__diseño);
-    $fila__diseño = mysqli_fetch_array($ejecutar__consulta__diseño);
-    $fecha__de__registro = $fila__diseño['fecha_de_registro'];
-    $fecha__actual =  date('d-m-Y');
-    $diff__diseño = abs(strtotime($fecha__actual) - strtotime($fecha__de__registro));
-    $diff__diseño = $diff__diseño/(60*60*24);
-    
+   if(mysqli_num_rows($ejecutar__consulta__diseño) > 0){
+     $fila__diseño = mysqli_fetch_array($ejecutar__consulta__diseño);
+     $fecha__de__registro = $fila__diseño['fecha_de_registro'];
+     $fecha__actual =  date('d-m-Y');
+     $diff__diseño = abs(strtotime($fecha__actual) - strtotime($fecha__de__registro));
+     $diff__diseño = $diff__diseño/(60*60*24);
+
+   
     
     $consulta__datos__contacto ="SELECT id_contacto,fecha_de_registro  FROM contacto__vendedor WHERE id_usuario = '{$_SESSION['id_usuario']}'";
     $ejecutar__consulta__contacto = mysqli_query($conexion__db__accent,$consulta__datos__contacto);
-    $fila__contacto = mysqli_fetch_array($ejecutar__consulta__contacto);
-    $fecha__de__registro__contacto = $fila__contacto['fecha_de_registro'];
-    $fecha__actual__registro =  date('d-m-Y');
-    $diff__contacto = abs(strtotime($fecha__actual__registro) - strtotime($fecha__de__registro__contacto));
-    $diff__contacto = $diff__contacto/(60*60*24);
+    if(mysqli_num_rows($ejecutar__consulta__contacto) > 0){
+      $fila__contacto = mysqli_fetch_array($ejecutar__consulta__contacto);
+      $fecha__de__registro__contacto = $fila__contacto['fecha_de_registro'];
+      $fecha__actual__registro =  date('d-m-Y');
+      $diff__contacto = abs(strtotime($fecha__actual__registro) - strtotime($fecha__de__registro__contacto));
+      $diff__contacto = $diff__contacto/(60*60*24);
+
+    
     
     $consulta__datos__equipamiento ="SELECT id_equipamiento, fecha_de_registro FROM equipamiento__del__vehiculo WHERE id_usuario = '{$_SESSION['id_usuario']}'";
     $ejecutar__consulta__equipamiento = mysqli_query($conexion__db__accent,$consulta__datos__equipamiento);
-    $fila__equipamiento = mysqli_fetch_array($ejecutar__consulta__equipamiento);
-    $fecha__de__registro__equipamiento = $fila__equipamiento['fecha_de_registro'];
-    $fecha__actual__equipamiento =  date('d-m-Y');
-    $diff__equipamiento = abs(strtotime($fecha__actual__equipamiento) - strtotime($fecha__de__registro__equipamiento));
-    $diff__equipamiento = $diff__equipamiento/(60*60*24);
+    if(mysqli_num_rows( $ejecutar__consulta__equipamiento) > 0){
+      $fila__equipamiento = mysqli_fetch_array($ejecutar__consulta__equipamiento);
+      $fecha__de__registro__equipamiento = $fila__equipamiento['fecha_de_registro'];
+      $fecha__actual__equipamiento =  date('d-m-Y');
+      $diff__equipamiento = abs(strtotime($fecha__actual__equipamiento) - strtotime($fecha__de__registro__equipamiento));
+      $diff__equipamiento = $diff__equipamiento/(60*60*24);
+
+    
     
     
     
     $consulta__datos__fotos = "SELECT id_fotos,fecha_de_registro FROM fotos__del__vehiculo WHERE id_usuario = '{$_SESSION['id_usuario']}'";
     $ejecutar__consulta__fotos = mysqli_query($conexion__db__accent,$consulta__datos__fotos);
-    $fila__fotos = mysqli_fetch_array($ejecutar__consulta__fotos);
-    $fecha__fotos = $fila__fotos['fecha_de_registro'];
-    $fecha__actual__fotos =  date('d-m-Y');
-    $diff__fotos = abs(strtotime($fecha__actual__fotos) - strtotime($fecha__fotos));
-    $diff__fotos= $diff__fotos/(60*60*24);
+    if(mysqli_num_rows($ejecutar__consulta__fotos) > 0){
+      $fila__fotos = mysqli_fetch_array($ejecutar__consulta__fotos);
+  $fecha__fotos = $fila__fotos['fecha_de_registro'];
+  $fecha__actual__fotos =  date('d-m-Y');
+  $diff__fotos = abs(strtotime($fecha__actual__fotos) - strtotime($fecha__fotos));
+  $diff__fotos= $diff__fotos/(60*60*24);
+
+    
     
     
     $consulta__datos__informacion ="SELECT id_publicacion_vehiculo, fecha_de_publicacion FROM informacion__del__vehiculo__en__venta WHERE id_usuario = '{$_SESSION['id_usuario']}'";
     $ejecutar__consulta__informacion = mysqli_query($conexion__db__accent,$consulta__datos__informacion);
-    $fila__informacion = mysqli_fetch_array($ejecutar__consulta__informacion);
-    $fecha__informacion = $fila__informacion['fecha_de_publicacion'];
-    $fecha__actual__informacion =  date('d-m-Y');
-    $diff__informacion = abs(strtotime($fecha__actual__informacion) - strtotime($fecha__informacion));
-    $diff__informacion = $diff__informacion/(60*60*24);
+    if(mysqli_num_rows($ejecutar__consulta__informacion) > 0){
+      $fila__informacion = mysqli_fetch_array($ejecutar__consulta__informacion);
+      $fecha__informacion = $fila__informacion['fecha_de_publicacion'];
+      $fecha__actual__informacion =  date('d-m-Y');
+      $diff__informacion = abs(strtotime($fecha__actual__informacion) - strtotime($fecha__informacion));
+      $diff__informacion = $diff__informacion/(60*60*24);
+
+    
     
     
     $consulta__datos__seguridad ="SELECT id_seguridad,fecha_de_registro FROM seguridad__del__vehiculo WHERE id_usuario = '{$_SESSION['id_usuario']}'";
     $ejecutar__consulta__seguridad = mysqli_query($conexion__db__accent,$consulta__datos__seguridad);
-    $fila__seguridad = mysqli_fetch_array($ejecutar__consulta__seguridad);
-    $fecha__seguridad = $fila__seguridad['fecha_de_registro'];
-    $fecha__actual__seguridad =  date('d-m-Y');
-    $diff__seguridad = abs(strtotime($fecha__actual__seguridad) - strtotime($fecha__seguridad));
-    $diff__seguridad = $diff__seguridad/(60*60*24);
+    if(mysqli_num_rows($ejecutar__consulta__seguridad) > 0){
+      $fila__seguridad = mysqli_fetch_array($ejecutar__consulta__seguridad);
+      $fecha__seguridad = $fila__seguridad['fecha_de_registro'];
+      $fecha__actual__seguridad =  date('d-m-Y');
+      $diff__seguridad = abs(strtotime($fecha__actual__seguridad) - strtotime($fecha__seguridad));
+      $diff__seguridad = $diff__seguridad/(60*60*24);
+
+
     
-    if($diff__diseño > 15 && $diff__contacto > 0 && $diff__equipamiento > 15 && $diff__fotos >  15 && $diff__informacion > 15 && $diff__seguridad > 15) {
+    if($diff__diseño > 15 && $diff__contacto > 15 && $diff__equipamiento > 15 && $diff__fotos >  15 && $diff__informacion > 15 && $diff__seguridad > 15) {
       $actualizar__diseño = "UPDATE disenio__y__estilo__vehiculo SET estado_anuncio = 'Desactivado'  WHERE id_usuario = '{$_SESSION['id_usuario']}'";
         $ejecutar__actualizacion = mysqli_query($conexion__db__accent,$actualizar__diseño);
       
@@ -207,7 +112,15 @@ setlocale(LC_TIME,"es_ES.UTF-8");
      <?php }else{
       // echo "Falta tiempo";
     
-    }?>
+    }
+  }
+}
+    }
+  }
+}
+}
+  
+  ?>
     
 
 <br><br>
@@ -215,14 +128,16 @@ setlocale(LC_TIME,"es_ES.UTF-8");
     <h1 class="titulo__carro__anunciado">Vehiculos anunciados</h1>
     <p class="subtitulo__anuncio__carro">puedes desactivar  la información de tu carro si ya lo vendiste</p>
     <?php  
-    $consulta__datos__carros = "SELECT id_publicacion_vehiculo, id_usuario,precio_del_vehiculo,estado_anuncio FROM informacion__del__vehiculo__en__venta WHERE id_usuario = '{$_SESSION['id_usuario']}'"; 
+    $consulta__datos__carros = "SELECT id_publicacion_vehiculo, id_usuario,marca_del_vehiculo,modelo_vehiculo,precio_del_vehiculo,estado_anuncio FROM informacion__del__vehiculo__en__venta WHERE id_usuario = '{$_SESSION['id_usuario']}'"; 
     $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__datos__carros);
     if($ejecutar__consulta && mysqli_num_rows($ejecutar__consulta) > 0){
      while($fila__resultado = mysqli_fetch_array($ejecutar__consulta)){  ?> 
     <div class="anunciados">
         <div class="contenedor__de__datos">
         <div class="contenido__carros__anunciados">
-            <p class="parrafo__carro__anunciado">Datos de tu carro anunciado</p>
+          <br>
+            <h2 class="subtitulo__carro__anunciado">Datos de tu carro anunciado</h2>
+            <p class="marca__carro__anunciado"><?php echo ucwords($fila__resultado['marca_del_vehiculo'])?> <?php echo ucwords($fila__resultado['modelo_vehiculo'])?></p>
             <p class="texto__precio__carro">precio del carro actualmente</p>
             <h2 class="precio__de__carro__usado"><?php echo number_format($fila__resultado['precio_del_vehiculo'],2,'.','.')  ?></h2>
         </div>
@@ -230,24 +145,28 @@ setlocale(LC_TIME,"es_ES.UTF-8");
      <button class="btn__editar__precio__carro"  data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> Administrar</button>
    </div>
 </div>
-<div class="collapse" id="collapseExample">
-<div class="card card-body tarjeta__collapsable">
- <form class="formulario__precio__del__carro" id="formulario-nuevo-precio">
-    <div class="mb-3">
-    <input type="hidden" class="form-control input__precio__del__carro" id="recipient-name" value="<?php  echo $fila__resultado['id_publicacion_vehiculo'] ?>" name="id-publicacion">
-            <input type="text" class="form-control input__precio__del__carro" id="recipient-name" value="<?php  echo $fila__resultado['precio_del_vehiculo'] ?>" name="nuevo-precio">
-        </div>
-        <button type="submit" class="btn btn-success btn__footer" id="actualizar-precio">Guardar nuevo precio</button>
-   <br><br>
-</form>
-<div class="estado__del__anuncio">
-    <p class="estado__activo">Tu anuncio actualmente esta <?php if($fila__resultado['estado_anuncio'] ==="Activo"){ ?>
-      <span class="activado"><?php echo $fila__resultado['estado_anuncio'] ?></span>
-      <form id="form-desactivar-anuncio">
-        <input type="hidden"name="id-publicacion"value="<?php  echo $fila__resultado['id_publicacion_vehiculo'] ?>">
-        <input type="hidden"name="id-usuario"value="<?php  echo $_SESSION['id_usuario']?>">
-       <button type="submit" class="btn__desactivar__anuncio"> Desactivar ?</button> </p>
-       </form>
+<div class="contenido__tarjeta__colapsable">
+  <div class="collapse" id="collapseExample">
+  <div class="card card-body tarjeta__collapsable">
+   <form class="formulario__precio__del__carro" id="formulario-nuevo-precio">
+      <div class="mb-3">
+      <input type="hidden" class="form-control input__precio__del__carro" id="recipient-name" value="<?php  echo $fila__resultado['id_publicacion_vehiculo'] ?>" name="id-publicacion">
+              <input type="text" class="form-control input__precio__del__carro" id="recipient-name" value="<?php  echo $fila__resultado['precio_del_vehiculo'] ?>" name="nuevo-precio">
+          </div>
+          <button type="submit" class="btn btn-success btn__footer" id="actualizar-precio">Guardar nuevo precio</button>
+     <br><br>
+  </form>
+  <div class="estado__del__anuncio">
+      <p class="estado__activo"><i class="fas fa-bullhorn"></i> Tu anuncio actualmente esta <?php if($fila__resultado['estado_anuncio'] ==="Activo"){ ?>
+        <span class="activado"><?php echo $fila__resultado['estado_anuncio'] ?></span> </p>
+        
+        <form id="form-desactivar-anuncio">
+          <input type="hidden"name="id-publicacion"value="<?php  echo $fila__resultado['id_publicacion_vehiculo'] ?>">
+          <input type="hidden"name="id-usuario"value="<?php  echo $_SESSION['id_usuario']?>">
+         <button type="submit" class="btn__desactivar__anuncio"> Desactivar anuncio</button> </p>
+         </form>
+
+</div>
     <?php  } ?> <br> 
 
     <?php if($fila__resultado['estado_anuncio'] ==="Desactivado"){ ?>
@@ -257,11 +176,112 @@ setlocale(LC_TIME,"es_ES.UTF-8");
 </div>
 </div>
 </div>
-  </div>
+
+</div>
+<?php
+
+$seleccion__diseño = "SELECT nombre_paquete FROM disenio__y__estilo__vehiculo   WHERE id_usuario = '{$_SESSION['id_usuario']}'";
+$ejecutar__seleccion__diseño = mysqli_query($conexion__db__accent,$seleccion__diseño);
+$fila__seleccion__diseño = mysqli_fetch_array($ejecutar__seleccion__diseño);
+$fila__seleccion__diseño['nombre_paquete'];
+
+$seleccion__contacto = "SELECT nombre_paquete FROM contacto__vendedor  WHERE id_usuario = '{$_SESSION['id_usuario']}'";
+$ejecutar__seleccion__contacto = mysqli_query($conexion__db__accent,$seleccion__contacto);
+$fila__seleccion__contacto = mysqli_fetch_array($ejecutar__seleccion__contacto);
+$fila__seleccion__contacto['nombre_paquete'];
+
+$seleccion__equipamiento = "SELECT nombre_paquete FROM equipamiento__del__vehiculo   WHERE id_usuario = '{$_SESSION['id_usuario']}'";
+$ejecutar__seleccion__equipamiento = mysqli_query($conexion__db__accent,$seleccion__equipamiento);
+$fila__seleccion__equipamiento = mysqli_fetch_array($ejecutar__seleccion__equipamiento);
+$fila__seleccion__equipamiento['nombre_paquete'];
+
+
+$seleccion__fotos = "SELECT nombre_paquete FROM fotos__del__vehiculo  WHERE id_usuario = '{$_SESSION['id_usuario']}'";
+$ejecutar__seleccion__fotos = mysqli_query($conexion__db__accent,$seleccion__fotos);
+$fila__seleccion__fotos = mysqli_fetch_array($ejecutar__seleccion__fotos);
+$fila__seleccion__fotos['nombre_paquete'];
+
+
+$seleccion__informacion = "SELECT nombre_paquete FROM informacion__del__vehiculo__en__venta    WHERE id_usuario = '{$_SESSION['id_usuario']}'";
+$ejecutar__seleccion__informacion = mysqli_query($conexion__db__accent,$seleccion__informacion);
+$fila__seleccion__informacion = mysqli_fetch_array($ejecutar__seleccion__informacion);
+$fila__seleccion__informacion['nombre_paquete'];
+
+
+$seleccion__seguridad = "SELECT nombre_paquete FROM seguridad__del__vehiculo   WHERE id_usuario = '{$_SESSION['id_usuario']}'";
+$ejecutar__seleccion__seguridad = mysqli_query($conexion__db__accent,$seleccion__seguridad);
+$fila__seleccion__seguridad = mysqli_fetch_array($ejecutar__seleccion__seguridad);
+$fila__seleccion__seguridad['nombre_paquete'];
+
+ if($fila__seleccion__diseño['nombre_paquete'] ==='PREMUIN' && $fila__seleccion__contacto['nombre_paquete'] ==='PREMUIN' && $fila__seleccion__equipamiento['nombre_paquete'] ==='PREMUIN' &&
+  $fila__seleccion__fotos['nombre_paquete'] ==='PREMUIN' && $fila__seleccion__informacion['nombre_paquete'] ==='PREMUIN'&& $fila__seleccion__seguridad['nombre_paquete'] ==='PREMUIN'){ ?>
+   <div class="solicitud__de__publicacion__redes__sociales" id="contenido-solicitud-publicacion">
+     <p class="texto__publicacion__redes__sociales"> Seleccionamos algunos vehiculos registrados para publicarlo en nuestras cuentas de redes sociales para acelerar el proceso de venta
+      ¿ aceptas que algunos datos basicos de tu vehiculo se publiquen en nuestras redes sociales ?  
+   </p>
+   <div class="form-check" id="aceptar-publicacion">
+     <input class="form-check-input" type="checkbox" value="Aceptar" id="aceptar" name="Aceptar">
+     <input class="form-check-input" type="hidden" value="<?php echo $_SESSION['id_usuario'] ?>"name="id-usuario" id="id-usuario">
+     <label class="form-check-label" for="aceptar">
+       Si acepto
+     </label>
+   </div>
+   <?php  
+     $seleccion__diseño = "SELECT aceptar_anuncio_redes FROM disenio__y__estilo__vehiculo   WHERE id_usuario = '{$_SESSION['id_usuario']}'";
+    $ejecutar__seleccion__diseño = mysqli_query($conexion__db__accent,$seleccion__diseño);
+    $fila__seleccion__diseño = mysqli_fetch_array($ejecutar__seleccion__diseño);
+
+    $seleccion__contacto = "SELECT aceptar_anuncio_redes FROM contacto__vendedor   WHERE id_usuario = '{$_SESSION['id_usuario']}'";
+    $ejecutar__seleccion__contacto = mysqli_query($conexion__db__accent,$seleccion__contacto);
+    $fila__seleccion__contacto = mysqli_fetch_array($ejecutar__seleccion__contacto);
+  
+    $seleccion__equipamiento = "SELECT aceptar_anuncio_redes FROM equipamiento__del__vehiculo  WHERE id_usuario = '{$_SESSION['id_usuario']}'";
+    $ejecutar__seleccion__equipamiento = mysqli_query($conexion__db__accent,$seleccion__equipamiento);
+    $fila__seleccion__equipamiento = mysqli_fetch_array($ejecutar__seleccion__equipamiento);
+  
+    $seleccion__fotos = "SELECT aceptar_anuncio_redes FROM fotos__del__vehiculo  WHERE id_usuario = '{$_SESSION['id_usuario']}'";
+    $ejecutar__seleccion__fotos = mysqli_query($conexion__db__accent,$seleccion__fotos);
+    $fila__seleccion__fotos = mysqli_fetch_array($ejecutar__seleccion__fotos);
+     
+    $seleccion__informacion = "SELECT aceptar_anuncio_redes FROM informacion__del__vehiculo__en__venta    WHERE id_usuario = '{$_SESSION['id_usuario']}'";
+    $ejecutar__seleccion__informacion = mysqli_query($conexion__db__accent,$seleccion__informacion);
+    $fila__seleccion__informacion = mysqli_fetch_array($ejecutar__seleccion__informacion);
+    
+    $seleccion__seguridad = "SELECT aceptar_anuncio_redes FROM seguridad__del__vehiculo   WHERE id_usuario = '{$_SESSION['id_usuario']}'";
+    $ejecutar__seleccion__seguridad = mysqli_query($conexion__db__accent,$seleccion__seguridad); 
+    $fila__seleccion__seguridad = mysqli_fetch_array($ejecutar__seleccion__seguridad);
+   
+    if($fila__seleccion__diseño['aceptar_anuncio_redes'] ==='Aceptar' && $fila__seleccion__contacto['aceptar_anuncio_redes'] ==='Aceptar' && $fila__seleccion__equipamiento['aceptar_anuncio_redes'] ==='Aceptar' &&
+    $fila__seleccion__fotos['aceptar_anuncio_redes'] ==='Aceptar' && $fila__seleccion__informacion['aceptar_anuncio_redes'] ==='Aceptar' && $fila__seleccion__seguridad['aceptar_anuncio_redes'] ==='Aceptar'){ ?>
+     <script>
+         let contenido__solicitud__publicacion = document.getElementById('contenido-solicitud-publicacion');
+         contenido__solicitud__publicacion.style.display = 'none';
+
+      
+     </script>
+  
+ <?php   } ?>
+</div>
+<br><br>
+<div id="respuesta-solicitud" class="contenedor__publicacion__aceptada"></div>
+ <?php } ?>
+<script>
+     let respuesta__solicitud = document.getElementById('respuesta-solicitud').innerHTML = `
+         <div class="publicacion__aceptada">
+         <div class="contenido__check">
+         <i class="far fa-check-circle check"></i>
+         </div>
+         <div>
+         <p class="parrafo__aceptaste__publicacion">Aceptaste publicar tu vehiculo en nuestras redes sociales</p>
+      
+      </div>
+     </div>`
+</script>
+
   <?php } ?>
   <?php }else{ ?>
 <div class="container contenedor__imagen__no__anuncio">
-  <h2 class="subtitulo__hay__anuncio">No tienes ningun anuncio aun </h2>
+  <h2 class="subtitulo__hay__anuncio">No tienes ningun anuncio </h2>
   <div class="imagen">
     <img src="./img/no__hay__carros__publicados.png" alt="caja de productos" class="imagen__no__hay__anuncio">
 
@@ -307,10 +327,33 @@ if(nuevo__precio){
   })
 }
 
+let aceptar__publicacion = document.getElementById('aceptar-publicacion');
+if(aceptar__publicacion){
+  aceptar__publicacion.addEventListener('click',function(evento){
+  let   form__data = new FormData()
+  let aceptar = document.getElementById('aceptar').value
+  let id = document.getElementById('id-usuario').value
+  var url__servidor = 'https://adhoc.com.co/'
+  form__data.append('aceptar',aceptar)
+  form__data.append('id',id)
+    fetch(url__servidor+'aceptar-publicacion-redes-sociales',{
+     method:'POST',
+     body:form__data
+    }).then(respuesta => respuesta.json())
+    .then(data =>{
+      if(data ==='ok'){
+ 
+      }
+      console.log(data);
+    })
+  })
+}
+
 let desactivar__anuncio = document.getElementById('form-desactivar-anuncio');
 if(desactivar__anuncio){
   desactivar__anuncio.addEventListener('submit',function(event){
     let form__data__desactivar__anuncio = new FormData(document.getElementById('form-desactivar-anuncio'))
+    var url__servidor = 'https://adhoc.com.co/'
     event.preventDefault();
     fetch(url__servidor+'desactivar-anuncio-carro',{
         method:'POST',

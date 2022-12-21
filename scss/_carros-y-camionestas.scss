@@ -3,12 +3,64 @@
     width: 100%;
     height: auto;
 }
-.title__carros__y__comionetas{
-    color: white;
-    font-weight: bolder;
+.hero__textos__carros__y__camionetas{
+    width: 80%;
+  margin-top: -35rem;
 }
+.title__carros__y__comionetas{
+    color:$color__adhoc;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 40px;
+   
+}
+.title--active__carros__y__camionetas{
+    color:white;
+    font-size: 3rem;
+}
+.hero__main__vehiculos {
+    width: 100%;
+    height: 45rem;
+    overflow: hidden;
+ 
+}
+.buscador{
+    width: 60%;
+    margin: auto;
+  }
+  form.example input[type=text] {
+    padding: 13px;
+    font-size: 17px;
+    float: left;
+    width: 70%;
+    background:$color__fondo;
+    border: 0;
+    outline: 0;
+    border-radius:7px;
+    color: white;
+    background: #000;
+    margin-left: 14%;
 
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 
+  .subtitulo__buscador{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    line-height: 150px;
+  }
+.img__carros__y__camionetas{
+    width: 100%;
+    height:auto;
+
+}
 
 .subtitulo__vehiculos{
     color: white;
@@ -109,6 +161,21 @@
     color: $color__gris;
 }
 
+.no__resultado{
+width: 100%;
+}
+
+.imagen__no__resultados{
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.subtitulo__sin__resultados{
+    text-align: center;
+    color: white;
+}
+
 
 @media screen and (max-width:1200px){
     .contendor__de__vehiculos{
@@ -132,7 +199,19 @@
     }
 }
 
+@media screen and (max-width:1000px) {
+  .hero__textos__carros__y__camionetas{
+  margin-top: -25rem;
+  }  
+}
+
 @media screen and (max-width:900px) {
+    .contenedor__del__buscador{
+        margin-top: -15rem;
+    }
+    .buscador{
+        width: 100%;
+    }
     .contendor__de__vehiculos{
         margin-top: -120px;
     }
@@ -156,17 +235,54 @@
     }
 }
 
+@media screen and (max-width:700px) {
+    .contenedor__del__buscador{
+          margin-top: -20rem;
+      }
+    
+}
+
 @media  screen and (max-width:600px){
+    .buscador{
+        width: 100%;
+    }
 .descripcion__del__vehiculo{
     width: 90%;
 }
 .subtitulo__vehiculos{
     text-align: center;
 }
-
+.hero__textos__carros__y__camionetas{
+    margin-top: -15rem;
+}
 .enlace__vender__vehiculo{
     display: none;
 }
-
+.title__carros__y__comionetas{
+    font-size: 1.5rem;
+    
+}
+.title--active__carros__y__camionetas{
+font-size: 2rem;
+}
 }
 
+@media screen and (max-width:400px) {
+    .contenedor__del__buscador{
+        margin-top: -30rem;
+    }
+  
+    .title__carros__y__comionetas{
+        font-size: 1rem;
+        
+    }
+    .title--active__carros__y__camionetas{
+    font-size: 1.5rem;
+    } 
+    .subtitulo__buscador{
+        font-size: 1.2rem;
+    } 
+    .buscador{
+        width: 100%;
+    }
+}

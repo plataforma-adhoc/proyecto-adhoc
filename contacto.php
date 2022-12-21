@@ -1,5 +1,5 @@
 <?php  
-$titulo ="Contactanos en la publicacion de tu carro | AdHoc";
+$titulo =" AdHoc | Contactanos";
  include'layout/nabvar.php'  ?>
 
 <div class="container">

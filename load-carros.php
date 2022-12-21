@@ -20,9 +20,8 @@ if($numero__fila > 0){
 while($fila = mysqli_fetch_array($ejecutar__consulta)){ 
  $fila__fotos = mysqli_fetch_array($ejecutar__consulta__fotos);
     $html .= '<div class="descripcion__del__vehiculo">
-  
     <div class="conetendor__imagen__vehiculo">
-        <img src="'.$fila__fotos['foto_1'] .'" alt="" class="imagen__del__vehiculo">
+        <img src="'.$fila__fotos['foto_1'] .'" alt="Foto portada del carro usado en venta" class="imagen__del__vehiculo">
 
     </div>
 <div class="datos__del__vehiculo">
@@ -52,7 +51,7 @@ while($fila = mysqli_fetch_array($ejecutar__consulta)){
   <a href="https://api.whatsapp.com/send?phone=numero'. $fila__contactos['whatsapp_1'].'&text=mensaje=Hola vi el anuncio de tu vehiculo an AdHoc" class="enlace__whatsapp"><i class="fab fa-whatsapp" target="_blank"></i> Habla con el vendedor</a>
    </div>
    <div>
-  <a href="detalles-usado?idp='.$fila['id_publicacion_vehiculo'].'" class="mas__detalles"><i class="fas fa-plus"></i> Mas detalles</a>
+   <a href="detalles-usado?idp='.$fila['id_publicacion_vehiculo'].'" class="mas__detalles"><i class="fas fa-plus"></i> Mas detalles</a>
    </div>
   </div>
 
@@ -60,14 +59,19 @@ while($fila = mysqli_fetch_array($ejecutar__consulta)){
 </div>
 ';
 
-
+// detalles-usado?idp='.$fila['id_publicacion_vehiculo'].'
 }
+
  }else{
-    $html .='<div class="no__resultado">
-      <img src="./img/no__resultados__de__busqueda.svg" alt=" ilustracion bsuqueda search busqueda web" class="imagen__no__resultados">
+    $html .='<div class="container no__resultado">
+      <img src="./img/no__resultados__de__busqueda.svg" alt=" ilustracion busqueda " class="imagen__no__resultados">
       
       <h2 class="subtitulo__sin__resultados"><b>Sin resultados</b></h2></div> ';
  }
  echo json_encode($html,JSON_UNESCAPED_UNICODE);
 
 ?>
+
+
+
+

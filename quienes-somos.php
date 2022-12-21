@@ -1,15 +1,15 @@
 <?php 
-$titulo ="Lo que somo en y lo que ofrecemos | AdHoc";
+$titulo =" AdHoc | Quienes somos";
  include'layout/nabvar.php' ?>
         <div class="">
            <h2 class="subtitulos"> Quienes somos</h2>
             <div class="contenedor_parrafo_quienes_somos">
 
             <br><br>
-           <p class="parrafo__conocenos">Somos una plataforma de solicitud de conductores elegidos que conecta usuario con conductores elegidos ,
-             donde los usuarios pueden elegir el conductor que se ajuste a su necesidad.
+           <p class="parrafo__conocenos">Somos una plataforma de anuncios de ventas de carros usado o nuevos,
+             donde los usuarios pueden crear un anuncio para llegar a los potenciales compradores.
 
-             Nuestro compromiso es brindarte seguridad ala hora de elegir nuestra plataforma
+             Nuestro compromiso es brindarte seguridad a la hora de elegir nuestros servicios
              tanto con los datos que nos proporcionas como en la calidad del servicio.
            </p>
            
@@ -20,11 +20,11 @@ $titulo ="Lo que somo en y lo que ofrecemos | AdHoc";
            <br>
            <p class="parrafo__conocenos">
             
-              Ayudarte a encontrar el mejor profesional de acuerdo a tu necesidad en tiempo record ,
+              Ayudarte a encontrar un cliente para tu vehiculo,
                todo en unos simples paso ahorrandote el mayor tiempo posible. 
               
               Asegurar que todas nuestras actividades sean beneficiosas para nuestra comunidad, el medio ambiente nuestros
-              usuarios y medicos enfocados simpre en la iinovacion y mejora continua.
+              usuarios  enfocados simpre en la innovacion y mejora continua.
            </p>
                <br>
                <hr>
@@ -32,8 +32,8 @@ $titulo ="Lo que somo en y lo que ofrecemos | AdHoc";
            <br>
            <p class="parrafo__conocenos">
          
-             Ser una exelente opcion para tener encuenta ala hora de decidir solicitar un conductor elegido ,
-              donde nuestros usuarios se sientan seguros  y tranquilos con el conductor que decidan elegir.
+             Ser una exelente opcion para tener encuenta ala hora de decidir vender tu carro ,
+              donde nuestros usuarios se sientan seguros  y tranquilos cuando deciden elegirnos.
               Formar una red de socios exitosos y crear una lealtad mutua , 
                creemos que las cosas simples son las mas impactates.</p>
              <hr>

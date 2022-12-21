@@ -50,8 +50,14 @@ color: black;
     color: white;
 }
 
-.parrafo__carro__anunciado{
+.subtitulo__carro__anunciado{
     color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.marca__carro__anunciado{
+    color: white;
+    font-size: 20px;
 }
 .anunciados{
     margin-top: 20px;
@@ -101,11 +107,15 @@ color: black;
 .col-form-label{
     color: white;
 }
+
+
 .tarjeta__collapsable{
     width: 50%;
     height: auto;
     margin-left: 10px;
     background:$color__fondo__footer;
+    border-top: 10px solid $color__verde;
+    
 }
 
 .formulario__precio__del__carro{
@@ -126,15 +136,52 @@ color: black;
     width: 40%;
     left: 10px;
     top: 130px;
+   
 }
+
+
+@-moz-keyframes parpadeo{  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @-webkit-keyframes parpadeo {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+  }
+  
+  @keyframes parpadeo {  
+    0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
 
 .estado__activo{
     font-size: 10px;
     color: white;
     left: -50px;
 }
+
+.fa-bullhorn{
+    color: $color__verde;
+ font-size: 25px;
+  animation-name: papadeo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  
+    -webkit-animation-name:parpadeo;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+
 .activado{
   color:$color__verde;
+  font-size: 12px;
 }
 
 .btn__desactivar__anuncio{
@@ -172,9 +219,57 @@ color: black;
     color: $color__danger;
     font-size: 10px; 
 }
+.solicitud__de__publicacion__redes__sociales{
+    margin-top: 30px;
+    width: 80%;
 
+}
+.texto__publicacion__redes__sociales{
+    color: white;
+  }
+  
+.contenedor__publicacion__aceptada{
+    width: 100%;
+    height:auto;
+    background:$color__fondo__footer;
+    border-radius: 10px;
+    border-left: solid 4px $color__verde;
+}
+.publicacion__aceptada{
+    display: flex;
+    align-items: center;
+    color: $color__gris;
+    text-align: center;
+    font-weight: bold;
+    max-height: 100px;
+    line-height: 100px;
+}
+.contenido__check{
+    width: 10%;
+}
+.check{
+    font-size: 30px;
+}
+
+@media screen and (max-width:1100px) {
+    .tarjeta__collapsable{
+        width: 70%;
+   
+    }
+}
+
+@media screen and (max-width:900px) {
+    .tarjeta__collapsable{
+        width: 70%;
+
+    }
+}
 
 @media screen and (max-width:800px) {
+    .tarjeta__collapsable{
+        width: 70%;
+ 
+    }
     .contenido__carros__anunciados{
      width: 50%;
     }  
@@ -186,13 +281,24 @@ color: black;
     }
 }
 
+@media screen and (max-width:700px) {
+     .publicacion__aceptada{
+        line-height: 30px;
+     }
+}
+
 @media screen and (max-width:600px) {
     .promocion__oferta{
         height: 300px;
     }
+    .tarjeta__collapsable{
+        width: 90%;
+
+    }
 }
 
 @media screen and (max-width:400px) {
+    
     .contenido__carros__anunciados{
      width: 60%;
     } 

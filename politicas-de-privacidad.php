@@ -1,5 +1,5 @@
 <?php 
-$titulo ="Politicas y privacidad de datos | AdHoc";
+$titulo ="AdHoc| Politicas y privacidad de datos ";
  include'layout/nabvar.php'; ?>
 <h1 class="titulo__terminos">POLITICA DE PRIVACIDA</h1>
 <div class=" container contenedor__terminos">
