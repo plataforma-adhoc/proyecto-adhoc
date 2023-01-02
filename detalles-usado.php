@@ -4,21 +4,11 @@ include'layout/nabvar.php';
  include'conexion-db-accent.php';
 
 $id__publicacion = isset($_GET['idp']) ? $_GET['idp']:'';
-if($id__publicacion){
-  $consulta__detalles__usado = "SELECT * FROM informacion__del__vehiculo__en__venta WHERE id_publicacion_vehiculo = '$id__publicacion' ";
+$id__usuario= isset($_GET['idu']) ? $_GET['idu']:'';
+if($id__publicacion && $id__usuario){
+  $consulta__detalles__usado = "SELECT * FROM informacion__del__vehiculo__en__venta WHERE id_publicacion_vehiculo = '$id__publicacion' AND id_usuario = '$id__usuario '";
   $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__detalles__usado);
-
-  $consulta__contador__click = "SELECT contador_click FROM informacion__del__vehiculo__en__venta WHERE id_publicacion_vehiculo = '$id__publicacion' ";
-  $ejecutar__contador__click = mysqli_query($conexion__db__accent,$consulta__contador__click);
-  if(mysqli_num_rows($ejecutar__contador__click ) > 0){
-    $fila__contador = mysqli_fetch_array($ejecutar__contador__click);
-    echo $fila__contador['contador_click'];
-    $contador = $fila__contador['contador_click']+ 1;
-    $actualizar__click = "UPDATE informacion__del__vehiculo__en__venta SET 	contador_click = '$contador' WHERE id_publicacion_vehiculo = '$id__publicacion'";
-    $ejecutar__actualizacion = mysqli_query($conexion__db__accent,$actualizar__click);
-  
-
-  }
+ 
 
   $consulta__fotos__vehiculos = "SELECT foto_1,foto_2,foto_3,foto_4,foto_5,foto_6,foto_7,foto_8,foto_9,foto_10 FROM fotos__del__vehiculo WHERE id_fotos ='$id__publicacion'";
   $ejecutar__consulta__fotos = mysqli_query($conexion__db__accent,$consulta__fotos__vehiculos);
@@ -29,11 +19,10 @@ $consulta__contactos = "SELECT  telefono_1,telefono_2,whatsapp_1,whatsapp_2 FROM
 $ejecutar__consulta__contacto = mysqli_query($conexion__db__accent,$consulta__contactos);
 $fila__contacto = mysqli_fetch_array($ejecutar__consulta__contacto);
  
-
+ 
 
  if(mysqli_num_rows($ejecutar__consulta) > 0){
- $fila = mysqli_fetch_array($ejecutar__consulta);
- ?>
+ $fila = mysqli_fetch_array($ejecutar__consulta);?>
 <div class=" contenedor__detalles__usado">
 <div class="contendor__imagenes">
     <div class="image">
@@ -97,14 +86,30 @@ $fila__contacto = mysqli_fetch_array($ejecutar__consulta__contacto);
             echo $fila__contacto['telefono_1']; 
             }
             ?>
-          
           </p>
-            <p class="telefono"><i class="fas fa-phone-volume"></i> <?php echo $fila__contacto['telefono_2']  ?></p>
-          <a href="https://api.whatsapp.com/send?phone=numero<?php  echo $fila__contacto['whatsapp_1']  ?>&text=mensaje=Hola vi el anuncio de tu vehiculo en AdHoc" class="enlace__whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Habla con el vendedor</a>
-
-   
+          <p class="telefono"><i class="fas fa-phone-volume"></i> <?php echo $fila__contacto['telefono_2']  ?></p>
+            <a href="https://api.whatsapp.com/send?phone=numero<?php  echo $fila__contacto['whatsapp_1']  ?>&text=mensaje=Hola vi el anuncio de tu vehiculo en AdHoc" class="enlace__whatsapp" target="_blank" onclick="guardar__click__contacto(<?php echo $fila['id_usuario'] ?>,<?php echo $fila['id_publicacion_vehiculo'] ?>)"><i class="fab fa-whatsapp"></i> Habla con el vendedor</a>
        </div>
     </div>
+    <script>
+  function guardar__click__contacto(usuario,publicacion){
+   let  form__data = new FormData();
+   form__data.append('usuario',usuario)
+   form__data.append('publicacion',publicacion)
+
+  fetch(url__servidor+'contador-click-whastapp',{
+    method:'POST',
+    body:form__data
+
+  }).then(respuesta => respuesta.json())
+  .then(data =>{
+    if(data === 'ok'){
+
+    }
+  })
+}
+
+</script>
     <div class="caracteristicas">
        <h3 class="subtitulo__informacion">Caracteristicas</h3>
       <div class="caracteristicas__de__vehiculo">
@@ -327,6 +332,7 @@ $fila__lujos = mysqli_fetch_array($ejecutar__consulta__lujos);
 </div>
 </div>
 </div>
+<br><br>
 <div class=" container accordion contenedor__acordeon__recomendaciones" id="accordionPanelsStayOpenExample">
     <h3 class="vendedor__dice">Recomendaciones</h3>
   <div class="accordion-item acordion__recomendacion">
@@ -365,4 +371,46 @@ e incluso comunicate para estar seguro
 <?php  } ?>
 <?php  } ?>
 
-<?php  include'layout/footer.php';
+
+<?php
+
+date_default_timezone_set('America/Bogota');
+setlocale(LC_ALL,"es_ES");
+setlocale(LC_TIME,"es_ES.UTF-8");
+$id__publicacion = isset($_GET['idp']) ? $_GET['idp']:'';
+$id__usuario= isset($_GET['idu']) ? $_GET['idu']:'';
+
+if($id__publicacion && $id__usuario){
+  $fecha__actual = date('Y-m-d');
+  $contador__inicial = 1;
+     $consulta__contador__click = "SELECT contador_click,fecha_click FROM contador__de__visitas__al__perfil__del__carro WHERE  id_usuario = '$id__usuario' AND id_publicacion = '$id__publicacion' ";
+    $ejecutar__contador__click = mysqli_query($conexion__db__accent,$consulta__contador__click);
+    $numero__de__filas = mysqli_num_rows($ejecutar__contador__click);
+
+    if($numero__de__filas > 0 ){
+        $consulta__contador__click__2 = "SELECT contador_click,fecha_click FROM contador__de__visitas__al__perfil__del__carro  WHERE  id_usuario = '$id__usuario' AND id_publicacion = '$id__publicacion' ORDER BY id_visita_perfil DESC";
+        $ejecutar__contador__click__2 = mysqli_query($conexion__db__accent,$consulta__contador__click__2);
+        $row = mysqli_fetch_array($ejecutar__contador__click__2);
+        $fecha__click = $row['fecha_click'];
+        $contador = $row['contador_click']+ 1;
+        if($fecha__actual > $fecha__click){
+          $insertar__click = "INSERT INTO contador__de__visitas__al__perfil__del__carro(id_usuario,id_publicacion,contador_click,fecha_click)  VALUES('$id__usuario','$id__publicacion','$contador__inicial','$fecha__actual')";
+          $ejecutar__insersion = mysqli_query($conexion__db__accent,$insertar__click);
+          
+        }else{
+          $actualizar__click = "UPDATE contador__de__visitas__al__perfil__del__carro SET contador_click ='$contador' WHERE id_usuario = '$id__usuario'  AND  fecha_click = '$fecha__actual' ";
+           $ejecutar__actualizacion = mysqli_query($conexion__db__accent,$actualizar__click);
+
+        }
+    }else{
+      $insertar__click__2 = "INSERT INTO contador__de__visitas__al__perfil__del__carro(id_usuario,id_publicacion,contador_click,fecha_click)  VALUES('$id__usuario','$id__publicacion','$contador__inicial','$fecha__actual')";
+      $ejecutar__insersion__2 = mysqli_query($conexion__db__accent,$insertar__click__2);
+ 
+
+    }
+}
+
+
+    ?>
+
+<?php  include'layout/footer.php';?>

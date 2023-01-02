@@ -1,6 +1,7 @@
-var url__servidor = 'https://adhoc.com.co/'
+
 
 export function datos__obligatorios__de__vehiculo(){
+  var url__servidor = 'https://adhoc.com.co/'
     let formulario__datos__obligatorios = document.getElementById('formulario-datos-basicos-vehiculo')
     if(formulario__datos__obligatorios){
        formulario__datos__obligatorios.addEventListener('submit',function(evento){
@@ -28,6 +29,7 @@ export function datos__obligatorios__de__vehiculo(){
 
 
 export function informacion__adicional__vehiculo(){
+  var url__servidor = 'https://adhoc.com.co/'
     let informacion__adicional__vehiculo =  document.getElementById('formulario-info-adicional-vehiculo')
     if(informacion__adicional__vehiculo){
         informacion__adicional__vehiculo.addEventListener('submit',function(evento){
@@ -55,6 +57,7 @@ export function informacion__adicional__vehiculo(){
 }
 
 export function guardar__imagenes__vehiculo(){
+  var url__servidor = 'https://adhoc.com.co/'
     let guardar__imagenes =  document.getElementById('formulario-insertar-imagenes')
     if(guardar__imagenes){
         guardar__imagenes.addEventListener('submit',function(evento){
@@ -82,6 +85,7 @@ export function guardar__imagenes__vehiculo(){
 }
 
 export function contacto__vendedor(){
+  var url__servidor = 'https://adhoc.com.co/'
     let contacto__vendedor =  document.getElementById('formulario-contactos')
     if(contacto__vendedor){
         contacto__vendedor.addEventListener('submit',function(evento){

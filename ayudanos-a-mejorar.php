@@ -35,7 +35,7 @@ $titulo =  "AdHoc | Ayudanos a mejorar";
             <textarea name="sugerencia" rows="3" class="text__area__mensaje" id="sugerencia"></textarea>
         </p>
             <div class="block">
-                <input type="submit" value="ENVIAR MI SUGERENCIA" class="boton__registro" name="enviar">
+                <input type="submit" value="ENVIAR MI SUGERENCIA" class="boton__registro sugerencias" name="enviar">
             </div>
     
         </div>
@@ -43,3 +43,33 @@ $titulo =  "AdHoc | Ayudanos a mejorar";
 
 </div>
 <?php  include'layout/footer.php'  ?>
+
+<script>
+    function insertar__sugerencias(){
+    var url__servidor = 'https://adhoc.com.co/'
+    let form__susgrencia = document.getElementById('form-sugerencias')
+    if(form__susgrencia){
+    form__susgrencia.addEventListener('submit',function(evento){
+        let data = new FormData(document.getElementById('form-sugerencias'))
+        evento.preventDefault();
+        fetch(url__servidor+'insert-sugerencia',{
+            method:'POST',
+            body:data
+        }).then(respuesta => respuesta.json())
+        .then(resultado =>{
+           if(resultado === 'true'){
+            document.getElementById('sugerencia').value ="";
+            Swal.fire({
+                background:'#202F36',
+                icon: 'success',
+                title: `Se recibio tu sugerencia`,
+                footer: 'Gracias por escribirnos, trabajaremos para mejorar',
+               
+              })
+           }
+        })
+    })
+    }
+}
+insertar__sugerencias();
+</script>

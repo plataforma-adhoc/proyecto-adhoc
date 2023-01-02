@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -41,11 +40,11 @@
 <!-- End Meta Pixel Code -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">  
-  <link rel="stylesheet" type="text/css" href="./css/app.css"> 
+  <link rel="stylesheet" type="text/css" href="../css/app.css"> 
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="icon" type="image/ico" href="./img/favicon.png" />
+  <link rel="icon" type="image/ico" href="../img/favicon.png" />
 </head>
 
 <body>
@@ -56,7 +55,7 @@
     <nav class="nav__hero">
       <div class="container nav__container">
       <div class="logo">
-            <a href="/"><img src="./img/logo.png" alt="logo adhoc " class="logo__accent"></a>          
+            <a href="/"><img src="../img/logo.png" alt="logo adhoc " class="logo__accent"></a>          
         </div>
         <div class="containers">
           <a href="publicar-vehiculos" class="enlace__vender__vehiculo">Publicar mi usado</a>
@@ -78,32 +77,26 @@
               <li class="nav-link">
               
               <i class="fas fa-user-astronaut"></i>
-                  <a href="usuario">Crear un registro </a>
+                  <a href="../usuario">Crear un registro </a>
               </li>
             
              
               <li class="nav-link">
                   <i class="fas fa-shopping-bag"></i>
-                    <a href="publicar-vehiculos">
+                    <a href="../publicar-vehiculos">
                       Publicar carro</a>
   
                   </li>
                   <li class="nav-link">
                   <i class="fas fa-coins"></i>
-                    <a href="precios">
+                    <a href="../precios">
                      Nuestros precios</a>
   
                   </li>
                   <li class="nav-link">
                   <i class="fas fa-headset"></i>
-                    <a href="contacto">
+                    <a href="../contacto">
                    Te Asesoramos</a>
-  
-                  </li>
-                  <li class="nav-link">
-                  <i class="fas fa-book-reader"></i>
-                    <a href="blog">
-                   Bolg</a>
   
                   </li>
             </ul>
@@ -118,10 +111,10 @@
     <p class="titulo__crear__cuenta">Crear una cuenta en AdHoc </p>
     <div class="contenedor__btn__registros">
       <div>
-        <a href="usuario"class="btn__cuenta__registro">Crear una cuenta  <i class="fas fa-arrow-right flecha"></i></a>
+        <a href="../usuario"class="btn__cuenta__registro">Crear una cuenta  <i class="fas fa-arrow-right flecha"></i></a>
       </div>
       <div>
-        <a href="login-usuario"class="btn__cuenta__registro">Crear una sesion  <i class="fas fa-arrow-right flecha"></i></a>
+        <a href="../login-usuario"class="btn__cuenta__registro">Crear una sesion  <i class="fas fa-arrow-right flecha"></i></a>
       </div>
     </div>
   </div>

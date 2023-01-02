@@ -178,8 +178,23 @@ setlocale(LC_TIME,"es_ES.UTF-8");
 </div>
 
 </div>
-<?php
 
+
+  <?php } ?>
+  <?php }else{ ?>
+<div class="container contenedor__imagen__no__anuncio">
+  <h2 class="subtitulo__hay__anuncio">No tienes ningun anuncio </h2>
+  <div class="imagen">
+    <img src="./img/no__hay__carros__publicados.png" alt="caja de productos" class="imagen__no__hay__anuncio">
+
+  </div>
+</div>
+</div>
+ <?php } ?>
+ <?php } ?>
+
+</section>
+<?php
 $seleccion__diseño = "SELECT nombre_paquete FROM disenio__y__estilo__vehiculo   WHERE id_usuario = '{$_SESSION['id_usuario']}'";
 $ejecutar__seleccion__diseño = mysqli_query($conexion__db__accent,$seleccion__diseño);
 $fila__seleccion__diseño = mysqli_fetch_array($ejecutar__seleccion__diseño);
@@ -215,11 +230,11 @@ $fila__seleccion__seguridad['nombre_paquete'];
 
  if($fila__seleccion__diseño['nombre_paquete'] ==='PREMUIN' && $fila__seleccion__contacto['nombre_paquete'] ==='PREMUIN' && $fila__seleccion__equipamiento['nombre_paquete'] ==='PREMUIN' &&
   $fila__seleccion__fotos['nombre_paquete'] ==='PREMUIN' && $fila__seleccion__informacion['nombre_paquete'] ==='PREMUIN'&& $fila__seleccion__seguridad['nombre_paquete'] ==='PREMUIN'){ ?>
-   <div class="solicitud__de__publicacion__redes__sociales" id="contenido-solicitud-publicacion">
+   <div class="container solicitud__de__publicacion__redes__sociales" id="contenido-solicitud-publicacion">
      <p class="texto__publicacion__redes__sociales"> Seleccionamos algunos vehiculos registrados para publicarlo en nuestras cuentas de redes sociales para acelerar el proceso de venta
       ¿ aceptas que algunos datos basicos de tu vehiculo se publiquen en nuestras redes sociales ?  
    </p>
-   <div class="form-check" id="aceptar-publicacion">
+   <div class=" formulario__aceptar__publicacion" id="aceptar-publicacion">
      <input class="form-check-input" type="checkbox" value="Aceptar" id="aceptar" name="Aceptar">
      <input class="form-check-input" type="hidden" value="<?php echo $_SESSION['id_usuario'] ?>"name="id-usuario" id="id-usuario">
      <label class="form-check-label" for="aceptar">
@@ -262,8 +277,8 @@ $fila__seleccion__seguridad['nombre_paquete'];
   
  <?php   } ?>
 </div>
+<div id="respuesta-solicitud" class="container contenedor__publicacion__aceptada"></div>
 <br><br>
-<div id="respuesta-solicitud" class="contenedor__publicacion__aceptada"></div>
  <?php } ?>
 <script>
      let respuesta__solicitud = document.getElementById('respuesta-solicitud').innerHTML = `
@@ -277,23 +292,6 @@ $fila__seleccion__seguridad['nombre_paquete'];
       </div>
      </div>`
 </script>
-
-  <?php } ?>
-  <?php }else{ ?>
-<div class="container contenedor__imagen__no__anuncio">
-  <h2 class="subtitulo__hay__anuncio">No tienes ningun anuncio </h2>
-  <div class="imagen">
-    <img src="./img/no__hay__carros__publicados.png" alt="caja de productos" class="imagen__no__hay__anuncio">
-
-  </div>
-</div>
-</div>
- <?php } ?>
- <?php } ?>
-
-</section>
-
-
 
 <script>
 

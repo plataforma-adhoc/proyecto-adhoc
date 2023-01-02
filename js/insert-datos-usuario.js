@@ -247,7 +247,7 @@ export function  insert__login__usuario(){
 
         }).then(respuesta => respuesta.json())
         .then(data =>{
-            if(data ==  'true'){
+            if(data ===  'true'){
                 window.location.href = 'dashboard-usuario';
             }else{
                 Swal.fire({
@@ -432,3 +432,4 @@ export function buscar__carro(){
     })
   }
   }
+ 

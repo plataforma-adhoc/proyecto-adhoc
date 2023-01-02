@@ -5,7 +5,7 @@ $titulo = "AdHoc | venta de carros usados";
 ?>
    
   <section class="hero__main__vehiculos"> 
-      <img src="./img/carros__y__camionetas.webp" alt="" class="img__carros__y__camionetas">
+      <img src="./img/carros__y__camionetas.webp" alt="camioneta 4x4 " class="img__carros__y__camionetas">
             <div class=" container hero__textos__carros__y__camionetas">
                 <h1 class="title__carros__y__comionetas">CARROS USADOS DE TODAS  <br><span class="title--active__carros__y__camionetas"> LAS MARCAS Y MODELOS.</span></h1> 
                
@@ -24,10 +24,7 @@ $titulo = "AdHoc | venta de carros usados";
 <div class="container contendor__de__vehiculos">
     <h3 class="subtitulo__vehiculos">Novedades</h3> 
     <div class="vehiculos" id="insertar-resultados">
+      
  </div>
-
-
-  
-
 </div>
-<?php  include'layout/footer.php';
+<?php  include'layout/footer.php' ?>;

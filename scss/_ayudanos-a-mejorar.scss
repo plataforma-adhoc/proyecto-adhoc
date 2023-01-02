@@ -15,7 +15,7 @@
 }
 
 .parrafo__mejoras{
- width: 50%;
+ width: 60%;
  margin: auto;
 }
 
@@ -29,7 +29,16 @@ color: $color__verde;
 }
 
 .enlace__a__contacto:hover{
-    border-bottom: solid 2px $color__verde;
+    border-bottom: solid 2px $color__adhoc;
+}
+
+.sugerencias{
+   transition: all .5s; 
+}
+
+.sugerencias:hover{
+    background:$color__adhoc;
+    color: black;
 }
 @media screen and (max-width:900px) {
     .parrafo__mejoras{

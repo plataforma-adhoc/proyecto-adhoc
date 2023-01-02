@@ -1,10 +1,9 @@
-
-      <footer class="footer">
+    <footer class="footer">
   	 <div class="contenedor__footer container">
   	 	<div class="row">
   	 		<div class="footer-col">
 				<h4>
-					<a href="./"><img src="./img/logo.png" alt="logo adhoc " class="logo__accent logo__footer">
+					<a href="./"><img src="../img/logo.png" alt="logo adhoc " class="logo__accent logo__footer">
 				</a>    
 			</h4>
 			<ul>
@@ -16,11 +15,11 @@
   	 		<div class="footer-col">
   	 			<h4>Obten ayuda</h4>
   	 			<ul>
-  	 				<li><a href="contacto">Contactanos</a></li>
+  	 				<li><a href="../contacto">Contactanos</a></li>
   	 				<!-- <li><a href="#">shipping</a></li>
   	 				<li><a href="#">returns</a></li>
   	 				<li><a href="#">order status</a></li> -->
-					   <li><a href="precios">Nuestros precios</a></li>
+					   <li><a href="../precios">Nuestros precios</a></li>
   	 				<li><a href="#formas-de-pago">Opciones de pago</a></li>
   	 			</ul>
   	 		</div>
@@ -28,9 +27,9 @@
   	 			<h4>Acerca de la empresa</h4>
   	 			<ul>
            <li><a href="quienes-somos">quienes somos</a></li>
-  	 				<li><a href="terminos-y-condiciones-de-uso">Terminos y condiciones</a></li>
-  	 				<li><a href="politicas-de-privacidad">Politicas de privacidad</a></li>
-  	 				<li><a href="ayudanos-a-mejorar">Ayudanos a mejorar</a></li>
+  	 				<li><a href="../terminos-y-condiciones-de-uso">Terminos y condiciones</a></li>
+  	 				<li><a href="../politicas-de-privacidad">Politicas de privacidad</a></li>
+  	 				<li><a href="../ayudanos-a-mejorar">Ayudanos a mejorar</a></li>
 
   	 			</ul>
   	 		</div>
@@ -54,4 +53,3 @@
 <script type="module" src="./js/app.js"></script>
 </body>
 </html>
-

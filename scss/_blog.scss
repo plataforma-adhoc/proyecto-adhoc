@@ -1,11 +1,164 @@
+.contenedor__blog,  .contenedor__como__vender__un__carro{
+    background:$color__fondo__blog;
+}
 .contenido__blog{
     width: 100%;
-    height: 600px;
+    height:auto;
   
 }
 .titulo__blog{
     color: white;
-    font-size: 20px;
+    font-size:1.5rem; 
+    font-weight: bold; 
+}
+.contenedor__cards__blog{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.cards__blog{
+    background:$color__fondo__blog;
+    width: 40%;
+    height:400px;
+    overflow: hidden;
+
+}
+ .cards__blog img{
+    width:100%;
+    height:auto;
+    border-radius: 10px;
+
+}
+
+.enlace__pagina__blog{
+     display: inline-block;
+    text-decoration: 0;
+    color: white;
+    font-weight: bolder;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 4rem;
+}
+.enlace__pagina__blog:hover{
+    color: white;
+    text-decoration: underline;
+    
+}
+@supports(object-fit: cover){
+    .cards__blog img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
+
+
+
+// BLOG COMO VENDER UN CARRO
+.contenido__como__vender__un__carro{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo__como__vender__un__carro{
+    color: white;
+    font-weight: bolder;
+}
+.subtitulo__como__vender__un__carro{
+ color: $color__gris;
+ font-size: 1.1rem;
+ line-height: 2rem;
+}
+
+.enlace__a__vender__mi__carro{
+    display: inline-block;
+    text-decoration: 0;
+    color: white;
+    padding: 12px;
+     background: $color__accent;
+     margin-right: 30px;
+     width: 190px;
+     border-radius: 7px;
+     font-weight: bold;
+     margin: 10px 10px 0;
+     transition: ease-in-out .5s;
+}
+.enlace__a__vender__mi__carro:hover{
+    background: #000;
+    color: white;
+    transform: scale(1.1);
+}
+.como__vender__un__carro{
+    width: 44%;
+}
+
+.como__vender__un__carro img{
+height: auto;
+width: 100%;
+}
+
+.contenido__principal{
+    background:$color__fondo;
+    border-radius: 10px;
+}
+
+.tarjeta__del__contenido{
+   width: 100%;
+   height: auto;
+}
+.contenedor__de__texto__del__blog{
+width: 98%;
+margin: auto;
+margin-top: -5rem;
+}
+.texto__del__blog{
+    color:$color__gris;
+    line-height: 2rem;
+    font-size: 1.1rem;
+}
+
+.subtitulo__h3__blog{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.parrafo__compartir{
+    color: white;
+
+}
+.contenedor__compartir__en__redes__sociales{
+    display: flex;
+}
+
+
+.enlace__compratir{
+    background:$color__adhoc;
+    border-radius: 100%;
+    margin: 5px;
+     width: 50px;
+     height: 50px;
+     transition: ease-in-out .5s;
+}
+
+.twitter, .facebook{
+    color: black;
+    font-size: 1.2rem;
+    transition: ease-in-out .5s;
+}
+.enlace__compratir, .twitter:hover{
+    background: #000;
+    transform: scale(1.1);
+}
+
+.facebook:hover{
+    background: #000;
+    transform: scale(1.1);
 }
 .imagen__banner__blog{
     margin: auto;

@@ -1,13 +1,13 @@
 <?php include'layout/nav-home-usuario.php' ?>;
 <div class="container contenedor__final__compra">
  <h1 class="titulo__final__compra">Muchas Gracias  </h1>
- <h2 class="subtitulo__final__compra">Por tu confianza en nostros</h2>
+ <h2 class="subtitulo__final__compra">Por tu confianza en nosotros</h2>
  <a href="dashboard-usuario" class="enlace__final__compra">Regresar al inicio</a>
 </div>
 <div class="container contenedor__parrafo__final__compra">
-    <p class="parrafo__final__compra">¡Gracias por comprar en tu vahiculo en nuestra plataforma ! 
-    Estamos muy contentos de que hayas encontrado lo que estabas buscando. Trabajamos para que siempre obtengas la máxima satisfacción, por lo que estamos deseando conocer cuál es tu nivel de satisfacción con tu pedido. Tan solo tienes que rellenar esta breve encuesta. 
-    No nos cabe duda de que volveremos a verte de nuevo por nuestra tienda muy pronto. <br>
+    <p class="parrafo__final__compra">¡Gracias por publicar  tu vahiculo en nuestra plataforma ! 
+    Estamos muy contentos de que nos hayas elegido. Trabajamos para que siempre obtengas la máxima satisfacción, 
+    no nos cabe duda de que volveremos a verte de nuevo por aqui  muy pronto. <br>
     ¡Que tu carro se venda muy rapido !</p>
 <h3 class="subtitulo__redes__sociales">Puedes seguirnos en nuestras redes sociales</h3>
 <div class="redes__sociales">

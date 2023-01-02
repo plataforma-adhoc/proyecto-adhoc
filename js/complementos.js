@@ -52,3 +52,4 @@ if(document.querySelector('.popup-image span')){
 }
  
  }
+

@@ -220,7 +220,7 @@ color: black;
     font-size: 10px; 
 }
 .solicitud__de__publicacion__redes__sociales{
-    margin-top: 30px;
+    margin-top: -80px;
     width: 80%;
 
 }
@@ -229,20 +229,19 @@ color: black;
   }
   
 .contenedor__publicacion__aceptada{
-    width: 100%;
-    height:auto;
-    background:$color__fondo__footer;
+    width: 90%;
     border-radius: 10px;
-    border-left: solid 4px $color__verde;
+    background: #000;
+   padding: 1rem;
+ 
 }
 .publicacion__aceptada{
     display: flex;
     align-items: center;
-    color: $color__gris;
+    color:white;
     text-align: center;
     font-weight: bold;
-    max-height: 100px;
-    line-height: 100px;
+    line-height: 1rem;
 }
 .contenido__check{
     width: 10%;

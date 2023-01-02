@@ -66,7 +66,7 @@ include'layout/nabvar.php'; ?>
         <h2 class="subtitle subtitle subtitulo">Tambien puedes anunciar <span class="point">.</span></h2>
         <div class="container servicios">
             <div class="slider slider__1 animate__animated">
-                <img src="img/toyota.jpg" alt="Toyota" class="icono__conductor">
+                <img src="img/Toyota.jpg" alt="Toyota" class="icono__conductor">
                
                 <div>
                     <h3 class="subtitulo__slider">Tu carro usado</h3>
@@ -310,3 +310,15 @@ include'layout/nabvar.php'; ?>
 </main>
 
 <?php include'layout/footer.php'; ?>
+
+<script>
+     document.addEventListener("DOMContentLoaded", function(){
+    var foo = document.querySelectorAll(".contenido__consejo__aleatorio"),
+        i = Math.floor(Math.random() * foo.length);
+  if(foo){
+    foo[i].style.visibility = "visible";
+
+  }
+
+}, false)
+</script>

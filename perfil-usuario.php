@@ -32,12 +32,13 @@ if($id__usuario ===""){
       <div>
             <p class="parrafo__de__mi__cuenta"><i class="fas fa-user-circle"></i> Mi cuenta</p>
         </div>
-   <h2>Nombre : <?php echo $datos__resultado['nombre_usuario']  ?></h2>
-   <h4> Apellidos : <?php echo $datos__resultado['primer_apellido'] ?> <?php echo $datos__resultado['segundo_apellido'] ?></h4>
-   <h2>Biografia detallada</h2>
+   <h2>Nombre : <?php echo ucwords($datos__resultado['nombre_usuario'])  ?></h2>
+   <h4> Apellidos : <?php echo ucwords($datos__resultado['primer_apellido']) ?> <?php echo ucwords($datos__resultado['segundo_apellido']) ?></h4>
+   <br>
+   <h2>Datos basicos</h2>
    <h4>Email : <?php echo $datos__resultado['email'] ?></h4>
    <h4>Telefono : <?php echo $datos__resultado['numero_telefono'] ?></h4>
-   <h4><?php echo  date("d-m-Y",strtotime($datos__resultado['fecha_de_registro'])) ?></h4> 
+   <h4>Fecha de registro: <?php echo  date("d-m-Y",strtotime($datos__resultado['fecha_de_registro'])) ?></h4> 
 
   </div>
 

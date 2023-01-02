@@ -95,7 +95,7 @@ display: inline-block;
     justify-content: space-between;
   }
   
- .fa-user-astronaut,.fa-sign-in-alt,.fa-house-user,.fa-coins,.fa-headset{
+ .fa-user-astronaut,.fa-sign-in-alt,.fa-house-user,.fa-coins,.fa-headset,.fa-book-reader{
     font-size: 22px;
     background:$color__fondo;
     border-radius: 50px;
@@ -209,8 +209,8 @@ display: inline-block;
  
 
 .container{
-    width: 90%;
-    max-width: 1200px;
+    width: 95%;
+    // max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
     padding:100px 0;
@@ -425,6 +425,7 @@ display: inline-block;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50px;
+   
 
 }
 .slider{

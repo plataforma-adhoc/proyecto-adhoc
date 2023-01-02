@@ -17,7 +17,7 @@ include'conexion-db-accent.php';
                 <li class="progressbar__option">paso 5</li>
         
             </ul>
-            <h2 class="form-register__title">Datos basicos e informacion de contacto</h2>
+            <h2 class="form-register__title">Datos basicos</h2>
             <p class="campos__obligatorios">Los campos con (*) son obligtorios.</p>
         </div>
         <div class="form-register__body">
@@ -104,7 +104,7 @@ include'conexion-db-accent.php';
    
                  <div class="form-floating">
                     <input type="text" class="form-control step__input cilindraje" id="floatingPassword" placeholder="Ej: 1.6" name="cilindraje" id="">
-                    <label for="floatingPassword">Cilidraje del carro  1.6 *</label>
+                    <label for="floatingPassword">Cilindraje del carro  1.6 *</label>
                    
                     </div>
                     <textarea rows="4" cols="80" placeholder="Agrega más información de tu vehiculo"
@@ -116,6 +116,7 @@ include'conexion-db-accent.php';
                         disabled id="activar-btn">Guardar información</button>
                         <br><br>
                         <div id="button"></div>
+                  
                 </div>
             </div>
             </form>
@@ -129,9 +130,9 @@ include'conexion-db-accent.php';
                 <input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
 
                   <br><br>
-                    <div class="accordion block " id="accordionExample">
+                    <div class="accordion block" id="accordionExample">
                         <div class="accordion-item ">
-                            <h2 class="accordion-header bg-dark" id="headingOne">
+                            <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     Seguridad
@@ -336,16 +337,16 @@ include'conexion-db-accent.php';
                     <!-- <button type="button" class="step__button step__button--back" data-to_step="1"
                         data-step="2">Regresar</button> -->
                         <button type="submit" class="step__button step__button--next" id="button-info">Guardar información</button>
-                   
                   
                         <br><br>
                         <div id="button-info-adicional"></div>
+                
                     </div>
                     
                     <div class="toda__la__info__del__vehiculo">
                         <br>
-                        <p>Proporcionar toda la información posible de tu vehiculo, esto<br>
-                        puede aumentar las posibilidades de venta ante un posible comprador
+                        <p>Proporciona toda la información posible de tu vehiculo, esto<br>
+                        puede aumentar las posibilidades de venta ante un posible comprador.
                     </p>
                 </div>
             </div>
@@ -355,19 +356,20 @@ include'conexion-db-accent.php';
                     <h2 class="step__title">Sube las fotografias de tu vehiculo maximo 10 imagenes</h2>
                 </div>
                 <div class="step__body">
-                    <form id="formulario-insertar-imagenes"class="formulario__info__adicional block">
-                <input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
+                <form id="formulario-insertar-imagenes"class="formulario__info__adicional block">
+                 <input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
                     <div id="wrapper" class="block">
                     <div id="container-input">
                     <div class="wrap-file">
 			    	<div class="content-icon-camera">             
-                        <label for="files"><i class="fas fa-cloud-upload-alt"></i> Selecciones los archivos </label>
+                        <label for="files"><i class="fas fa-photo-video"></i> Selecciona las imagenes </label> 
                         <input id="files" type="file" multiple="multiple" accept="image/jpeg, image/png, image/jpg" name="file[]" class="file">
-                        <!-- <input type="file" id="files" name="file[]" accept="image/*" multiple /> -->
+                
                     </div>
                     <output id="result">
-				
+				 
 			</div>
+            
 		</div>
 	       </div>
                 </div>
@@ -377,16 +379,18 @@ include'conexion-db-accent.php';
                         data-step="3">Regresar</button> -->
                          <br><br>
                          <div id="insert-fotos"></div>
+                         <div id="error-fotos"></div>
+                   
                 </div>
             </div>
-            </form>
+        </form>
             <div class="step" id="step-4">
                 <div class="step__header">
                     <h2 class="step__title">Contacto </h2>
                    
                 </div>
                 <br>
-                <p class="step__texto">En tu medio de contacto podras recibir ofertas de los posibles compradores</p>
+                <p class="step__texto">Donde te contactaran lo compradores</p>
                
                 <div class="step__body ">
                     <form id="formulario-contactos"class ="formulario__info__adicional block">
@@ -410,12 +414,12 @@ include'conexion-db-accent.php';
                 <div class="contendor__collapsables">  
                 <div class="collapse collapsables" id="collapseExample">
                 <div class="card card-body card__collapsables">
-                <div class="input-group mb-3">
+                <div class="input-group mb-3 input__group">
                     <span class="input-group-text" id="basic-addon1">+57</span>
                     <input type="text" class="form-control" placeholder="Ingresa tu numero de Whatsapp " aria-label="Username" aria-describedby="basic-addon1" name="Whatsapp-uno">
                   
                 </div>
-                <div class="input-group mb-3">
+                <div class="input-group mb-3 input__group">
                     <span class="input-group-text" id="basic-addon1">+57</span>
                     <input type="text" class="form-control" placeholder="Ingresa tu numero de Whatsapp " aria-label="Username" aria-describedby="basic-addon1"name="Whatsapp-dos">
                   
@@ -425,12 +429,12 @@ include'conexion-db-accent.php';
   
                 <div class="collapse collapsables collapsable__llamada" id="collapseWidthExample">
                     <div class="card card-body  card__collapsables">
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3 input__group">
                     <span class="input-group-text" id="basic-addon1">+57</span>
                     <input type="text" class="form-control" placeholder="Ingresa tu numero de telefono " aria-label="Username" aria-describedby="basic-addon1"name="telefono-uno">
                   
                 </div>
-                <div class="input-group mb-3">
+                <div class="input-group mb-3 input__group">
                     <span class="input-group-text" id="basic-addon1">+57</span>
                     <input type="text" class="form-control" placeholder="Ingresa tu numero de telefono " aria-label="Username" aria-describedby="basic-addon1"name="telefono-dos">
                   
@@ -584,23 +588,32 @@ include'conexion-db-accent.php';
   }
 
   form.addEventListener('keyup',validar)
-
     document.querySelector("#files").addEventListener("change", (e) => { 
   if (window.File && window.FileReader && window.FileList && window.Blob) { 
     const files = e.target.files;
     const output = document.querySelector("#result");
     output.innerHTML = "";
   let activar__btn = document.getElementById('activar');
-    for (let i = 0; i < files.length; i++) {
-        if (!files[i].type.match("image")) continue; 
-        const picReader = new FileReader(); 
-        picReader.addEventListener("load", function (event) { 
-          const picFile = event.target;
-          const div = document.createElement("div");
-          div.innerHTML = `<img class="thumbnail" src="${picFile.result}" title="${picFile.name}"/>`;
-          output.appendChild(div);
-        });
-        picReader.readAsDataURL(files[i]); 
+  if(files.length > 10){
+    let error__fotos = document.getElementById('error-fotos').innerHTML = `
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Ups</strong> Nos dimos cuenta que superaste el limite de imagenes
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+    `
+  }else{
+      for (let i = 0; i < files.length; i++) {
+          if (!files[i].type.match("image")) continue; 
+          const picReader = new FileReader(); 
+          picReader.addEventListener("load", function (event) { 
+            const picFile = event.target;
+            const div = document.createElement("div");
+            div.innerHTML = `<img class="thumbnail" src="${picFile.result}" title="${picFile.name}"/>`;
+            output.appendChild(div);
+          });
+          picReader.readAsDataURL(files[i]); 
+
+  }
    
     }
   } else {
