@@ -20,7 +20,7 @@
   	 				<li><a href="#">returns</a></li>
   	 				<li><a href="#">order status</a></li> -->
 					   <li><a href="../precios">Nuestros precios</a></li>
-  	 				<li><a href="#formas-de-pago">Opciones de pago</a></li>
+  	 				<li><a href="../#formas-de-pago">Opciones de pago</a></li>
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">
@@ -50,6 +50,6 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.20/dist/sweetalert2.all.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
-<script type="module" src="./js/app.js"></script>
+<script type="module" src="../js/app.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@ include'conexion-db-accent.php';
 $id__paquete = isset($_GET['idpaq']) ? $_GET['idpaq'] : '';
 
 if($id__paquete){
-    $consulta = "SELECT * FROM plan__gratis WHERE id_paquete = '$id__paquete'";
+    $consulta = "SELECT * FROM planes__de__publicaciones WHERE id_paquete = '$id__paquete'";
     $ejecutar__la__consulta = mysqli_query($conexion__db__accent,$consulta);
     if($ejecutar__la__consulta){
       $fila = mysqli_fetch_array($ejecutar__la__consulta); 

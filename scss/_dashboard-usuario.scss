@@ -3,12 +3,12 @@
   width: 90%;
 }
 
-
-
 .contenedor__enalces__menu__home{
   width: 100%;
   margin:0 0 0 10px;
 }
+
+
 
 
 
@@ -238,6 +238,8 @@ display: inline-block;
   opacity: 1
 }
 
+
+
 @media screen and (max-width:1000px) {
   .contenedor__card__dashboard{
     width: 100%;
@@ -260,7 +262,8 @@ display: inline-block;
 @media screen and (max-width:600px) {
  .contenido__card__dashboard{
   width: 100%;
- } 
+ }
+ 
 }
 
 @media screen and (max-width:900px) {

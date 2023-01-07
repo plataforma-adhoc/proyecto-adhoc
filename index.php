@@ -185,7 +185,7 @@ include'layout/nabvar.php'; ?>
                     </div>
                 </div>
                 <div class="card precios" id="formas-de-pago">
-                    <img src="img/Online.svg" class="card__img" alt="en linea">
+                    <img src="img/En__linea.svg" class="card__img" alt="en linea">
                     <div class="cards__text">
                         <p class="card__list">A un no estas convencido ? Soporte 24/7/365</p>
                         <!-- <h3 class="card__title">Metodos de pago<span class="point">.</span></h3> -->
@@ -291,22 +291,6 @@ include'layout/nabvar.php'; ?>
         </div>
     </section>
     <br><br>
-
-  <!-- <section class="container secction__blog">
-  <h4 class="subtitulo__anuncio">Que esta pasando </h4>
-  <br>
-  <div class="contenido__lo__ultimo">
-      <a href="los-carros-mas-vendidos-en-colombia" class="enlace__noticias__blog">
-          <img src="./img/leyendo__noticias.jpg" alt="persona leyendo el periodico" class="imagen__lo__ultimo">
-          <div class="contendor__parrafo__lo__ultimo">
-              <p class="parrafo__lo__ultimo">Pasa por nuestro blog y enterate que esta pasando, como estuvo la compra y venta de carros usado en colombia <br>
-              algunas marcas aumentaron sus ventas y otras bajaron considerablemente.  
-            </p>
-            </div>
-          <button class="btn__ir__al__blog">Explorar</button>
-    </a>
-    </div>
-  </section> -->
 </main>
 
 <?php include'layout/footer.php'; ?>

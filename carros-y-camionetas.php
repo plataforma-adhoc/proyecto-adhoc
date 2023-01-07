@@ -27,4 +27,4 @@ $titulo = "AdHoc | venta de carros usados";
       
  </div>
 </div>
-<?php  include'layout/footer.php' ?>;
+<?php  include'layout/footer.php' ?>

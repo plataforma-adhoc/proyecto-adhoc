@@ -58,30 +58,31 @@ export function informacion__adicional__vehiculo(){
 
 export function guardar__imagenes__vehiculo(){
   var url__servidor = 'https://adhoc.com.co/'
-    let guardar__imagenes =  document.getElementById('formulario-insertar-imagenes')
-    if(guardar__imagenes){
-        guardar__imagenes.addEventListener('submit',function(evento){
-          let form__data = new FormData(document.getElementById('formulario-insertar-imagenes'))
-        evento.preventDefault();
-       console.log(form__data)
-        fetch(url__servidor+'insert-imagenes',{
-            method:'POST',
-            body:form__data
-        }).then(respuesta => respuesta.json())
-        .then(data =>{
-            if(data === 'ok'){
-                let insert__fotos= document.getElementById('insert-fotos');
-             let button__imagenes =    document.getElementById('button-imagenes');
-                insert__fotos.innerHTML= `
-               <button type="button" class="step__button step__button--next " data-to_step="4"
-                data-step="3" >Siguiente</button>
-                `
-                button__imagenes.style.display= 'none'
+  let guardar__imagenes =  document.getElementById('formulario-insertar-imagenes')
+  if(guardar__imagenes){
+      guardar__imagenes.addEventListener('submit',function(evento){
+        let form__data = new FormData(document.getElementById('formulario-insertar-imagenes'))
+      evento.preventDefault();
+      fetch(url__servidor+'insert-imagenes',{
+          method:'POST',
+          body:form__data
+      }).then(respuesta => respuesta.json())
+      .then(data =>{
+          if(data === 'ok'){
+              let insert__fotos= document.getElementById('insert-fotos');
+           let button__imagenes =    document.getElementById('button-imagenes');
+              insert__fotos.innerHTML= `
+             <button type="button" class="step__button step__button--next " data-to_step="4"
+              data-step="3" >Siguiente</button>
+              `
+              button__imagenes.style.display= 'none'
 
-            }
-        })
+          }
       })
-    }  
+    
+    })
+  
+}
 }
 
 export function contacto__vendedor(){

@@ -76,44 +76,39 @@ if(!isset($_SESSION['id_usuario'])){
         
           </a>
               
-            
-                    <div>
-                    </div>
-                    <div class="containers">
-            <label class="btn btn-open" for="nav"><i class="fab fa-creative-commons-nd"></i></label>
-            <input type="checkbox" id="nav" class="nav-opener" />
-            <div class="nav">
-              <div class="nav-header headers__dashobard">   
-                <label class="btn__cerrar__menu btn-nav" for="nav">
-                  <svg style="width: 36px; height: 36px" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                      d="M20 6.91L17.09 4L12 9.09L6.91 4L4 6.91L9.09 12L4 17.09L6.91 20L12 14.91L17.09 20L20 17.09L14.91 12L20 6.91Z" />
-                  </svg>
-                </label>
-                <ul class="nav-links links__dashboard">
-                  <li class="nav-link">
-                    <a href="perfil-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>"
+   <div>
+   </div>
+        <div class="containers">
+            <label class="btn btn-open" for="nav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fab fa-creative-commons-nd"></i></label>
+          <input type="checkbox" id="nav" class="nav-opener" />
+          <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">MENU</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+      <ul class="nav-links">
+              <li class="nav-link">
+              <a href="perfil-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>"
                       class="enlaces__menu__home">
                       <img src="upload/<?php echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil">
                     </a>
                     <div class="item__nombre"><?php echo $datos__resultado['nombre_usuario'] ?></div>
-  
-  
-                  </li>
-                  <li class="nav-link">
-                    <i class="fas fa-home"></i>
+
+              </li>
+              <li class="nav-link">
+              <i class="fas fa-home"></i>
                     <a href="dashboard-usuario" class="enlaces__menu__home">Regresar a mi casa</a>
-  
-                  </li>
-               
-                  <li class="nav-link">
+              </li>
+            
+             
+              <li class="nav-link">
                   <i class="fas fa-shopping-bag"></i>
+        
                     <a href="publicar-vehiculos?idu=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlaces__menu__home">
                       Publicar Vehiculo</a>
-  
-                  </li>
                   <li class="nav-link">
-                    <i class="fas fa-cogs"></i>
+                  <i class="fas fa-cogs"></i>
                     <a href="configuracion-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>"  class="enlaces__menu__home">
                       Configuracion</a>
   
@@ -130,16 +125,14 @@ if(!isset($_SESSION['id_usuario'])){
                     Historial de anuncios</a>
   
                   </li>
-                
                   <li class="nav-link">
                     <i class="fas fa-power-off"></i>
                     <a href="desconectar-usuario?id=<?php  echo $datos__resultado['id_usuario'] ?>"  class="enlaces__menu__home">Cerrar
                       sesión</a>
                   </li>
-                </ul>
-              </div>
-
-            </div>
+            </ul>
+  </div>
+</div>
           </div>
         </div>
    </div>

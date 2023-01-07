@@ -116,8 +116,9 @@ include'conexion-db-accent.php';
                         disabled id="activar-btn">Guardar información</button>
                         <br><br>
                         <div id="button"></div>
-                  
-                </div>
+                        <!-- <button type="button" class="step__button step__button--next" data-to_step="2"
+                data-step="1">Siguiente</button>  -->
+                </div> 
             </div>
             </form>
           
@@ -340,7 +341,8 @@ include'conexion-db-accent.php';
                   
                         <br><br>
                         <div id="button-info-adicional"></div>
-                
+                        <!-- <button type="button" class="step__button step__button--next" data-to_step="3"
+                data-step="2">Siguiente</button> -->
                     </div>
                     
                     <div class="toda__la__info__del__vehiculo">
@@ -363,7 +365,7 @@ include'conexion-db-accent.php';
                     <div class="wrap-file">
 			    	<div class="content-icon-camera">             
                         <label for="files"><i class="fas fa-photo-video"></i> Selecciona las imagenes </label> 
-                        <input id="files" type="file" multiple="multiple" accept="image/jpeg, image/png, image/jpg" name="file[]" class="file">
+                        <input id="files" type="file" multiple="multiple" accept="image/jpeg, image/png, image/jpg" name="file[]" class="file" required>
                 
                     </div>
                     <output id="result">
@@ -568,9 +570,6 @@ include'conexion-db-accent.php';
       let cilindraje =  document.querySelector('.cilindraje').value
       let descripcion = document.getElementById('descripcion').value
       
-
-      console.log(marca,modelo,color,fabricacion,matricula,ciudad,venta,propietario,kilometros,precio,puertas,combustible,caja,direccion,cilindraje,descripcion)
-
    let habilitar = false
    if(marca ==="" || modelo ==="" || color ==="" || fabricacion ===""||matricula ==="" ||ciudad ==="" || venta ===""
    || propietario ==="" || kilometros ==="" || precio ==="" || puertas === "" || combustible ===""
@@ -578,7 +577,7 @@ include'conexion-db-accent.php';
     habilitar = true
    }
 
-   if(habilitar ===true){
+   if(habilitar === true){
     activar__btn.disabled = true
     activar__btn.classList.add('inicio')
    }else{
@@ -588,12 +587,14 @@ include'conexion-db-accent.php';
   }
 
   form.addEventListener('keyup',validar)
+
     document.querySelector("#files").addEventListener("change", (e) => { 
   if (window.File && window.FileReader && window.FileList && window.Blob) { 
     const files = e.target.files;
     const output = document.querySelector("#result");
-    output.innerHTML = "";
-  let activar__btn = document.getElementById('activar');
+    output.innerHTML = ""; 
+
+  
   if(files.length > 10){
     let error__fotos = document.getElementById('error-fotos').innerHTML = `
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -602,6 +603,7 @@ include'conexion-db-accent.php';
 </div>
     `
   }else{
+
       for (let i = 0; i < files.length; i++) {
           if (!files[i].type.match("image")) continue; 
           const picReader = new FileReader(); 
@@ -616,6 +618,11 @@ include'conexion-db-accent.php';
   }
    
     }
+  if(files.length === 0){
+    console.log('vacio');
+    return false
+  }
+  
   } else {
     alert("Your browser does not support File API");
   }
