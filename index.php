@@ -22,7 +22,7 @@ include'layout/nabvar.php'; ?>
                 <div>
                 <i class="fas fa-circle"></i>
 
-                </div>
+             </div>
                <div>
                  <p class="parrafo__contenido__funciones">Llevar un control de cuantas veces ha sido visitado  el anuncio de tu carro usado.</p>
                </div>
@@ -57,7 +57,7 @@ include'layout/nabvar.php'; ?>
                     </div>
                     <div>
                      <p class="parrafo__contenido__funciones">Mide y analiza los resultados de tu anuncio en nuestro tablero</p>
-                      <strong class="en__construccion">En construcción</strong>
+                      <strong class="en__construccion">Nuevo</strong>
                     </div>
                 </div> 
         </div>
@@ -102,7 +102,7 @@ include'layout/nabvar.php'; ?>
         </div>
     </div>
     </div>
-    <section class="container">
+    <!-- <section class="container">
         <h2 class="subtitle">Consejo del dia para vender tu carro</h2>
         <div class="contenido__consejo__aleatorio aleatorio__1">
         <div class="contenido__consejo">
@@ -166,7 +166,7 @@ include'layout/nabvar.php'; ?>
             </p>
         </div>
         </div>
-    </section>
+    </section> -->
   
     <section class="services services__vender__carro">
         <div class="container">
@@ -201,7 +201,7 @@ include'layout/nabvar.php'; ?>
                     <div class="cards__text">
                         <p class="card__list">Ha llegado el momento de vender tu carro</p>
                         <!-- <h3 class="card__title">Seguridad<span class="point">.</span></h3> -->
-                        <p class="card__copy">Prueba sin <strong>costo</strong> alguno y luego tu decides si quieres continuar con el anuncio de tu carro usado. 
+                        <p class="card__copy">Prueba sin <strong>costo</strong> alguno, y luego tu decides si quieres continuar con el anuncio de tu carro usado. 
                           </p>
                         <a href="publicar-vehiculos" class="card__button">Quiero crear un anuncio</a>
                     </div>
@@ -212,16 +212,16 @@ include'layout/nabvar.php'; ?>
 <section class="container nuestra__forma__de__pago">
 <h2 class="subtitulo__nuestra__forma">Formas de pago</h2>
 <p class="paypal__parrafo">Con Paypal puedes pagar solo usando tu correo electronico y tu contraseña</p>
-<article class="container-cards">
-                <div class="card precios "id="formas-de-pago">
+<article class="container-cards cards__formas__de__pago">
+                <div class="card precios card__precios"id="formas-de-pago">
                     <div class="cards__text">
                         <p class="card__list paypal">Paypal</p>
                         <h3 class="card__title"><i class="fab fa-cc-paypal"></i></span></h3>
-                        <p class="card__copy">Pagar con paypal es tan facil que con solo ingresando  tu cuenta puedes pagar de manera segura y rapido.
+                        <p class="card__copy">Pagar con paypal es tan facil que con solo ingresar  tu cuenta puedes pagar de manera segura y rapido.
                         </p>
                     </div>
                 </div>
-                <div class="card precios">
+                <div class="card precios  card__precios">
                     <div class="cards__text">
                         <p class="card__list credito">Tarjeta de credito </p>
                         <h3 class="card__title"><i class="fab fa-cc-mastercard"></i></span></h3>
@@ -251,7 +251,7 @@ include'layout/nabvar.php'; ?>
         <strong>01</strong>
         <p class="item__enumerado">Seguridad</p>
     </div>
-    <p class="texto__enumerado">Con el fin de garantizar la seguridad y confidencialidad de los datos almacenados de nuestros usuarios,no compratimos datos con terceros, 
+    <p class="texto__enumerado">Con el fin de garantizar la seguridad y confidencialidad de los datos almacenados de nuestros usuarios, no compratimos datos con terceros, 
        trabajamos dia a dia para evitar  su alteración, pérdida, tratamiento o acceso no autorizado</p>
     <a href="politicas-de-privacidad" class="enlace__de__politicas">Conoce nuestro tratamiento de datos</a>
        
@@ -262,7 +262,7 @@ include'layout/nabvar.php'; ?>
         <p class="item__enumerado">Transparencia</p>
     </div>
     <p class="texto__enumerado">Todas nuestras promociones son publicadas con sus respectivos terminos y condiciones para que tengas conocimiento previo antes 
-        de adquirir una de nuestras promociones.
+        de adquirir una de ellas.
     </p>
   </div>
   <div class="enumerados">
@@ -270,7 +270,7 @@ include'layout/nabvar.php'; ?>
         <strong>03</strong>
         <p class="item__enumerado">Personas</p>
     </div>
-    <p class="texto__enumerado">El respeto y el trato digno son dos componentes primordiales que fomntamos dia a dia para unas  mejores relaciones en el ámbito social y personal.</p>
+    <p class="texto__enumerado">El respeto y el trato digno son dos componentes primordiales que fomentamos dia a dia para unas  mejores relaciones en el ámbito social y personal.</p>
    
   </div>
  </div>
@@ -282,7 +282,7 @@ include'layout/nabvar.php'; ?>
 
         </div>
         <div class="contenido__anuncio">
-            <h4 class="subtitulo__anuncio">Quires vender tu carro usado? </h4>
+            <h4 class="subtitulo__anuncio">Quieres vender tu carro usado? </h4>
             <p class="texto__anuncio">Es asombroso como nuestro sistema es tan facil de usar que te puede sorprender.
                 <br><br>
                 Crea tu cuenta, registra los datos de tu carro usado y ahora estara listo para ser publicado.
@@ -295,7 +295,7 @@ include'layout/nabvar.php'; ?>
 
 <?php include'layout/footer.php'; ?>
 
-<script>
+<!-- <script>
      document.addEventListener("DOMContentLoaded", function(){
     var foo = document.querySelectorAll(".contenido__consejo__aleatorio"),
         i = Math.floor(Math.random() * foo.length);
@@ -305,4 +305,4 @@ include'layout/nabvar.php'; ?>
   }
 
 }, false)
-</script>
+</script> -->

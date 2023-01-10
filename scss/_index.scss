@@ -143,24 +143,7 @@ display: inline-block;
     background-color: rgba(0, 0, 0, 0.30);
   }
   
-  .nav-images {
-    display: flex;
-    flex-flow: row wrap;
-    flex-shrink: 0;
-    flex-grow: 0;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .nav-image {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #000000;
-    width: 100%;
-    height: 100%;
-    transition: all 400ms ease-out;
-  }
+
   
  
   .nav-title {
@@ -197,23 +180,17 @@ display: inline-block;
   }
   
 
-  
- .texto__nav__images{
-    font-size: 35px;
-    margin: 45% auto 0 auto;
-    width: 90%;
-    color:black;
- }
 
 
  
 
 .container{
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
     overflow: hidden;
     padding:100px 0;
     height: auto;
+    max-width: 90%;
 }
 
 .btn__cuenta{
@@ -786,6 +763,9 @@ font-size: 15px;
     line-height:20px;
     font-size: 18px;
 }
+.nuestra__forma__de__pago{
+    margin-top: -6rem;
+}
 
 .subtitulo__nuestra__forma{
     text-align: center;
@@ -794,10 +774,7 @@ font-size: 15px;
 
 }
 
-.subtitulo__nuestra__forma{
-    color: white;
-    text-align: center;
-}
+
 .credito,.paypal{
 color: $color__adhoc;
 }
@@ -1021,6 +998,7 @@ width: 100px;
 	background-color: #ffffff;
 }
 
+
 @media screen and (max-width:1500px) {
     .slider{
         height:200px;
@@ -1030,6 +1008,15 @@ width: 100px;
     }
 }
 
+@media screen and (max-width:1000px) {
+    .cards__formas__de__pago{
+    width: 70%;
+    margin: auto;
+    }
+    .card__precios{
+        width: 47%;
+    }
+}
 
 @media screen and (max-width:900px){
   .modal__registros{
@@ -1082,16 +1069,13 @@ width: 100px;
     .contenido__services{
         width: 100%;
     }
-    .contenido__lo__ultimo{
-        background: #000;
-        width: 60%;
+    .cards__formas__de__pago{
+        width: 80%;
     }
-    .parrafo__lo__ultimo{
-        color:white;
-        position: relative;
-        top: -250px;
-    
-    }
+   
+    .card__precios{
+        width: 47%;
+    } 
 }
 
 
@@ -1345,4 +1329,14 @@ width: 100px;
     margin-top: -10rem;
    }
   
+}
+
+@media screen and (min-width:1000px) {
+    .cards__formas__de__pago{
+        width: 60%;
+        margin: auto;
+    }
+    .card__precios{
+        width: 45%;
+    }
 }

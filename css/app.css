@@ -140,25 +140,6 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.nav-images {
-  display: flex;
-  flex-flow: row wrap;
-  flex-shrink: 0;
-  flex-grow: 0;
-  overflow: hidden;
-  position: relative;
-}
-
-.nav-image {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #000000;
-  width: 100%;
-  height: 100%;
-  transition: all 400ms ease-out;
-}
-
 .nav-title {
   color: var(--nav-text-color);
   font-weight: bold;
@@ -191,19 +172,13 @@
   display: none;
 }
 
-.texto__nav__images {
-  font-size: 35px;
-  margin: 45% auto 0 auto;
-  width: 90%;
-  color: black;
-}
-
 .container {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   overflow: hidden;
   padding: 100px 0;
   height: auto;
+  max-width: 90%;
 }
 
 .btn__cuenta {
@@ -739,15 +714,14 @@
   font-size: 18px;
 }
 
+.nuestra__forma__de__pago {
+  margin-top: -6rem;
+}
+
 .subtitulo__nuestra__forma {
   text-align: center;
   color: white;
   font-size: 24px;
-}
-
-.subtitulo__nuestra__forma {
-  color: white;
-  text-align: center;
 }
 
 .credito, .paypal {
@@ -990,6 +964,15 @@ ul {
     width: 30%;
   }
 }
+@media screen and (max-width: 1000px) {
+  .cards__formas__de__pago {
+    width: 70%;
+    margin: auto;
+  }
+  .card__precios {
+    width: 47%;
+  }
+}
 @media screen and (max-width: 900px) {
   .modal__registros {
     width: 80%;
@@ -1031,14 +1014,11 @@ ul {
   .contenido__services {
     width: 100%;
   }
-  .contenido__lo__ultimo {
-    background: #000;
-    width: 60%;
+  .cards__formas__de__pago {
+    width: 80%;
   }
-  .parrafo__lo__ultimo {
-    color: white;
-    position: relative;
-    top: -250px;
+  .card__precios {
+    width: 47%;
   }
 }
 @media screen and (max-width: 700px) {
@@ -1238,6 +1218,15 @@ footer .container {
   }
   .aleatorio__6 {
     margin-top: -10rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .cards__formas__de__pago {
+    width: 60%;
+    margin: auto;
+  }
+  .card__precios {
+    width: 45%;
   }
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -5064,14 +5053,15 @@ form.example::after {
 
 .cards__blog {
   background: #000524;
-  width: 40%;
-  height: 400px;
+  width: 32%;
+  height: auto;
   overflow: hidden;
+  margin: 0.5rem;
 }
 
 .cards__blog img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 10px;
 }
 
@@ -5082,7 +5072,7 @@ form.example::after {
   font-weight: bolder;
   text-align: left;
   font-size: 1.2rem;
-  line-height: 4rem;
+  line-height: -4rem;
 }
 
 .enlace__pagina__blog:hover {
@@ -5142,6 +5132,7 @@ form.example::after {
 .como__vender__un__carro img {
   height: auto;
   width: 100%;
+  border-radius: 10px;
 }
 
 .contenido__principal {
@@ -5205,6 +5196,23 @@ form.example::after {
   transform: scale(1.1);
 }
 
+.texto__carro__electrico__edison {
+  color: white;
+  font-size: 9px;
+}
+
+.vehiculos__electricos {
+  width: 100%;
+  height: 400px;
+  display: inline-block;
+}
+
+.vehiculos__electricos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .imagen__banner__blog {
   margin: auto;
   width: 100%;
@@ -5252,6 +5260,7 @@ form.example::after {
 
 .texto__blog {
   color: white;
+  line-height: 2rem;
 }
 
 .subtitulo__blog {
@@ -5327,35 +5336,32 @@ form.example::after {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@media screen and (max-width: 1200px) {
-  .publicidad__blog {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 950px) {
-  .publicidad__blog {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 800px) {
-  .descripcion__blog {
+@media screen and (max-width: 1000px) {
+  .contenedor__cards__blog {
     flex-wrap: wrap;
   }
-  .publicidad__blog {
-    margin-top: 50px;
+  .cards__blog {
+    width: 46%;
+  }
+  .contenido__como__vender__un__carro {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .como__vender__un__carro {
+    width: 100%;
   }
   .los__carros__mas__vendidos {
     width: 100%;
+  }
+  .publicidad__blog {
+    display: none;
   }
 }
 @media screen and (max-width: 600px) {
-  .imagen__banner__blog, .contenido__blog {
-    height: 300px;
+  .contenedor__cards__blog {
+    flex-wrap: wrap;
   }
-  .los__carros__mas__vendidos {
-    width: 100%;
-  }
-  .publicidad__blog {
+  .cards__blog {
     width: 100%;
   }
 }
