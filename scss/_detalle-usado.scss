@@ -1,74 +1,176 @@
 
 .contenedor__detalles__usado{
     width: 100%;
+    margin-top: 90px;
 }
 
 .contendor__imagenes{
     margin-top: 90px;
     width: 100%;
-    position: relative;
-   height:auto;
+  margin: auto;
+
 }
 
-.contendor__imagenes{
-    width: 100%;
+
+.carousel {
+    margin-top: -90px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    
-}
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+  .carousel-main {
+    margin-right: 10px;
+    width: 40%;
+    display: inline-block;
+    height: 450px;
+    cursor: pointer;
 
-.image{
-    width: 250px;
-    height: 150px;
-    overflow: hidden;
+  }
+
+  .carousel-main img{
+     width: 100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    transition: .2s linear;
+    
+  }
+  .carousel-main img:hover{
+    transform: scale(1.1);
+  }
+  .carousel-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 50%;
+    height:auto;
+    border-radius: 10px;
+  }
+  
+  .carousel-thumbnails img {
+    border: 2px solid $color__gris;
+    width: 19%;
+    height: auto;
+    margin-bottom: 10px;
     cursor: pointer;
     border-radius: 10px;
-    margin: 10px 10px;
-}
-
-.image img{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
     transition: .2s linear;
-}
-.image img:hover{
-    transform:scale(1.1);
-}
+  }
+  
+  .carousel-thumbnails img.selected {
+    border: 2px solid $color__adhoc;
+  }
 
-.popup-image{
-position:fixed;
-top: 0;
-left: 0;
-height: 100%;
-width: 100%;
-z-index: 100;
-background:rgba(0,0,0,.9);
-display: none;
-}
+  .carousel-thumbnails img:hover{
+    transform: scale(1.1);
+  }
+  
+  .modal__galeria {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0.9); 
+  }
 
-.popup-image span{
+  .contenedor__imagenes{
+    width: 50%;
+    height: 600px;
+    border-radius: 10px;
+    margin: auto;
+    // display: inline-block;
+
+  }
+  
+  .modal-content-galeria {
+    width: 100%;
+    height:100%;
+    margin: 30px auto 0 auto;
+    display: block;
+    border: solid 2px $color__gris;
+    border-radius: 10px;
+    object-fit: cover;
+
+  }
+  
+  .cerrar__modal__galeria {
     position: absolute;
-    top:0;
-    right: 10px;
-    font-size: 60px;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
     color: white;
     cursor: pointer;
-    z-index: 100;
- 
-}
-
-.popup-image img{
+  }
+  
+  .cerrar__modal__galeria:hover,
+  .cerrar__modal__galeria:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+/* Estilos para los botones */
+.prev, .next {
     position: absolute;
-    left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    width: 750px;
-    object-fit: cover;
-    border-radius: 10px;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size:35px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: red;
+  }
+  
+  .detalles__imagen{
+    position: relative;
+    width: 44%;
+    text-align:left;
+    color: white;
+     margin: auto;
+     top: 55px;
+  }
+
+  .current__imagen,.total__imagen{
+    font-weight: bolder;
+  }
+
+  .tittle__imagen{
+    display: inline-block;
+  }
+  /* Estilos para la imagen principal */
+  .main-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
  
-}
+  
+  
 
 .informacion__general__del__vehiculo{
     margin-top: -70px;
@@ -86,11 +188,12 @@ display: none;
 
 .nombre__del__vehiculo,.precio__del__vehiculo{
     color:white;
+    font-size: 14px;
 }
 
 .referencia__del__vehiculo,.kilometros__del__vehiculo{
     color: $color__gris;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .caracteristicas__del__vehiculo__e__informacion__del__vendedor{
@@ -125,12 +228,12 @@ display: none;
     font-size: 14px;
 }
 
-.texto__caracteristicas img{
-    color: $color__accent;
+.iconos__caracteristicas{
+color: $color__adhoc;
 }
 .info__caracteristicas i{
- font-size: 32px;
- color: black;
+ font-size: 18px;
+ color:$color__adhoc;
 }
 
 .respuesta__caracteristicas{
@@ -145,6 +248,7 @@ display: none;
 .telefono__del__vendedor{
     color: white;
     font-size: 15px;
+    width: 200px;
 }
 .telefono{
     color: white;
@@ -160,14 +264,14 @@ display: none;
   
 }
 
-.contenedor__imagen__no__disponible img{
-    width: 100%;
+.foto__vendedor{
+    width: 70%;
     height: auto;
     border-radius: 10px;
 
 }
 .vendedor__dice,.subtitulo__informacion{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     color: white;
     margin-top: 150px;
@@ -193,6 +297,7 @@ display: none;
     display: flex;
     justify-content: space-between;
     color: white;
+
 }
 
 .acordion__body div{
@@ -204,6 +309,7 @@ display: none;
 
 .contenedor__acordeon__recomendaciones{
 margin-top: -23rem;
+
 }
 .acordion__recomendacion{
     border-left: solid 4px yellow; 
@@ -218,9 +324,254 @@ margin-top: -23rem;
     text-align: center;
 }
 
+
 .texto__precaucion{
     line-height: 20px;
     color: white;
+}
+.accordion-body{
+    background:$color__fondo__footer;
+}
+
+.contenedor__comentarios{
+ margin-top: -30px;
+
+}
+.subtitulo__comentarios{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -40px;
+}
+
+.parrafo__comenatrios{
+    text-align: center;
+    color: $color__gris;
+}
+
+.contenido__comentarios{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+    align-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.comentario{
+width: 60%;
+  overflow-y: scroll;
+  height: 30rem;
+}
+.comentario::-webkit-scrollbar{
+    -webkit-appearance: none;
+    width: 8px;
+}
+
+.comentario::-webkit-scrollbar:horizontal{
+    height: 5px;
+   
+}
+
+.comentario::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 20px;
+}
+
+.comentario::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    border-radius: 20px;
+}
+
+
+.comentario::-webkit-scrollbar-track {
+    border-radius: 10px; 
+     
+}
+
+.contenido__texto{
+    width: 100%;
+    margin: 5px auto auto auto;
+    height: auto;
+    
+}
+
+
+.chat {
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    overflow: auto;
+    min-height: 100px;
+    position: relative;
+  }
+  
+  .mensaje {
+    position: relative;
+    padding-left: 20px;
+    // margin-bottom: 10px;
+    width: auto;
+  }
+  
+  .mensaje img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+  }
+
+  
+  
+  .contenido {
+    border-radius: 10px;
+    padding: 5px 10px;
+    color:white;
+    width: auto;
+    font-size: 14px;
+  }
+.fecha__publicacion__comentario{
+    font-size: 10px;
+    color: $color__gris;
+    margin-left: 20px;
+    margin-top: -15px;
+}
+ 
+.texto__sin__comentarios{
+    text-align: center;
+    font-size: 13px;
+}
+.fa-comment-alt{
+    text-align: center;
+    font-size: 30px;
+}
+
+.caja-texto {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+    width:90%;
+    border-radius: 10px;
+    margin: auto;
+    min-height: 5px;
+    height: auto;
+  background:$color__fondo__blog;
+  }
+  
+  .caja-texto textarea {
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+    height:auto;
+    min-height: 5px;
+    color: white;
+    overflow: hidden;
+  background:$color__fondo__blog;
+  border-bottom: solid 2px $color__dark;
+  }
+  
+  .caja-texto button {
+    background:$color__fondo__blog;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 40px;
+    height: 30px;
+  }
+
+  .caja-texto button:hover{
+    background:$color__dark;
+    width: 40px;
+    height: 30px;
+    border-radius: 2px;
+  }
+
+
+    .anuncio{
+    width: 38%;
+    height: auto;
+  margin-top: 40px;
+
+}
+.imagen{
+    position: relative;
+    display: inline-block;
+}
+.imagen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1));
+  }
+
+.imagen img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: -20px;
+ 
+}
+.subtitulo__vender__carro{
+    position: relative;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.parrafo__vender__carro{
+    position: relative;
+    color:$color__verde;
+    font-size:15px;
+}
+
+.enlace__anuncio__registrarme{
+  display: inline-block;
+  text-decoration: 0;
+  color: black;
+  background:$color__adhoc;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 400;
+}
+.enlace__anuncio__registrarme:hover{
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+    color: black;
+}
+
+@media screen and (max-width:900px) {
+   .carousel-main{
+    width: 100%;
+   } 
+   .carousel-thumbnails{
+    width: 100%;
+ 
+   }
+   .carousel-thumbnails img{
+    width: 10%;
+    height: 80px;
+    margin-top: 5px;
+   }
+   .modal-content-galeria{
+    width: 90%;
+   }
+   .contenedor__imagenes{
+    width: 80%;
+    margin-top: -30px;
+   }
 }
 
 @media screen and (max-width:815px){
@@ -243,7 +594,15 @@ margin-top: -23rem;
 .image{
     width: 250px;
 }
+.comentario,.anuncio{
+    width: 100%;
 }
+.anuncio{
+    margin-top: -200px;
+}
+}
+
+
 @media screen and (max-width:539px){
 .image{
     width: 100%;
@@ -251,7 +610,29 @@ margin-top: -23rem;
 .caracteristicas__del__vehiculo__e__informacion__del__vendedor{
     margin-top: 30px;
 }
+.carousel-main{
+  height: 300px;
+}
+.carousel-thumbnails img{
+  height: 45px;
+}
+.vendedor__dice{
+  margin-top: 50px;
+}
+.texto__precaucion{
+  font-size: 14px;
+}
 } 
+
+@media screen and (max-width:500px) {
+  .info__caracteristicas{
+    width: 50%;
+  }
+  .respuesta__caracteristicas{
+    margin-left: 5px;
+  }
+}
+
 @media screen and (max-width:400px) {
     .caracteristicas__del__vehiculo__e__informacion__del__vendedor{
         margin-top: -30px;

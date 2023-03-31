@@ -18,7 +18,6 @@
 @import 'detalles';
 @import 'compra';
 @import 'procesar-pago';
-@import 'compra-completada';
 @import '404';
 @import 'carros-y-camionestas';
 @import 'detalle-usado';
@@ -30,13 +29,18 @@
 @import 'final-compra';
 @import 'actualizar-plan';
 @import 'precios';
-
+@import 'editar-info-vehiculo';
+@import 'plan-gratis';
+@import 'login-usuario';
+@import 'beneficios';
+@import 'respuesta-comentarios';
+@import 'pagna-estado-pago';
 
 
 body{
     // font-family: 'Baloo Bhaina 2', cursive;
     background:$color__fondo__blog;
-    user-select: none;
+    // user-select: none;
     font-family: 'Montserrat', sans-serif;
 }
 

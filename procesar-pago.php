@@ -1,145 +1,147 @@
 <?php  include'layout/nav-home-usuario.php';
        include'config/config.php'; 
-include'conexion-db-accent.php'; 
+  include'conexion-db-accent.php'; 
 
+$id__paquete = isset($_GET['idpaq']) ? $_GET['idpaq'] : '';
+$id__usuario = isset($_GET['idu']) ? $_GET['idu'] : '';
+if($id__usuario && $id__paquete){
+ $consulta = "SELECT * FROM planes__de__publicaciones WHERE id_paquete = '$id__paquete'";
+    $ejecutar__la__consulta = mysqli_query($conexion__db__accent,$consulta);
+    if($ejecutar__la__consulta){
+      $fila = mysqli_fetch_array($ejecutar__la__consulta); 
+      $nombre__paquete = $fila['nombre_paquete'];
+      $valor__paquete = $fila['valor_paquete'];
+      $descuento = $fila['descuento'];
+      $precio__descuento = $valor__paquete - (($valor__paquete * $descuento) / 100 );
 
-$servicios = isset($_SESSION['carrito']['servicios']) ? $_SESSION['carrito']['servicios'] : null;
-$id_conductor =  isset($_GET['idc']) ? $_GET['idc'] : '';
+      ?>
+      <div class="container  container__proceso__de__pago">
+    <h2 class="titulo__compra">Detalles de tu pago  </h2>
+    <div class="table-responsive ">
+    <table class="table table-dark table-striped  table-hover ">
 
-
-if($servicios != null || $id_conductor !=""){
-    $lista__carrito = array();
-    foreach ($servicios as $clave => $cantidad) {
-        $consulta__productos = "SELECT id_producto,nombre_producto,	valor_producto,descuento, $cantidad AS cantidad FROM productos    WHERE id_producto = '$clave' AND  activo = 1";
-        $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__productos);
-            $lista__carrito[] = mysqli_fetch_array($ejecutar__consulta);
-
-        }  
-}else{
-    header("Location: servicios");
-    exit;
-    
-}?>
-
-
-<div class="container contenedor__compra contenedor__pago">
-    <h2 class="titulo__compra">Detalles de pedido </h2>
-    <?php   
-if($lista__carrito == null){
-  echo ' <tr><td colspan="5"><h3 class="titulo__compra">No has selecionado ningun servicio de conductor elegido</h3></td> </tr>  ';
-
-}else{
-    $total = 0;
-    foreach($lista__carrito as $servicio){
-        $id = $servicio['id_producto'];
-        $nombre__producto = $servicio['nombre_producto'];
-        $precio__producto = $servicio['valor_producto'];
-        $descuento__producto = $servicio['descuento'];
-        $precio__descuento  =  $precio__producto - (($precio__producto * $descuento__producto) / 100) ;
-        $subtotal = $cantidad * $precio__descuento;
-        $total += $subtotal; ?>
-<div class="table-responsive ">
-      <table class="table table-borderless">
-      <thead class="table-dark tabla">
     <tr>
-      <th scope="col" class="texto__compra">Nombre servicio</th>
-      <th scope="col"class="texto__compra">Subtotal</th>
+      <th scope="col" class="texto__compra">Nombre del plan</th>
+      <th scope="col"class="texto__compra">Total a pagar</th>
     
 
     </tr>
-  </thead>
-  <tbody>
+    <tbody>
     <tr>
-      <th scope="row" class="texto__compra"><?php  echo $nombre__producto ?></th>
-      <td class="texto__compra"><?php echo  number_format($subtotal,2,'.','.') ?></td> 
-      <td>
-      </td>
+      <th scope="row" class="texto__compra"><?php  echo  $nombre__paquete ?></th>
+      <td class="texto__compra"><?php 
+      if($descuento > 0){ echo  number_format($precio__descuento,2,'.','.') ?></td> 
+    <?php }else {?>
+      <?php  echo $valor__paquete; ?>
+      <?php }?>
     </tr>  
   </tbody>
 </table>
 </div>
 <br>
-<?php  } ?>
-<?php  } ?>
-<?php   if($lista__carrito != null){  ?>
-<div class="contenedor__saldo">
- <h2 id="total" class="total__servicio total__a__pagar"> Total a pagar  $ <?php  echo  number_format($total,2,'.','.') ?></h2>
+<p class="texto__otros__medios"> <i class="fas fa-lock"></i> Paga seguro </p>
+<div class="contenedor__botones__de__pago">
+  <div class="botones__de__pago epayco">
+  <button class="contenedor__imagen__otros__pagos" id="otros-medios-de-pago">
+    <i class="far fa-credit-card"></i>  Pagar con epayco
+  </button>
+</div>
+<div class="botones__de__pago formas__de__pago">
+  <div>
+    <img src="./img/mastercard.png" alt="master cards"class="img__tarjetas__de__credito">
+  </div>
+  <div>
+    <img src="./img/efecty.png" alt="efecty logo"class="img__tarjetas__de__credito">
+  </div>
+  <div>
+    <img src="./img/american__express.png" alt="pse"class="img__tarjetas__de__credito">
+  </div>
+  <div>
+    <img src="./img/visa.png" alt="pse"class="img__tarjetas__de__credito">
+  </div>
+    <div>    
+ <img src="./img/pse.png" alt="pse"class="img__billeteras">
+  </div>
+  <div>    
+    <img src="./img/logo__daviplata.png" alt="daviplata"class="img__billeteras">
+
+  </div>
+</div>
  
+
+
+  </div>
 </div>
-<?php } ?>
+<br>
+
+</div>
+</div>
+<?php  } ?>
+<?php  } ?>
 </div>
 
-<div class="container contenedor__detalles__de__pago">
-  <h2 class="titulo__pago">Procesar  pago</h2>
-<div id="paypal-button-container" class="contenedor__boton__paypal"></div>
-</div>
-
-<?php  include'layout/footer-home.php';  ?>
-
+<?php include'layout/footer-home.php' ?>   
 
 <script>
-paypal.Buttons({
-  style: {
-    layout: 'vertical',
-    color:  'blue',
-    shape:  'rect',
-    label:  'pay'
-  },
-  createOrder: function(data, actions) {
-      return actions.order.create({
-        purchase_units: [{
-          amount: {
-            value: <?php  echo $total ?>
-          }
-        }]
-      });
-    },
-    onApprove: function(data, actions) {
-      let url = 'https://adhoc.com.co/'
-    return actions.order.capture().then(function(detalles) {
-        console.log(detalles)
-        fetch(url+'captura',{
-        method:'POST',
-        headers:{
-              'content-type':'application/json'
-        },
- 
- 
-        body:JSON.stringify({
-            detalles:detalles,
-            identificadores:{
-              idc:<?php   echo $id_conductor ?>,
-              idu:<?php  echo $datos__resultado['id_usuario'] ?>
-           
-            }
-            
-          
-        })
 
-        }).then(respuesta => respuesta.json())
-        .then(data=>{
-          if(data === 'true'){
-           window.location.href='compra-completada?idc=<?php echo $id_conductor  ?>&idu=<?php echo $datos__resultado['id_usuario'] ?>'
-          }
-          console.log(data)
-        })
 
-    });
-  },
-  onCancel: function (data) {
-    Swal.fire({
-    background:'#202F36',
-  icon: 'error',
-  title: 'El proceso de pago ha sido cancelado',
-  showClass: {
-    popup: 'animate__animated animate__fadeInDown'
-  },
-  hideClass: {
-    popup: 'animate__animated animate__fadeOutUp'
+function otros__medios__de__pago(){
+var medios__de__pago = document.getElementById('otros-medios-de-pago')
+if(medios__de__pago){
+medios__de__pago.addEventListener('click',function(){
+var  handler = ePayco.checkout.configure({
+  				key: '3ca56470e406e78da32222a6642ef3b7',
+  				test: true
+  			});
+        var data={
+          //Parametros compra (obligatorio)
+          name: "<?php  echo  $nombre__paquete ?>",
+          description: "Pagar plan <?php  echo  $nombre__paquete ?>",
+          currency: "cop",
+          amount: "<?php  echo  $precio__descuento ?>",
+          invoice:generateRandomString(),
+          tax_base: "0",
+          tax: "0",
+          country: "co",
+          lang: "es",
+          autoclick:'false',
+
+          //Onpage="false" - Standard="true"
+          external: "false",
+          response: "http://localhost/accent__hollding/respuesta-pago?id_usuario=<?php echo $id__usuario ?>&nombre_plan=<?php  echo  $nombre__paquete ?>",
+          pending:"http://localhost/accent__hollding/pago-pendiente?id_usuario=<?php echo $id__usuario ?>&nombre_plan=<?php  echo  $nombre__paquete ?>",
+          rejected:"http://localhost/accent__hollding/pago-no-aprobado",
+          confirmation:"http://localhost/accent__hollding/confirmacion" ,
+
+  
+          //Atributos cliente
+          name_billing: "Andres Perez",
+          address_billing: "Carrera 19 numero 14 91",
+          type_doc_billing: "cc",
+          mobilephone_billing: "3050000000",
+          number_doc_billing: "100000000"
+
+         //atributo deshabilitación metodo de pago
+      
+
+          }
+          handler.open(data)
+
+       })
+        }  
+        }
+        
+otros__medios__de__pago();
+
+function generateRandomString() {
+  var chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var randomString = '';
+  for (var i = 0; i < 17; i++) {
+    var randomNum = Math.floor(Math.random() * chars.length);
+    randomString += chars.substring(randomNum, randomNum + 1);
   }
-})
-  }
-}).render('#paypal-button-container');
+  return randomString;
+}
 
 
  </script>

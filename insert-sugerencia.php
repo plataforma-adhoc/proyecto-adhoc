@@ -7,7 +7,7 @@ function insert__sugerencias(){
 
     
     if($nombre ==="" || $email ==="" || $sugerencia ===""){
-    echo json_encode('campos vacios');
+    echo json_encode('Los campos estan vacios');
     }else{
         $insertar__sugerencia = "INSERT INTO sugerencias (nombre,email,sugerencia) VALUE('$nombre','$email','$sugerencia')";
         $ejecutar__consulta = mysqli_query($conexion__db__accent,$insertar__sugerencia);

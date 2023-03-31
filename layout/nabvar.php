@@ -7,10 +7,7 @@
   <meta name="description" content="  Venta de carros usados  Bogotá, conectamos vendedores con compradores,  !ANUNCIATE YA!">
   <meta name="google-site-verification" content="pjfiKzcIqtbmwXzIHQRgS4BtoFvv-nM_E3Mjhpi8Uds" />
   <meta name="facebook-domain-verification" content="axfghf2epvyczsathwjx2vxr5x17xj" />
-  <meta http-equiv="Expires" content="0">
-  <meta http-equiv="Last-Modified" content="0">
-  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
-  <meta http-equiv="Pragma" content="no-cache">
+
   <title><?php echo  $titulo ?></title>
 
 <!-- Google tag (gtag.js) -->
@@ -41,7 +38,7 @@
 <!-- End Meta Pixel Code -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">  
-  <link rel="stylesheet" type="text/css" href="./css/app.css"> 
+  <link rel="stylesheet" type="text/css" href="./css/app.css?v=1"> 
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -49,8 +46,16 @@
 </head>
 
 <body>
+    <div class="loader" id="loader">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+
+   </div>
+  
+
 <div class="oferta__de__lanzamiento">
- <p class="titulo__promo__de__lanzamiento">! PROMO DE LANZAMIENTO ¡</p>
+ <p class="titulo__promo__de__lanzamiento">!PUBLICA TU CARRO GRATIS¡</p>
 </div>
   <header class="hero">
     <nav class="nav__hero">
@@ -75,12 +80,14 @@
               <i class="fas fa-house-user"></i>
                 <a href="/">Inicio</a>
               </li>
-              <li class="nav-link">
-              
+              <li class="nav-link">  
               <i class="fas fa-user-astronaut"></i>
                   <a href="usuario">Crear un registro </a>
               </li>
-            
+              <li class="nav-link">  
+              <i class="fas fa-sign-in-alt"></i>
+                  <a href="login-usuario">Iniciar sesion </a>
+              </li>
              
               <li class="nav-link">
                   <i class="fas fa-shopping-bag"></i>
@@ -121,7 +128,7 @@
         <a href="usuario"class="btn__cuenta__registro">Crear una cuenta  <i class="fas fa-arrow-right flecha"></i></a>
       </div>
       <div>
-        <a href="login-usuario"class="btn__cuenta__registro">Crear una sesion  <i class="fas fa-arrow-right flecha"></i></a>
+        <a href="login-usuario"class="btn__cuenta__registro">Iniciar sesion <i class="fas fa-arrow-right flecha"></i></a>
       </div>
     </div>
   </div>

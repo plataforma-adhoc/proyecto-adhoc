@@ -1,3 +1,23 @@
+
+.container__proceso__de__pago{
+    width: 50%;
+    margin: auto;
+    margin-top: -700px;
+}
+.contenedor__compra{
+    margin-top: -600px;
+
+}
+.detalles__pago{
+    text-align: center;
+    color: white;
+    margin-top: -7rem;
+}
+.subtitulo__detalles__pago{
+    text-align: center;
+    color: white;
+    margin-top: -1rem;
+}
 .proceso__pago{
     color: white;
     font-size: 22px  
@@ -20,4 +40,64 @@
 .enlace__volver__inicio:hover{
     color: $color__adhoc;
     border-bottom: 1px solid $color__adhoc;
+}
+.contenedor__botones__de__pago{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.botones__de__pago{
+    width: 48%;
+    height: 3rem;
+   border-radius: 10px;
+   background: #000;
+}
+.formas__de__pago{
+    display: flex;
+    align-items: center;
+
+}
+.formas__de__pago div{
+display: inline-block;
+width: 20%;
+}
+.formas__de__pago div img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.texto__otros__medios{
+    color: white;
+}
+
+.contenedor__imagen__otros__pagos{
+    width: 100%;
+    height:50px;
+    cursor: pointer;
+   color: white;
+   display: inline-block;
+   border: none;
+   background: #000;
+   border-radius: 10px;
+}
+
+
+@media screen and (max-width:900px) {
+    .container__proceso__de__pago{
+        width: 100%;
+    }
+}
+@media screen and (max-width:600px) {
+    .botones__de__pago{
+        width: 100%;
+      margin: 10px;
+       
+    }
+  
+    .texto__otros__medios{
+        text-align: center;
+    }
 }

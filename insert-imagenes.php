@@ -1,7 +1,5 @@
 <?php  include'conexion-db-accent.php';  
-
-
-
+session_start();
   if(!is_dir('upload')){
     mkdir('upload');
   }
@@ -12,9 +10,7 @@
       if(file_exists($_FILES['file']['tmp_name'][$key])){
        if(move_uploaded_file($_FILES['file']['tmp_name'][$key],'upload/'.$_FILES['file']['name'][$key])){
          $random = rand(999999,999999999999);
-         $ruta = 'upload/'.$random.$_FILES['file']['name'][$key];
-         
-         
+         $ruta = 'upload/'.$random.$_FILES['file']['name'][$key]; 
        }
        
      }
@@ -30,13 +26,23 @@
      $ruta__8 ='upload/'.$_FILES['file']['name'][7];
      $ruta__9 ='upload/'.$_FILES['file']['name'][8];
      $ruta__10 ='upload/'.$_FILES['file']['name'][9];
-     $estado__anuncio = "Activo";
-     $insertar__fotos = "INSERT INTO fotos__del__vehiculo(id_usuario,foto_1,foto_2,foto_3,foto_4,foto_5,foto_6,foto_7,foto_8,foto_9,foto_10,estado_anuncio)
-     VALUES('$id__usuario','$ruta__1','$ruta__2','$ruta__3','$ruta__4','$ruta__5','$ruta__6','$ruta__7','$ruta__8','$ruta__9','$ruta__10','$estado__anuncio')";
-     $ejecutar__consulta = mysqli_query($conexion__db__accent,$insertar__fotos);
-     if($ejecutar__consulta){
-       echo json_encode('ok');
-     }
+    //  $estado__anuncio = 0;
+
+$datos__fotos = array(
+'id'=>$id__usuario,'ruta_1'=>$ruta__1,'ruta_2'=>$ruta__2,'ruta_3'=>$ruta__3,'ruta_4'=>$ruta__4,'ruta_5'=>$ruta__5,'ruta_6'=>$ruta__6,
+'ruta_7'=>$ruta__7,'ruta_8'=>$ruta__8,'ruta_9'=>$ruta__9,'ruta_10'=>$ruta__10);
+
+$datos__imagenes = $_SESSION['datos-imagenes'] = $datos__fotos;
+if($datos__imagenes){
+    echo json_encode('ok');
+
+}
+    //  $insertar__fotos = "INSERT INTO fotos__del__vehiculo(id_usuario,foto_1,foto_2,foto_3,foto_4,foto_5,foto_6,foto_7,foto_8,foto_9,foto_10,estado_anuncio)
+    //  VALUES('$id__usuario','$ruta__1','$ruta__2','$ruta__3','$ruta__4','$ruta__5','$ruta__6','$ruta__7','$ruta__8','$ruta__9','$ruta__10','$estado__anuncio')";
+    //  $ejecutar__consulta = mysqli_query($conexion__db__accent,$insertar__fotos);
+    //  if($ejecutar__consulta){
+    //    echo json_encode('ok');
+    //  }
      
   
 

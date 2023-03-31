@@ -5,7 +5,6 @@
    primer__apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
    segundo__apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-   documento: /^\d{7,14}$/, // 7 a 14 numeros.
    telefono: /^\d{7,14}$/, // 7 a 14 numeros.
    contrasena: /^.{4,12}$/, // 4 a 12 digitos.
  
@@ -102,24 +101,8 @@
          document.querySelector('#grupo__email .formulario__input-error').classList.add('formulario__input-error-activo')
 
       }
-		break;
-		case "documento":
-      if(expresiones.documento.test(e.target.value)){
-        document.getElementById('grupo__documento').classList.remove('formulario__grupo-incorrecto');
-        document.getElementById('grupo__documento').classList.add('formulario__grupo-correcto');
-        document.querySelector('#grupo__documento i').classList.add('fa-check-circle')
-        document.querySelector('#grupo__documento i').classList.remove('fa-times-circle')
-        document.querySelector('#grupo__documento .formulario__input-error').classList.remove('formulario__input-error-activo')
+	
 
-
-      }else{
-        document.getElementById('grupo__documento').classList.add('formulario__grupo-incorrecto');
-        document.getElementById('grupo__documento').classList.remove('formulario__grupo-correcto');
-        document.querySelector('#grupo__documento i').classList.add('fa-times-circle')
-         document.querySelector('#grupo__documento i').classList.remove('fa-check-circle')
-         document.querySelector('#grupo__documento .formulario__input-error').classList.add('formulario__input-error-activo')
-
-      }
       break;
       case "telefono":
         if(expresiones.telefono.test(e.target.value)){
@@ -241,7 +224,7 @@ export function  insert__login__usuario(){
         evento.preventDefault();
         
         let datos = new FormData(document.getElementById('formulario-login'));
-        fetch(url__servidor+'insert-login-usuario',{
+        fetch('insert-login-usuario',{
             method:'POST',
             body:datos
 
@@ -322,9 +305,7 @@ export  function actualizar__contrasena__usuario(){
           title: `Tu contraseña se actualizo con exito`,
           toast:true,
           position:'bottom-end',
-          confirmButtonText:'De acuerdo',
-         
-         
+          confirmButtonText:'De acuerdo', 
         })
 
       }else{
@@ -422,7 +403,7 @@ export function buscar__carro(){
   
     let form__data =  new FormData();
     form__data.append('buscador',input)
-    fetch(url__servidor+'load-carros',{
+    fetch('load-carros',{
        method:'POST',
        body:form__data
     }).then(respuesta => respuesta.json())

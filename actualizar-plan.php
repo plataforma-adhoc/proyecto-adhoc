@@ -1,21 +1,20 @@
 <?php include'layout/nav-home-usuario.php';
 include'conexion-db-accent.php'; 
-$id__usuario = isset($_GET['idu'])? $_GET['idu']: '';
-$id__estilos = isset($_GET['ids'])? $_GET['ids']: '';
-$id__contacto = isset($_GET['idc'])? $_GET['idc']: '';
-$id__equipamiento = isset($_GET['ide'])? $_GET['ide']: '';
-$id__fotos = isset($_GET['idf'])? $_GET['idf']: '';
-$id__informacion = isset($_GET['idi'])? $_GET['idi']: '';
-$id__seguridad = isset($_GET['ids'])? $_GET['ids']: '';
+$id__usuario = isset($_GET['id_usuario'])? $_GET['id_usuario']: '';
+$id__estilos = isset($_GET['id_diseño'])? $_GET['id_diseño']: '';
+$id__contacto = isset($_GET['id_contacto'])? $_GET['id_contacto']: '';
+$id__equipamiento = isset($_GET['id_equipamiento'])? $_GET['id_equipamiento']: '';
+$id__fotos = isset($_GET['id_fotos'])? $_GET['id_fotos']: '';
+$id__informacion = isset($_GET['id_informacion'])? $_GET['id_informacion']: '';
+$id__seguridad = isset($_GET['id_seguridad'])? $_GET['id_seguridad']: '';
+if($id__usuario && $id__estilos && $id__contacto && $id__equipamiento && $id__fotos && $id__informacion && $id__seguridad){ ?>
 
- ?>
  <div class="container contenedor__plan__pro">
- <h1 class="subtitulo__planes"> Publica tu vehiculo con el 60% de descuento, solo por tiempo <span class="limitado">LIMITADO</span></h1>
-  <p class="parrafo__plan__pro">AHORRA EL 50% ACTUALIZANDO TU PLAN AHORA </p>
+ <h1 class="subtitulo__planes"> Publica tu vehiculo con el 10% de descuento, solo por tiempo y accede a todos nuestro beneficios <span class="limitado">LIMITADO</span></h1>
+  <p class="parrafo__plan__pro">AHORRA EL 10% ACTUALIZANDO TU PLAN AHORA </p>
  <br><br>
    <div class="contenedor__tablas__precio">
-    <?php  
-            
+    <?php          
     $consulta__planes = "SELECT id_paquete, nombre_paquete, valor_paquete,descripcion_paquete,descuento FROM planes__de__publicaciones WHERE activo = '1' ";
      $ejecutar = mysqli_query($conexion__db__accent,$consulta__planes);
     if(mysqli_num_rows($ejecutar) > 0){
@@ -27,7 +26,7 @@ $id__seguridad = isset($_GET['ids'])? $_GET['ids']: '';
     $descuento = $fila__planes['descuento'];
     $precio__descuento = $valor__paquete - (($valor__paquete * $descuento) / 100 );
        ?>
-        <div class="contenedor">   
+        <div class="contenedor contenido__tabla__de__precios">   
         <div class="tabla">
             <h2><?php  echo $nombre__paquete  ?></h2>
             <img src="./img/plan__free.svg" alt="contactos">
@@ -43,12 +42,8 @@ $id__seguridad = isset($_GET['ids'])? $_GET['ids']: '';
             <h3><sup>$</sup><?php  echo $valor__paquete  ?> </h3>
             <?php  } ?>
             <p><?php  echo  $descripcion__paquete ?></p>
-            <?php if( $valor__paquete > 0){ ?>
-            <a href="proceso-de-pago?idpaq=<?php  echo $fila__planes['id_paquete'] ?>&idu=<?php  echo $id__usuario ?>"class="boton">Lo quiero</a>
-            <?php }else { ?>
-            <a href="plan-gratis?idpaq=<?php  echo $fila__planes['id_paquete'] ?>"class="boton">Lo quiero</a>
-                
-           <?php } ?>
+            <a href="proceso-de-pago?idpaq=<?php  echo $fila__planes['id_paquete'] ?>&idu=<?php  echo $id__usuario ?>&ide=<?php echo $id__estilos ?>&idc=<?php echo  $id__contacto ?>&ideq=<?php echo  $id__equipamiento ?>&idf=<?php echo  $id__fotos ?>&idi=<?php echo  $id__informacion ?>&ids=<?php echo  $id__seguridad ?>"class="boton">Lo quiero</a>
+            
            <br><br>
         </div>
         
@@ -56,8 +51,18 @@ $id__seguridad = isset($_GET['ids'])? $_GET['ids']: '';
 <?php  }?>
 <?php  }?>
 <?php  }?>
+<?php  }else{ 
+  echo '<script>alert("Error al procesar la solicitud")
+  location.href="mis-carros-anunciados?idu='.  $id__usuario .'";
+  
+  </script>'
+  
+  ?>
 
+  <?php  } ?>
  </div>
  </div>
 <?php include'layout/footer-home.php';
  ?>
+
+ 

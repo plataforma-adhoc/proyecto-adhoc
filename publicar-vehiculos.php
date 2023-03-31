@@ -27,54 +27,54 @@ include'conexion-db-accent.php';
                 </div>
                 <div class="step__body">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control step__input marca" id="floatingInput " placeholder="Ej: Toyota"name="marca" id="">
+                    <input type="text" class="form-control step__input marca" id="floatingInput" placeholder="Ej: Toyota"name="marca" >
                     <label for="floatingInput">Marca del carro *</label>
                     </div>
                     <div class="form-floating">
-                    <input type="text" class="form-control step__input modelo" id="floatingPassword" placeholder="Ej: Land cruiser"name="modelo" id="">
+                    <input type="text" class="form-control step__input modelo" id="floatingPassword" placeholder="Ej: Land cruiser"name="modelo">
                     <label for="floatingPassword">Modelo  del carro *</label>
                    
                     </div>
                     <div class="form-floating mb-3">
-                    <input type="text" class="form-control step__input color" id="floatingInput" placeholder="Ej: AZul"name="color" id="">
+                    <input type="text" class="form-control step__input color" id="floatingInput" placeholder="Ej: Azul"name="color" >
                     <label for="floatingInput">Color del carro *</label>
                     </div>
                     <div class="form-floating">
-                    <input type="text" class="form-control step__input fabricacion" id="floatingPassword fabricacion" placeholder="Ej: Año 2000"name="fechaFabricacion" id="">
+                    <input type="text" class="form-control step__input fabricacion" id="floatingPassword fabricacion" placeholder="Ej: Año 2000"name="fechaFabricacion" >
                     <label for="floatingPassword">Año  del carro *</label>
                    
                     </div>
                     <div class="form-floating mb-3">
-                    <input type="text" class="form-control step__input matricula" id="floatingInput" placeholder="Ej: 7 "name="matricula"id="">
-                    <label for="floatingInput">Matricula del carro o numero de placa ultimo numero *</label>
+                    <input type="text" class="form-control step__input matricula" id="floatingInput" placeholder="Ej: ABC 123 "name="matricula">
+                    <label for="floatingInput">Numero de la matricula </label>
                     </div>
                     <div class="form-floating">
-                    <input type="text" class="form-control step__input ciudad" id="floatingPassword" placeholder="Ej: Bogotá"name="ciudad-matricula"id="">
+                    <input type="text" class="form-control step__input ciudad" id="floatingPassword" placeholder="Ej: Bogotá"name="ciudad-matricula">
                     <label for="floatingPassword">Cuidad donde esta registrada la matricula *</label>
                    
                     </div>
                     <div class="form-floating mb-3">
-                    <input type="text" class="form-control step__input venta" id="floatingInput" placeholder="Ej: Bogotá "name="ciudad-venta"id="">
+                    <input type="text" class="form-control step__input venta" id="floatingInput" placeholder="Ej: Bogotá "name="ciudad-venta">
                     <label for="floatingInput">Cuidad donde vas a vender tu carro *</label>
                     </div>
                   
-                    <select class="form-select form-select-lg mb-3 step__input " aria-label=".form-select-lg example" name="propietario" id="propietario" >
+                    <select class="form-select form-select-lg mb-3 step__input " aria-label=".form-select-lg example" name="propietario" id="propietario">
                     <option selected>Unico dueño * </option>
                         <option value="si">Si</option>
                         <option value="no">No</option>
                     </select>
                     <div class="form-floating">
-                    <input type="text" class="form-control step__input kilometros" id="floatingPassword" placeholder="Ej: 100000"name="kilometros"id="">
-                    <label for="floatingPassword">Kilometros del carro ni puntos ni comas *</label>
+                    <input type="text" class="form-control step__input kilometros" id="floatingPassword" placeholder="Ej: 100000"name="kilometros">
+                    <label for="floatingPassword">Kilometros  ni puntos ni comas *</label>
                    
                     </div>
                     <div class="form-floating">
-                    <input type="text" class="form-control step__input precio" id="floatingPassword" placeholder="Ej: 5000000"name="precio-vehiculo"id="">
-                    <label for="floatingPassword">Precio del carro ni puntos ni comas *</label>
+                    <input type="text" class="form-control step__input precio" id="floatingPassword" placeholder="Ej: 5000000"name="precio-vehiculo">
+                    <label for="floatingPassword">Precio  ni puntos ni comas *</label>
                    
                     </div>
                     <div class="form-floating">
-                    <input type="text" class="form-control step__input puertas" id="floatingPassword" placeholder="Ej: 5"name="puertas"id="">
+                    <input type="text" class="form-control step__input puertas" id="floatingPassword" placeholder="Ej: 5"name="puertas">
                     <label for="floatingPassword">Numero de puertas  *</label>
                    
                     </div>
@@ -92,8 +92,7 @@ include'conexion-db-accent.php';
                         <option value="Automatica"> Automatica</option>
                         <option value="Secuencial">Secuencial</option>
                     </select>
-                    <select class="form-select form-select-lg mb-3 step__input" aria-label=".form-select-lg example" name="direccion" id="direccion">
-                
+                    <select class="form-select form-select-lg mb-3 step__input" aria-label=".form-select-lg example" name="direccion-vehiculo" id="direccion">
                     <option selected>Tipo de direccion</option>
                         <option value="Asistida">Asistida</option>
                         <option value="Asistida Hidraulica"> Asistida Hidraulica</option>
@@ -103,237 +102,258 @@ include'conexion-db-accent.php';
                     </select>
    
                  <div class="form-floating">
-                    <input type="text" class="form-control step__input cilindraje" id="floatingPassword" placeholder="Ej: 1.6" name="cilindraje" id="">
+                    <input type="text" class="form-control step__input cilindraje" id="floatingPassword" placeholder="Ej: 1.6" name="cilindraje" >
                     <label for="floatingPassword">Cilindraje del carro  1.6 *</label>
                    
                     </div>
                     <textarea rows="4" cols="80" placeholder="Agrega más información de tu vehiculo"
-                        class="step__input text__area block"  name="descripcion" id="descripcion"></textarea>
+                        class="step__input text__area block"  name="descripcion" id="descripcion">
+                    </textarea>
              
                 </div>
                 <div class="step__footer">
-                <button type="submit" class="step__button--next  inicio" 
+                <button type="submit" class=" step__button--next  inicio " 
                         disabled id="activar-btn">Guardar información</button>
                         <br><br>
                         <div id="button"></div>
-                        <!-- <button type="button" class="step__button step__button--next" data-to_step="2"
-                data-step="1">Siguiente</button>  -->
-                </div> 
+                        <button type="button" class="step__button step__button--next" data-to_step="2"
+                data-step="1">Siguiente</button> 
+                </div>
+                <div class="toda__la__info__del__vehiculo">
+                        <div  class="contenido__toda__la__info">
+                        <br>
+                            <p>
+                                Cuentale a tu audiencia que hace  tu carro diferente a los demas, proporciona detalles importantes como,
+                                mantenimientos recientes, reparaciones esteticas o  reparacaiones mecanicas, si tienes un historial de mantenimientos
+                                puedes incluirlos.
+                        </p>
+
+                        </div>
+                </div>
             </div>
+           
             </form>
-          
+            
             <div class="step block" id="step-2">
                 <div class="step__header">
                     <h2 class="step__title">Informacion adicional de tu vehiculo</h2>
                 </div>
                 <div class="step__body ">
-                    <form class="formulario__info__adicional block" id="formulario-info-adicional-vehiculo">
-                <input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
-
-                  <br><br>
-                    <div class="accordion block" id="accordionExample">
-                        <div class="accordion-item ">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Seguridad
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body acordeon__checkbox acordion__body">
-                                    
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="airbag-delatero">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Air bag delantero</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="airbag-trasero">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                          Air bag traseros</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="bloqueo-central" >
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Bloqueo central</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="alarma">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Alarma</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="control-ascenso">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Control de ascenso</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="control-descenso">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                        Control de descenso </label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="sensores-delateros">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Sensores delanteros</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="sensor-reversa">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Sensor de reversa</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="punto-ciego">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Sensor punto ciego</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="camara-reversa">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Camara de reversa</label>
-                                    </div>
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item ">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Equipamiento
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body acordeon__checkbox acordion__body">
-                                <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="aire-acondicionado">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                        Aire acondicionado</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="andorid-auto">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Android auto</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="apple-car-play">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Apple car play</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="bluetoot">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Bluetooth</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault"   name="espejos-electricos">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Espejos electrico</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="exploradoras">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                          Exploradoras</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="vidrios-electricos">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                        Vidrios electricos</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="techo-corredizo">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Techo corredizo</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="techo-panoramico">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Techo panoramico</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="parqueo-automatico">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Parqueo automático</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="desempañador-trasero">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Desempañador trasero</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault"  name="gps">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            GPS</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item ">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Diseño y estilo
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body acordeon__checkbox acordion__body">
-                                <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="rines-de-lujo">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Rines de lujo</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="radio-cassette">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Radio digital</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="radio-cd">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                            Radio CD</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckDefault" name="pantalla-video">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">
-                                           Pantalla de video</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <br><br>
-                   
+                    <form class="formulario__info__adicional block" id="formulario-info-adicional-vehiculo">
+                        <h2 class="subtitulo__info__vehiculo">Seguridad del vehiculo</h2>
+                <input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
+                 <div class="contenedor__selects">
+                  <br><br>
+                    <div class="form-floating form__floating__info__adicional">
+                    <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"  name="airbag-delatero"> 
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+         
+                </select>
+                <label for="floatingSelect"> Air bag delantero</label>
                 </div>
+             
+                <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"  name="airbag-trasero">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Air bag trasero</label>
+                </div>
+                
+                <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example" name="alarma">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Alarma</label>
+                </div>
+                <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="bloqueo-central">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Bloqueo central</label>
+                </div>
+                <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="control-ascenso">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Control de asceso</label>
+              
+                </div>
+                <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="control-descenso">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Control de descenso</label>
+         
+                </div>
+                <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="sensores-delateros">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Sensor delateros</label>
+        
+                </div>
+                <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="sensor-reversa">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Sensor reversa</label>
+                </div>
+                <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="sensor-punto-ciego">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Sensor de punto ciego</label>
+                </div>
+                <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="camara-reversa">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Camara de reversa</label>
+                </div>
+            </div>
+            <br><br>
+            <h2 class="subtitulo__info__vehiculo">Equipamiento  del vehiculo</h2>
+            <div class="contenedor__selects">
+            <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="aire-acondicionado">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Aire acondicionado</label>
+                </div>
+          
+            <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="andorid-auto">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Android auto</label>
+                </div>
+     
+            <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="apple-car-play">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Apple car play</label>
+           
+            </div>
+            <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="bluetoot">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Bluetooth</label>
+            
+            </div>
+            <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="espejos-electricos">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Espejos electrico</label>
+                </div>
+         
+            <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="exploradoras">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Exploradoras</label>
+                </div>
+         
+               <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="vidrios-electricos">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Vidrios electricos</label>
+                </div>
+      
+            <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="techo-corredizo">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Techo corredizo</label>
+                </div>
+        
+            <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="techo-panoramico">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Techo panoramico</label>
+         
+            </div>
+            <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="parqueo-automatico">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Parqueo automatico</label>
+                </div>
+          
+            <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="desempañador-trasero">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Desempañador trasero</label>
+                </div>
+     
+            <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="gps">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Gps</label>
+                </div>
+            </div>
+            <br><br>
+            <h2 class="subtitulo__info__vehiculo">Diseño y estilo del vehiculo</h2>
+            <div class="contenedor__selects">
+            <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="rines-de-lujo">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Rines de lujos</label>
+                </div>
+                <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="radio-cassette">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Radio digital</label>
+                </div>
+                <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="radio-cd">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Radio CD</label>
+                </div>
+                <div class="form-floating form__floating__info__adicional">
+                <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example"name="pantalla-video">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+                <label for="floatingSelect">Pantalla de video</label>
+                </div>
+            </div>
+             
                 <div class="step__footer">
                     <!-- <button type="button" class="step__button step__button--back" data-to_step="1"
                         data-step="2">Regresar</button> -->
@@ -341,51 +361,63 @@ include'conexion-db-accent.php';
                   
                         <br><br>
                         <div id="button-info-adicional"></div>
-                        <!-- <button type="button" class="step__button step__button--next" data-to_step="3"
-                data-step="2">Siguiente</button> -->
+                        <button type="button" class="step__button step__button--next" data-to_step="3"
+                data-step="2">Siguiente</button>
                     </div>
                     
                     <div class="toda__la__info__del__vehiculo">
+                        <div class="contenido__toda__la__info">
+                            <i class="fas fa-exclamation-triangle advertencia"></i>
+
+                        </div>
+                        <div  class="contenido__toda__la__info">
                         <br>
-                        <p>Proporciona toda la información posible de tu vehiculo, esto<br>
-                        puede aumentar las posibilidades de venta ante un posible comprador.
-                    </p>
+                            <p>Proporciona toda la información posible de tu vehiculo, esto<br>
+                            puede aumentar las posibilidades de venta ante un posible comprador. No omitas detalles
+                        </p>
+
+                        </div>
                 </div>
+            </form>
             </div>
-        </form>
+            </div>
             <div class="step" id="step-3">
                 <div class="step__header">
-                    <h2 class="step__title">Sube las fotografias de tu vehiculo maximo 10 imagenes</h2>
+                    <h2 class="step__title">Sube las fotografias de ese maravilloso vehiculo que quieres vender, maximo 10 imagenes </h2>
                 </div>
+                
                 <div class="step__body">
-                <form id="formulario-insertar-imagenes"class="formulario__info__adicional block">
+                <form  class=" block formulario__info__adicional" id="formulario-insertar-imagenes">
                  <input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
-                    <div id="wrapper" class="block">
+                     <div id="wrapper" class="block">
                     <div id="container-input">
                     <div class="wrap-file">
-			    	<div class="content-icon-camera">             
-                        <label for="files"><i class="fas fa-photo-video"></i> Selecciona las imagenes </label> 
+			    	<div class="content-icon-camera">
+                        <br><br>
+                     <label for="files" class="seleccion__fotos"><i class="fas fa-photo-video"></i> Selecciona las imagenes juntas </label> 
                         <input id="files" type="file" multiple="multiple" accept="image/jpeg, image/png, image/jpg" name="file[]" class="file" required>
-                
-                    </div>
-                    <output id="result">
+                        <output id="result">
+                  </div> 
 				 
-			</div>
+			 </div>
             
 		</div>
-	       </div>
                 </div>
-                <div class="step__footer">
+                <div class="step__footer footer__imagenes">
                 <button type="submit" class="step__button step__button--next" id="button-imagenes">Guardar información</button>
                     <!-- <button type="button" class="step__button step__button--back" data-to_step="2"
                         data-step="3">Regresar</button> -->
                          <br><br>
                          <div id="insert-fotos"></div>
+                         <button type="button" class="step__button step__button--next " data-to_step="4"
+                    data-step="3" >Siguiente</button>
                          <div id="error-fotos"></div>
                    
+                        </form>
                 </div>
-            </div>
-        </form>
+            
+        </div>
+        </div>
             <div class="step" id="step-4">
                 <div class="step__header">
                     <h2 class="step__title">Contacto </h2>
@@ -393,7 +425,6 @@ include'conexion-db-accent.php';
                 </div>
                 <br>
                 <p class="step__texto">Donde te contactaran lo compradores</p>
-               
                 <div class="step__body ">
                     <form id="formulario-contactos"class ="formulario__info__adicional block">
                 <input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
@@ -451,7 +482,8 @@ include'conexion-db-accent.php';
                     <button type="submit" class="step__button" id="button-contacto">Guardar informacion</button>
                     <br><br>
                   <div id="button-siguiente"></div>
-                        
+                  <button type="button" class="step__button step__button--next" data-to_step="5"
+                data-step="4">Siguiente</button>  
                 </div>
                 </div>
                 </form>
@@ -460,23 +492,25 @@ include'conexion-db-accent.php';
                         <h2 class="step__title">Escoge tu plan</h2>
                     </div>
                     <br>
-                    <h2 class="subtitulo__planes"> Publica tu vehiculo con el 50% de descuento, solo por tiempo <span class="limitado">LIMITADO</span></h2>
                     <br><br>
-                        <div class="contenedor__tablas__precio">
+                        <div class="contenedor__tablas__de__precio">
                 <?php  
-             
-                
-                    $consulta__planes = "SELECT id_paquete, nombre_paquete, valor_paquete,descripcion_paquete,descuento FROM planes__de__publicaciones WHERE activo = '1'";
-                    $ejecutar = mysqli_query($conexion__db__accent,$consulta__planes);
-                    if(mysqli_num_rows($ejecutar) > 0){
-                        while($fila__planes = mysqli_fetch_array($ejecutar)){ 
+  
+                    $fecha__de__registro__usuario =  $datos__resultado['fecha_de_registro'];
+                    $fecha__actual =  date('d-m-Y');
+                    $calculando__fecha = strtotime($fecha__actual) - strtotime($fecha__de__registro__usuario);
+                    $salida =  $calculando__fecha / 86400;
+                    if($salida > 150){
+                $consulta__planes = "SELECT id_paquete, nombre_paquete, valor_paquete,descripcion_paquete,descuento FROM planes__de__publicaciones WHERE activo = '1' AND nombre_paquete = 'PREMIUN'";
+                $ejecutar = mysqli_query($conexion__db__accent,$consulta__planes);
+                $fila__planes = mysqli_fetch_array($ejecutar);
                  $nombre__paquete = $fila__planes['nombre_paquete'];
                  $valor__paquete = $fila__planes['valor_paquete'];
                  $descripcion__paquete = $fila__planes['descripcion_paquete'];
                  $descuento = $fila__planes['descuento'];
                 $precio__descuento = $valor__paquete - (($valor__paquete * $descuento) / 100 );
                 ?>
-        <div class="contenedor">   
+        <div class="contenedor contenido__tabla__de__precios">   
         <div class="tabla">
             <h2><?php  echo $nombre__paquete  ?></h2>
             <img src="./img/plan__free.svg" alt="contactos">
@@ -493,20 +527,47 @@ include'conexion-db-accent.php';
             <?php  } ?>
             <div class="contenido__descripcion">
             <p><?php  echo  $descripcion__paquete ?></p>
-            </div>
-            <?php if( $valor__paquete > 0){ ?>
-            <a href="proceso-de-pago?idpaq=<?php  echo $fila__planes['id_paquete']?>&idu=<?php  echo $datos__resultado['id_usuario']  ?>"class="boton">Lo quiero</a>
-            <?php }else { ?>
-            <a href="plan-gratis?idpaq=<?php  echo $fila__planes['id_paquete'] ?>"class="boton">Lo quiero</a>
-                
-           <?php } ?>
+            </div> 
+            <a href="procesar-pago?idpaq=<?php  echo $fila__planes['id_paquete'] ?>&idu=<?php  echo $datos__resultado['id_usuario'] ?>"class="boton">Lo quiero</a>              
            <br><br>
         </div>
-        
     </div>
-     
- <?php  }?>
-<?php  }?>
+    <?php  }else{
+         $consulta__planes = "SELECT id_paquete, nombre_paquete, valor_paquete,descripcion_paquete,descuento FROM planes__de__publicaciones WHERE activo = '1' AND nombre_paquete = 'GRATIS'";
+         $ejecutar = mysqli_query($conexion__db__accent,$consulta__planes);
+         $fila__planes = mysqli_fetch_array($ejecutar);
+          $nombre__paquete = $fila__planes['nombre_paquete'];
+          $valor__paquete = $fila__planes['valor_paquete'];
+          $descripcion__paquete = $fila__planes['descripcion_paquete'];
+          $descuento = $fila__planes['descuento'];
+         $precio__descuento = $valor__paquete - (($valor__paquete * $descuento) / 100 );
+        ?>
+        <div class="contenedor contenido__tabla__de__precios">   
+            <h2 class="subtitulo__planes plan__gratis"> Publica tu vehiculo GRATIS solo por tiempo <span class="limitado">LIMITADO</span></h2>
+       <br><br>
+            <div class="tabla">
+            <h2><?php  echo $nombre__paquete  ?></h2>
+            <img src="./img/plan__free.svg" alt="contactos">
+            <?php   
+            if($descuento > 0){ ?>
+            <p>Antes <sup>$</sup> <del><?php  echo $valor__paquete;  ?> </del></p>
+            <h3>
+            <?php  echo number_format($precio__descuento,2,'.',',') ?> <br>
+                <small class="text-success"><?php  echo $descuento ?>% de descuento</small>
+            </h3>
+             
+          <?php  } else { ?>
+            <h3><sup>$</sup><?php  echo $valor__paquete  ?> </h3>
+            <?php  } ?>
+            <div class="contenido__descripcion">
+            <p><?php  echo  $descripcion__paquete ?></p>
+            </div>         
+            <a href="plan-gratis?idpaq=<?php  echo $fila__planes['id_paquete'] ?>&nombre_plan=<?php  echo $fila__planes['nombre_paquete'] ?>"class="boton">Lo quiero</a>              
+           
+           <br><br>
+        </div>
+ <?php } ?>
+
         </div>
              
                 <div class="step__footer">
@@ -517,12 +578,11 @@ include'conexion-db-accent.php';
 
     <br>
 </div>
-
-
-
 </div>
-<script>
+<br><br><br>
+<?php include'layout/footer-home.php' ?>
 
+<script>
 
     let form = document.querySelector('.form-register');
     let progressOptions = document.querySelectorAll('.progressbar__option');
@@ -624,10 +684,11 @@ include'conexion-db-accent.php';
   }
   
   } else {
-    alert("Your browser does not support File API");
+    alert("Tu navegador no soporta la  API de archivos");
   }
 });
 
 
 </script>
-<?php include'layout/footer-home.php' ?>
+
+

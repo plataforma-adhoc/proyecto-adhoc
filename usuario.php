@@ -1,6 +1,8 @@
 <?php 
 $titulo = "AdHoc | Registro usuarios";
 include'layout/nabvar.php' ?>
+<h1 class="titulo__usuarios">Crear una cuenta</h1>
+<p class="texto__usuarios">Crea tu cuenta y publica la información de tu carro gratis</p>
 <div class="contenedor__del__formulario">
 <form class="formulario__registro" id="formulario-registro-usuario">
     <div class="contenedor__formulario">  
@@ -48,21 +50,8 @@ include'layout/nabvar.php' ?>
            </div>
         </div>
 
-       
 
-        <div class="grupo__inputs" id="grupo__telefono">
-        <label for="telefono"class="formulario__label">Telefono</label>
-        <div class="formulario__grupo_-input">
-            <div class="contenedor__inputs">
-                <input type="text" placeholder="Telefono" name="telefono" 
-                    class="capturarDatos" id="telefono">
-               
-            </div>
-         
-     </div>
-        </div>
-
-        <div class="grupo__inputs" id="grupo__contrasena">
+        <div class="grupo__inputs block" id="grupo__contrasena">
         <label for="contrasena"class="formulario__label">Contraseña</label>
         <div  class="formulario__grupo_-input">
             <div class="contenedor__inputs">

@@ -5,7 +5,7 @@ include'layout/nabvar.php';
  $token =  $_GET['token'] ? $_GET['token']: '';
 
  if($email ==="" || $token === ''){
-  header('Location: password-usuario.php');
+  header('Location: password-usuario');
  }else{
    $consulta__recuperar__contrasena = "SELECT clave__nueva FROM recuperar__contrasena__usuario WHERE email = '$email' AND token = '$token'";
    $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__recuperar__contrasena);

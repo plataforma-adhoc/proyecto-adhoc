@@ -4,6 +4,8 @@ if(!isset($_SESSION['id_usuario'])){
   header("Location: login-usuario");
   die();
 }
+
+
     $consulta__datos__usuario = "SELECT *  FROM usuarios   WHERE id_usuario = '{$_SESSION['id_usuario']}' LIMIT 1";
     $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
     if(mysqli_num_rows($resultado__consulta) > 0){
@@ -24,12 +26,12 @@ if(!isset($_SESSION['id_usuario'])){
           <div class="card__dashboard">
             <div class="contenido">
               <div>
-                <img src="./img/icono__vender__carro.png"alt=""/>
+              <i class="fas fa-car historial__de__vehiculos"></i>
 
               </div>
               <div>
                 <br>
-                <p>Anunciar  carro</p>  
+                <p>Anunciar un carro</p>  
 
               </div>
     
@@ -42,7 +44,7 @@ if(!isset($_SESSION['id_usuario'])){
         <div class="card__dashboard">
           <div class="contenido">
             <div>
-              <img src="./img/icono__historial.png" alt=""/>
+            <i class="fas fa-history historial__de__vehiculos"></i>
             </div>
            <div>
              <br>
@@ -53,39 +55,101 @@ if(!isset($_SESSION['id_usuario'])){
       </div>
     </a>
 
-  </div>  
   </div>
 
+  <div class="contenido__card__dashboard">
+    <a href="beneficios?idu=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__anunciar__carro">
+        <div class="card__dashboard">
+          <div class="contenido">
+            <div>
+            <i class="fas fa-gifts historial__de__vehiculos"></i>
+            </div>
+           <div>
+             <br>
+             <p>Beneficios</p> 
+           </div>
+  
+          </div>
+      </div>
+    </a>
+
+  </div>
+   
+  </div>
   <div class="contenedor__graficas"> 
     <br>
     <div class="contenido__graficas">
-      <div class="myChart" id="grafica">
-          <div class="popover">
-            <i class="fas fa-question-circle"></i>  
-            <span class="tooltiptext">Toda la informacion de las personas que hicieron click y visitaron el perfil de tu vahiculo</span>
-          </div>
+      <div class="myChart">
+        <div class="popover">
+          <i class="fas fa-question-circle"></i>  
+          <span class="tooltiptext">Toda la informacion de las personas que hicieron click y visitaron el perfil de tu vehiculo</span>
+        </div>
+        <div  id="grafica"></div>
       </div>
-      <div class="myChart" id="grafica2">
-          <div class="popover">
+      <div class="myChart">
+      <div class="popover">
             <i class="fas fa-question-circle"></i>  
             <span class="tooltiptext">Personas que se ha comunicado conmigo para pedir información del vehiculo o tuvieron la intención de hacerlo</span>
           </div>
+          <div  id="grafica2"></div>
       </div>
     </div>
     </div>
-
   </div>
 </div>
+
+<br><br>
 </div>
 
+<div class="modal fade modal__notificaciones" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen ">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body cuerpo__modal__notificaciones">
+        <br><br>
+        <h2 class="subtitulo__modal__body">Notificaciones</h2>
+        <br>
+        <?php  
+            $seleccion__notificaciones = "SELECT *   FROM  comentario WHERE id_usuario ='{$_SESSION["id_usuario"]}' AND tipo = 'comentario'";
+            $ejecutar__seleccion = mysqli_query($conexion__db__accent,$seleccion__notificaciones);
+
+            $selecion__contador =  "SELECT id_notificacion  FROM notificaciones WHERE id_usuario = '{$_SESSION['id_usuario']}' ";
+            $ejecutar__consulta__notificacion = mysqli_query($conexion__db__accent,$selecion__contador);
+        
+
+            if(mysqli_num_rows($ejecutar__seleccion) > 0 ){ 
+              while($fila__notificaciones = mysqli_fetch_array($ejecutar__seleccion)){
+                $fila__id__notificacion = mysqli_fetch_array($ejecutar__consulta__notificacion); ?>
+              <div class="contenido__de__la__notificacion">
+              <div class="notificacion">
+                <br>
+            <p class="comentario__notificacion">Se ha hecho un nuevo comentario <br> <?php  echo ucwords($fila__notificaciones['comentario']) ?></p>
+            <p class="fecha__notificacion"><?php  echo $fila__notificaciones['fecha_comentario'] ?></p>     
+            <a href="responder-comentarios?idu=<?php  echo $_SESSION['id_usuario'] ?>&idp=<?php echo $fila__notificaciones['id_publicacion']  ?>&idn=<?php  echo  $fila__id__notificacion['id_notificacion'] ?>" class="btn btn-primary">Responder</a>
+          </div>
+          <br>
+        </div>
+        <?php } ?> 
+           <?php }else{ ?>
+            <p class="no__hay__notificaciones">No hay notificaciones</p>
+            <?php } ?> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+        
+      </div>
+    </div>
+  </div>
+ 
 
 <?php include'layout/footer-home.php' ?>
-
 <script>
 
-let id = <?php echo $_SESSION['id_usuario'] ?>
-   
-  function graficos(id){
+
+  let id = <?php echo $_SESSION['id_usuario'] ?>  
+  function graficos(id,id__publicacion){
     var url__servidor = 'https://adhoc.com.co/'
     let cantidad__clicks = [];
     let fecha__clicks = []
@@ -155,6 +219,8 @@ let id = <?php echo $_SESSION['id_usuario'] ?>
       color:  'white'
     },
         },
+    
+     
         
         xaxis: {
           categories:fecha__clicks,
@@ -185,7 +251,6 @@ let id = <?php echo $_SESSION['id_usuario'] ?>
   }
   graficos(<?php echo $_SESSION['id_usuario'] ?>);
   var id__usuario = <?php echo $_SESSION['id_usuario'] ?>;
-
  function graficos__contacto(id__usuario){
   var url__servidor = 'https://adhoc.com.co/'
   let cantidad__clicks = [];
@@ -208,7 +273,7 @@ let id = <?php echo $_SESSION['id_usuario'] ?>
       var options = {
     colors: ["#008A55"],
           series: [{
-            name: "Personas que se comunicaron conmigo",
+            name: "Personas que me han contactado",
             data: cantidad__clicks
         }],
           chart: {
@@ -234,6 +299,7 @@ let id = <?php echo $_SESSION['id_usuario'] ?>
       color:  'white'
     }
         },
+
        
         xaxis: {
           categories:fecha__clicks,
@@ -246,5 +312,5 @@ let id = <?php echo $_SESSION['id_usuario'] ?>
 }
   
   graficos__contacto(<?php echo $_SESSION['id_usuario'] ?>)  
- 
 </script>
+

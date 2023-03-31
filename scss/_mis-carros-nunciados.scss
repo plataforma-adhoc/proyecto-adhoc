@@ -21,43 +21,48 @@ border-radius: 10px;
 }
 
 .parrafo__promocion__premiun{
-color: white;
+color:$color__verde;
+text-decoration: 0;
 margin-left: 50px;
 font-size: 14px;
 }
 
-.enlace__obtener__oferta{
-display: inline-block;
-width: 200px;
-padding: 10px;
-background:$color__adhoc;
-border-radius: 10px;
-margin-left: 50px;
-text-decoration: 0;
-color: black;
-}
-.enlace__obtener__oferta:hover{
-    color: black;
-}
 
+.fa-edit{
+    color:$color__adhoc;
+    font-size: 1.2rem;
+  
+}
+.fa-trash-alt{
+    color: $color__danger;
+    font-size: 1.2rem;
+}
+.enlace__eliminar,.enlace__editar{
+    text-decoration: 0;
+    color:white;
+
+}
+.enlace__editar:hover,.enlace__eliminar:hover{
+ color: white;
+ opacity: 0.3;
+ transition: 0.5s ease-in-out;
+}
 .titulo__carro__anunciado{
     color: white;
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
 }
 
-.subtitulo__anuncio__carro{
-    color: white;
-}
 
 .subtitulo__carro__anunciado{
     color: white;
     font-size: 20px;
     font-weight: bold;
 }
-.marca__carro__anunciado{
+.subtitulo__anuncio__carro{
     color: white;
-    font-size: 20px;
+    text-align: center;
 }
 .anunciados{
     margin-top: 20px;
@@ -68,13 +73,6 @@ color: black;
     background:$color__fondo__footer;
 }
 
-.texto__precio__carro{
-    color: white;
-    font-size: 10px;
-}
-.precio__de__carro__usado{
-    color: $color__verde;
-}
 
 .contenedor__de__datos{
     width: 95%;
@@ -87,26 +85,8 @@ color: black;
     width: 30%;
 }
 
-.btn__editar__precio__carro{
-    display: inline-block;
-   border: 0;
-   outline: 0;
-   padding: 10px;
-   color: white;
-   background:$color__fondo__footer;
-   font-weight: bold;
-}
+ 
 
-.btn__editar__precio__carro:hover{
- background:$color__adhoc;
- color: black;
- transition: .5s;
- border-radius: 25px;
-} 
-
-.col-form-label{
-    color: white;
-}
 
 
 .tarjeta__collapsable{
@@ -118,25 +98,14 @@ color: black;
     
 }
 
-.formulario__precio__del__carro{
-    width: 40%;
-    margin-left: 10px;
-}
-.input__precio__del__carro{
-    background: #000;
-    color: white;
-}
 
-.btn__footer{
-    width: 100%;
-    
-}
+
 
 .estado__del__anuncio{
     width: 40%;
     left: 10px;
     top: 130px;
-   
+
 }
 
 
@@ -161,12 +130,13 @@ color: black;
 .estado__activo{
     font-size: 10px;
     color: white;
-    left: -50px;
+    text-align:left;
+    margin-left: 10px;
 }
 
-.fa-bullhorn{
+.cirulo__anuncio__activo{
     color: $color__verde;
- font-size: 25px;
+   font-size: 10px;
   animation-name: papadeo;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -178,19 +148,32 @@ color: black;
     -webkit-animation-iteration-count: infinite;
 }
 
-
+.cirulo__anuncio__inactivo{
+    color: $color__danger;
+    font-size: 10px;  
+}
+.enlace__obtener__oferta{
+color:$color__verde;
+text-decoration: 0;
+font-weight: bold;
+}
 .activado{
   color:$color__verde;
   font-size: 12px;
 }
 
+
+
 .btn__desactivar__anuncio{
     display: inline-block;
     border: 0;
     outline: 0;
-    background:$color__fondo__footer;
     font-size: 14px;
     color: $color__danger;
+    text-align: left;
+    width: 100%;
+    text-decoration: 0;
+
 }
 
 .contenedor__imagen__no__anuncio{
@@ -219,56 +202,33 @@ color: black;
     color: $color__danger;
     font-size: 10px; 
 }
-.solicitud__de__publicacion__redes__sociales{
-    margin-top: -80px;
-    width: 80%;
 
-}
-.texto__publicacion__redes__sociales{
-    color: white;
-  }
-  
-.contenedor__publicacion__aceptada{
-    width: 90%;
-    border-radius: 10px;
-    background: #000;
-   padding: 1rem;
- 
-}
-.publicacion__aceptada{
-    display: flex;
-    align-items: center;
-    color:white;
+
+.parrafo__carros__anunciados{
+    font-size: 15px;
     text-align: center;
+    color: white;
+}
+
+.titulo__modal{
+    text-align: center;
+}
+.subtitulo__modal{
+    text-align: center;
+    color: white;
+    font-size: 22px;
+}
+.fa-info{
+    color: $color__adhoc;
+    font-size: 20px;
+}
+
+.estado__anuncio__vendido{
+    color: $color__verde;
     font-weight: bold;
-    line-height: 1rem;
 }
-.contenido__check{
-    width: 10%;
-}
-.check{
-    font-size: 30px;
-}
-
-@media screen and (max-width:1100px) {
-    .tarjeta__collapsable{
-        width: 70%;
-   
-    }
-}
-
-@media screen and (max-width:900px) {
-    .tarjeta__collapsable{
-        width: 70%;
-
-    }
-}
-
 @media screen and (max-width:800px) {
-    .tarjeta__collapsable{
-        width: 70%;
  
-    }
     .contenido__carros__anunciados{
      width: 50%;
     }  
@@ -278,22 +238,22 @@ color: black;
     .estado__del__anuncio{
         width: 90%;
     }
+    .fila__tabla{
+        font-size: 14px;
+    }
+    .fa-edit .fa-trash-alt{
+        font-size: 14px;
+
+    }
 }
 
-@media screen and (max-width:700px) {
-     .publicacion__aceptada{
-        line-height: 30px;
-     }
-}
+
 
 @media screen and (max-width:600px) {
     .promocion__oferta{
         height: 300px;
     }
-    .tarjeta__collapsable{
-        width: 90%;
-
-    }
+  
 }
 
 @media screen and (max-width:400px) {
@@ -301,7 +261,5 @@ color: black;
     .contenido__carros__anunciados{
      width: 60%;
     } 
-    .btn__editar__precio__carro,.btn__footer{
-        font-size: 12px;
-    } 
+   
 }

@@ -52,12 +52,13 @@ if(!isset($_SESSION['id_usuario'])){
   src="https://www.facebook.com/tr?id=644310337474777&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/app.css?v=1">
     <link rel="icon" type="image/ico" href="./img/favicon.png"/>
 </head>
 
@@ -72,10 +73,17 @@ if(!isset($_SESSION['id_usuario'])){
         
                  <div class="enlaces__varios">
                    <a href="perfil-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__perfil__usuario"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"></a>
-                  
-        
-          </a>
-              
+                   <a href="#"class="enlace__notificaciones"  data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-bell"></i>
+          
+         
+            <?php 
+            $selecion__contador =  "SELECT  id_usuario,leido FROM notificaciones WHERE id_usuario = '{$_SESSION['id_usuario']}' AND leido = '0'";
+            $ejecutar__consulta__notificacion = mysqli_query($conexion__db__accent,$selecion__contador);
+            if( $total__comentarios = mysqli_num_rows($ejecutar__consulta__notificacion) > 0){ ?>
+            <span class="total__notificaciones"><?php echo $total__comentarios ?></span>
+            </a>
+          <?php  } ?>
+          
    <div>
    </div>
         <div class="containers">
@@ -133,9 +141,13 @@ if(!isset($_SESSION['id_usuario'])){
             </ul>
   </div>
 </div>
-          </div>
-        </div>
-   </div>
+  </div>
+ </div>
+          
+  </div>
+  </div>
+
+</div>
               
         </nav>
     </header>

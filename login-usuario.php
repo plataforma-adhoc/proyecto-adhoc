@@ -1,8 +1,9 @@
 <?php 
 $titulo = "AdHoc | Login usuario";
 include'layout/nabvar.php'?>
-
-<form class="formulario__registro" id="formulario-login">
+<h1 class="titulo__usuarios">Iniciar sesion</h1>
+<p class="texto__usuarios">Inicia sesion con tu cuenta para administrar la información de tu vehiculo</p>
+<form class="formulario__registro formulario__sesion" id="formulario-login">
     <div class="contenedor__formulario">
         <div class="grupo__inputs block" id="grupo__email">
         <label for="email"class="formulario__label">E-mail</label>   
@@ -20,7 +21,7 @@ include'layout/nabvar.php'?>
             <div class="contenedor__inputs">
                 <input type="password" placeholder="Tu contraseña" name="contrasena" id="contrasena" class="capturarDatos">
                 <label class="content-input">
-                     <input type="checkbox" name="Vehiculo" onclick="mostrar()" >Quiero ver mi contraseña
+                     <input type="checkbox" name="Vehiculo" onclick="mostrar()" >Ver contraseña
                     <i></i>
                      </label>
             </div>

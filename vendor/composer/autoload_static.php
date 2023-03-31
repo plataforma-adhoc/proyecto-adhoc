@@ -7,9 +7,9 @@ namespace Composer\Autoload;
 class ComposerStaticInit9cac7e5a99788ffd97fc9ff31d90f73c
 {
     public static $files = array (
-        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -21,7 +21,12 @@ class ComposerStaticInit9cac7e5a99788ffd97fc9ff31d90f73c
         ),
         'P' => 
         array (
+            'Psr\\Cache\\' => 10,
             'PhpOption\\' => 10,
+        ),
+        'M' => 
+        array (
+            'MercadoPago\\' => 12,
         ),
         'G' => 
         array (
@@ -30,6 +35,11 @@ class ComposerStaticInit9cac7e5a99788ffd97fc9ff31d90f73c
         'D' => 
         array (
             'Dotenv\\' => 7,
+            'Doctrine\\Persistence\\' => 21,
+            'Doctrine\\Deprecations\\' => 22,
+            'Doctrine\\Common\\Lexer\\' => 22,
+            'Doctrine\\Common\\Annotations\\' => 28,
+            'Doctrine\\Common\\' => 16,
         ),
     );
 
@@ -46,9 +56,21 @@ class ComposerStaticInit9cac7e5a99788ffd97fc9ff31d90f73c
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
+        'Psr\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/cache/src',
+        ),
         'PhpOption\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
+        ),
+        'MercadoPago\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mercadopago/dx-php/src/MercadoPago',
+            1 => __DIR__ . '/..' . '/mercadopago/dx-php/tests',
+            2 => __DIR__ . '/..' . '/mercadopago/dx-php/src/MercadoPago/Generic',
+            3 => __DIR__ . '/..' . '/mercadopago/dx-php/src/MercadoPago/Entities',
+            4 => __DIR__ . '/..' . '/mercadopago/dx-php/src/MercadoPago/Entities/Shared',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (
@@ -57,6 +79,27 @@ class ComposerStaticInit9cac7e5a99788ffd97fc9ff31d90f73c
         'Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
+        ),
+        'Doctrine\\Persistence\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/persistence/src/Persistence',
+        ),
+        'Doctrine\\Deprecations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/deprecations/lib/Doctrine/Deprecations',
+        ),
+        'Doctrine\\Common\\Lexer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/lexer/src',
+        ),
+        'Doctrine\\Common\\Annotations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
+        ),
+        'Doctrine\\Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/event-manager/src',
+            1 => __DIR__ . '/..' . '/doctrine/common/src',
         ),
     );
 

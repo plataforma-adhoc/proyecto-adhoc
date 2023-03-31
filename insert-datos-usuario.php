@@ -13,12 +13,10 @@ $nombre__usuario = mysqli_real_escape_string($conexion__db__accent,$_POST['nombr
 $primer__apellido =  mysqli_real_escape_string($conexion__db__accent,$_POST['primerApellido'] ? $_POST['primerApellido']:'');
 $segundo__apellido =  mysqli_real_escape_string($conexion__db__accent,$_POST['segundoApellido'] ? $_POST['segundoApellido'] : '');
 $email =  mysqli_real_escape_string($conexion__db__accent,$_POST['email'] ?  $_POST['email']: '');
-$documento =  mysqli_real_escape_string($conexion__db__accent,$_POST['documento'] ? $_POST['documento'] :'');
-$numero__telefono =  mysqli_real_escape_string($conexion__db__accent,$_POST['telefono'] ? $_POST['telefono'] :'');
 $contraseña = password_hash($_POST['contrasena'] ? $_POST['contrasena'] : '',PASSWORD_BCRYPT);
 
 
-if($nombre__usuario ==="" || $primer__apellido ==="" || $segundo__apellido ==="" || !is_numeric($documento) || $documento ==="" || !is_numeric($numero__telefono) || $numero__telefono ==="" || $contraseña ==="" ){
+if($nombre__usuario ==="" || $primer__apellido ==="" || $segundo__apellido ===""  || $contraseña ==="" ){
   echo json_encode('Los campos estan vacios o  hay datos incorrectos');
 }else{
   $consulta__usuario__registrado = "SELECT *  FROM usuarios   WHERE email = '$email' LIMIT 1";
@@ -26,12 +24,12 @@ if($nombre__usuario ==="" || $primer__apellido ==="" || $segundo__apellido ===""
   
   if(mysqli_num_rows($resultado__consulta) > 0){
     $fila = mysqli_fetch_array($resultado__consulta);
-    echo json_encode('Es imposible registar un nuevo usuario con ese email');
+    echo json_encode('No podemos registrar un nuevo usuario con ese E-mail');
     
   }else{
   
-    $insertar__datos = "INSERT INTO usuarios (nombre_usuario, primer_apellido, segundo_apellido, email, numero_documento, numero_telefono, contrasena) 
-    VALUES ('$nombre__usuario', '$primer__apellido', '$segundo__apellido', '$email', '$documento', '$numero__telefono', '$contraseña')";
+    $insertar__datos = "INSERT INTO usuarios (nombre_usuario, primer_apellido, segundo_apellido, email, contrasena) 
+    VALUES ('$nombre__usuario', '$primer__apellido', '$segundo__apellido', '$email',  '$contraseña')";
     $resultado = mysqli_query($conexion__db__accent,$insertar__datos);
     if($resultado){
       session_start();
@@ -47,7 +45,7 @@ if($nombre__usuario ==="" || $primer__apellido ==="" || $segundo__apellido ===""
     $contenido__mensaje = ' <h1>Hola '.$fila__datos['nombre_usuario'] .'<br> </h1>';
     $contenido__mensaje .='<p> Parece que acabas de unirte a Adhoc </p>';
     $contenido__mensaje .='<p> Te damos la bienvenida a nuestra plataforma </p>';
-    $contenido__mensaje .='<p>Esperamos que la disfrutes .<br></p>';
+    $contenido__mensaje .='<p>Esperamos que la disfrutes y tu carro se venda en el menor tiempo posible.<br></p>';
     $contenido__mensaje .='<p>Equipo de Adhoc  <br></p>';
    
   
@@ -64,7 +62,7 @@ if($nombre__usuario ==="" || $primer__apellido ==="" || $segundo__apellido ===""
         $mail->Port       = 587;  
                                
         //Recipients
-        $mail->setFrom('soporteadhoc@outlook.com', 'Ad Hoc ');
+        $mail->setFrom('soporteadhoc@outlook.com', 'AdHoc ');
         $mail->addAddress($email,$fila__datos['nombre_usuario'] );                  
         // $mail->addAttachment('./img/logo__accent.png');
     
@@ -83,7 +81,7 @@ if($nombre__usuario ==="" || $primer__apellido ==="" || $segundo__apellido ===""
   }
   
     }else{
-      echo json_encode('no');
+      // echo json_encode('no');
     }
     
     }

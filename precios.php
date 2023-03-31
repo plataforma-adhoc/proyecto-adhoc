@@ -18,7 +18,7 @@ include'layout/nabvar.php'; ?>
     <p class="card-text"><i class="far fa-check-circle"></i> Tu anuncio estara en las primeras paginas por el tiempo que dure tu prueba </p>
     <p class="card-text"><i class="far fa-times-circle"></i> Tu vehiculo dejara de estar en circulación cuando se cumpla tu prueba  </p>
     <p class="card-text"><i class="far fa-check-circle"></i> Mide el rendimiento de tu anuncio </p>
-
+    <p class="card-text"><i class="far fa-check-circle"></i> Publicalo gratis por 30 dias sin costo alguno sin tarjeta de crédito o débito</p>
   </div>
   <br>
 </div>
