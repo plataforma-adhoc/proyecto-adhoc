@@ -45,7 +45,7 @@ include'layout/footer-home.php';
         event.preventDefault();
         let url__servidor  = 'https://adhoc.com.co/'
         let form__data =  new FormData(document.getElementById('formulario-respuesta'))
-        fetch(url__servidor+'insert-respuesta',{
+        fetch('insert-respuesta',{
             method:'POST',
             body:form__data
         }).then(respuesta =>  respuesta.json())

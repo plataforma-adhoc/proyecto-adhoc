@@ -154,7 +154,7 @@ let url__servidor  = 'https://adhoc.com.co/'
       ciudad_venta: "<?php if(isset($ciudad_venta)){echo $ciudad_venta; }?>",
       propietario: "<?php if(isset($propietario)){echo $propietario; }?>" ,
       kilometros: "<?php if(isset($kilometros)){echo $kilometros; }?>",
-      numero_puertas:"<?php if(isset($puertas)){echo $puertas; }?>",
+      numero_puertas:"<?php if(isset($puertas)){echo $puertas; }?>" ,
       precio:"<?php if(isset($precio_vehiculo)){echo $precio_vehiculo; }?>",
       tipo_combustible: "<?php if(isset($combustible)){echo $combustible; }?>" ,
       caja: "<?php if(isset($caja)){echo $caja; }?>",

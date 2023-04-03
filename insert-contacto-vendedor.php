@@ -14,15 +14,5 @@ $datos__de__contacto = $_SESSION['datos-contacto'] = $datos__contato;
 if($datos__contato){
 echo json_encode('ok');
 }
-// $insertar__contacto__vendedor = "INSERT INTO contacto__vendedor(id_usuario,whatsapp_1,whatsapp_2,telefono_1,telefono_2,estado_anuncio)
-// VALUES('$id__usuario','$Whatsapp__uno','$Whatsapp__dos','$telefono__uno','$telefono__dos','$estado__anuncio')";
 
-// $ejecutar__consulta = mysqli_query($conexion__db__accent,$insertar__contacto__vendedor);
-
-// if($ejecutar__consulta){
-// echo json_encode('ok');
-// }else{
-// echo json_encode('error');
-
-// }
 ?>

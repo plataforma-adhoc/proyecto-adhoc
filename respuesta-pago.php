@@ -269,7 +269,7 @@ if(isset($_SESSION['datos-imagenes'])){
                 .then(res => {
                   if (res === 'ok') {
                     console.log(res);
-            
+                    location.reload()
                   } 
                 })
                 .catch(error => {

@@ -87,7 +87,7 @@ if(isset($_SESSION['datos-imagenes'])){
   <br><br>
   <img src="./img/en__proceso.png" alt="sin tarjeta de credito" class="img__respuesta__pago"> 
   <h2 class="titulo__respuesta__pago">Tu transacción está pendiente</h2>
-  <p  class="texto__respuesta__pago">La solicictud de pago esta pendiente esperando por el pago en el punto fisico,  activaremos el anuncio cuando el pago se haga efectivo</p>
+  <p  class="texto__respuesta__pago">La solicictud de pago está pendiente,  activaremos el anuncio cuando el pago se haga efectivo</p>
   <!-- <header id="main-header" style="margin-top:20px" class="contenedor___respuesta__epayco">
     <div class="row container">
       <div class="col-lg-12 franja">

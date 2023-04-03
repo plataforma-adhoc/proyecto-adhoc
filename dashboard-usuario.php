@@ -4,14 +4,10 @@ if(!isset($_SESSION['id_usuario'])){
   header("Location: login-usuario");
   die();
 }
-
-
     $consulta__datos__usuario = "SELECT *  FROM usuarios   WHERE id_usuario = '{$_SESSION['id_usuario']}' LIMIT 1";
     $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos__usuario);
     if(mysqli_num_rows($resultado__consulta) > 0){
       $datos__resultado = mysqli_fetch_array($resultado__consulta);
-    
-
 }?>
 
 
@@ -27,7 +23,6 @@ if(!isset($_SESSION['id_usuario'])){
             <div class="contenido">
               <div>
               <i class="fas fa-car historial__de__vehiculos"></i>
-
               </div>
               <div>
                 <br>
@@ -101,7 +96,7 @@ if(!isset($_SESSION['id_usuario'])){
 <br><br>
 </div>
 
-<div class="modal fade modal__notificaciones" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade modal__notificaciones" id="modal-notificaciones" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-fullscreen ">
     <div class="modal-content ">
       <div class="modal-header">

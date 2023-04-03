@@ -12,17 +12,20 @@
 .enlaces__varios{
 display: flex;
 align-items: center;
+justify-content: space-between;
+
 }
 
 .enlace__perfil__usuario{
   text-decoration: 0;
   margin: -10px 10px  0 0;
 
+
 }
 .enlace__notificaciones{
   margin: -10px 10px  0 0;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-decoration: 0;
 }
 .enlace__notificaciones:hover{
@@ -50,6 +53,7 @@ height: 30px;
 border-radius: 50px;
 border: solid 2px $color__verde;
 margin-left: -10px;
+margin-top: -10px;
 }
 
 .item__nombre{
@@ -370,6 +374,9 @@ margin-right: 5px;
   @media screen and (max-width: 400px) {
     .contenedor__dashboard{
       margin-top: -600px;
+    }
+    .contenido__card__dashboard{
+      width: 100%;
     }
    
   }

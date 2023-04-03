@@ -87,8 +87,9 @@ $fila__contacto = mysqli_fetch_array($ejecutar__consulta__contacto);
           <?php  if($fila__contacto['telefono_2'] != NULL){ ?>
           <p class="telefono"><i class="fas fa-mobile"></i> <?php echo $fila__contacto['telefono_2']  ?></p>
          <?php } ?>
-            <a href="https://api.whatsapp.com/send?phone=numero<?php  echo $fila__contacto['whatsapp_1']  ?>&text=mensaje=Hola vi el anuncio de tu vehiculo en AdHoc" class="enlace__whatsapp" target="_blank" onclick="guardar__click__contacto(<?php echo $fila['id_usuario'] ?>,<?php echo $fila['id_publicacion_vehiculo'] ?>)"><i class="fab fa-whatsapp"></i> Habla con el vendedor</a>
+            <a href="https://api.whatsapp.com/send?phone=numero<?php  echo $fila__contacto['whatsapp_1']  ?>&text=mensaje=Hola vi el anuncio de tu vehiculo en AdHoc" class="enlace__whatsapp__detalles" target="_blank" onclick="guardar__click__contacto(<?php echo $fila['id_usuario'] ?>,<?php echo $fila['id_publicacion_vehiculo'] ?>)"><i class="fab fa-whatsapp"></i> Contactar al vendedor</a>
        </div>
+       <br>
     </div>
     <script>
   function guardar__click__contacto(usuario,publicacion){
@@ -149,7 +150,7 @@ $fila__contacto = mysqli_fetch_array($ejecutar__consulta__contacto);
       <div class="info__caracteristicas">
         <p class="texto__caracteristicas"><img src="./img/matricula.png" class="iconos__caracteristicas"/> Matricula </p>
         <p class="respuesta__caracteristicas">
-            <?php echo  $fila['matricula_del_vehiculo'];   echo  ucwords($fila['ciudad_registro_matricula'])  ?>
+        <?php echo  $fila['matricula_del_vehiculo'];   echo  ucwords($fila['ciudad_registro_matricula'])  ?>
         </p>
        
       </div>

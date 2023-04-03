@@ -1,11 +1,12 @@
-<?php    include'layout/nav-home-usuario.php';
-       include'config/config.php'; 
-  include'conexion-db-accent.php'; 
+<?php    
+include'layout/nav-home-usuario.php';
+include'config/config.php'; 
+include'conexion-db-accent.php'; 
 $informacion__obligatoria = $_SESSION['datos-obligatorios'];
 $info__adicional = $_SESSION['info-adicional'];
 $datos__de__contacto = $_SESSION['datos-contacto'];
 $datos__imagenes = $_SESSION['datos-imagenes'];
-  ?>
+?>
 <div class="container contenedor__respuesta__pago">
   <br><br>
   <img src="./img/pago__cancelado.png" alt="sin tarjeta de credito" class="img__respuesta__pago"> 
@@ -113,23 +114,17 @@ $datos__imagenes = $_SESSION['datos-imagenes'];
           //Transaccion Rechazada
           if (response.data.x_cod_response == 2) {
             console.log('transacción rechazada');
-            <?php  
-              unset($_SESSION['datos-obligatorios']);
-              unset($_SESSION['info-adicional']);
-              unset($_SESSION['datos-contacto']);
-              unset($_SESSION['datos-imagenes']);
+            fetch('pago-cancelado', { method: 'POST' })
+                .then(res => {
+                  if (res === 'ok') {
+                    console.log(res);
             
-              $dir = 'upload/';
-              $files = scandir($dir, SCANDIR_SORT_DESCENDING); // Obtener lista de archivos en orden cronológico inverso
-              $deleteCount = 10; // Número de imágenes a eliminar
-
-              for ($i = 0; $i < $deleteCount; $i++) {
-                  $file = $dir . $files[$i];
-                  if (is_file($file)) {
-                      unlink($file); // Eliminar archivo
-                  }
-              }
-              ?>
+                  } 
+                })
+                .catch(error => {
+                  alert('Error al enviar la petición: ', error);
+                });
+           
 
           }
           //Transaccion Pendiente

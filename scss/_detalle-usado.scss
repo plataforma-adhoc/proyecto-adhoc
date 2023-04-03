@@ -238,7 +238,7 @@ color: $color__adhoc;
 
 .respuesta__caracteristicas{
     color: $color__gris;
-    margin-left: 40px;
+    margin-left: 25px;
     margin-top: -10px;
 }
 
@@ -257,6 +257,16 @@ color: $color__adhoc;
 .telefono i{
     color: white;
     font-size: 25px;
+}
+.enlace__whatsapp__detalles{
+  text-decoration: 0;
+  background: #000;
+  text-align: center;
+  color: $color__adhoc;
+  border-radius: 10px;
+  padding: 10px;
+  width: 250px;
+  display: inline-block;
 }
 .contenedor__imagen__no__disponible{
     width: 30%;

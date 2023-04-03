@@ -34,18 +34,6 @@ if($informacion__obligatoria){
     echo json_encode('ok');
 }
 
-// $insertar__datos__obligatorio = "INSERT INTO  informacion__del__vehiculo__en__venta(nombre_vendedor,foto_vendedor,id_usuario,marca_del_vehiculo,modelo_vehiculo,color_vehiculo,anio_fabricacion,matricula_del_vehiculo,ciudad_registro_matricula,ciudad_de_venta,unico_propietario,kilometros_del_vehiculo,
-// precio_del_vehiculo,numero_puertas,tipo_combustible,tipo_de_caja,tipo_de_direccion,cilindraje_vehiculo,descripcion_vehiculo,estado_anuncio)
-// VALUES('$nombre__usuario','$avatar','$id__usuario','$marca','$modelo','$color','$fecha__fabricacion','$matricula','$ciudad__matricula','$ciudad__venta','$propietario','$kilometros',
-// '$precio__vehiculo','$puertas','$combustible','$caja','$direccion','$cilindraje','$descripcion','$estado__anuncio')";
-
-// $ejecutar__consulta = mysqli_query($conexion__db__accent,$insertar__datos__obligatorio);
-// if($ejecutar__consulta){
-//     echo  json_encode('ok');
-  
-// }
-
-
 
 
 ?>

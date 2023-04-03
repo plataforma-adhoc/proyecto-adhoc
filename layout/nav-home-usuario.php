@@ -69,26 +69,27 @@ if(!isset($_SESSION['id_usuario'])){
                 <div class="logo">
                     <a href="dashboard-usuario"><img src="./img/logo.png" alt="" class="logo__accent logo__home"></a>
                 </div>
-       
-        
                  <div class="enlaces__varios">
-                   <a href="perfil-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__perfil__usuario"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"></a>
-                   <a href="#"class="enlace__notificaciones"  data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-bell"></i>
-          
-         
+                 <div>
+                    <a href="#"class="enlace__notificaciones"  data-bs-toggle="modal" data-bs-target="#modal-notificaciones"><i class="fas fa-bell"></i>
+                 
             <?php 
-            $selecion__contador =  "SELECT  id_usuario,leido FROM notificaciones WHERE id_usuario = '{$_SESSION['id_usuario']}' AND leido = '0'";
+            $selecion__contador =  "SELECT  id_usuario,leido FROM notificaciones WHERE id_usuario = '{$_SESSION['id_usuario']}' AND leido = '0' ";
             $ejecutar__consulta__notificacion = mysqli_query($conexion__db__accent,$selecion__contador);
             if( $total__comentarios = mysqli_num_rows($ejecutar__consulta__notificacion) > 0){ ?>
             <span class="total__notificaciones"><?php echo $total__comentarios ?></span>
             </a>
           <?php  } ?>
-          
+          </div>
+                  <div>
+                    <a href="perfil-usuario?idu=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__perfil__usuario"><img src="upload/<?php  echo $datos__resultado['avatar'] ?>" alt="" class="avatar__perfil"></a>
+                  </div>
+              
    <div>
    </div>
         <div class="containers">
             <label class="btn btn-open" for="nav" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fab fa-creative-commons-nd"></i></label>
-          <input type="checkbox" id="nav" class="nav-opener" />
+          <!-- <input type="checkbox" id="nav" class="nav-opener" /> -->
           <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasScrollingLabel">MENU</h5>
@@ -149,11 +150,9 @@ if(!isset($_SESSION['id_usuario'])){
 
 </div>
               
-        </nav>
-    </header>
+</nav>
+ </header>
   
-         
-                <?php  mysqli_close($conexion__db__accent)?>
-        </div>
-
+<?php  mysqli_close($conexion__db__accent)?>
+</div>
     </div>

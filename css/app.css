@@ -2132,6 +2132,7 @@ template {
 .enlaces__varios {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .enlace__perfil__usuario {
@@ -2142,7 +2143,7 @@ template {
 .enlace__notificaciones {
   margin: -10px 10px 0 0;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-decoration: 0;
 }
 
@@ -2173,6 +2174,7 @@ template {
   border-radius: 50px;
   border: solid 2px #008A55;
   margin-left: -10px;
+  margin-top: -10px;
 }
 
 .item__nombre {
@@ -2481,6 +2483,9 @@ template {
 @media screen and (max-width: 400px) {
   .contenedor__dashboard {
     margin-top: -600px;
+  }
+  .contenido__card__dashboard {
+    width: 100%;
   }
 }
 .contenedor__datos__perfil {
@@ -4578,7 +4583,7 @@ template {
 
 .respuesta__caracteristicas {
   color: gray;
-  margin-left: 40px;
+  margin-left: 25px;
   margin-top: -10px;
 }
 
@@ -4596,6 +4601,17 @@ template {
 .telefono i {
   color: white;
   font-size: 25px;
+}
+
+.enlace__whatsapp__detalles {
+  text-decoration: 0;
+  background: #000;
+  text-align: center;
+  color: #FFFD16;
+  border-radius: 10px;
+  padding: 10px;
+  width: 250px;
+  display: inline-block;
 }
 
 .contenedor__imagen__no__disponible {

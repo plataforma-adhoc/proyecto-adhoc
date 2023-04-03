@@ -1,13 +1,11 @@
 export function insertar__comentarios(){
     let formulario__comentario = document.getElementById('formulario-comentario');
-    if(formulario__comentario){
-
-    
+    if(formulario__comentario){ 
     formulario__comentario.addEventListener('submit', function(event){
       var url__servidor = 'https://adhoc.com.co/'
         event.preventDefault();
         let form__data =  new FormData(document.getElementById('formulario-comentario'))
-        fetch(url__servidor+'insert-comentarios',{
+        fetch('insert-comentarios',{
             method:'POST',
             body:form__data
         }).then(respuesta =>  respuesta.json())
@@ -24,7 +22,7 @@ export function insertar__comentarios(){
  export function mostrar__comentario(){  
         let form__data =  new FormData(document.getElementById('formulario-comentario'))  
         var url__servidor = 'https://adhoc.com.co/'
-        fetch(url__servidor+'mostrar-comentarios',{
+        fetch('mostrar-comentarios',{
             method:'POST',
             body:form__data
         }).then(respuesta =>  respuesta.json())
