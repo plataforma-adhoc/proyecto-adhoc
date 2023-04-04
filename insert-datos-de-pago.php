@@ -1,5 +1,5 @@
 <?php
-function actualizar__estado__anuncio(){
+function actualizarEstadoAnuncio(){
     include'conexion-db-accent.php';
     $data = file_get_contents('php://input');
         $data = json_decode($data);   
@@ -36,7 +36,7 @@ if($ejecutar__actualizacion && $ejecutar__actualizacion__contacto && $ejecutar__
 && $ejecutar__actualizacion__informacion && $ejecutar__actualizacion__seguridad ){
 echo json_encode('ok');
 }else{
-echo json_encode('no se pudo acatualizar');
+echo json_encode('no se pudo actualizar la informacion');
 
 }
 }else{
@@ -45,5 +45,5 @@ echo json_encode('no se pudo acatualizar');
   </script>');  
 }
 }
-actualizar__estado__anuncio();
+actualizarEstadoAnuncio();
 ?>

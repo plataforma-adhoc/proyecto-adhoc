@@ -2,7 +2,6 @@
 
 include'layout/nav-home-usuario.php';
 include'conexion-db-accent.php'; 
-
 $id__usuario = isset($_GET['idu']) ? $_GET['idu']:'';
 if($id__usuario){
 date_default_timezone_set('America/Bogota');
@@ -10,11 +9,6 @@ setlocale(LC_ALL,"es_ES");
 setlocale(LC_TIME,"es_ES.UTF-8");
 ?>
 <section class="container contenedor__mis__carros__anunciados">
-  <?php  
-   
-    // SELECCIONANDO LA FECHA DE VENCIMIENTO DEL PLAN GRATUITO
-
-  ?>
 <br><br>
     <div class="contenido__historial" id="contenido-historial"> 
     <?php  
@@ -98,8 +92,9 @@ $salida =  $calculando__fecha / 86400;
 
 if($salida > 30){ ?>
  <script>
-  function actualizar__estdo__del__anuncio(){
-      fetch('insert-estado-anuncio-vencido',{
+  function actualizarEstadoAnuncio(){
+    var url__servidor = 'https://adhoc.com.co/'
+      fetch(url__servidor+'insert-estado-anuncio-vencido',{
      method:'POST',
      body: JSON.stringify({
     id__usuario: <?php echo $_SESSION['id_usuario']; ?>
@@ -114,8 +109,8 @@ if($salida > 30){ ?>
     })
   }
   
-    document.addEventListener('DOMContentLoaded', function() {
-  setInterval(actualizar__estdo__del__anuncio,  24 * 60 * 60 * 1000)
+  document.addEventListener('DOMContentLoaded', function() {
+  setInterval(actualizarEstadoAnuncio,  24 * 60 * 60 * 1000)
   console.log('actualizando estado')
     })
  </script>
@@ -139,19 +134,14 @@ if($salida > 30){ ?>
   </div>
 
 </div>
-
-   
-       <td class="fila__tabla"><?php  echo $fila__resultado['nombre_paquete'] ?></td>
+ <td class="fila__tabla"><?php  echo $fila__resultado['nombre_paquete'] ?></td>
       <td class="fila__tabla">
       <a href="editar-info-vehiculo?idu=<?php echo $id__usuario  ?>&idp=<?php  echo $fila__resultado['id_publicacion_vehiculo'] ?>" class="enlace__editar"> Editar <i class="far fa-edit"></i></a>
     <br>
       <a href="#" class="enlace__eliminar" data-bs-toggle="modal" data-bs-target="#exampleModal" id="eliminar" data-bs-id="<?php  echo $fila__resultado['id_publicacion_vehiculo']  ?>" > Borrar <i class="fas fa-trash-alt"></i></a>
        
       </td>
-
-
     </tr>
-
   </tbody>
 </table>
 </div>
@@ -214,18 +204,10 @@ if($salida > 30){ ?>
     </div>
   </div>
 </div>
-
-
-
 </section>
 
-
 <?php include'layout/footer-home.php' ?>
-
 <script>
-
-
-
 let desactivar__anuncio =  document.getElementById('exampleModal2');
  desactivar__anuncio.addEventListener('show.bs.modal',function(event){
 let boton = event.relatedTarget;

@@ -1,5 +1,5 @@
 <?php
-function cerrar__sesion(){
+function logout(){
     session_start();
     include'conexion-db-accent.php';
     $id__usuario = isset($_GET['id']) ? $_GET['id']: '';
@@ -10,12 +10,7 @@ function cerrar__sesion(){
 
     }else{
         header('Location: login-usuario');
-        
-
     }
-    
-
 }
-
-cerrar__sesion();
+logout();
 ?>

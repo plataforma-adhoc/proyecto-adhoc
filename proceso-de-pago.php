@@ -92,9 +92,8 @@ if($id__paquete && $id__usuario && $id__estilos && $id__contacto && $id__equipam
 <script>
  
 
-function otros__medios__de__pago(){
+function formasDePago(){
 var medios__de__pago = document.getElementById('otros-medios-de-pago')
-
 if(medios__de__pago){
 medios__de__pago.addEventListener('click',function(){
 var  handler = ePayco.checkout.configure({
@@ -139,7 +138,7 @@ var  handler = ePayco.checkout.configure({
         }  
         }
         
-otros__medios__de__pago();
+        formasDePago();
 
 function generateRandomString() {
   var chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';

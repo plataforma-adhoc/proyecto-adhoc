@@ -1,4 +1,5 @@
 <?php
+function InsertarComentarios(){
  include'conexion-db-accent.php';
 $id__publicacion =  isset($_POST['id-publicacion']) ? $_POST['id-publicacion'] : '';
 $id__usuario =  isset($_POST['id-usuario']) ? $_POST['id-usuario'] : '';
@@ -17,6 +18,6 @@ if( $id__publicacion != ""  &&  $caja__texto !="" && $id__usuario !=""){
 }else{
 
 }
-
+}
 ?>
 

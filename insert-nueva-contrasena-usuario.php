@@ -1,6 +1,6 @@
 <?php   
 
-function actualizar__contrasena(){
+function actualizarContrasena(){
 include'conexion-db-accent.php';
 $nueva__contrasena =$_POST['nuevaContrasena'] ? $_POST['nuevaContrasena']:'';
 $contrasena__encryptada = password_hash($nueva__contrasena,PASSWORD_BCRYPT);
@@ -20,5 +20,5 @@ if($actualizar__contrasena){
 }
 }
 
-actualizar__contrasena();
+actualizarContrasena();
 ?>

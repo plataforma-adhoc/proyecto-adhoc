@@ -22,7 +22,7 @@ export function insertar__comentarios(){
  export function mostrar__comentario(){  
         let form__data =  new FormData(document.getElementById('formulario-comentario'))  
         var url__servidor = 'https://adhoc.com.co/'
-        fetch('mostrar-comentarios',{
+        fetch(url__servidor+'mostrar-comentarios',{
             method:'POST',
             body:form__data
         }).then(respuesta =>  respuesta.json())

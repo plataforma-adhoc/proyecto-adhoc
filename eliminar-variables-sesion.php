@@ -1,4 +1,5 @@
 <?php
+function eliminarVariablesDeSesion(){
 session_start();
 unset($_SESSION['datos-obligatorios']);
 unset($_SESSION['info-adicional']);
@@ -12,5 +13,6 @@ if (!isset($_SESSION['datos-obligatorios']) &&
   echo json_encode('ok');
 } else {
   echo 'Error al eliminar las variables de sesión';
+}
 }
 ?>

@@ -1,7 +1,6 @@
 <?php
 include'layout/nav-home-usuario.php';
 include'conexion-db-accent.php'; 
-
 $id__usuario = isset($_GET['idu']) ? $_GET['idu']:'';
 $id__publicacion = isset($_GET['idp']) ? $_GET['idp']:'';
 if($id__usuario && $id__publicacion){

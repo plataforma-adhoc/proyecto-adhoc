@@ -102,7 +102,6 @@ $id__seguridad = isset($_GET['id_seguridad'])? $_GET['id_seguridad']: ''; ?>
 
 
         if (response.success) {
-
           if (response.data.x_cod_response == 1) {
             let url__servidor  = 'https://adhoc.com.co/' 
             //Codigo personalizado

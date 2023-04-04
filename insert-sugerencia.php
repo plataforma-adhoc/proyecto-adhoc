@@ -1,5 +1,5 @@
 <?php
-function insert__sugerencias(){
+function insertarSugerencias(){
     include'conexion-db-accent.php';
     $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
     $email = isset($_POST['email']) ? $_POST['email'] : '';
@@ -16,10 +16,7 @@ function insert__sugerencias(){
           echo json_encode('true');
         }
     }
-
 }
-
-
-insert__sugerencias();
+insertarSugerencias();
 
 

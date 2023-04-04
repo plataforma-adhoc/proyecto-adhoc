@@ -1,4 +1,5 @@
 <?php
+function insertarInfoPlanGratis(){
   include'conexion-db-accent.php';  
   $id__usuario =  isset($_POST['id-usuario']) ? $_POST['id-usuario'] : '';
   $nombre__pagador = isset($_POST['nombre-pagador']) ? $_POST['nombre-pagador'] : '';
@@ -34,4 +35,6 @@ $ejecutar__actualizacion__fotos && $ejecutar__actualizacion__informacion && $eje
 }
 
 mysqli_close($conexion__db__accent);
+}
+insertarInfoPlanGratis();
 ?>

@@ -10,8 +10,6 @@ if(!isset($_SESSION['id_usuario'])){
       $datos__resultado = mysqli_fetch_array($resultado__consulta);
 }?>
 
-
-
 <div class="container contenedor__dashboard">
     <h2 class="vista__nombre__usuario"><i class="fas fa-user-astronaut"></i> Hola, <strong> <?php echo ucwords($datos__resultado['nombre_usuario'])?></strong></h2>
     <br><br>

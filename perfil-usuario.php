@@ -1,18 +1,13 @@
-<?php   include'layout/nav-home-usuario.php';
+<?php   
+include'layout/nav-home-usuario.php';
 include'conexion-db-accent.php';
-
 $id__usuario = isset($_GET['idu']) ? $_GET['idu']:'';
 if($id__usuario ===""){
   header("Location: dashboard-usuario");
   exit;
-}
+}?>
 
-
-
-
-?>
-
-    <div class="contenedor__subtitulo__ad__panel">
+<div class="contenedor__subtitulo__ad__panel">
 </div>
 <div class="otros__datos__de__perfil">
   

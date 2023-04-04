@@ -1,4 +1,5 @@
-<?php include'layout/nav-home-usuario.php';
+<?php
+include'layout/nav-home-usuario.php';
 include'conexion-db-accent.php'; 
 $id__usuario = isset($_GET['id_usuario'])? $_GET['id_usuario']: '';
 $id__estilos = isset($_GET['id_diseño'])? $_GET['id_diseño']: '';
@@ -54,9 +55,7 @@ if($id__usuario && $id__estilos && $id__contacto && $id__equipamiento && $id__fo
 <?php  }else{ 
   echo '<script>alert("Error al procesar la solicitud")
   location.href="mis-carros-anunciados?idu='.  $id__usuario .'";
-  
   </script>'
-  
   ?>
 
   <?php  } ?>

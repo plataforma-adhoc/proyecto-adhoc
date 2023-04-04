@@ -3,7 +3,6 @@ include'layout/nabvar.php';
   include'conexion-db-accent.php';
  $email =  $_GET['email'] ? $_GET['email']: '';
  $token =  $_GET['token'] ? $_GET['token']: '';
-
  if($email ==="" || $token === ''){
   header('Location: password-usuario');
  }else{
@@ -13,16 +12,11 @@ include'layout/nabvar.php';
    if(!$resultado__consulta){
      header('Location: password-usuario');
      die();
-   }else{
-     
+   }else{ 
      $contrasena = password_hash($resultado__consulta['clave__nueva'],PASSWORD_BCRYPT);
      $actualizar__contrasena = mysqli_query($conexion__db__accent,"UPDATE usuarios SET contrasena = '$contrasena' WHERE email = '$email' LIMIT 1");
-     
-     
      $eliminar__solicitud = mysqli_query($conexion__db__accent,"DELETE  FROM recuperar__contrasena__usuario WHERE email ='$email'");
-
    }
-
  } ?>
 
 <div class="conatiner contenedor__actualizacion">

@@ -1,4 +1,5 @@
-<?php  
+<?php 
+function insertarNewsletterBlog(){
 include'conexion-db-accent.php';  
 $email = isset($_POST['email']) ? $_POST['email']: '';
 if($email){
@@ -16,4 +17,6 @@ if($email){
 
  }
 }  
+}
+insertarNewsletterBlog();
 ?>

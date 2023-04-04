@@ -150,6 +150,7 @@ export function actualizar__seguridad(){
 
 
 export function actualizar__informacion__contacto(){
+  var url__servidor = 'https://adhoc.com.co/'
     let form__actualizar__info__vehiculo = document.getElementById('form-actaulizar-contactos')
     if(form__actualizar__info__vehiculo){
           form__actualizar__info__vehiculo.addEventListener('submit',function(evento){

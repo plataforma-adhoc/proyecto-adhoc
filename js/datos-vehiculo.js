@@ -3,47 +3,11 @@
 export function datos__obligatorios__del__vehiculo(){
   var url__servidor = 'https://adhoc.com.co/'
     let formulario__datos__obligatorios = document.getElementById('formulario-datos-basicos-vehiculo')
-  //   let activar__btn = document.getElementById('activar-btn');
-  //   if(formulario__datos__obligatorios){
-  //     formulario__datos__obligatorios.addEventListener('submit',function(evento){
-  //       evento.preventDefault()  
-  //   const datos__obligatorios = {
-  //                 marca :formulario__datos__obligatorios.querySelector('[name="marca"]').value,
-  //                   modelo:formulario__datos__obligatorios.querySelector('[name="modelo"]').value,
-  //                   color:formulario__datos__obligatorios.querySelector('[name="color"]').value,
-  //                   fechaFabricacion:formulario__datos__obligatorios.querySelector('[name="fechaFabricacion"]').value,
-  //                   matricula:formulario__datos__obligatorios.querySelector('[name="matricula"]').value,
-  //                   ciudad__matricula:formulario__datos__obligatorios.querySelector('[name="ciudad-matricula"]').value,
-  //                   ciudad__venta:formulario__datos__obligatorios.querySelector('[name="ciudad-venta"]').value,
-  //                   propietario:formulario__datos__obligatorios.querySelector('[name="propietario"]').value,
-  //                   kilometros:formulario__datos__obligatorios.querySelector('[name="kilometros"]').value,
-  //                   precio__vehiculo:formulario__datos__obligatorios.querySelector('[name="precio-vehiculo"]').value,
-  //                    puertas:formulario__datos__obligatorios.querySelector('[name="puertas"]').value,
-  //                    combustible:formulario__datos__obligatorios.querySelector('[name="combustible"]').value,
-  //                   caja:formulario__datos__obligatorios.querySelector('[name="caja"]').value,
-  //                   direccion__vehiculo:formulario__datos__obligatorios.querySelector('[name="direccion-vehiculo"]').value,
-  //                   cilindraje:formulario__datos__obligatorios.querySelector('[name="cilindraje"]').value,
-  //                   descripcion:formulario__datos__obligatorios.querySelector('[name="descripcion"]').value
-  //   }
-  //   localStorage.setItem('datosObligatorios', JSON.stringify(datos__obligatorios));
-  //   const obtener__datos = JSON.parse(localStorage.getItem('datosObligatorios'));
-  //  if(obtener__datos && obtener__datos.marca && obtener__datos.modelo && obtener__datos.fechaFabricacion && obtener__datos.matricula && obtener__datos.ciudad__matricula &&
-  //   obtener__datos.ciudad__venta && obtener__datos.propietario && obtener__datos.kilometros && obtener__datos.precio__vehiculo && obtener__datos.puertas &&
-  //   obtener__datos.combustible && obtener__datos.caja && obtener__datos.direccion__vehiculo && obtener__datos.cilindraje && obtener__datos.descripcion){
-  //     let button =  document.getElementById('button');
-  //     button.innerHTML = ` 
-  //     <button type="button" class="step__button step__button--next" data-to_step="2"data-step="1">Siguiente</button> 
-  //     `
-  //     activar__btn.style.display = 'none';
- 
-  //  }
-
-  //     })
      if(formulario__datos__obligatorios){
        formulario__datos__obligatorios.addEventListener('submit',function(evento){
         let form__data = new FormData(document.getElementById('formulario-datos-basicos-vehiculo'))
         evento.preventDefault()
-         fetch('insert-datos-obligatorios-vehiculo',{
+         fetch(url__servidor+'insert-datos-obligatorios-vehiculo',{
             method:'POST',
             body:form__data
          }).then(respuesta => respuesta.json())
@@ -69,61 +33,12 @@ export function datos__obligatorios__del__vehiculo(){
 
 export function informacion__adicional__vehiculo(){
   var url__servidor = 'https://adhoc.com.co/'
-
-//     let informacion__adicional__vehiculo =  document.querySelector('.formulario__info__adicional');
-//     let btn__info =  document.getElementById('button-info');
-//     if(btn__info){
-//       btn__info.addEventListener('click',function(evento){
-//         evento.preventDefault();
-//         const info__adicional = {
-//           airbag__delatero :informacion__adicional__vehiculo.querySelector('[name="airbag-delatero"]').value,
-//           airbag__trasero:informacion__adicional__vehiculo.querySelector('[name="airbag-trasero"]').value,
-//           alarma:informacion__adicional__vehiculo.querySelector('[name="alarma"]').value,
-//           bloqueo__central:informacion__adicional__vehiculo.querySelector('[name="bloqueo-central"]').value,
-//           control__ascenso:informacion__adicional__vehiculo.querySelector('[name="control-ascenso"]').value,
-//           control__descenso:informacion__adicional__vehiculo.querySelector('[name="control-descenso"]').value,
-//           sensores__delateros:informacion__adicional__vehiculo.querySelector('[name="sensores-delateros"]').value,
-//           sensor__reversa:informacion__adicional__vehiculo.querySelector('[name="sensor-reversa"]').value,
-//           sensor__punto__ciego:informacion__adicional__vehiculo.querySelector('[name="sensor-punto-ciego"]').value,
-//           camara__reversa:informacion__adicional__vehiculo.querySelector('[name="camara-reversa"]').value,
-//           aire__acondicionado:informacion__adicional__vehiculo.querySelector('[name="aire-acondicionado"]').value,
-//           andorid__auto:informacion__adicional__vehiculo.querySelector('[name="andorid-auto"]').value,
-//           apple__car__play:informacion__adicional__vehiculo.querySelector('[name="apple-car-play"]').value,
-//           bluetoot:informacion__adicional__vehiculo.querySelector('[name="bluetoot"]').value,
-//           espejos__electricos:informacion__adicional__vehiculo.querySelector('[name="espejos-electricos"]').value,
-//           exploradoras:informacion__adicional__vehiculo.querySelector('[name="exploradoras"]').value,
-//           vidrios__electricos:informacion__adicional__vehiculo.querySelector('[name="vidrios-electricos"]').value,
-//           techo__corredizo:informacion__adicional__vehiculo.querySelector('[name="techo-corredizo"]').value,
-//           techo__panoramico:informacion__adicional__vehiculo.querySelector('[name="techo-panoramico"]').value,
-//           parqueo__automatico:informacion__adicional__vehiculo.querySelector('[name="parqueo-automatico"]').value,
-//           desempañador__trasero:informacion__adicional__vehiculo.querySelector('[name="desempañador-trasero"]').value,
-//           gps:informacion__adicional__vehiculo.querySelector('[name="gps"]').value
-
-// }
-// localStorage.setItem('infoAdicional', JSON.stringify(info__adicional));
-// const obtener__datos__info__adicional = JSON.parse(localStorage.getItem('infoAdicional'));
-// console.log(obtener__datos__info__adicional)
-// if(obtener__datos__info__adicional && obtener__datos__info__adicional.airbag__delatero && obtener__datos__info__adicional.airbag__trasero && obtener__datos__info__adicional.alarma && obtener__datos__info__adicional.bloqueo__central && obtener__datos__info__adicional.control__ascenso &&
-// obtener__datos__info__adicional.control__descenso && obtener__datos__info__adicional.sensores__delateros && obtener__datos__info__adicional.sensor__reversa && obtener__datos__info__adicional.sensor__punto__ciego && obtener__datos__info__adicional.camara__reversa &&
-// obtener__datos__info__adicional.aire__acondicionado && obtener__datos__info__adicional.andorid__auto && obtener__datos__info__adicional.apple__car__play && obtener__datos__info__adicional.bluetoot && obtener__datos__info__adicional.exploradoras && obtener__datos__info__adicional.vidrios__electricos &&
-// obtener__datos__info__adicional.techo__corredizo && obtener__datos__info__adicional.techo__panoramico && obtener__datos__info__adicional.parqueo__automatico && obtener__datos__info__adicional.desempañador__trasero && obtener__datos__info__adicional.gps){
-//   let info__adicional = document.getElementById('button-info-adicional');
-//   info__adicional.innerHTML = ` 
-//   <button type="button" class="step__button step__button--next" data-to_step="3" data-step="2">Siguiente</button> 
-//   `
-//   btn__info.style.display = 'none';
-
-// }
-
-//       })
-//     }
-
     let informacion__adicional__vehiculo =  document.getElementById('formulario-info-adicional-vehiculo')
     if(informacion__adicional__vehiculo){
         informacion__adicional__vehiculo.addEventListener('submit',function(evento){
           let form__data = new FormData(document.getElementById('formulario-info-adicional-vehiculo'))
         evento.preventDefault();
-        fetch('insert-info-adicional-vehiculo',{
+        fetch(url__servidor+'insert-info-adicional-vehiculo',{
             method:'POST',
             body:form__data
         }).then(respuesta => respuesta.json())

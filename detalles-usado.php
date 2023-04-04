@@ -336,9 +336,7 @@ if($id__publicacion && $id__usuario){
 
     }
 }
-
-
-    ?>
+?>
   <div class="container contenedor__comentarios">
   <h2 class="subtitulo__comentarios">Comentarios</h2>
   <p class="parrafo__comenatrios">Deja tu comentario sobre esta publicación

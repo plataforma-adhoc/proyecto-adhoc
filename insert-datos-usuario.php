@@ -42,13 +42,10 @@ if($nombre__usuario ==="" || $primer__apellido ==="" || $segundo__apellido ===""
     $_SESSION['id_usuario'] = $fila__datos['id_usuario'];  
     echo json_encode('true');
 
-    $contenido__mensaje = ' <h1>Hola '.$fila__datos['nombre_usuario'] .'<br> </h1>';
-    $contenido__mensaje .='<p> Parece que acabas de unirte a Adhoc </p>';
-    $contenido__mensaje .='<p> Te damos la bienvenida a nuestra plataforma </p>';
-    $contenido__mensaje .='<p>Esperamos que la disfrutes y tu carro se venda en el menor tiempo posible.<br></p>';
+    $contenido__mensaje = ' <h1>¡Hola '.$fila__datos['nombre_usuario'] .'<br>¡</h1>';
+    $contenido__mensaje .='<p>¡Bienvenido/a a nuestra comunidad! Estamos emocionados de tenerte aquí y esperamos que disfrutes de todo lo que tenemos para ofrecer. Nos esforzamos por crear un ambiente acogedor y seguro para todos nuestros miembros, y estamos seguros de que recibiras muchas ofertas de compra para tu vehiculo.<br></p>';
+    $contenido__mensaje .='<p>Si necesitas ayuda o tienes alguna pregunta, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte en todo lo que podamos.<br></p>';
     $contenido__mensaje .='<p>Equipo de Adhoc  <br></p>';
-   
-  
     $mail = new PHPMailer(true);
     try {
                   

@@ -89,9 +89,3 @@ if(totalImagenes){
 
 }
 
-// export function actualizar__contenido__historial(){
-//   setInterval(() => {
-// document.getElementById('contenido-historial')
-// }, 1000);
-
-// }

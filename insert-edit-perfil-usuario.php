@@ -1,5 +1,5 @@
 <?php 
-function insert__datos__edit__perfil__usuario(){
+function insertarDatosDeEdicionDePerfilDeUsuario(){
 include'conexion-db-accent.php';
 $id__usuario = isset($_POST['id']) ? $_POST['id']: '';
 if($id__usuario){
@@ -39,14 +39,7 @@ if($id__usuario){
                     echo json_encode('true');
                  
                 }
-                
-
 }
-
-
-
-}  
-
-    
-    insert__datos__edit__perfil__usuario();
+}    
+insertarDatosDeEdicionDePerfilDeUsuario();
 ?>

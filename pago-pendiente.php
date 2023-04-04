@@ -177,11 +177,11 @@ if(isset($_SESSION['datos-imagenes'])){
     $.get(urlapp, function (response) {
      if (response.success) {
         if (response.data.x_cod_response == 1 ){
-          let url__servidor = 'https://adhoc.com.co/'
+          var url__servidor = 'https://adhoc.com.co/'
           //Codigo personalizado
           // alert("Transaccion Aprobada");   
           console.log("Transaccion Aprobada");   
-          fetch('insertar-info-vehiculo', {
+          fetch( url__servidor+'insertar-info-vehiculo', {
               method: 'POST',
               body: JSON.stringify({
       // INFORMACION OBLIGATORIA DEL VEHICULO
@@ -262,7 +262,7 @@ if(isset($_SESSION['datos-imagenes'])){
             .then(data => {
               if(data ==='ok'){
                 console.log(data)
-                 fetch('eliminar-variables-sesion', { method: 'POST' })
+                 fetch( url__servidor+'eliminar-variables-sesion', { method: 'POST' })
                 .then(res => {
                   if (res === 'ok') {
                     console.log(res);

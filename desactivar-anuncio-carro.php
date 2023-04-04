@@ -1,10 +1,9 @@
 <?php
+function desactivarAnuncioDelCarro(){
 include'conexion-db-accent.php';  
 $id__publicacion = mysqli_real_escape_string($conexion__db__accent,isset($_POST['publicacion']) ? $_POST['publicacion']: '') ;
 $id__usuario = mysqli_real_escape_string($conexion__db__accent,isset($_POST['usuario']) ? $_POST['usuario']: '') ;
-
 $desactivar__anuncio  = 'Vendido';
-
 if($id__publicacion  && $id__usuario){
 
   $consulta__desactivar__contacto = "UPDATE contacto__vendedor  SET estado_anuncio ='$desactivar__anuncio' WHERE id_contacto = '$id__publicacion' AND id_usuario = '$id__usuario'";
@@ -31,6 +30,7 @@ if($id__publicacion  && $id__usuario){
     echo json_encode('ok');
   }
 }
-
+}
+desactivarAnuncioDelCarro();
 
 ?>

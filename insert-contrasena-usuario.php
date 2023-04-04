@@ -57,7 +57,7 @@
       
           //Content
           $mail->isHTML(true);                                  
-          $mail->Subject = 'Has solicitado el cambio de tus credencial de acceso a nuestra plataforma';
+          $mail->Subject = 'Has solicitado el cambio de tus credenciales de acceso a nuestra plataforma';
           $mail->Body    = utf8_decode($contenido__mensaje);
           $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
       
@@ -70,14 +70,9 @@
       }else{
       echo  json_encode('No existe ese usuario');
       }
-
-    }
-
-   
+    }  
+ mysqli_close ($conexion__db__accent);
   
-   
-    mysqli_close ($conexion__db__accent);
-    
 
     
     

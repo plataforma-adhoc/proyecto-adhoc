@@ -1,6 +1,7 @@
-<?php  include'conexion-db-accent.php';  
+<?php 
+function guardarDatosObligatoriosDelVehiculo(){
+include'conexion-db-accent.php';  
 session_start();
-
 $nombre__usuario = mysqli_real_escape_string($conexion__db__accent,isset($_POST['nombre']) ? $_POST['nombre'] :'');
 $avatar = mysqli_real_escape_string($conexion__db__accent,isset($_POST['avatar']) ? $_POST['avatar'] :'');
 
@@ -22,7 +23,6 @@ $caja = mysqli_real_escape_string($conexion__db__accent,isset($_POST['caja']) ? 
 $direccion = mysqli_real_escape_string($conexion__db__accent,isset($_POST['direccion-vehiculo']) ? $_POST['direccion-vehiculo'] :'');
 $cilindraje = mysqli_real_escape_string($conexion__db__accent,isset($_POST['cilindraje']) ? $_POST['cilindraje'] :'');
 $descripcion = mysqli_real_escape_string($conexion__db__accent,isset($_POST['descripcion']) ? $_POST['descripcion'] :'');
-// $estado__anuncio = 0;
 
 $datos = array(
 'nombre' => $nombre__usuario,'avatar' =>$avatar,'id' => $id__usuario,'marca'=>$marca,'modelo'=>$modelo,'color'=>$color,'fecha_fabricacion'=>$fecha__fabricacion,
@@ -33,7 +33,7 @@ $informacion__obligatoria = $_SESSION['datos-obligatorios'] = $datos;
 if($informacion__obligatoria){
     echo json_encode('ok');
 }
-
-
+}
+guardarDatosObligatoriosDelVehiculo();
 
 ?>

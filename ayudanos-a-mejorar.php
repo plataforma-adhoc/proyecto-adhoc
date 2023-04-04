@@ -45,7 +45,7 @@ $titulo =  "AdHoc | Ayudanos a mejorar";
 <?php  include'layout/footer.php'  ?>
 
 <script>
-    function insertar__sugerencias(){
+    function insertarSugerencias(){
     var url__servidor = 'https://adhoc.com.co/'
     let form__susgrencia = document.getElementById('form-sugerencias')
     if(form__susgrencia){
@@ -71,5 +71,5 @@ $titulo =  "AdHoc | Ayudanos a mejorar";
     })
     }
 }
-insertar__sugerencias();
+insertarSugerencias();
 </script>

@@ -1,6 +1,6 @@
 <?php  
 
-function eliminar__cuenta(){
+function eliminarCuentaUsuario(){
     include'conexion-db-accent.php';
     $id = $_GET['id'] ? $_GET['id'] : '';
     if(!$id){
@@ -14,8 +14,7 @@ function eliminar__cuenta(){
     }
 
 }
-
-eliminar__cuenta();
+eliminarCuentaUsuario();
 
 
 ?>

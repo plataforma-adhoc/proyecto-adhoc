@@ -1,0 +1,20 @@
+.contenedor__btn__anunciar{
+width: 100%;
+
+}
+
+.btn__anunciar__gratis{
+ width: 100%;
+}
+
+@media screen  and (max-width:700px){
+    .contenedor__btn__anunciar{
+        width: 95%;
+        
+        }
+        
+        .btn__anunciar__gratis{
+         width: 95%;
+        }
+         
+}

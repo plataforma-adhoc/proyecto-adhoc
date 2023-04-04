@@ -113,8 +113,9 @@ $datos__imagenes = $_SESSION['datos-imagenes'];
           }
           //Transaccion Rechazada
           if (response.data.x_cod_response == 2) {
+            let url__servidor = 'https://adhoc.com.co/'
             console.log('transacción rechazada');
-            fetch('pago-cancelado', { method: 'POST' })
+            fetch(url__servidor+'pago-cancelado', { method: 'POST' })
                 .then(res => {
                   if (res === 'ok') {
                     console.log(res);

@@ -1,7 +1,6 @@
 <?php  
 $titulo =" AdHoc | Contactanos";
  include'layout/nabvar.php'  ?>
-
 <div class="container">
 <h2 class="subtitulos">Contacta a nuestro equipo</h2>
 <p class="parrafo__contacto">siempre que quieras puedes escribirnos , nuestro equipo humano esta dispusto a resolver tus dudas.</p>

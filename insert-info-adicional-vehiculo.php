@@ -1,4 +1,5 @@
 <?php
+function guardarInfoAdicionalVehiculo(){
 include'conexion-db-accent.php';  
 session_start();
 $id__usuario = mysqli_real_escape_string($conexion__db__accent,isset($_POST['id-usuario']) ? $_POST['id-usuario'] :'');
@@ -41,3 +42,5 @@ $datos__adicionales = array(
       echo json_encode('ok');
   
   }
+}
+guardarInfoAdicionalVehiculo();

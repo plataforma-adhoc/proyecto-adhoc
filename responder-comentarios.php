@@ -38,14 +38,14 @@ include'layout/footer-home.php';
 ?>
 
 <script>
-  function respuesta__comentario(){
+  function respuestaComentario(){
   let formulario__respuesta = document.getElementById('formulario-respuesta')
   if(formulario__respuesta){
     formulario__respuesta.addEventListener('submit', function(event){
         event.preventDefault();
         let url__servidor  = 'https://adhoc.com.co/'
         let form__data =  new FormData(document.getElementById('formulario-respuesta'))
-        fetch('insert-respuesta',{
+        fetch(url__servidor+'insert-respuesta',{
             method:'POST',
             body:form__data
         }).then(respuesta =>  respuesta.json())
@@ -74,6 +74,6 @@ include'layout/footer-home.php';
 
   }
  }
-respuesta__comentario()
+respuestaComentario();
 
 </script>

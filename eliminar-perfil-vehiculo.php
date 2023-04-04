@@ -1,4 +1,5 @@
 <?php
+function eliminarPerfilVehiculo(){
 include'conexion-db-accent.php';
 $id__usuario =  isset($_POST['usuario']) ?  $_POST['usuario']: '';
 $id__publicacion  =  isset($_POST['publicacion']) ?  $_POST['publicacion']: '';
@@ -25,5 +26,6 @@ if($id__usuario && $id__publicacion){
     echo json_encode('ok');
    
   }
+}
 }
 ?>

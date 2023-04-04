@@ -20,8 +20,6 @@
     contrasena:false
   }
 
-  
-
  const   validar__formulario = (e) =>{
   switch (e.target.name) {
 		case "nombre":
@@ -143,18 +141,11 @@
 		break;
 	}
  }
-
- 
-
-
-
-
  inputs.forEach((input)=>{
   input.addEventListener('keyup', validar__formulario)
 
   })
   
-
   export function insert__datos__usuario(){
   let formulario__registro = document.getElementById('formulario-registro-usuario');
     if(formulario__registro){
@@ -221,10 +212,9 @@ export function  insert__login__usuario(){
   let login__usuario = document.getElementById('formulario-login');
   if(login__usuario){
     login__usuario.addEventListener('submit',function(evento){
-        evento.preventDefault();
-        
+        evento.preventDefault();  
         let datos = new FormData(document.getElementById('formulario-login'));
-        fetch('insert-login-usuario',{
+        fetch(url__servidor+'insert-login-usuario',{
             method:'POST',
             body:datos
 
@@ -248,10 +238,8 @@ export function  insert__login__usuario(){
 
 export function password__usuario(){
   let contrasena = document.getElementById('formulario-contraseña');
-  
   if(contrasena){
    contrasena.addEventListener('submit',function(evento){
-
     let datos = new FormData( document.getElementById('formulario-contraseña'))
     evento.preventDefault();
      fetch(url__servidor+'insert-contrasena-usuario',{
@@ -276,11 +264,7 @@ export function password__usuario(){
             footer: 'Esta informacion es importante',
            
           })
-
-      }
-
-          
-        
+      }   
      })
    })
   }
@@ -314,15 +298,10 @@ export  function actualizar__contrasena__usuario(){
           icon: 'error',
           title: `${datos}`,
           confirmButtonText:'De acuerdo',
-          footer: 'Esta informacion es importante',
-         
+          footer: 'Esta informacion es importante', 
         })
-
-      }
-      
-    })
-    
-     
+      }   
+    })  
    })
   }
   }
@@ -363,30 +342,21 @@ export  function actualizar__contrasena__usuario(){
      } 
   }
 
-
-
-
   export function modal__cambio__contrasena__usuario(){
     var modal = document.getElementById("myModalCambioContrasena");
     var btn = document.getElementById("card-cambiar-contrasena");
     var span = document.getElementById('cerrar');
-
-    
     if(btn){
       btn.onclick = function() {
         modal.style.display = "block";
       }
-    
     }
-    
     if(span){
       span.onclick = function() {
         modal.style.display = "none";
       }
-    
     }
-     }
-
+  }
 
   let buscador = document.getElementById('buscador')
 if(buscador){
@@ -395,15 +365,12 @@ if(buscador){
  
 export function buscar__carro(){
   var input = document.getElementById('buscador')
-
   if(input != null){
     var input = document.getElementById('buscador').value
-
     let insert__resultados = document.getElementById('insertar-resultados');
-  
     let form__data =  new FormData();
     form__data.append('buscador',input)
-    fetch('load-carros',{
+    fetch(url__servidor+'load-carros',{
        method:'POST',
        body:form__data
     }).then(respuesta => respuesta.json())

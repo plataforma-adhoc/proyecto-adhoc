@@ -1,6 +1,6 @@
 
 <?php 
-function insertar_datos_del_vehiculo(){
+function insertarDatosDelVehiculo(){
 session_start();
 include'conexion-db-accent.php'; 
 if(session_status() === PHP_SESSION_NONE) {
@@ -135,5 +135,5 @@ $ejecutar__consulta__estilos = mysqli_query($conexion__db__accent,$insertar__dat
 }
 }
 }
-insertar_datos_del_vehiculo();
+insertarDatosDelVehiculo();
 

@@ -1,5 +1,5 @@
 <?php
-function login__usuario(){
+function loginUsuario(){
     include'conexion-db-accent.php';
     $email = mysqli_real_escape_string($conexion__db__accent,$_POST['email'] ? $_POST['email']: '');
     $contrasena = mysqli_real_escape_string($conexion__db__accent,$_POST['contrasena'] ? $_POST['contrasena']: '');
@@ -25,15 +25,10 @@ function login__usuario(){
         
         }else{
             echo json_encode('este usuario no existe');
-        }
-    
-       
+        }  
     }
 
     }
-
-
-   
-login__usuario();
+loginUsuario();
 
 ?>

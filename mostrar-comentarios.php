@@ -1,4 +1,5 @@
 <?php
+function mostrarComentarios(){
  include'conexion-db-accent.php';
 $id__publicacion =  isset($_POST['id-publicacion']) ? $_POST['id-publicacion'] : '';
 $id__usuario =  isset($_POST['id-usuario']) ? $_POST['id-usuario'] : '';
@@ -11,4 +12,6 @@ $id__usuario =  isset($_POST['id-usuario']) ? $_POST['id-usuario'] : '';
     }
   }
 echo json_encode($html);
+}
+mostrarComentarios();
 ?>

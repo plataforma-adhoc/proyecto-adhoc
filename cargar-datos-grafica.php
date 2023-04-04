@@ -1,5 +1,5 @@
 <?php
-function obtener__graficos(){
+function obtenerGraficos(){
     include'conexion-db-accent.php';
     $id__usuario = isset($_POST['id']) ? $_POST['id']: '';
     if($id__usuario){
@@ -15,6 +15,6 @@ function obtener__graficos(){
       }  
     }
 }
-obtener__graficos();
+obtenerGraficos();
 
 ?>

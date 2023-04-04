@@ -22,5 +22,4 @@ if (!isset($_SESSION['datos-obligatorios']) &&
 } else {
   echo 'Error al eliminar las variables de sesión';
 }
-
-            ?>
+?>

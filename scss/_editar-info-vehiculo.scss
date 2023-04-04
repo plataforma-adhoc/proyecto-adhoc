@@ -1,0 +1,80 @@
+.contenedor__edit__info__vehiculo{
+    width: 100%;
+    height: auto;
+    margin-top: -700px;
+}
+.titulo__edit__info__vehiculo{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.subtitulo__info__vehiculo{
+    font-size: 18px;
+    color: white;
+    margin-left: 20px;
+    line-height: 50px;
+}
+.contenido__info__vehiculo{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form__floating{
+margin-left: 20px;
+width: 320px;
+}
+.form__floating__edit{
+    width: 98%;
+    margin-left: 20px;
+}
+.text__area__edit{
+    max-width: 95%;
+    min-width: 95%;
+    max-height: 100px;
+    min-height: 100px;
+
+}
+
+.enviar{
+    margin-left: 20px;
+    width: 20%;
+}
+
+@media screen and (max-width:1000px) {
+    
+}
+
+@media screen and (max-width:1134px) {
+    .form__floating{
+     width: 47%;
+    } 
+   
+ }
+@media screen and (max-width:900px) {
+    .form__floating{
+     width: 47%;
+    } 
+   
+ }
+ 
+ @media screen and (max-width:740px) {
+    .form__floating{
+     width: 100%;
+    } 
+   
+ }
+ 
+
+@media screen and (max-width:600px) {
+   .form__floating{
+    width: 100%;
+   } 
+   .enviar{
+    width: 100%;
+   }
+   .subtitulo__info__vehiculo{
+    font-size: 15px;
+   }
+}
+

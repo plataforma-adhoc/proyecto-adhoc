@@ -102,10 +102,7 @@ if($id__paquete && $id__usuario && $id__estilos && $id__contacto && $id__equipam
        var ref_payco = getQueryParam('ref_payco');
       //Url Rest Metodo get, se pasa la llave y la ref_payco como paremetro
       var urlapp = "https://secure.epayco.co/validation/v1/reference/" + ref_payco;
-
       $.get(urlapp, function(response) {
-
-
         if (response.success) {
 
           if (response.data.x_cod_response == 1) {

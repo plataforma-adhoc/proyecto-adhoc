@@ -130,14 +130,14 @@ if($id__paquete && $nombre__plan){
 </div>
 <script>
 
-  function proceso__de__pago__plan__gratis(){
+  function procesoDePagoPlangratis(){
 let formulario__de__pago = document.getElementById('formulario-proceso-de-pago');
 if(formulario__de__pago){
 formulario__de__pago.addEventListener('submit',function(evento){
     evento.preventDefault();
     let form__data = new FormData(document.getElementById('formulario-proceso-de-pago'))
-let url__servidor  = 'https://adhoc.com.co/'
-    fetch('insertar-info-vehiculo',{
+    var url__servidor  = 'https://adhoc.com.co/'
+    fetch(url__servidor+'insertar-info-vehiculo',{
      method:'POST',
      body:JSON.stringify({
       // INFORMACION OBLIGATORIA DEL VEHICULO
@@ -216,7 +216,7 @@ let url__servidor  = 'https://adhoc.com.co/'
             }).then(respuesta => respuesta.json())
     .then(data =>{
         if(data ==='ok'){
-          fetch('eliminar-variables-sesion', { method: 'POST' })
+          fetch(url__servidor+'eliminar-variables-sesion', { method: 'POST' })
                 .then(res => {
                   if (res === 'ok') {
                     console.log(res);
@@ -240,7 +240,6 @@ let url__servidor  = 'https://adhoc.com.co/'
 
 }
 }
-  
-  proceso__de__pago__plan__gratis();
+procesoDePagoPlangratis();
 </script>
 <?php include'layout/footer-home.php'  ?>

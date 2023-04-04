@@ -63,8 +63,7 @@ if($id =! $id || $id ===""){
         </div>
     </div>
     <script>
-        function mostrar() {
-
+        function mostrarContrasena() {
             let tipo = document.getElementById('contrasena')
             if (tipo.type == 'password') {
                 tipo.type = 'text';
@@ -72,5 +71,6 @@ if($id =! $id || $id ===""){
                 tipo.type = 'password';
             }
         }
+        mostrarContrasena();
     </script>
     <?php  include'layout/footer-home.php'  ?>

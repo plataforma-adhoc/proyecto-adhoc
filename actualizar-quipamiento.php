@@ -1,4 +1,5 @@
 <?php
+function actualizarEquipamentoVehiculo(){
 include'conexion-db-accent.php';  
 $id__usuario = isset($_POST['id-usuario']) ? $_POST['id-usuario']: '';
 $id__publicacion  = isset($_POST['id-publicacion']) ? $_POST['id-publicacion']: '';
@@ -23,4 +24,6 @@ $ejecutar__actualizacion = mysqli_query($conexion__db__accent,$actualizar___dato
 if($ejecutar__actualizacion){
   echo json_encode('ok');
 }
+}
+actualizarEquipamentoVehiculo()
 ?>

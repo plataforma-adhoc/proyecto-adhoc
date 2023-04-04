@@ -1,5 +1,5 @@
 <?php
-function contador__contacto(){
+function contadorContacto(){
     date_default_timezone_set('America/Bogota');
     setlocale(LC_ALL,"es_ES");
     setlocale(LC_TIME,"es_ES.UTF-8");
@@ -45,11 +45,7 @@ function contador__contacto(){
            }
       
           }
-      
-      
-
-
 }
 }
-contador__contacto();
+contadorContacto();
 ?>

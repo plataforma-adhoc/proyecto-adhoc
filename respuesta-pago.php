@@ -184,8 +184,7 @@ if(isset($_SESSION['datos-imagenes'])){
           let url__servidor = 'https://adhoc.com.co/'
           //Codigo personalizado
           alert("Transaccion Aprobada");
-
-          fetch('insertar-info-vehiculo', {
+          fetch(url__servidor+'insertar-info-vehiculo', {
               method: 'POST',
               body: JSON.stringify({
       // INFORMACION OBLIGATORIA DEL VEHICULO
@@ -265,7 +264,7 @@ if(isset($_SESSION['datos-imagenes'])){
             .then(data => {
               console.log(data)
               if(data ==='ok'){
-                fetch('eliminar-variables-sesion', { method: 'POST' })
+                fetch(url__servidor+'eliminar-variables-sesion', { method: 'POST' })
                 .then(res => {
                   if (res === 'ok') {
                     console.log(res);

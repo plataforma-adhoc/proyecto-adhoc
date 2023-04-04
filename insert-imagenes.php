@@ -1,11 +1,10 @@
-<?php  include'conexion-db-accent.php';  
+<?php  
+function guardarImagenes(){
+include'conexion-db-accent.php';  
 session_start();
   if(!is_dir('upload')){
     mkdir('upload');
   }
-
-
-
     foreach($_FILES['file']['tmp_name'] as $key => $value){
       if(file_exists($_FILES['file']['tmp_name'][$key])){
        if(move_uploaded_file($_FILES['file']['tmp_name'][$key],'upload/'.$_FILES['file']['name'][$key])){
@@ -37,7 +36,8 @@ if($datos__imagenes){
     echo json_encode('ok');
 
 }
-     
+}
+guardarImagenes();    
   
 
 
