@@ -355,7 +355,7 @@
   color: white;
   padding: 12px;
   background: #C0392B;
-  margin-right: 30px;
+  margin-right: 10px;
   width: 190px;
   border-radius: 7px;
   font-weight: bold;
@@ -422,7 +422,7 @@
 }
 
 .point {
-  color: #C0392B;
+  color: #FFFD16;
 }
 
 .contenedor__imagen__banner {
@@ -479,22 +479,34 @@
   font-weight: 700;
 }
 
+.contenedor__btn__cta {
+  width: 200px;
+  margin: 80px auto 0 auto;
+}
+
 .cta {
   padding: 10px 20px;
   display: inline-block;
-  background: #C0392B;
+  background: #FFFD16;
   text-decoration: none;
-  color: white;
+  color: black;
   font-weight: 700;
   box-shadow: var(--shadow) var(--color_shadow);
-  border-radius: 50px;
+  border-radius: 10px;
   font-size: 14px;
+  width: 100%;
+  text-align: center;
 }
 
 .cta:hover {
   background: #000;
   color: white;
   transition: ease-in-out 0.5s;
+}
+
+.muestra__vehiculos {
+  height: auto;
+  margin-top: -100px;
 }
 
 .contenedor__funciones {
@@ -508,7 +520,7 @@
 
 .contenido__funciones {
   width: 30%;
-  height: 150px;
+  height: auto;
   display: flex;
   font-weight: 400;
 }
@@ -646,14 +658,15 @@
 .imagen__services {
   display: inline-block;
   width: 100%;
-  height: 300px;
+  height: 200px;
 }
 
 .card__img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px 0 0 10px;
+  display: block;
 }
 
 .cards__text {
@@ -766,11 +779,6 @@
   width: 70px;
 }
 
-.img__pago__en__efectivo {
-  width: 50px;
-  margin: 10px 50px 0;
-}
-
 .img__tarjetas__de__credito {
   width: 50px;
 }
@@ -794,74 +802,22 @@
   width: 100%;
 }
 
-.contenido__eleccion {
-  background: #112240;
-  margin-top: -100px;
+.contendor__imagenes__efectivo {
   width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.div__icono__elecion {
-  width: 80%;
-  margin: auto;
-}
-
-.icono__elecion {
-  margin-left: 30%;
-}
-
-.subtitulo__eleccion {
-  text-align: center;
-  color: white;
-  margin-top: 50px;
-}
-
-.eleccion {
-  width: 45%;
-  border-radius: 10px;
-}
-
-.enumerados strong {
-  color: #11998e; /* fallback for old browsers */
-  color: -webkit-linear-gradient(to right, #38ef7d, #11998e); /* Chrome 10-25, Safari 5.1-6 */
-  color: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  font-size: 22px;
-}
-
-.contenido__enumerados {
-  width: 22%;
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
 }
 
-.item__enumerado {
-  color: white;
-  font-weight: bold;
-  line-height: 40px;
-  margin-left: 20px;
+.contenedor__imagenes__pago__efectivo {
+  display: inline-block;
+  width: 50px;
 }
 
-.texto__enumerado {
-  color: gray;
-  font-weight: 600;
-  margin-left: 20px;
-}
-
-.enlace__de__politicas {
-  display: inline;
-  color: #FFFD16;
-  text-decoration: 0;
-  margin-left: 20px;
-}
-
-.enlace__de__politicas:hover {
-  border-bottom: solid 1px #FFFD16;
-  color: #FFFD16;
+.img__pago__en__efectivo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .contenedor__anuncio__propio {
@@ -1042,6 +998,9 @@ ul {
 .respuesta {
   color: #008A55;
   font-size: 12px;
+  background: #000;
+  width: 100%;
+  padding: 10px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -1050,7 +1009,7 @@ ul {
   }
   .contenido__funciones {
     margin: 20px auto 0 auto;
-    height: 200px;
+    height: auto;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -1117,7 +1076,7 @@ ul {
   }
   .contenido__funciones {
     width: 50%;
-    height: 150px;
+    height: 240px;
   }
   .contenido__img__anuncio {
     height: 500px;
@@ -1146,7 +1105,7 @@ ul {
     border-bottom: 2px solid gray;
   }
   .nuestra__forma__de__pago {
-    margin-top: 90rem;
+    margin-top: 70rem;
   }
   .card__precios__efectivo {
     width: 100%;
@@ -1241,7 +1200,7 @@ footer .container {
   }
   .nuestra__forma__de__pago {
     width: 100%;
-    margin: 90rem auto 0 auto;
+    margin: 70rem auto 0 auto;
   }
   .card__precios, .card__precios__efectivo {
     width: 100%;
@@ -1308,6 +1267,9 @@ footer .container {
   .services {
     width: 100%;
   }
+  .imagen__services {
+    height: 200px;
+  }
   .background {
     width: 95%;
   }
@@ -1327,6 +1289,21 @@ footer .container {
   }
 }
 @media screen and (max-width: 600px) {
+  .muestra__vehiculos {
+    margin-top: -220px;
+  }
+  .titulo__promo__de__lanzamiento {
+    font-size: 15px;
+  }
+  .contenedor__imagen__banner {
+    height: 350px;
+  }
+  .title {
+    font-size: 17px;
+  }
+  .hero__textos {
+    margin-top: -100px;
+  }
   .btn__cuenta__registro {
     margin-right: 15px;
     width: 110px;
@@ -1338,16 +1315,28 @@ footer .container {
   .modal__registros {
     margin-top: 160px;
   }
+  .services {
+    margin-top: -12rem;
+  }
   .nuestra__forma__de__pago {
-    margin: 100rem auto 0 auto;
+    margin: 80rem auto 0 auto;
   }
 }
 @media screen and (max-width: 400px) {
+  .titulo__promo__de__lanzamiento {
+    font-size: 13px;
+  }
+  .contenedor__imagen__banner {
+    height: 370px;
+  }
+  .copy {
+    font-size: 15px;
+  }
+  .subtitulo {
+    font-size: 20px;
+  }
   .btn__cuenta {
     display: none;
-  }
-  .nuestra__forma__de__pago {
-    margin-top: 90rem;
   }
   .contenido__anuncio__texto {
     margin-top: 20px;
@@ -1356,7 +1345,35 @@ footer .container {
     font-size: 13px;
   }
   .nuestra__forma__de__pago {
-    margin: 100rem auto 0 auto;
+    margin: 80rem auto 0 auto;
+  }
+}
+@media screen and (max-width: 430px) {
+  .contenedor__btn__registros {
+    margin-top: -10px;
+    width: 100%;
+    background: #000;
+    padding: 0;
+  }
+  .modal__registros, .contenedor__btn__registros {
+    width: 95%;
+  }
+  .btn__cuenta__registro {
+    width: 120px;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .contenedor__imagenes__pago__efectivo {
+    display: inline-block;
+    width: 10%;
+    height: 50px;
+  }
+  .img__pago__en__efectivo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
   }
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -2271,7 +2288,7 @@ template {
 
 .contenido__card__dashboard {
   margin-left: 10px;
-  width: 20%;
+  width: 17%;
   margin-top: 10px;
 }
 
@@ -2283,9 +2300,14 @@ template {
 }
 
 .contenido {
-  margin-left: 10px;
-  display: flex;
-  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.contenido__texto__card__dashboard {
+  width: 50%;
+  margin: auto;
+  text-align: center;
 }
 
 .enlace__anunciar__carro {
@@ -2300,13 +2322,19 @@ template {
   font-size: 20px;
   background: #0A192F;
   border-radius: 100px;
-  padding: 10px;
+  padding: 8px;
+  text-align: center;
 }
 
 .enlace__anunciar__carro:hover {
   color: white;
   opacity: 0.5;
   transition: all 0.5s;
+}
+
+.texto__cards {
+  font-size: 13px;
+  text-align: center;
 }
 
 .titulo__dashboard {
@@ -2452,9 +2480,6 @@ template {
   .contenedor__card__dashboard {
     width: 100%;
   }
-  .contenido__card__dashboard {
-    width: 40%;
-  }
   .myChart {
     width: 45%;
   }
@@ -2466,6 +2491,9 @@ template {
   }
 }
 @media screen and (max-width: 900px) {
+  .contenido__card__dashboard {
+    width: 21%;
+  }
   .myChart {
     width: 100%;
     margin-top: 1rem;
@@ -2480,11 +2508,41 @@ template {
     width: 100%;
   }
 }
+@media screen and (max-width: 650px) {
+  .contenido__card__dashboard {
+    width: 28%;
+    margin-right: 3px;
+  }
+  .texto__cards {
+    font-size: 11px;
+  }
+}
 @media screen and (max-width: 400px) {
   .contenedor__dashboard {
-    margin-top: -600px;
+    margin-top: -700px;
+  }
+  .contenedor__card__dashboard {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
   .contenido__card__dashboard {
+    width: 33%;
+    margin: 0;
+  }
+  .historial__de__vehiculos {
+    font-size: 15px;
+  }
+  .texto__cards {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .contenido__card__dashboard {
+    width: 32%;
+    margin: 0;
+  }
+  .contenido__texto__card__dashboard {
     width: 100%;
   }
 }
@@ -2493,19 +2551,27 @@ template {
   background: #112240;
   border-radius: 7px;
   height: auto;
-  margin-top: 30px;
+  margin-top: -500px;
+}
+
+.card__solicitudes {
+  display: flex;
+  padding: 2.5rem 2rem;
+  border-radius: 10px;
+  background: #112240;
+  max-width: 100%;
+  height: auto;
+  min-width: 300px;
+  margin: 1rem;
+  position: relative;
+  transform-style: preserve-3d;
+  overflow: hidden;
 }
 
 .datos__de__perfil {
   width: 90%;
   margin: -80px auto 20px 20px;
   height: auto;
-}
-
-.otros__datos__de__perfil {
-  width: 80%;
-  margin-top: -500px;
-  margin-left: 12%;
 }
 
 .parrafo__de__mi__cuenta {
@@ -2517,20 +2583,40 @@ template {
   border-radius: 7px;
 }
 
+.infos {
+  margin-left: 1.5rem;
+}
+
+.name {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.name h2 {
+  font-size: 1rem;
+}
+
+.name h4 {
+  font-size: 1rem;
+  color: white;
+}
+
 .enlaces__de__mi__cuenta {
   text-decoration: 0;
   display: inline-block;
-  color: white;
-  font-size: 17px;
-  background: #112240;
+  color: black;
+  font-size: 15px;
+  background: #FFFD16;
   border-radius: 7px;
   padding: 10px;
-  width: 19%;
+  width: 15%;
   margin: 20px 20px 0 0;
+  transition: ease-in-out 0.5s;
 }
 
 .enlaces__de__mi__cuenta:hover {
   color: white;
+  background: #000;
 }
 
 .parrafo__de__mi__cuenta i {
@@ -2538,9 +2624,19 @@ template {
   padding: 0 7px 0 0;
 }
 
-.enlaces__de__mi__cuenta i {
-  font-size: 22px;
-  padding: 0 7px 0 0;
+.links a {
+  text-decoration: 0;
+  display: inline;
+  min-width: 200px;
+  padding: 0.6rem;
+  border: 1px solid #222;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s linear;
+  margin-left: 5px;
+  background: #008A55;
+  color: white;
 }
 
 .perfil {
@@ -2558,133 +2654,18 @@ template {
   margin-top: -50px;
 }
 
-.redes__sociales {
-  width: 70%;
-  margin: 0 2% 0 2%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.enlace__de__redes__sociales {
-  display: inline-block;
-  text-decoration: 0;
-  font-size: 25px;
-  margin-top: 20px;
-  background: #000;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-}
-
-.enlace__de__redes__sociales:hover {
-  background: #008A55;
-  transition: ease-in-out 0.5s;
-  opacity: 0.9;
-}
-
-.fa-facebook {
-  color: #4267B2;
-}
-
-.fa-facebook:hover {
-  color: #4267B2;
-}
-
-.fa-instagram {
-  color: #E1306C;
-}
-
-.fa-instagram:hover {
-  color: #E1306C;
-}
-
-.fa-twitter {
-  color: #1DA1F2;
-}
-
-.fa-twitter:hover {
-  color: #1DA1F2;
-}
-
 .datos__del__perfil__de__usuario {
   border-radius: 7px;
   width: 100%;
 }
 
 .datos__basicos {
-  color: gray;
   line-height: 10px;
-  font-size: 18px;
-}
-
-.quien__soy {
-  line-height: 20px;
-  width: 300px;
-  height: auto;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .fecha__registro {
   font-size: 12px;
-}
-
-.contenedor__opinion, .contenedor__formulario__datos__de_pago {
-  background: #112240;
-  border-radius: 7px;
-  margin-top: 50px;
-  height: auto;
-}
-
-.contenedor__opinion::-webkit-scrollbar {
-  width: 10px;
-}
-
-.contenedor__opinion::-webkit-scrollbar-thumb {
-  background: #212F37;
-  border-radius: 7px;
-}
-
-.contenedor__opinion {
-  overflow-y: scroll;
-  height: 550px;
-}
-
-.contenido__comentario {
-  width: 40%;
-  margin: auto;
-}
-
-.contenedor__formulario__datos__de_pago {
-  height: 400px;
-}
-
-.titulo__opinion {
-  text-align: center;
-  color: white;
-  font-size: 21px;
-}
-
-.opinion {
-  width: 100%;
-  height: auto;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-  border-top-right-radius: 25px;
-  background: #0A192F;
-  margin-top: 30px;
-}
-
-.item__opinion {
-  width: 95%;
-  margin: auto;
-  color: gray;
-}
-
-.nombre__item__opinion {
-  line-height: 30px;
 }
 
 .parrafo {
@@ -2701,59 +2682,15 @@ template {
   margin: 10px 0 0 10px;
 }
 
-.contenedor__formulario__datos__de_pago {
-  height: auto;
-}
-
-.parrafo__metodo__pago {
-  text-align: center;
-  color: gray;
-}
-
-.metodo__de__pago {
-  width: 80%;
-  margin: -20px auto 0 auto;
-}
-
-.seleccionar {
-  border: 0;
-  height: 50px;
-  margin: 5px 0 0 0;
-  border: none;
-  border-bottom: 2px solid #212F37;
-  background: #112240;
-  color: white;
-}
-
-.seleccionar:focus {
-  outline: 0;
-}
-
-.item__info__pagos {
-  width: 97%;
-  background: #C0392B;
-  margin: 50px auto 0 auto;
-  padding: 5px;
-  color: white;
-  font-size: 20px;
-  border-radius: 7px;
-}
-
-.item__info__pagos p {
-  margin: 10px 0 0 0;
-  height: 40px;
-}
-
 @media screen and (max-width: 1500px) {
-  .btn__back {
-    left: 5%;
-  }
-  .otros__datos__de__perfil {
-    margin-left: 5%;
-    margin-top: -450px;
-  }
   .enlaces__de__mi__cuenta {
     width: 25%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .enlaces__de__mi__cuenta {
+    width: 32%;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 900px) {
@@ -2763,19 +2700,22 @@ template {
   .datos__de__perfil {
     height: auto;
   }
-  .btn__back {
-    left: 5%;
+  .infos {
+    margin-left: 0;
+    margin-top: 1.5rem;
   }
-  .item__info__pagos {
-    height: 60px;
-  }
-  .otros__datos__de__perfil {
-    margin-left: 5%;
-    margin-top: -450px;
+  .links button {
+    min-width: 100px;
   }
   .enlaces__de__mi__cuenta {
     width: 32%;
-    font-size: 17px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .enlaces__de__mi__cuenta {
+    width: 35%;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -2820,21 +2760,21 @@ template {
   }
 }
 @media screen and (max-width: 500px) {
-  .opinion {
-    width: 90%;
-    background: #000;
-    margin: auto;
-  }
   .datos__de__perfil {
     width: 100%;
-    height: 800px;
-  }
-  .otros__datos__de__perfil {
-    margin-top: -450px;
   }
   .enlaces__de__mi__cuenta {
     font-size: 12px;
     width: 40%;
+  }
+}
+@media screen and (max-width: 330px) {
+  .contenedor__datos__perfil {
+    height: 600px;
+  }
+  .infos {
+    margin-left: -1rem;
+    width: 100%;
   }
 }
 .titulo__configuracion {
@@ -3881,17 +3821,16 @@ template {
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .descripcion__del__vehiculo {
-  width: 24%;
+  width: 20%;
   margin: 20px 20px 0;
   background: #112240;
   border-radius: 7px;
   border: solid 2px gray;
-  height: auto;
+  height: 422px;
 }
 
 .contenedor__imagen__vehiculo {
@@ -3911,7 +3850,7 @@ template {
 
 .texto__segun__paquete {
   font-size: 13px;
-  color: gray;
+  color: black;
   position: absolute;
   top: 0;
   left: 0%;
@@ -3951,8 +3890,10 @@ template {
   font-size: 14px;
 }
 
-.precio__del__vehiculo {
-  color: gray;
+.precio__del__carro {
+  color: white;
+  font-weight: bolder;
+  font-size: 18px;
 }
 
 .contenido__contacto__mas__detalles {
@@ -3964,28 +3905,22 @@ template {
 
 .contactos__del__vehiculo {
   margin: 5px 10px;
+  width: 20px;
 }
 
 .enlace__whatsapp {
   display: inline-block;
   text-decoration: 0;
-  background: #000;
-  color: #FFFD16;
-  border-radius: 50px;
-  width: 120px;
-  padding: 10px 12px;
-  text-align: left;
-  font-size: 14px;
-  margin-left: -10px;
+  color: #008A55;
 }
 
 .enlace__whatsapp:hover {
-  color: #FFFD16;
+  color: #008A55;
   opacity: 0.7;
 }
 
 .fa-whatsapp {
-  font-size: 14px;
+  font-size: 25px;
 }
 
 .mas__detalles {
@@ -4002,44 +3937,6 @@ template {
 
 .hr {
   color: gray;
-}
-
-.no__resultado {
-  width: 100%;
-}
-
-.imagen__no__resultados {
-  width: 30%;
-  margin-left: 35%;
-  margin-right: 35%;
-}
-
-.subtitulo__sin__resultados {
-  text-align: center;
-  color: white;
-}
-
-.contenedor__parrafo__sin__resultado {
-  width: 50%;
-  margin: auto;
-}
-
-.parrafo__sin__resultado {
-  text-align: center;
-  color: white;
-  margin-top: -2rem;
-}
-
-.contenedor__btn__publicar__vehiculo {
-  width: 250px;
-  margin: auto;
-}
-
-.publicar__vehiculo {
-  width: 100%;
-  margin-top: -5rem;
-  font-size: 15px;
-  text-align: center;
 }
 
 .enlaces__comprtir {
@@ -4061,10 +3958,11 @@ template {
 
 .compartir {
   background: #000;
-  padding: 5px 10px;
   border-radius: 100%;
-  line-height: 30px;
+  height: 40px;
+  width: 40px;
   text-align: center;
+  line-height: 40px;
 }
 
 .iconos__compartir:hover {
@@ -4226,6 +4124,11 @@ template {
   font-weight: 600;
 }
 
+@media screen and (max-width: 1400px) {
+  .descripcion__del__vehiculo {
+    width: 21%;
+  }
+}
 @media screen and (max-width: 1200px) {
   .contendor__de__vehiculos {
     margin-top: -120px;
@@ -4269,7 +4172,7 @@ template {
   }
   .enlace__whatsapp {
     font-size: 13px;
-    width: 200px;
+    width: 150px;
   }
   .kilometraje__y__año {
     font-size: 13px;
@@ -4277,6 +4180,9 @@ template {
   }
   .kilometros, .modelo__del__vehiculo, .placas__del__vehiculo {
     font-size: 13px;
+  }
+  .precio__del__carro {
+    font-size: 18px;
   }
   .asesoramiento {
     width: 100%;
@@ -4299,6 +4205,10 @@ template {
   .contendor__de__vehiculos {
     margin-top: -350px;
   }
+  .descripcion__del__vehiculo {
+    width: 47%;
+    margin: 10px 5px 10px 0;
+  }
   .asesoramiento {
     width: 100%;
     margin-top: -10px;
@@ -4313,7 +4223,8 @@ template {
 }
 @media screen and (max-width: 600px) {
   .descripcion__del__vehiculo {
-    width: 90%;
+    width: 49%;
+    margin: 10px 2px 10px 0;
   }
   .subtitulo__vehiculos {
     text-align: center;
@@ -4332,6 +4243,12 @@ template {
   }
   .fa-camera-retro {
     margin-top: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .descripcion__del__vehiculo {
+    width: 90%;
+    margin: 10px auto 10px auto;
   }
 }
 @media screen and (max-width: 400px) {
@@ -4997,7 +4914,6 @@ template {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
   font-size: 16px;
   overflow: hidden;
   margin-top: -600px;
@@ -5007,7 +4923,7 @@ template {
 
 .form-register {
   padding: 20px 15px;
-  width: 90%;
+  width: 95%;
 }
 
 .progressbar {
@@ -5023,7 +4939,7 @@ template {
   font-size: 0.7rem;
   text-transform: uppercase;
   position: relative;
-  color: black;
+  color: white;
 }
 
 .progressbar__option:before {
@@ -5046,7 +4962,7 @@ template {
   content: "";
   width: 100%;
   height: 2px;
-  background-color: #FFFD16;
+  background-color: #008A55;
   position: absolute;
   top: 10px;
   left: -50%;
@@ -5058,7 +4974,7 @@ template {
 }
 
 .progressbar__option.active:before, .progressbar__option.active:after {
-  background-color: #FFFD16;
+  background-color: #008A55;
 }
 
 .form-register__title {
@@ -5303,7 +5219,7 @@ template {
   width: 100%;
   display: flex;
   align-items: center;
-  background: #112240;
+  background: #008A55;
   color: white;
   border-radius: 7px;
   border: solid 1px gray;
@@ -5448,9 +5364,6 @@ template {
   .contenedor {
     width: 33%;
   }
-  .card__collapsables {
-    margin: 5px 0 0 0;
-  }
 }
 @media screen and (max-width: 1000px) {
   .subtitulo__planes {
@@ -5474,13 +5387,9 @@ template {
 }
 @media screen and (max-width: 800px) {
   .form-floating {
-    display: grid;
-    grid-column: 1/3;
     font-size: 12px;
   }
   .form-select {
-    display: grid;
-    grid-column: 1/3;
     font-size: 12px;
   }
   .form__floating__info__adicional {
@@ -5520,6 +5429,9 @@ template {
 @media screen and (max-width: 550px) {
   .form-register {
     width: 100%;
+  }
+  .form__floating__info__adicional {
+    width: 43%;
   }
   .step__input {
     font-size: 13px;
@@ -5563,14 +5475,13 @@ template {
     border-radius: 10px;
   }
   .form-floating {
-    display: grid;
-    grid-column: 1/3;
     font-size: 12px;
   }
   .form-select {
-    display: grid;
-    grid-column: 1/3;
     font-size: 12px;
+  }
+  .card__collapsables {
+    margin-top: -30px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -5584,6 +5495,19 @@ template {
   }
   .form-check-input {
     font-size: 14px;
+  }
+  .form-floating {
+    display: grid;
+    grid-column: 1/3;
+    font-size: 12px;
+  }
+  .form-select {
+    display: grid;
+    grid-column: 1/3;
+    font-size: 12px;
+  }
+  .form__floating__info__adicional {
+    width: 100%;
   }
 }
 .container__proceso__de__pago {
@@ -5984,7 +5908,7 @@ template {
 
 .cards__blog {
   background: #000524;
-  width: 32%;
+  width: 23%;
   height: auto;
   overflow: hidden;
   margin: 0.5rem;
@@ -6002,7 +5926,7 @@ template {
   color: white;
   font-weight: bolder;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: -4rem;
 }
 
@@ -6011,13 +5935,20 @@ template {
   text-decoration: underline;
 }
 
-@supports (object-fit: cover) {
-  .cards__blog img {
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-  }
+.imagen__vehiculos__blog {
+  display: inline-block;
+  width: 100%;
+  height: 500px;
 }
+
+.imagen__vehiculos__blog img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
 .contenido__como__vender__un__carro {
   width: 100%;
   display: flex;
@@ -6091,7 +6022,7 @@ template {
 .subtitulo__h3__blog {
   color: white;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .parrafo__compartir {
@@ -6291,12 +6222,28 @@ template {
     width: 100%;
   }
 }
+@media screen and (max-width: 900px) {
+  .imagen__vehiculos__blog {
+    height: 270px;
+  }
+  .texto__del__blog {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .imagen__vehiculos__blog {
+    height: 200px;
+  }
+  .texto__del__blog {
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 600px) {
   .contenedor__cards__blog {
     flex-wrap: wrap;
   }
   .cards__blog {
-    width: 100%;
+    width: 46%;
   }
   .formulario__newsletter {
     width: 100%;
@@ -6309,6 +6256,22 @@ template {
     margin: auto;
     margin-left: 5px;
     margin-top: 10px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .cards__blog {
+    width: 44%;
+  }
+  .enlace__pagina__blog {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .cards__blog {
+    width: 40%;
+  }
+  .enlace__pagina__blog {
+    font-size: 12px;
   }
 }
 .contenedor__mis__solicitudes {
@@ -6342,20 +6305,6 @@ template {
   background: #112240;
   border-radius: 10px;
   margin: 50px auto 20px auto;
-}
-
-.card__solicitudes {
-  display: flex;
-  padding: 2.5rem 2rem;
-  border-radius: 10px;
-  background: #112240;
-  max-width: 100%;
-  height: auto;
-  min-width: 300px;
-  margin: 1rem;
-  position: relative;
-  transform-style: preserve-3d;
-  overflow: hidden;
 }
 
 .card__solicitudes::before,
@@ -6396,75 +6345,6 @@ template {
   width: 8rem;
   min-width: 80px;
   box-shadow: 0 0 0 5px #FFF;
-}
-
-.infos {
-  margin-left: 1.5rem;
-}
-
-.name {
-  margin-bottom: 1rem;
-  color: white;
-}
-
-.name h2 {
-  font-size: 1.3rem;
-}
-
-.name h4 {
-  font-size: 1rem;
-  color: white;
-}
-
-.text {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-
-.stats {
-  display: flex;
-  margin-bottom: 1rem;
-}
-
-.stats li {
-  min-width: 5rem;
-}
-
-.stats li h3 {
-  font-size: 0.99rem;
-}
-
-.stats li h4 {
-  font-size: 1.2rem;
-}
-
-.links {
-  display: flex;
-}
-
-.links a {
-  text-decoration: 0;
-  display: inline;
-  min-width: 200px;
-  padding: 0.6rem;
-  border: 1px solid #222;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.25s linear;
-  margin-left: 5px;
-}
-
-.links .follow,
-.links .view:hover {
-  background-color: #008A55;
-  color: #FFF;
-}
-
-.links .view,
-.links .follow:hover {
-  background-color: transparent;
-  color: white;
 }
 
 .enlaces__servicios {
@@ -6629,16 +6509,6 @@ template {
     margin: auto;
     width: 100%;
   }
-  .infos {
-    margin-left: 0;
-    margin-top: 1.5rem;
-  }
-  .links button {
-    min-width: 100px;
-  }
-  .contendido__modal__recorrido {
-    width: 90%;
-  }
 }
 .contenedor__final__compra {
   width: 60%;
@@ -6790,7 +6660,7 @@ template {
   background: #112240;
   border-radius: 10px;
   margin-top: 50px;
-  height: 500px;
+  height: 520px;
 }
 
 .descripcion__de__precio {
@@ -6815,6 +6685,14 @@ template {
 .card-text {
   color: white;
   font-weight: 700;
+}
+
+.antes {
+  color: #b71540;
+}
+
+.ahora {
+  color: white;
 }
 
 @media screen and (max-width: 900px) {

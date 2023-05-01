@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="  Venta de carros usados  Bogotá, conectamos vendedores con compradores,  !ANUNCIATE YA!">
+  <meta name="description" content="Explora nuestra selección de carros usados a la venta y encuentra tu próximo vehículo. Si estás buscando vender tu auto, nosotros te ayudamos. Anuncia tu carro usado en nuestra plataforma y llega a miles de compradores potenciales">
   <meta name="google-site-verification" content="pjfiKzcIqtbmwXzIHQRgS4BtoFvv-nM_E3Mjhpi8Uds" />
   <meta name="facebook-domain-verification" content="axfghf2epvyczsathwjx2vxr5x17xj" />
-
   <title><?php echo  $titulo ?></title>
 
 <!-- Google tag (gtag.js) -->
@@ -19,6 +18,13 @@
 
   gtag('config', 'G-VZVL3HDXBJ');
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10993083164"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-10993083164');
+  </script>
   <!-- Meta Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -52,10 +58,8 @@
           <div class="dot"></div>
 
    </div>
-  
-
 <div class="oferta__de__lanzamiento">
- <p class="titulo__promo__de__lanzamiento">!PUBLICA TU CARRO GRATIS¡</p>
+ <p class="titulo__promo__de__lanzamiento">!TE DAMOS LA BIENVENIDA CON 30 DIAS GRATIS¡</p>
 </div>
   <header class="hero">
     <nav class="nav__hero">
@@ -116,16 +120,14 @@
             </ul>
   </div>
 </div>
-    </nav>
-
-
+</nav>
 <div id="myModal" class="modal__registro__de__cuenta">
   <div class="modal__registros">
     <p class="close"><i class="far fa-times-circle"></i></p>
     <p class="titulo__crear__cuenta">Crear una cuenta en AdHoc </p>
     <div class="contenedor__btn__registros">
       <div>
-        <a href="usuario"class="btn__cuenta__registro">Crear una cuenta  <i class="fas fa-arrow-right flecha"></i></a>
+        <a href="usuario"class="btn__cuenta__registro">Crear  cuenta  <i class="fas fa-arrow-right flecha"></i></a>
       </div>
       <div>
         <a href="login-usuario"class="btn__cuenta__registro">Iniciar sesion <i class="fas fa-arrow-right flecha"></i></a>

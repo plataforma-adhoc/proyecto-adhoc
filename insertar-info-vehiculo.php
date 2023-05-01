@@ -3,15 +3,6 @@
 function insertarDatosDelVehiculo(){
 session_start();
 include'conexion-db-accent.php'; 
-if(session_status() === PHP_SESSION_NONE) {
-   // Las variables de sesión están destruidas, enviar una respuesta de error
-   header('HTTP/1.1 500 Internal Server Error');
-   exit('No se pueden enviar más datos, la sesión ha expirado.');
-}else{
-
-
-// Si las variables de sesión aún existen, procesar los datos normalmente
-// ...
 $datos = file_get_contents('php://input');
 $datos = json_decode($datos);  
 
@@ -96,16 +87,15 @@ if($nombre_usuario === "" || $id__usuario === "" || $nombre__plan === "" || $ava
  $radio__cd === "" || $pantalla__de__video === "" || $Whatsapp__uno === "" || $telefono__uno === ""){
  echo json_encode('vacios');
 }else{
-
 $insertar__contacto__vendedor = "INSERT INTO contacto__vendedor(id_usuario,whatsapp_1,whatsapp_2,telefono_1,telefono_2,nombre_paquete,estado_anuncio)
 VALUES('$id__usuario','$Whatsapp__uno','$Whatsapp__dos','$telefono__uno','$telefono__dos','$nombre__plan','$estado__anuncio')";
 $ejecutar__consulta__contacto = mysqli_query($conexion__db__accent,$insertar__contacto__vendedor);
 
 
 $insertar__datos__obligatorio = "INSERT INTO  informacion__del__vehiculo__en__venta(nombre_vendedor,foto_vendedor,id_usuario,marca_del_vehiculo,modelo_vehiculo,color_vehiculo,anio_fabricacion,matricula_del_vehiculo,ciudad_registro_matricula,ciudad_de_venta,unico_propietario,kilometros_del_vehiculo,
-precio_del_vehiculo,numero_puertas,tipo_combustible,tipo_de_caja,tipo_de_direccion,cilindraje_vehiculo,descripcion_vehiculo,estado_anuncio)
+precio_del_vehiculo,numero_puertas,tipo_combustible,tipo_de_caja,tipo_de_direccion,cilindraje_vehiculo,descripcion_vehiculo,nombre_paquete,estado_anuncio)
 VALUES('$nombre_usuario','$avatar','$id__usuario','$marca','$modelo','$color','$fecha__fabricacion','$matricula','$ciudad__matricula','$ciudad__venta','$propietario','$kilometros',
-'$precio','$numero__puertas','$combustible','$caja','$direccion','$cilindraje','$descripcion','$estado__anuncio')";
+'$precio','$numero__puertas','$combustible','$caja','$direccion','$cilindraje','$descripcion','$nombre__plan','$estado__anuncio')";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$insertar__datos__obligatorio);
 
 //SEGURIDAD DEL VEHICULO
@@ -130,10 +120,9 @@ $ejecutar__consulta__estilos = mysqli_query($conexion__db__accent,$insertar__dat
  if($ejecutar__consulta__contacto && $ejecutar__consulta && $ejecutar__consulta__seguridad && $ejecutar__consulta__equipamiento && $ejecutar__consulta__estilos && $ejecutar__consulta__fotos){
     echo json_encode('ok');
 
-
  }
 }
 }
-}
+
 insertarDatosDelVehiculo();
 

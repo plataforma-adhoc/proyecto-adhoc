@@ -2,6 +2,7 @@
 .contendor__de__vehiculos{
     width: 100%;
     height: auto;
+
 }
 .hero__textos__carros__y__camionetas{
     width: 80%;
@@ -70,18 +71,18 @@
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-evenly;
     flex-wrap: wrap;
    
 }
 
 .descripcion__del__vehiculo{
-    width: 24%;
+    width: 20%;
     margin: 20px 20px 0;
     background:$color__cards;
     border-radius: 7px;
     border: solid 2px $color__gris;
-    height:auto;
+    height:422px;
 }
 
 .contenedor__imagen__vehiculo{
@@ -101,7 +102,7 @@
 }
 .texto__segun__paquete{
     font-size: 13px;
-    color: $color__gris;
+    color: black;
     position: absolute;
     top: 0;
     left: 0%;
@@ -122,7 +123,6 @@
     line-height: 10px;
 }
 
-
 .motor{
     display: flex;
     justify-content: space-between;
@@ -142,8 +142,12 @@
   
 }
 
-.precio__del__vehiculo{
-    color: $color__gris;
+.precio__del__carro{
+    color:white;
+    font-weight:bolder;
+    font-size: 18px;
+    
+
 }
 .contenido__contacto__mas__detalles{
     width: 100%;
@@ -152,28 +156,21 @@
     margin-top: -10px;
 }
 .contactos__del__vehiculo{
-    margin: 5px 10px;
-
+margin: 5px 10px;
+  width: 20px;
 }
 .enlace__whatsapp{
     display: inline-block;
     text-decoration: 0;
-    background: #000;
-    color:$color__adhoc;
-    border-radius: 50px;
-    width: 120px;
-    padding: 10px 12px;
-    text-align:left;
-    font-size: 14px;
-    margin-left: -10px;
+    color:$color__verde;
 }
 
 .enlace__whatsapp:hover{
- color:$color__adhoc;
+ color:$color__verde;
  opacity: .7;
 }
 .fa-whatsapp{
-    font-size: 14px;
+    font-size: 25px;
 }
 
 .mas__detalles{
@@ -190,43 +187,6 @@
 .hr{
     color: $color__gris;
 }
-
-.no__resultado{
-width: 100%;
-}
-
-.imagen__no__resultados{
-    width: 30%;
-    margin-left: 35%;
-    margin-right: 35%;
-
-}
-
-.subtitulo__sin__resultados{
-    text-align: center;
-    color: white;
-}
-
-.contenedor__parrafo__sin__resultado{
-    width: 50%;
-    margin: auto;
-}
-.parrafo__sin__resultado{
-    text-align: center;
-    color: white;
-  margin-top: -2rem;
-}
-.contenedor__btn__publicar__vehiculo{
-    width: 250px;
-    margin: auto;
-}
-.publicar__vehiculo{
-   width: 100%;
-    margin-top: -5rem;
-    font-size: 15px;
-    text-align: center;
-}
-
 .enlaces__comprtir{
     width: 50%;
     display: flex;
@@ -244,10 +204,11 @@ width: 100%;
 
 .compartir{
     background: #000;
-    padding: 5px 10px;
     border-radius: 100%;
-    line-height: 30px;
+    height: 40px;
+    width: 40px;
     text-align: center;
+    line-height: 40px;
 }
 .iconos__compartir:hover{
     color:$color__gris;
@@ -289,11 +250,10 @@ width: 100%;
     width: 100%;
 
 }
+
 .title__asesoramiento{
     font-size: 20px;
     color:$color__adhoc;
-
-
 }
 
 .borde__derecho{
@@ -406,6 +366,12 @@ color: $color__gris;
     line-height: 30px;
     font-weight: 600;
   }
+
+  @media screen and (max-width:1400px){
+    .descripcion__del__vehiculo{
+        width: 21%;
+    }
+  }
 @media screen and (max-width:1200px){
     .contendor__de__vehiculos{
         margin-top: -120px;
@@ -443,8 +409,7 @@ color: $color__gris;
 }
 
 @media screen and (max-width:900px) {
-    
-  
+
     // .contenedor__del__buscador{
     //     margin-top: -15rem;
     // }
@@ -462,7 +427,7 @@ color: $color__gris;
     }
     .enlace__whatsapp{
         font-size: 13px;
-        width: 200px;
+        width: 150px;
     }
     .kilometraje__y__año{
         font-size: 13px;
@@ -471,6 +436,9 @@ color: $color__gris;
     }
     .kilometros,.modelo__del__vehiculo,.placas__del__vehiculo{
         font-size: 13px;
+    }
+    .precio__del__carro{
+        font-size: 18px;
     }
     .asesoramiento{
         width: 100%;
@@ -501,6 +469,11 @@ color: $color__gris;
       .contendor__de__vehiculos{
         margin-top: -350px;
       }
+      .descripcion__del__vehiculo{
+        width: 47%;
+        margin: 10px 5px 10px 0;
+    
+    }
       .asesoramiento{
         width: 100%;
         margin-top: -10px;
@@ -520,7 +493,9 @@ color: $color__gris;
     //     width: 100%;
     // }
 .descripcion__del__vehiculo{
-    width: 90%;
+    width: 49%;
+    margin: 10px 2px 10px 0;
+
 }
 .subtitulo__vehiculos{
     text-align: center;
@@ -542,6 +517,13 @@ font-size: 2rem;
 .fa-camera-retro{
     margin-top: 50px;
 }
+
+}
+@media screen and (max-width:500px) {
+    .descripcion__del__vehiculo{
+        width: 90%;
+        margin: 10px  auto 10px auto;
+    }   
 }
 
 @media screen and (max-width:400px) {
@@ -562,4 +544,5 @@ font-size: 2rem;
     .buscador{
         width: 100%;
     }
+    
 }

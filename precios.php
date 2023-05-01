@@ -33,9 +33,22 @@ include'layout/nabvar.php'; ?>
     <p class="card-text"><i class="far fa-check-circle"></i> Puedes tener beneficios disponibles en el momento</p>
     <p class="card-text"><i class="far fa-check-circle"></i> Elige si quieres que tu vehiculo  sea publicado en nuestras  redes sociales</p>
     <p class="card-text"><i class="far fa-check-circle"></i> Mide el rendimiento de tu anuncio </p>
-
-
-
+    <?php
+    include'conexion-db-accent.php';
+  $consulta__planes = "SELECT id_paquete, nombre_paquete, valor_paquete,descripcion_paquete,descuento FROM planes__de__publicaciones WHERE activo = '1' AND nombre_paquete = 'PREMIUN'";
+  $ejecutar = mysqli_query($conexion__db__accent,$consulta__planes);
+   $fila__planes = mysqli_fetch_array($ejecutar);
+   $nombre__paquete = $fila__planes['nombre_paquete'];
+    $valor__paquete = $fila__planes['valor_paquete'];   
+     $descripcion__paquete = $fila__planes['descripcion_paquete'];
+     $descuento = $fila__planes['descuento'];
+     $precio__descuento = $valor__paquete - (($valor__paquete * $descuento) / 100 );  ?>
+     <p class="antes">Antes <sup>$</sup> <del><?php  echo $valor__paquete;  ?> </del></p>
+     <small class="text-success">HOY</small>
+     <h2 class="ahora">
+      <?php  echo number_format($precio__descuento,2,'.',',') ?> 
+       <small class="text-success"><?php  echo $descuento ?>% de descuento</small>
+        </h2>
   </div>
   <br>
 </div>

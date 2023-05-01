@@ -1,5 +1,4 @@
 
-
 export function datos__obligatorios__del__vehiculo(){
   var url__servidor = 'https://adhoc.com.co/'
     let formulario__datos__obligatorios = document.getElementById('formulario-datos-basicos-vehiculo')
@@ -43,11 +42,9 @@ export function informacion__adicional__vehiculo(){
             body:form__data
         }).then(respuesta => respuesta.json())
         .then(data =>{
-            if(data === 'ok'){
-              console.log(data)
+            if(data === 'ok'){              
                 let info__adicional = document.getElementById('button-info-adicional');
                 let info = document.getElementById('button-info');
-
                 info__adicional.innerHTML= `
                  <button type="button" class="step__button step__button--next" data-to_step="3"
                 data-step="2">Siguiente</button>
@@ -60,66 +57,13 @@ export function informacion__adicional__vehiculo(){
 }
 
 export function guardar__imagenes__vehiculo(){
-  // let boton__imagenes =  document.getElementById('button-imagenes')
-  // if (boton__imagenes) {
-  //   boton__imagenes.addEventListener('click', (evento) => {
-  //     evento.preventDefault();
-  // alert('esta funcionado')
-  //   });
-  // }
-
-  // document.querySelector("#files").addEventListener("change", (e) => {
-  //   if (window.File && window.FileReader && window.FileList && window.Blob) {
-  //     const files = e.target.files;
-  //     const output = document.querySelector("#result");
-  //     output.innerHTML = "";
-  //     let imagesArr = []; // matriz de imágenes en formato base64
-  
-  //     if (files.length > 10) {
-  //       let error__fotos = (document.getElementById("error-fotos").innerHTML = `
-  //         <div class="alert alert-danger alert-dismissible fade show" role="alert">
-  //           <strong>Ups</strong> Nos dimos cuenta que superaste el límite de imágenes
-  //           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  //         </div>
-  //       `);
-  //     } else {
-  //       for (let i = 0; i < files.length; i++) {
-  //         if (!files[i].type.match("image")) continue;
-  //         const picReader = new FileReader();
-  //         picReader.addEventListener("load", function (event) {
-  //           const picFile = event.target;
-  //           const div = document.createElement("div");
-  //           div.innerHTML = `<img class="thumbnail" src="${picFile.result}" title="${picFile.name}"/>`;
-  //           output.appendChild(div);
-  
-  //           // convertir la imagen a base64 y agregarla a la matriz
-  //           const base64Image = picFile.result.replace(/^data:image\/(png|jpeg|jpg);base64,/, "");
-  //           imagesArr.push(base64Image);
-  //         });
-  //         picReader.readAsDataURL(files[i]);
-  //         // guardar la matriz de imágenes en el localStorage
-  //         guardarImagenesEnLocalStorage(imagesArr);
-  //       }
-  //     }
-  
-  //     if (files.length === 0) {
-  //       console.log("vacio");
-  //       return false;
-  //     }
-  //   } else {
-  //     alert("Tu navegador no soporta la API de archivos");
-  //   }
-  // });
-  
- 
   var url__servidor = 'https://adhoc.com.co/'
   let guardar__imagenes =  document.getElementById('formulario-insertar-imagenes')
- 
   if(guardar__imagenes){
       guardar__imagenes.addEventListener('submit',function(evento){
         let form__data = new FormData(document.getElementById('formulario-insertar-imagenes'))
       evento.preventDefault();
-      fetch('insert-imagenes',{
+      fetch(url__servidor+'insert-imagenes',{
           method:'POST',
           body:form__data
       }).then(respuesta => respuesta.json())
@@ -142,23 +86,7 @@ export function guardar__imagenes__vehiculo(){
 }
 }
 
-// function guardarImagenesEnLocalStorage(imagenes) {
-//   localStorage.setItem("imagenes", JSON.stringify(imagenes));
 
-//   const imagesStr = localStorage.getItem("imagenes");
-//   if (imagesStr === null || imagesStr === undefined) {
-//     // no hay imágenes almacenadas
-//     console.log("No hay imágenes almacenadas en el localStorage");
-//   } else {
-//     // hay imágenes almacenadas
-//     try {
-//       const imagesArr = JSON.parse(imagesStr);
-//       console.log(`Hay ${imagesArr.length} imágenes almacenadas en el localStorage`);
-//     } catch (e) {
-//       console.error(`Error al parsear el objeto JSON: ${e}`);
-//     }
-//   }
-// }
 
 export function contacto__vendedor(){
   var url__servidor = 'https://adhoc.com.co/'
@@ -167,7 +95,7 @@ export function contacto__vendedor(){
         contacto__vendedor.addEventListener('submit',function(evento){
           let form__data = new FormData(document.getElementById('formulario-contactos'))
         evento.preventDefault();
-        fetch('insert-contacto-vendedor',{
+        fetch(url__servidor+'insert-contacto-vendedor',{
             method:'POST',
             body:form__data
         }).then(respuesta => respuesta.json())

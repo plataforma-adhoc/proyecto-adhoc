@@ -98,7 +98,7 @@ if(medios__de__pago){
 medios__de__pago.addEventListener('click',function(){
 var  handler = ePayco.checkout.configure({
   				key: '3ca56470e406e78da32222a6642ef3b7',
-  				test: true
+  				test: false
   			});
         var data={
           //Parametros compra (obligatorio)

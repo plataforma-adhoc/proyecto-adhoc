@@ -9,6 +9,11 @@ if(!isset($_SESSION['id_usuario'])){
     if(mysqli_num_rows($resultado__consulta) > 0){
       $datos__resultado = mysqli_fetch_array($resultado__consulta);
 }?>
+<!-- Event snippet for Suscripcion conversion page -->
+
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-10993083164/cbo_CLC0h5oYEJzG9Pko'});
+</script>
 
 <div class="container contenedor__dashboard">
     <h2 class="vista__nombre__usuario"><i class="fas fa-user-astronaut"></i> Hola, <strong> <?php echo ucwords($datos__resultado['nombre_usuario'])?></strong></h2>
@@ -19,15 +24,12 @@ if(!isset($_SESSION['id_usuario'])){
         <a href="publicar-vehiculos?idu=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__anunciar__carro">
           <div class="card__dashboard">
             <div class="contenido">
-              <div>
+              <div class="contenido__texto__card__dashboard">
               <i class="fas fa-car historial__de__vehiculos"></i>
               </div>
               <div>
-                <br>
-                <p>Anunciar un carro</p>  
-
-              </div>
-    
+                <p class="texto__cards"> Anunciar un carro</p>  
+              </div>    
             </div>
         </div>
       </a>
@@ -36,12 +38,11 @@ if(!isset($_SESSION['id_usuario'])){
     <a href="mis-carros-anunciados?idu=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__anunciar__carro">
         <div class="card__dashboard">
           <div class="contenido">
-            <div>
-            <i class="fas fa-history historial__de__vehiculos"></i>
+            <div class="contenido__texto__card__dashboard">
+            <i class="fas fa-history fa-rotate-90 historial__de__vehiculos"></i>
             </div>
            <div>
-             <br>
-             <p>Historial de anuncio</p> 
+             <p class="texto__cards"> Historial  anuncios</p> 
            </div>
   
           </div>
@@ -49,17 +50,15 @@ if(!isset($_SESSION['id_usuario'])){
     </a>
 
   </div>
-
   <div class="contenido__card__dashboard">
     <a href="beneficios?idu=<?php  echo $datos__resultado['id_usuario'] ?>" class="enlace__anunciar__carro">
         <div class="card__dashboard">
           <div class="contenido">
-            <div>
+            <div class="contenido__texto__card__dashboard">
             <i class="fas fa-gifts historial__de__vehiculos"></i>
             </div>
            <div>
-             <br>
-             <p>Beneficios</p> 
+             <p class="texto__cards"> Ver beneficios</p> 
            </div>
   
           </div>
@@ -67,7 +66,6 @@ if(!isset($_SESSION['id_usuario'])){
     </a>
 
   </div>
-   
   </div>
   <div class="contenedor__graficas"> 
     <br>

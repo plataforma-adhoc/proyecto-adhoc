@@ -134,7 +134,6 @@ margin-right: 5px;
 
   }
 
-
   .vista__nombre__usuario{
     color:$color__gris;
     font-size:25px;
@@ -156,7 +155,7 @@ margin-right: 5px;
 }
 .contenido__card__dashboard{
   margin-left: 10px;
-  width: 20%;
+  width: 17%;
   margin-top: 10px;
 }
 .card__dashboard{
@@ -167,11 +166,15 @@ margin-right: 5px;
 }
 
 .contenido{
-  margin-left: 10px;
-  display: flex;
- align-items: center;
+ width: 100%;
+ padding-top: 20px;
 }
 
+.contenido__texto__card__dashboard{
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
 .enlace__anunciar__carro{
   width: 100%;
   text-decoration: 0;
@@ -185,7 +188,8 @@ margin-right: 5px;
   font-size: 20px;
   background:$color__fondo;
   border-radius: 100px;
-  padding: 10px;
+  padding: 8px;
+  text-align: center;
 }
 
 
@@ -195,7 +199,11 @@ margin-right: 5px;
   transition: all 0.5s;
 }
 
+.texto__cards{
+  font-size: 13px;
+  text-align: center;
 
+}
   .titulo__dashboard{
     font-size:$tamaño__fuente__subtitulo;
     color:$color__gris;
@@ -333,9 +341,7 @@ margin-right: 5px;
   .contenedor__card__dashboard{
     width: 100%;
   }
- .contenido__card__dashboard{
-  width: 40%;
- } 
+
  .myChart{
   width: 45%;
 
@@ -350,6 +356,9 @@ margin-right: 5px;
 }
 
 @media screen and (max-width:900px) {
+  .contenido__card__dashboard{
+    width: 21%;
+   } 
   .myChart{
     width: 100%;
   margin-top: 1rem;
@@ -371,14 +380,46 @@ margin-right: 5px;
 
 
 
+@media screen and (max-width:650px) {
+  .contenido__card__dashboard{
+    width: 28%;
+    margin-right: 3px;
+   }
+   .texto__cards{
+    font-size: 11px;
+   }
+}
+
   @media screen and (max-width: 400px) {
     .contenedor__dashboard{
-      margin-top: -600px;
+      margin-top: -700px;
+      
     }
-    .contenido__card__dashboard{
+    .contenedor__card__dashboard{
       width: 100%;
+      display: flex;
+      justify-content: space-between;
     }
+   .contenido__card__dashboard{
+    width: 33%;
+    margin:0;
+   }
+   .historial__de__vehiculos{
+    font-size: 15px;
+   }
+   .texto__cards{
+    font-size: 8px;
+   }
+  
    
   }
 
-
+@media screen and (max-width:300px) {
+  .contenido__card__dashboard{
+    width: 32%;
+    margin:0;
+   }
+   .contenido__texto__card__dashboard{
+    width: 100%;
+   }
+}

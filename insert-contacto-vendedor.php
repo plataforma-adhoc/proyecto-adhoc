@@ -16,4 +16,5 @@ if($datos__contato){
 echo json_encode('ok');
 }
 }
+guardarDatosDecontacto();
 ?>

@@ -21,7 +21,7 @@
 
 .cards__blog{
     background:$color__fondo__blog;
-    width: 32%;
+    width: 23%;
     height:auto;
     overflow: hidden;
     margin: .5rem;
@@ -39,7 +39,7 @@
     color: white;
     font-weight: bolder;
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: -4rem;
 }
 .enlace__pagina__blog:hover{
@@ -47,16 +47,20 @@
     text-decoration: underline;
     
 }
-@supports(object-fit: cover){
-    .cards__blog img{
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-    }
+
+.imagen__vehiculos__blog{
+    display: inline-block;
+    width: 100%;
+    height: 500px;
+
 }
-
-
-
+.imagen__vehiculos__blog img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 10px;
+   display: block;
+}
 // BLOG COMO VENDER UN CARRO
 .contenido__como__vender__un__carro{
     width: 100%;
@@ -127,7 +131,7 @@ margin-top: -5rem;
 .subtitulo__h3__blog{
     color: white;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .parrafo__compartir{
@@ -336,15 +340,32 @@ font-weight: bolder;
 }
    
 }
+@media screen and (max-width:900px){
+    .imagen__vehiculos__blog{
+        height: 270px;
+    }
+    .texto__del__blog{
+        font-size: 17px;
+    }
+    }
+
+@media screen and (max-width:700px){
+    .imagen__vehiculos__blog{
+        height: 200px;
+    }
+    .texto__del__blog{
+        font-size: 14px;
+    }
+    }
 
 @media screen and (max-width:600px) {
     .contenedor__cards__blog{
         flex-wrap: wrap;
 
     }
-   .cards__blog{
-    width: 100%;
-   } 
+    .cards__blog{
+        width: 46%;
+       } 
    .formulario__newsletter{
      width: 100%;
    }
@@ -357,4 +378,22 @@ font-weight: bolder;
     margin-left: 5px;
     margin-top: 10px;
 }
+}
+
+@media screen and (max-width:450px) {
+    .cards__blog{
+        width: 44%;
+       } 
+       .enlace__pagina__blog{
+        font-size: 12px;
+       }
+}
+
+@media screen and (max-width:300px) {
+    .cards__blog{
+        width: 40%;
+       } 
+       .enlace__pagina__blog{
+        font-size: 12px;
+       }
 }

@@ -9,12 +9,11 @@ include'nabvar.php'; ?>
     en un proceso muy complejo.
    
 </h2>
-<a href="../publicar-vheiculos" class="enlace__a__vender__mi__carro">Vender mi carro</a>
+<a href="../publicar-vehiculos" class="enlace__a__vender__mi__carro">Vender mi carro</a>
 </div>
 <div class="como__vender__un__carro">
 <img src="../img/como__vender__un__carro.png" alt="personas con computador y celular en las manos">
 </div>
-
 </section>
 </header>
 <main class="container contenido__principal">

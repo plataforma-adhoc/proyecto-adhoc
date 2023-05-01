@@ -1,33 +1,31 @@
 
-
 .contenedor__datos__perfil{
     width: 90%;
     background:$color__menu__dashboard;
     border-radius: 7px;
    height: auto;
-   margin-top: 30px;
+   margin-top: -500px;
 }
-
-
-// .subtitulo__ad__panel{
-//     font-size:$tamaño__fuente__subtitulo;
-//     color:$color__gris;
-//     font-weight: bold;
-//     position:absolute;
-//     top: 250px;
-//     left: 200px;
-// }
+.card__solicitudes{
+    display: flex;
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    background:$color__menu__dashboard;
+    max-width: 100%;
+    height: auto;
+    min-width:300px;
+    margin: 1rem;
+    position: relative;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    }
+    
 .datos__de__perfil{
     width: 90%;
     margin: -80px auto 20px 20px;
    height: auto;
 }
 
-.otros__datos__de__perfil{
-    width: 80%;
-   margin-top: -500px;
-   margin-left: 12%;
-}
 
 .parrafo__de__mi__cuenta{
     color: white;
@@ -38,21 +36,38 @@
     border-radius: 7px;
 
 }
+  .infos {
+        margin-left: 1.5rem;
+        }
+.name {
+margin-bottom: 1rem;
+color: white;
+}
+
+.name h2 {
+font-size: 1rem;
+}
+.name h4 {
+font-size: 1rem;
+color: white;
+}
 
 .enlaces__de__mi__cuenta{
-    text-decoration: 0;
+   text-decoration: 0;
     display: inline-block;
-    color: white;
-    font-size:17px;
-    background: $color__menu__dashboard;
+    color:black;
+    font-size:15px;
+    background: $color__adhoc;
     border-radius: 7px;
     padding: 10px;
-   width: 19%;
+   width: 15%;
    margin: 20px 20px 0 0;
+   transition: ease-in-out 0.5s;
 }
 
 .enlaces__de__mi__cuenta:hover{
     color: white;
+    background: #000;
 }
 .parrafo__de__mi__cuenta i{
     font-size: 25px;
@@ -60,11 +75,20 @@
 
 }
 
-.enlaces__de__mi__cuenta i{
-    font-size: 22px;
-    padding:  0 7px 0 0;
-}
-
+.links a {
+    text-decoration: 0;
+    display: inline;
+    min-width: 200px;
+    padding: .6rem;
+    border: 1px solid #222;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .25s linear;
+    margin-left: 5px;
+    background: $color__verde;
+    color: white;
+    }
 .perfil{
     width: 100%;
     
@@ -82,62 +106,6 @@
 }
 
 
-.redes__sociales{
-    width: 70%;
-    margin: 0 2% 0 2%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-.enlace__de__redes__sociales{
-    display: inline-block;
-    text-decoration: 0;
-    font-size: 25px;
-    margin-top: 20px;
-    background: #000;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    
-}
-.enlace__de__redes__sociales:hover{
-    background:$color__verde;
-    transition: ease-in-out 0.5s;
-     opacity: 0.9;
-}
-
-
-.fa-facebook{
-color: #4267B2;
-}
-
-.fa-facebook:hover{
-color: #4267B2;
-
-}
-
-.fa-instagram{
-    color: #E1306C;
-}
-
-.fa-instagram:hover{
-    color: #E1306C;
-}
-
-
-.fa-twitter{
-    color: #1DA1F2;
-}
-
-.fa-twitter:hover{
-    color: #1DA1F2;
-
-}
-
-
 
 .datos__del__perfil__de__usuario{
     border-radius: 7px;
@@ -145,87 +113,13 @@ color: #4267B2;
 }
 
 .datos__basicos{
-color: $color__gris;
 line-height: 10px;
-font-size: 18px;
-}
-
-.quien__soy{
-line-height: 20px;
-width: 300px;
-height: auto;
-font-size: 16px;
+font-size: 15px;
 }
 
 .fecha__registro{
     font-size: 12px;
 }
-
-
-
-.contenedor__opinion,.contenedor__formulario__datos__de_pago{
-    background:$color__menu__dashboard;
-    border-radius: 7px;
-    margin-top: 50px;
-    height: auto;
-   
-}
-
-.contenedor__opinion::-webkit-scrollbar{
-    width: 10px;
-   
-}
-
-.contenedor__opinion::-webkit-scrollbar-thumb{
-    background:$color__dark;
-    border-radius: 7px;
-}
-
-.contenedor__opinion{
-    overflow-y: scroll;
-    height: 550px;
-    
-}
-
-.contenido__comentario{
-  width: 40%;
-  margin: auto;
-}
-
-
-.contenedor__formulario__datos__de_pago{
-  height: 400px;
-}
-
-.titulo__opinion{
-text-align: center;
-color: white;
-font-size:$tamaño__fuente__subtitulo;
-}
-
-.opinion{
-    width: 100%;
-    height: auto;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    border-top-right-radius: 25px;
-    background:$color__fondo;
-    margin-top: 30px;
-}
-
-
-.item__opinion{
-    width: 95%;
-    margin:auto;
-  color: $color__gris;
-
-}
-
-.nombre__item__opinion{
-    line-height: 30px;
-}
-
-
 
 .parrafo{
     width: 80%;
@@ -243,107 +137,53 @@ font-size:$tamaño__fuente__subtitulo;
 
 
 
-// datos de metodo de pago del conductor
-.contenedor__formulario__datos__de_pago{
-height: auto;
-}
 
-.parrafo__metodo__pago{
-    text-align: center;
-    color: $color__gris;
-}
-
-.metodo__de__pago{
-    width: 80%;
-    margin: -20px auto 0 auto;
-}
-.seleccionar{
-    border: 0;
-    height: 50px;
-    margin: 5px  0 0 0;
-    border: none;
-    border-bottom: 2px solid $color__dark;
-    background:$color__formularios;
-    color: white;
-}
-
-.seleccionar:focus{
-    outline: 0;
-}
-
-.item__info__pagos{
-    width: 97%;
-    background:$color__accent;
-    margin: 50px  auto 0 auto;
-    padding: 5px;
-    color: white;
-    font-size: 20px;
-    border-radius: 7px;
-
-}
-
-.item__info__pagos p{
-    margin: 10px  0 0 0;
-    height: 40px;
-}
-
-
-
-// @media screen and(max-width:1300px) {
-//    .contenedor__datos__perfil{
-//     width: 90%;
-//     margin-top: -500px;
-//    } 
-//    .enlace__editar__perfil{
-//     width: 70%;
-//    }
-   
-// }
 
 @media screen and (max-width:1500px) {
-    .btn__back{
-        left: 5%;
-      } 
-    
-      .otros__datos__de__perfil{
-        margin-left: 5%;
-        margin-top: -450px;
-    }
-    
     .enlaces__de__mi__cuenta{
         width: 25%;
     }  
      
 }
 
+
+
+@media screen and (max-width:1000px) {
+    .enlaces__de__mi__cuenta{
+        width: 32%;
+        font-size: 15px;
+    }   
+}
+
 @media screen and (max-width:900px) {
-.contenedor__datos__perfil{
-    height:auto;
+    .contenedor__datos__perfil{
+        height:auto;
+    }
+    .datos__de__perfil{
+        height: auto;
+    } 
+    
+    .infos {
+        margin-left: 0;
+        margin-top: 1.5rem;
+      }
+      .links button {
+        min-width: 100px;
+      }
+    .enlaces__de__mi__cuenta{
+        width: 32%;
+        font-size: 15px;
+    } 
+    }
+@media screen and (max-width:800px){
+    .enlaces__de__mi__cuenta{
+        width: 35%;
+        font-size: 15px;
+    }
 }
-.datos__de__perfil{
-    height: auto;
-} 
-  .btn__back{
-    left: 5%;
-  }
-.item__info__pagos{
-    height: 60px;
-}
-.otros__datos__de__perfil{
-    margin-left: 5%;
-    margin-top: -450px;
-}
-
-.enlaces__de__mi__cuenta{
-    width: 32%;
-    font-size: 17px;
-} 
-}
-
-
 
 @media screen and (max-width:700px) {
-   
+ 
     .info__perfil{
         width: 70%;
         margin-top: 20px;
@@ -392,21 +232,25 @@ height: auto;
  
  
  @media screen and (max-width:500px) {
-    .opinion{
-        width: 90%;
-        background: #000;
-        margin: auto;
-    }
     .datos__de__perfil{
         width: 100%;
-        height: 800px;
-    }
-    .otros__datos__de__perfil{
-        margin-top: -450px;
     }
    .enlaces__de__mi__cuenta{
     font-size: 12px;
     width: 40%;
    }
+   
+ }
+
+ @media screen and (max-width:330px) {
+    .contenedor__datos__perfil{
+        height: 600px;
+    }
+
+.infos{
+
+    margin-left: -1rem;
+    width: 100%;
+}
    
  }

@@ -1,8 +1,7 @@
 <?php 
 $titulo = "AdHoc | venta de carros usados";
  include'layout/nabvar.php'; 
-?>
-   
+?> 
   <section class="hero__main__vehiculos"> 
       <img src="./img/carros__y__camionetas.webp" alt="camioneta 4x4 " class="img__carros__y__camionetas">
             <div class=" container hero__textos__carros__y__camionetas">
@@ -40,6 +39,7 @@ while($fila = mysqli_fetch_array($ejecutar__consulta)){
     <div class="descripcion__del__vehiculo">
     <div class="contenedor__imagen__vehiculo">
          <img src="<?php echo $fila__fotos['foto_1'] ?>" alt="Foto portada del carro usado en venta" class="imagen__del__vehiculo">
+         
          <?php if($fila['nombre_paquete'] ==="PREMIUN"){ ?>
           <p class="texto__segun__paquete"><i class="fas fa-info-circle"></i> Patrocinado <?php echo ucwords($fila['nombre_vendedor'])?> </p>
 
@@ -65,13 +65,10 @@ while($fila = mysqli_fetch_array($ejecutar__consulta)){
 
   </div>
 
-  <div>
-    <p class="modelo__del__vehiculo"><i class="fas fa-dollar-sign"></i> <?php echo number_format($fila['precio_del_vehiculo'],2,'.','.') ?></p>
-  </div>
   </div>
   <div class="contenido__contacto__mas__detalles">
     <div class="contactos__del__vehiculo">
-      <a href="https://api.whatsapp.com/send?phone=numero<?php echo $fila__contactos['whatsapp_1']?>&text=mensaje=Hola vi el anuncio de tu vehiculo en AdHoc" class="enlace__whatsapp"><i class="fab fa-whatsapp" target="_blank"></i> Contactar</a>
+      <a href="https://api.whatsapp.com/send?phone=numero<?php echo $fila__contactos['whatsapp_1']?>&text=mensaje=Hola vi el anuncio de tu vehiculo en AdHoc" class="enlace__whatsapp"><i class="fab fa-whatsapp" target="_blank"></i></a>
       </div>
      <a href="detalles-usado?idp=<?php echo $fila['id_publicacion_vehiculo']?>&idu=<?php echo $fila['id_usuario']?>" class="mas__detalles"><i class="fas fa-plus"></i> Mas detalles
      </a>
@@ -94,29 +91,16 @@ while($fila = mysqli_fetch_array($ejecutar__consulta)){
 
     </div>
   </div>
+  <div>
+  <p class="modelo__del__vehiculo precio__del__carro"><i class="fas fa-dollar-sign"></i> <?php echo number_format($fila['precio_del_vehiculo'],2,'.','.') ?></p>
+</div>
 </div>
 </div>
 <br>
 </div>
-<?php } ?>
-<?php }else{ ?>
-  <div class="container no__resultado">
-      <img src="./img/no__resultados__de__busqueda.svg" alt=" ilustracion busqueda " class="imagen__no__resultados">   
-      <h2 class="subtitulo__sin__resultados"><b>No hay vehiculos activos en el momento </b></h2></div>
-      <div class="contenedor__parrafo__sin__resultado">
-        <p class="parrafo__sin__resultado">Quieres vender tu carro por el precio justo? </p> 
-        <br>
-        <p class="parrafo__sin__resultado">Publicalo gratis y vendelo </p> 
-        <br><br>
-        <div class="contenedor__btn__publicar__vehiculo">
-          <a href="publicar-vehiculos" class="cta publicar__vehiculo">Publicar mi carro</a>
 
-      </div> 
-
-      </div>
-      
 <?php } ?>
-      
+<?php } ?> 
  </div>
  <div class="contenedor__asesoramiento" id="asesoramiento">
   <h2 class="subtitulo__asesoramiento">Como vender tu carro, rapido</h2>
@@ -195,8 +179,6 @@ Establece un precio justo para el carro. Investiga los precios de mercado de car
 </div>
 </div>
  
-
-
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-fullscreen">

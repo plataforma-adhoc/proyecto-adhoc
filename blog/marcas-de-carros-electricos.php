@@ -8,7 +8,7 @@ include'nabvar.php';?>
 <h2 class="subtitulo__como__vender__un__carro">Conoce las marcas fabricantes  de vehiculos 100% electricos.
  
 </h2>
-<a href="../publicar-vheiculos" class="enlace__a__vender__mi__carro">Vender mi carro</a>
+<a href="../publicar-vehiculos" class="enlace__a__vender__mi__carro">Vender mi carro</a>
 </div>
 <div class="como__vender__un__carro">
 <img src="../img/marcas__de__carros__electricos.jpg" alt="ilustracion de carros electricos">
@@ -19,45 +19,34 @@ include'nabvar.php';?>
 <main class="container contenido__principal">
   <section class="tarjeta__del__contenido">
     <div class="contenedor__de__texto__del__blog">
-        <p class="texto__del__blog">Un carro electrico es un automóvil equipado con uno o mas motores electricos, proporcionandole una aceleración rápida y  continua.
-          En diciembre de 2019 circulabán en el mundo cerca de  <strong>7,2 millones </strong> de vehiculos electricos en el mundo incluyendo los 100% electricos y los hibridos,
-          china tiene la mayor cantidad de carros electricos en uso con alrededor de <strong>3,4 millones</strong> seguido de el viejo continente con <strong>1,7 millones</strong> <br>
-         y etados unidos con <strong>1, 5 millones</strong>
+        <p class="texto__del__blog">
+        Las marcas de carros eléctricos se han convertido en una tendencia creciente en la industria automotriz en los últimos años. 
+        Con el aumento de la conciencia ambiental y la necesidad de reducir las emisiones de gases de efecto invernadero, 
+        los carros eléctricos se han convertido en una opción cada vez más popular para los consumidores.
         </p>
 
 <br>
-<h3 class="subtitulo__h3__blog">Historia de los carros electricos</h3>
-<p class="texto__del__blog">Los primeros vehiculos electricos surguiron en la decada de 1880,fueron populares a partir del siglo<strong>XIX</strong> y a comienzos del siglo <strong>XX</strong>,
-luego llegaron los avances en los motores de combustion intierna, sobre todo con la introducción del motor de arranque elcétrico y la produccion en masa <br>
-de los carros a gasolina más barratos, llevaron al declive el uso  de los  carros electricos. El vehiculo electrico fue el primero en desarrollarse incluso antes de la llegada
-del motor de cuatro tiempos sobre el que Diesel (motor diésel) y Otto (gasolina) estan basados los motores actuales, entre los años <strong>1832 y 1839</strong> (todavia se deconoce la fecha exacta).
-Un hombre de negocios escocés <strong>Robert Anderson </strong>, invento el primer  vehiculo electrico <strong>100%</strong> puro.
-<br><br>
-La mejora de la bateria electrica por los franceses <strong>Gaston Planté</strong> en <strong>1859</strong> y <strong>Camille Faure</strong> en <strong>1881</strong> abrio
-nuevos caminos para los vehiculos electricos. En Exposicion Mundial en Paris en <strong>1867</strong>, el inventor austriaco <strong>Franz Kravogl</strong> mostró un 
-de dos ruedas con un motor electrico. <strong>Francia y gran Bretaña fueron los primeros paises en apoyar el desarrollo generalizado de vehiuclos de motor electrico </strong>. 
 
-<br>
-Los autmoviles elélectricos producidos en estados unidos por <strong>Antony electric</strong>,<strong>Edison</strong> y muchoas más durante el comienzo de siglo <strong>XX</strong>
-tuvieron muy poco exito comercial. Debido a las limitaciones tecnlogicas, la velocidad maxima de estos vehiculos se limitaba a uns <strong>32 km/h</strong>,
-por tal motivo estaban dirigidos a la clase alta y con frecuencia se comercializaban como vehiculos adecuados  para las mujeres debido a su facil manejo a 
-diferencia de los vehiculos de motor de combustion interna, ya que no requerian de un arranque manual con manivela que se requerian en epoca.
-<div class="imagen__ilustrativa__blog">
-  <img src="../img/carro__electrico__edison__1913.jpg" alt="carro electrico de edison 1913">
-  <p class="texto__carro__electrico__edison">Thomas Edison junto a un carro electrico en 1913</p>
-</div>
+<p class="texto__del__blog">
+Una de las marcas de carros eléctricos más populares es Tesla. Con sus modelos de alta gama y su impresionante tecnología, 
+Tesla ha liderado el mercado de los carros eléctricos durante años. Sus modelos, incluyendo el Model S, Model X, Model 3 y Model Y, 
+ofrecen una amplia gama de características y opciones personalizadas.
+
 </p>
 <br>
 <h3 class="subtitulo__h3__blog">Algunas marcas de vehiculos electricos</h3>
-<p class="texto__del__blog">La viabilidad comercial de los vehiculos eléctricos, en terminos de precio como enterminos de carga ha seguido en aumento 
-  a un ritmo constante hasta el momento, aun que hasta el momento el liderazgo lo tiene el gigante <strong>Estado unidense TESLA</strong>, y es el unico de este pais que se encuentra en el ranking
-  las otras posiciones se la rifan los <strong>Asiaticos </strong> y <strong>Alemanes</strong>, BMW y wolkswagen.
+<p class="texto__del__blog">Otra marca que ha estado ganando terreno en el mercado de los carros eléctricos es Nissan. 
+  Su modelo LEAF ha sido uno de los carros eléctricos más vendidos del mundo desde su lanzamiento en 2010. 
+  El LEAF ofrece una excelente economía de combustible, 
+  un amplio espacio interior y una gran capacidad de carga.
   <br>
-  En el momento estas son algunas de las marcas fabricantes vehiculos electricos lideres del mercado
+  Otras marcas que están ganando terreno en el mercado de los carros eléctricos incluyen BMW, Chevrolet y Ford. 
+  BMW ofrece una amplia gama de modelos eléctricos, incluyendo el i3 y el i8, mientras que Chevrolet tiene su modelo Bolt EV, 
+  y Ford tiene el Mustang Mach-E.
 </p>
 <h3 class="subtitulo__h3__blog">1. Tesla</h3>
 <div class="vehiculos__electricos">
-    <img src="../img/carro__electrico__tesla.webp" alt="carro Tesla electrico">
+    <img src="../img/carro__electrico__tesla.jpg" alt="carro Tesla electrico">
 </div>
 <p class="texto__del__blog">
   Tesla es lider indiscutible en la fabricacion y desarrollo de carros electricos, tambien es el más competitivo por otras razones,entre ellas por que 
@@ -120,6 +109,13 @@ La movilidad electrica de la compañia suministra vehiculo adsequibles pero robu
   precio medio : <strong>Desde 43.000 Euros</strong><br>
   Autonomia : <strong>450 Kilómetros</strong><br>
 </p>
+<br><br>
+<p class="parrafo__compartir">En resumen, las marcas de carros eléctricos están transformando el mercado automotriz y 
+  proporcionando a los consumidores una alternativa más ecológica y sostenible a los coches con motor de combustión interna. 
+  A medida que aumenta la conciencia sobre el cambio climático y la necesidad de reducir las emisiones de gases de efecto invernadero,
+   es probable que la demanda de carros eléctricos siga creciendo en el futuro, 
+  lo que dará lugar a nuevas innovaciones y avances en la tecnología de los carros eléctricos</p>
+  <br>
    <p class="parrafo__compartir"> Si te ha gustado no olvides  compartir en</p>
   <div class="contenedor__compartir__en__redes__sociales">
     <div class="enlaces__compartir">

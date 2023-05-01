@@ -26,7 +26,7 @@ include'conexion-db-accent.php'; ?>
                     <h2 class="step__title">Ingrese los datos básicos de su vehiculo</h2>
                 </div>
                 <div class="step__body">
-                    <div class="form-floating mb-3">
+                    <div class="form-floating mb-1">
                         <input type="text" class="form-control step__input marca" id="floatingInput"
                             placeholder="Ej: Toyota" name="marca">
                         <label for="floatingInput">Marca del carro *</label>
@@ -37,7 +37,7 @@ include'conexion-db-accent.php'; ?>
                         <label for="floatingPassword">Modelo del carro *</label>
 
                     </div>
-                    <div class="form-floating mb-3">
+                    <div class="form-floating mb-1">
                         <input type="text" class="form-control step__input color" id="floatingInput"
                             placeholder="Ej: Azul" name="color">
                         <label for="floatingInput">Color del carro *</label>
@@ -48,7 +48,7 @@ include'conexion-db-accent.php'; ?>
                         <label for="floatingPassword">Año del carro *</label>
 
                     </div>
-                    <div class="form-floating mb-3">
+                    <div class="form-floating mb-1">
                         <input type="text" class="form-control step__input matricula" id="floatingInput"
                             placeholder="Ej: ABC 123 " name="matricula">
                         <label for="floatingInput">Numero de la matricula </label>
@@ -59,13 +59,13 @@ include'conexion-db-accent.php'; ?>
                         <label for="floatingPassword">Cuidad donde esta registrada la matricula *</label>
 
                     </div>
-                    <div class="form-floating mb-3">
+                    <div class="form-floating mb-1">
                         <input type="text" class="form-control step__input venta" id="floatingInput"
                             placeholder="Ej: Bogotá " name="ciudad-venta">
                         <label for="floatingInput">Cuidad donde vas a vender tu carro *</label>
                     </div>
 
-                    <select class="form-select form-select-lg mb-3 step__input " aria-label=".form-select-lg example"
+                    <select class="form-select form-select-lg mb-1 step__input " aria-label=".form-select-lg example"
                         name="propietario" id="propietario">
                         <option selected>Unico dueño * </option>
                         <option value="si">Si</option>
@@ -89,7 +89,7 @@ include'conexion-db-accent.php'; ?>
                         <label for="floatingPassword">Numero de puertas *</label>
 
                     </div>
-                    <select class="form-select form-select-lg mb-3 step__input" aria-label=".form-select-lg example"
+                    <select class="form-select form-select-lg mb-1 step__input" aria-label=".form-select-lg example"
                         name="combustible" id="combustible">
                         <option selected>Tipo de combustible</option>
                         <option value="Gasolina">Gasolina</option>
@@ -98,14 +98,14 @@ include'conexion-db-accent.php'; ?>
                         <option value="Diesel">Diesel</option>
                         <option value="Hibrido">Hibrido</option>
                     </select>
-                    <select class="form-select form-select-lg mb-3 step__input" aria-label=".form-select-lg example"
+                    <select class="form-select form-select-lg mb-1 step__input" aria-label=".form-select-lg example"
                         name="caja" id="caja">
                         <option selected>Tipo de caja</option>
                         <option value="Mecanica">Mecanica</option>
                         <option value="Automatica"> Automatica</option>
                         <option value="Secuencial">Secuencial</option>
                     </select>
-                    <select class="form-select form-select-lg mb-3 step__input" aria-label=".form-select-lg example"
+                    <select class="form-select form-select-lg mb-1 step__input" aria-label=".form-select-lg example"
                         name="direccion-vehiculo" id="direccion">
                         <option selected>Tipo de direccion</option>
                         <option value="Asistida">Asistida</option>
@@ -124,7 +124,6 @@ include'conexion-db-accent.php'; ?>
                     <textarea rows="4" cols="80" placeholder="Agrega más información de tu vehiculo"
                         class="step__input text__area block" name="descripcion" id="descripcion">
                     </textarea>
-
                 </div>
                 <div class="step__footer">
                     <button type="submit" class=" step__button--next  inicio " disabled id="activar-btn">Guardar
@@ -138,11 +137,13 @@ include'conexion-db-accent.php'; ?>
                     <div class="contenido__toda__la__info">
                         <br>
                         <p>
-                            Cuentale a tu audiencia que hace tu carro diferente a los demas, proporciona detalles
-                            importantes como,
-                            mantenimientos recientes, reparaciones esteticas o reparacaiones mecanicas, si tienes un
-                            historial de mantenimientos
-                            puedes incluirlos.
+                            <strong>
+                                Cuentale a tu audiencia que hace a tu carro diferente a los demas, proporciona detalles
+                                importantes como,
+                                mantenimientos recientes, reparaciones esteticas o reparacaiones mecanicas, si tienes un
+                                historial de mantenimientos,crea una buena descripción .
+                            </strong>
+                          
                         </p>
 
                     </div>
@@ -162,7 +163,6 @@ include'conexion-db-accent.php'; ?>
                 <input type="hidden" class="step__input" name="id-usuario"
                     value="<?php  echo $datos__resultado['id_usuario']  ?>">
                 <div class="contenedor__selects">
-                    <br><br>
                     <div class="form-floating form__floating__info__adicional">
                         <select class="form-select step__input" id="floatingSelect"
                             aria-label="Floating label select example" name="airbag-delatero">
@@ -250,7 +250,7 @@ include'conexion-db-accent.php'; ?>
                         <label for="floatingSelect">Camara de reversa</label>
                     </div>
                 </div>
-                <br><br>
+               
                 <h2 class="subtitulo__info__vehiculo">Equipamiento del vehiculo</h2>
                 <div class="contenedor__selects">
                     <div class="form-floating form__floating__info__adicional">
@@ -361,7 +361,7 @@ include'conexion-db-accent.php'; ?>
                         <label for="floatingSelect">Gps</label>
                     </div>
                 </div>
-                <br><br>
+                
                 <h2 class="subtitulo__info__vehiculo">Diseño y estilo del vehiculo</h2>
                 <div class="contenedor__selects">
                     <div class="form-floating form__floating__info__adicional">
@@ -670,7 +670,6 @@ include'conexion-db-accent.php'; ?>
     });
 
     let activar__btn = document.getElementById('activar-btn');
-
     function validar() {
         let marca = document.querySelector('.marca').value
         let modelo = document.querySelector('.modelo').value
@@ -707,16 +706,13 @@ include'conexion-db-accent.php'; ?>
     }
 
     form.addEventListener('keyup', validar)
-
     document.querySelector("#files").addEventListener("change", (e) => {
         if (window.File && window.FileReader && window.FileList && window.Blob) {
             const files = e.target.files;
             const output = document.querySelector("#result");
             output.innerHTML = "";
-
-
             if (files.length > 10) {
-                let error__fotos = document.getElementById('error-fotos').innerHTML = `
+          let error__fotos = document.getElementById('error-fotos').innerHTML = `
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
   <strong>Ups</strong> Nos dimos cuenta que superaste el limite de imagenes
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

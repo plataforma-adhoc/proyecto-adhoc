@@ -7,7 +7,7 @@ include'nabvar.php';?>
 <h1 class="titulo__como__vender__un__carro">Donde comprar el soat con descuento</h1>
 <h2 class="subtitulo__como__vender__un__carro">Ya esta en vigencia el descuento del SOAT que anuncio el Gobierno Nacional
 </h2>
-<a href="../publicar-vheiculos" class="enlace__a__vender__mi__carro">Vender mi carro</a>
+<a href="../publicar-vehiculos" class="enlace__a__vender__mi__carro">Vender mi carro</a>
 </div>
 <div class="como__vender__un__carro">
 <img src="../img/donde__comprar__el__soat__con__descuento.jpg" alt="ilustracion donde comprar el soat con descuento">

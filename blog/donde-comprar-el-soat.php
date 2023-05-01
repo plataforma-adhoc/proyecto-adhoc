@@ -8,7 +8,7 @@ include'nabvar.php';?>
 <h2 class="subtitulo__como__vender__un__carro">Toda persona que sea propietaria de un carro o moto debe tener el SOAT
  
 </h2>
-<a href="../publicar-vheiculos" class="enlace__a__vender__mi__carro">Vender mi carro</a>
+<a href="../publicar-vehiculos" class="enlace__a__vender__mi__carro">Vender mi carro</a>
 </div>
 <div class="como__vender__un__carro">
 <img src="../img/donde__comprar__el__soat.jpg" alt="ilustracion de comprar el soat">

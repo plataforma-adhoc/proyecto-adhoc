@@ -54,40 +54,6 @@ $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
                 <input type="email"  name="email"  class="capturarDatos"value="<?php   echo $datos__resultado['email'] ?>">
 
             </div>
-        </div>
-
-        <div class="grupo__inputs" id="grupo__password">
-            <div class="contenedor__inputs">
-            <label for="" class="label">Telefono</label>
-                <input type="text" name="telefono" value="<?php   echo $datos__resultado['numero_telefono'] ?>"
-                    class="capturarDatos">
-
-            </div>
-        </div>
-
-        <div class="grupo__inputs" id="grupo__password">
-            <div class="contenedor__inputs">
-            <label for="" class="label">Facebook</label>
-                <input type="text"  name="facebook" value="<?php   echo $datos__resultado['facebook'] ?>"
-                    class="capturarDatos" placeholder="Facebook">
-
-            </div>
-        </div>
-        <div class="grupo__inputs" id="grupo__password">
-            <div class="contenedor__inputs">
-            <label for="" class="label">Instagram</label>
-                <input type="text"  name="instagram" value="<?php   echo $datos__resultado['instagram'] ?>"
-                    class="capturarDatos"  placeholder="Instagram">
-
-            </div>
-        </div>
-        <div class="grupo__inputs " id="grupo__password">
-            <div class="contenedor__inputs">
-            <label for="" class="label">Twiiter</label>
-                <input type="text"  name="twitter" value="<?php   echo $datos__resultado['twitter'] ?>"
-                    class="capturarDatos" placeholder="Twitter">
-
-            </div>
         </div>     
         <input type="hidden"  name="id" value="<?php   echo $datos__resultado['id_usuario'] ?>">
 

@@ -1,4 +1,5 @@
   var url__servidor = 'https://adhoc.com.co/'
+  var url__pruebas = 'https://pruebaadhoc.000webhostapp.com/'
    const inputs =  document.querySelectorAll('#formulario-registro-usuario input');
    const expresiones = {
    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.

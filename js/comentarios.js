@@ -5,7 +5,7 @@ export function insertar__comentarios(){
       var url__servidor = 'https://adhoc.com.co/'
         event.preventDefault();
         let form__data =  new FormData(document.getElementById('formulario-comentario'))
-        fetch('insert-comentarios',{
+        fetch(url__servidor +'insert-comentarios',{
             method:'POST',
             body:form__data
         }).then(respuesta =>  respuesta.json())
@@ -46,7 +46,6 @@ export function insertar__comentarios(){
               insertar__comentario.innerHTML= html;
              
              });
-          
 
             }else{
            insertar__comentario.innerHTML=`

@@ -5,6 +5,6 @@
 <script type="text/javascript" src="https://checkout.epayco.co/checkout.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-<script type="module" src="./js/app.js?v=2"></script>
+<script type="module" src="./js/app.js?v=1"></script>
 </body>
 </html>

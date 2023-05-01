@@ -8,7 +8,7 @@ include'nabvar.php';?>
 <h2 class="subtitulo__como__vender__un__carro">Durante elmes de junio del año 2022, el mercado crecio <b>14.1 %</b> y se registraron un total de ventas <br>
 de más de <strong>23 mil unidades vendidas</strong>
 </h2>
-<a href="../publicar-vheiculos" class="enlace__a__vender__mi__carro">Vender mi carro</a>
+<a href="../publicar-vehiculos" class="enlace__a__vender__mi__carro">Vender mi carro</a>
 </div>
 <div class="como__vender__un__carro">
 <img src="../img/los__carros__mas__vendidos__en__colombia.jpg" alt="persona sentada en el capo de un carro blanco">

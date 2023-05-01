@@ -27,6 +27,22 @@ include'nabvar.php';?>
             <img src="../img/donde__comprar__el__soat.jpg"  alt=" donde comprar el soat">   
           <a href="donde-comprar-el-soat" class="enlace__pagina__blog">Donde comprar el soat</a>
    </div>
+   <div class="card cards__blog">
+            <img src="../img/carros__clasicos__deportivos.jpg"  alt=" donde comprar el soat">   
+          <a href="carros-clasicos-deportivos" class="enlace__pagina__blog">Carros clasicos deportivos</a>
+   </div>
+   <div class="card cards__blog">
+            <img src="../img/carros__todo__terreno.jpg"  alt=" donde comprar el soat">   
+          <a href="carros-todo-terreno" class="enlace__pagina__blog">Carros todo terreno</a>
+   </div>
+   <div class="card cards__blog">
+            <img src="../img/carros__deportivo.png"  alt=" donde comprar el soat">   
+          <a href="carros-deportivos" class="enlace__pagina__blog">Carros deportivos</a>
+   </div>
+   <div class="card cards__blog">
+            <img src="../img/carros__clasicos.jpg"  alt=" donde comprar el soat">   
+          <a href="carros-clasicos" class="enlace__pagina__blog">Carros clasicos</a>
+   </div>
     </div>
 </section>
 <br><br>

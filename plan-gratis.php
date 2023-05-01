@@ -130,7 +130,7 @@ if($id__paquete && $nombre__plan){
 </div>
 <script>
 
-  function procesoDePagoPlangratis(){
+  function procesoDePagoPlanGratis(){
 let formulario__de__pago = document.getElementById('formulario-proceso-de-pago');
 if(formulario__de__pago){
 formulario__de__pago.addEventListener('submit',function(evento){
@@ -216,6 +216,7 @@ formulario__de__pago.addEventListener('submit',function(evento){
             }).then(respuesta => respuesta.json())
     .then(data =>{
         if(data ==='ok'){
+          console.log(data)
           fetch(url__servidor+'eliminar-variables-sesion', { method: 'POST' })
                 .then(res => {
                   if (res === 'ok') {
@@ -228,7 +229,7 @@ formulario__de__pago.addEventListener('submit',function(evento){
                 });
          let alerta = document.getElementById('alerta');
          alerta.innerHTML = `<div class="alert alert-success alert-dismissible" role="alert">
-      <div class="texto__pago__exitoso"><i class="fas fa-check-circle"></i> !Bravo ¡ ya lo publicamos 
+      <div class="texto__pago__exitoso"><i class="fas fa-check-circle"></i> Hemos publicado tu anuncio con exito 
       </div>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       <a href="dashboard-usuario" class="enlace__volver__inicio">Volver al inicio</a>
@@ -240,6 +241,6 @@ formulario__de__pago.addEventListener('submit',function(evento){
 
 }
 }
-procesoDePagoPlangratis();
+procesoDePagoPlanGratis();
 </script>
 <?php include'layout/footer-home.php'  ?>

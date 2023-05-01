@@ -133,8 +133,6 @@ display: inline-block;
      margin: 0 0 0 5px;
     }
     
-
-  
   .nav-link:hover {
     background-color: rgba(0, 0, 0, 0.15);
     border-radius: 7px;
@@ -146,9 +144,6 @@ display: inline-block;
     background-color: rgba(0, 0, 0, 0.30);
   }
   
-
-  
- 
   .nav-title {
     color: var(--nav-text-color);
     font-weight: bold;
@@ -217,33 +212,23 @@ display: inline-block;
   
   .loader > .dot:nth-child(2) {
     z-index: 11;
-    
     width: 150px;
     height: 90px;
-    
     margin-top: -45px;
     margin-left: -75px;
-    
     border-radius: 3px;
-    
-    background-color: #3c617d;
-    
+    background-color: #3c617d; 
     animation-name: dot2;
   }
   
   .loader > .dot:nth-child(3) {
     z-index: 12;
-    
     width: 40px;
     height: 20px;
-    
     margin-top: 50px;
     margin-left: -20px;
-    
     border-radius: 0 0 5px 5px;
-    
     background-color: #6bb2cd;
-    
     animation-name: dot3;
   }
   
@@ -323,10 +308,6 @@ display: inline-block;
     }
   }
   
-
-
- 
-
 .container{
     width: 90%;
     margin: 0 auto;
@@ -355,7 +336,6 @@ display: inline-block;
     background: #000;
     transition: all 0.5s;
 }
-
 
 .modal__registro__de__cuenta{
     display: none; 
@@ -399,14 +379,12 @@ display: inline-block;
     color: white;
     padding: 12px;
      background: $color__accent;
-     margin-right: 30px;
+     margin-right: 10px;
      width: 190px;
      border-radius: 7px;
      font-weight: bold;
      margin: 10px 10px 0;
 }
-
-
 
 .btn__cuenta__registro:hover{
     background: #000;
@@ -464,16 +442,13 @@ display: inline-block;
     padding: 0;
 }
 
-
-
 .logo__accent{
     width: 100%;
     height: 50px;
 }
 
-
 .point{
-    color:$color__accent;
+    color:$color__adhoc;
 }
 
 .contenedor__imagen__banner{
@@ -502,7 +477,6 @@ display: inline-block;
     width:100%;   
 }
 
-
 .hero__textos{
     width:90%;
     position: absolute;
@@ -517,7 +491,6 @@ display: inline-block;
     color: $color__adhoc;
 }
 
-
 .copy{
     font-size: 24px;
     margin: 15px 0;
@@ -531,16 +504,23 @@ display: inline-block;
     font-weight: 700;
 }
 
+.contenedor__btn__cta{
+    width: 200px;
+    margin: 80px  auto 0 auto;
+
+}
 .cta{
     padding: 10px 20px;
     display: inline-block;
-    background:$color__accent;
+    background:$color__adhoc;
     text-decoration: none;
-    color:white;
+    color:black;
     font-weight: 700;
     box-shadow: var(--shadow) var(--color_shadow);
-    border-radius: 50px;
+    border-radius: 10px;
     font-size: $tamaño__parrafos;
+    width: 100%;
+    text-align: center;
 }
 
 .cta:hover{
@@ -548,6 +528,11 @@ display: inline-block;
     color: white;
     transition: ease-in-out 0.5s;
 }
+.muestra__vehiculos{
+    height:auto;
+    margin-top: -100px;
+}
+
 .contenedor__funciones{
     width: 100%;
     margin: auto;
@@ -556,9 +541,10 @@ display: inline-block;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .contenido__funciones{
     width: 30%;
-    height:150px;
+    height:auto;
     display: flex;
     font-weight: 400;
 
@@ -575,7 +561,6 @@ color:white;
 margin-left: 10px;
 font-size: 15px;
 }
-
 
 .fa-circle{
 color: $color__adhoc;
@@ -671,8 +656,6 @@ position: relative;
     text-align: center;
 }
 
-
-
 .copy__section--modifier{
     text-align: center;
     margin-bottom: 32px;
@@ -697,17 +680,18 @@ position: relative;
 
 
 }
+
 .imagen__services{
     display: inline-block;
     width: 100%;
-    height: 300px;
+    height: 200px;
 }
 .card__img{
     width: 100%;
     height:100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 10px 0 0 10px;
-
+   display: block;
 }
 
 .cards__text{
@@ -824,17 +808,13 @@ position: relative;
 .img__billeteras{
  width: 70px;
 }
-.img__pago__en__efectivo{
-  width:50px;
-  margin: 10px 50px 0;
-}
+
 
 .img__tarjetas__de__credito{
     width: 50px;
 }
 .precios{
     width: 30%;
-
 }
 .precios{
     background:$color__fondo__footer;
@@ -848,77 +828,26 @@ position: relative;
 }
 .card__precios__efectivo{
     width: 100%;
-}
-
-.contenido__eleccion{
-background:$color__fondo__footer;
-margin-top: -100px;
-width: 100%;
-height: auto;
-display: flex;
-align-items: center;
-justify-content: space-between;
-flex-wrap: wrap;
-}
-
-.div__icono__elecion{
-    width: 80%;
-    margin: auto;
-}
-.icono__elecion{
-    margin-left: 30%;
-}
-.subtitulo__eleccion{
-    text-align: center;
-    color: white;
-    margin-top: 50px;
-}
-.eleccion{
-    width: 45%;
-    border-radius: 10px;
-}
-
-.enumerados strong{
-color: #11998e;  /* fallback for old browsers */
-color: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-color: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-font-size: 22px;
-
-}
-
-.contenido__enumerados{
-    width: 22%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
     
 }
-
-.item__enumerado{
-    color: white;
-    font-weight: bold;
-    line-height: 40px;
-    margin-left: 20px;
+.contendor__imagenes__efectivo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.contenedor__imagenes__pago__efectivo{
+    display: inline-block;
+    width: 50px;
 
 }
+.img__pago__en__efectivo{
+    width: 100%;
+    height:100%;
+    object-fit: contain;
+   display: block;
+  }
 
-.texto__enumerado{
-    color: $color__gris;
-    font-weight: 600;
-    margin-left: 20px;
-}
-
-.enlace__de__politicas{
-    display: inline;
-    color: $color__adhoc;
-    text-decoration: 0;
-    margin-left: 20px;
-
-}
-.enlace__de__politicas:hover{
-    border-bottom:solid 1px $color__adhoc;
-    color: $color__adhoc;
-}
 .contenedor__anuncio__propio{
     width: 100%;
     height:auto;
@@ -1076,8 +1005,6 @@ margin-left: 10px;
 }
 .col-12{
     width: 80%;
-
-    
     margin-top: 50px;
     height: 70px;
 }
@@ -1090,6 +1017,9 @@ margin-left: 10px;
 .respuesta{
     color: $color__verde;
     font-size: 12px;
+    background: #000;
+    width: 100%;
+    padding: 10px;
 }
 
 @media screen and (max-width:1300px) {
@@ -1098,7 +1028,7 @@ margin-left: 10px;
     }
     .contenido__funciones{
         margin: 20px auto 0 auto;
-        height: 200px;
+        height: auto;
     }
 }
 
@@ -1172,7 +1102,6 @@ margin-left: 10px;
         margin-top: 25rem;
     }
     .cards__formas__de__pago{
-
         width: 100%;
     }
    
@@ -1181,7 +1110,7 @@ margin-left: 10px;
     } 
     .contenido__funciones{
        width: 50%;
-       height: 150px;
+       height:240px;
     }
     .contenido__img__anuncio{
         height: 500px;
@@ -1213,7 +1142,7 @@ margin-left: 10px;
     border-bottom: 2px solid $color__gris;
 }
 .nuestra__forma__de__pago{
-    margin-top: 90rem;
+    margin-top: 70rem;
 }
 .card__precios__efectivo{
     width: 100%;
@@ -1226,8 +1155,7 @@ margin-left: 10px;
 }
 }
 
-@media screen and (max-width:700px){
-   
+@media screen and (max-width:700px){ 
     main .container,
     footer .container{
         padding: 60px 0;
@@ -1250,8 +1178,6 @@ margin-left: 10px;
     .link{
         padding: 7px 10px;
     }
-
-
     .hero__main{
         flex-direction: column-reverse;
         justify-content: flex-end;
@@ -1259,8 +1185,6 @@ margin-left: 10px;
         height: auto;
         padding: 30px 0;
     }
-
-    
 
     .title{
         font-size: 35px;
@@ -1298,9 +1222,6 @@ margin-left: 10px;
     .container-bg{
         justify-content: space-evenly;
     }
-
-   
-
     .card__title{
         font-size: 25px;
     }
@@ -1337,7 +1258,7 @@ margin-left: 10px;
   
     .nuestra__forma__de__pago{
         width: 100%;
-        margin: 90rem auto 0 auto;
+        margin: 70rem auto 0 auto;
     }
     .card__precios,.card__precios__efectivo{
         width: 100%;
@@ -1414,9 +1335,9 @@ margin-left: 10px;
     .services{
         width: 100%;
     }
-
-    
-
+    .imagen__services{
+        height: 200px;
+    }
     .background{
         width: 95%;
     }
@@ -1431,7 +1352,6 @@ margin-left: 10px;
   
 }
 
-
 @media screen and (max-width:680px) {
     .texto__anuncio__promocion{
         width: 80%;
@@ -1444,6 +1364,22 @@ margin-left: 10px;
 }
 
 @media screen and (max-width:600px) {
+    .muestra__vehiculos{
+        margin-top: -220px;
+    }
+    .titulo__promo__de__lanzamiento{
+        font-size: 15px;
+    }
+   
+    .contenedor__imagen__banner{
+        height: 350px;
+    }
+    .title{
+        font-size: 17px;
+    }
+    .hero__textos{
+        margin-top: -100px;
+    }
     .btn__cuenta__registro{
         margin-right: 15px;
         width: 110px;
@@ -1456,20 +1392,32 @@ margin-left: 10px;
     .modal__registros{
         margin-top: 160px;
     }
+    .services{
+        margin-top: -12rem;
+    }
     .nuestra__forma__de__pago{
-        margin: 100rem auto 0 auto;
+        margin: 80rem auto 0 auto;
     }
  
 }
 
 @media screen and (max-width:400px){
-
+    .titulo__promo__de__lanzamiento{
+        font-size: 13px;
+    }
+    .contenedor__imagen__banner{
+        height: 370px;
+    }
+    .copy{
+        font-size: 15px;
+    }
+  .subtitulo{
+    font-size: 20px;
+  }
    .btn__cuenta{
     display: none;
    }
-   .nuestra__forma__de__pago{
-    margin-top: 90rem;
-}
+ 
 .contenido__anuncio__texto{
     margin-top: 20px;
 }
@@ -1477,7 +1425,38 @@ margin-left: 10px;
     font-size: 13px;
 }
 .nuestra__forma__de__pago{
-    margin: 100rem auto 0 auto;
+    margin: 80rem auto 0 auto;
 } 
+
 }
 
+@media screen and (max-width:430px){
+.contenedor__btn__registros{
+    margin-top: -10px;
+    width: 100%;
+    background: #000;
+    padding: 0;
+}
+.modal__registros,.contenedor__btn__registros{
+    width: 95%;
+}
+.btn__cuenta__registro{
+    width: 120px;
+    font-size: 13px;
+}
+ 
+ }
+ 
+ @media screen and (max-width:350px){
+ .contenedor__imagenes__pago__efectivo{
+        display: inline-block;
+        width: 10%;
+        height: 50px; 
+ }
+ .img__pago__en__efectivo{
+    width: 100%;
+    height:100%;
+    object-fit: contain;
+   display: block;
+ }    
+} 
