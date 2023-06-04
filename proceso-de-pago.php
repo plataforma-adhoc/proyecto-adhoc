@@ -1,10 +1,8 @@
 <?php
 include'layout/nav-home-usuario.php';
 include'conexion-db-accent.php';  
-
 $id__paquete = isset($_GET['idpaq']) ? $_GET['idpaq'] : '';
 $id__usuario = isset($_GET['idu']) ? $_GET['idu'] : '';
-$id__estilos = isset($_GET['ids'])? $_GET['ids']: '';
 $id__contacto = isset($_GET['idc'])? $_GET['idc']: '';
 $id__equipamiento = isset($_GET['ideq'])? $_GET['ideq']: '';
 $id__fotos = isset($_GET['idf'])? $_GET['idf']: '';
@@ -19,21 +17,15 @@ if($id__paquete && $id__usuario && $id__estilos && $id__contacto && $id__equipam
       $nombre__paquete = $fila['nombre_paquete'];
       $valor__paquete = $fila['valor_paquete'];
       $descuento = $fila['descuento'];
-      $precio__descuento = $valor__paquete - (($valor__paquete * $descuento) / 100 );
-
-      ?>
+      $precio__descuento = $valor__paquete - (($valor__paquete * $descuento) / 100 );?>
       <div class="container contenedor__compra container__proceso__de__pago">
     <h2 class="titulo__compra detalles__pago">Detalles de tu pago </h2>
     <p class="subtitulo__detalles__pago">Selecciona tu medio de pago preferido</p>
-   
     <div class="table-responsive ">
     <table class="table table-dark table-striped  table-hover ">
-
     <tr>
       <th scope="col" class="texto__compra">Nombre del plan</th>
       <th scope="col"class="texto__compra">Total a pagar</th>
-    
-
     </tr>
     <tbody>
     <tr>
@@ -72,33 +64,31 @@ if($id__paquete && $id__usuario && $id__estilos && $id__contacto && $id__equipam
   </div>
   <div>    
     <img src="./img/logo__daviplata.png" alt="daviplata"class="img__billeteras">
-
   </div>
 </div>
- 
-
-
   </div>
 </div>
 <br>
-
 </div>
 <?php  } ?>
-<?php  } ?>
+<?php  }else{ 
+  echo '<script>alert("Error al procesar la solicitud")
+  location.href="historial-motos?idu='.  $id__usuario .'";
+  </script>';
+  ?>
+  <?php  } ?>
 </div>
-
-
 <?php include'layout/footer-home.php' ?>   
 <script>
- 
-
 function formasDePago(){
+var urlPruebas = 'http://localhost/accent__hollding/'
+
 var medios__de__pago = document.getElementById('otros-medios-de-pago')
 if(medios__de__pago){
 medios__de__pago.addEventListener('click',function(){
 var  handler = ePayco.checkout.configure({
   				key: '3ca56470e406e78da32222a6642ef3b7',
-  				test: false
+  				test: true
   			});
         var data={
           //Parametros compra (obligatorio)
@@ -115,10 +105,10 @@ var  handler = ePayco.checkout.configure({
 
           //Onpage="false" - Standard="true"
           external: "false",
-          response: "http://localhost/accent__hollding/respuesta?id_paquete=<?php echo $id__paquete ?>&id_usuario=<?php echo $id__usuario ?>&id_estilos=<?php echo $id__estilos ?>&id_contacto=<?php echo $id__contacto ?>&id_equipamiento=<?php echo $id__equipamiento?>&id_fotos=<?php echo $id__fotos ?>&id_informacion=<?php echo $id__informacion?>&id_seguridad=<?php echo $id__seguridad ?>",
-          pending:"http://localhost/accent__hollding/pendiente?id_paquete=<?php echo $id__paquete ?>&id_usuario=<?php echo $id__usuario ?>&id_estilos=<?php echo $id__estilos ?>&id_contacto=<?php echo $id__contacto ?>&id_equipamiento=<?php echo $id__equipamiento?>&id_fotos=<?php echo $id__fotos ?>&id_informacion=<?php echo $id__informacion?>&id_seguridad=<?php echo $id__seguridad ?>",
-          rejected:"http://localhost/accent__hollding/pago-rechazado?id_paquete=<?php echo $id__paquete ?>&id_usuario=<?php echo $id__usuario ?>&id_estilos=<?php echo $id__estilos ?>&id_contacto=<?php echo $id__contacto ?>&id_equipamiento=<?php echo $id__equipamiento?>&id_fotos=<?php echo $id__fotos ?>&id_informacion=<?php echo $id__informacion?>&id_seguridad=<?php echo $id__seguridad ?>",
-          confirmation:"http://localhost/accent__hollding/confirmacion" ,
+          response: "https://adhoc.com.co/respuesta?id_paquete=<?php echo $id__paquete ?>&id_usuario=<?php echo $id__usuario ?>&id_estilos=<?php echo $id__estilos ?>&id_contacto=<?php echo $id__contacto ?>&id_equipamiento=<?php echo $id__equipamiento?>&id_fotos=<?php echo $id__fotos ?>&id_informacion=<?php echo $id__informacion?>&id_seguridad=<?php echo $id__seguridad ?>",
+          pending:"https://adhoc.com.co/pendiente?id_paquete=<?php echo $id__paquete ?>&id_usuario=<?php echo $id__usuario ?>&id_estilos=<?php echo $id__estilos ?>&id_contacto=<?php echo $id__contacto ?>&id_equipamiento=<?php echo $id__equipamiento?>&id_fotos=<?php echo $id__fotos ?>&id_informacion=<?php echo $id__informacion?>&id_seguridad=<?php echo $id__seguridad ?>",
+          rejected:"https://adhoc.com.co/pago-rechazado?id_paquete=<?php echo $id__paquete ?>&id_usuario=<?php echo $id__usuario ?>&id_estilos=<?php echo $id__estilos ?>&id_contacto=<?php echo $id__contacto ?>&id_equipamiento=<?php echo $id__equipamiento?>&id_fotos=<?php echo $id__fotos ?>&id_informacion=<?php echo $id__informacion?>&id_seguridad=<?php echo $id__seguridad ?>",
+          confirmation:"https://adhoc.com.co/confirmacion",
 
   
           //Atributos cliente
@@ -129,8 +119,6 @@ var  handler = ePayco.checkout.configure({
           number_doc_billing: "100000000"
 
          //atributo deshabilitación metodo de pago
-      
-
           }
           handler.open(data)
 
@@ -149,10 +137,6 @@ function generateRandomString() {
   }
   return randomString;
 }
-
-
-
-
 </script>
 
 

@@ -168,9 +168,6 @@
     height: auto;
   }
   
- 
-  
-  
 
 .informacion__general__del__vehiculo{
     margin-top: -70px;
@@ -247,14 +244,31 @@ color: $color__adhoc;
     font-size: 15px;
     width: 200px;
 }
+
 .telefono{
-    color: white;
-    color: $color__gris;   
+    color: white;  
 }
+
 .telefono i{
     color: white;
     font-size: 25px;
 }
+
+.email__vendedor{
+display: inline-block;
+text-decoration: 0;
+color: white;
+}
+
+.email__vendedor i{
+  color: white;
+  font-size: 22px;
+}
+
+.email__vendedor:hover{
+  color: white;
+}
+
 .enlace__whatsapp__detalles{
   text-decoration: 0;
   background: #000;
@@ -264,6 +278,13 @@ color: $color__adhoc;
   padding: 10px;
   width: 250px;
   display: inline-block;
+  transition: ease-in-out .3s;
+}
+
+.enlace__whatsapp__detalles:hover{
+  background:$color__adhoc;
+color:black;
+font-weight: 600;
 }
 .contenedor__imagen__no__disponible{
     width: 30%;
@@ -404,7 +425,6 @@ width: 60%;
     
 }
 
-
 .chat {
     padding: 10px;
     border-radius: 5px;
@@ -439,6 +459,7 @@ width: 60%;
     width: auto;
     font-size: 14px;
   }
+
 .fecha__publicacion__comentario{
     font-size: 10px;
     color: $color__gris;
@@ -502,17 +523,16 @@ width: 60%;
   }
 
 
-    .anuncio{
-    width: 38%;
+.anuncio{
+  width: 38%;
     height: auto;
   margin-top: 40px;
-
 }
-.imagen{
+.contenedor__imagen__vender{
     position: relative;
     display: inline-block;
 }
-.imagen::before {
+.contenedor__imagen__vender::before {
     content: "";
     position: absolute;
     top: 0;
@@ -522,7 +542,7 @@ width: 60%;
     background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1));
   }
 
-.imagen img{
+.contenedor__imagen__vender img{
     display: block;
     width: 100%;
     height: auto;

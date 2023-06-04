@@ -2,8 +2,7 @@
    include'conexion-db-accent.php';
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
-    use PHPMailer\PHPMailer\Exception;
-  
+    use PHPMailer\PHPMailer\Exception; 
     require 'Exception.php';
     require 'PHPMailer.php';
     require 'SMTP.php';
@@ -15,8 +14,7 @@
       $consulta__contraseña = "SELECT * FROM usuarios WHERE email = '$email__contrasena' LIMIT 1";
       $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__contraseña);
       if(mysqli_num_rows($resultado__consulta) > 0){
-        $resultado__fila = mysqli_fetch_array($resultado__consulta);
-        
+        $resultado__fila = mysqli_fetch_array($resultado__consulta);     
         $nueva__contrasena = rand(10000000,99999999);
         $id__usuario = $resultado__fila['id_usuario'];
         $contrasena__encryptada  = password_hash($nueva__contrasena,PASSWORD_BCRYPT);
@@ -52,15 +50,12 @@
                                   
           //Recipients
           $mail->setFrom('soporteadhoc@outlook.com', 'AdHoc ');
-          $mail->addAddress($email__contrasena,$resultado__fila['nombre_usuario'] );                  
-       
-      
+          $mail->addAddress($email__contrasena,$resultado__fila['nombre_usuario'] );                       
           //Content
           $mail->isHTML(true);                                  
           $mail->Subject = 'Has solicitado el cambio de tus credenciales de acceso a nuestra plataforma';
           $mail->Body    = utf8_decode($contenido__mensaje);
-          $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-      
+          $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';     
           $mail->send();
           echo json_encode('ok');
       } catch (Exception $e) {

@@ -6,7 +6,6 @@ if($id__usuario ===""){
   header("Location: dashboard-usuario");
   exit;
 }?>
- 
 <div class="container contenedor__datos__perfil">
 <div class="datos__de__perfil">
 <div class="card__solicitudes perfil">

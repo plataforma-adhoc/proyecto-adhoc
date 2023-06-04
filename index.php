@@ -1,21 +1,47 @@
 <?php  
-$titulo =  "Venta de carros usados| AdHoc";
+$titulo =  "Venta de carros usados| AdHoc.com.co";
 include'layout/nabvar.php'; ?>
-<section class="hero__main">
-    <div class="contenedor__imagen__banner">
+
+<!-- <section class="hero__main">    -->
+    <!-- <div class="contenedor__imagen__banner">
         <img src="./img/fondo__banner.webp" alt="Entregando las llaves de un carro" class="imagen__banner">
     </div>
     <div class=" container hero__textos">
-        <h1 class="title">Quieres vender tu carro usado ?<span class="title--active"></span></h1>
-        <h2 class="copy">Vende tu carro usado por el precio justo a un comprador particular en cualquier parte de Colombia<br>
-            <span class="copy__active">Anucialo gratis </span></h2>
-        
+        <h1 class="title">Vende tu carro usado o moto usada<span class="title--active"></span></h1>
+        <h2 class="copy">Vende tu vehículo sin estrés ni complicaciones, en la plataforma en línea que te brinda soporte en todo el proceso de venta, desde la publicación hasta la transferencia de propiedad<br><br>
+        <p class="texto__banner"><i class="fas fa-mobile-alt"></i> Soporte incluido en tu plan gratis 24/7</p>
+        <a href="https://api.whatsapp.com/send?phone=573227603630&text=¡Hola! Estamos encantados de tenerte aquí. ¿En qué podemos ayudarte hoy?" class="contacto__soporte" target="_blank"><i class="fab fa-whatsapp"></i> Recibir  soporte</a> <br>
+        <a href="publicar-vehiculos" class="cta">Publicar vehiculo</a>
+    </div> -->
+   
+<!-- </section> -->
+<div class="contenedor__slider">
+        <div class="slider-contenedor">
+            <section class="contenido-slider">
+                <div class="container">
+                <h1 class="title">Vende tu carro usado <span class="title--active"></span></h1>
+                <h2 class="copy">Vende tu vehículo sin estrés ni complicaciones, en la plataforma en línea que te brinda soporte en todo el proceso de venta, desde la publicación hasta la transferencia de propiedad<br><br>
+                <p class="texto__banner"><i class="fas fa-mobile-alt"></i> Soporte incluido en tu plan gratis 24/7</p>
+                <a href="https://api.whatsapp.com/send?phone=573227603630&text=¡Hola! Estamos encantados de tenerte aquí. ¿En qué podemos ayudarte hoy?" class="contacto__soporte" target="_blank"><i class="fab fa-whatsapp"></i> Contactanos</a> <br>
+                <a href="publicar-vehiculos" class="cta">Publicar vehiculo</a>
+                </div>
+                <img src="animacion.svg" alt="">
+            </section>
+            <section class="contenido-slider">
+                <div class="container">
+                <h1 class="title">Encuéntrale comprador a tu moto usada desde la sala de tu casa <span class="title--active"></span></h1>
+                <a href="https://api.whatsapp.com/send?phone=573227603630&text=¡Hola! Estamos encantados de tenerte aquí. ¿En qué podemos ayudarte hoy?" class="contacto__soporte" target="_blank"><i class="fab fa-whatsapp"></i> Contactanos</a> <br>
+                <a href="publicar-moto" class="cta">vender</a>
+                </div>
+                <img src="animacion2.svg" alt="">
+
+            </section>
+
     </div>
-</section>
+    </div>
 </header>
 <main>
-
-  <?php  
+<?php  
  include'conexion-db-accent.php';
 $extraer__datos__publicaciones = "SELECT * FROM informacion__del__vehiculo__en__venta WHERE estado_anuncio = '1' LIMIT 4";
 $ejecutar__consulta = mysqli_query($conexion__db__accent,$extraer__datos__publicaciones);
@@ -29,10 +55,9 @@ $consulta__contacto__vendedor = "SELECT * FROM contacto__vendedor WHERE estado_a
 $ejecutar__consulta__contacto = mysqli_query($conexion__db__accent,$consulta__contacto__vendedor);
 $numero__fila__contacto = mysqli_num_rows($ejecutar__consulta__contacto); 
 
-if($numero__fila > 0 && $numero__fila__fotos > 0 && $numero__fila__contacto > 0){ ?>
-<div class="">
+if($numero__fila > 4 && $numero__fila__fotos > 4 && $numero__fila__contacto > 4){ ?>
 <div class="container  muestra__vehiculos">
-    <h3 class="subtitulo__vehiculos">Novedades</h3> 
+    <h3 class="subtitulo__vehiculos">vehículos</h3> 
 <div class="vehiculos">
 <?php while($fila = mysqli_fetch_array($ejecutar__consulta)){
    $fila__fotos = mysqli_fetch_array($ejecutar__consulta__fotos);
@@ -47,6 +72,7 @@ if($numero__fila > 0 && $numero__fila__fotos > 0 && $numero__fila__contacto > 0)
 <?php if($fila['nombre_paquete'] ==="GRATIS"){ ?>
  <p class="texto__segun__paquete"><i class="fas fa-info-circle"></i> Anunciado por <?php echo ucwords($fila['nombre_vendedor'])?></p>
 <?php } ?>
+ <p class="modelo__del__vehiculo precio__del__carro"><i class="fas fa-dollar-sign"></i> <?php echo number_format($fila['precio_del_vehiculo'],2,'.','.') ?></p>          
 </div>
 <div class="datos__del__vehiculo">
   <div class="motor">
@@ -62,50 +88,151 @@ if($numero__fila > 0 && $numero__fila__fotos > 0 && $numero__fila__contacto > 0)
       <p class="modelo__del__vehiculo"><i class="fas fa-calendar"></i> <?php echo $fila['anio_fabricacion'] ?></p>
   </div>
   </div>
-  <div class="contenido__contacto__mas__detalles">
-    <div class="contactos__del__vehiculo">
-      <a href="https://api.whatsapp.com/send?phone=numero<?php echo $fila__contactos['whatsapp_1']?>&text=mensaje=Hola vi el anuncio de tu vehiculo en AdHoc" class="enlace__whatsapp"><i class="fab fa-whatsapp" target="_blank"></i></a>
-      </div>
-     <a href="detalles-usado?idp=<?php echo $fila['id_publicacion_vehiculo']?>&idu=<?php echo $fila['id_usuario']?>" class="mas__detalles"><i class="fas fa-plus"></i> Mas detalles
-     </a>
-    </div>
-      <div>
-  </div>
-
+  <div class="contenido__precio__y__mas__detalles">
+    <div class="precio__del__vehiculo">
+        <div class="precio">
+            <a href="detalles-usado?idp=<?php echo $fila['id_publicacion_vehiculo']?>&idu=<?php echo $fila['id_usuario']?>" class="mas__detalles"><i class="fas fa-plus"></i>  detalles</a>
+        </div>
   <div>
-      <p class="modelo__del__vehiculo precio__del__carro"><i class="fas fa-dollar-sign"></i> <?php echo number_format($fila['precio_del_vehiculo'],2,'.','.') ?></p>
-    </div>
+</div>
+</div>
+</div>
 <hr class="hr">
 <div class="btn__compartir">
   <p class="texto__compartir">Compartir en <i class="fas fa-share-alt"></i> </p>
   <div class="enlaces__comprtir">
     <div class="compartir">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//localhost/accent__hollding/detalles-usado?idp=<?php echo $fila['id_publicacion_vehiculo']?>&idu=<?php echo $fila['id_usuario']?>" target_blank><i class="fab fa-facebook iconos__compartir"></i></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//localhost/accent__hollding/detalles-usado?idp=<?php echo $fila['id_publicacion_vehiculo']?>&idu=<?php echo $fila['id_usuario']?>" target="_blank"><i class="fab fa-facebook iconos__compartir"></i></a>
     </div>
     <div class="compartir">
-    <a href="https://twitter.com/intent/tweet?text=http%3A//localhost/accent__hollding/detalles-usado?idp=<?php echo $fila['id_publicacion_vehiculo']?>&idu=<?php echo $fila['id_usuario']?>"><i class="fab fa-twitter iconos__compartir"></i></a>
+    <a href="https://twitter.com/intent/tweet?text=http%3A//localhost/accent__hollding/detalles-usado?idp=<?php echo $fila['id_publicacion_vehiculo']?>&idu=<?php echo $fila['id_usuario']?>" target="_blank"><i class="fab fa-twitter iconos__compartir"></i></a>
     </div>
     <div class="compartir">
-      <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//localhost/accent__hollding/detalles-usado?idp=<?php echo $fila['id_publicacion_vehiculo']?>&idu=<?php echo $fila['id_usuario']?>"><i class="fab fa-linkedin-in  iconos__compartir"></i></a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//localhost/accent__hollding/detalles-usado?idp=<?php echo $fila['id_publicacion_vehiculo']?>&idu=<?php echo $fila['id_usuario']?>" target="_blank"><i class="fab fa-linkedin-in  iconos__compartir"></i></a>
     </div>
   </div>
  
 </div>
 </div>
+<div class="contactos__del__vehiculo">
+        <div class="contactos">
+            <a href="https://api.whatsapp.com/send?phone=57<?php echo $fila__contactos['whatsapp_1']?>&text=Hola, vi el anuncio de tu vehículo en AdHoc" class="enlace__whatsapp"target="_blank"><i class="fab fa-whatsapp"></i> Via mensaje</a>
+        </div>
+     <div class="contactos">
+         <a href="mailto:<?php echo $fila__contactos['email']?>" class="enlace__whatsapp"><i class="fas fa-envelope"></i> Via email</a>
+     </div>
+</div>
 <br>
 </div>
-<?php }
-?>
+<?php }?>
 </div>
+
+<?php 
+if($numero__fila > 4 && $numero__fila__fotos > 4 && $numero__fila__contacto > 4){ ?>
 <div class="contenedor__btn__cta">
     <a href="carros-y-camionetas" class="cta">Mas vehiculos <i class="fas fa-plus"></i></a>
 </div>
+<?php } ?>  
 </div>
-</div>
-<?php } ?>    
+<?php } ?>
+<?php
+$extraerDatosMoto = "SELECT * FROM informacion__de__la__moto__en__venta WHERE estadoAnuncio = '1' LIMIT 4";
+$ejecutarConsulta = mysqli_query($conexion__db__accent,$extraerDatosMoto);
+$filaConsulta = mysqli_num_rows($ejecutarConsulta);
 
+$seleccionImagenes = "SELECT * FROM fotos__de__la__moto  WHERE estado_anuncio = '1' LIMIT 4";
+$ejecutarConsultaFotos = mysqli_query($conexion__db__accent,$seleccionImagenes);
+$filaFotos = mysqli_num_rows($ejecutarConsultaFotos ); 
+
+$consultaContactoVendedor = "SELECT * FROM contacto__vendedor__moto WHERE estado_anuncio = '1' LIMIT 4";
+$ejecutarConsultaContacto = mysqli_query($conexion__db__accent,$consultaContactoVendedor);
+$filaContacto = mysqli_num_rows($ejecutarConsultaContacto); 
+
+if($filaConsulta > 4 && $filaFotos > 4 && $filaContacto > 4){ ?>
+<div class="container  muestra__motos">
+<h3 class="subtitulo__vehiculos">Motos</h3> 
+<div class="vehiculos">
+<?php while($filaMotos = mysqli_fetch_array($ejecutarConsulta)){
+   $filaFotos = mysqli_fetch_array($ejecutarConsultaFotos);
+ $filaContacto = mysqli_fetch_array($ejecutarConsultaContacto) ?>
+    <div class="descripcion__del__vehiculo">
+    <div class="contenedor__imagen__vehiculo">
+         <img src="<?php echo $filaFotos['foto_1'] ?>" alt="Foto portada del carro usado en venta" class="imagen__del__vehiculo">
+         <?php if($filaMotos['nombrePaquete'] ==="PREMIUN"){ ?>
+          <p class="texto__segun__paquete"><i class="fas fa-info-circle"></i> Patrocinado <?php echo ucwords($filaMotos['nombreVendedor'])?> </p>
+
+<?php } ?>
+<?php if($filaMotos['nombrePaquete'] ==="GRATIS"){ ?>
+ <p class="texto__segun__paquete"><i class="fas fa-info-circle"></i> Anunciado por <?php echo ucwords($filaMotos['nombreVendedor'])?></p>
+<?php } ?>
+ <p class="modelo__del__vehiculo precio__del__carro"><i class="fas fa-dollar-sign"></i> <?php echo number_format($filaMotos['precio'],2,'.','.') ?></p>          
+</div>
+<div class="datos__del__vehiculo">
+  <div class="motor">
+  <p class="motor__del__vehiculo"><?php echo ucwords($filaMotos['marca']) ?></p>
+  <p class="motor__del__vehiculo"><?php echo ucwords($filaMotos['modelo']) ?></p>
+  <p class="motor__del__vehiculo"><?php echo  $filaMotos['cilindraje'] ?></p>
+</div> 
+  <div class="kilometraje__y__año">
+  <div>
+      <p class="kilometros"><i class="fas fa-clock"></i> <?php echo  number_format($filaMotos['kilometros'],2,'.','.') ?></p>
+  </div>
+  <div>
+      <p class="modelo__del__vehiculo"><i class="fas fa-calendar"></i> <?php echo $filaMotos['fechaFabricacion'] ?></p>
+  </div>
+  </div>
+  <div class="contenido__precio__y__mas__detalles">
+    <div class="precio__del__vehiculo">
+        <div class="precio">
+            <a href="detalles-moto?idp=<?php echo $filaMotos['idPublicacionMoto']?>&idu=<?php echo $filaMotos['idUsuario']?>" class="mas__detalles"><i class="fas fa-plus"></i>  detalles</a>
+        </div>
+  <div>
+</div>
+</div>
+</div>
+<hr class="hr">
+<div class="btn__compartir">
+  <p class="texto__compartir">Compartir en <i class="fas fa-share-alt"></i> </p>
+  <div class="enlaces__comprtir">
+    <div class="compartir">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//localhost/accent__hollding/detalles-usado?idp=<?php echo $fila['id_publicacion_vehiculo']?>&idu=<?php echo $fila['id_usuario']?>" target="_blank"><i class="fab fa-facebook iconos__compartir"></i></a>
+    </div>
+    <div class="compartir">
+    <a href="https://twitter.com/intent/tweet?text=http%3A//localhost/accent__hollding/detalles-usado?idp=<?php echo $fila['id_publicacion_vehiculo']?>&idu=<?php echo $fila['id_usuario']?>" target="_blank"><i class="fab fa-twitter iconos__compartir"></i></a>
+    </div>
+    <div class="compartir">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//localhost/accent__hollding/detalles-usado?idp=<?php echo $fila['id_publicacion_vehiculo']?>&idu=<?php echo $fila['id_usuario']?>" target="_blank"><i class="fab fa-linkedin-in  iconos__compartir"></i></a>
+    </div>
+  </div>
+ 
+</div>
+</div>
+<div class="contactos__del__vehiculo">
+        <div class="contactos">
+            <a href="https://api.whatsapp.com/send?phone=57<?php echo $filaContacto['whatsapp']?>&text=Hola, vi el anuncio de tu moto en AdHoc" class="enlace__whatsapp"target="_blank"><i class="fab fa-whatsapp"></i> Via mensaje</a>
+        </div>
+     <div class="contactos">
+         <a href="mailto:<?php echo $filaContacto['email']?>" class="enlace__whatsapp"><i class="fas fa-envelope"></i> Via email</a>
+     </div>
+</div>
+<br>
+</div>
+<?php }?>
+</div>
+
+<?php 
+if($filaMotos > 4 && $filaFotos > 4 && $filaContacto > 4){ ?>
+<div class="contenedor__btn__cta">
+    <a href="motos" class="cta"> <i class="fas fa-plus"> Motos </i></a>
+</div>
+<?php } ?>  
+</div>
+<?php } ?>
+</div>
+</div>
+<br><br>
     <div class="container services">
-        <h2 class="subtitle subtitulo">Qué me ofrece AdHoc ?<span class="point">.</span></h2>
+        <h2 class="subtitle subtitulo">Qué te ofrecemos<span class="point">.</span></h2>
         <div class="contenedor__funciones">
             <div class="contenido__funciones">
                 <div>
@@ -113,9 +240,9 @@ if($numero__fila > 0 && $numero__fila__fotos > 0 && $numero__fila__contacto > 0)
                 </div>
                 <div>
                     <h2 class="subtitulo__funciones">Campañas de marketing digital</h2>
-                    <p class="parrafo__contenido__funciones"> En nuestra plataforma, realizamos amplias campañas de marketing digital en toda Colombia para ayudarte a encontrar compradores para tu carro usado. 
-                        Sabemos que vender un auto puede ser un proceso complicado y a veces estresante, 
-                        por eso nos encargamos de llevar a los compradores de carros usados  hasta ti.
+                    <p class="parrafo__contenido__funciones"> 
+                    Sabemos que este proceso puede resultar complicado y estresante,
+                     por lo que nos encargamos de llevar a los potenciales compradores directamente hasta ti.
                        </p>
                 </div>
             </div>
@@ -126,9 +253,9 @@ if($numero__fila > 0 && $numero__fila__fotos > 0 && $numero__fila__contacto > 0)
                 </div>
                 <div>
                     <h2 class="subtitulo__funciones">Tienes una empresa?</h2>
-                    <p class="parrafo__contenido__funciones">Ya sea que estés buscando comprar un carro usado o vender el tuyo, nuestra plataforma te ofrece una manera sencilla y eficiente de hacerlo. 
-                        Todo lo que necesitas hacer es crear una cuenta y empezar a publicar tus vehículos en nuestra plataforma.
-                        Nuestro sistema te permite publicar tantos vehículos como quieras, sin tener que preocuparte por tener múltiples cuentas o registros. </p>
+                    <p class="parrafo__contenido__funciones">
+                    ¿Buscas  vender varios  carros usados? regístrate, publica tus vehículos y listo. Con un sistema simple y eficiente, puedes publicar tantos vehículos como quieras, sin preocuparte por múltiples cuentas o registros.     
+                </p>
                 </div>
             </div>
 
@@ -138,10 +265,11 @@ if($numero__fila > 0 && $numero__fila__fotos > 0 && $numero__fila__contacto > 0)
                 </div>
                 <div>
                     <h2 class="subtitulo__funciones">Obten beneficios exclusivos</h2>
-                    <p class="parrafo__contenido__funciones">Si estás buscando vender tu carro usado en Colombia, 
-                        anunciarlo con nosotros es la mejor opción. Te ofrecemos beneficios exclusivos, 
-                        una audiencia amplia y relevante de compradores potenciales, y asesoramiento y soporte personalizado durante todo el proceso de venta. 
-                        ¡No esperes más para empezar a vender tu carro usado con nosotros! </p>
+                    <p class="parrafo__contenido__funciones">
+                    Accede a promociones especiales y ofertas exclusivas entre otros. 
+                    Unete hoy mismo y obtén beneficios únicos.     
+                        
+                </p>
                 </div>
             </div>
 
@@ -151,7 +279,7 @@ if($numero__fila > 0 && $numero__fila__fotos > 0 && $numero__fila__contacto > 0)
                 </div>
                 <div>
                     <h2 class="subtitulo__funciones">Incio sin costo</h2>
-                    <p class="parrafo__contenido__funciones"> ¡Prueba nuestra plataforma durante los primeros 30 días sin costo alguno! 
+                    <p class="parrafo__contenido__funciones"> ¡Prueba nuestra plataforma durante los primeros 60 días sin costo alguno! 
                         Sin necesidad de proporcionar información de tarjeta de crédito o débito, 
                         tendrás acceso a todas las funcionalidades y soporte incluido.</p>
                 </div>
@@ -163,8 +291,8 @@ if($numero__fila > 0 && $numero__fila__fotos > 0 && $numero__fila__contacto > 0)
                 </div>
                 <div>
                     <h2 class="subtitulo__funciones">Mide tus resultados </h2>
-                    <p class="parrafo__contenido__funciones">en nuestra plataforma no solo te ofrecemos una manera fácil y efectiva de vender tu carro usado, sino también información detallada sobre las visualizaciones de tu anuncio y los compradores interesados. 
-                        ¡Regístrate hoy mismo y descubre todo lo que podemos hacer por ti!</p>
+                    <p class="parrafo__contenido__funciones">información detallada sobre las visualizaciones de tu anuncio. 
+                        ¡Que esperas unete hoy mismo!</p>
                     <!-- <strong class="en__construccion">Nuevo</strong> -->
                 </div>
             </div>
@@ -175,26 +303,27 @@ if($numero__fila > 0 && $numero__fila__fotos > 0 && $numero__fila__contacto > 0)
                 </div>
                 <div>
                     <h2 class="subtitulo__funciones">Consejos de seguridad</h2>
-                    <p class="parrafo__contenido__funciones">Te brindamos asesoramiento sobre cómo preparar tu vehículo para la venta, 
-                        incluyendo la limpieza y el mantenimiento necesario para atraer a los compradores potenciales. 
-                        También te proporcionamos consejos sobre cómo establecer un precio justo y competitivo para tu vehículo, 
-                        y cómo presentar tu vehículo de manera efectiva en el anuncio</p>
-                    <a href="carros-y-camionetas#asesoramiento" class="card__button">leer mas</a>
+                    <p class="parrafo__contenido__funciones">
+                    No solo te brindamos un espacio para publicar tu vehículo, 
+                    sino también asesoramiento en cómo prepararlo para su venta. 
+                    
+                    </p>
+                    <a href="guia" class="card__button">leer mas</a>
                 </div>
             </div>
         </div>
     </div>
+    
     </div>
-    <h2 class="subtitle subtitle subtitulo">Por qué elegir nuestro portal para vender tu carro usado ? <span
-            class="point">.</span></h2>
-    <p class="copy__section texto__copy"> aquí te presentamos algunas de las razones</p>
+    <h2 class="subtitle subtitle subtitulo">Por qué elegir nuestro portal para vender tu carro usado ? <span class="point">.</span></h2>
+    <p class="copy__section texto__copy"> aquí te presentamos algunas de las razones.</p>
     <div class="contenedor__eleccion">
         <div class="container servicios">
             <div class="slider slider__1 ">
                 <div>
                     <i class="fas fa-chalkboard-teacher iconos__slider"></i>
                     <p class="subtitulo__slider">Brindamos un servicio de soporte al cliente excepcional para ayudarte
-                        en todo el proceso de publicación de tu anuncio para tu carro usado</p>
+                        en todo el proceso de publicación de tu anuncio.</p>
                 </div>
             </div>
 
@@ -202,92 +331,64 @@ if($numero__fila > 0 && $numero__fila__fotos > 0 && $numero__fila__contacto > 0)
                 <div>
                     <i class="fas fa-images iconos__slider"></i>
                     <p class="subtitulo__slider">En nuestra plataforma, puedes publicar fotos y detalles de tu carro
-                        usado para que los compradores puedan ver todo lo que tienen que saber antes de hacer una oferta
+                         para que los compradores puedan ver todo lo que tienen que saber antes de hacer una oferta.
                     </p>
-
                 </div>
             </div>
 
             <div class="slider slider__7">
                 <div>
                     <i class="fas fa-money-check-alt iconos__slider"></i>
-                    <p class="subtitulo__slider">Publica tu carro en nuestro portal hoy mismo y comienza a recibir
-                        ofertas en poco tiempo. ¡Anuncia con nosotros y obtén resultados!</p>
+                    <p class="subtitulo__slider">Nuestro servicio de anuncios clasificados de carros usados ayuda a hombres y mujeres ocupados a vender  de manera rápida y eficiente, 
+                        para que pueda seguir con su día a día sin preocupaciones.</p>
                 </div>
             </div>
             <div class="slider slider__8">
-
                 <div>
                     <i class="fas fa-window-restore iconos__slider"></i>
                     <p class="subtitulo__slider"> Hemos diseñado nuestro sitio para que sea fácil de usar y encontrar lo
                         que buscas.
                         Nuestro objetivo es hacer que la experiencia de publicar y encontrar un carro usado sea lo más
                         fácil posible
-
                     </p>
-
                 </div>
             </div>
-
+            
         </div>
+        
         <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
             <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                style="stroke: none; fill: #000524;"></path>
+            style="stroke: none; fill: #000524;"></path>
         </svg>
-    </div>
-    </div>
-    <div style="height: 150px; overflow: hidden;">
-    </div>
-
+        
+    <div style="height: auto; overflow: hidden; background:red;"></div>
     </div>
 
-    <section class="services services__vender__carro">
+    <section class="services__vender__carro">
         <div class="container">
-            <h3 class="subtitle subtitulo">Hazle saber a Colombia que estás vendiendo tu carro<span
-                    class="point">.</span></h3>
-            <p class="copy__section texto__copy"> Anuncia tu carro a la hora que quieras y desde donde quieras, AdHoc te
-                ayuda a vender tu carro de forma segura. </p>
-            <article class="container-cards">
-                <div class=" card__services">
-                    <div class="imagen__services">
-                        <img src="img/Tiempo__real.svg" class="card__img" alt="recibiendo mensajes">
-
-                    </div>
-                    <div class="cards__text">
-                        <p class="card__list">Recibe ofertas en tu celular</p>
-                        <!-- <h3 class="card__title">Entrega las llaves<span class="point">.</span></h3> -->
-                        <p class="card__copy">Todas las ofertas de compras las podras recibir en tu telefono.
-                            Chatea o recibe llamadas de tu posible comprador.
-                        </p>
-                        <a href="usuario" class="card__button">Registrarme </a>
-                    </div>
-                </div>
-                <div class="card__services" id="formas-de-pago">
-                    <div class="imagen__services">
-                        <img src="img/En__linea.svg" class="card__img" alt="Escribiendo mensaje">
-                    </div>
-                    <div class="cards__text">
-                        <p class="card__list">No estas convencido ? </p>
-                        <!-- <h3 class="card__title">Metodos de pago<span class="point">.</span></h3> -->
-                        <p class="card__copy">
-                            Un equipo humano esta dispuesto a resolver tus dudas cuando lo necesites.
-                        </p>
-                        <a href="contacto" class="card__button">Necesito ayuda</a>
-
-                    </div>
-                </div>
+            <h3 class="subtitle subtitulo">Servicios <span class="point">.</span></h3>
+            <p class="copy__section texto__copy"> Anuncia tu carro o moto a la hora que quieras y desde donde quieras, somos tu concesionario en linea. </p>
+            <article class="container-cards-servicios">
                 <div class="card__services">
                     <div class="imagen__services">
-                        <img src="img/dinero.svg" class="card__img" alt="Celular en la mano con signo de pesos">
-
+                    <img src="./img/carro.png" alt="carro icono" class="iconos__servicios">
                     </div>
                     <div class="cards__text">
-                        <p class="card__list">Ha llegado el momento de vender tu carro ? </p>
-                        <!-- <h3 class="card__title">Seguridad<span class="point">.</span></h3> -->
-                        <p class="card__copy">
-                            Vende tu carro a un particular por el precio justo.
-                        </p>
-                        <a href="publicar-vehiculos" class="card__button">Anunciar</a>
+                        <p class="card__list">Vehículo</p>
+                        <p class="card__copy"> Vende tu carro a un particular por el precio justo. </p>
+                        <a href="publicar-vehiculos" class="card__button">Anunciar </a>
+                    </div>
+                </div>
+                
+                <div class="card__services">
+                    <div class="nuevo__servicio">Nuevo</div>
+                    <div class="imagen__services">
+                    <img src="./img/moto.png" alt="moto"  class="iconos__servicios">
+                    </div>
+                    <div class="cards__text">
+                        <p class="card__list">Moto</p>
+                        <p class="card__copy">Convierte tu moto en efectivo y encuentra al comprador perfecto.</p>
+                        <a href="publicar-moto" class="card__button">Anunciar</a>
                     </div>
                 </div>
             </article>
@@ -295,9 +396,8 @@ if($numero__fila > 0 && $numero__fila__fotos > 0 && $numero__fila__contacto > 0)
     </section>
     <section class="container nuestra__forma__de__pago">
         <h2 class="subtitulo__nuestra__forma">Medios de pago</h2>
-        <!-- <p class="paypal__parrafo"></p> -->
         <article class="container-cards cards__formas__de__pago">
-            <div class="card precios card__precios" id="formas-de-pago">
+            <div class="card__precios" id="formas-de-pago">
                 <div class="cards__text">
                     <p class="card__list paypal">Billetera digital</p>
                     <div class="linea"></div>
@@ -305,7 +405,7 @@ if($numero__fila > 0 && $numero__fila__fotos > 0 && $numero__fila__contacto > 0)
                     <img src="./img/paypal.png" alt="Logo Paypal" class="img__billeteras">
                 </div>
             </div>
-            <div class="card precios  card__precios">
+            <div class="card__precios">
                 <div class="cards__text">
                     <p class="card__list credito">Transferencia bancaria</p>
                     <div class="linea"></div>
@@ -314,7 +414,7 @@ if($numero__fila > 0 && $numero__fila__fotos > 0 && $numero__fila__contacto > 0)
                     <img src="./img/pse.png" alt="Logo pse" class="img__billeteras">
                 </div>
             </div>
-            <div class="card precios  card__precios">
+            <div class=" card__precios">
                 <div class="cards__text">
                     <p class="card__list credito">Tarjeta de crédito </p>
                     <div class="linea"></div>
@@ -325,7 +425,7 @@ if($numero__fila > 0 && $numero__fila__fotos > 0 && $numero__fila__contacto > 0)
                     <img src="./img/visa.png" alt="Tarjeta Visa" class="img__tarjetas__de__credito">
                 </div>
             </div>
-            <div class="card precios  card__precios__efectivo">
+            <div class="card__precios__efectivo">
                 <div class="cards__text__efectivo">
                     <p class="card__list credito">Efectivo </p>
                     <div class="linea"></div>
@@ -356,34 +456,15 @@ if($numero__fila > 0 && $numero__fila__fotos > 0 && $numero__fila__contacto > 0)
                         <img src="./img/logo__pagatodo.png" alt="Logo Paga todo" class="img__pago__en__efectivo">
                     </div>
                     <div class="contenedor__imagenes__pago__efectivo">
-                        <img src="./img/efecty.png" alt="Logo Efecty" class="img__pago__en__efectivo">
+                       <img src="./img/efecty.png" alt="Logo Efecty" class="img__pago__en__efectivo">
                     </div>                                           
                     </div>
                     <br><br>
                 </div>
             </div>
         </article>
-
     </section>
-   
-    <section class=" container contenedor__anuncio__propio">
-        <div class=" contenido__img__anuncio">
-            <img src="./img/imagen__anuncio__carros.png" alt="mujer en su celular  e icono de redes sociales"
-                class="imagen__anuncio__carros">
-        </div>
-        <div class="contenido__anuncio__texto">
-            <h4 class="subtitulo__anuncio">¿Estás buscando vender tu carro usado de manera rápida y sencilla?</h4>
-            <p class="texto__anuncio"> ¡Entonces has venido al lugar correcto! En nuestro sitio web, te ofrecemos una
-                plataforma fácil de usar y confiable para que puedas publicar tu anuncio y llegar a una gran
-                audiencia de compradores interesados.
-                <br><br>
-                Crea tu cuenta, registra los datos de tu carro usado y ahora estara listo para ser publicado.
-            </p>
-            <a href="publicar-vehiculos" class="publicar__carro">Publicar mi carro <i
-                    class="fas fa-arrow-right flecha"></i></a>
-        </div>
-    </section>
-    <br><br>
+    
 </main>
 
 <?php include'layout/footer.php'; ?>

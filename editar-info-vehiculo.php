@@ -10,14 +10,14 @@ if($id__usuario && $id__publicacion){
         $fila__resultado = mysqli_fetch_array($ejecutar__consulta);?>
      <div class="container contenedor__edit__info__vehiculo">
        <h1 class="titulo__edit__info__vehiculo">Edita la información de tu vehiculo</h1>
+       <p class="parrafo__actualizar__info">Modifica o cambia información de tu vehículo para generar más interes  de potenciales compradores  </p>
        <br><br>
        <h2 class="subtitulo__info__vehiculo">Información basica del vehiculo</h2>
-        <form  id="form-actualizar-info-vehiculo">
+        <form  id="form-actualizar-info-vehiculo" >
           <div class="contenido__info__vehiculo">
         <input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
         <input type="hidden"  class="step__input"name="id-publicacion" value="<?php  echo $id__publicacion ?>">
-
-       <div class="form-floating form__floating mb-3">
+       <div class="form-floating form__floating">
         <input type="text" class="form-control step__input" id="floatingInput" value="<?php echo $fila__resultado['marca_del_vehiculo'] ?>" name="marca">
         <label for="floatingInput">Marca del vehiculo</label>
         </div>
@@ -105,19 +105,19 @@ if($id__usuario && $id__publicacion){
 <div class="form-floating form__floating__edit">
     <textarea rows="4" cols="80" class="step__input text__area__edit block"  name="descripcion" id="floatingTextarea2"><?php echo $fila__resultado['descripcion_vehiculo'] ?></textarea>
 </div> 
-</div>
 <button  class="btn btn-success enviar" type="submit">Guardar</button>
+</div>
 </form>
 <?php  $seleccionar__datos__diseño__y__estilo  = "SELECT * FROM disenio__y__estilo__vehiculo WHERE id_estilos = '$id__publicacion' AND id_usuario = '$id__usuario'";
       $ejecutar__consulta__diseño = mysqli_query($conexion__db__accent,$seleccionar__datos__diseño__y__estilo);
       if($ejecutar__consulta__diseño){
       $fila__resultado__diseño = mysqli_fetch_array($ejecutar__consulta__diseño);?> 
-      <br><br><br> 
 <h2 class="subtitulo__info__vehiculo">Diseño y estilo</h2>
-<form class="contenido__info__vehiculo" id="form-diseño-y-estilo">
-<input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
-        <input type="hidden"  class="step__input"name="id-publicacion" value="<?php  echo $id__publicacion ?>">
-<div class="form-floating  form__floating">
+<form  id="form-diseño-y-estilo">
+  <div class="contenido__info__vehiculo">
+  <input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
+   <input type="hidden"  class="step__input"name="id-publicacion" value="<?php  echo $id__publicacion ?>">
+   <div class="form-floating  form__floating">
      <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example" name="rines-de-lujo">
         <option selected><?php echo $fila__resultado__diseño['rines_de_lujo']?></option>
         <option value="Si">Si</option> 
@@ -149,11 +149,12 @@ if($id__usuario && $id__publicacion){
   </select>
   <label for="floatingSelect">Pantalla de video</label>    
  </div>
-     <button type="submit" class="btn btn-success enviar">Guardar</button>
+ <button type="submit" class="btn btn-success enviar">Guardar</button>
+  </div>
 </form>
 <br><br><br>
 <h2 class="subtitulo__info__vehiculo">Equipamiento del vehiculo</h2>
-<form  id="form-actualizar-equipamiento">
+<form  id="form-actualizar-equipamiento" >
   <div class="contenido__info__vehiculo">
 <input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
 <input type="hidden"  class="step__input"name="id-publicacion" value="<?php  echo $id__publicacion ?>">
@@ -161,7 +162,7 @@ if($id__usuario && $id__publicacion){
       $ejecutar__consulta__equipamiento = mysqli_query($conexion__db__accent,$seleccionar__datos__equipamiento);
       if($ejecutar__consulta__equipamiento){
       $fila__resultado__equipamiento = mysqli_fetch_array($ejecutar__consulta__equipamiento);?> 
- <div class="form-floating  form__floating">
+    <div class="form-floating  form__floating">
      <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example" name="aire-acondicionado">
     <option selected><?php  echo $fila__resultado__equipamiento['aire_acondicionado'] ?></option>
     <option value="Si">Si</option> 
@@ -258,20 +259,19 @@ if($id__usuario && $id__publicacion){
   </select>
   <label for="floatingSelect">Gps</label>    
  </div>
-
- </div>
  <button type="submit" class="btn btn-success enviar">Guardar</button>
+ </div>
 </form>
 <br><br>
 <h2 class="subtitulo__info__vehiculo">Seguridad del vehiculo</h2>
-<form id="form-actaulizar-seguridad">
-  <div  class="contenido__info__vehiculo"  >
-<input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
+<form id="form-actaulizar-seguridad" class="contenido__info__vehiculo">
+  <div class="contenido__info__vehiculo">
+  <input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
 <input type="hidden"  class="step__input"name="id-publicacion" value="<?php  echo $id__publicacion ?>">
 <?php  $seleccionar__datos__seguridad = "SELECT * FROM seguridad__del__vehiculo WHERE id_seguridad = '$id__publicacion' AND id_usuario = '$id__usuario'";
       $ejecutar__consulta__seguridad = mysqli_query($conexion__db__accent,$seleccionar__datos__seguridad);
       if($ejecutar__consulta__seguridad){
-      $fila__resultado__seguridad = mysqli_fetch_array($ejecutar__consulta__seguridad);?> 
+     $fila__resultado__seguridad = mysqli_fetch_array($ejecutar__consulta__seguridad);?>   
     <div class="form-floating  form__floating">
      <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example" name="air-bag-delantero">
     <option selected><?php echo  $fila__resultado__seguridad['air_bag_delantero'] ?></option>
@@ -284,8 +284,7 @@ if($id__usuario && $id__publicacion){
      <select class="form-select step__input" id="floatingSelect" aria-label="Floating label select example" name="air-bag-trasero">
     <option selected><?php echo  $fila__resultado__seguridad['air_bag_trasero'] ?></option>
     <option value="Si">Si</option> 
-    <option value="No">No</option> 
-    
+    <option value="No">No</option>   
   </select>
   <label for="floatingSelect">Air bag trasero</label>    
  </div>
@@ -294,7 +293,6 @@ if($id__usuario && $id__publicacion){
     <option selected><?php  echo $fila__resultado__seguridad['bloqueo_central'] ?></option>
     <option value="Si">Si</option>
     <option value="No">No</option> 
-
   </select>
   <label for="floatingSelect">Bloqueo central</label>    
  </div>
@@ -335,7 +333,6 @@ if($id__usuario && $id__publicacion){
     <option selected><?php  echo $fila__resultado__seguridad['sensor_reversa'] ?></option>
     <option value="Si">Si</option> 
     <option value="No">No</option> 
-
   </select>
   <label for="floatingSelect">Sensor reversa</label>    
  </div>
@@ -344,7 +341,6 @@ if($id__usuario && $id__publicacion){
     <option selected><?php  echo  $fila__resultado__seguridad['sensor_punto_ciego'] ?></option>
     <option value="Si">Si</option>
     <option value="No">No</option> 
-
   </select>
   <label for="floatingSelect">Sensor punto ciego</label>    
  </div>
@@ -353,15 +349,16 @@ if($id__usuario && $id__publicacion){
     <option selected><?php echo    $fila__resultado__seguridad['camara_reversa'] ?></option>
     <option value="Si">Si</option>
     <option value="No">No</option> 
-
   </select>
   <label for="floatingSelect">Camara reversa</label>    
- </div>
- </div>
- <button type="submit" class="btn btn-success enviar">Guardar</button>
+</div>
+</div>
+<div class="contenedor__btn__actualizar__info">
+  <button type="submit" class="btn btn-success enviar__info">Guardar</button>
+</div>
 </form>
 <h2 class="subtitulo__info__vehiculo">Información de contacto</h2>
-<form  id="form-actaulizar-contactos">
+<form  id="form-actaulizar-contactos" >
   <div class="contenido__info__vehiculo">
 <input type="hidden"  class="step__input"name="id-usuario" value="<?php  echo $datos__resultado['id_usuario']  ?>">
 <input type="hidden"  class="step__input"name="id-publicacion" value="<?php  echo $id__publicacion ?>">
@@ -375,8 +372,8 @@ if($ejecutar__consulta__contacto){
  <label for="floatingPassword">whatsapp 1</label>
 </div>
 <div class="form-floating form__floating">
- <input type="text" class="form-control step__input" id="floatingPassword" value="<?php echo $fila__resultado__contacto['whatsapp_2'] ?>" name="whatsapp_2">
- <label for="floatingPassword">whatsapp 2</label>
+ <input type="text" class="form-control step__input" id="floatingPassword" value="<?php echo $fila__resultado__contacto['email'] ?>" name="email">
+ <label for="floatingPassword">Email</label>
 </div>
 <div class="form-floating form__floating">
  <input type="text" class="form-control step__input" id="floatingPassword" value="<?php echo $fila__resultado__contacto['telefono_1'] ?>" name="telefono_1">
@@ -386,8 +383,8 @@ if($ejecutar__consulta__contacto){
  <input type="text" class="form-control step__input" id="floatingPassword" value="<?php echo $fila__resultado__contacto['telefono_2'] ?>" name="telefono_2">
  <label for="floatingPassword">Telefono 2</label>
 </div>
-</div>
 <button type="submit" class="btn btn-success enviar">Guardar</button>
+</div>
 </form>
 </div>
 <?php } ?>
@@ -398,12 +395,6 @@ if($ejecutar__consulta__contacto){
    <?php } ?>
 <?php }else{
     header('Location: dashboard-usuario');
-    
-  } ?>
+    } ?>
 
-
-
-<?php 
-include'layout/footer-home.php';
-
-?>
+<?php include'layout/footer-home.php';?>

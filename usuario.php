@@ -70,6 +70,12 @@ include'layout/nabvar.php' ?>
             </label>
             <div class="block">
                 <input type="submit" value="CREAR MI CUENTA" class="boton__registro" name="enviar">
+                <br>
+            <div class="text-center spinner-login" id="spinner-login">
+            <div class="spinner-border d-none" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
             </div>
             <p class="terminos block">Al registrarte aceptas nuestros <a class="enlace__terminos"
                     href="terminos-y-condiciones-de-uso.php">Terminos y

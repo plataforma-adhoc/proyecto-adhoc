@@ -26,7 +26,6 @@ include'layout/nabvar.php';
     <div class="contenedor__enlace__iniciar__sesion">
         <a href="login-usuario" class="enlace__iniciar__sesion">iniciar sesion</a>
     </div>
- 
  </div>
 <br><br><br>
  <?php include'layout/footer.php'; ?>

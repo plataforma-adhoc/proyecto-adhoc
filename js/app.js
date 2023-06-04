@@ -45,8 +45,58 @@ actualizar__informacion__contacto();
 import {insertar__comentarios,mostrar__comentario} from './comentarios.js';
 insertar__comentarios();
 
+import {datosDeLaMoto,fotosDeLaMoto,contactoVendedorMoto} from'./datos-moto.js';
+datosDeLaMoto();
+fotosDeLaMoto();
+contactoVendedorMoto();
+
+import {actualizarInfoMoto,actualizarContactoMoto} from './actualizar-info-moto.js'
+actualizarInfoMoto();
+actualizarContactoMoto()
 setInterval(() => {
   mostrar__comentario();
 }, 5000);
 
 
+let slider = document.querySelector(".slider-contenedor")
+let sliderIndividual = document.querySelectorAll(".contenido-slider")
+let contador = 1;
+let width = sliderIndividual[0].clientWidth;
+let intervalo = 5000;
+
+window.addEventListener("resize", function(){
+    width = sliderIndividual[0].clientWidth;
+})
+
+setInterval(function(){
+    slides();
+},intervalo);
+
+
+
+function slides(){
+    slider.style.transform = "translate("+(-width*contador)+"px)";
+    slider.style.transition = "transform .8s";
+    contador++;
+
+    if(contador == sliderIndividual.length){
+        setTimeout(function(){
+            slider.style.transform = "translate(0px)";
+            slider.style.transition = "transform .8s";
+            contador=1;
+        },2500)
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  var menu = document.querySelector('.nav__hero');
+  var altura = menu.offsetTop;
+  
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > altura) {
+      menu.classList.add('menu__sticky');
+    } else {
+      menu.classList.remove('menu__sticky');
+    }
+  });
+});

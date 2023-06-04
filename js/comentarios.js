@@ -5,7 +5,7 @@ export function insertar__comentarios(){
       var url__servidor = 'https://adhoc.com.co/'
         event.preventDefault();
         let form__data =  new FormData(document.getElementById('formulario-comentario'))
-        fetch(url__servidor +'insert-comentarios',{
+        fetch(url__servidor+'insert-comentarios',{
             method:'POST',
             body:form__data
         }).then(respuesta =>  respuesta.json())
@@ -26,8 +26,7 @@ export function insertar__comentarios(){
             method:'POST',
             body:form__data
         }).then(respuesta =>  respuesta.json())
-        .then(data =>{
-          
+        .then(data =>{         
           var insertar__comentario =  document.getElementById('insertar-comentario')
           var  html ="";
           if(data.length > 0){
@@ -50,9 +49,7 @@ export function insertar__comentarios(){
             }else{
            insertar__comentario.innerHTML=`
            <p class="texto__sin__comentarios">
-           <i class="far fa-comment-alt icono__sin__comentario"></i>
-           
-           </p>
+           <i class="far fa-comment-alt icono__sin__comentario"></i>  </p>
            
            <p class="texto__sin__comentarios">No hay comentarios, se el primero en comentar</p>
            `   

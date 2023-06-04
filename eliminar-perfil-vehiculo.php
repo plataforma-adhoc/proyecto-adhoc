@@ -28,4 +28,5 @@ if($id__usuario && $id__publicacion){
   }
 }
 }
+eliminarPerfilVehiculo();
 ?>

@@ -6,21 +6,16 @@ $id__contacto = isset($_GET['id_contacto'])? $_GET['id_contacto']: '';
 $id__equipamiento = isset($_GET['id_equipamiento'])? $_GET['id_equipamiento']: '';
 $id__fotos = isset($_GET['id_fotos'])? $_GET['id_fotos']: '';
 $id__informacion = isset($_GET['id_informacion'])? $_GET['id_informacion']: '';
-$id__seguridad = isset($_GET['id_seguridad'])? $_GET['id_seguridad']: ''; ?>
+$id__seguridad = isset($_GET['id_seguridad'])? $_GET['id_seguridad']: ''; 
 
-
+if($id__paquete && $id__usuario && $id__estilos && $id__contacto && $id__equipamiento && $id__fotos && $id__informacion && $id__seguridad){ ?>
 <div class="container contenedor__final__compra" id="contenedor-respuesta-final-compra">
- <h1 class="titulo__final__compra">Muchas Gracias  </h1>
- <h2 class="subtitulo__final__compra">Por tu confianza en nosotros</h2>
- <a href="dashboard-usuario" class="enlace__final__compra">Regresar al inicio</a>
+  <div class="contenedor__subtitulos__final__compra">
+    <h1 class="titulo__final__compra">Muchas Gracias  </h1>
+    <h2 class="subtitulo__final__compra">Por tu confianza en nosotros</h2>
+    <a href="dashboard-usuario" class="enlace__final__compra">Regresar al inicio</a>
+  </div>
 </div>
-<!-- <header id="main-header" style="margin-top:20px" class="contenedor___respuesta__epayco">
-    <div class="row container">
-      <div class="col-lg-12 franja">
-        <img class="center-block" src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/epayco/logo1.png" style="">
-      </div>
-    </div>
-  </header> -->
   <div class="container contenedor___respuesta__epayco">
   <h4 style="text-align:center; color:white"> Respuesta de la Transacción </h4>
         <hr>
@@ -35,17 +30,14 @@ $id__seguridad = isset($_GET['id_seguridad'])? $_GET['id_seguridad']: ''; ?>
     <tr>
       <th colspan="2">Fecha</th>
       <td colspan="1" id="fecha" class=""></td>
-
     </tr>
     <tr>
       <th colspan="2">Respuesta</th>
       <td colspan="1"id="respuesta"></td>
-
     </tr>
     <tr>
       <th colspan="2">Motivo</th>
       <td colspan="1"id="motivo"></td>
-
     </tr>
     <tr>
       <th colspan="2">Banco</th>
@@ -55,7 +47,6 @@ $id__seguridad = isset($_GET['id_seguridad'])? $_GET['id_seguridad']: ''; ?>
     <tr>
       <th colspan="2">Recibo</th>
       <td colspan="1"id="recibo"></td>
-
     </tr>
     <tr>
       <th colspan="2">Total</th>
@@ -63,7 +54,6 @@ $id__seguridad = isset($_GET['id_seguridad'])? $_GET['id_seguridad']: ''; ?>
     </tr>
   </tbody>
 </table>
-
 </div>
 <footer class="footer__respuesta">
         <div class="logos">
@@ -77,13 +67,12 @@ $id__seguridad = isset($_GET['id_seguridad'])? $_GET['id_seguridad']: ''; ?>
 </div>
     </div>
   </div>
+  <?php } ?>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
-
-   
     function getQueryParam(param) {
       location.search.substr(1)
         .split("&")
@@ -93,21 +82,18 @@ $id__seguridad = isset($_GET['id_seguridad'])? $_GET['id_seguridad']: ''; ?>
       return param
     }
     function checkPaymentStatus() {
- //Referencia de payco que viene por url
  var ref_payco = getQueryParam('ref_payco');
       //Url Rest Metodo get, se pasa la llave y la ref_payco como paremetro
       var urlapp = "https://secure.epayco.co/validation/v1/reference/" + ref_payco;
 
       $.get(urlapp, function(response) {
-
-
         if (response.success) {
           if (response.data.x_cod_response == 1) {
-            let url__servidor  = 'https://adhoc.com.co/' 
+            let urlServidor  = 'https://adhoc.com.co/' 
             //Codigo personalizado
-            alert("Transaccion Aprobada");
+            // alert("Transaccion Aprobada");
             console.log('transacción aceptada');
-    fetch( url__servidor+'insert-datos-de-pago',{
+    fetch( urlServidor+'insert-datos-de-pago',{
      method:'POST',
      body: JSON.stringify({
     id__paquete:<?php echo $id__paquete; ?>,
@@ -127,8 +113,6 @@ $id__seguridad = isset($_GET['id_seguridad'])? $_GET['id_seguridad']: ''; ?>
     .then(data => {
       console.log(data)
     })
-  
-  
           }
           //Transaccion Rechazada
           if (response.data.x_cod_response == 2) {
@@ -161,6 +145,7 @@ $id__seguridad = isset($_GET['id_seguridad'])? $_GET['id_seguridad']: ''; ?>
   
     }
     $(document).ready(function() {
+      checkPaymentStatus();
       //llave publica del comercio
 // Ejecuta la función checkPaymentStatus cada 5 segundos
     // setInterval(checkPaymentStatus, 5000);
@@ -176,9 +161,9 @@ $id__seguridad = isset($_GET['id_seguridad'])? $_GET['id_seguridad']: ''; ?>
     ¡Que tu carro se venda muy rapido !</p>
 <h3 class="subtitulo__redes__sociales">Puedes seguirnos en nuestras redes sociales</h3>
 <div class="redes__sociales">
-<a href="https://www.facebook.com/adhocColombia" target="_blank"><i class="fab fa-facebook facebook"></i></a>
-<a href="https://twitter.com/adhoc_colombia" target="_blank"><i class="fab fa-twitter twitter"></i></a>
-<a href="https://www.instagram.com/adhoc_colombia/" target="_blank"><i class="fab fa-instagram instagram"></i></a>
+<a href="https://www.facebook.com/adhoc.com.co" target="_blank"><i class="fab fa-facebook facebook"></i></a>
+<a href="https://www.tiktok.com/@adhoc_co" target="_blank"><i class="fab fa-tiktok"></i></a>
+<a href="https://www.instagram.com/adhoc.com.co" target="_blank"><i class="fab fa-instagram instagram"></i></a>
   	 				
  
 </div>

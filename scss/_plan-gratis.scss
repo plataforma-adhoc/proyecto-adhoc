@@ -2,10 +2,94 @@
 width: 100%;
 
 }
-
+$primaryFont: "Fredoka", sans-serif;
+$backgroundColor: #eceff1;
+$primaryColor: #81c784;
 .btn__anunciar__gratis{
  width: 100%;
 }
+
+.alerta{
+margin-top: -7rem;
+}
+
+.tarjeta__finalizacion__anuncio {
+	background-color:$color__fondo__footer;
+	border-radius: 30px;
+	text-align: center;
+	padding: 15px;
+	max-width: 375px;
+	margin: 100px auto;
+}    
+	.ilustration {
+		margin: 30px;
+	}
+    .ilustration img {
+        background: $color__fondo__blog;
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        color: white;
+        overflow: hidden;
+        margin: 0 auto;
+        // box-shadow: 20px 20px 20px darken($backgroundColor, 2%),
+        //     -20px -20px 20px lighten($backgroundColor, 2%);
+    }
+	.tarjeta__finalizacion__anuncio  h3 {
+		font-family: $primaryFont;
+		font-size: 2rem;
+		line-height: 2.2rem;
+		color:white;
+		font-weight: bold;
+		margin: 30px 0;
+	}
+	.tarjeta__finalizacion__anuncio p {
+		font-family: $primaryFont;
+		font-size: 1rem;
+		line-height: 1.3rem;
+		color: white;
+		margin: 30px auto;
+		max-width: 80%;
+	}
+	.enlace__terminar__publicacion{
+        display: inline-block;
+        text-decoration: 0;
+		font-size: 1.1rem;
+		font-weight: bold;
+		padding: 15px 80px;
+		border-radius: 25px;
+		color: white;
+		border: 0;
+		margin: 30px 0;
+		outline: none;
+		background-color: $primaryColor;
+		box-shadow: 10px 10px 10px
+				darken(rgba(red($primaryColor), green($primaryColor), blue($primaryColor), 0.2),2%),
+			-10px -10px 10px
+				lighten(
+					rgba(red($primaryColor), green($primaryColor), blue($primaryColor), 0.2),
+					2%
+				);
+		transition: ease all 0.3s;
+		cursor: pointer;
+    }
+		.enlace__terminar__publicacion:active {
+			transform: scale(0.9);
+			box-shadow: inset -1px -1px 3px
+					darken(
+						rgba(red($primaryColor), green($primaryColor), blue($primaryColor), 0.3),
+						2%
+					),
+				-20px -20px 20px
+					lighten(
+						rgba(red($primaryColor), green($primaryColor), blue($primaryColor), 0),
+						2%
+					);
+		}
+        
+	
+
+
 
 @media screen  and (max-width:700px){
     .contenedor__btn__anunciar{

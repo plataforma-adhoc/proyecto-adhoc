@@ -9,18 +9,14 @@ if($id__publicacion && $id__usuario){
   $consulta__detalles__usado = "SELECT * FROM informacion__del__vehiculo__en__venta WHERE id_publicacion_vehiculo = '$id__publicacion' AND id_usuario = '$id__usuario '";
   $ejecutar__consulta = mysqli_query($conexion__db__accent,$consulta__detalles__usado);
  
-
   $consulta__fotos__vehiculos = "SELECT foto_1,foto_2,foto_3,foto_4,foto_5,foto_6,foto_7,foto_8,foto_9,foto_10 FROM fotos__del__vehiculo WHERE id_fotos ='$id__publicacion'";
   $ejecutar__consulta__fotos = mysqli_query($conexion__db__accent,$consulta__fotos__vehiculos);
   $fila__fotos = mysqli_fetch_array($ejecutar__consulta__fotos);
 
-
-$consulta__contactos = "SELECT  telefono_1,telefono_2,whatsapp_1,whatsapp_2 FROM  contacto__vendedor WHERE id_contacto = '$id__publicacion'";
+$consulta__contactos = "SELECT  telefono_1,telefono_2,whatsapp_1,email FROM  contacto__vendedor WHERE id_contacto = '$id__publicacion'";
 $ejecutar__consulta__contacto = mysqli_query($conexion__db__accent,$consulta__contactos);
 $fila__contacto = mysqli_fetch_array($ejecutar__consulta__contacto);
  
- 
-
  if(mysqli_num_rows($ejecutar__consulta) > 0){
  $fila = mysqli_fetch_array($ejecutar__consulta);?>
 <div class=" contenedor__detalles__usado">
@@ -41,24 +37,18 @@ $fila__contacto = mysqli_fetch_array($ejecutar__consulta__contacto);
     <img src="<?php  echo $fila__fotos['foto_8'] ?>" alt="Imagen 8">
     <img src="<?php  echo $fila__fotos['foto_9'] ?>" alt="Imagen 9">
     <img src="<?php  echo $fila__fotos['foto_10'] ?>" alt="Imagen 9">
-
-
   </div>
 </div>
-
 <div id="Modal-galeria" class="modal__galeria">
   <div class="detalles__imagen"><p class="titulo__imagen">Imagen  <span class="current__imagen">1</span> de  <span class="total__imagen">10</span> </p></div>
   <span class="cerrar__modal__galeria">&times;</span>
   <div class="contenedor__imagenes">
     <img class="modal-content-galeria" id="modalImage">
-
   </div>
     <a class="prev" id="boton-anterior"><i class="fas fa-chevron-left"></i></a>
     <a class="next" id="boton-siguiente"><i class="fas fa-chevron-right"></i></a>
 
-</div>
-
-  
+</div> 
 <div class="container informacion__general__del__vehiculo">
     <div class="detalles__principales">
 <div class="detalles__vehiculo">   
@@ -84,20 +74,25 @@ $fila__contacto = mysqli_fetch_array($ejecutar__consulta__contacto);
             }
             ?>
           </p>
+        
           <?php  if($fila__contacto['telefono_2'] != NULL){ ?>
           <p class="telefono"><i class="fas fa-mobile"></i> <?php echo $fila__contacto['telefono_2']  ?></p>
-         <?php } ?>
-            <a href="https://api.whatsapp.com/send?phone=numero<?php  echo $fila__contacto['whatsapp_1']  ?>&text=mensaje=Hola vi el anuncio de tu vehiculo en AdHoc" class="enlace__whatsapp__detalles" target="_blank" onclick="guardar__click__contacto(<?php echo $fila['id_usuario'] ?>,<?php echo $fila['id_publicacion_vehiculo'] ?>)"><i class="fab fa-whatsapp"></i> Contactar al vendedor</a>
-       </div>
+          <?php } ?>
+          <p  class="telefono__del__vendedor">
+            <a href="mailto:<?php echo $fila__contacto['email'] ?>"class="email__vendedor"><i class="fas fa-envelope-open"></i> Enviar email</a>
+            
+          </p>
+            <a href="https://api.whatsapp.com/send?phone=numero<?php  echo $fila__contacto['whatsapp_1']  ?>&text=mensaje=Hola vi el anuncio de tu vehiculo en AdHoc" class="enlace__whatsapp__detalles" target="_blank" onclick="guardar__click__contacto(<?php echo $fila['id_usuario'] ?>,<?php echo $fila['id_publicacion_vehiculo'] ?>)"><i class="fab fa-whatsapp"></i> Contactar al vendedor</a>          
+          </div>
        <br>
     </div>
     <script>
-  function guardar__click__contacto(usuario,publicacion){
+  function guardarClickContactoVehculo(usuario,publicacion){
+    var urlServidor = 'https://adhoc.com.co/'
    let  form__data = new FormData();
    form__data.append('usuario',usuario)
    form__data.append('publicacion',publicacion)
-
-  fetch(url__servidor+'contador-click-whastapp',{
+  fetch(urlServidor+'click-contacto-vehiculo',{
     method:'POST',
     body:form__data
 
@@ -108,7 +103,7 @@ $fila__contacto = mysqli_fetch_array($ejecutar__consulta__contacto);
     }
   })
 }
-
+guardarClickContactoVehculo(<?php  echo $id__usuario ?>,<?php  echo $id__publicacion ?>);
 </script>
     <div class="caracteristicas">
        <h3 class="subtitulo__informacion">Caracteristicas</h3>
@@ -162,7 +157,6 @@ $fila__contacto = mysqli_fetch_array($ejecutar__consulta__contacto);
     <p class="que__dice__el__vendedor">
       <?php echo ucfirst($fila['descripcion_vehiculo']) ?>
 </p>
-
 </div>
 <?php    
 $selecion__seguridad__vehiculo = "SELECT * FROM seguridad__del__vehiculo WHERE id_seguridad = '$id__publicacion'";
@@ -175,8 +169,7 @@ $fila__equipamiento = mysqli_fetch_array($ejecutar__consulta__equipamiento);
 
 $consulta__lujos = "SELECT * FROM disenio__y__estilo__vehiculo WHERE id_estilos = '$id__publicacion'";
 $ejecutar__consulta__lujos = mysqli_query($conexion__db__accent,$consulta__lujos);
-$fila__lujos = mysqli_fetch_array($ejecutar__consulta__lujos);
-?>
+$fila__lujos = mysqli_fetch_array($ejecutar__consulta__lujos);?>
 <h3 class="vendedor__dice">Ficha tecnica</h3>
 <div class="ficha__tecnica__del__vehiculo">
 <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -189,7 +182,7 @@ $fila__lujos = mysqli_fetch_array($ejecutar__consulta__lujos);
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
       <div class="accordion-body acordion__body">
         <div>
-          
+         
             <p><strong>Air bag delantero : </strong> <?php echo$fila__seguridad['air_bag_delantero']?></p>
             <p><strong>Air bag trasero  : </strong> <?php echo $fila__seguridad['air_bag_trasero'] ?></p>
             <p><strong>Bloqueo central : </strong> <?php echo  $fila__seguridad['bloqueo_central']?></p>
@@ -199,11 +192,9 @@ $fila__lujos = mysqli_fetch_array($ejecutar__consulta__lujos);
         <div>
             <p><strong>Control de ascenso: </strong> <?php echo $fila__seguridad['control_de_ascenso']?></p>
             <p><strong>Control de descenso : </strong><?php echo $fila__seguridad['control_de_descenso']?></p>
-            <p><strong>Sensor delantero</strong> <?php echo  $fila__seguridad['sensor_delantero'] ?></p> 
-                
+            <p><strong>Sensor delantero</strong> <?php echo  $fila__seguridad['sensor_delantero'] ?></p>                
            <p><strong>Sensor reversa</strong> <?php echo $fila__seguridad['sensor_reversa'] ?></p> 
-        </div>
-        
+        </div>        
       </div>
     </div>
   </div>
@@ -291,49 +282,38 @@ e incluso comunicate para estar seguro
     <a href="contacto">No estas seguro ?  comunicate con nosotros</a>
       </div>
     </div>
-  </div>
-  
-  
+  </div> 
 </div>
 <?php  } ?>
 <?php  } ?>
-
-
 <?php
-
 date_default_timezone_set('America/Bogota');
 setlocale(LC_ALL,"es_ES");
 setlocale(LC_TIME,"es_ES.UTF-8");
 $id__publicacion = isset($_GET['idp']) ? $_GET['idp']:'';
 $id__usuario= isset($_GET['idu']) ? $_GET['idu']:'';
-
 if($id__publicacion && $id__usuario){
   $fecha__actual = date('Y-m-d');
   $contador__inicial = 1;
-     $consulta__contador__click = "SELECT contador_click,fecha_click FROM contador__de__visitas__al__perfil__del__carro WHERE  id_usuario = '$id__usuario' AND id_publicacion = '$id__publicacion' ";
+     $consulta__contador__click = "SELECT contador_click,fecha_click FROM visitas__al__perfil__del__carro WHERE  id_usuario = '$id__usuario' AND id_publicacion = '$id__publicacion' ";
     $ejecutar__contador__click = mysqli_query($conexion__db__accent,$consulta__contador__click);
     $numero__de__filas = mysqli_num_rows($ejecutar__contador__click);
-
     if($numero__de__filas > 0 ){
-        $consulta__contador__click__2 = "SELECT contador_click,fecha_click FROM contador__de__visitas__al__perfil__del__carro  WHERE  id_usuario = '$id__usuario' AND id_publicacion = '$id__publicacion' ORDER BY id_visita_perfil DESC";
+        $consulta__contador__click__2 = "SELECT contador_click,fecha_click FROM visitas__al__perfil__del__carro  WHERE  id_usuario = '$id__usuario' AND id_publicacion = '$id__publicacion' ORDER BY id_visita_perfil DESC";
         $ejecutar__contador__click__2 = mysqli_query($conexion__db__accent,$consulta__contador__click__2);
         $row = mysqli_fetch_array($ejecutar__contador__click__2);
         $fecha__click = $row['fecha_click'];
         $contador = $row['contador_click']+ 1;
         if($fecha__actual > $fecha__click){
-          $insertar__click = "INSERT INTO contador__de__visitas__al__perfil__del__carro(id_usuario,id_publicacion,contador_click,fecha_click)  VALUES('$id__usuario','$id__publicacion','$contador__inicial','$fecha__actual')";
-          $ejecutar__insersion = mysqli_query($conexion__db__accent,$insertar__click);
-          
+          $insertar__click = "INSERT INTO visitas__al__perfil__del__carro (id_usuario,id_publicacion,contador_click,fecha_click)  VALUES('$id__publicacion','$id__usuario','$contador__inicial','$fecha__actual')";
+          $ejecutar__insersion = mysqli_query($conexion__db__accent,$insertar__click);          
         }else{
-          $actualizar__click = "UPDATE contador__de__visitas__al__perfil__del__carro SET contador_click ='$contador' WHERE id_usuario = '$id__usuario'  AND  fecha_click = '$fecha__actual' ";
+          $actualizar__click = "UPDATE visitas__al__perfil__del__carro SET contador_click ='$contador' WHERE id_usuario = '$id__usuario'  AND  fecha_click = '$fecha__actual' ";
            $ejecutar__actualizacion = mysqli_query($conexion__db__accent,$actualizar__click);
-
         }
     }else{
-      $insertar__click__2 = "INSERT INTO contador__de__visitas__al__perfil__del__carro(id_usuario,id_publicacion,contador_click,fecha_click)  VALUES('$id__usuario','$id__publicacion','$contador__inicial','$fecha__actual')";
+      $insertar__click__2 = "INSERT INTO visitas__al__perfil__del__carro (id_usuario,id_publicacion,contador_click,fecha_click)  VALUES('$id__usuario','$id__publicacion','$contador__inicial','$fecha__actual')";
       $ejecutar__insersion__2 = mysqli_query($conexion__db__accent,$insertar__click__2);
- 
-
     }
 }
 ?>
@@ -350,16 +330,13 @@ if($id__publicacion && $id__usuario){
 <input type="hidden" value="<?php  echo $id__publicacion ?>" name="id-publicacion">
 <input type="hidden" value="<?php  echo $id__usuario ?>" name="id-usuario">
 <input type="hidden" value="comentario" name="comentario">
-
 <button type="submit"><i class="fas fa-paper-plane"></i></button>
 </form>
-</div>
-  
+</div>  
 </div>
 <div class="anuncio">
-  <div class="imagen">
+  <div class="contenedor__imagen__vender">
     <img src="./img/vendiendo__carro.jpg" alt="persona vendiendo su carro">
-
   </div>
   <h2 class="subtitulo__vender__carro">Vende tu carro usado hoy mismo: <br> ¡Obtén el mejor precio ahora!</h2>
   <p class="parrafo__vender__carro">Ofrecemos una plataforma segura y confiable, para que puedas anunciar tu carro con las características que lo hacen especial. Tenemos una audiencia amplia y diversa, interesada en diferentes tipos de vehículos

@@ -14,10 +14,7 @@ $titulo =  "AdHoc | Ayudanos a mejorar";
             <div class="contenedor__inputs">
                 <input type="text" placeholder="Nombre completo" name="nombre" 
                     class="capturarDatos" id="telefono">
-
-
             </div>
-
      </div>
 </div>
 <div class="grupo__inputs" id="grupo__telefono">
@@ -37,10 +34,9 @@ $titulo =  "AdHoc | Ayudanos a mejorar";
             <div class="block">
                 <input type="submit" value="ENVIAR MI SUGERENCIA" class="boton__registro sugerencias" name="enviar">
             </div>
-    
+   
         </div>
     </form>
-
 </div>
 <?php  include'layout/footer.php'  ?>
 

@@ -1,4 +1,3 @@
-
 <?php 
 function insertarDatosDelVehiculo(){
 session_start();
@@ -40,7 +39,6 @@ $sensor__reversa = $datos->sensor_reversa;
 $punto__ciego = $datos->punto_ciego;
 $camara__reversa = $datos->camara_reversa;
 
-
 $aire__acondicionado = $datos->aire_acondicionado;
 $android__auto = $datos->android_auto;
 $apple__car__play = $datos->apple_car_play;
@@ -54,7 +52,6 @@ $parqueo__automatico = $datos->parqueo_automatico;
 $desempañador__trasero = $datos->desempañador_trasero;
 $gps = $datos->gps;
 
-
 $rines__de__lujo = $datos->rines_de_lujo;
 $radio__cassette = $datos->radio_cassette;
 $radio__cd = $datos->radio_cd;
@@ -62,7 +59,7 @@ $pantalla__de__video = $datos->pantalla_video;
 
  //DATOS DEL CONTACTO DEL VENDEDOR
 $Whatsapp__uno = $datos->Whatsapp_uno;
-$Whatsapp__dos = $datos->Whatsapp_dos;
+$email= $datos->email;
 $telefono__uno = $datos->telefono_uno;
 $telefono__dos = $datos->telefono_dos;
 
@@ -84,11 +81,11 @@ if($nombre_usuario === "" || $id__usuario === "" || $nombre__plan === "" || $ava
  $alarma === "" || $control__asenso === "" || $control__decsenso === "" || $sensores__delanteros === "" || $sensor__reversa === "" || $punto__ciego === "" || $camara__reversa === "" ||
  $aire__acondicionado === "" || $android__auto === "" || $apple__car__play === "" || $bluetooth === "" || $espejos__electricos === "" || $exploradoras === "" || $vidrios__electricos === "" ||
  $techo__corredizo === "" || $techo__panoramico === "" || $parqueo__automatico === "" || $desempañador__trasero === "" || $gps === "" || $rines__de__lujo === "" || $radio__cassette === "" ||
- $radio__cd === "" || $pantalla__de__video === "" || $Whatsapp__uno === "" || $telefono__uno === ""){
+ $radio__cd === "" || $pantalla__de__video === "" || $email === "" || $telefono__uno === ""){
  echo json_encode('vacios');
 }else{
-$insertar__contacto__vendedor = "INSERT INTO contacto__vendedor(id_usuario,whatsapp_1,whatsapp_2,telefono_1,telefono_2,nombre_paquete,estado_anuncio)
-VALUES('$id__usuario','$Whatsapp__uno','$Whatsapp__dos','$telefono__uno','$telefono__dos','$nombre__plan','$estado__anuncio')";
+$insertar__contacto__vendedor = "INSERT INTO contacto__vendedor(id_usuario,whatsapp_1,email,telefono_1,telefono_2,nombre_paquete,estado_anuncio)
+VALUES('$id__usuario','$Whatsapp__uno','$email','$telefono__uno','$telefono__dos','$nombre__plan','$estado__anuncio')";
 $ejecutar__consulta__contacto = mysqli_query($conexion__db__accent,$insertar__contacto__vendedor);
 
 

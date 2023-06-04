@@ -1,6 +1,5 @@
 <?php
 function actualizarDatosDeSeguridadVehiculo(){
-
 include'conexion-db-accent.php';  
 $id__usuario = isset($_POST['id-usuario']) ? $_POST['id-usuario']: '';
 $id__publicacion  = isset($_POST['id-publicacion']) ? $_POST['id-publicacion']: '';

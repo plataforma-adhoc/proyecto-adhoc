@@ -8,10 +8,8 @@ include'layout/nabvar.php'?>
             <div class="contenedor__inputs" id="grupo__nombre">
                 <input type="email" placeholder="Tu E-mail" name="email" id="nombreUsuario"
                     class="capturarDatos" autofocus autocomplete="">
-
             </div>
-        </div>
-    
+        </div>   
         <div class="block">
             <input type="submit" value="RECUPERAR MI CONTRASEÑA" class="boton__registro" name="enviar">
         </div>

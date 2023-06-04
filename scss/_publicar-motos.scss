@@ -1,0 +1,215 @@
+.contenedor__publicar__moto{
+    margin-top:-700px;
+}
+
+
+
+.steep__body__moto{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.form__floating__moto{
+    width: 24%;
+
+}
+
+.form-select-lg{
+font-size: 15px;
+}
+
+.step__input__moto{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: -1px;
+    border-radius: 10px;
+    color:white;
+    transition: .3s ease all;
+    background:$color__fondo;
+    border: solid 1px #4285f4;
+    outline: 0;
+}
+
+.step__input__moto:focus{
+    background:$color__fondo;   
+}
+
+.block__moto{
+    grid-column: 1 / 5;
+    color: white;
+}
+
+.form__contacto__vendedor{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.float__contacto{
+    width: 33%;
+}
+
+.inputs__contacto{
+    background:$color__fondo__footer;
+
+}
+
+.inputs__contacto:focus{
+    background:$color__fondo__footer;
+
+}
+
+.btn__footers{
+    width: 34%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.portada{
+ position: absolute;
+ display: inline-block;
+   margin-top: -20px;
+   margin-left: -95px;
+   font-size: 14px;
+   width: 100px;
+   text-align: center;
+}
+@media screen and (max-width:1500px) {
+    .form__floating__moto{
+        width: 32%;
+        font-size: 12px;    
+    }
+
+    .btn__footers{
+        width: 48%;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 14px;
+    }
+     
+    .btns__footers{
+        width: 35%;
+    }
+  
+}
+
+@media screen and (max-width:1200px) {
+    .form__floating__moto{
+        width: 32%;
+        font-size: 12px;    
+    }
+
+    .btn__footers{
+        width: 64%;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 14px;
+    }
+     
+    .btns__footers{
+        width: 35%;
+    }
+
+
+}
+
+@media screen and (max-width:900px) {
+    .form__floating__moto{
+        width: 32%;
+        font-size: 12px;    
+    }
+
+    .form-select-lg{
+        font-size: 12px;    
+
+    }
+    .btn__footers{
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 14px;
+    }
+     
+    .btns__footers{
+        width: 35%;
+    }
+    .portada{
+        margin-left: -100px;
+    }
+    .form__contacto__vendedor{
+        width: 100%;
+    }
+   
+    .float__contacto{
+        width: 33%;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .form__floating__moto{
+        width: 48.5%;
+        font-size: 11px;    
+    }
+
+    .btn__footers{
+        width: 100%;
+        font-size: 14px;
+    }
+     
+    .btns__footers{
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .form__floating__moto{
+        width: 48.5%;
+        font-size: 11px;    
+    }
+
+    .btn__footers{
+        width: 100%;
+        font-size: 14px;
+    }
+     
+    .btns__footers{
+        width: 50%;
+    }
+    .form__contacto__vendedor{
+        width: 100%;
+    }
+   
+    .float__contacto{
+        width: 100%;
+        margin-top: 10px;
+    }
+   
+}
+@media screen and (max-width:400px) { 
+    .form__floating__moto{
+        width: 100%;
+        font-size: 15px;    
+    }
+    
+    .btn__footers{
+        width: 100%;
+        font-size: 14px;
+    } 
+    
+    .btns__footers{
+        width: 100%;
+    }
+
+}

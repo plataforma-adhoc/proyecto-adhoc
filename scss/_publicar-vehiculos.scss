@@ -12,10 +12,7 @@
     align-items: center;
     font-size: 16px;
     overflow: hidden;
-    margin-top: -600px;
-    border: solid 1px gray;
-    border-radius: 10px;
-
+    margin-top: -700px;
 }
 
 .form-register {
@@ -82,9 +79,11 @@
     margin-bottom: 15px;
     color: white;
 }
+
 .plan__gratis{
   line-height: 2rem;
 }
+
 .campos__obligatorios{
     color: white;
 }
@@ -147,29 +146,34 @@
 }
 
 .step__body {
-    padding: 20px 15px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    padding: 10px 0 0;
     gap: 10px;
+    width: 100%;
     height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.subtitulo__info__vehiculo{
+margin-top: 40px;
 }
 
 .formulario__info__adicional{
   width: 100%;
-
- 
+  
 }
+
 .contenedor__selects{
   width: 100%;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content:flex-start;
 }
-.form__floating__info__adicional{
-  width: 45%;
-  margin: 10px;
-  
-}
+
+
 
 .content-icon-camera{
   width: 100%;
@@ -180,9 +184,11 @@
   border: dotted 2px black;
   background:$color__fondo__footer;
 }
+
 .seleccion__fotos{
   cursor: pointer;
 }
+
 .fa-photo-video{
   cursor: pointer;
 }
@@ -191,18 +197,18 @@
   display: none;
   
 }
+
 #result{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   padding: 10px 0;
   margin-top: 1rem;
- 
+  
 }
 
-
 .thumbnail {
-  height: 192px;
+  height: 100px;
   margin: 5px;
   border-radius: 10px;
 }
@@ -234,12 +240,12 @@
  
 }
 
-
 .card__collapsables{
     background:$color__fondo__footer;
     width: 100%;
     height: auto;
 }
+
 .input__group{
   width: 80%;
   margin: auto;
@@ -248,6 +254,7 @@
 .input__group > input{
   background:$color__fondo__footer;
 }
+
 .label__datos__carro{
   display: block;
 
@@ -257,7 +264,7 @@
     display: block;
     width: 100%;
     padding: 15px;
-    margin-bottom: 10px;
+    margin-bottom: -1px;
     border-radius: 10px;
     color:white;
     transition: .3s ease all;
@@ -266,6 +273,7 @@
     outline: 0;
     
 }
+
 
 .form-floating label{
   color: white;
@@ -276,21 +284,33 @@
   color:white;
 }
 
+.form-floating {
+  width: 24%;
+ }
+
+ .form-select{
+  width: 24%;
+ margin-top: 10px;
+ }
+
 .step__input:focus{
   background:$color__fondo;
 } 
 
+.insputs__select{
+  margin-left: 5px;
+}
 .text__area{
     max-width: 100%;
     min-width: 100%;
     max-height: 100px;
     min-height: 100px;
 }
+
 .step__footer {
     padding: 20px 15px;
     text-align: center;
 }
-
 
 .inicio{
   background:gray;
@@ -315,6 +335,7 @@
     width: 200px;
    transition: all .05s;
 }
+
 .step__button:hover{
   background:$color__adhoc;
   color: black;
@@ -333,17 +354,21 @@
     margin: auto;
  
 }
+
 .contenido__toda__la__info{
   margin-left:1rem;
 }
+
 .toda__la__info__del__vehiculo p{
     text-align: center;
 }
+
 .advertencia{
   color: $color__adhoc;
   background: #000;
   line-height: 10rem;
 }
+
 .accordion-button{
   background: $color__fondo__footer;
   color: white;
@@ -351,6 +376,7 @@
 .accordion-collapse{
   background:$color__fondo__footer;
 }
+
 .acordeon__checkbox{
     display: flex;
     align-items: center;
@@ -363,9 +389,11 @@
   color: white;
   text-align: center;
 }
+
 .parrafo__plan__pro{
   text-align: center;
 }
+
 .limitado{
   color: black;
   border-radius: 50px;
@@ -374,6 +402,7 @@
   font-size: 15px;
   font-weight: bold;
 }
+
 .contenedor__tablas__precio{
   width: 100%;
   display: flex;
@@ -469,7 +498,22 @@
   .contenedor{
     width: 33%;
   }
-   
+
+  .form-floating {
+    width: 24%;
+    font-size: 13px;
+   }
+  
+   .form-select{
+    width: 24%;
+    font-size: 13px;
+   } 
+
+  .form__floating__info__adicional{
+    width: 30%;
+    margin-bottom: 5px;
+  }
+
 }
 
 @media screen and (max-width: 1000px){
@@ -487,53 +531,86 @@
 .chek{
   width: 60%;
 }
+
 .toda__la__info__del__vehiculo{
   width: 100%;
 }
-.form__floating__info__adicional{
-  width: 45%;
-}
+
+
+
+.form-floating {
+  width: 23.5%;
+  font-size: 13px;
+ }
+
+ .form-select{
+  width: 23.5%;
+  font-size: 13px;
+ } 
  
 }
 
 @media screen and (max-width:800px) {
   .form-floating {
-    font-size: 12px;
+    font-size: 14px;
+    width: 48%;
    }
+
    .form-select{
-    font-size: 12px
+    font-size: 14px;
+    width: 48%;
    } 
+
    .form__floating__info__adicional{
-    width: 100%;
+    width: 23%;
   }
 }
 
 @media screen and (max-width: 700px){
+  .form__floating__info__adicional{
+    width: 30%;
+  }
+
+  .form-floating {
+    font-size: 12px;
+
+   }
+   
+   .form-select{
+    font-size: 12px;
+  
+
+   } 
+
  .contenedor{
   width: 80%;
   margin: auto;
 
  }
+
   .tabla{
       width: 100%;
       height:auto;
       margin-top: 15px;
   }
+
   .tabla > h2{
       margin-top:40px;
   }
+
   .step__button{
     margin: 10px;
     width: 90%;
     margin-top: 10px;
   }
+
   .toda__la__info__del__vehiculo{
     width: 100%;
   }
 
   .thumbnail {
-    width: 100px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     border-radius: 10px;
   }
 
@@ -548,12 +625,19 @@
   .form-register{
     width: 100%;
   }
+
   .form__floating__info__adicional{
-    width: 43%;
+    width: 49%;
+    margin: 1px;
+    background: #000;
   }
+
+  
+  
   .step__input{
     font-size: 13px;
   }
+
   .contenedor,.tabla{
       width: 100%;
   }
@@ -561,17 +645,21 @@
   .accordion {
     width: 100%;
 }
+
 .acordion__body{
   font-size: 13px;
 }
+
 .step__button{
   width: 90%;
   margin-top: 10px;
 }
+
 .toda__la__info__del__vehiculo{
   width: 100%;
   font-size: 13px;
 }
+
 .step__texto{
   font-size: 17px;
   line-height: 20px;
@@ -580,9 +668,11 @@
 .chek{
   width: 90%;
 }
+
 .form-check-input{
   font-size: 14px;
 }
+
 .card__collapsables{
   margin: 10px;
 }
@@ -590,26 +680,30 @@
 #result{
   width: 100%;
 }
+
 .thumbnail {
   width: 70px;
   height: 70px;
   border-radius: 10px;
 }
+
 .form-floating {
-  font-size: 12px;
+  width: 48%;
+  font-size: 9px;
  }
+
  .form-select{
-  font-size: 12px
+  width: 48%;
+  font-size: 9px
  }
+
 .card__collapsables{
   margin-top: -30px;
 }
+
 }
 
-
-
-@media screen and (max-width:400px) {
-  
+@media screen and (max-width:400px) { 
   #result{
     width: 100%;
   }
@@ -624,23 +718,29 @@
    }
  
    .form-floating {
-    display: grid;
-    grid-column: 1 / 3;
-    font-size: 12px;
+    width: 100%;
+    font-size: 10px;
    }
+
    .form-select{
-    display: grid;
-    grid-column: 1 / 3;
-    font-size: 12px
+    width: 100%;
+    font-size: 10px;
+
    }
    
    .form__floating__info__adicional{
-    width: 100%;
+    width: 49%;
   } 
 }
 
 
-
+// @media  screen and (max-width:350px){
+//   .form__floating__info__adicional{
+//     width: 100%;
+//     margin-bottom: 10px;
+//     margin-top: 5px;
+//   } 
+// }
 
 
 

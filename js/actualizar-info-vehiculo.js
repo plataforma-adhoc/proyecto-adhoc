@@ -28,8 +28,7 @@ export function actualizar__info__vehculo(){
                         }
                       })
                     
-                      window.location.reload()
-                   
+                      window.location.reload()                   
                 }
             })
           })
@@ -43,7 +42,7 @@ export function actualizar__diseño__y__estilo(){
           form__actualizar__info__vehiculo.addEventListener('submit',function(evento){
             evento.preventDefault();
             let forma__data = new FormData(document.getElementById('form-diseño-y-estilo'));
-            fetch(url__servidor+ 'actualizar-diseño-y-estilo',{
+            fetch(url__servidor+'actualizar-diseño-y-estilo',{
                 method:'POST',
                 body:forma__data
             }).then(respuesta => respuesta.json())
@@ -146,8 +145,6 @@ export function actualizar__seguridad(){
           })
     }
 }
-
-
 
 export function actualizar__informacion__contacto(){
   var url__servidor = 'https://adhoc.com.co/'

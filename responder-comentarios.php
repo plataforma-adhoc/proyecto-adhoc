@@ -14,7 +14,6 @@ if($id__usuario && $id__usuario && $id__notificacion){ ?>
 <input type="hidden" value="<?php  echo $id__usuario ?>" name="id-usuario">
 <input type="hidden" value="<?php  echo $id__publicacion ?>" name="id-publicacion">
 <input type="hidden" value="respuesta" name="respuesta">
-
 <button type="submit"><i class="fas fa-paper-plane"></i></button>
 </form>
     </div>
@@ -43,9 +42,9 @@ include'layout/footer-home.php';
   if(formulario__respuesta){
     formulario__respuesta.addEventListener('submit', function(event){
         event.preventDefault();
-        let url__servidor  = 'https://adhoc.com.co/'
+        let urlServidor  = 'https://adhoc.com.co/'
         let form__data =  new FormData(document.getElementById('formulario-respuesta'))
-        fetch(url__servidor+'insert-respuesta',{
+        fetch(urlServidor+'insert-respuesta',{
             method:'POST',
             body:form__data
         }).then(respuesta =>  respuesta.json())

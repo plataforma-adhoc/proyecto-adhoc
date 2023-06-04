@@ -148,11 +148,11 @@
   })
   
   export function insert__datos__usuario(){
+    var url__servidor = 'https://adhoc.com.co/'
   let formulario__registro = document.getElementById('formulario-registro-usuario');
     if(formulario__registro){
      formulario__registro.addEventListener('submit',function(evento){
-        evento.preventDefault();
-        
+        evento.preventDefault();        
         let data = new FormData(document.getElementById('formulario-registro-usuario'))
         fetch(url__servidor+'insert-datos-usuario',{
             method:'POST',
@@ -161,17 +161,29 @@
         .then(datos =>{
            if(datos == 'true'){
             window.location.href = 'dashboard-usuario';
+            document.getElementById('nombre').value ="";
+                document.getElementById('primer-apellido').value ="";
+                document.getElementById('segundo-apellido').value ="";
+                document.getElementById('email').value ="";
+                document.getElementById('contrasena').value ="";
 
+
+            let spinnerLogin = document.getElementById("spinner-login");
+            spinnerLogin.firstElementChild.classList.add("d-none");
            }else{
+            let spinnerLogin = document.getElementById("spinner-login");
+            spinnerLogin.firstElementChild.classList.add("d-none");
             Swal.fire({
               background:'#202F36',
                 icon: 'error',
-                title: 'Atención',
-                footer: `${datos}`,
+                title: '<span class="texto__swal tamaño__texto">Atención</span>',
+                footer: `<span class="texto__swal">${datos}</span>`,
                
               })
            }
         })
+        let spinnerLogin = document.getElementById("spinner-login");
+           spinnerLogin.firstElementChild.classList.remove("d-none");
      })
     }
 }
@@ -210,12 +222,13 @@ inputs__login.forEach((input)=>{
   })
 
 export function  insert__login__usuario(){
+  var urlServidor = 'https://adhoc.com.co/'
   let login__usuario = document.getElementById('formulario-login');
   if(login__usuario){
     login__usuario.addEventListener('submit',function(evento){
         evento.preventDefault();  
         let datos = new FormData(document.getElementById('formulario-login'));
-        fetch(url__servidor+'insert-login-usuario',{
+        fetch(urlServidor+'insert-login-usuario',{
             method:'POST',
             body:datos
 
@@ -223,21 +236,31 @@ export function  insert__login__usuario(){
         .then(data =>{
             if(data ===  'true'){
                 window.location.href = 'dashboard-usuario';
+                document.getElementById('contrasena').value ="";
+                document.getElementById('email').value ="";
+                
+                let spinnerLogin = document.getElementById("spinner-login");
+                spinnerLogin.firstElementChild.classList.add("d-none");
             }else{
+              let spinnerLogin = document.getElementById("spinner-login");
+              spinnerLogin.firstElementChild.classList.add("d-none");
                 Swal.fire({
                   background:'#202F36',
                     icon: 'error',
-                    title: `${data}`,
-                    footer: 'Esta informacion es importante',
-                   
+                    title: `<span class="texto__swal tamaño__texto">${data}</span>`,
+                    footer: '<span class="texto__swal">Esta informacion es importante</span>',                  
                   })
             }
         })
+        let spinnerLogin = document.getElementById("spinner-login");
+        spinnerLogin.firstElementChild.classList.remove("d-none");
+
     })
   }  
 }
 
 export function password__usuario(){
+  var url__servidor = 'https://adhoc.com.co/'
   let contrasena = document.getElementById('formulario-contraseña');
   if(contrasena){
    contrasena.addEventListener('submit',function(evento){
@@ -272,6 +295,7 @@ export function password__usuario(){
 }
 
 export  function actualizar__contrasena__usuario(){
+  var url__servidor = 'https://adhoc.com.co/'
   let cambiar__contrasena = document.getElementById('formulario-actaulizar-contrasena-usuario');
   if(cambiar__contrasena){
    cambiar__contrasena.addEventListener('submit',function(evento){
@@ -309,6 +333,7 @@ export  function actualizar__contrasena__usuario(){
 
 
   export function formulario__completar__proceso(){
+    var url__servidor = 'https://adhoc.com.co/'
      let formulario__fin__de__compra = document.getElementById('formulario-fin-de-compra');
      if(formulario__fin__de__compra){
      formulario__fin__de__compra.addEventListener('submit',function(event){

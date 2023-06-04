@@ -12,19 +12,14 @@ if($id__usuario && $id__paquete){
       $nombre__paquete = $fila['nombre_paquete'];
       $valor__paquete = $fila['valor_paquete'];
       $descuento = $fila['descuento'];
-      $precio__descuento = $valor__paquete - (($valor__paquete * $descuento) / 100 );
-
-      ?>
+      $precio__descuento = $valor__paquete - (($valor__paquete * $descuento) / 100 ); ?>
       <div class="container  container__proceso__de__pago">
     <h2 class="titulo__compra">Detalles de tu pago  </h2>
     <div class="table-responsive ">
     <table class="table table-dark table-striped  table-hover ">
-
     <tr>
       <th scope="col" class="texto__compra">Nombre del plan</th>
       <th scope="col"class="texto__compra">Total a pagar</th>
-    
-
     </tr>
     <tbody>
     <tr>
@@ -64,16 +59,11 @@ if($id__usuario && $id__paquete){
   </div>
   <div>    
     <img src="./img/logo__daviplata.png" alt="daviplata"class="img__billeteras">
-
   </div>
 </div>
- 
-
-
   </div>
 </div>
 <br>
-
 </div>
 </div>
 <?php  } ?>
@@ -83,15 +73,14 @@ if($id__usuario && $id__paquete){
 <?php include'layout/footer-home.php' ?>   
 
 <script>
-
-
 function formasDePago(){
+ var urlPruebas = 'http://localhost/accent__hollding'
 var medios__de__pago = document.getElementById('otros-medios-de-pago')
 if(medios__de__pago){
 medios__de__pago.addEventListener('click',function(){
 var  handler = ePayco.checkout.configure({
   				key: '3ca56470e406e78da32222a6642ef3b7',
-  				test: false
+  				test: true
   			});
         var data={
           //Parametros compra (obligatorio)
@@ -108,12 +97,10 @@ var  handler = ePayco.checkout.configure({
 
           //Onpage="false" - Standard="true"
           external: "false",
-          response: "http://localhost/accent__hollding/respuesta-pago?id_usuario=<?php echo $id__usuario ?>&nombre_plan=<?php  echo  $nombre__paquete ?>",
-          pending:"http://localhost/accent__hollding/pago-pendiente?id_usuario=<?php echo $id__usuario ?>&nombre_plan=<?php  echo  $nombre__paquete ?>",
-          rejected:"http://localhost/accent__hollding/pago-no-aprobado",
-          confirmation:"http://localhost/accent__hollding/confirmacion" ,
-
-  
+          response: "https://adhoc.com.co/respuesta-pago?id_usuario=<?php echo $id__usuario ?>&nombre_plan=<?php  echo  $nombre__paquete ?>",
+          pending:"https://adhoc.com.co/pago-pendiente?id_usuario=<?php echo $id__usuario ?>&nombre_plan=<?php  echo  $nombre__paquete ?>",
+          rejected:"https://adhoc.com.co/pago-no-aprobado",
+          confirmation:"https://adhoc.com.co/confirmacion", 
           //Atributos cliente
           name_billing: "Andres Perez",
           address_billing: "Carrera 19 numero 14 91",
@@ -122,16 +109,14 @@ var  handler = ePayco.checkout.configure({
           number_doc_billing: "100000000"
 
          //atributo deshabilitación metodo de pago
-      
+  }
+ handler.open(data)
 
-          }
-          handler.open(data)
-
-       })
-        }  
-        }
+   })
+ }  
+  }
         
-        formasDePago();
+formasDePago();
 
 function generateRandomString() {
   var chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -142,6 +127,4 @@ function generateRandomString() {
   }
   return randomString;
 }
-
-
  </script>

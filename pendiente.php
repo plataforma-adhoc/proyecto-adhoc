@@ -18,13 +18,6 @@ if($id__paquete && $id__usuario && $id__estilos && $id__contacto && $id__equipam
   <img src="./img/en__proceso.png" alt="sin tarjeta de credito" class="img__respuesta__pago"> 
   <h2 class="titulo__respuesta__pago">Tu transacción está pendiente</h2>
   <p  class="texto__respuesta__pago">La solicictud de pago esta pendinte esperando por el pago en el punto fisico,  activaremos el anuncio cuando el pago se haga efectivo</p>
-  <!-- <header id="main-header" style="margin-top:20px" class="contenedor___respuesta__epayco">
-    <div class="row container">
-      <div class="col-lg-12 franja">
-        <img class="center-block" src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/epayco/logo1.png" style="">
-      </div>
-    </div>
-  </header> -->
   <div class="container contenedor___respuesta__epayco">
   <h4 style="text-align:center; color:white" class="titulo__respuesta__transaccion"> Respuesta de la Transacción </h4>
         <hr>
@@ -39,27 +32,22 @@ if($id__paquete && $id__usuario && $id__estilos && $id__contacto && $id__equipam
     <tr>
       <th colspan="2">Fecha</th>
       <td colspan="1" id="fecha" class=""></td>
-
     </tr>
     <tr>
       <th colspan="2">Respuesta</th>
       <td colspan="1"id="respuesta"></td>
-
     </tr>
     <tr>
       <th colspan="2">Motivo</th>
       <td colspan="1"id="motivo"></td>
-
     </tr>
     <tr>
       <th colspan="2">Banco</th>
       <td colspan="1"class="" id="banco"></td>
-
     </tr>
     <tr>
       <th colspan="2">Recibo</th>
       <td colspan="1"id="recibo"></td>
-
     </tr>
     <tr>
       <th colspan="2">Total</th>
@@ -67,7 +55,6 @@ if($id__paquete && $id__usuario && $id__estilos && $id__contacto && $id__equipam
     </tr>
   </tbody>
 </table>
-
 </div>
 <footer class="footer__respuesta">
         <div class="logos">
@@ -166,9 +153,7 @@ if($id__paquete && $id__usuario && $id__estilos && $id__contacto && $id__equipam
       setInterval(checkPaymentStatus, 300000);
       console.log('recargando la funcion')
    
-    });
-  
-  
+    }); 
   </script>
 </div>
 <br>

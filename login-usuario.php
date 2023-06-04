@@ -10,13 +10,9 @@ include'layout/nabvar.php'?>
             <div class="contenedor__inputs" >
                 <input type="text" placeholder="Tu E-mail" name="email" id="email"
                     class="capturarDatos" autofocus autocomplete="">
-
             </div>
                <p class="formulario__input-error">El emil solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
         </div>
-
-    
-
         <div class="grupo__inputs block" id="">
             <div class="contenedor__inputs">
                 <input type="password" placeholder="Tu contraseña" name="contrasena" id="contrasena" class="capturarDatos">
@@ -29,6 +25,12 @@ include'layout/nabvar.php'?>
        
         <div class="block">
             <input type="submit" value="INGRESAR" class="boton__registro" name="enviar">
+            <br>
+            <div class="text-center spinner-login" id="spinner-login">
+            <div class="spinner-border d-none" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
         </div>
         <div class="contenedor__enlace__sesion block">
         <div><a href="usuario" class="enlace___login">Registrarme </a></div>
@@ -42,8 +44,6 @@ include'layout/nabvar.php'?>
 
     
     function mostrar(){
-    
-        
         let tipo = document.getElementById('contrasena')
         if(tipo.type == 'password'){
            tipo.type = 'text';

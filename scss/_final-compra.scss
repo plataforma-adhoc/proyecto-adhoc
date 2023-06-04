@@ -11,8 +11,13 @@
     width: 60%;
     margin: auto;
 }
+
+.contenedor__subtitulos__final__compra{
+margin-top: -50px;
+}
+
 .titulo__final__compra{
-    font-size: 60px;
+    font-size: 50px;
     font-family: 'Baloo Bhaina 2', cursive;
 }
 
@@ -45,6 +50,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+;
 
 }
 .contenedor__parrafo__final__compra{
@@ -65,9 +71,10 @@
 }
 
 .redes__sociales{
-    width: 15%;
+    width: 30%;
     margin: auto;
     margin-top: 20px;
+    text-align: center;
 }
 .facebook,.twitter,.instagram{
     background:$color__adhoc;
@@ -76,6 +83,7 @@
     color: black;
     font-size: 22px;
     margin-left: 5px;
+    text-align: center;
 }
 
 @media screen and (max-width:100px) {
@@ -86,12 +94,20 @@
 
 @media screen and (max-width:900px) {
     .contenedor__final__compra{
-        height: 450px;
-        width: 100%;
-        
+        height: 280px;
+        width: 100%;    
+    }
+    .titulo__final__compra{
+        font-size: 2rem;
+    }
+    .subtitulo__final__compra{
+        font-size: 1rem;
+    }
+    .parrafo__final__compra{
+        font-size: 1rem;
     }
     .redes__sociales{
-        width: 5 0%;
+        width: 50%;
     }
     .contenedor___respuesta__epayco{
         width: 100%;
@@ -101,11 +117,14 @@
     }
 }
 
+@media  screen and (max-width:545px){
+    .redes__sociales{
+        width: 95%;
+    }
+}
 @media screen and (max-width:440px) {
     .contenedor__final__compra{
-        height: 450px;
-        width: 100%;
-        
+        width: 100%;    
     }
     .redes__sociales{
         width: 90%;

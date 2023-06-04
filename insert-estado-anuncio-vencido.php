@@ -3,7 +3,7 @@ function insertarEstadoAnuncio(){
   $data = file_get_contents('php://input');
   include'conexion-db-accent.php'; 
   $data = json_decode($data);   
-  $id__usuario = $data->id__usuario;
+  $id__usuario = $data->idUsuario;
  $actualizar__diseño = "UPDATE disenio__y__estilo__vehiculo SET estado_anuncio = '0'  WHERE id_usuario = '$id__usuario'";
   $ejecutar__actualizacion = mysqli_query($conexion__db__accent,$actualizar__diseño);
 
@@ -23,10 +23,8 @@ function insertarEstadoAnuncio(){
   $ejecutar__actualizacion__seguridad = mysqli_query($conexion__db__accent,$actualizar__seguridad);
 
   if($actualizar__diseño && $actualizar__contacto && $actualizar__equipamiento && $actualizar__fotos && $actualizar__informacion && $actualizar__seguridad){ 
-  
-   
 echo json_encode('ok');
 }
 }
-
+insertarEstadoAnuncio();
 ?>

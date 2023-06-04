@@ -63,7 +63,7 @@ $pantalla_video = $info__adicional['pantalla_video'];
 if(isset($_SESSION['datos-contacto'])){
   $datos__de__contacto = $_SESSION['datos-contacto'];
   $Whatsapp_uno = $datos__de__contacto['Whatsapp_uno'];
-  $Whatsapp_dos = $datos__de__contacto['Whatsapp_dos'];
+  $email = $datos__de__contacto['email'];
   $telefono_uno = $datos__de__contacto['telefono_uno'];
   $telefono_dos= $datos__de__contacto['telefono_dos'];
 
@@ -239,7 +239,7 @@ if(isset($_SESSION['datos-imagenes'])){
 
       //DATOS DEL CONTACTO DEL VENDEDOR
       Whatsapp_uno: "<?php if(isset($Whatsapp_uno)){echo $Whatsapp_uno;} ?>",
-      Whatsapp_dos: "<?php if(isset($Whatsapp_dos)){echo $Whatsapp_dos;} ?>",
+      email: "<?php if(isset($email )){echo $email;} ?>",
       telefono_uno: "<?php if(isset($telefono_uno)){echo $telefono_uno;} ?>",
       telefono_dos: "<?php if(isset($telefono_dos)){echo $telefono_dos;} ?>",
 
@@ -325,9 +325,9 @@ if(isset($_SESSION['datos-imagenes'])){
     ¡Que tu carro se venda muy rapido !</p>
   <h3 class="subtitulo__redes__sociales">Puedes seguirnos en nuestras redes sociales</h3>
   <div class="redes__sociales">
-    <a href="https://www.facebook.com/adhocColombia" target="_blank"><i class="fab fa-facebook facebook"></i></a>
-    <a href="https://twitter.com/adhoc_colombia" target="_blank"><i class="fab fa-twitter twitter"></i></a>
-    <a href="https://www.instagram.com/adhoc_colombia/" target="_blank"><i class="fab fa-instagram instagram"></i></a>
+    <a href="https://www.facebook.com/adhoc.com.co" target="_blank"><i class="fab fa-facebook facebook"></i></a>
+    <a href="https://www.tiktok.com/@adhoc_co" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.instagram.com/adhoc.com.co" target="_blank"><i class="fab fa-instagram instagram"></i></a>
 
 
   </div>

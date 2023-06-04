@@ -14,7 +14,6 @@ function actualizarEstadoAnuncio(){
 
 
 if($id__paquete && $id__usuario && $id__estilos && $id__contacto && $id__equipamiento && $id__fotos && $id__informacion && $id__seguridad){
-
  $actualizar__diseño = "UPDATE disenio__y__estilo__vehiculo SET estado_anuncio = '1' WHERE id_estilos = '$id__estilos' AND id_usuario = '$id__usuario'";
  $ejecutar__actualizacion = mysqli_query($conexion__db__accent,$actualizar__diseño);
 
@@ -37,7 +36,6 @@ if($ejecutar__actualizacion && $ejecutar__actualizacion__contacto && $ejecutar__
 echo json_encode('ok');
 }else{
 echo json_encode('no se pudo actualizar la informacion');
-
 }
 }else{
   echo json_encode('<script>

@@ -1,5 +1,4 @@
 <?php   
-
 function actualizarContrasena(){
 include'conexion-db-accent.php';
 $nueva__contrasena =$_POST['nuevaContrasena'] ? $_POST['nuevaContrasena']:'';
@@ -19,6 +18,5 @@ if($actualizar__contrasena){
 }
 }
 }
-
 actualizarContrasena();
 ?>

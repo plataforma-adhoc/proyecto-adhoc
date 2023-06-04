@@ -1,0 +1,196 @@
+.contenedor__asesoramiento{
+    width: 100%;
+    height: auto;
+}
+
+.subtitulo__asesoramiento{
+    text-align: center;
+    color:white;
+
+}
+.texto__asesoramiento{
+    color: white;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+.contenido__asesoramiento{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.asesoramiento{
+    width: 20%;
+    text-align: center;
+    margin: 150px 10px;
+}
+.contenido__de__la__guia{
+    margin-top: -20px;
+}
+.fa-camera-retro,.fa-wrench,.fa-ad,.fa-search-plus{
+    color: $color__adhoc;
+    font-size: 40px;
+    text-align: center;
+}
+
+.descripcion__asesoramiento{
+    width: 100%;
+
+}
+
+.title__asesoramiento{
+    font-size: 20px;
+    color:$color__adhoc;
+}
+
+.borde__derecho{
+    border-left: solid 1px $color__gris;
+}
+
+.parrafo__asesoramiento{
+color: white;
+text-align:justify;
+margin-left: 10px;
+font-size: $tamaño__parrafos;
+font-weight: 500;
+color: $color__gris;
+}
+
+.guia__para__vender__tu__carro{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.guia{
+    width: 30%;
+    border: solid 1px $color__gris;
+    margin-top: 50px;
+    border-radius: 10px;
+    text-align: center;
+    height: 17rem;
+    font-size: 15px;
+}
+
+.guia:hover{
+    border: solid 1px $color__adhoc;
+    
+
+}
+.enlace__guia{
+    text-decoration: 0;
+    color: white;
+}
+
+.enlace__guia:hover{
+    color: white;
+}
+.preparando__el__carro,.creando__el__anuncio,.cerrando__la__venta{
+    font-size: 40px;
+    color: $color__adhoc;
+    margin-top: 20px;
+}
+.contenido__guia{
+    width: 90%;
+    margin: auto;
+}
+.contenido__guia h3{
+    font-size: 20px;
+    margin-top: 20px;
+
+}
+.modal-open {
+    overflow: auto;
+  }
+  
+
+  #open-button {
+    margin-top: 20px;
+  }
+
+  .cuerpo__modal{
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .contenedor__img__preparando__el__carro{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 20rem;
+    margin: auto;
+    border-radius: 10px;
+  }
+  .contenedor__img__preparando__el__carro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(0,0,0,0.9), rgba(0,0,0,0.1));
+  }
+  .contenedor__img__preparando__el__carro img{
+    width: 100%;
+    height:100%;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+
+  }
+  .subtitulo__modal__body{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .texto__modal__body{
+    color:$color__gris;
+    line-height: 30px;
+    font-weight: 600;
+  }
+@media screen and (max-width:900px) {
+    .asesoramiento{
+        width: 100%;
+        margin: 35px auto 0 auto;
+      }
+     
+      .subtitulo__asesoramiento{
+        margin-top: -30px;
+      }
+      .cuerpo__modal{
+        width: 90%;
+      }
+      .contenido__de__la__guia{
+        margin-top: 30px;
+      }
+      .guia{
+        height: 20rem;
+      }
+      .texto__guia{
+        font-size: 15px;
+      }
+         
+}
+
+@media screen and (max-width:700px) {
+    .asesoramiento{
+        width: 100%;
+        margin-top: -10px;
+      }
+      .contenido__guia h3{
+        font-size: 15px;
+      }
+      .guia{
+        width: 100%;
+        height: 15rem;
+      }
+         
+}

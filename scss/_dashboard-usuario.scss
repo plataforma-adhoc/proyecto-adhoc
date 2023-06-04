@@ -1,4 +1,6 @@
-
+.btn__open__dashboard{
+  display:block;
+}
 .logo__home{
   width: 90%;
 }
@@ -23,9 +25,9 @@ justify-content: space-between;
 
 }
 .enlace__notificaciones{
-  margin: -10px 10px  0 0;
+  margin: -5px 10px  0 0;
   color: white;
-  font-size: 1.5rem;
+  font-size: 18px;
   text-decoration: 0;
 }
 .enlace__notificaciones:hover{
@@ -47,13 +49,15 @@ justify-content: space-between;
 .sin__notificaciones{
   display: none;
 }
+
 .avatar__perfil{
-width: 30px;
-height: 30px;
+width: 35px;
+height: 35px;
 border-radius: 50px;
 border: solid 2px $color__verde;
-margin-left: -10px;
+margin-left: -25px;
 margin-top: -10px;
+transition: 0.3s; 
 }
 
 .item__nombre{
@@ -64,7 +68,6 @@ text-align: left;
 margin-top: 6px;
 margin-right: 5px;
 }
-
 
 .overlay {
     height: 100%;
@@ -87,14 +90,14 @@ margin-right: 5px;
   }
 
   
-.fa-home,.fa-cogs,.fa-history,.fa-mail-bulk,.fa-comments,.fa-power-off,.usuario__menu,.fa-briefcase,.fa-shopping-bag,.fa-hand-holding-usd{
+.fa-home,.fa-cogs,.fa-history,.fa-mail-bulk,.fa-comments,.fa-power-off,.usuario__menu,.fa-briefcase,.fa-shopping-bag,.fa-hand-holding-usd,.fa-bell,.fa-motorcycle {
   background:$color__fondo;
   border-radius: 100px;
   padding: 10px;
   color: white;
 }
 
-.fa-home,.fa-cogs,.fa-history,.fa-mail-bulk,.fa-comments,.fa-power-off,.usuario__menu,.fa-briefcase,.fa-shopping-bag,.fa-hand-holding-usd:hover{
+.fa-home,.fa-cogs,.fa-history,.fa-mail-bulk,.fa-comments,.fa-power-off,.usuario__menu,.fa-briefcase,.fa-shopping-bag,.fa-hand-holding-usd,.fa-bell:hover{
   color: white;
 }
 
@@ -112,7 +115,7 @@ margin-right: 5px;
     color: white;
     font-size: 15px;
   }
-  .contenedor__enalces__menu__home:hover, .econtenedor__enalces__menu__home:focus {
+  .contenedor__enalces__menu__home:hover, .contenedor__enalces__menu__home:focus {
     color:$color__gris;
     border-radius: 7px;
     background:$color__fondo;
@@ -153,11 +156,13 @@ margin-right: 5px;
   border-radius: 10px;
   padding: 3rem;
 }
+
 .contenido__card__dashboard{
   margin-left: 10px;
   width: 17%;
   margin-top: 10px;
 }
+
 .card__dashboard{
   width: 100%;
   height: 80px;
@@ -211,60 +216,7 @@ margin-right: 5px;
     font-weight: bold;
   }
 
-  .contenedor__graficas{
-    width: 100%;
-    height:auto;
-    margin-top: 30px;
-  }
   
-  .contenido__graficas{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .myChart{
-    width: 49%;
-    background:$color__fondo__footer;
-    border-radius: 10px;
-    margin-left: .5rem;
-  
-  }
-  .fa-question-circle{
-   font-size: 1rem;
-  cursor: pointer;
-  color: white;
-  position: absolute;
-  top: 15px;
-  }
-  .popover{
-    margin-left: 7rem;
-    position:relative;
-   width: 0;
-  height: 0px;
-  display: inline-block;
-    }
-    .tooltiptext{
-    width: 320px;
-    height: 70px;
-    bottom: .3rem;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-    position: absolute;
-   border-left: 4px solid $color__verde;
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 1;
-    }
-  .popover:hover .tooltiptext{
-    visibility: visible;
-    opacity: 1
-  }
-
 .modal__notificaciones{
   z-index: 100000;
 }
@@ -337,6 +289,39 @@ margin-right: 5px;
   color: white;
   line-height: 200px;
 }
+
+.texto__modal__body__historial{
+  color: white;
+  text-align: center;
+}
+
+.contenedor__btns__historial{
+  width: 100%;
+  display: flex;
+}
+
+.contenedor__btns__historial div{
+  width: 45%;
+  margin: auto;
+}
+
+
+.btn__historial{
+  display: inline-block;
+  background:$color__adhoc;
+  width: 100%;
+  text-decoration: 0;
+  padding: 12px;
+  margin: auto;
+  color: black;
+  transition: ease-in-out .3s;
+}
+
+.btn__historial:hover{
+background: #000;
+color: $color__adhoc;
+}
+
 @media screen and (max-width:1000px) {
   .contenedor__card__dashboard{
     width: 100%;
@@ -369,8 +354,11 @@ margin-right: 5px;
   }
 
 }
-
-
+@media screen and (max-width:800px) {
+  .btn__open__dashboard{
+    display: block;
+   }  
+}
 @media screen and (max-width:600px) {
  .contenido__card__dashboard{
   width: 100%;
@@ -382,8 +370,8 @@ margin-right: 5px;
 
 @media screen and (max-width:650px) {
   .contenido__card__dashboard{
-    width: 28%;
-    margin-right: 3px;
+    width: 45%;
+    margin:5px;
    }
    .texto__cards{
     font-size: 11px;
@@ -391,19 +379,23 @@ margin-right: 5px;
 }
 
   @media screen and (max-width: 400px) {
+    .home{
+      display: none;
+    }
     .contenedor__dashboard{
       margin-top: -700px;
       
     }
+    .contenido__card__dashboard{
+      width: 44%;
+      margin:5px;
+     }
     .contenedor__card__dashboard{
       width: 100%;
       display: flex;
       justify-content: space-between;
     }
-   .contenido__card__dashboard{
-    width: 33%;
-    margin:0;
-   }
+   
    .historial__de__vehiculos{
     font-size: 15px;
    }
@@ -416,8 +408,8 @@ margin-right: 5px;
 
 @media screen and (max-width:300px) {
   .contenido__card__dashboard{
-    width: 32%;
-    margin:0;
+    width: 43%;
+    margin:5px;
    }
    .contenido__texto__card__dashboard{
     width: 100%;

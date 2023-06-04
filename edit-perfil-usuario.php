@@ -3,10 +3,7 @@ include'conexion-db-accent.php';
 
 $consulta__datos = "SELECT *  FROM usuarios   WHERE id_usuario = '{$_SESSION['id_usuario']}'";
 $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
-  $datos__resultado = mysqli_fetch_array($resultado__consulta); 
-?>
-    <!-- <button class="btn__back" id="btn-back"><i class="fas fa-arrow-left"></i></button> -->
-
+  $datos__resultado = mysqli_fetch_array($resultado__consulta); ?>
 <form action="insert-edit-perfil-usuario" class="formulario editarPerfil" enctype="multipart/form-data" method="POST">
     <br><br>
     <div class="avatar">
@@ -18,7 +15,6 @@ $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
                 <input type="file" id="fichero-tarifas" class="input-file" name="avatar">
                 Subir una foto...
             </div>
-
         </div>
     </div>
     <br><br><br>
@@ -28,16 +24,12 @@ $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
             <label for="" class="label">Nombre</label>
                 <input type="text"  name="nombre"value="<?php   echo $datos__resultado['nombre_usuario'] ?>"
                     class="capturarDatos" autofocus autocomplete="">
-
             </div>
         </div>
-
         <div class="grupo__inputs" id="grupo__email">
             <div class="contenedor__inputs">
             <label for="" class="label">Primer apellido</label>
                 <input type="text" name="primerApellido"  class="capturarDatos" value="<?php   echo $datos__resultado['primer_apellido'] ?>">
-
-
             </div>
         </div>
         <div class="grupo__inputs" id="grupo__telefono">
@@ -47,7 +39,6 @@ $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
 
             </div>
         </div>
-
         <div class="grupo__inputs" id="grupo__documento">
         <label for="" class="label">E-mail</label>
             <div class="contenedor__inputs">
@@ -56,7 +47,6 @@ $resultado__consulta = mysqli_query($conexion__db__accent,$consulta__datos);
             </div>
         </div>     
         <input type="hidden"  name="id" value="<?php   echo $datos__resultado['id_usuario'] ?>">
-
         <div class="block">
             <input type="submit" value="ACTUALIZAR  MI CUENTA" class="boton__registro" name="enviar">
         </div>

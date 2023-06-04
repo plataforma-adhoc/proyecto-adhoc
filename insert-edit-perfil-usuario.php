@@ -5,9 +5,7 @@ $id__usuario = isset($_POST['id']) ? $_POST['id']: '';
 if($id__usuario){
     $consulta__datos = "SELECT * FROM  usuarios WHERE id_usuario = '$id__usuario' LIMIT 1";
     $ejecutar__consulta__usuario = mysqli_query($conexion__db__accent,$consulta__datos);
-    $resultado__datos = mysqli_fetch_array($ejecutar__consulta__usuario);
-    
-        
+    $resultado__datos = mysqli_fetch_array($ejecutar__consulta__usuario);       
             $nombre_usuario = $_POST['nombre'] ? $_POST['nombre']: '';
             $primer__apellido = $_POST['primerApellido'] ? $_POST['primerApellido']: '';
             $segundo__apellido = $_POST['segundoApellido'] ? $_POST['segundoApellido']: '';
@@ -15,12 +13,10 @@ if($id__usuario){
             $telefono = $_POST['telefono'] ? $_POST['telefono']: '';
             $facebook = $_POST['facebook'] ? $_POST['facebook']: '';
             $instagram = $_POST['instagram'] ? $_POST['instagram']: '';
-            $twitter = $_POST['twitter'] ? $_POST['twitter']: '';
-          
+            $twitter = $_POST['twitter'] ? $_POST['twitter']: '';         
             $tipo = "jpg";
             $ruta__foto = $_FILES['avatar']['tmp_name'];
-            $nombre = $nombre_usuario. '.'.$tipo;
-    
+            $nombre = $nombre_usuario. '.'.$tipo;   
             if(is_uploaded_file($ruta__foto)){
              $destino = 'upload/'.$nombre;
              $nombre__archivo =  $nombre;

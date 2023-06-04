@@ -19,5 +19,6 @@ if( $id__publicacion != ""  &&  $caja__texto !="" && $id__usuario !=""){
 
 }
 }
+InsertarComentarios();
 ?>
 

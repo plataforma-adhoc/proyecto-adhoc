@@ -23,7 +23,7 @@
 @import 'detalle-usado';
 @import 'publicar-vehiculos';
 @import 'proceso-de-pago';
-@import 'mis-carros-nunciados';
+@import 'mis-anuncios';
 @import 'blog';
 @import 'mis-solicitudes';
 @import 'final-compra';
@@ -35,8 +35,9 @@
 @import 'beneficios';
 @import 'respuesta-comentarios';
 @import 'pagna-estado-pago';
-
-
+@import 'guia';
+@import 'publicar-motos';
+@import 'estadisticas';
 body{
     // font-family: 'Baloo Bhaina 2', cursive;
     background:$color__fondo__blog;

@@ -6,8 +6,6 @@ if($id =! $id || $id ===""){
 }
 
 ?>
-
-
 <div class="container contenedor__configuracion">
 <h2 class="titulo__dashboard">Configuracion</h2> 
     <p class="parrafo__configuracion">Elige una de las siguientes opciones para continuar, recuerda que si decides
@@ -32,7 +30,6 @@ if($id =! $id || $id ===""){
             </div>
 
         </a>
-
         <div id="myModalCambioContrasena" class="modal__contrasena  animate__animated animate__bounceInDown">
             <div class="modal__content">
                 <span class="close" id="cerrar">&times;</span>

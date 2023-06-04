@@ -5,7 +5,7 @@ include'layout/nabvar.php'; ?>
 
     <section class="container">
         <h1 class="titulo__precios">Precios</h1>
-        <p class="parrafo__precios">Comienza con una prueba gratis de 15 dias en el anuncio de tu vehculo, <br>
+        <p class="parrafo__precios">Comienza con una prueba gratis de 60 dias en el anuncio de tu vehculo, <br>
        cuando esta prueba este vencida puede pasar al plan premuin con generosos descuentos y precios exclusivos para ti.
     </p>
         <div class="tabla__de__precios">
@@ -18,11 +18,11 @@ include'layout/nabvar.php'; ?>
     <p class="card-text"><i class="far fa-check-circle"></i> Tu anuncio estara en las primeras paginas por el tiempo que dure tu prueba </p>
     <p class="card-text"><i class="far fa-times-circle"></i> Tu vehiculo dejara de estar en circulación cuando se cumpla tu prueba  </p>
     <p class="card-text"><i class="far fa-check-circle"></i> Mide el rendimiento de tu anuncio </p>
-    <p class="card-text"><i class="far fa-check-circle"></i> Publicalo gratis por 30 dias sin costo alguno sin tarjeta de crédito o débito</p>
+    <p class="card-text"><i class="far fa-check-circle"></i> Publicalo gratis por 60 dias sin costo alguno sin tarjeta de crédito o débito</p>
   </div>
   <br>
 </div>
-<div class=" tarjetas__de__precio">
+<!-- <div class=" tarjetas__de__precio">
   <div class="descripcion__de__precio">
     <br><br>
   <p class="card-text texto__plan">Plan Profesional</p>
@@ -51,7 +51,7 @@ include'layout/nabvar.php'; ?>
         </h2>
   </div>
   <br>
-</div>
+</div> -->
 
         </div>
         </section>

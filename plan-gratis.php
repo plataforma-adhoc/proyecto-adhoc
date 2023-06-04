@@ -61,7 +61,7 @@ if($id__paquete && $nombre__plan){
     if(isset($_SESSION['datos-contacto'])){
       $datos__de__contacto = $_SESSION['datos-contacto'];
       $Whatsapp_uno = $datos__de__contacto['Whatsapp_uno'];
-      $Whatsapp_dos = $datos__de__contacto['Whatsapp_dos'];
+      $email = $datos__de__contacto['email'];
       $telefono_uno = $datos__de__contacto['telefono_uno'];
       $telefono_dos= $datos__de__contacto['telefono_dos'];
     
@@ -87,19 +87,14 @@ if($id__paquete && $nombre__plan){
     if($ejecutar__la__consulta){
       $fila = mysqli_fetch_array($ejecutar__la__consulta); 
       $nombre__paquete = $fila['nombre_paquete'];
-      $valor__paquete = $fila['valor_paquete'];
-
-      ?>
+      $valor__paquete = $fila['valor_paquete']; ?>
       <div class="container contenedor__compra contenedor__pago container__proceso__de__pago">
     <h2 class="titulo__compra">Detalles de tu pago  </h2>
     <div class="table-responsive ">
     <table class="table table-dark table-striped  table-hover ">
-
     <tr>
       <th scope="col" class="texto__compra">Nombre del plan</th>
       <th scope="col"class="texto__compra">Total a pagar</th>
-    
-
     </tr>
     <tbody>
     <tr>
@@ -115,13 +110,12 @@ if($id__paquete && $nombre__plan){
   <input type="hidden"  class="step__input"name="nombre-paquete" value="<?php  echo $fila['nombre_paquete']  ?>">
   <input type="hidden"  class="step__input"name="valor-paquete" value="<?php  echo $fila['valor_paquete']  ?>"> -->
 <div class="contenedor__btn__anunciar">
-  <button type="submit" class="step__button btn__anunciar__gratis">Anunciar</button>
-
+  <button type="submit" class="step__button btn__anunciar__gratis">Enviar</button>
 </div>
 <br><br>
   </form>
   <br><br>
-  <div id="alerta"></div>
+  <div id="alerta"class="alerta"></div>
 </div>
 </div>
 <br>
@@ -136,8 +130,8 @@ if(formulario__de__pago){
 formulario__de__pago.addEventListener('submit',function(evento){
     evento.preventDefault();
     let form__data = new FormData(document.getElementById('formulario-proceso-de-pago'))
-    var url__servidor  = 'https://adhoc.com.co/'
-    fetch(url__servidor+'insertar-info-vehiculo',{
+    var urlServidor  = 'https://adhoc.com.co/'
+    fetch(urlServidor+'insertar-info-vehiculo',{
      method:'POST',
      body:JSON.stringify({
       // INFORMACION OBLIGATORIA DEL VEHICULO
@@ -192,7 +186,7 @@ formulario__de__pago.addEventListener('submit',function(evento){
 
       //DATOS DEL CONTACTO DEL VENDEDOR
       Whatsapp_uno: "<?php if(isset($Whatsapp_uno)){echo $Whatsapp_uno;} ?>",
-      Whatsapp_dos: "<?php if(isset($Whatsapp_dos)){echo $Whatsapp_dos;} ?>",
+      email: "<?php if(isset($email)){echo $email;} ?>",
       telefono_uno: "<?php if(isset( $telefono_uno)){echo $telefono_uno;} ?>",
       telefono_dos: "<?php if(isset($telefono_dos)){echo $telefono_dos;} ?>",
 
@@ -217,24 +211,24 @@ formulario__de__pago.addEventListener('submit',function(evento){
     .then(data =>{
         if(data ==='ok'){
           console.log(data)
-          fetch(url__servidor+'eliminar-variables-sesion', { method: 'POST' })
+          fetch(urlServidor+'eliminar-variables-sesion', { method: 'POST' })
                 .then(res => {
                   if (res === 'ok') {
-                    console.log(res);
-                  location.reload();
+                   
                   } 
                 })
                 .catch(error => {
                   alert('Error al enviar la petición: ', error);
                 });
-         let alerta = document.getElementById('alerta');
-         alerta.innerHTML = `<div class="alert alert-success alert-dismissible" role="alert">
-      <div class="texto__pago__exitoso"><i class="fas fa-check-circle"></i> Hemos publicado tu anuncio con exito 
-      </div>
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      <a href="dashboard-usuario" class="enlace__volver__inicio">Volver al inicio</a>
-    </div>
-    `
+                let alerta = document.getElementById('alerta');
+                  alerta.innerHTML = `<div class="tarjeta__finalizacion__anuncio">
+                 <div class="ilustration">
+                       <img src="./img/celebracion.gif" alt="">
+                 </div>
+                 <h3>¡Felicidades!</h3>
+                 <p>Hemos publicado tu anuncio exitosamente</p>
+                 <a href="dashboard-usuario" class="enlace__terminar__publicacion">Continue</a>              
+                 </div>`
         }
     })
     })

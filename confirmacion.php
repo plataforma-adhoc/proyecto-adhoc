@@ -7,9 +7,6 @@ Ingresar  el valor de p_key lo encuentras en la configuración de tu cuenta ePay
 */
 
 
-
-
-function confirmacion(){
 $p_cust_id_cliente = '768745';
 $p_key             = ' b1f050274ef0ef98cd22fdac7d2b27b8e603f698';
 
@@ -18,8 +15,6 @@ $x_transaction_id = $_REQUEST['x_transaction_id'];
 $x_amount         = $_REQUEST['x_amount'];
 $x_currency_code  = $_REQUEST['x_currency_code'];
 $x_signature      = $_REQUEST['x_signature'];
-
-
 
 $signature = hash('sha256', $p_cust_id_cliente . '^' . $p_key . '^' . $x_ref_payco . '^' . $x_transaction_id . '^' . $x_amount . '^' . $x_currency_code . '^' );
 
@@ -61,6 +56,5 @@ if ($x_signature == $signature) {
 } else {
     die("número de orden o valor pagado no coinciden");
 }
-}
 
-confirmacion();
+

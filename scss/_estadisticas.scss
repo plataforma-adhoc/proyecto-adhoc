@@ -1,0 +1,92 @@
+.contenedor__graficas{
+    width: 100%;
+    height:auto;
+    margin-top: -700px;
+  }
+  
+  .contenido__graficas{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .myChart{
+    width: 49%;
+    background:$color__fondo__footer;
+    border-radius: 10px;
+    margin-left: .5rem;
+  
+  }
+  .fa-question-circle{
+   font-size: 1rem;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 15px;
+  }
+  .popover{
+    margin-left: 7rem;
+    position:relative;
+   width: 0;
+  height: 0px;
+  display: inline-block;
+  z-index: 1000;
+    }
+    
+    .tooltiptext{
+    width: 320px;
+    height: 70px;
+    bottom: .3rem;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+   border-left: 4px solid $color__verde;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 10000;
+    }
+
+  .popover:hover .tooltiptext{
+    visibility: visible;
+    opacity: 1
+  }
+  
+  @media screen and (max-width:1000px) {
+   
+  
+   .myChart{
+    width: 45%;
+  
+  }
+  .tooltiptext{
+    margin-left: -8rem;
+  }
+  
+  
+  }
+  
+
+  @media screen and (max-width:900px) {
+    .contenido__card__dashboard{
+      width: 21%;
+     } 
+    .myChart{
+      width: 100%;
+    margin-top: 1rem;
+    }
+    
+  
+  }
+ 
+  
+  
+  
+  
+ 
+  
+  
+ 
