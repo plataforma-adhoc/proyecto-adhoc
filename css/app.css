@@ -22,15 +22,30 @@
   --nav-count: 10;
 }
 
-.lanzamiento {
+.contenedor-lanzamiento {
   width: 100%;
-  height: 100px;
-  display: inline-block;
+  height: 80px;
+  background: #7F00FF; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
 }
 
-.lanzamiento img {
+.lanzamiento {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.contenido-lanzamiento {
+  width: 50%;
+}
+
+.contenido-lanzamiento img {
   width: 100%;
-  height: auto;
   object-fit: cover;
 }
 
@@ -360,9 +375,14 @@
   padding: 0;
 }
 
+.logo {
+  width: 8%;
+  height: 70px;
+}
+
 .logo__accent {
   width: 100%;
-  height: 50px;
+  height: auto;
 }
 
 .point {
@@ -416,11 +436,11 @@
 .title {
   font-size: 40px;
   font-weight: bolder;
-  color: #FFFD16;
+  color: white;
 }
 
 .copy {
-  font-size: 16px;
+  font-size: 18px;
   margin: 15px 0;
   width: 700px;
   color: white;
@@ -983,12 +1003,24 @@ ul {
 
 @media screen and (max-width: 1300px) {
   .lanzamiento {
-    height: 4rem;
-    display: inline-block;
+    width: 80%;
   }
-  .lanzamiento img {
-    height: 4rem;
-    object-fit: cover;
+  .contenido-lanzamiento {
+    width: 50%;
+  }
+  .contenido-lanzamiento img {
+    height: 60px;
+    margin-top: 20px;
+  }
+  .enlace__vender__vehiculo {
+    font-size: 13px;
+  }
+  .logo {
+    width: 10%;
+    height: 70px;
+  }
+  .logo__accent {
+    height: 70px;
   }
   .slider {
     width: 45%;
@@ -1009,15 +1041,25 @@ ul {
 }
 @media screen and (max-width: 1000px) {
   .lanzamiento {
-    height: 4rem;
-    display: inline-block;
+    width: 80%;
   }
-  .lanzamiento img {
-    height: 4rem;
-    object-fit: cover;
+  .contenido-lanzamiento {
+    width: 50%;
+  }
+  .contenido-lanzamiento img {
+    height: 60px;
+    margin-top: 20px;
+  }
+  .logo {
+    width: 10%;
+    height: 70px;
+  }
+  .logo__accent {
+    height: 70px;
   }
   .enlace__vender__vehiculo {
     font-size: 13px;
+    margin-right: 20px;
   }
   .contenido-slider {
     height: 600px;
@@ -1057,12 +1099,21 @@ ul {
 }
 @media screen and (max-width: 900px) {
   .lanzamiento {
-    height: 4rem;
-    display: inline-block;
+    width: 80%;
   }
-  .lanzamiento img {
-    height: 4rem;
-    object-fit: cover;
+  .contenido-lanzamiento {
+    width: 50%;
+  }
+  .contenido-lanzamiento img {
+    height: 50px;
+    margin-top: 20px;
+  }
+  .logo {
+    width: 11%;
+    height: 70px;
+  }
+  .logo__accent {
+    height: 70px;
   }
   .enlace__vender__vehiculo {
     font-size: 12px;
@@ -1130,13 +1181,18 @@ ul {
   }
 }
 @media screen and (max-width: 800px) {
-  .lanzamiento {
-    height: 4rem;
-    display: inline-block;
+  .contenido-lanzamiento {
+    width: 50%;
   }
-  .lanzamiento img {
-    height: 4rem;
-    object-fit: cover;
+  .contenido-lanzamiento img {
+    height: 50px;
+  }
+  .logo {
+    width: 20%;
+    height: 70px;
+  }
+  .logo__accent {
+    height: 70px;
   }
   .contenedor__imagen__banner {
     height: 400px;
@@ -1153,6 +1209,9 @@ ul {
   }
   .copy__active {
     font-size: 17px;
+  }
+  .cta {
+    width: 220px;
   }
   .muestra__vehiculos {
     margin-top: -15rem;
@@ -1185,12 +1244,16 @@ ul {
 }
 @media screen and (max-width: 700px) {
   .lanzamiento {
-    height: 4rem;
-    display: inline-block;
+    width: 100%;
   }
-  .lanzamiento img {
-    height: 4rem;
-    object-fit: cover;
+  .contenido-lanzamiento {
+    width: 50%;
+    overflow: hidden;
+  }
+  .contenido-lanzamiento img {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
   }
   main .container,
 footer .container {
@@ -1373,6 +1436,18 @@ footer .container {
   }
 }
 @media screen and (max-width: 500px) {
+  .contenido-lanzamiento img {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+  }
+  .logo {
+    width: 30%;
+    height: 70px;
+  }
+  .logo__accent {
+    height: 70px;
+  }
   .contenido-slider {
     height: 600px;
   }
@@ -1419,6 +1494,13 @@ footer .container {
   }
 }
 @media screen and (max-width: 400px) {
+  .contenido-lanzamiento {
+    width: 100%;
+  }
+  .contenido-lanzamiento img {
+    width: 100%;
+    height: 35px;
+  }
   .contenido-slider {
     height: 600px;
   }
@@ -5865,7 +5947,7 @@ template {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -6161,6 +6243,86 @@ template {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.div-img-anuncio-vender-vehiculo {
+  width: 100%;
+  height: 300px;
+  background: #c31432; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #240b36, #c31432); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 10px;
+}
+
+.h5-vender-vehiculo {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin-top: 3rem;
+  font-weight: bold;
+}
+
+.texto-registro {
+  text-align: center;
+  color: #FFFD16;
+  padding: 10px;
+  background: #000;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.texto-anuncio-vender-vehiculo {
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.enlace-anuncio-vender-vehiculo-usado {
+  text-decoration: 0;
+}
+
+.contenedor-slider-infinito {
+  width: 100%;
+  height: auto;
+  margin: 5rem auto;
+  overflow: hidden;
+}
+
+.h3-silder-infinito {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.slide-track {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.slide-infinito {
+  width: 230px;
+  margin: 10px;
+}
+
+.slide-infinito img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.enlace-slide-track {
+  text-decoration: 0;
+}
+
+.parrafo-slide-infinito {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.subtitulo-h4 {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 1000px) {
   .contenedor__cards__blog {
     flex-wrap: wrap;
@@ -6192,16 +6354,39 @@ template {
   .texto__del__blog {
     font-size: 17px;
   }
+  .slide-infinito {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .div-img-anuncio-vender-vehiculo {
+    height: 350px;
+  }
+  .texto-registro {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 700px) {
   .imagen__vehiculos__blog {
     height: 200px;
+  }
+  .h5-vender-vehiculo {
+    font-size: 1.4rem;
+  }
+  .texto-anuncio-vender-vehiculo {
+    font-size: 1rem;
   }
   .texto__del__blog {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 600px) {
+  .h5-vender-vehiculo {
+    font-size: 1.1rem;
+  }
+  .texto-anuncio-vender-vehiculo {
+    font-size: 0.9rem;
+  }
   .contenedor__cards__blog {
     flex-wrap: wrap;
   }
@@ -6214,11 +6399,19 @@ template {
   .col-12 {
     width: 98%;
   }
+  .slide-infinito {
+    width: 45%;
+  }
   .boton__newsletter {
     width: 95%;
     margin: auto;
     margin-left: 5px;
     margin-top: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .div-img-anuncio-vender-vehiculo {
+    height: 300px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -6227,6 +6420,9 @@ template {
   }
   .enlace__pagina__blog {
     font-size: 12px;
+  }
+  .slide-infinito {
+    width: 100%;
   }
 }
 @media screen and (max-width: 300px) {
@@ -7436,6 +7632,238 @@ template {
   .myChart {
     width: 100%;
     margin-top: 1rem;
+  }
+}
+.hero-main {
+  width: 100%;
+  height: 630px;
+  background: #000428;
+  background: -webkit-linear-gradient(to top, #004e92, #000428);
+  background: linear-gradient(to top, #004e92, #000428);
+}
+
+.hero-textos {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contenedor-imagen-fondo-venta-de-carros-usados {
+  width: 40%;
+  height: 400px;
+}
+
+.imagen-venta-carros-de-usados {
+  width: 100%;
+  height: auto;
+}
+
+.contenido-venta-de-carros-usados {
+  display: flex;
+  width: 100%;
+  height: 700px;
+  margin: 0;
+}
+
+.contenedor-fijo {
+  flex: 0 0 40%;
+  border-right: solid 1px gray;
+  height: 700px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.contenido-fijo {
+  width: 80%;
+  margin: 8rem auto;
+}
+
+.contenido-con-scroll {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.contenido-scroll {
+  width: 80%;
+  margin: 8rem auto;
+}
+
+.subtitulos-contenido {
+  color: white;
+  font-size: 22px;
+  font-weight: bolder;
+  margin-top: 3rem;
+}
+
+.parrafo-contenido {
+  color: white;
+  line-height: 30px;
+}
+
+.contenedor-grafica-vehiculo-usados {
+  width: 100%;
+}
+
+.img-grafica-vehiculos-usados {
+  width: 100%;
+}
+
+.fotografias {
+  width: 30%;
+}
+
+.btn-guia {
+  display: inline-block;
+  text-decoration: 0;
+  text-align: center;
+  width: 30%;
+  border-radius: 10px;
+  padding: 10px;
+  background: #008A55;
+  color: black;
+  font-weight: 600;
+  transition: ease-in-out 0.3s;
+}
+
+.btn-guia:hover {
+  color: white;
+  background: #000524;
+  border: solid 1px white;
+}
+
+@media screen and (max-width: 1100px) {
+  .contenedor-imagen-fondo-venta-de-carros-usados {
+    width: 60%;
+    height: 500px;
+    background: rgba(0, 0, 0, 0);
+  }
+  .imagen-venta-carros-de-usados {
+    width: 100%;
+    height: auto;
+  }
+  .cta-venta {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .contenedor-imagen-fondo-venta-de-carros-usados {
+    width: 100%;
+    height: 500px;
+  }
+  .imagen-venta-carros-de-usados {
+    width: 100%;
+    height: auto;
+  }
+  .cta-venta {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .texto-de-hero {
+    top: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .hero-main {
+    height: 500px;
+  }
+  .imagen-venta-carros-de-usados {
+    height: auto;
+  }
+  .contenido-venta-de-carros-usados {
+    flex-direction: column;
+    height: auto;
+    margin-top: -8rem;
+  }
+  .subtitulos-contenido {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .parrafo-contenido {
+    font-size: 14px;
+  }
+  .contenedor-fijo {
+    width: 100%;
+  }
+  .contenido-con-scroll {
+    flex: 0 0 100%;
+    margin-top: -7rem;
+  }
+  .btn-reg {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .hero-main {
+    height: 500px;
+  }
+  .titulo-venta {
+    font-size: 22px;
+  }
+  .contenedor-imagen-fondo-venta-de-carros-usados {
+    width: 70%;
+    height: 300px;
+  }
+  .imagen-venta-carros-de-usados {
+    width: 100%;
+    height: auto;
+  }
+  .cta-venta {
+    width: 100%;
+  }
+  .contenido-venta-de-carros-usados {
+    margin-top: 2px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero-main {
+    width: 100%;
+    height: auto;
+  }
+  .hero-textos {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .contenido-venta-de-carros-usados {
+    margin-top: 2px;
+  }
+  .contenedor-imagen-fondo-venta-de-carros-usados {
+    width: 60%;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero-main {
+    width: 100%;
+    height: auto;
+  }
+  .hero-textos {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .titulo-venta {
+    font-size: 20px;
+  }
+  .contenido-venta-de-carros-usados {
+    margin-top: 2px;
+  }
+  .contenedor-imagen-fondo-venta-de-carros-usados {
+    width: 100%;
+    height: 200px;
+  }
+  .imagen-venta-carros-de-usados {
+    width: 100%;
+    height: auto;
+  }
+  .contenedor-grafica-vehiculo-usados {
+    width: 100%;
+  }
+  .btn-guia {
+    width: 100%;
   }
 }
 body {

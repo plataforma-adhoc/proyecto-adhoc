@@ -72,8 +72,6 @@ setInterval(function(){
     slides();
 },intervalo);
 
-
-
 function slides(){
     slider.style.transform = "translate("+(-width*contador)+"px)";
     slider.style.transition = "transform .8s";
@@ -100,3 +98,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+

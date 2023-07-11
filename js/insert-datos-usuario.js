@@ -166,8 +166,6 @@
                 document.getElementById('segundo-apellido').value ="";
                 document.getElementById('email').value ="";
                 document.getElementById('contrasena').value ="";
-
-
             let spinnerLogin = document.getElementById("spinner-login");
             spinnerLogin.firstElementChild.classList.add("d-none");
            }else{

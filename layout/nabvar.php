@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explora nuestra selección de carros usados a la venta y encuentra tu próximo vehículo. Si estás buscando vender tu auto, nosotros te ayudamos. Anuncia tu carro usado en nuestra plataforma y llega a miles de compradores potenciales">
+  <meta name="description" content="<?php echo $descripcion; ?>">
   <meta name="google-site-verification" content="pjfiKzcIqtbmwXzIHQRgS4BtoFvv-nM_E3Mjhpi8Uds" />
   <meta name="facebook-domain-verification" content="axfghf2epvyczsathwjx2vxr5x17xj" />
+  <meta name="keywords" content="Adhoc | adhoc.com.co" />
   <title><?php echo  $titulo ?></title>
-
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZVL3HDXBJ"></script>
 <script>
@@ -44,35 +43,40 @@
 <!-- End Meta Pixel Code -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">  
-  <link rel="stylesheet" type="text/css" href="./css/app.css?v=2"> 
+  <link rel="stylesheet" type="text/css" href="./css/app.css?v=1"> 
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="icon" type="image/ico" href="./img/favicon.png" />
 </head>
-
 <body>
-  <div class="lanzamiento">
-  <img src="./img/banners__2.jpg" alt="" class="imagen__promo">
+  <div class="contenedor-lanzamiento">
+    <div class="lanzamiento">
+     <div class="contenido-lanzamiento">
+       <img src="./img/texto.png" alt="Anunciar vehículo usado">
+     </div>
+     <div  class="contenido-lanzamiento">
+       <img src="./img/vehiculos.png" alt="Anunciar vehículo usado">
+     </div>
+    </div>
   </div>
     <div class="loader" id="loader">
           <div class="dot"></div>
           <div class="dot"></div>
           <div class="dot"></div>
-
    </div>
   <header class="hero">
     <nav class="nav__hero">
-      <div class="container nav__container ">
+      <div class="container nav__container">
       <div class="logo">
             <a href="/"><img src="./img/logo.png" alt="logo adhoc " class="logo__accent"></a>          
         </div>
-        <div class="containers">  
-            <a href="blog" class="enlace__vender__vehiculo"> Blog</a>      
+        <div class="containers"> 
+             <a href="/"  class="enlace__vender__vehiculo">Inicio</a>
               <a href="precios"  class="enlace__vender__vehiculo">Planes </a>
-              <a href="publicar-vehiculos" class="enlace__vender__vehiculo">Publicar  usado</a>
-              <a href="guia"class="enlace__vender__vehiculo">cómo vender </a>     
-              <!-- <button class="btn__cuenta" id="myBtn">Crear  cuenta</button>  -->
+              <a href="guia" class="enlace__vender__vehiculo">Como vender</a>
+              <a href="publicar-vehiculos" class="enlace__vender__vehiculo">Vender carro</a>
+              <a href="publicar-moto" class="enlace__vender__vehiculo">Vender  moto</a>    
               <a href="usuario"  class="btn__cuenta">Registrarme</a>
               <a href="login-usuario"  class="enlace__vender__vehiculo">Iniciar sesion</a> 
             </div>         
@@ -101,14 +105,17 @@
               <li class="nav-link">
                   <i class="fas fa-shopping-bag"></i>
                     <a href="publicar-vehiculos">
-                      Publicar carro</a>
-  
+                      Publicar carro</a> 
+                  </li>
+                  <li class="nav-link">
+                  <i class="fas fa-shopping-bag"></i>
+                    <a href="publicar-moto">
+                      Vender moto</a> 
                   </li>
                   <li class="nav-link">
                   <i class="fas fa-coins"></i>
                     <a href="precios">
-                     Planes y precios</a>
-  
+                     Planes y precios</a>  
                   </li>
                   <li class="nav-link">
                   <i class="fas fa-headset"></i>
@@ -117,12 +124,7 @@
                   <li class="nav-link">
                   <i class="fas fa-images"></i>
                     <a href="guia">
-                   Como vender mi carro</a>  
-                  </li>
-                  <li class="nav-link">
-                  <i class="fas fa-book-reader"></i>
-                    <a href="blog"> Blog</a>
-  
+                   Como vender </a>  
                   </li>
             </ul>
   </div>

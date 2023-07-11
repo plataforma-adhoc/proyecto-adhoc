@@ -8,7 +8,6 @@
 				</a>    
 			</h4>
 			<ul>
-				<!-- <li><a href="#">Bogotá D.C - Colombia</a></li> -->
 				<p class="propuesta__de__valor">Somos tu concesionario en linea, tu compañero de confianza para vender tu carro o moto usada</p>
   	 			
   	 			</ul>
@@ -17,9 +16,6 @@
   	 			<h4>Obten ayuda</h4>
   	 			<ul>
   	 				<li><a href="contacto">Contactanos</a></li>
-  	 				<!-- <li><a href="#">shipping</a></li>
-  	 				<li><a href="#">returns</a></li>
-  	 				<li><a href="#">order status</a></li> -->
 					<li><a href="https://api.whatsapp.com/send?phone=573227603630&text=¡Hola! Estamos encantados de tenerte aquí. ¿En qué podemos ayudarte hoy?" target="_blank">Soporte</a></li>
   	 			</ul>
   	 		</div>
@@ -30,7 +26,7 @@
   	 				<li><a href="terminos-y-condiciones-de-uso">Terminos y condiciones</a></li>
   	 				<li><a href="politicas-de-privacidad">Politicas de privacidad</a></li>
   	 				<li><a href="ayudanos-a-mejorar">Ayudanos a mejorar</a></li>
-
+					   <li><a href="blog/">Blog</a></li>
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">

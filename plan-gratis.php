@@ -79,9 +79,7 @@ if($id__paquete && $nombre__plan){
       $ruta__nueve = $datos__imagenes['ruta_9'];
       $ruta__diez = $datos__imagenes['ruta_10'];
     
-    }
-    
-    
+    }   
     $consulta = "SELECT * FROM planes__de__publicaciones WHERE id_paquete = '$id__paquete'";
     $ejecutar__la__consulta = mysqli_query($conexion__db__accent,$consulta);
     if($ejecutar__la__consulta){

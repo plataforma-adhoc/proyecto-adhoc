@@ -191,7 +191,7 @@ include'conexion-db-accent.php'; ?>
    $fecha__actual =  date('d-m-Y');
    $calculando__fecha = strtotime($fecha__actual) - strtotime($fecha__de__registro__usuario);
     $salida =  $calculando__fecha / 86400;
-   if($salida > 60){
+   if($salida > 30){
      $consulta__planes = "SELECT id_paquete, nombre_paquete, valor_paquete,descripcion_paquete,descuento FROM planes__de__publicaciones__moto WHERE activo = '1' AND nombre_paquete = 'PREMIUN'";
       $ejecutar = mysqli_query($conexion__db__accent,$consulta__planes);
        $fila__planes = mysqli_fetch_array($ejecutar);
@@ -292,8 +292,6 @@ include'conexion-db-accent.php'; ?>
             jumpStep.classList.remove('inactive');
         }
     });
-
-
 
     // form.addEventListener('keyup', validar)
     document.querySelector("#files").addEventListener("change", (e) => {

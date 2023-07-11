@@ -59,7 +59,7 @@ if(!isset($_SESSION['id_usuario'])){
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/app.css?v=2">
+  <link rel="stylesheet" href="./css/app.css?v=1">
   <link rel="icon" type="image/ico" href="./img/favicon.png" />
 </head>
 <body>
@@ -67,7 +67,7 @@ if(!isset($_SESSION['id_usuario'])){
     <nav class="nav__hero">
       <div class="container nav__container">
         <div class="logo">
-          <a href="dashboard-usuario"><img src="./img/logo.png" alt="logo" class="logo__accent logo__home"></a>
+          <a href="dashboard-usuario"><img src="./img/logo.png" alt="AdHoc" class="logo__accent logo__home"></a>
         </div>
         <div class="enlaces__varios">
           <a href="dashboard-usuario" class="enlaces__menu__home home"> <i class="fas fa-home"></i></a>

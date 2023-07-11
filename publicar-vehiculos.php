@@ -35,7 +35,6 @@ include'conexion-db-accent.php'; ?>
                         <input type="text" class="form-control step__input modelo" id="floatingPassword"
                             placeholder="Ej: Land cruiser" name="modelo">
                         <label for="floatingPassword">Modelo  *</label>
-
                     </div>
                     <div class="form-floating">
                         <input type="text" class="form-control step__input color" id="floatingInput"
@@ -56,14 +55,12 @@ include'conexion-db-accent.php'; ?>
                         <input type="text" class="form-control step__input ciudad" id="floatingPassword"
                             placeholder="Ej: Bogotá" name="ciudad-matricula">
                         <label for="floatingPassword">Cuidad de registro *</label>
-
                     </div>
                     <div class="form-floating">
                         <input type="text" class="form-control step__input venta" id="floatingInput"
                             placeholder="Ej: Bogotá " name="ciudad-venta">
                         <label for="floatingInput">Cuidad donde lo venderas *</label>
                     </div>
-
                     <select class="form-select form-select-lg  step__input " aria-label=".form-select-lg example"
                         name="propietario" id="propietario">
                         <option selected>Unico dueño * </option>
@@ -74,7 +71,6 @@ include'conexion-db-accent.php'; ?>
                         <input type="text" class="form-control step__input kilometros" id="floatingPassword"
                             placeholder="Ej: 100000" name="kilometros">
                         <label for="floatingPassword">Kilometros ni puntos ni comas *</label>
-
                     </div>
                     <div class="form-floating">
                         <input type="text" class="form-control step__input precio" id="floatingPassword"
@@ -86,7 +82,6 @@ include'conexion-db-accent.php'; ?>
                         <input type="text" class="form-control step__input puertas" id="floatingPassword"
                             placeholder="Ej: 5" name="puertas">
                         <label for="floatingPassword">Numero de puertas *</label>
-
                     </div>
                     <select class="form-select  step__input" aria-label=".form-select-lg example"
                         name="combustible" id="combustible">
@@ -112,11 +107,9 @@ include'conexion-db-accent.php'; ?>
                         <option value="Electro-Hidraulica">Electro-Hidraulica</option>
                         <option value="Mecanica">Mecanica</option>>
                     </select>
-
                     <div class="form-floating">
                         <input type="text" class="form-control step__input cilindraje" id="floatingPassword" placeholder="Ej: 1.6" name="cilindraje">
                         <label for="floatingPassword">Cilindraje del carro *</label>
-
                     </div>
                         <textarea rows="4" cols="80" placeholder="Describe ese maravilloso vehículo que quieres vender" class="step__input text__area block__moto" name="descripcion" id="descripcion"></textarea>
                 </div>
@@ -124,7 +117,7 @@ include'conexion-db-accent.php'; ?>
                     <button type="submit" class="step__button--next  inicio " disabled id="activar-btn">Guardar información</button>
                     <br><br>
                     <div id="button"></div>
-                    <button type="button" class="step__button step__button--next" data-to_step="2"data-step="1">Siguiente</button>
+                    <!-- <button type="button" class="step__button step__button--next" data-to_step="2"data-step="1">Siguiente</button> -->
                 </div>
                 <div class="toda__la__info__del__vehiculo">
                     <div class="contenido__toda__la__info">
@@ -135,21 +128,20 @@ include'conexion-db-accent.php'; ?>
                                 importantes como,
                                 mantenimientos recientes, reparaciones esteticas o reparacaiones mecanicas, si tienes un
                                 historial de mantenimientos,crea una buena descripción .
-                            </strong>
-                          
+                            </strong>                          
                         </p>
                     </div>
                 </div>
-            </div>
+           </div>
     </form>
     <div class="step block" id="step-2">
         <div class="step__header">
-            <h2 class="step__title">Informacion adicional de tu vehiculo</h2>
+            <h2 class="step__title">Informacion adicional de tu vehículo</h2>
         </div>
         <div class="step__body">
             <br><br>
             <form class="formulario__info__adicional" id="formulario-info-adicional-vehiculo">
-                <h2 class="subtitulo__info__vehiculo">Seguridad del vehiculo</h2>
+                <h2 class="subtitulo__info__vehiculo">Seguridad del vehículo</h2>
                 <input type="hidden" class="step__input" name="id-usuario"
                     value="<?php  echo $datos__resultado['id_usuario']  ?>">
                 <div class="contenedor__selects">               
@@ -203,7 +195,7 @@ include'conexion-db-accent.php'; ?>
                         </select>
                         <select class="insputs__select form-select step__input" id="sensor-punto-ciego"
                             aria-label="Floating label select example" name="sensor-punto-ciego">
-                            <option>sensor punto ciego</option>
+                            <option>Sensor punto ciego</option>
                             <option value="Si">Si</option>
                             <option value="No">No</option>
                         </select>
@@ -325,11 +317,9 @@ include'conexion-db-accent.php'; ?>
                     <div id="button-info-adicional"></div>
                     <!-- <button type="button" class="step__button step__button--next" data-to_step="3" data-step="2">Siguiente</button> -->
                 </div>
-
                 <div class="toda__la__info__del__vehiculo">
                     <div class="contenido__toda__la__info">
                         <i class="fas fa-exclamation-triangle advertencia"></i>
-
                     </div>
                     <div class="contenido__toda__la__info">
                         <br>
@@ -344,7 +334,7 @@ include'conexion-db-accent.php'; ?>
     </div>
     <div class="step" id="step-3">
         <div class="step__header">
-            <h2 class="step__title">Sube las fotografias de ese maravilloso vehiculo que quieres vender, maximo 10 imagenes </h2>
+            <h2 class="step__title">Sube las fotografias de ese maravilloso vehículo que quieres vender, maximo 10 imagenes </h2>
         </div>
         <div class="step__body">
             <form class=" block formulario__info__adicional" id="formulario-insertar-imagenes">
@@ -361,9 +351,7 @@ include'conexion-db-accent.php'; ?>
                                     accept="image/jpeg, image/png, image/jpg" name="file[]" class="file" required>
                                 <output id="result">
                             </div>
-
-                        </div>
-
+                       </div>
                     </div>
                 </div>
                 <div class="step__footer footer__imagenes">
@@ -373,16 +361,13 @@ include'conexion-db-accent.php'; ?>
                     <div id="insert-fotos"></div>
                     <!-- <button type="button" class="step__button step__button--next " data-to_step="4"data-step="3">Siguiente</button> -->
                     <div id="error-fotos"></div>
-
             </form>
         </div>
-
     </div>
 </div>
 <div class="step" id="step-4">
     <div class="step__header">
         <h2 class="step__title">Contacto </h2>
-
     </div>
     <br>
     <p class="step__texto">Donde te contactaran los compradores</p>
@@ -396,7 +381,7 @@ include'conexion-db-accent.php'; ?>
                         data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
                         aria-controls="collapseExample">
                     <label class="form-check-label " for="flexCheckDefault">
-                        Whatsapp e E-mail
+                        WhatsApp e E-mail
                     </label>
                 </div>
                 <div class="form-check">
@@ -461,7 +446,7 @@ include'conexion-db-accent.php'; ?>
    $fecha__actual =  date('d-m-Y');
    $calculando__fecha = strtotime($fecha__actual) - strtotime($fecha__de__registro__usuario);
     $salida =  $calculando__fecha / 86400;
-   if($salida > 2000){
+   if($salida > 30){
      $consulta__planes = "SELECT id_paquete, nombre_paquete, valor_paquete,descripcion_paquete,descuento FROM planes__de__publicaciones WHERE activo = '1' AND nombre_paquete = 'PREMIUN'";
       $ejecutar = mysqli_query($conexion__db__accent,$consulta__planes);
        $fila__planes = mysqli_fetch_array($ejecutar);
@@ -504,7 +489,7 @@ include'conexion-db-accent.php'; ?>
          $precio__descuento = $valor__paquete - (($valor__paquete * $descuento) / 100 );
         ?>
         <div class="contenedor contenido__tabla__de__precios">
-            <h2 class="subtitulo__planes plan__gratis"> Publica tu vehiculo GRATIS, solo por tiempo <span
+            <h2 class="subtitulo__planes plan__gratis"> Publica tu vehículo GRATIS, solo por tiempo <span
                     class="limitado">LIMITADO</span></h2>
             <br><br>
             <div class="tabla">

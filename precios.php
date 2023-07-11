@@ -1,12 +1,11 @@
 <?php 
-$titulo =  "AdHoc | Precios";
+$titulo =  "AdHoc | Planes";
 include'layout/nabvar.php'; ?>
 <main>
-
     <section class="container">
-        <h1 class="titulo__precios">Precios</h1>
-        <p class="parrafo__precios">Comienza con una prueba gratis de 60 dias en el anuncio de tu vehculo, <br>
-       cuando esta prueba este vencida puede pasar al plan premuin con generosos descuentos y precios exclusivos para ti.
+        <h1 class="titulo__precios">Planes</h1>
+        <p class="parrafo__precios">Comienza con una prueba gratis de 30 días en el anuncio de tu vehículo, <br>
+       cuando está prueba este vencida puede pasar al plan premuin con generosos descuentos y precios exclusivos para ti.
     </p>
         <div class="tabla__de__precios">
     <div class="tarjetas__de__precio">
@@ -14,11 +13,11 @@ include'layout/nabvar.php'; ?>
     <br><br>
   <p class="card-text texto__plan">Plan basico</p>
     <h2 class="card-title">GRATIS</h2>
-    <p class="card-text"><i class="far fa-check-circle"></i> Sin tarjeta de credito o debito, solo creando un registro </p>
+    <p class="card-text"><i class="far fa-check-circle"></i> Sin tarjeta de credito o debito, solo creando una cuenta </p>
     <p class="card-text"><i class="far fa-check-circle"></i> Tu anuncio estara en las primeras paginas por el tiempo que dure tu prueba </p>
-    <p class="card-text"><i class="far fa-times-circle"></i> Tu vehiculo dejara de estar en circulación cuando se cumpla tu prueba  </p>
     <p class="card-text"><i class="far fa-check-circle"></i> Mide el rendimiento de tu anuncio </p>
-    <p class="card-text"><i class="far fa-check-circle"></i> Publicalo gratis por 60 dias sin costo alguno sin tarjeta de crédito o débito</p>
+    <p class="card-text"><i class="far fa-check-circle"></i> Publicalo gratis por 30 días sin costo alguno sin tarjeta de crédito o débito</p>
+    <p class="card-text"><i class="far fa-check-circle"></i> Soporte incluido en tu plan gratis</p>
   </div>
   <br>
 </div>
@@ -56,6 +55,5 @@ include'layout/nabvar.php'; ?>
         </div>
         </section>
 </main>
-
 <?php include'layout/footer.php'; ?>
 

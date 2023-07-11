@@ -26,17 +26,33 @@
     --nav-count: 10;
   }
   
-.lanzamiento{
+.contenedor-lanzamiento{
     width: 100%;
-    height: 100px;
-    display: inline-block;
+    height: 80px;
+    background: #7F00FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   text-align: center;
 }
-  
-.lanzamiento img{
+
+.lanzamiento{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.contenido-lanzamiento{
+    width: 50%;
+}
+
+.contenido-lanzamiento img{
     width: 100%;
-    height: auto;
     object-fit:cover;
 }
+
  .enlace__vender__vehiculo{
 display: inline-block;
  text-decoration: 0;
@@ -50,14 +66,14 @@ display: inline-block;
     border-bottom: 4px solid black;
     color: $color__gris;
  }
+
   .btn-open {
     font-size: 30px;
     cursor: pointer;
     color: white;
     display: none;
   }
-  
-  
+
   .btn-open:active, .btn-open:focus {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.3) inset;
     transform: translateY(7px);
@@ -65,15 +81,15 @@ display: inline-block;
   
   .nav-opener {
     display: none;
-  }
-  
+  } 
+
   .nav-opener:checked + .navegacion {
     width: var(--screen-width);
     height: var(--screen-height);
     opacity: 1;
     transition: opacity 300ms ease-out;
   }
-  
+
   .navegacion {
     z-index: 1;
     width: 0;
@@ -87,8 +103,7 @@ display: inline-block;
     left: 0;
     opacity: 0;
     transition: opacity 300ms ease-out, width 0ms 300ms, height 0ms 300ms;
-  }
-  
+  } 
   .offcanvas-header,.offcanvas-body{
     background:$color__fondo__footer;
   }
@@ -117,7 +132,6 @@ display: inline-block;
     list-style-type: none;
   }
 
-  
   .nav-link {
       color: var(--nav-text-color);
       display: flex;
@@ -178,14 +192,12 @@ display: inline-block;
     display: none;
   }
 
-  
   * {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
   }
   
-
   .loader {
     background:black;
     top: 0;
@@ -195,12 +207,10 @@ display: inline-block;
     z-index: 10000;
   }
   
-
   .loader > .dot {
     position: absolute;
     top: 50%;
     left: 50%;
-    // z-index: 10; 
     width: 160px;
     height: 100px;
     margin-top: -50px;
@@ -250,7 +260,6 @@ display: inline-block;
     63%, 69% {
       width: 40px;
       height: 80px;
-  
       margin-top: -40px;
       margin-left: -20px;
     }
@@ -259,8 +268,7 @@ display: inline-block;
   @keyframes dot2 {
     3%, 97% {
       width: 150px;
-      height: 90px;
-  
+      height: 90px;  
       margin-top: -45px;
       margin-left: -75px;
     }
@@ -289,20 +297,16 @@ display: inline-block;
     }
     30%, 36% {
       width: 8px;
-      height: 8px;
-  
+      height: 8px; 
       margin-top: 49px;
-      margin-left: -5px;
-      
+      margin-left: -5px;     
       border-radius: 8px;
     }
     63%, 69% {
       width: 16px;
-      height: 4px;
-  
+      height: 4px; 
       margin-top: -37px;
-      margin-left: -8px;
-      
+      margin-left: -8px;      
       border-radius: 10px;
     }
   }
@@ -339,7 +343,6 @@ display: inline-block;
 .btn__movil{
     display: none;
 }
-
 
 .container::-webkit-scrollbar{
     width: 10px;
@@ -382,12 +385,15 @@ display: inline-block;
     padding: 0;
 }
 
-.logo__accent{
-    width: 100%;
-    height: 50px;
+.logo{
+width: 8%;
+height: 70px;
 }
 
-
+.logo__accent{
+    width: 100%;
+    height: auto;
+}
 
 .point{
     color:$color__adhoc;
@@ -438,52 +444,15 @@ background-size: cover;
     margin-left: 80px;
     margin-top: 70px;
 }
-// .contenedor__imagen__banner{
-//     width: 100%;
-//     height: 650px;
-//     display: inline-block;
-//     position: relative;
-//     z-index: -1000;
-// }
-
-// .contenedor__imagen__banner::before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.8));
-//   }
-
-// .imagen__banner{
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//     display: block;
-// }
-
-// .hero__main{
-//     width:100%; 
-//     margin-top: 2rem; 
-
-// }
-
-// .hero__textos{
-//     width:90%;
-//     top: 10rem;
-//     left: 50px;
-
-// }
 
 .title{
     font-size: 40px;
     font-weight: bolder;
-    color: $color__adhoc;
+    color:white;
 }
 
 .copy{
-    font-size: 16px;
+    font-size: 18px;
     margin: 15px 0;
     width: 700px;
     color:white;
@@ -543,11 +512,11 @@ font-size: 20px;
     color: white;
     transition: ease-in-out 0.5s;
 }
+
 .muestra__vehiculos{
     height:auto;
     margin-top: -100px;
 }
-
 
 .mas__vehiculos{
     padding: 13px 20px;
@@ -1056,32 +1025,38 @@ margin-left: 10px;
 
 @media screen and (max-width:1300px) {
     .lanzamiento{
-        height:4rem;
-        display: inline-block;
+        width: 80%;
     }
-
-    .lanzamiento img{
-        height:4rem;
-        object-fit: cover;
+   .contenido-lanzamiento{
+    width: 50%;
+   }
+   .contenido-lanzamiento img{
+    height: 60px;
+    margin-top: 20px;
+   }
+   .enlace__vender__vehiculo{
+    font-size: 13px;
+}
+.logo{
+    width: 10%;
+    height: 70px;
     }
-
+ .logo__accent{
+    height:70px;
+ }
     .slider{
        width: 45%;
     }
-
     .contenido__funciones{
         margin: 20px auto 0 auto;
         height: auto;
     }
-
     .container-cards-servicios{
         width: 60%;
-       }
-    
+       }   
        .card__services{
            width: 49%;
        }
-
        .nuestra__forma__de__pago{
         margin-top: 3rem;
     }
@@ -1089,184 +1064,163 @@ margin-left: 10px;
 
 @media screen and (max-width:1000px) {
     .lanzamiento{
-        height:4rem;
-        display: inline-block;
+        width: 80%;
     }
-
-    .lanzamiento img{
-        height:4rem;
-        object-fit: cover;
+   .contenido-lanzamiento{
+    width: 50%;
+   }
+   .contenido-lanzamiento img{
+    height: 60px;
+    margin-top: 20px;
+   }
+   .logo{
+    width: 10%;
+    height: 70px;
     }
-
-    .enlace__vender__vehiculo{
-        font-size: 13px;
-    }
-
+ .logo__accent{
+    height:70px;
+ }    
+ .enlace__vender__vehiculo{
+    font-size: 13px;
+     margin-right: 20px;
+     }
     .contenido-slider{
         height: 600px;
     }
-
     .contenido-slider > div{
         width: 82%;
         margin-left: 40px;
         margin-top: 50px;
     }
-
     .texto__banner{
     font-size: 14px;
     }
-
     .title{
         font-size: 40px;
     }
-
     .copy{
         font-size:18px;
         line-height: 30px;
         width: 100%;
     }
-
-    .container-cards-servicios{
+   .container-cards-servicios{
         width: 60%;
-       }
-    
+       }   
        .card__services{
            width: 49%;
        }
-
     .nuestra__forma__de__pago{
         margin-top: 5rem;
     }
-
     .cards__formas__de__pago{
     width: 100%;
     margin: auto;
     }
-
     .card__precios{
         width: 32%;
-    }
-    
+    }   
 }
 
 @media screen and (max-width:900px){
     .lanzamiento{
-        height:4rem;
-        display: inline-block;
+        width: 80%;
     }
-
-    .lanzamiento img{
-        height:4rem;
-        object-fit: cover;
+   .contenido-lanzamiento{
+    width: 50%;
+   }
+   .contenido-lanzamiento img{
+    height: 50px;
+    margin-top: 20px;
+   }
+   .logo{
+    width: 11%;
+    height: 70px;
     }
-
-   
+ .logo__accent{
+    height:70px;
+ }
     .enlace__vender__vehiculo{
         font-size: 12px;
         margin-right: 15px;
         margin-top: -2rem;
     }
- 
   .copy__section{
     font-size: 15px;
 }
-
 .title{
     font-size: 35px;
 }
-
     .texto__nav__images{
         margin: 50% auto 0 auto;
-
     }
-
     .copy{
         font-size: 20px;
     }
-
     .cta{
         padding: 13px 22px;
     }
-
     .muestra__vehiculos{
      margin-top: -17em;
     }
-
     .contenido__funciones{
         width: 50%;
         height:180px;
      }
-
     .container-cards{
         justify-content: space-evenly;
     
     }
-
     .services .card{
         width: 45%;
     }
-
     .background{
         width: 52%;
     }
-
-    
     .slider{
         width: 100%;
         height: 120px;
         
     }
-
-  
-   
     .contenido__services{
         width: 100%;
     }
-
     .services__vender__carro{
         margin-top: -200px;
     }
-
     .container-cards-servicios{
         width: 100%;
-       }
-    
+       }   
        .card__services{
            width: 49%;
-       }
-     
-    
+       }    
     .nuestra__forma__de__pago{
         margin-top:2rem;
     }
-
-
     .cards__formas__de__pago{
         width: 100%;
-    }
-   
-    .card__precios{
-        width: 32%;
     } 
-   
+   .card__precios{
+        width: 32%;
+    }    
     .img__tarjetas__de__credito{
         width: 33px;
     }
-   
-
-
 }
 
 @media screen and (max-width:800px) { 
-    .lanzamiento{
-        height:4rem;
-        display: inline-block;
+    .contenido-lanzamiento{
+        width: 50%;
     }
-
-    .lanzamiento img{
-        height:4rem;
-        object-fit: cover;
+    .contenido-lanzamiento img{
+        height: 50px;
     }
+    .logo{
+        width: 20%;
+        height: 70px;
+        }
+     .logo__accent{
+        height:70px;
+     }
     .contenedor__imagen__banner{
      height: 400px;
     }
@@ -1285,105 +1239,89 @@ margin-left: 10px;
     .copy__active{
         font-size: 17px;
     }
-
+    .cta{
+        width: 220px;
+    }
     .muestra__vehiculos{
         margin-top: -15rem;
     }
-
     .contenido__funciones{
         width: 50%;
         margin-top: 10px;
     }
-
   .subtitulo__funciones{
     font-size: 18px;
   }
-
   .parrafo__contenido__funciones{
     font-size: 15px;
   }
-
   .container-cards-servicios{
     width: 100%;
    }
-
    .card__services{
        width: 49%;
    }
- 
-
 .nuestra__forma__de__pago{
     margin-top:2rem;
 }
-
 .card__precios__efectivo{
     width: 100%;
 }
-
 .card__precios{
     width: 32%;
 }
-
 }
 
 @media screen and (max-width:700px){ 
     .lanzamiento{
-        height:4rem;
-        display: inline-block;
+      width: 100%;
     }
-
-    .lanzamiento img{
-        height:4rem;
-        object-fit: cover;
+    .contenido-lanzamiento{
+        width: 50%;
+        overflow: hidden;
     }
-
+    .contenido-lanzamiento img{
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;       
+    }
     main .container,
     footer .container{
         padding: 60px 0;
     }
-
     .nav__hero{
         height: auto;
     }
-
     .logo{
         padding: 15px 0 ;
         text-align: center;
     }
-
     .links{
         padding-bottom: 10px;
         text-align: center;
     }
-
     .link{
         padding: 7px 10px;
     }
-
     .contenido-slider{
         height: 600px;
     }
-
-    .contenido-slider > div{
+   .contenido-slider > div{
         width: 100%;
         margin-left: 40px;
         margin-top: 40px;
     }
-
     .texto__banner{
     font-size: 12px;
     }
-
     .title{
         font-size: 30px;
     }
-
     .copy{
         font-size: 15px;
         line-height: 20px;
         width: 100%;
     }
-
     .hero__main{
         flex-direction: column-reverse;
         justify-content: flex-end;
@@ -1391,54 +1329,43 @@ margin-left: 10px;
         height: auto;
         padding: 30px 0;
     }
-
     .title{
         font-size: 32px;
     }
-
     .copy{
         width: 80%;
         font-size: 20px;
         line-height: 30px;
     }
-
     .subtitle{
         font-size: 20px;
         text-align: center;
     }
-
     .cta{
        width: 200px;
     }
     .muestra__vehiculos{
         margin-top: -5rem; 
     }
-
-
     .contenido__funciones{
         margin: -50px 0 0 0;
         width: 100%;
     }
-
     .slider{
         height: auto;
         margin-top: 20px;
     }
-
     .copy__section{
         font-size: 17px;
         text-align: center;
     }
-
     .services{
         width: 100%;
         margin-top: -6rem;
     }
-
     .container-cards-servicios{
      width: 100%;
     }
-
     .card__services{
         width: 49%;
     }
@@ -1452,47 +1379,37 @@ margin-left: 10px;
     .card__button{
         width: 100%;
     }
-
     .background{
         width: 65%;
         margin-bottom: 40px;
     }
-
     .background__copy {
         // display: block;
-        width: 70%;
-        
+        width: 70%;        
     }
-
     .testimony__card{
         width: 65%;
     }
-
     .testimony__name{
         font-size: 20px;
     }
-
     .container--modifier{
         width: 80%;
     }
     .container-cards{
         width: 100%;  
-    }
-  
+    }  
     .nuestra__forma__de__pago{
         width: 100%;
         margin-top: 2rem;
     }
-
     .card__precios,.card__precios__efectivo{
         width: 100%;
     }
-
     .footer-col{
         width: 60%;
         margin-bottom: 30px;
-    }
-  
+    } 
 }
 
 
@@ -1500,25 +1417,19 @@ margin-left: 10px;
     .navegacion {
       grid-template-rows: var(--nav-height) auto;
       grid-template-columns: var(--nav-width) auto;
-    }
-    
+    }   
     .nav-header {
       grid-column-start: span 2;
     }
-
-    .texto__slider{
+   .texto__slider{
         font-size: 15px;
-    }
-   
-    
+    }   
   }
   
 @media screen and (max-width:680px) {
     .texto__anuncio__promocion{
         width: 80%;
-    }
-
-   
+    }   
 }
 
 @media screen and (max-width:600px) {
@@ -1529,19 +1440,15 @@ margin-left: 10px;
         margin-top: -12rem; 
         height: auto;
     }
-
     .contenedor__btn__cta{
     margin-top: 10px;
     }
-
-
     .title{
         font-size: 20px;
     }
     .hero__textos{
         margin-top: -120px;
     }
-
     .copy{
         font-size: 15px;
         width: 100%;
@@ -1550,8 +1457,7 @@ margin-left: 10px;
         margin-right: 15px;
         width: 110px;
         padding: 10px;
-    }
-   
+    } 
     .container-cards-servicios{
         width: 100%;
     }
@@ -1565,13 +1471,24 @@ margin-left: 10px;
     .nuestra__forma__de__pago{
         margin-top: 2rem;
     }
- 
 }
+
 @media screen and (max-width:500px){  
+    .contenido-lanzamiento img{
+        width: 100%;
+        height: 40px; 
+        margin-top: 20px;      
+    }
+    .logo{
+        width: 30%;
+        height: 70px;
+        }
+     .logo__accent{
+        height:70px;
+     }
     .contenido-slider{
         height: 600px;
     }
-
     .contenido-slider > div{
         width: 100%;
         margin-left: 40px;
@@ -1585,13 +1502,11 @@ margin-left: 10px;
     .title{
         font-size: 30px;
     }
-
     .copy{
         font-size: 15px;
         line-height: 20px;
         width: 100%;
     }
-
     .contenido__funciones{
         margin-top: 2px;
     }
@@ -1600,7 +1515,6 @@ margin-left: 10px;
         width: 100%;
         margin-top: -13rem;
     }
-
     .subtitulo{
       margin-top: 60px;
     }
@@ -1620,57 +1534,54 @@ margin-left: 10px;
     .container--modifier{
         width: 70%;
     }
-
     .nuestra__forma__de__pago{
         margin-top: 6rem;
-    }
-  
+    } 
 }
-@media screen and (max-width:400px){
 
+@media screen and (max-width:400px){
+    .contenido-lanzamiento{
+        width: 100%;
+    }
+    .contenido-lanzamiento img{
+        width: 100%;
+        height: 35px;     
+    }
+    
     .contenido-slider{
         height: 600px;
     }
-
     .contenido-slider > div{
         width: 100%;
         margin-left: 40px;
         margin-top: 40px;
     }
-
     .title{
         font-size: 30px;
     }
-
     .copy{
         font-size: 15px;
         line-height: 20px;
         width: 100%;
     }
-
     .cta{
     margin-top: 5px;
     }
-
   .subtitulo{
     font-size: 20px;
   }
-
    .btn__cuenta{
     display: none;
    }
- 
    .muestra__vehiculos{
     margin-top: -10rem;
    }
-
    .card__services{
     width: 100%;
 }
 .services__vender__carro{
     height: auto;
 }
-
 .nuestra__forma__de__pago{
     margin-top: -5rem;
 }
@@ -1680,8 +1591,7 @@ margin-left: 10px;
     .parrafo__contenido__funciones{
         font-size: 14px;
     }
-  
-  
+   
  .contenedor__imagenes__pago__efectivo{
         display: inline-block;
         width: 10%;

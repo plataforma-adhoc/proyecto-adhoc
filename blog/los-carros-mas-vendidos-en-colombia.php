@@ -70,7 +70,4 @@ Suzuki Swift.
 </div>
  
 </section>
-
-
-
 <?php include'footer.php'; ?>

@@ -58,7 +58,7 @@ $fecha__actual =  date('d-m-Y');
 
 $calculando__fecha = strtotime($fecha__actual) - strtotime($fecha__de__registro__usuario);
 $salida =  $calculando__fecha / 86400;
-if($salida > 60){ ?>
+if($salida > 30){ ?>
  <script>
     var intervalID;
   function actualizarEstadoAnuncioMoto(){

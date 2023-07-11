@@ -15,7 +15,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
@@ -54,6 +54,7 @@
     height: 500px;
 
 }
+
 .imagen__vehiculos__blog img{
     width: 100%;
     height:100%;
@@ -61,6 +62,7 @@
     border-radius: 10px;
    display: block;
 }
+
 // BLOG COMO VENDER UN CARRO
 .contenido__como__vender__un__carro{
     width: 100%;
@@ -73,6 +75,7 @@
     color: white;
     font-weight: bolder;
 }
+
 .subtitulo__como__vender__un__carro{
  color: $color__gris;
  font-size: 1.1rem;
@@ -92,15 +95,16 @@
      margin: 10px 10px 0;
      transition: ease-in-out .5s;
 }
+
 .enlace__a__vender__mi__carro:hover{
     background: #000;
     color: white;
     transform: scale(1.1);
 }
+
 .como__vender__un__carro{
     width: 44%;
 }
-
 
 .como__vender__un__carro img{
 height: auto;
@@ -117,11 +121,13 @@ border-radius: 10px;
    width: 100%;
    height: auto;
 }
+
 .contenedor__de__texto__del__blog{
 width: 98%;
 margin: auto;
 margin-top: -5rem;
 }
+
 .texto__del__blog{
     color:$color__gris;
     line-height: 2rem;
@@ -191,6 +197,7 @@ margin-top: -5rem;
     height: 600px;
     border-radius: 10px;
 }
+
 .descripcion__blog{
     display: flex;
     justify-content: space-between;
@@ -266,6 +273,7 @@ margin-top: -5rem;
  margin-left: 40px;
  font-weight: bolder;
 }
+
 .enlace__blog{
     text-decoration: 0;
     display: inline-block;
@@ -312,34 +320,117 @@ font-weight: bolder;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.div-img-anuncio-vender-vehiculo{
+    width: 100%;
+    height: 300px;
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    border-radius: 10px;
+}
 
+.h5-vender-vehiculo{
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    margin-top: 3rem;
+    font-weight: bold;
+}
+
+.texto-registro{
+    text-align: center;
+    color: $color__adhoc;
+    padding: 10px;
+    background: #000;
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+}
+.texto-anuncio-vender-vehiculo{
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+}
+.enlace-anuncio-vender-vehiculo-usado{
+text-decoration: 0;
+
+}
+
+.contenedor-slider-infinito{
+    width: 100%;
+    height: auto;
+    margin: 5rem auto;
+    overflow: hidden;
+}
+
+.h3-silder-infinito{
+color:white;
+font-size: 1.2rem;
+}
+
+.slide-track{
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+}
+
+.slide-infinito{
+    width: 230px;
+    margin: 10px;
+}
+
+.slide-infinito img{
+border-radius: 10px;
+width: 100%;
+}
+
+.enlace-slide-track{
+text-decoration: 0;
+}
+
+.parrafo-slide-infinito{
+    color: white;
+    font-size: .9rem;
+}
+
+.subtitulo-h4{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
 
 @media screen and (max-width:1000px) {
     .contenedor__cards__blog{
         flex-wrap: wrap;
-
     }
+
    .cards__blog{
     width: 46%;
    }
+
    .contenido__como__vender__un__carro{
     flex-wrap: wrap;
     flex-direction: column-reverse;
    }
+
    .como__vender__un__carro{
     width: 100%;
    }
+
    .los__carros__mas__vendidos{
     width: 100%;
    }
+
    .publicidad__blog{
     display: none;
    }
+
    .col-12{
     width: 100%;
 }
    
 }
+
 @media screen and (max-width:900px){
     .imagen__vehiculos__blog{
         height: 270px;
@@ -347,11 +438,30 @@ font-weight: bolder;
     .texto__del__blog{
         font-size: 17px;
     }
+    
+    .slide-infinito{
+        width: 45%;
+        }
+    }
+
+    @media screen and (max-width:800px) {
+        .div-img-anuncio-vender-vehiculo{
+            height: 350px;
+        }
+        .texto-registro{
+            width: 90%;
+        }
     }
 
 @media screen and (max-width:700px){
     .imagen__vehiculos__blog{
         height: 200px;
+    }
+    .h5-vender-vehiculo{
+        font-size: 1.4rem;
+    }
+    .texto-anuncio-vender-vehiculo{
+        font-size: 1rem;
     }
     .texto__del__blog{
         font-size: 14px;
@@ -359,25 +469,45 @@ font-weight: bolder;
     }
 
 @media screen and (max-width:600px) {
+    .h5-vender-vehiculo{
+        font-size: 1.1rem;
+    }
+    .texto-anuncio-vender-vehiculo{
+        font-size: .9rem;
+    }
     .contenedor__cards__blog{
         flex-wrap: wrap;
-
     }
+
     .cards__blog{
         width: 46%;
        } 
+     
    .formulario__newsletter{
      width: 100%;
    }
+
    .col-12{
     width: 98%;
 }
+
+
+.slide-infinito{
+width: 45%;
+}
+
 .boton__newsletter{
     width: 95%;
     margin: auto;
     margin-left: 5px;
     margin-top: 10px;
 }
+
+}
+@media screen and  (max-width:500px) {
+.div-img-anuncio-vender-vehiculo{
+    height: 300px;
+}    
 }
 
 @media screen and (max-width:450px) {
@@ -387,6 +517,10 @@ font-weight: bolder;
        .enlace__pagina__blog{
         font-size: 12px;
        }
+
+       .slide-infinito{
+        width: 100%;
+        }
 }
 
 @media screen and (max-width:300px) {

@@ -525,13 +525,15 @@ width: 60%;
 
 .anuncio{
   width: 38%;
-    height: auto;
+  height: auto;
   margin-top: 40px;
 }
+
 .contenedor__imagen__vender{
     position: relative;
     display: inline-block;
 }
+
 .contenedor__imagen__vender::before {
     content: "";
     position: absolute;

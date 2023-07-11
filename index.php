@@ -1,20 +1,7 @@
 <?php  
 $titulo =  "Venta de carros usados| AdHoc.com.co";
+$descripcion = "Adhoc | Portal Especializado En La venta De Tu Carro Usado o Moto Usada | Adhoc";
 include'layout/nabvar.php'; ?>
-
-<!-- <section class="hero__main">    -->
-    <!-- <div class="contenedor__imagen__banner">
-        <img src="./img/fondo__banner.webp" alt="Entregando las llaves de un carro" class="imagen__banner">
-    </div>
-    <div class=" container hero__textos">
-        <h1 class="title">Vende tu carro usado o moto usada<span class="title--active"></span></h1>
-        <h2 class="copy">Vende tu vehículo sin estrés ni complicaciones, en la plataforma en línea que te brinda soporte en todo el proceso de venta, desde la publicación hasta la transferencia de propiedad<br><br>
-        <p class="texto__banner"><i class="fas fa-mobile-alt"></i> Soporte incluido en tu plan gratis 24/7</p>
-        <a href="https://api.whatsapp.com/send?phone=573227603630&text=¡Hola! Estamos encantados de tenerte aquí. ¿En qué podemos ayudarte hoy?" class="contacto__soporte" target="_blank"><i class="fab fa-whatsapp"></i> Recibir  soporte</a> <br>
-        <a href="publicar-vehiculos" class="cta">Publicar vehiculo</a>
-    </div> -->
-   
-<!-- </section> -->
 <div class="contenedor__slider">
         <div class="slider-contenedor">
             <section class="contenido-slider">
@@ -23,20 +10,18 @@ include'layout/nabvar.php'; ?>
                 <h2 class="copy">Vende tu vehículo sin estrés ni complicaciones, en la plataforma en línea que te brinda soporte en todo el proceso de venta, desde la publicación hasta la transferencia de propiedad<br><br>
                 <p class="texto__banner"><i class="fas fa-mobile-alt"></i> Soporte incluido en tu plan gratis 24/7</p>
                 <a href="https://api.whatsapp.com/send?phone=573227603630&text=¡Hola! Estamos encantados de tenerte aquí. ¿En qué podemos ayudarte hoy?" class="contacto__soporte" target="_blank"><i class="fab fa-whatsapp"></i> Contactanos</a> <br>
-                <a href="publicar-vehiculos" class="cta">Publicar vehiculo</a>
+                <a href="publicar-vehiculos" class="cta">Publicar vehículo </a>
                 </div>
                 <img src="animacion.svg" alt="">
             </section>
             <section class="contenido-slider">
                 <div class="container">
-                <h1 class="title">Encuéntrale comprador a tu moto usada desde la sala de tu casa <span class="title--active"></span></h1>
+                <h2 class="title">Encuéntrale comprador a tu moto usada desde la sala de tu casa <span class="title--active"></span></h2>
                 <a href="https://api.whatsapp.com/send?phone=573227603630&text=¡Hola! Estamos encantados de tenerte aquí. ¿En qué podemos ayudarte hoy?" class="contacto__soporte" target="_blank"><i class="fab fa-whatsapp"></i> Contactanos</a> <br>
-                <a href="publicar-moto" class="cta">vender</a>
+                <a href="publicar-moto" class="cta">Publicar ahora</a>
                 </div>
                 <img src="animacion2.svg" alt="">
-
             </section>
-
     </div>
     </div>
 </header>
@@ -160,7 +145,6 @@ if($filaConsulta > 4 && $filaFotos > 4 && $filaContacto > 4){ ?>
          <img src="<?php echo $filaFotos['foto_1'] ?>" alt="Foto portada del carro usado en venta" class="imagen__del__vehiculo">
          <?php if($filaMotos['nombrePaquete'] ==="PREMIUN"){ ?>
           <p class="texto__segun__paquete"><i class="fas fa-info-circle"></i> Patrocinado <?php echo ucwords($filaMotos['nombreVendedor'])?> </p>
-
 <?php } ?>
 <?php if($filaMotos['nombrePaquete'] ==="GRATIS"){ ?>
  <p class="texto__segun__paquete"><i class="fas fa-info-circle"></i> Anunciado por <?php echo ucwords($filaMotos['nombreVendedor'])?></p>
@@ -246,7 +230,6 @@ if($filaMotos > 4 && $filaFotos > 4 && $filaContacto > 4){ ?>
                        </p>
                 </div>
             </div>
-
             <div class="contenido__funciones">
                 <div>
                     <i class="fas fa-circle"></i>
@@ -258,7 +241,6 @@ if($filaMotos > 4 && $filaFotos > 4 && $filaContacto > 4){ ?>
                 </p>
                 </div>
             </div>
-
             <div class="contenido__funciones">
                 <div>
                     <i class="fas fa-circle"></i>
@@ -267,8 +249,7 @@ if($filaMotos > 4 && $filaFotos > 4 && $filaContacto > 4){ ?>
                     <h2 class="subtitulo__funciones">Obten beneficios exclusivos</h2>
                     <p class="parrafo__contenido__funciones">
                     Accede a promociones especiales y ofertas exclusivas entre otros. 
-                    Unete hoy mismo y obtén beneficios únicos.     
-                        
+                    Unete hoy mismo y obtén beneficios únicos.                            
                 </p>
                 </div>
             </div>
@@ -283,8 +264,7 @@ if($filaMotos > 4 && $filaFotos > 4 && $filaContacto > 4){ ?>
                         Sin necesidad de proporcionar información de tarjeta de crédito o débito, 
                         tendrás acceso a todas las funcionalidades y soporte incluido.</p>
                 </div>
-            </div>
-
+                       </div>
             <div class="contenido__funciones">
                 <div>
                     <i class="fas fa-circle"></i>
@@ -296,7 +276,6 @@ if($filaMotos > 4 && $filaFotos > 4 && $filaContacto > 4){ ?>
                     <!-- <strong class="en__construccion">Nuevo</strong> -->
                 </div>
             </div>
-
             <div class="contenido__funciones">
                 <div>
                     <i class="fas fa-circle"></i>
@@ -312,8 +291,7 @@ if($filaMotos > 4 && $filaFotos > 4 && $filaContacto > 4){ ?>
                 </div>
             </div>
         </div>
-    </div>
-    
+    </div>    
     </div>
     <h2 class="subtitle subtitle subtitulo">Por qué elegir nuestro portal para vender tu carro usado ? <span class="point">.</span></h2>
     <p class="copy__section texto__copy"> aquí te presentamos algunas de las razones.</p>
@@ -326,7 +304,6 @@ if($filaMotos > 4 && $filaFotos > 4 && $filaContacto > 4){ ?>
                         en todo el proceso de publicación de tu anuncio.</p>
                 </div>
             </div>
-
             <div class="slider slider__3 ">
                 <div>
                     <i class="fas fa-images iconos__slider"></i>
@@ -463,8 +440,6 @@ if($filaMotos > 4 && $filaFotos > 4 && $filaContacto > 4){ ?>
                 </div>
             </div>
         </article>
-    </section>
-    
+    </section>   
 </main>
-
 <?php include'layout/footer.php'; ?>

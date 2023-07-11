@@ -1,0 +1,268 @@
+
+.hero-main{
+    width:100%; 
+    height:630px;    
+    background: #000428; 
+    background: -webkit-linear-gradient(to top, #004e92, #000428);  
+    background: linear-gradient(to top, #004e92, #000428); 
+    }
+
+   .hero-textos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+   }
+
+   .contenedor-imagen-fondo-venta-de-carros-usados{
+    width: 40%;
+    height:400px;
+   }
+
+   .imagen-venta-carros-de-usados{
+    width: 100%;
+    height:auto;
+   }
+
+.contenido-venta-de-carros-usados {
+    display: flex;
+    width: 100%;
+    height: 700px;
+    margin: 0;
+  }
+  
+  .contenedor-fijo {
+    flex: 0 0 40%;
+    border-right: solid 1px gray;
+    height: 700px;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .contenido-fijo{
+   width: 80%;
+   margin:8rem auto;
+  }
+
+  .contenido-con-scroll {
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .contenido-scroll{
+    width: 80%;
+    margin: 8rem auto;
+  }
+
+  .subtitulos-contenido{
+    color: white;
+    font-size: 22px;
+    font-weight: bolder;
+    margin-top: 3rem;
+  }
+
+  .parrafo-contenido{
+   color: white;
+   line-height: 30px;
+  }
+
+  .contenedor-grafica-vehiculo-usados{
+    width: 100%;
+  }
+
+  .img-grafica-vehiculos-usados{
+    width: 100%;
+  }
+
+  .fotografias{
+    width: 30%;
+  }
+
+  .btn-guia{
+    display: inline-block;
+    text-decoration: 0;
+    text-align: center;
+    width: 30%;
+    border-radius: 10px;
+    padding: 10px;
+    background:$color__verde;
+    color: black;
+    font-weight: 600;
+    transition: ease-in-out .3s;
+  }
+
+  .btn-guia:hover{
+     color: white;
+     background: $color__fondo__blog;
+     border: solid 1px white;
+  }
+
+  @media screen and (max-width:1100px) {
+    .contenedor-imagen-fondo-venta-de-carros-usados{
+      width: 60%;
+      height: 500px;
+      background: #0000;
+      }
+  
+      .imagen-venta-carros-de-usados{
+        width: 100%;
+        height: auto;
+      }
+  
+    .cta-venta{
+      width: 50%;
+       } 
+  }
+
+  @media screen and (max-width:1000px) {
+    .contenedor-imagen-fondo-venta-de-carros-usados{
+      width: 100%;
+      height: 500px;
+      }
+  
+      .imagen-venta-carros-de-usados{
+        width: 100%;
+        height: auto;
+      }
+  
+    .cta-venta{
+      width: 50%;
+       } 
+  }
+
+@media screen and (max-width:800px) {
+  .texto-de-hero{
+    top:20px;
+  }
+}
+ 
+  @media screen and (max-width:700px) {
+    .hero-main{
+      height: 500px;
+
+    }
+    .imagen-venta-carros-de-usados{
+      height: auto;
+    }
+
+   .contenido-venta-de-carros-usados{
+    flex-direction: column;
+    height: auto;
+    margin-top: -8rem;
+   }
+
+   .subtitulos-contenido{
+    font-size: 15px;
+    font-weight: bold;
+   }
+
+   .parrafo-contenido{
+    font-size: 14px;
+   }
+
+    .contenedor-fijo{
+        width: 100%;
+    }
+
+    .contenido-con-scroll{
+        flex:  0 0 100%; 
+        margin-top: -7rem;
+    }
+
+    .btn-reg{
+        font-size: 14px;
+    }
+  }
+
+
+
+  @media screen and (max-width:750px) {
+    .hero-main{
+      height: 500px;
+    }
+    .titulo-venta{
+      font-size: 22px;
+    }
+
+    .contenedor-imagen-fondo-venta-de-carros-usados{
+      width: 70%;
+      height: 300px;
+      }
+
+      .imagen-venta-carros-de-usados{
+        width: 100%;
+        height: auto;
+      }
+
+      .cta-venta{
+     width: 100%;
+      }
+
+      .contenido-venta-de-carros-usados{
+        margin-top: 2px;
+        }
+  }
+
+@media screen and (max-width:600px) {
+  .hero-main{
+    width: 100%;
+    height:auto;
+  }
+  .hero-textos{
+    display: flex;
+    flex-direction:column;
+    height: auto;
+  }
+
+  .contenido-venta-de-carros-usados{
+    margin-top: 2px;
+    }
+
+  .contenedor-imagen-fondo-venta-de-carros-usados{
+    width: 60%;
+    height: 200px;
+    }
+}
+
+@media screen and (max-width:500px){
+.hero-main{
+  width: 100%;
+  height:auto;
+}
+
+.hero-textos{
+  display: flex;
+  flex-direction:column;
+  height: auto;
+}
+
+.titulo-venta{
+  font-size: 20px;
+}
+
+.contenido-venta-de-carros-usados{
+margin-top: 2px;
+}
+
+.contenedor-imagen-fondo-venta-de-carros-usados{
+width: 100%;
+height:200px;
+}
+
+.imagen-venta-carros-de-usados{
+  width: 100%;
+  height:auto;
+
+}
+
+ .contenedor-grafica-vehiculo-usados{
+  width: 100%;
+ }
+
+ .btn-guia{
+  width: 100%;
+ }
+  
+}
+
